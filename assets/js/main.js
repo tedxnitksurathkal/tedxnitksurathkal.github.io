@@ -1,10 +1,4 @@
-/*
- * Evento -  Event html  Template
- * Build Date: jan 2018
- * Author: colorlib
- * Copyright (C) 2018 colorlib
- */
- /* ------------------------------------- */
+/* ------------------------------------- */
 /*  TABLE OF CONTENTS
  /* ------------------------------------- */
 /*   PRE LOADING                          */

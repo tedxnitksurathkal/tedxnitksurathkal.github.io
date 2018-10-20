@@ -38,7 +38,7 @@ class TextSparks
     fetchData() {
 
         this.stackId = -1;
-        this.stack   = [...document.querySelectorAll('div > ul')].map(ul => {
+        this.stack   = [...document.querySelectorAll('.sparkle > ul')].map(ul => {
             return {
                 ticks   : 0.05 * (ul.hasAttribute('data-time') ? ul.getAttribute('data-time') : 0),
                 fadeIn  : ul.hasAttribute('data-fade-in') ? 50 / Number(ul.getAttribute('data-fade-in')) : 0,

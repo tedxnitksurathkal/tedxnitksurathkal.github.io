@@ -2294,6 +2294,13 @@ Cover
 }
 
 @media (max-width: 767px) {
+
+  .brand_item {
+    opacity: 1;
+    -webkit-transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s;
+  }
+
   .cover_slider .cover_item .slider_content .slider-content-inner .cover-title {
     font-size: 18px;
   }

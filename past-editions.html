@@ -8,7 +8,7 @@
     <meta name="author" content="TedX NITK Surathkal">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- ========== Title ========== -->
-    <title> Past Editions | TedX NITK</title>
+    <title> Past Editions | TEDx NITK</title>
     <!-- ========== Favicon Ico ========== -->
     <link rel="icon" href="assets/img/favicon.png">
     <!-- ========== STYLESHEETS ========== -->
@@ -352,6 +352,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="assets/js/main.js"></script>
 <script src="assets/js/past-editions.js"></script>
 
+
+<!-- Speakers are loaded from this fine -->
+<script src="past-editions.js"></script>
+
 <script>
 
 
@@ -367,12 +371,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     
     
     for (var x = 0; x < speakers2016.length; x++) {
-        $("<div class=\"col-md-6 col-sm-10\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img src=\""+speakers2016[x]["image"]+"\"><div class=\"info_box\"><h5 class=\"name\">"+speakers2012[x]["name"]+"</h5><p class=\"position\">"+speakers2016[x]["designation"]+"</p></div></div><div class=\"speaker_social\"><p></p></div></div></div>").appendTo("#s2016")
+        $("<div class=\"col-md-6 col-sm-10\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img src=\""+speakers2016[x]["image"]+"\"><div class=\"info_box\"><h5 class=\"name\">"+speakers2016[x]["name"]+"</h5><p class=\"position\">"+speakers2016[x]["designation"]+"</p></div></div><div class=\"speaker_social\"><p></p></div></div></div>").appendTo("#s2016")
         
     }
     
     for (var x = 0; x < speakers2018.length; x++) {
-        $("<div class=\"col-md-6 col-sm-10\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img src=\""+speakers2018[x]["image"]+"\"><div class=\"info_box\"><h5 class=\"name\">"+speakers2012[x]["name"]+"</h5><p class=\"position\">"+speakers2018[x]["designation"]+"</p></div></div><div class=\"speaker_social\"><p></p></div></div></div>").appendTo("#s2018")
+        $("<div class=\"col-md-6 col-sm-10\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img src=\""+speakers2018[x]["image"]+"\"><div class=\"info_box\"><h5 class=\"name\">"+speakers2018[x]["name"]+"</h5><p class=\"position\">"+speakers2018[x]["designation"]+"</p></div></div><div class=\"speaker_social\"><p></p></div></div></div>").appendTo("#s2018")
         
 	}
     

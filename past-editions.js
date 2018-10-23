@@ -1,58 +1,58 @@
 var speakers2012 = [
   
 {
-    "name": "Arun",
+    "name": "Arun Sharma",
     "image": "assets/img/Speaker Pictures/2012/Arun.jpeg",
-    "designation": ""
+    "designation": "CAT Guru"
 },
 
 {
-    "name": "Bala Girisaballa",
+    "name": "Balaji Girisaballa",
     "image": "assets/img/Speaker Pictures/2012/Bala Girisaballa.jpeg",
-    "designation": ""
+    "designation": "CEO, Yahoo"
 
 },
 
 {
     "name": "Brodha V",
     "image": "assets/img/Speaker Pictures/2012/Brodha V.jpg",
-    "designation": ""
+    "designation": "Rapper"
 
 },
 
 {
-    "name": "Dasami",
+    "name": "Dasami Moodley",
     "image": "assets/img/Speaker Pictures/2012/Dasami.jpg",
-    "designation": ""
+    "designation": "Changemaker"
 
 },
 
 {
-    "name": "Gopal",
+    "name": "Gopal Hosur",
     "image": "assets/img/Speaker Pictures/2012/Gopal.jpg",
-    "designation": ""
+    "designation": "Anti-naxal Chief"
 },
 
 {
-    "name": "Osama",
+    "name": "Osama Manzar",
     "image": "assets/img/Speaker Pictures/2012/Osama.jpg",
-    "designation": ""
+    "designation": "Polymath"
 },
 {
-    "name": "Shruti",
+    "name": "Shruti Seth",
     "image": "assets/img/Speaker Pictures/2012/Shruti.jpg",
-    "designation": ""
+    "designation": "Film Actress"
 },
 {
-    "name": "Sumit",
+    "name": "Sumit Dagar",
     "image": "assets/img/Speaker Pictures/2012/Sumit.jpg",
-    "designation": ""
+    "designation": "Braille Phone"
 },
 
 {
-    "name": "Vineeth",
+    "name": "Vineeth Vincent",
     "image": "assets/img/Speaker Pictures/2012/Vineeth.jpg",
-    "designation": ""
+    "designation": "Beatboxer"
 },
 
 
@@ -63,88 +63,88 @@ var speakers2012 = [
 var speakers2011 = [
   
     {
-        "name": "Anoj",
+        "name": "Anoj Vishwanathan",
         "image": "assets/img/Speaker Pictures/2011/Anoj.jpeg",
-        "designation": ""
+        "designation": "Co-founder, Milaap.org"
     },
 
     {
-        "name": "Arvind",
+        "name": "Arvind Jayashankar",
         "image": "assets/img/Speaker Pictures/2011/Arvind.jpg",
-        "designation": ""
+        "designation": "Magician"
     },
 
     {
-        "name": "Bhavna",
+        "name": "Bhavna Toor",
         "image": "assets/img/Speaker Pictures/2011/Bhavna.jpeg",
-        "designation": ""
+        "designation": "Director, NSEF"
     },
 
     {
         "name": "John Louis",
         "image": "assets/img/Speaker Pictures/2011/John Louis.jpg",
-        "designation": ""
+        "designation": "National Memory Champion"
     },
 
     {
-        "name": "Kumaresh",
+        "name": "Kumaresh Rajagopalan",
         "image": "assets/img/Speaker Pictures/2011/Kumaresh.jpg",
-        "designation": ""
+        "designation": "Violinist"
     },
 
     {
-        "name": "Mohandas",
+        "name": "Mohandas Pai",
         "image": "assets/img/Speaker Pictures/2011/Mohandas.jpg",
-        "designation": ""
+        "designation": "Chartered Accountant"
     },
 
     {
-        "name": "Narendra",
+        "name": "Narendra Nayak",
         "image": "assets/img/Speaker Pictures/2011/Narendra.jpg",
-        "designation": ""
+        "designation": "Rationalist"
     },
 
     {
-        "name": "Poonam",
+        "name": "Poonam Bir Kasturi",
         "image": "assets/img/Speaker Pictures/2011/Poonam.jpeg",
-        "designation": ""
+        "designation": "Founder, Daily Dump"
     },
 
     {
-        "name": "Prasanta",
+        "name": "Prasanta Karmakar",
         "image": "assets/img/Speaker Pictures/2011/Prasanta.jpg",
-        "designation": ""
+        "designation": "Paralympic Swimmer"
     },
 
     {
-        "name": "Rishikesha",
+        "name": "Rishikesha Krishnan",
         "image": "assets/img/Speaker Pictures/2011/Rishikesha.jpg",
-        "designation": ""
+        "designation": "Professor/Author"
     },
 
     {
         "name": "Rudramuni B",
         "image": "assets/img/Speaker Pictures/2011/Rudramuni B.jpg",
-        "designation": ""
+        "designation": "Head of Dell India R&D"
     },
 
 
     {
         "name": "Sachin Jain",
         "image": "assets/img/Speaker Pictures/2011/Sachin Jain.jpg",
-        "designation": ""
+        "designation": "Director, Fellowship Recruit"
     },
 
 
     {
-        "name": "Vinnel",
+        "name": "Vineel Reddy Pindi",
         "image": "assets/img/Speaker Pictures/2011/Vineel.jpg",
-        "designation": ""
+        "designation": "Mozilla Firefox Enthusiast"
     },
     {
-        "name": "Visalini",
+        "name": "Visalini K",
         "image": "assets/img/Speaker Pictures/2011/Visalini.jpg",
-        "designation": ""
+        "designation": "Memory Skills Enthusiast"
     },
 
 
@@ -158,50 +158,50 @@ var speakers2016 = [
     {
         "name": "Ashok Rao",
         "image": "assets/img/Speaker Pictures/2016/Ashok Rao.jpeg",
-        "designation": ""
+        "designation": "Freelancer"
     },
 
     {
         "name": "Binoy John",
         "image": "assets/img/Speaker Pictures/2016/Binoy John.jpg",
-        "designation": ""
+        "designation": "Co-founder, Tvara"
     },
 
     {
         "name": "Rajeswari-Vaidyanathan",
         "image": "assets/img/Speaker Pictures/2016/Rajeswari-Vaidyanathan.jpg",
-        "designation": ""
+        "designation": "Co-founder DanceSport India"
     },
 
     {
         "name": "Robin Chaurasiya",
         "image": "assets/img/Speaker Pictures/2016/Robin Chaurasiya.jpg",
-        "designation": ""
+        "designation": "Founder, Kranti"
     },
 
     {
         "name": "Sammilan Shetty",
         "image": "assets/img/Speaker Pictures/2016/Sammilan Shetty .jpg",
-        "designation": ""
+        "designation": "Founder, Butterfly Park, Belvai"
     },
 
     {
         "name": "Shantala Hegde",
         "image": "assets/img/Speaker Pictures/2016/Shantala Hegde.jpg",
-        "designation": ""
+        "designation": "Neuropsychology Professor"
     },
 
     {
         "name": "Sriram Ramaswamy",
         "image": "assets/img/Speaker Pictures/2016/Sriram Ramaswamy.jpg",
-        "designation": ""
+        "designation": "Director, TIFR"
     },
 
 
     {
         "name": "Tim Poston",
         "image": "assets/img/Speaker Pictures/2016/Tim Poston.jpg",
-        "designation": ""
+        "designation": "Chief Scientist, SSLPL"
     },
         
         ]
@@ -211,49 +211,49 @@ var speakers2018 = [
     {
         "name": "Aakash Gaurav",
         "image": "assets/img/Speaker Pictures/2018/Aakash Gaurav.jpeg",
-        "designation": ""
+        "designation": "Blockchain Entrepreneur"
     },
 
     {
         "name": "Ashrita Vemuganti ",
         "image": "assets/img/Speaker Pictures/2018/Ashrita Vemuganti .jpg",
-        "designation": ""
+        "designation": "Actress, TV Personality"
     },
 
     {
         "name": "Chakshu Gupta",
         "image": "assets/img/Speaker Pictures/2018/Chakshu Gupta.jpg",
-        "designation": ""
+        "designation": "Computer Engineer"
     },
 
     {
         "name": "Charan Singh",
         "image": "assets/img/Speaker Pictures/2018/Charan Singh.JPG",
-        "designation": ""
+        "designation": "Economist"
     },
 
     {
         "name": "Michael Foley",
         "image": "assets/img/Speaker Pictures/2018/Michael Foley.jpg",
-        "designation": ""
+        "designation": "Product Designer"
     },
 
     {
         "name": "Revati Roy",
         "image": "assets/img/Speaker Pictures/2018/Revati-Roy.jpg",
-        "designation": ""
+        "designation": "Social Entreprenuer"
     },
 
     {
         "name": "Sridhar-Rangayan",
         "image": "assets/img/Speaker Pictures/2018/Sridhar-Rangayan.jpg",
-        "designation": ""
+        "designation": "Filmmaker"
     },
 
     {
         "name": "Sriram Gopal",
         "image": "assets/img/Speaker Pictures/2018/Sriram Gopal.jpg",
-        "designation": ""
+        "designation": "Hydroponics Researcher"
     },
             
         ]

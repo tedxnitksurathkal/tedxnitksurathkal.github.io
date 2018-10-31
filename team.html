@@ -251,7 +251,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="assets/js/team-list.js"></script>
 <script>
         for (var x = 0; x < team.length; x++) {
-            $("<div class=\"col-md-3 col-sm-6\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img src=\"assets/img/team/"+team[x]["image"]+"\"><div class=\"info_box\"><h5 class=\"name\">"+team[x]["name"]+"</h5><p class=\"position\">"+team[x]["position"]+"</p></div></div><div class=\"speaker_social\"><ul><li><a href="+team[x]["facebook"]+"><i class=\"ion-social-facebook\"></i></a></li><li><a href=\"https://www.instagram.com/"+team[x]["instagram"]+"\"><i class=\"ion-social-instagram\"></i></a></li></ul></div></div></div>").appendTo("#team-list")
+            $("<div class=\"col-md-3 col-sm-6\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img src=\"assets/img/team/"+team[x]["image"]+"\"><div class=\"info_box\"><h5 class=\"name\">"+team[x]["name"]+"</h5><p class=\"position\">"+team[x]["position"]+"</p></div></div><div class=\"speaker_social\"><ul><li><a target=\"_blank\" href="+team[x]["facebook"]+"><i class=\"ion-social-facebook\"></i></a></li><li><a target=\"_blank\" href=\"https://www.instagram.com/"+team[x]["instagram"]+"\"><i class=\"ion-social-instagram\"></i></a></li></ul></div></div></div>").appendTo("#team-list")
             
         }
 </script>

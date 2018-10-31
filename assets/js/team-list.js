@@ -123,6 +123,23 @@
         "facebook" : "https://www.facebook.com/profile.php?id=100009532695994",
         "instagram" : "deepabhramondal"
     },
+        {
+
+        "name" : "Dr. KV Gangadharan",
+        "position": "Guide",
+        "image" : "KVG.jpg",
+        "facebook" : "",
+        "instagram" : ""
+    },
+        {
+
+        "name" : "Dr. Sheena",
+        "position": "Faculty Advisor",
+        "image" : "sheena.jpg",
+        "facebook" : "",
+        "instagram" : ""
+    },
+                
     {
 
         "name" : "Akarsh Madhusudana",

@@ -75,8 +75,8 @@
         "name" : "Mishal Sha",
         "position": "Website Manager",
         "image" : "mishal.jpg",
-        "facebook" : "https://www.facebook.com/shahmishal1998",
-        "instagram" : "mishal.shah.7331"
+        "facebook" : "https://www.facebook.com/mishal.shah.7731",
+        "instagram" : "shahmishal1998"
     },
 
         {

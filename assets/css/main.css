@@ -2342,8 +2342,9 @@ Cover
   transition: all 0.4s ease-in-out;
 }
 .icon_box_one i {
-  margin-top: -10px;
+  margin-top: 15px;
   padding: 0 15px;
+  padding-left: 20px;
   font-size: 72px;
   color: #f50136;
   vertical-align: middle;

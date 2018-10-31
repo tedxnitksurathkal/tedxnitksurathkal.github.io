@@ -123,6 +123,22 @@
         "facebook" : "https://www.facebook.com/profile.php?id=100009532695994",
         "instagram" : "deepabhramondal"
     },
+    {
+
+        "name" : "Akarsh Madhusudana",
+        "position": "Video Coordinator",
+        "image" : "Akarsh.jpeg",
+        "facebook" : "https://www.facebook.com/akarsh.sonni.73",
+        "instagram" : "akarsh_sonni"
+    },
+    {
+
+        "name" : "Abhijith Kamath",
+        "position": "Video Coordinator",
+        "image" : "Abhijith.png",
+        "facebook" : "https://www.facebook.com/kamath18abhijith",
+        "instagram" : "abhijithkamath"
+    },
 
 ]
               

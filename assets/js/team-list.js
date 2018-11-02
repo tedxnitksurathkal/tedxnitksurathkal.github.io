@@ -126,7 +126,7 @@
         {
 
         "name" : "Dr. KV Gangadharan",
-        "position": "Guide",
+        "position": "Mentor",
         "image" : "KVG.jpg",
         "facebook" : "",
         "instagram" : ""

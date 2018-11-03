@@ -112,6 +112,12 @@ ul.nosyely_list {
   list-style: none;
 }
 
+/*.section_center {
+  display: block;
+  float: none;
+  position: relative;
+  margin: auto;
+}*/
 .section_title {
   position: relative;
   margin-bottom: 25px;
@@ -120,6 +126,12 @@ ul.nosyely_list {
   text-transform: uppercase;
   padding: 10px 0;
   font-size: 36px;
+}
+.section_title .center_title {
+  text-transform: uppercase;
+  padding: 10px 0;
+  font-size: 36px;
+  text-align: center;
 }
 .section_title .subtitle {
   text-transform: uppercase;

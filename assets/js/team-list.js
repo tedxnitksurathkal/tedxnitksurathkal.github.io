@@ -148,13 +148,12 @@
         "facebook" : "https://www.facebook.com/akarsh.sonni.73",
         "instagram" : "akarsh_sonni"
     },
-    // {
+    {
 
-    //     "name" : "Abhijith Kamath",
-    //     "position": "Video Coordinator",
-    //     "image" : "404-1.jpg",
-    //     "facebook" : "https://www.facebook.com/kamath18abhijith",
-    //     "instagram" : "abhijithkamath"
-    // },
+        "name" : "Mr. Kami",
+        "position": "Video Coordinator",
+        "image" : "404-2.png",
+        "facebook" : "https://www.facebook.com/kamath18abhijith",
+        "instagram" : "abhijithkamath"
+    },
 ]
-              

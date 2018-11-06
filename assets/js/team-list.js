@@ -11,7 +11,7 @@
 
         "name" : "Amarnath Krishna",
         "position": "Head of Media",
-        "image" : "Amarnath.JPG",
+        "image" : "Amarnath.jpg",
         "facebook" : "https://www.facebook.com/amarnathkrishna",
         "instagram" : "amarnathkrishna"
     },
@@ -29,7 +29,7 @@
 
         "name" : "Azif Hidayat",
         "position": "Head of Branding",
-        "image" : "Azif.jpeg",
+        "image" : "Azif.jpg",
         "facebook" : "https://www.facebook.com/azifph",
         "instagram" : "azifph"
     },
@@ -47,7 +47,7 @@
 
         "name" : "Govind Jeevan",
         "position": "Website Manager",
-        "image" : "govind.jpg",
+        "image" : "Govind.jpg",
         "facebook" : "https://www.facebook.com/govind.jeevan",
         "instagram" : "govindjeevan"
     },
@@ -74,7 +74,7 @@
 
         "name" : "Mishal Sha",
         "position": "Website Manager",
-        "image" : "mishal.jpg",
+        "image" : "Mishal.jpg",
         "facebook" : "https://www.facebook.com/mishal.shah.7731",
         "instagram" : "shahmishal1998"
     },
@@ -92,7 +92,7 @@
 
         "name" : "Nihal Shetty",
         "position": "Head of Marketing",
-        "image" : "nihal.jpg",
+        "image" : "Nihal.jpg",
         "facebook" : "https://www.facebook.com/shettynhl",
         "instagram" : "shettynhl"
     },
@@ -135,7 +135,7 @@
 
         "name" : "Dr. Sheena",
         "position": "Faculty Advisor",
-        "image" : "sheena.jpg",
+        "image" : "Sheena.jpg",
         "facebook" : "",
         "instagram" : ""
     },
@@ -144,18 +144,17 @@
 
         "name" : "Akarsh Madhusudana",
         "position": "Video Coordinator",
-        "image" : "Akarsh.jpeg",
+        "image" : "Akarsh.jpg",
         "facebook" : "https://www.facebook.com/akarsh.sonni.73",
         "instagram" : "akarsh_sonni"
     },
-    {
+    // {
 
-        "name" : "Abhijith Kamath",
-        "position": "Video Coordinator",
-        "image" : "Abhijith.png",
-        "facebook" : "https://www.facebook.com/kamath18abhijith",
-        "instagram" : "abhijithkamath"
-    },
-
+    //     "name" : "Abhijith Kamath",
+    //     "position": "Video Coordinator",
+    //     "image" : "404-1.jpg",
+    //     "facebook" : "https://www.facebook.com/kamath18abhijith",
+    //     "instagram" : "abhijithkamath"
+    // },
 ]
               

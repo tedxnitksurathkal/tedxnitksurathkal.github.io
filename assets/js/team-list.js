@@ -72,7 +72,7 @@
 
         {
 
-        "name" : "Mishal Sha",
+        "name" : "Mishal Shah",
         "position": "Website Manager",
         "image" : "Mishal.jpg",
         "facebook" : "https://www.facebook.com/mishal.shah.7731",

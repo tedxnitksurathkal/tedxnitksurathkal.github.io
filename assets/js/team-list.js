@@ -138,8 +138,7 @@
         "image" : "Sheena.jpg",
         "facebook" : "",
         "instagram" : ""
-    },
-                
+    },   
     {
 
         "name" : "Akarsh Madhusudana",
@@ -149,11 +148,45 @@
         "instagram" : "akarsh_sonni"
     },
     {
-
+        "name" : "Saraswathi Vinod",
+        "position": "Curation <Coordinator>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             </Coordinator>",
+        "image" : "Saraswathi.jpg",
+        "facebook" : "https://www.facebook.com/kamath18abhijith",
+        "instagram" : "tedxnitksurathkal"  
+    },
+    {
+        "name" : "Tharfeed Ahmed Unus",
+        "position": "Curation Coordinator",
+        "image" : "Tharfeed.jpg",
+        "facebook" : "https://www.facebook.com/iamtau21",
+        "instagram" : "tedxnitksurathkal"  
+    },
+    {
+        "name" : "Avanika Rathnakar",
+        "position": "Video Coordinator",
+        "image" : "Avanika.jpg",
+        "facebook" : "https://www.facebook.com/avanikab.rathnakar",
+        "instagram" : "tedxnitksurathkal"  
+    },
+    {
         "name" : "Mr. Kami",
         "position": "Video Coordinator",
         "image" : "404-2.png",
         "facebook" : "https://www.facebook.com/kamath18abhijith",
         "instagram" : "abhijithkamath"
+    },
+    {
+        "name" : "Vinay Radhakrishnan",
+        "position": "Video Coordinator",
+        "image" : "Vinay.jpg",
+        "facebook" : "https://www.facebook.com/vinay.radhakrishnan.75",
+        "instagram" : "tedxnitksurathkal"  
+    },
+    {
+        "name" : "Fathima Shakir",
+        "position": "Event Host",
+        "image" : "404-2.png",
+        "facebook" : "https://www.facebook.com/fathima.shakir",
+        "instagram" : "tedxnitksurathkal"  
     },
 ]

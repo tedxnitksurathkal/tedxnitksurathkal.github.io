@@ -169,9 +169,9 @@
         "instagram" : "tedxnitksurathkal"  
     },
     {
-        "name" : "Mr. Kami",
+        "name" : "Abhijith Kamath",
         "position": "Video Coordinator",
-        "image" : "404-2.png",
+        "image" : "Abhijith.jpg",
         "facebook" : "https://www.facebook.com/kamath18abhijith",
         "instagram" : "abhijithkamath"
     },
@@ -185,7 +185,7 @@
     {
         "name" : "Fathima Shakir",
         "position": "Event Host",
-        "image" : "404-2.png",
+        "image" : "Fathima.jpg",
         "facebook" : "https://www.facebook.com/fathima.shakir",
         "instagram" : "tedxnitksurathkal"  
     },

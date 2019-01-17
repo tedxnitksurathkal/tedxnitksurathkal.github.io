@@ -1,3 +1,4 @@
+# Contributors
 The following file is expected to be maintained forever with the name of the individuals who contribute to the making of the website.
 
 We would like to thank the following individuals for their contributions:

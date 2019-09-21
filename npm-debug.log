@@ -1,0 +1,60 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'aframe-watcher' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData aframe-watcher
+8 silly fetchNamedPackageData aframe-watcher
+9 silly mapToRegistry name aframe-watcher
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry uri https://registry.npmjs.org/aframe-watcher
+13 verbose request uri https://registry.npmjs.org/aframe-watcher
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 5:47:39 PM
+16 verbose request id 74a55446519e4f96
+17 http request GET https://registry.npmjs.org/aframe-watcher
+18 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+19 info attempt registry request try #2 at 5:47:49 PM
+20 http request GET https://registry.npmjs.org/aframe-watcher
+21 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+22 info attempt registry request try #3 at 5:48:49 PM
+23 http request GET https://registry.npmjs.org/aframe-watcher
+24 silly fetchPackageMetaData Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+24 silly fetchPackageMetaData     at errnoException (dns.js:50:10)
+24 silly fetchPackageMetaData     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+24 silly fetchPackageMetaData  error for aframe-watcher { Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+24 silly fetchPackageMetaData     at errnoException (dns.js:50:10)
+24 silly fetchPackageMetaData     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+24 silly fetchPackageMetaData   code: 'ENOTFOUND',
+24 silly fetchPackageMetaData   errno: 'ENOTFOUND',
+24 silly fetchPackageMetaData   syscall: 'getaddrinfo',
+24 silly fetchPackageMetaData   hostname: 'registry.npmjs.org',
+24 silly fetchPackageMetaData   host: 'registry.npmjs.org',
+24 silly fetchPackageMetaData   port: 443 }
+25 silly rollbackFailedOptional Starting
+26 silly rollbackFailedOptional Finishing
+27 silly runTopLevelLifecycles Starting
+28 silly runTopLevelLifecycles Finishing
+29 silly install printInstalled
+30 verbose stack Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+30 verbose stack     at errnoException (dns.js:50:10)
+30 verbose stack     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:92:26)
+31 verbose cwd /home/nirmal/Documents/DevWorld/tedxnitksurathkal.github.io
+32 error Linux 5.0.0-23-generic
+33 error argv "/usr/bin/node" "/usr/bin/npm" "install" "aframe-watcher"
+34 error node v8.10.0
+35 error npm  v3.5.2
+36 error code ENOTFOUND
+37 error errno ENOTFOUND
+38 error syscall getaddrinfo
+39 error network getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+40 error network This is most likely not a problem with npm itself
+40 error network and is related to network connectivity.
+40 error network In most cases you are behind a proxy or have bad network settings.
+40 error network
+40 error network If you are behind a proxy, please make sure that the
+40 error network 'proxy' config is set properly.  See: 'npm help config'
+41 verbose exit [ 1, true ]

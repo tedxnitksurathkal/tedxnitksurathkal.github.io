@@ -8,7 +8,8 @@
     <title> TEDxNITKSurathkal</title>
     <!-- ========== Favicon Ico ========== -->
     <link rel="icon" href="assets/img/favicon.png">
-    <link rel="stylesheet" type="text/css" href="assets/css/theme-reveal.css"> <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/theme-reveal.css">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
   </head>
   <body>
@@ -26,7 +27,7 @@
           <img id="my-image" src="/assets/img/tedx-white.png">
         </a-assets>
       </a-assets>
-
+<a-entity geometry="primitive: box; width: 1; height: 1; depth: 1"></a-entity>
       <a-entity scale="2 2 2" geometry="primitive: torusKnot" position="0 6 -10" material="color: magenta; metalness:1; roughness: 0.1; sphericalEnvMap: #sky;">
         <a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360" repeat="indefinite"></a-animation>
       </a-entity>

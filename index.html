@@ -37,6 +37,7 @@
     <!--<link rel="stylesheet" href="assets/css/animate.min.css">-->
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -546,7 +547,7 @@
                     Past Speakers
                 </h3>
             </div>
-            <div class="brand_carousel owl-carousel">
+            <div class="brand_carousel owl-carousel" id="past-speakers">
                 <div class="brand_item text-center">
                     <img class="lazy" data-src="assets/img/past_editions/poonam.jpg" alt="Poonam Bir Kasturi">
                     <h4>Poonam Bir <br>Kasturi</h4>
@@ -602,23 +603,23 @@
 
 
                 <div class="brand_item text-center">
-                    <img class="lazy" data-src="assets/img/past_editions/antphi.jpg" alt="Harish Sivaramakrishnan">
-                    <h4>Harish <br>Sivaramakrishnan</h4>
-                </div>
-
-                <div class="brand_item text-center">
-                    <img class="lazy" data-src="assets/img/past_editions/gaugod.jpg" alt="Anto Philip">
+                    <img class="lazy" data-src="assets/img/past_editions/antphi.jpg" alt="Anto Philip">
                     <h4>Anto <br>Philip</h4>
                 </div>
 
                 <div class="brand_item text-center">
-                    <img class="lazy" data-src="assets/img/past_editions/gsmadh.jpg" alt="Malika Verma">
-                    <h4>Malika <br>Verma</h4>
+                    <img class="lazy" data-src="assets/img/past_editions/gaugod.jpg" alt="Gaurav Godhwani">
+                    <h4>Gaurav <br>Godhwani</h4>
                 </div>
 
                 <div class="brand_item text-center">
-                    <img class="lazy" data-src="assets/img/past_editions/harsiv.jpg" alt="GS Madhusudhan">
-                    <h4>G S<br>Madhusudhan</h4>
+                    <img class="lazy" data-src="assets/img/past_editions/gsmadh.jpg" alt="G S Madhusudhan">
+                    <h4>G S <br>Madhusudhan</h4>
+                </div>
+
+                <div class="brand_item text-center">
+                    <img class="lazy" data-src="assets/img/past_editions/harsiv.jpg" alt="Harish Sivaramakrishnan">
+                    <h4>Harish<br>Sivaramakrishnan</h4>
                 </div>
 
                 <div class="brand_item text-center">
@@ -628,7 +629,7 @@
 
                 <div class="brand_item text-center">
                     <img class="lazy" data-src="assets/img/past_editions/malver.webp" alt="Gaurav Godhwani">
-                    <h4>Gaurav<br>Godhwani</h4>
+                    <h4>Malika<br>Verma</h4>
                 </div>
 
                 <div class="brand_item text-center">
@@ -707,40 +708,6 @@
                                     gallery
                                 </h4>
                             </div>
-                            <div class="footer_box_body">
-                                <ul class="instagram_list">
-                                    <li>
-                                        <a href="assets/img/footer/1.jpg">
-                                            <img src="assets/img/footer/1.jpg" alt="TedXNITK">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="assets/img/footer/2.jpg">
-                                            <img src="assets/img/footer/2.jpg" alt="TedXNITK">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="assets/img/footer/3.jpg">
-                                            <img src="assets/img/footer/3.jpg" alt="TedXNITK">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="assets/img/footer/4.jpg">
-                                            <img src="assets/img/footer/4.jpg" alt="TedXNITK">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="assets/img/footer/5.jpg">
-                                            <img src="assets/img/footer/5.jpg" alt="TedXNITK">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="assets/img/footer/6.jpg">
-                                            <img src="assets/img/footer/6.jpg" alt="TedXNITK">
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -755,7 +722,7 @@
                         document.write(new Date().getFullYear());
                         </script> All rights reserved
                         <br>
-                         Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by TEDxNITKSurathkal &amp; <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                        Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by TEDxNITKSurathkal &amp; <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
                 </div>
                 <div class="col-12 col-md-6 ">
                     <ul class="footer_menu">
@@ -785,7 +752,13 @@
             </div>
         </div>
     </div>
-    </div>
+    <script src="/assets/js/prevspeakers.js"></script>
+    <script>
+    for (var x = 0; x < prevspeakers.length; x++) {
+        $(prevspeakers[x]["firstname"] + "<br>" + prevspeakers[x]["lastname"]).appendTo("#past-speakers")
+
+    }
+    </script>
     <!--footer end -->
     <!-- ========== SCRIPTS ========== -->
     <!-- jquery -->

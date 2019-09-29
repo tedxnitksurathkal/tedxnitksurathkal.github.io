@@ -312,6 +312,7 @@
 </section>
 <!--about the event end -->
 
+<!--
 <section class="pb100">
     <div class="container">
         <div class="section_title mb50">
@@ -565,7 +566,7 @@
         </div>
     </div>
 </div>
-
+-->
 
 <!--brands section -->
 <section class="bg-black pt100 pb100">
@@ -576,55 +577,6 @@
             </h3>
         </div>
         <div class="brand_carousel owl-carousel">
-            <div class="brand_item text-center">
-                <img class="lazy" data-src="assets/img/past_editions/poonam.jpg" alt="Poonam Bir Kasturi">
-                <h4>Poonam Bir <br>Kasturi</h4>
-            </div>
-            <div class="brand_item text-center">
-                <img class="lazy" data-src="assets/img/past_editions/ashok.jpeg" alt="Ashok Rao">
-                <h4>Ashok <br>Rao</h4>
-            </div>
-
-            <div class="brand_item text-center">
-                <img class="lazy" data-src="assets/img/past_editions/binoy.jpg" alt="Binoy John">
-                <h4>Binoy <br>John</h4>
-            </div>
-            <div class="brand_item text-center">
-                <img class="lazy" data-src="assets/img/past_editions/kumaresh.jpg" alt="Kumaresh Rajagopalan">
-                <h4>Kumaresh <br>Rajagopalan</h4>
-            </div>
-            <div class="brand_item text-center">
-                <img class="lazy" data-src="assets/img/past_editions/mohandas.jpg" alt="Mohandas Pai">
-                <h4>Mohandas <br>Pai</h4>
-            </div>
-            <div class="brand_item text-center">
-                <img class="lazy" data-src="assets/img/past_editions/prasanta.jpg" alt="Prasanta Karmakar">
-                <h4>Prasanta <br>Karmakar</h4>
-            </div>
-            <div class="brand_item text-center">
-                <img class="lazy" data-src="assets/img/past_editions/raj.jpg" alt="Rajeswari Vaidyanathan">
-                <h4>Rajeswari <br>Vaidyanathan</h4>
-            </div>
-            <div class="brand_item text-center">
-                <img class="lazy" data-src="assets/img/past_editions/rishi.jpg" alt="Rishikesha Krishnan">
-                <h4>Rishikesha <br>Krishnan</h4>
-            </div>
-            <div class="brand_item text-center">
-                <img class="lazy" data-src="assets/img/past_editions/robin.jpg" alt="Robin Chaurasiya">
-                <h4>Robin <br>Chaurasiya</h4>
-            </div>
-            <div class="brand_item text-center">
-                <img class="lazy" data-src="assets/img/past_editions/sammilan.jpg" alt="Sammilan Shetty">
-                <h4>Sammilan <br>Shetty</h4>
-            </div>
-            <div class="brand_item text-center">
-                <img class="lazy" data-src="assets/img/past_editions/sriram.png" alt="Sriram Ramaswamy">
-                <h4>Sriram <br>Ramaswamy</h4>
-            </div>
-            <div class="brand_item text-center">
-                <img class="lazy" data-src="assets/img/past_editions/tim.jpg" alt="Tim Poston">
-                <h4>Tim <br>Poston</h4>
-            </div>
         </div>
     </div>
 </section>
@@ -789,6 +741,37 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
 <script type="text/javascript" src="assets/js/lazy_load.js"></script>
+<script src="assets/js/past-speakers.js"></script>
+<script>
+  for(i = 0; i < past_speakers.length; i++){
+    speaker = past_speakers[i];
+    src = 'assets/img/past_editions/' + speaker.image;
+    html = "<div class='brand_item text-center'><img class='lazy' data-src='" + src + "' alt='" + speaker.name + "' style='display: block;'><h4>" + speaker.name + "</h4></div>";
+    $('.brand_carousel').append(html);
+  }
+
+  $('.brand_carousel').owlCarousel({
+    loop: true,
+    autoplay: true,
+    smartSpeed: 450,
+    autoplayHoverPause: false,
+    dots: false,
+    nav: false,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 2
+      },
+      600: {
+        items: 3
+      },
+      1000: {
+        items: 5
+      }
+    },
+    items: 5
+  });
+</script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
 <script>

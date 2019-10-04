@@ -120,7 +120,7 @@
         </div>
 
         <div class="row justify-content-center">
-            <a href="https://fleetilla.com/" target="_blank"><img src="/assets/img/sponsors/fleetilla.png" class="sponsors" alt="Fleetilla"></a>
+            <a href="https://fleetilla.com/" target="_blank"><img data-src="assets/img/sponsors/fleetilla.png" class="sponsors lazy" alt="Fleetilla"></a>
         </div>
     </div>
     <br>
@@ -132,7 +132,7 @@
         </div>
 
         <div class="row justify-content-center">
-            <a href="http://www.fpi-inc.com/en/" target="_blank"><img src="/assets/img/sponsors/fpi.png" class="sponsors" alt="Focused Phonotics Inc." height="150px;"></a>
+            <a href="http://www.fpi-inc.com/en/" target="_blank"><img class="sponsors lazy" data-src="assets/img/sponsors/fpi.png" class="sponsors" alt="Focused Phonotics Inc." height="150px;"></a>
         </div>
     </div>
     <br>
@@ -144,7 +144,7 @@
         </div>
 
         <div class="row justify-content-center">
-            <a href="http://www.ieee-mangalore.org/"><img src="/assets/img/sponsors/ieee.png" class="sponsors" alt="IEEE Mangalore Sub Section"></a>
+            <a href="http://www.ieee-mangalore.org/"><img class="sponsors lazy" data-src="assets/img/sponsors/ieee.png" class="sponsors" alt="IEEE Mangalore Sub Section"></a>
         </div>
     </div>
     <br>
@@ -156,7 +156,7 @@
         </div>
 
         <div class="row justify-content-center">
-            <a href="http://csd.nitk.ac.in/" target="_blank"><img src="/assets/img/sponsors/csd.jpg" class="sponsors" width="" height="220px;" alt="Centre for System Design"></a>
+            <a href="http://csd.nitk.ac.in/" target="_blank"><img class="sponsors lazy" data-src="assets/img/sponsors/csd.jpg" class="sponsors" width="" height="220px;" alt="Centre for System Design"></a>
         </div>
     </div>
     <br>
@@ -168,7 +168,7 @@
         </div>
 
         <div class="row justify-content-center">
-            <a href="https://www.zyoin.com/" target="_blank"><img src="/assets/img/sponsors/zyoin.png" class="sponsors" width="" height="130px;" alt="Zyoin"></a>
+            <a href="https://www.zyoin.com/" target="_blank"><img class="sponsors lazy" data-src="assets/img/sponsors/zyoin.png" class="sponsors" width="" height="130px;" alt="Zyoin"></a>
         </div>
     </div>
     <br>
@@ -180,7 +180,7 @@
         </div>
 
         <div class="row justify-content-center">
-            <img src="/assets/img/sponsors/diesel-cafe.png" class="sponsors" width="" height="200px;" alt="Diesel Cafe">
+            <img class="sponsors lazy" data-src="assets/img/sponsors/diesel-cafe.png" class="sponsors" width="" height="200px;" alt="Diesel Cafe">
         </div>
     </div>
     <br>
@@ -192,7 +192,7 @@
         </div>
 
         <div class="row justify-content-center">
-            <a href="https://www.instagram.com/artistsforumnitk/?hl=en" target="_blank"><img src="/assets/img/sponsors/af.jpeg" class="sponsors" height="300px"></a>
+            <a href="https://www.instagram.com/artistsforumnitk/?hl=en" target="_blank"><img class="sponsors lazy" data-src="assets/img/sponsors/af.jpeg" class="sponsors" height="300px"></a>
         </div>
     </div>
 </section>
@@ -202,7 +202,6 @@
 <footer>
     <div class="container">
         <div class="row justify-content-center">
-
             <div class="col-md-4 col-12">
                 <div class="footer_box">
                     <div class="footer_header">
@@ -212,20 +211,33 @@
                     </div>
                     <div class="footer_box_body">
                         <p>
-                            Fostered by the vision of serving the student community with the most innovative and inspiring ideas.
+                            Fostered by the vision of serving the student community with the most innovative and
+                            inspiring ideas.
                         </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="footer_box">
+                    <div class="footer_header">
+                        <h4 class="footer_title">
+                            Spread the LOVE
+                        </h4>
+                    </div>
+                    <div class="footer_box_body">
                         <ul class="footer_social">
                             <li>
-                                <a href="https://www.facebook.com/tedxnitksurathkal2018/"><i class="ion-social-facebook"></i></a>
+                                <a href="https://www.facebook.com/tedxnitksurathkal2018/"><i
+                                        class="ion-social-facebook"></i></a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/tedxnitksurathkal/?hl=en"><i class="ion-social-instagram"></i></a>
+                                <a href="https://www.instagram.com/tedxnitksurathkal/?hl=en"><i
+                                        class="ion-social-instagram"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-
             <div class="col-12 col-md-4">
                 <div class="footer_box">
                     <div class="footer_header">
@@ -266,22 +278,6 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4">
-                <div class="footer_box">
-                    <div class="footer_header">
-                        <h4 class="footer_title">
-                            subscribe to our newsletter
-                        </h4>
-                    </div>
-                    <div class="footer_box_body">
-                        <div class="newsletter_form">
-                            <input type="email" class="form-control" placeholder="E-Mail here">
-                            <button class="btn btn-rounded btn-block btn-primary">SUBSCRIBE</button>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -344,6 +340,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <!-- Custom js -->
 <script src="assets/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+<script src="assets/js/lazy_load.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
 <script>

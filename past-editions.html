@@ -242,7 +242,6 @@
 <footer>
     <div class="container">
         <div class="row justify-content-center">
-
             <div class="col-md-4 col-12">
                 <div class="footer_box">
                     <div class="footer_header">
@@ -252,20 +251,33 @@
                     </div>
                     <div class="footer_box_body">
                         <p>
-                            Fostered by the vision of serving the student community with the most innovative and inspiring ideas.
+                            Fostered by the vision of serving the student community with the most innovative and
+                            inspiring ideas.
                         </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="footer_box">
+                    <div class="footer_header">
+                        <h4 class="footer_title">
+                            Spread the LOVE
+                        </h4>
+                    </div>
+                    <div class="footer_box_body">
                         <ul class="footer_social">
                             <li>
-                                <a href="https://www.facebook.com/tedxnitksurathkal2018/"><i class="ion-social-facebook"></i></a>
+                                <a href="https://www.facebook.com/tedxnitksurathkal2018/"><i
+                                        class="ion-social-facebook"></i></a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/tedxnitksurathkal/?hl=en"><i class="ion-social-instagram"></i></a>
+                                <a href="https://www.instagram.com/tedxnitksurathkal/?hl=en"><i
+                                        class="ion-social-instagram"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-
             <div class="col-12 col-md-4">
                 <div class="footer_box">
                     <div class="footer_header">
@@ -306,22 +318,6 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4">
-                <div class="footer_box">
-                    <div class="footer_header">
-                        <h4 class="footer_title">
-                            subscribe to our newsletter
-                        </h4>
-                    </div>
-                    <div class="footer_box_body">
-                        <div class="newsletter_form">
-                            <input type="email" class="form-control" placeholder="E-Mail here">
-                            <button class="btn btn-rounded btn-block btn-primary">SUBSCRIBE</button>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -384,31 +380,33 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <!-- Custom js -->
 <script src="assets/js/main.js"></script>
+<!-- Speakers are loaded from this file -->
 <script src="assets/js/past-editions.js"></script>
-<!-- Speakers are loaded from this fine -->
-<script src="assets/js/past-speakers.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+<script src="assets/js/lazy_load.js"></script>
 
 <script>
 
 
     for (var x = 0; x < speakers2011.length; x++) {
-        $("<div class=\"col-md-6 col-sm-10\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img src=\""+speakers2011[x]["image"]+"\"><div class=\"info_box\"><h5 class=\"name\">"+speakers2011[x]["name"]+"</h5><p class=\"position\">"+speakers2011[x]["designation"]+"</p></div></div><div class=\"speaker_social\"><p></p></div></div></div>").appendTo("#s2011")
+        $("<div class=\"col-md-6 col-sm-10\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img class=\"lazy\" data-src=\""+speakers2011[x]["image"]+"\"><div class=\"info_box\"><h5 class=\"name\">"+speakers2011[x]["name"]+"</h5><p class=\"position\">"+speakers2011[x]["designation"]+"</p></div></div><div class=\"speaker_social\"><p></p></div></div></div>").appendTo("#s2011")
 
     }
 
 	for (var x = 0; x < speakers2012.length; x++) {
-        $("<div class=\"col-md-6 col-sm-10\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img src=\""+speakers2012[x]["image"]+"\"><div class=\"info_box\"><h5 class=\"name\">"+speakers2012[x]["name"]+"</h5><p class=\"position\">"+speakers2012[x]["designation"]+"</p></div></div><div class=\"speaker_social\"><p></p></div></div></div>").appendTo("#s2012")
+        $("<div class=\"col-md-6 col-sm-10\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img class=\"lazy\" data-src=\""+speakers2012[x]["image"]+"\"><div class=\"info_box\"><h5 class=\"name\">"+speakers2012[x]["name"]+"</h5><p class=\"position\">"+speakers2012[x]["designation"]+"</p></div></div><div class=\"speaker_social\"><p></p></div></div></div>").appendTo("#s2012")
 
     }
 
 
     for (var x = 0; x < speakers2016.length; x++) {
-        $("<div class=\"col-md-6 col-sm-10\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img src=\""+speakers2016[x]["image"]+"\"><div class=\"info_box\"><h5 class=\"name\">"+speakers2016[x]["name"]+"</h5><p class=\"position\">"+speakers2016[x]["designation"]+"</p></div></div><div class=\"speaker_social\"><p></p></div></div></div>").appendTo("#s2016")
+        $("<div class=\"col-md-6 col-sm-10\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img class=\"lazy\" data-src=\""+speakers2016[x]["image"]+"\"><div class=\"info_box\"><h5 class=\"name\">"+speakers2016[x]["name"]+"</h5><p class=\"position\">"+speakers2016[x]["designation"]+"</p></div></div><div class=\"speaker_social\"><p></p></div></div></div>").appendTo("#s2016")
 
     }
 
     for (var x = 0; x < speakers2018.length; x++) {
-        $("<div class=\"col-md-6 col-sm-10\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img src=\""+speakers2018[x]["image"]+"\"><div class=\"info_box\"><h5 class=\"name\">"+speakers2018[x]["name"]+"</h5><p class=\"position\">"+speakers2018[x]["designation"]+"</p></div></div><div class=\"speaker_social\"><p></p></div></div></div>").appendTo("#s2018")
+        $("<div class=\"col-md-6 col-sm-10\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img class=\"lazy\" data-src=\""+speakers2018[x]["image"]+"\"><div class=\"info_box\"><h5 class=\"name\">"+speakers2018[x]["name"]+"</h5><p class=\"position\">"+speakers2018[x]["designation"]+"</p></div></div><div class=\"speaker_social\"><p></p></div></div></div>").appendTo("#s2018")
 
 	}
 

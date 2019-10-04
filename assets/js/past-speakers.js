@@ -1,5 +1,37 @@
 var past_speakers = [
   {
+    'name': 'Harish<br>Sivaramakrishnan',
+    'image': 'harsiv.jpg'
+  },
+  {
+    'name': 'Anto<br>Philip',
+    'image': 'antphi.jpg'
+  },
+  {
+    'name': 'Malika<br>Verma',
+    'image': 'malver.webp'
+  },
+  {
+    'name': 'GS<br>Madhusudhanan',
+    'image': 'gsmadh.jpg'
+  },
+  {
+    'name': 'Lakshmi<br>Selvakumaran',
+    'image': 'laksel.jpeg'
+  },
+  {
+    'name': 'Gaurav<br>Godhwani',
+    'image': 'gaugod.jpg'
+  },
+  {
+    'name': 'Manisha Gera<br>Baswani',
+    'image': 'manbas.jpeg'
+  },
+  {
+    'name': 'LT CDR Pratibha<br>Jamwal',
+    'image': 'prajam.jpeg'
+  },
+  {
     'name': 'Poonam Bir <br>Kasturi',
     'image': 'poonam.jpg'
   },
@@ -43,4 +75,5 @@ var past_speakers = [
     'name': 'Tim <br>Poston',
     'image': 'tim.jpg'
   }
+
 ]

@@ -287,6 +287,7 @@
             </div>
             <!--event features end-->
         </div>
+<<<<<<< HEAD
     </section>
     <!--about the event end -->
     <!--
@@ -297,6 +298,21 @@
                     our speakers
                 </h3>
             </div>
+=======
+        <!--event features end-->
+
+    </div>
+</section>
+<!--about the event end -->
+
+<!--
+<section class="pb100">
+    <div class="container">
+        <div class="section_title mb50">
+            <h3 class="title">
+                our speakers
+            </h3>
+>>>>>>> 96581736481670ab551fe6f145589a0d845a6450
         </div>
         <div class="row justify-content-center no-gutters">
             <div class="col-md-4 col-sm-8">
@@ -538,6 +554,7 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
 -->
     <!--brands section -->
     <section class="bg-black pt100 pb100">
@@ -599,6 +616,24 @@
 
 
 
+=======
+</div>
+-->
+
+<!--brands section -->
+<section class="bg-black pt100 pb100">
+    <div class="container">
+        <div class="section_title mb50">
+            <h3 class="title" style="color: #ffffff;">
+                Past Speakers
+            </h3>
+        </div>
+        <div class="brand_carousel owl-carousel">
+        </div>
+    </div>
+</section>
+<!--brands section end-->
+>>>>>>> 96581736481670ab551fe6f145589a0d845a6450
 
 
 
@@ -752,6 +787,7 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
     <script src="/assets/js/prevspeakers.js"></script>
     <script>
     for (var x = 0; x < prevspeakers.length; x++) {
@@ -802,6 +838,84 @@
 
     gtag('config', 'UA-110715968-3');
     </script>
+=======
+</div>
+<!--footer end -->
+
+<!-- ========== SCRIPTS ========== -->
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--<script src="assets/js/jquery.min.js"></script>-->
+<!-- bootstrap -->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/esm/popper.js"></script>-->
+<script src="assets/js/popper.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+<!--<script src="assets/js/bootstrap.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<!--<script src="assets/js/waypoints.min.js"></script>-->
+<!--slick carousel -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
+<!--<script src="assets/js/owl.carousel.min.js"></script>-->
+<!--parallax -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.4.2/parallax.min.js"></script>
+<!--<script src="assets/js/parallax.min.js"></script>-->
+<!--Counter up -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+<!--<script src="assets/js/jquery.counterup.min.js"></script>-->
+<!--Counter down -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+<!--<script src="assets/js/jquery.countdown.min.js"></script>-->
+<!-- WOW JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<!--<script src="assets/js/wow.min.js"></script>-->
+<!-- Custom js -->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/title.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+<script type="text/javascript" src="assets/js/lazy_load.js"></script>
+<script src="assets/js/past-speakers.js"></script>
+<script>
+  for(i = 0; i < past_speakers.length; i++){
+    speaker = past_speakers[i];
+    src = 'assets/img/past_editions/' + speaker.image;
+    html = "<div class='brand_item text-center'><img class='lazy' data-src='" + src + "' alt='" + speaker.name + "' style='display: block;'><h4>" + speaker.name + "</h4></div>";
+    $('.brand_carousel').append(html);
+  }
+
+  $('.brand_carousel').owlCarousel({
+    loop: true,
+    autoplay: true,
+    smartSpeed: 450,
+    autoplayHoverPause: false,
+    dots: false,
+    nav: false,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 2
+      },
+      600: {
+        items: 3
+      },
+      1000: {
+        items: 5
+      }
+    },
+    items: 5
+  });
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110715968-3');
+</script>
+
+>>>>>>> 96581736481670ab551fe6f145589a0d845a6450
 </body>
 
 </html>

@@ -2491,16 +2491,18 @@ Cover
   text-transform: capitalize;
 }
 .speaker_box .speaker_social {
-  padding: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .speaker_box .speaker_social ul {
   padding: 0;
   margin: 0;
   list-style: none;
+  text-align: center;
 }
 .speaker_box .speaker_social ul li {
   display: inline-block;
-  margin-left: 4px;
+  margin-left: 6px;
 }
 .speaker_box .speaker_social ul li a {
   border: solid 1px #f50136;

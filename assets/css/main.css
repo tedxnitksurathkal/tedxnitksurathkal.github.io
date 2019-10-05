@@ -3213,3 +3213,9 @@ textarea.form-control {
 .accordion_card .card-body {
   font-size: 16px;
 }
+
+.lazy {
+  background-image: url('../img/loading.gif');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}

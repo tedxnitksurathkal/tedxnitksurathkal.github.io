@@ -8,279 +8,48 @@
     <title> TEDxNITKSurathkal</title>
     <!-- ========== Favicon Ico ========== -->
     <link rel="icon" href="assets/img/favicon.png">
-    <link rel="stylesheet" type="text/css" href="assets/css/theme-reveal.css"> 
+    <link rel="stylesheet" type="text/css" href="assets/css/theme-reveal.css"> <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
 
-<style>
+      <a-assets>
+        <img id="pink" src="https://img.gs/bbdkhfbzkk/stretch/http://i.imgur.com/1hyyIUi.jpg" crossorigin="anonymous" />
+        <img src="https://img.gs/bbdkhfbzkk/stretch/https://i.imgur.com/25P1geh.png" id="grid" crossorigin="anonymous">
+        <img src="https://img.gs/bbdkhfbzkk/2048x1024,stretch/http://i.imgur.com/WMNH2OF.jpg" id="chrome" crossorigin="anonymous">
+        <img id="sky" src="https://img.gs/bbdkhfbzkk/2048x2048,stretch/http://i.imgur.com/WqlqEkq.jpg" crossorigin="anonymous" />
+        <a-asset-item id="dawningFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2FdawningOfANewDayRegular.typeface.json?1490305922844"></a-asset-item>
+        <a-asset-item id="exoFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2Black.typeface.json?1490305922150"></a-asset-item>
+        <a-asset-item id="exoItalicFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2BlackItalic.typeface.json?1490305922725"></a-asset-item>
+        <a-assets>
+          <img id="my-image" src="/assets/img/tedx-white.png">
+        </a-assets>
+      </a-assets>
 
-body {
-  background: black;
-}
-/* Helmet */
-.border {
-  border: 1px solid #222;
-}
-.hidden {
-  display: none;
-}
+      <a-entity scale="2 2 2" geometry="primitive: torusKnot" position="0 6 -10" material="color: magenta; metalness:1; roughness: 0.1; sphericalEnvMap: #sky;">
+        <a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360" repeat="indefinite"></a-animation>
+      </a-entity>
 
-@media only screen and (min-width: 768px) {
-.helmet {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top:10vh;
-}
-}
+      <a-entity position="-3 1 -6" rotation="5 0 0">
+        <a-entity
+          rotation="0 0 5"
+          position="0 2 0.2"
+          text-geometry="value: Virtual Reality; font: #dawningFont; bevelEnabled: true; bevelSize: 0.05; bevelThickness: 0.05; curveSegments: 12; size: 1; height: 0;"
+          material="color:lavenderblush; metalness:1; roughness: 0; sphericalEnvMap: #pink;"
+        ></a-entity>
 
-.helmet {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top:25vh;
-}
+      <a-entity
+        geometry="primitive: plane; width: 10000; height: 10000;" rotation="-90 0 0"
+        material="src: #grid; repeat: 10000 10000; transparent: true;metalness:0.6; roughness: 0.4; sphericalEnvMap: #sky;"></a-entity>
 
+      <a-entity light="color: #ccccff; intensity: 1; type: ambient;" visible=""></a-entity>
+      <a-entity light="color: ffaaff; intensity: 1.5" position="5 5 5"></a-entity>
+      <a-entity light="color: white; intensity: 0.5" position="-5 5 15"></a-entity>
+      <a-entity light="color: white; type: ambient;"></a-entity>
+      <a-image src="#my-image"></a-image>
 
-
-
-/* Lightsaber */
-.lightsaber {
-  position: relative;
-  z-index: 50;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  top: 45vh;
-  width: 40px;
-  height: 300px;
-  border-top-left-radius: 50px;
-  background: linear-gradient(to right, transparent, black 60px), linear-gradient(to top, transparent, transparent 120px, #DBCEC6 100px, #DBCEC6 250px, black 250px), linear-gradient(to right, black, black 10px, transparent 10px, transparent 15px, black 15px, black 25px, transparent 25px, transparent 30px, black 30px), linear-gradient(to top, transparent, transparent 5px, gray 5px, gray 8px, transparent 8px, transparent 13px, gray 13px, gray 16px, transparent 16px, transparent 21px, gray 21px, gray 24px, transparent 24px), linear-gradient(#DBCEC6, #DBCEC6);
-}
-.lightsaber:before {
-  content: '';
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 100px;
-  width: 60px;
-  height: 50px;
-  background: linear-gradient(to right, transparent, transparent 3px, black 3px, black 10px, #DBCEC6 10px, #DBCEC6 19px, black 19px), repeating-linear-gradient(#DBCEC6 5px, black 5px, black 10px, #DBCEC6 10px, #DBCEC6 15px);
-}
-.lightsaber:after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 40px;
-  width: 50px;
-  height: 60px;
-  background: radial-gradient(farthest-side at 10px 25px, black 5px, transparent 5px), radial-gradient(farthest-side at 10px 35px, black 5px, transparent 5px);
-}
-.lightsaber:hover {
-  cursor: pointer;
-}
-.buttons {
-  position: absolute;
-  width: 5px;
-  height: 60px;
-  display: block;
-  background: black;
-  right: -5px;
-  top: 20px;
-}
-.buttons:before,
-.buttons:after {
-  content: '';
-  display: block;
-  position: relative;
-  width: 0px;
-  height: 0px;
-  border: 7px solid transparent;
-  border-right: 7px solid #DBCEC6;
-  left: -3px;
-}
-.buttons:before {
-  top: 5px;
-}
-.buttons:after {
-  top: 15px;
-}
-.laser {
-  display: block;
-  position: absolute;
-  right: 20px;
-  bottom: 265px;
-  height: 0px;
-  width: 20px;
-  background: linear-gradient(to right, red, #F6F3EC, red);
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%);
-  transition: all 0.3s;
-  z-index: 0;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  box-shadow: 0px 0px 10px 4px red;
-}
-.laser.on {
-  height: 700px;
-  box-shadow: 0px 0px 20px 8px red;
-}
-.hoverlaser {
-  display: block;
-  position: absolute;
-  overflow: hidden;
-  top: 0px;
-  width: 100%;
-  height: 50px;
-  background: black;
-  border-top-left-radius: 50px;
-  z-index: 2;
-}
-.bgmask {
-  position: absolute;
-  z-index: 50;
-  top: -115vh;
-  left: -125vw;
-  width: 250vw;
-  height: 250vh;
-  background: blue;
-  background: radial-gradient(transparent, transparent 20%, black 45%);
-}
-.cont {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  display: block;
-  width: 100vw;
-  height: 100vh;
-  background: #333;
-  overflow: hidden;
-  transition: all 0.3s;
-}
-.cont.show {
-  background: radial-gradient(rgba(255, 0, 0, 0.2), black 85%);
-}
-.text {
-  font-size: 30px;
-  position: absolute;
-  padding: 10px;
-  z-index: 200;
-  width: 100vw;
-  height: 100px;
-  color: white;
-  background: black;
-  bottom: 0;
-  text-align: center;
-  font-family: 'Arial';
-}
-.text.hide {
-  display: none;
-}
-
-
-
-
-</style></head><body>
-<div style="" class="helmet">
-    <img style="height:auto; width:40vw"src="assets/img/tedx-white.png">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <img style="height:auto; width:80vw"src="assets/img/themename.png">
-</div>
-<div class="cont">
-  <div class="lightsaber">
-    <div class="buttons"></div>
-    <div class="laser"></div>
-    <div class="hoverlaser"></div>
-    <div class="bgmask"></div>  
-  </div>   
-</div>
-<div class="text">Try dragging the Lightsaber.<br>Use a desktop and turn on the speakers for a better experience. <strong>Click here to scroll down.</strong></div>
-
-<div class="star-wars-intro">
-
-  <!-- All Scrolling Content Goes in here -->
-  <div class="main-content">
-
-    <div class="title-content">
-      <p class="content-header"><span style="font-size:80px; color:red">TEDx</span><br/>NITKSurathkal</p>
-
-      <br>
-
-      <p class="content-body">
-
-        Our world is progressing towards an exciting future, surpassing challenges that were once thought to be impossible to overcome. This drives us to the promise of coming up with new ideas and better solutions to the problems we continue to face even today. To SCINTILLATE is to emit flashes of light; sparkles. Sometimes a spark is all it takes to set minds on the path towards revolutionary ideas. Come witness the fireworks, as TEDxNITKSurathkal scintillates on..
-      </p>
-
-      <!-- button or link or whatever -->
-      <a href="/" class="space-button">18x January 2019</a>
-        
-    </div>
-  </div>
-</div>
-
-
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
-<script>
-!function(a){function f(a,b){if(!(a.originalEvent.touches.length>1)){a.preventDefault();var c=a.originalEvent.changedTouches[0],d=document.createEvent("MouseEvents");d.initMouseEvent(b,!0,!0,window,1,c.screenX,c.screenY,c.clientX,c.clientY,!1,!1,!1,!1,0,null),a.target.dispatchEvent(d)}}if(a.support.touch="ontouchend"in document,a.support.touch){var e,b=a.ui.mouse.prototype,c=b._mouseInit,d=b._mouseDestroy;b._touchStart=function(a){var b=this;!e&&b._mouseCapture(a.originalEvent.changedTouches[0])&&(e=!0,b._touchMoved=!1,f(a,"mouseover"),f(a,"mousemove"),f(a,"mousedown"))},b._touchMove=function(a){e&&(this._touchMoved=!0,f(a,"mousemove"))},b._touchEnd=function(a){e&&(f(a,"mouseup"),f(a,"mouseout"),this._touchMoved||f(a,"click"),e=!1)},b._mouseInit=function(){var b=this;b.element.bind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),c.call(b)},b._mouseDestroy=function(){var b=this;b.element.unbind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),d.call(b)}}}(jQuery);
-</script>
-<script >
-var soundOn = document.createElement("audio");
-soundOn.setAttribute("src", 'assets/audio/saberon.mp3');
-var soundOff = document.createElement("audio");
-soundOff.setAttribute("src", 'assets/audio/saberoff.mp3');
-var soundBreath = document.createElement("audio");
-soundBreath.setAttribute("src", 'https://www.thesoundarchive.com/starwars/star-wars-theme-song.mp3');
-
-
-$(".lightsaber").draggable({ revert: true });
-
-$(document).ready(function() {
-   
-    $('.text').click(function(){
-        $('html, body').animate({scrollTop:999}, 'slow');
-        return false;
-    });
-
-});
-
-
-$('.lightsaber').on('mousedown touchstart', function () {
-     $('.laser').addClass('on');
-     soundOn.play();
-     $('.cont').addClass('show');
-     soundBreath.play();
-     $('.text').addClass('hidden');
-     
-});
-
-$('.lightsaber').on('mouseup touchend', function () {
-     $('.laser').removeClass('on');
-     soundBreath.pause();
-     soundBreath.currentTime = 0;
-     soundOff.play();
-     $('.cont').removeClass('show');
-     $('.text').removeClass('hidden');
-     
-});
-</script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-110715968-3');
-</script>
-
-</body></html>
+      <a-sky src="#sky" rotation="0 -90 0"></a-sky>
+    </a-scene>
+</body>
+</html>

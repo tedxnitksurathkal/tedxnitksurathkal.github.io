@@ -358,21 +358,25 @@ img {
   top: 0;
   bottom: 0;
   width: 100%;
-  background-color: #f7f7f7;
+  background-color: #fff;
   z-index: 999999;
 }
 .loader .loader-inner {
-  position: absolute;
-  border: 2px solid #f50136;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  left: calc(50% - 20px);
-  top: calc(50% - 20px);
-  border-right: 0;
-  border-top-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  margin-left: auto;
+  position: relative;
+    top: 40%;
+  margin-right: auto;
+    width: 80px;
+    height: 80px;
+    z-index: 9999;
+    vertical-align: middle;
+ 
   -webkit-animation: loader-inner 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
   animation: loader-inner 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
+  
 }
 
 @-webkit-keyframes loader-outter {
@@ -387,32 +391,32 @@ img {
 }
 @keyframes loader-outter {
   0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+    -webkit-transform: rotateX(360deg);
+    transform: rotateX(360deg);
   }
 }
 @-webkit-keyframes loader-inner {
   0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
   }
   100% {
-    -webkit-transform: rotate(-360deg);
-    transform: rotate(-360deg);
+    -webkit-transform: rotateX(-360deg);
+    transform: rotateX(-360deg);
   }
 }
 @keyframes loader-inner {
   0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
   }
   100% {
-    -webkit-transform: rotate(-360deg);
-    transform: rotate(-360deg);
+    -webkit-transform: rotateX(-360deg);
+    transform: rotateX(-360deg);
   }
 }
 /* ----------------colors------------------- */
@@ -2487,16 +2491,18 @@ Cover
   text-transform: capitalize;
 }
 .speaker_box .speaker_social {
-  padding: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .speaker_box .speaker_social ul {
   padding: 0;
   margin: 0;
   list-style: none;
+  text-align: center;
 }
 .speaker_box .speaker_social ul li {
   display: inline-block;
-  margin-left: 4px;
+  margin-left: 6px;
 }
 .speaker_box .speaker_social ul li a {
   border: solid 1px #f50136;

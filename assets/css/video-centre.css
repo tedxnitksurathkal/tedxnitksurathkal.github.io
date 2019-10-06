@@ -1,7 +1,7 @@
 .vid-container {
 		    position: relative;
 		    padding-bottom: 52%;
-		    padding-top: 30px;
+		    padding-top: 30px
 		    height: 0;
 		}
 
@@ -24,7 +24,7 @@
     }
 
 .vid-list {
-    	width: 1344px;
+    	width: 2520px;
     	position: relative;
     	top:0;
     	left: 0;
@@ -32,12 +32,18 @@
 
 .vid-item {
     	display: block;
+			font: Helvetica;
     	width: 148px;
     	height: 148px;
     	float: left;
+			cursor: pointer;
     	margin: 0;
     	padding: 10px;
     }
+
+.vid-item:hover{
+	background-color: #A6A6A6;
+}
 
 .thumb {
     	overflow:hidden;
@@ -51,7 +57,7 @@
     }
 
 .vid-item .desc {
-    	color: #21A1D2;
+    	color: #000000;
     	font-size: 15px;
     	margin-top:5px;
     }
@@ -62,9 +68,8 @@
     }
 
 .arrow-left {
-    	color: #fff;
+    	color: #E62B1E;
     	position: absolute;
-    	background: #777;
     	padding: 15px;
     	left: -25px;
     	top: -130px;
@@ -73,15 +78,43 @@
     }
 
 .arrow-right {
-    	color: #fff;
+    	color: #E62B1E;
     	position: absolute;
-    	background: #777;
     	padding: 15px;
     	right: -25px;
     	top: -130px;
     	z-index:100;
     	cursor: pointer;
     }
+
+.tab {
+		  overflow: hidden;
+		}
+
+.tab button {
+  background-color: inherit;
+	font: Helvetica;
+	font-weight: 300;
+  float: left;
+  border: 1px solid;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tab button:hover {
+  background-color: #A6A6A6;
+}
+
+.tab button.active {
+  background-color: #E62B1E;
+	color: white;
+
+}
+
+
 
 @media (max-width: 624px) {
     	.arrows {

@@ -560,6 +560,9 @@
                             <a href="/past-editions">Past Editions</a>
                         </li>
                         <li>
+                            <a href="/video-centre">Video Centre</a>
+                        </li>
+                        <li>
                             <a href="/findyourx">Theme</a>
                         </li>
                         <li>
@@ -605,16 +608,6 @@
     <!-- Video centre functionality code loaded from here -->
     <script src="assets/js/video-centre.js"></script>
 
-    <!-- Team List loaded from here -->
-    <script src="assets/js/team-list.js"></script>
-    <script>
-        for (var x = 0; x < team.length; x++) {
-            $("<div class=\"col-md-3 col-sm-6\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img class=\"lazy\" src=\"assets/img/team/" + team[x]["image"] + "\"><div class=\"info_box\"><h5 class=\"name\">" + team[x]["name"] + "</h5><p class=\"position\">" + team[x]["position"] + "</p></div></div><div class=\"speaker_social\"><ul><li><a target=\"_blank\" href=" + team[x]["facebook"] + "><i class=\"ion-social-facebook\"></i></a></li><li><a target=\"_blank\" href=\"https://www.instagram.com/" + team[x]["instagram"] + "\"><i class=\"ion-social-instagram\"></i></a></li></ul></div></div></div>").appendTo("#team-list")
-
-        }
-    </script>
-
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
     <script>
@@ -622,18 +615,6 @@
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'UA-110715968-3');
-    </script>
-    <script type="text/javascript">
-        $(function () {
-            $('.lazy').Lazy({
-                scrollDirection: 'vertical',
-                effect: 'fadeIn',
-                visibleOnly: true,
-                onError: function (element) {
-                    console.log('error loading ' + element.data('src'));
-                }
-            });
-        });
     </script>
 
 </body>

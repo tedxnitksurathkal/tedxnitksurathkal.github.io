@@ -14,7 +14,7 @@
   =============================================== */
 'use strict';
 $(window).load(function() {
-    $('.loader').delay(0).fadeOut('slow');
+    $('.loader').delay(100).fadeOut('slow');
 });
 
 
@@ -73,30 +73,6 @@ $(document).ready(function() {
         animateOut: 'fadeOut',
         animateIn: 'fadeIn',
         dotsContainer: '.cover_dots'
-    });
-
-    $(".brand_carousel").owlCarousel({
-        loop:true,
-        autoplay:true,
-        smartSpeed:450,
-        autoplayHoverPause:false,
-        dots:false,
-        nav:false,
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:2
-            },
-            600:{
-                items:3
-
-            },
-            1000:{
-                items:5
-
-            }
-        },
-        items:5
     });
     /* ------------------------------------- */
     /* Animated progress bars

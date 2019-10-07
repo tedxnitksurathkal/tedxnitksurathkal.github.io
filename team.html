@@ -31,12 +31,16 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.0/animate.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
-
+    <style>
+        .speaker_social{
+            padding:20px!important;
+        }
+    </style>
 </head>
 <body>
 <div class="loader">
     <div class="loader-outter"></div>
-    <div class="loader-inner"></div>
+    <div class="loader-inner" style="background-image: url('assets/img/mini_theme2019.png');"></div>
 </div>
 
 <!--header start here -->
@@ -126,7 +130,6 @@
 <footer>
     <div class="container">
         <div class="row justify-content-center">
-
             <div class="col-md-4 col-12">
                 <div class="footer_box">
                     <div class="footer_header">
@@ -136,20 +139,36 @@
                     </div>
                     <div class="footer_box_body">
                         <p>
-                            Fostered by the vision of serving the student community with the most innovative and inspiring ideas.
+                            Fostered by the vision of serving the student community with the most innovative and
+                            inspiring ideas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="footer_box">
+                    <div class="footer_header">
+                        <h4 class="footer_title">
+                            Spread the LOVE
+                        </h4>
+                    </div>
+                    <div class="footer_box_body">
+                        <p>
+                            We're on your favourite social media networks! Follow us on:
                         </p>
                         <ul class="footer_social">
                             <li>
-                                <a href="https://www.facebook.com/tedxnitksurathkal2018/"><i class="ion-social-facebook"></i></a>
+                                <a href="https://www.facebook.com/tedxnitksurathkal2018/"><i
+                                        class="ion-social-facebook"></i></a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/tedxnitksurathkal/?hl=en"><i class="ion-social-instagram"></i></a>
+                                <a href="https://www.instagram.com/tedxnitksurathkal/?hl=en"><i
+                                        class="ion-social-instagram"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-
             <div class="col-12 col-md-4">
                 <div class="footer_box">
                     <div class="footer_header">
@@ -190,22 +209,6 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4">
-                <div class="footer_box">
-                    <div class="footer_header">
-                        <h4 class="footer_title">
-                            subscribe to our newsletter
-                        </h4>
-                    </div>
-                    <div class="footer_box_body">
-                        <div class="newsletter_form">
-                            <input type="email" class="form-control" placeholder="E-Mail here">
-                            <button class="btn btn-rounded btn-block btn-primary">SUBSCRIBE</button>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -272,15 +275,14 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <!-- Custom js -->
 <script src="assets/js/main.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
-<!--<script src="assets/js/jquery.lazy.min.js"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
-<script src="assets/js/jquery.lazy.plugins.min.js"></script>
+<script type="text/javascript" src="assets/js/lazy_load.js"></script>
 
 <!-- Team List loaded from here -->
 <script src="assets/js/team-list.js"></script>
 <script>
         for (var x = 0; x < team.length; x++) {
-            $("<div class=\"col-md-3 col-sm-6\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img class=\"lazy\" src=\"assets/img/team/"+team[x]["image"]+"\"><div class=\"info_box\"><h5 class=\"name\">"+team[x]["name"]+"</h5><p class=\"position\">"+team[x]["position"]+"</p></div></div><div class=\"speaker_social\"><ul><li><a target=\"_blank\" href="+team[x]["facebook"]+"><i class=\"ion-social-facebook\"></i></a></li><li><a target=\"_blank\" href=\"https://www.instagram.com/"+team[x]["instagram"]+"\"><i class=\"ion-social-instagram\"></i></a></li></ul></div></div></div>").appendTo("#team-list")
+            $("<div class=\"col-md-3 col-sm-6\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img class=\"lazy\" id=\""+team[x]["name"]+"\" data-src=\"assets/img/team/"+team[x]["image"]+"\"><div class=\"info_box\"><h5 class=\"name\">"+team[x]["name"]+"</h5><p class=\"position\">"+team[x]["position"]+"</p></div></div><div class=\"speaker_social\"><ul><li><a target=\"_blank\" href="+team[x]["facebook"]+"><i class=\"ion-social-facebook\"></i></a></li><li><a target=\"_blank\" href=\"https://www.instagram.com/"+team[x]["instagram"]+"\"><i class=\"ion-social-instagram\"></i></a></li></ul></div></div></div>").appendTo("#team-list")
             
         }
 </script>
@@ -293,21 +295,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
   gtag('config', 'UA-110715968-3');
 </script>
-<script type="text/javascript">
-    $(function() {
-        $('.lazy').Lazy({
-            scrollDirection: 'vertical',
-            effect: 'fadeIn',
-            visibleOnly: true,
-            onError: function(element) {
-                console.log('error loading ' + element.data('src'));
-            }
-        });
-    });
-</script>
 
 </body>
 </html>
-
-
-

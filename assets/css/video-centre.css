@@ -23,8 +23,35 @@
 	padding-bottom: 20px;
 }
 
-.vid-list {
-	width: 2520px;
+.vid-list-2019 {
+	width: 1036px;
+	position: relative;
+	top:0;
+	left: 0;
+}
+
+.vid-list-2018 {
+	width: 1204px;
+	position: relative;
+	top:0;
+	left: 0;
+}
+
+.vid-list-2016 {
+	width: 1036px;
+	position: relative;
+	top:0;
+	left: 0;
+}
+.vid-list-2012 {
+	width: 1036px;
+	position: relative;
+	top:0;
+	left: 0;
+}
+
+.vid-list-2011 {
+	width: 2235px;
 	position: relative;
 	top:0;
 	left: 0;

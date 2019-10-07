@@ -184,7 +184,6 @@ myp5 = new p5(function(p) {
     s = p.canvas.width / srcImage.width;
     this.drawingContext.drawImage(p.canvas, s * sx, s * sy, s * sw, s * sh, dx, dy, dw, dh);
   };
-  return;
   p.j = -1;
   p.cacheTriangle = '';
   p.img_copy = '';

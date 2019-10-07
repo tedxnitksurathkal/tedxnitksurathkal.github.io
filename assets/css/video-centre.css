@@ -68,6 +68,11 @@
 	padding: 10px;
 }
 
+.vid-item-active {
+	border: 2px solid red;
+	background-color: rgb(231, 231, 231);
+}
+
 .vid-item:hover{
 	background-color: #A6A6A6;
 }

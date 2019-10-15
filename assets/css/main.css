@@ -3219,3 +3219,9 @@ textarea.form-control {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
+
+
+.nav-pills .nav-link.active {
+  color: #838383;
+  background-color: #ffffff;
+}

@@ -257,6 +257,46 @@ var speakers2012 = [
         },
                 
             ]
-            
-            
-    
+
+var speakers2019 = [
+  {
+    "name": "Harish Sivaramakrishan",
+    "image": "assets/img/Speaker Pictures/2019/hs.png",
+    "designation": "Engineer/Musician"
+  },
+  {
+    "name": "Anto Philip",
+    "image": "assets/img/Speaker Pictures/2019/ap.png",
+    "designation": "Entrepreneur"
+  },
+  {
+    "name": "Malika Verma",
+    "image": "assets/img/Speaker Pictures/2019/mv.jpg",
+    "designation": "Psychoanalytic Psychotherapist"
+  },
+  {
+    "name": "G S Madhusudhan",
+    "image": "assets/img/Speaker Pictures/2019/gsm.png",
+    "designation": "Technical Lead, Team Shakti"
+  },
+  {
+    "name": "Lakshmi Selvakumaran",
+    "image": "assets/img/Speaker Pictures/2019/ls.png",
+    "designation": "Team Lead, Green Trails"
+  },
+  {
+    "name": "Gaurav Godhwani",
+    "image": "assets/img/Speaker Pictures/2019/gg.png",
+    "designation": "Director, CivicDataLab"
+  },
+  {
+    "name": "Manisha Gera Baswani",
+    "image": "assets/img/Speaker Pictures/2019/mgb.png",
+    "designation": "Artist"
+  },
+  {
+    "name": "Lt. CDR Pratibha Jamwal",
+    "image": "assets/img/Speaker Pictures/2019/pj.png",
+    "designation": "Crew, INSV Tarini"
+  }
+]

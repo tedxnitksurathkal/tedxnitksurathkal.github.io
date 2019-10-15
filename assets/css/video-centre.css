@@ -115,7 +115,13 @@
 }
 
 .tab {
-	overflow: hidden;
+	overflow: scroll;
+}
+
+.tablinks {
+	display: inline-block;
+	white-space: nowrap;
+
 }
 
 .tab button {
@@ -123,7 +129,6 @@
 	font: Helvetica;
 	font-weight: 300;
 	float: left;
-	border: 1px solid;
 	outline: none;
 	cursor: pointer;
 	padding: 14px 16px;

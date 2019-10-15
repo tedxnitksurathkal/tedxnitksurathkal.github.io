@@ -19,7 +19,7 @@
     p.offsetChangeImg = 0;
     p.changeImgG = '';
     p.preload = function () {
-      p.img = p.loadImage('http://preview.ibb.co/jenMAH/pexels_photo_300857.jpg');
+      p.img = p.loadImage('assets/img/dev3.jpg');
     };
     p.setup = function () {
       

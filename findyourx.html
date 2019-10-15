@@ -1,55 +1,49 @@
 <!DOCTYPE html>
-<html lang='en' class=''>
-    <meta charset="UTF-8">
-    <meta name="description" content="TedX NITKSurathkal">
-    <meta name="keywords" content="Ted, TedX, TEDxNITKSurathkal, TedX NITK, NITK, NITK Surathkal,">
-    <meta name="author" content="TedX NITK Surathkal">
-    <!-- ========== Title ========== -->
-    <title> TEDxNITKSurathkal</title>
-    <!-- ========== Favicon Ico ========== -->
-    <link rel="icon" href="assets/img/favicon.png">
-    <link rel="stylesheet" type="text/css" href="assets/css/theme-reveal.css"> <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-text-geometry-component@0.5.1/dist/aframe-text-geometry-component.min.js"></script>
-  </head>
-  <body>
-    <a-scene>
+<html lang="en">
 
-      <a-assets>
-        <img id="pink" src="https://img.gs/bbdkhfbzkk/stretch/http://i.imgur.com/1hyyIUi.jpg" crossorigin="anonymous" />
-        <img src="https://img.gs/bbdkhfbzkk/stretch/https://i.imgur.com/25P1geh.png" id="grid" crossorigin="anonymous">
-        <img src="https://img.gs/bbdkhfbzkk/2048x1024,stretch/http://i.imgur.com/WMNH2OF.jpg" id="chrome" crossorigin="anonymous">
-        <img id="sky" src="https://img.gs/bbdkhfbzkk/2048x2048,stretch/http://i.imgur.com/WqlqEkq.jpg" crossorigin="anonymous" />
-        <a-asset-item id="dawningFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2FdawningOfANewDayRegular.typeface.json?1490305922844"></a-asset-item>
-        <a-asset-item id="exoFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2Black.typeface.json?1490305922150"></a-asset-item>
-        <a-asset-item id="exoItalicFont" src="https://cdn.glitch.com/c719c986-c0c5-48b8-967c-3cd8b8aa17f3%2Fexo2BlackItalic.typeface.json?1490305922725"></a-asset-item>
-        <a-assets>
-          <img id="my-image" src="/assets/img/tedx-white.png">
-        </a-assets>
-      </a-assets>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TEDx NITKSurathkal">
+  <meta name="keywords" content="TED, TEDx, TEDxNITKSurathkal, TEDx NITK, NITK, NITK Surathkal">
+  <meta name="author" content="TEDx NITK Surathkal">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TEDxNITKSurathkal | Prepare to Scintillate">
+  <meta property="og:title" content="TEDxNITKSurathkal | Prepare to Scintillate">
+  <meta property="og:description"
+    content="TEDxNITKSurathkal is back again with it’s all new theme, Scintillate. Be prepared to get scintillate for the upcoming annual colloque to explore beyond the conventions and spark the people to rethink their notion of what is possible. See you on 18th January'19.">
+  <meta property="og:url" content="http://www.tedxnitksurathkal.in/">
+  <meta property="og:image" content="http://www.tedxnitksurathkal.in/assets/img/favicon.png">
+  <title> TEDxNITKSurathkal</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,900" rel="stylesheet">
+  <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="404/css/style.css" />
+</head>
 
-      <a-entity scale="2 2 2" geometry="primitive: torusKnot" position="0 6 -10" material="color: magenta; metalness:1; roughness: 0.1; sphericalEnvMap: #sky;">
-        <a-animation easing="linear" attribute="rotation" dur="10000" to="0 0 360" repeat="indefinite"></a-animation>
-      </a-entity>
+<body>
 
-      <a-entity position="-3 1 -6" rotation="5 0 0">
-        <a-entity
-          rotation="0 0 5"
-          position="0 2 0.2"
-          text-geometry="value: Virtual Reality; font: #dawningFont; bevelEnabled: true; bevelSize: 0.05; bevelThickness: 0.05; curveSegments: 12; size: 1; height: 0;"
-          material="color:lavenderblush; metalness:1; roughness: 0; sphericalEnvMap: #pink;"
-        ></a-entity>
+  <div id="notfound">
+    <div class="notfound-bg"></div>
+    <div class="notfound">
+      <h2>Hey! This Page is Under Development. Come back soon!</h2>
+      <a href="/" class="home-btn">Go Home</a>
+      <div class="notfound-social">
+        <a href="https://www.facebook.com/tedxnitksurathkal2018/" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/tedxnitksurathkal/" target="_blank"><i class="fa fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-      <a-entity
-        geometry="primitive: plane; width: 10000; height: 10000;" rotation="-90 0 0"
-        material="src: #grid; repeat: 10000 10000; transparent: true;metalness:0.6; roughness: 0.4; sphericalEnvMap: #sky;"></a-entity>
-
-      <a-entity light="color: #ccccff; intensity: 1; type: ambient;" visible=""></a-entity>
-      <a-entity light="color: ffaaff; intensity: 1.5" position="5 5 5"></a-entity>
-      <a-entity light="color: white; intensity: 0.5" position="-5 5 15"></a-entity>
-      <a-entity light="color: white; type: ambient;"></a-entity>
-      <a-image src="#my-image"></a-image>
-
-      <a-sky src="#sky" rotation="0 -90 0"></a-sky>
-    </a-scene>
+    gtag('config', 'UA-110715968-3');
+  </script>
 </body>
+
 </html>

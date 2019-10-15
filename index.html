@@ -730,7 +730,9 @@
   for(i = 0; i < past_speakers.length; i++){
     speaker = past_speakers[i];
     src = 'assets/img/past_editions/' + speaker.image;
-    html = "<div class='brand_item text-center'><img class='lazy' data-src='" + src + "' alt='" + speaker.name + "' style='display: block;'><h4>" + speaker.name + "</h4></div>";
+    // html = "<div class='brand_item text-center'><img class='lazy' data-src='" + src + "' alt='" + speaker.name + "' style='display: block;'><h4>" + speaker.name + "</h4></div>";
+    html = "<div class='brand_item text-center'><div class='card mx-2 bg-dark' style='height: 100%;'><img class='card-img-top lazy' data-src='" + src + "' alt='" + speaker.name + "' style='display: block; padding-top: 20px; width: auto' height='110'><div class='card-body'><p class='card-text' style='color: #ffffff'>" + speaker.name + "</p></div></div>";
+
     $('.brand_carousel').append(html);
   }
 

@@ -4,11 +4,9 @@ $(function() {
     scrollDirection: 'vertical',
     effect: 'fadeIn',
     visibleOnly: true,
-    /* Uncomment for debugging
-    afterLoad: function(element) {
-      console.log('Image loaded for ' + element.attr('id'));
+    afterLoad: function(element){
+      element.css('background-image', 'none');
     },
-    */
     onError: function(element) {
       console.log('Error loading ' + element.data('src'));
     }

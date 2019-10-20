@@ -1,0 +1,33 @@
+
+
+#shattercanv {
+    position: absolute;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+}
+
+#info {
+    color: white;
+    font-family: monospace;
+}
+
+
+#shatterimg {
+    position: absolute;
+    cursor: pointer;
+    width:100vw!important;
+    height:100vh!important;
+}
+
+#container {
+    position: absolute;
+    width: 100vw!important;
+    height: 100vh!important;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}

@@ -388,6 +388,5 @@ class TextSparks
 
     }
 }
-
 const a = new TextSparks();
 a.run();

@@ -1,12 +1,27 @@
 // triangulation using https://github.com/ironwallaby/delaunay
+
 var kaliedo = document.getElementById("kaliedo")
 if(kaliedo)
 {
-  kaliedo.addEventListener("click", glassbreak);;
+  kaliedo.addEventListener("click", glassbreak);
 }
-
+var shatterse = document.getElementById("shattersection");
+window.onload= function()
+{
+  this.shatterse.style.display='none';
+}
 function glassbreak() {
   console.log("CLICK!");
+  
+  if(shatterse)
+  {
+    console.log(shatterse);
+    kaliedo.remove();
+    shatterse.style.display='block';
+    console.log(imgshatter[0]);
+    triangulate();
+    shatter();
+  }
 }
 
 // triangulation using https://github.com/ironwallaby/delaunay
@@ -27,6 +42,7 @@ var vertices = [],
 var container = document.getElementById('container');
 
 var clickPosition = [imageWidth * 0.5, imageHeight * 0.5];
+
 
 window.onload = function () {
   TweenMax.set(container, { perspective: 500 });

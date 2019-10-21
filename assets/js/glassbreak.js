@@ -96,8 +96,9 @@ function imageClickHandler(event) {
 
   clickPosition[0] = event.clientX - left;
   clickPosition[1] = event.clientY - top;
-
+  console.log("TRIANGULATE");
   triangulate();
+  console.log("SHATTER");
   shatter();
 }
 
@@ -186,7 +187,9 @@ function shatterCompleteHandler() {
   fragments.length = 0;
   vertices.length = 0;
   indices.length = 0;
-
+  console.log("SHATTER COMPLETE");
+  var shatmsg=document.getElementById('shattermesg');
+  shatmsg.style.display='block';
 }
 
 //////////////

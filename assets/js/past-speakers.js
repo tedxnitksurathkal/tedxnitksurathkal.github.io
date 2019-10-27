@@ -70,6 +70,9 @@ var past_speakers = [
   {
     'name': 'Tim <br>Poston',
     'image': 'tim.jpg'
+  },
+  {
+    'name': 'Neel<br/>Gala',
+    'image': 'neel.jpg'
   }
-
 ]

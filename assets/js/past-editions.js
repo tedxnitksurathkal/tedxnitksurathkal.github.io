@@ -275,9 +275,9 @@ var speakers2019 = [
     "designation": "Psychoanalytic Psychotherapist"
   },
   {
-    "name": "G S Madhusudhan",
-    "image": "assets/img/Speaker Pictures/2019/gsm.png",
-    "designation": "Technical Lead, Team Shakti"
+    "name": "Neel Gala",
+    "image": "assets/img/Speaker Pictures/2019/neel.jpg",
+    "designation": "CTO/Co-Founder at InCore Semiconductors"
   },
   {
     "name": "Lakshmi Selvakumaran",

@@ -250,6 +250,8 @@ Fragment.prototype = {
     this.canvas.height = this.box.h;
     this.canvas.style.width = this.box.w + 'px';
     this.canvas.style.height = this.box.h + 'px';
+    console.log(this.canvas.style.width + "W" + this.canvas.style.height + "H");
+
     this.canvas.style.left = this.box.x + 'px';
     this.canvas.style.top = this.box.y + 'px';
     this.ctx = this.canvas.getContext('2d');

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Minecraft VR Demo (Part 3: Adding a Background)</title>
+
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+
+  <a-scene>
+    <a-assets>
+      <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+      <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
+      <img id="tedx-theme" src="assets/img/tedx-white.png">
+    </a-assets>
+
+    <a-cylinder id="ground" src="#groundTexture" radius="30" height="0.1"></a-cylinder>
+
+    <a-sky id="background" src="#skyTexture" theta-length="90" radius="30"></a-sky>
+    <a-image src="#tedx-theme" rotation="0 0 0" width="3" height="1" position="0 2 -10" ></a-image>
+  </a-scene>
+  <!-- partial -->
+
+</body>
+
+</html>

@@ -40,7 +40,7 @@
 </div>
 
 <!--header start here -->
-<header class="header navbar fixed-top navbar-expand-md">
+<header class="header navbar fixed-top navbar-expand-md" style="background-color: #18181c;margin-top:0px;padding-top:0.5rem;padding-bottom: 0.5rem">
     <div class="container">
         <a class="navbar-brand logo" href="#">
             <img src="assets/img/tedx-white.png" alt="TedxNITK Surathkal"/>
@@ -116,7 +116,8 @@
                             Archives
                         </h4>
                         <ul>
-                            <li class="active"><a data-toggle="pill" href="#2018">2018</a></li>
+                            <li class="active"><a data-toggle="pill" href="#2019">2019</a></li>
+                            <li><a data-toggle="pill" href="#2018">2018</a></li>
                             <li><a data-toggle="pill" href="#2016">2016</a></li>
                             <li><a data-toggle="pill" href="#2012">2012</a></li>
                             <li><a data-toggle="pill" href="#2011">2011</a></li>
@@ -128,7 +129,33 @@
 
             <div class="col-12 col-md-8">
                 <div class="tab-content">
-                    <div id="2018" class="tab-pane active">
+                    <div id="2019" class="tab-pane active">
+                        <div class="section_title">
+                            <h3 class="title">
+                                Scintillate | 2019 <a href="https://m.youtube.com/playlist?list=PLsRNoUx8w3rPsxKVEbLIr0aEcZTCsvp-T"
+                                    class="btn btn-primary btn-rounded" target="_blank">Watch videos</a>
+                            </h3>
+                        </div>
+                    
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-12">
+                                <p>
+                                    Description of 2019
+                                </p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="section_title">
+                            <h6 class="subtitle">
+                                Speakers
+                            </h6>
+                        </div>
+                        <section class="pb100">
+                            <div class="row justify-content-center no-gutters" id="s2019">
+                            </div>
+                        </section>
+                    </div>
+                    <div id="2018" class="tab-pane">
                         <div class="section_title">
                             <h3 class="title">
                                 Perspectives | 2018 <a href="https://m.youtube.com/playlist?list=PLsRNoUx8w3rPsxKVEbLIr0aEcZTCsvp-T" class="btn btn-primary btn-rounded" target="_blank">Watch videos</a>
@@ -408,7 +435,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     for (var x = 0; x < speakers2018.length; x++) {
         $("<div class=\"col-md-6 col-sm-10\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img class=\"lazy\" data-src=\""+speakers2018[x]["image"]+"\"><div class=\"info_box\"><h5 class=\"name\">"+speakers2018[x]["name"]+"</h5><p class=\"position\">"+speakers2018[x]["designation"]+"</p></div></div><div class=\"speaker_social\"><p></p></div></div></div>").appendTo("#s2018")
 
-	}
+    }
+    for (var x = 0; x < speakers2019.length; x++) {
+            $("<div class=\"col-md-6 col-sm-10\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img class=\"lazy\" data-src=\"" + speakers2019[x]["image"] + "\"><div class=\"info_box\"><h5 class=\"name\">" + speakers2019[x]["name"] + "</h5><p class=\"position\">" + speakers2019[x]["designation"] + "</p></div></div><div class=\"speaker_social\"><p></p></div></div></div>").appendTo("#s2019")
+
+        }
 
 
 </script>

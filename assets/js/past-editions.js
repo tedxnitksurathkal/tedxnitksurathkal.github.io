@@ -257,6 +257,43 @@ var speakers2012 = [
         },
                 
             ]
+    
+var speakers2019 = [
+
+    {
+        'name': 'Harish<br>Sivaramakrishnan',
+        'image': 'assets/img/past_editions/harsiv.jpg'
+    },
+    {
+        'name': 'Anto<br>Philip',
+        'image': 'assets/img/past_editions/antphi.jpg'
+    },
+    {
+        'name': 'Malika<br>Verma',
+        'image': 'assets/img/past_editions/malver.webp'
+    },
+    {
+        'name': 'GS<br>Madhusudhanan',
+        'image': 'assets/img/past_editions/gsmadh.jpg'
+    },
+    {
+        'name': 'Lakshmi<br>Selvakumaran',
+        'image': 'assets/img/past_editions/laksel.jpeg'
+    },
+    {
+        'name': 'Gaurav<br>Godhwani',
+        'image': 'assets/img/past_editions/gaugod.jpg'
+    },
+    {
+        'name': 'Manisha Gera<br>Baswani',
+        'image': 'assets/img/past_editions/manbas.jpeg'
+    },
+    {
+        'name': 'LT CDR Pratibha<br>Jamwal',
+        'image': 'assets/img/past_editions/prajam.jpeg'
+    }
+
+]
             
             
     

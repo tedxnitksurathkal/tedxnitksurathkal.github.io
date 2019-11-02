@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>A-Frame: Stranger Things "Upside-Down"</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
 <!-- A-Frame 0.7.1 -->
 <!-- <script src="//aframe.io/releases/0.7.1/aframe.min.js"></script> -->
 
@@ -28,117 +18,93 @@
 
 <!-- A-Frame Particle System -->
 <script src="//unpkg.com/aframe-particle-system-component/dist/aframe-particle-system-component.min.js"></script>
-<script>
-  AFRAME.registerComponent('navigate-on-click', {
-    schema: {
-      url: { default: '' }
-    },
 
-    init: function () {
-      var data = this.data;
-      var el = this.el;
-
-      el.addEventListener('click', function () {
-        window.location.href = data.url;
-      });
-    }
-  });        
-</script>
 <!-- Custom Components -->
 <script>
   /**
    * Remove stubborn lighting from environment
    */
   AFRAME.registerComponent('remove-lighting', {
-    
+
     dependencies: ['environment'],
-    
-    update: function() {
-      var lights = this.el.querySelectorAll('[light]');
-      
-      for (var i = 0; i < lights.length; i++) {
-        lights[i].removeAttribute('light');
-      }
-    }
-    
-  });
-  
-  /**
-   * Emit events at scheduled intervals.
-   */
-  AFRAME.registerComponent('event-timer', {
-    
-    schema: {
-      event: { type: 'string', default: 'timer' },
-      interval: { type: 'int', default: 20000 }
-    },
-    
-    play: function() {
-      
-      var self = this;
-      
-      self.timer = setInterval( function() {
-        self.el.emit(self.data.event);
-      }, self.data.interval);
-     
-    },
-    
-    pause: function() {
-      clearInterval(this.timer);
-    }
-    
-  });
-  
-  AFRAME.registerComponent('light',{
-    vupdate: function () {
+
+    update: function () {
       var lights = this.el.querySelectorAll('[light]');
 
       for (var i = 0; i < lights.length; i++) {
         lights[i].removeAttribute('light');
       }
     }
+
   });
+
+  /**
+   * Emit events at scheduled intervals.
+   */
+  AFRAME.registerComponent('event-timer', {
+
+    schema: {
+      event: { type: 'string', default: 'timer' },
+      interval: { type: 'int', default: 20000 }
+    },
+
+    play: function () {
+
+      var self = this;
+
+      self.timer = setInterval(function () {
+        self.el.emit(self.data.event);
+      }, self.data.interval);
+
+    },
+
+    pause: function () {
+      clearInterval(this.timer);
+    }
+
+  });
+
   /**
    * This will randomize monster sound position, frequency, sfx used
    */
   AFRAME.registerComponent('monster', {
-    
+
     schema: {
       minInterval: { type: 'int', default: 10000 },
       maxInterval: { type: 'int', default: 30000 },
       radius: { type: 'number', default: 100 }
     },
-    
-    play: function() {
-      
+
+    play: function () {
+
       var self = this;
       var data = self.data;
       self.sounds = ['monster-1', 'monster-2', 'monster-3'];
-      
+
       self.wait = function () {
         var time = Math.floor((Math.random() * (data.maxInterval - data.minInterval + 1)) + data.minInterval);
         // console.log(time);
         return time;
       };
-      
-      
+
+
       setTimeout(self.scaryStuff.bind(self), self.wait());
-     
-      
+
+
     },
-    
-    pause: function() {
+
+    pause: function () {
       // remove listeners, clear intervals, etc.
     },
-    
-    scaryStuff: function() {
-      
+
+    scaryStuff: function () {
+
       var self = this;
       var data = self.data;
-     
+
       var x = Math.random() * (data.radius + data.radius) - data.radius,
-          y = 1.6,
-          z = Math.random() * (data.radius + data.radius) - data.radius;
+        y = 1.6,
+        z = Math.random() * (data.radius + data.radius) - data.radius;
 
       self.el.object3D.position.set(x, y, z);
 
@@ -147,78 +113,95 @@
       setTimeout(self.scaryStuff.bind(self), self.wait());
 
     }
-    
+
   });
 </script>
 
 <!-- SCENE -->
 <a-scene renderer="gammaOutput: false;" stats="false" rotation="0 -45 0">
-  
+
   <!-- Assets -->
   <a-assets>
+    <img id="homeThumbnail" src="assets/img/theme-reveal-img-2019.png">
     <!-- Audio: Not to be reused or distributed! -->
-    <audio id="ambience" src="https://ucarecdn.com/1fd36f41-cbed-40ac-86c2-0c4a8b7faef2/" crossorigin="anonymous"></audio>
+    <audio id="ambience" src="https://ucarecdn.com/1fd36f41-cbed-40ac-86c2-0c4a8b7faef2/"
+      crossorigin="anonymous"></audio>
     <audio id="hit" src="https://ucarecdn.com/89adac52-d24d-4949-95b8-b1f36132878d/" crossorigin="anonymous"></audio>
-    <audio id="monster-1" src="https://ucarecdn.com/cc86faa1-8417-455f-9406-0ab8afa49ec9/" crossorigin="anonymous"></audio>
-    <audio id="monster-2" src="https://ucarecdn.com/2b1b7dbe-1d29-4f89-a385-7041a8de3ba8/" crossorigin="anonymous"></audio>
-    <audio id="monster-3" src="https://ucarecdn.com/ad1df3c4-b037-4c75-8e5e-fcf30e7bd100/" crossorigin="anonymous"></audio>
-    <img id="my-image" src="assets/img/tedx-white.png">
-    <img id="homeThumbnail" src="/assets/img/theme-reveal-img-2019.png">
+    <audio id="monster-1" src="https://ucarecdn.com/cc86faa1-8417-455f-9406-0ab8afa49ec9/"
+      crossorigin="anonymous"></audio>
+    <audio id="monster-2" src="https://ucarecdn.com/2b1b7dbe-1d29-4f89-a385-7041a8de3ba8/"
+      crossorigin="anonymous"></audio>
+    <audio id="monster-3" src="https://ucarecdn.com/ad1df3c4-b037-4c75-8e5e-fcf30e7bd100/"
+      crossorigin="anonymous"></audio>
+
+
     <!-- Textures -->
     <img id="grunge" src="https://ucarecdn.com/e0629a8c-585f-4fdc-a7f8-826f1d2e556a/" crossorigin="anonymous">
-    
+
     <!-- Models -->
-<!--     <a-asset-item id="house-obj" src="https://ucarecdn.com/4ebf3329-5890-417f-9537-25ee37609ae9/" crossorigin="anonymous"></a-asset-item> -->
-<!--     <a-asset-item id="house-mtl" src="https://ucarecdn.com/c81a12d0-1b1a-4420-a274-df369ec04ac1/" crossorigin="anonymous"></a-asset-item> -->
-    <a-asset-item id="house2-obj" src="https://ucarecdn.com/28d0c2b4-257c-4369-84d1-7c7b9ba3faa7/" crossorigin="anonymous"></a-asset-item>
-<!--     <a-asset-item id="demogorgon" src="https://ucarecdn.com/4bdeee6d-79ff-4d9e-b74f-03f85a19c225/" response-type="arraybuffer" crossorigin="anonymous"></a-asset-item> -->
-    
+    <!--     <a-asset-item id="house-obj" src="https://ucarecdn.com/4ebf3329-5890-417f-9537-25ee37609ae9/" crossorigin="anonymous"></a-asset-item> -->
+    <!--     <a-asset-item id="house-mtl" src="https://ucarecdn.com/c81a12d0-1b1a-4420-a274-df369ec04ac1/" crossorigin="anonymous"></a-asset-item> -->
+    <a-asset-item id="house2-obj" src="https://ucarecdn.com/28d0c2b4-257c-4369-84d1-7c7b9ba3faa7/"
+      crossorigin="anonymous"></a-asset-item>
+    <!--     <a-asset-item id="demogorgon" src="https://ucarecdn.com/4bdeee6d-79ff-4d9e-b74f-03f85a19c225/" response-type="arraybuffer" crossorigin="anonymous"></a-asset-item> -->
+
     <!-- Mixins -->
-<!--     <a-mixin id="house" obj-model="obj: #house-obj;" material="color: #111; roughness: 1;"></a-mixin> -->
-    <a-mixin id="house-2" obj-model="obj: #house2-obj" material="src: #grunge; color: #111; roughness: 1; repeat: 1 1;" scale="0.04 0.04 0.04"></a-mixin>
-<!--     <a-mixin id="street" geometry="primitive: box; height: 0.02; width: 200; depth: 15;" material="color: black; opacity: 0.5; roughness: 1;"></a-mixin> -->
-    <a-mixin id="street" geometry="primitive: box; height: 0.02; width: 200; depth: 15;" material=" src: #grunge; repeat: 5 1; color: #080808; opacity: 1; roughness: 1;"></a-mixin>
-    <a-mixin id="street-line" geometry="primitive: box; height: 0.01; width: 200; depth: 0.4;" material="color: yellow; opacity: 0.025;"></a-mixin>
-<!--     <a-mixin id="curb" geometry="primitive: box; height: 0.3; width: 200; depth: 0.4;" material="color: #111; roughness: 1; metalness: 0;"></a-mixin> -->
-    <a-mixin id="curb" geometry="primitive: box; height: 0.5; width: 200; depth: 0.4;" material="src: #grunge; repeat: 5 0; color: #222; roughness: 1; metalness: 0;"></a-mixin>
-    
+    <!--     <a-mixin id="house" obj-model="obj: #house-obj;" material="color: #111; roughness: 1;"></a-mixin> -->
+    <a-mixin id="house-2" obj-model="obj: #house2-obj" material="src: #grunge; color: #111; roughness: 1; repeat: 1 1;"
+      scale="0.04 0.04 0.04"></a-mixin>
+    <!--     <a-mixin id="street" geometry="primitive: box; height: 0.02; width: 200; depth: 15;" material="color: black; opacity: 0.5; roughness: 1;"></a-mixin> -->
+    <a-mixin id="street" geometry="primitive: box; height: 0.02; width: 200; depth: 15;"
+      material=" src: #grunge; repeat: 5 1; color: #080808; opacity: 1; roughness: 1;"></a-mixin>
+    <a-mixin id="street-line" geometry="primitive: box; height: 0.01; width: 200; depth: 0.4;"
+      material="color: yellow; opacity: 0.025;"></a-mixin>
+    <!--     <a-mixin id="curb" geometry="primitive: box; height: 0.3; width: 200; depth: 0.4;" material="color: #111; roughness: 1; metalness: 0;"></a-mixin> -->
+    <a-mixin id="curb" geometry="primitive: box; height: 0.5; width: 200; depth: 0.4;"
+      material="src: #grunge; repeat: 5 0; color: #222; roughness: 1; metalness: 0;"></a-mixin>
+
   </a-assets>
-  
-  
+
+
   <!-- Player / Camera -->
   <a-entity rotation="0 0 0" movement-controls position="0 0 8">
-    <a-entity camera look-controls="pointerLockEnabled: true;" position="0 1.6 0" light="type: spot; intensity: 2.5; penumbra: 1; angle: 30;"></a-entity>
+    <a-entity camera look-controls="pointerLockEnabled: true;" position="0 1.6 0"
+      light="type: spot; intensity: 2.5; penumbra: 1; angle: 30;"></a-entity>
   </a-entity>
-  
+
   <!-- Stage container (for rotation) -->
   <a-entity rotation="0 45 0">
-  
+
     <!-- Environment -->
-    <a-entity remove-lighting environment="fog: 0; skyType: color; skyColor: #111; ground: flat; groundTexture: walkernoise; groundColor: #333; groundColor2: #222; dressing: arches; dressingAmount: 200; dressingVariance: 1 1 30; dressingUniformScale: false; playArea: 0; dressingColor: #030303; dressingOnPlayArea: 0.08; lighting: distant; lightPosition: 0 -1 0; seed: 10; shadow: true;"></a-entity>
+    <a-entity remove-lighting
+      environment="fog: 0; skyType: color; skyColor: #111; ground: flat; groundTexture: walkernoise; groundColor: #333; groundColor2: #222; dressing: arches; dressingAmount: 200; dressingVariance: 1 1 30; dressingUniformScale: false; playArea: 0; dressingColor: #030303; dressingOnPlayArea: 0.08; lighting: distant; lightPosition: 0 -1 0; seed: 10; shadow: true;">
+    </a-entity>
 
     <!-- Lighting -->
     <a-entity light="type: ambient; intensity: 0.3;"></a-entity>
 
     <!-- Audio: Non-positional -->
-    <a-entity sound="src: #ambience; positional: false; autoplay: true; loop: true; volume: 10;" sound__hit="src: #hit; positional: false; autoplay: true; loop: false; volume: 0.5; on: timer;" event-timer="interval: 20000;"></a-entity>
+    <a-entity sound="src: #ambience; positional: false; autoplay: true; loop: true; volume: 10;"
+      sound__hit="src: #hit; positional: false; autoplay: true; loop: false; volume: 0.5; on: timer;"
+      event-timer="interval: 20000;"></a-entity>
 
     <!-- Audio: Positional -->
     <!-- Monster -->
-    <a-entity geometry="primitive: cylinder; height: 200;" material="color: red; shader: flat; opacity: 0.2; side: font;" visible="false" monster="radius: 75;" sound__1="src: #monster-1; on: monster-1; loop: false; positional: true; volume: 1; refDistance: 2; rolloffFactor: 1;" sound__2="src: #monster-2; on: monster-2; loop: false; positional: true; volume: 2; refDistance: 2; rolloffFactor: 1;" sound__3="src: #monster-3; on: monster-3; loop: false; positional: true; volume: 2; refDistance: 2; rolloffFactor: 1;" position="0 1.6 0">
-      
-<!--           <a-entity gltf-model="#demogorgon" position="0 -1.6 0" scale="0.015 0.015 0.015" animation__rotate="property: rotation.y; to: 75; dur: 4000; dir: alternate; loop: true;"></a-entity> -->
-      
+    <a-entity geometry="primitive: cylinder; height: 200;"
+      material="color: red; shader: flat; opacity: 0.2; side: font;" visible="false" monster="radius: 75;"
+      sound__1="src: #monster-1; on: monster-1; loop: false; positional: true; volume: 1; refDistance: 2; rolloffFactor: 1;"
+      sound__2="src: #monster-2; on: monster-2; loop: false; positional: true; volume: 2; refDistance: 2; rolloffFactor: 1;"
+      sound__3="src: #monster-3; on: monster-3; loop: false; positional: true; volume: 2; refDistance: 2; rolloffFactor: 1;"
+      position="0 1.6 0">
+
+      <!--           <a-entity gltf-model="#demogorgon" position="0 -1.6 0" scale="0.015 0.015 0.015" animation__rotate="property: rotation.y; to: 75; dur: 4000; dir: alternate; loop: true;"></a-entity> -->
+
     </a-entity>
 
-<a-entity link="href: index.html; title: My Homepage; image: #homeThumbnail" position="20 1.69 -0.69" rotation="0 -90 0" ></a-entity>
-
-</a-entity>
-    <a-image src="#my-image" width="3" height="1" position="30 1.69 -0.69" rotation="0 -90 0"></a-image>
     <!-- Dust -->
-    <a-entity particle-system="preset: dust; color: #999; particleCount: 10000; size: 0.2; velocityValue: 0.2 0.2 0.2;"></a-entity>
+    <a-entity particle-system="preset: dust; color: #999; particleCount: 10000; size: 0.2; velocityValue: 0.2 0.2 0.2;">
+    </a-entity>
 
     <!-- Houses -->
-  <!--   <a-entity mixin="house" position="-40 7 -20" rotation="0 90 0"></a-entity>
+    <!--   <a-entity mixin="house" position="-40 7 -20" rotation="0 90 0"></a-entity>
     <a-entity mixin="house" position="-20 7 -20"></a-entity>
     <a-entity mixin="house" position="0 7 -20"></a-entity>
     <a-entity mixin="house" position="20 7 -20"></a-entity>
@@ -240,6 +223,7 @@
     <a-entity mixin="house-2" position="0 0.7 25"></a-entity>
     <a-entity mixin="house-2" position="30 0.7 25" rotation="0 180 0"></a-entity>
     <a-entity mixin="house-2" position="60 0.7 25"></a-entity>
+    <a-link href="index.html" title=" " image="#homeThumbnail" rotate="0 90 0" position="10 1.5 0"></a-link>
 
 
     <!-- Street -->
@@ -254,11 +238,7 @@
       <a-entity mixin="street-line" position="0 0.03 0.4"></a-entity>
 
     </a-entity>
-    
+
   </a-entity><!-- /stage container -->
-  
+
 </a-scene>
-<!-- partial -->
-  
-</body>
-</html>

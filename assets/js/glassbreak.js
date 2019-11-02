@@ -188,8 +188,6 @@ function shatterCompleteHandler() {
   vertices.length = 0;
   indices.length = 0;
   console.log("SHATTER COMPLETE");
-  var shatmsg=document.getElementById('shattermesg');
-  shatmsg.style.display='block';
 }
 
 //////////////

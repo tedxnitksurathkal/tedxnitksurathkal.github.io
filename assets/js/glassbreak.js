@@ -45,6 +45,7 @@ var clickPosition = [imageWidth * 0.5, imageHeight * 0.5];
 
 
 window.onload = function () {
+  $("#shtrtext").fadeOut();
   TweenMax.set(container, { perspective: 500 });
 
   // images from reddit/r/wallpapers
@@ -96,9 +97,13 @@ function imageClickHandler(event) {
 
   clickPosition[0] = event.clientX - left;
   clickPosition[1] = event.clientY - top;
-
+  console.log("TRIANGULATE");
   triangulate();
+  console.log("SHATTER");
+  var shatmsg = document.getElementById('shattermesg');
+  shatmsg.style.display = 'block';
   shatter();
+  
 }
 
 function triangulate() {
@@ -186,6 +191,12 @@ function shatterCompleteHandler() {
   fragments.length = 0;
   vertices.length = 0;
   indices.length = 0;
+  console.log("SHATTER COMPLETE");
+  var shtrtext = document.getElementById('shtrtext');
+  setTimeout(function () {
+    $("#shtrtext").fadeIn();
+    // shtrtext.style.animation = 'fadeIn ease 5s';
+  },0);
 
 }
 
@@ -247,6 +258,8 @@ Fragment.prototype = {
     this.canvas.height = this.box.h;
     this.canvas.style.width = this.box.w + 'px';
     this.canvas.style.height = this.box.h + 'px';
+    console.log(this.canvas.style.width + "W" + this.canvas.style.height + "H");
+
     this.canvas.style.left = this.box.x + 'px';
     this.canvas.style.top = this.box.y + 'px';
     this.ctx = this.canvas.getContext('2d');

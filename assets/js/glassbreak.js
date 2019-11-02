@@ -10,15 +10,17 @@ window.onload= function()
 {
   this.shatterse.style.display='none';
 }
-function glassbreak() {
+function glassbreak(event) {
   console.log("CLICK!");
+  // alert(event.clientX + ',' + event.clientY)
+  // click_image(event.clientX, event.clientY);
   
   if(shatterse)
   {
     console.log(shatterse);
     kaliedo.remove();
     shatterse.style.display='block';
-    console.log(imgshatter[0]);
+    click_image(event.clientX, event.clientY);
     triangulate();
     shatter();
   }
@@ -42,8 +44,6 @@ var vertices = [],
 var container = document.getElementById('container');
 
 var clickPosition = [imageWidth * 1, imageHeight * 1];
-
-
 
 
 window.onload = function () {
@@ -81,7 +81,8 @@ window.onload = function () {
   images[0] = image = new Image();
   image.onload = function () {
     if (++loaded === 1) {
-      imagesLoaded();
+      // imagesLoaded();
+      placeImage(false);
 
       images[0] = image = new Image();
 
@@ -92,17 +93,17 @@ window.onload = function () {
   image.src = urls[0];
 };
 
-function imagesLoaded() {
-  placeImage(false);
+// function imagesLoaded() {
+//   placeImage(false);
 
-}
+// }
 
 function placeImage(transitionIn) {
   image = images[imageIndex];
 
   if (++imageIndex === images.length) imageIndex = 0;
 
-  image.addEventListener('click', imageClickHandler);
+  // image.addEventListener('click', imageClickHandler);
   image.classList.add('sh');
   image.id='shatterimg';
   container.appendChild(image);
@@ -111,23 +112,41 @@ function placeImage(transitionIn) {
   if (transitionIn !== false) {
     TweenMax.fromTo(image, 0.75, { y: -1000 }, { y: 0, ease: Back.easeOut });
   }
+
+  
 }
 
-function imageClickHandler(event) {
+function click_image(click_x, click_y) {
   var box = image.getBoundingClientRect(),
     top = box.top,
     left = box.left;
 
-  clickPosition[0] = event.clientX - left;
-  clickPosition[1] = event.clientY - top;
+  clickPosition[0] = click_x - left;
+  clickPosition[1] = click_y - top;
   console.log("TRIANGULATE");
   triangulate();
   console.log("SHATTER");
   var shatmsg = document.getElementById('shattermesg');
   shatmsg.style.display = 'block';
   shatter();
-  
+
 }
+
+// function imageClickHandler(event) {
+//   var box = image.getBoundingClientRect(),
+//     top = box.top,
+//     left = box.left;
+
+//   clickPosition[0] = event.clientX - left;
+//   clickPosition[1] = event.clientY - top;
+//   console.log("TRIANGULATE");
+//   triangulate();
+//   console.log("SHATTER");
+//   var shatmsg = document.getElementById('shattermesg');
+//   shatmsg.style.display = 'block';
+//   shatter();
+  
+// }
 
 function triangulate() {
   console.log("TRIANGLE!");
@@ -203,7 +222,7 @@ function shatter() {
   }
 
   container.removeChild(image);
-  image.removeEventListener('click', imageClickHandler);
+  // image.removeEventListener('click', imageClickHandler);
 }
 
 function shatterCompleteHandler() {

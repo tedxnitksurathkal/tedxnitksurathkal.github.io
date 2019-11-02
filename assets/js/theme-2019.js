@@ -133,13 +133,13 @@
         mx = p.mouseX;
         my = p.mouseY;
         if (p.mouseX === 0) {
-          //mx = this.x;
-          //my = this.y;
+          mx = this.x;
+          my = this.y;
         }
         this.speedX = (mx - this.x) / 20;
         this.speedY = (my - this.y) / 20;
-        //this.x += this.speedX;
-        //this.y += this.speedY;
+        this.x += this.speedX;
+        this.y += this.speedY;
       };
       this.cut = function (img) {
         var mx, my;

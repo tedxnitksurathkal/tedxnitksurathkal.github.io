@@ -45,6 +45,7 @@ var clickPosition = [imageWidth * 0.5, imageHeight * 0.5];
 
 
 window.onload = function () {
+  $("#shtrtext").fadeOut();
   TweenMax.set(container, { perspective: 500 });
 
   // images from reddit/r/wallpapers
@@ -99,7 +100,10 @@ function imageClickHandler(event) {
   console.log("TRIANGULATE");
   triangulate();
   console.log("SHATTER");
+  var shatmsg = document.getElementById('shattermesg');
+  shatmsg.style.display = 'block';
   shatter();
+  
 }
 
 function triangulate() {
@@ -188,6 +192,12 @@ function shatterCompleteHandler() {
   vertices.length = 0;
   indices.length = 0;
   console.log("SHATTER COMPLETE");
+  var shtrtext = document.getElementById('shtrtext');
+  setTimeout(function () {
+    $("#shtrtext").fadeIn();
+    // shtrtext.style.animation = 'fadeIn ease 5s';
+  },0);
+
 }
 
 //////////////

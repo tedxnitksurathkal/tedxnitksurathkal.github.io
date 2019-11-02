@@ -1,3 +1,8 @@
+<html>
+<head>
+  <title>2020 TEDxNITK</title>
+</head>
+<body>
 <!-- A-Frame 0.7.1 -->
 <!-- <script src="//aframe.io/releases/0.7.1/aframe.min.js"></script> -->
 
@@ -9,7 +14,8 @@
 
 <!-- A-Frame Extras -->
 <script src="//unpkg.com/aframe-extras@4.0.3/dist/aframe-extras.min.js"></script>
-
+  <script
+    src="https://rawgit.com/bryik/aframe-bmfont-text-component/master/dist/aframe-bmfont-text-component.min.js"></script>
 <!-- A-Frame Animation -->
 <!-- <script src="//unpkg.com/aframe-animation-component@4.1.*/dist/aframe-animation-component.min.js"></script> -->
 
@@ -159,8 +165,7 @@
       material="src: #grunge; repeat: 5 0; color: #222; roughness: 1; metalness: 0;"></a-mixin>
 
   </a-assets>
-
-
+  <a-entity text="value: Welcome to this Strange World;" position="-0.49 1.3 6.1"></a-entity>
   <!-- Player / Camera -->
   <a-entity rotation="0 0 0" movement-controls position="0 0 8">
     <a-entity camera look-controls="pointerLockEnabled: true;" position="0 1.6 0"
@@ -213,17 +218,36 @@
 
     <!-- Houses 2 -->
     <a-entity mixin="house-2" position="-60 0.7 -25"></a-entity>
+    <a-link title="House 1" backgroundColor="#fffff" rotation="0 90 0" position="-60 1.7 -15"></a-link>
+
     <a-entity mixin="house-2" position="-30 0.7 -25" rotation="0 90 0"></a-entity>
+    <a-link title="House 2" backgroundColor="#fffff" rotation="0 00 0" position="-30 1.7 -15"></a-link>
+    
     <a-entity mixin="house-2" position="0 0.7 -25"></a-entity>
+    <a-link title="House 3" backgroundColor="green" rotation="0 90 0" position="0 1.7 -15"></a-link>
+
     <a-entity mixin="house-2" position="30 0.7 -25" rotation="0 180 0"></a-entity>
+    <a-link title="House 4" backgroundColor="green" rotation="0 90 0" position="20 1.7 -15"></a-link>
+
     <a-entity mixin="house-2" position="60 0.7 -25"></a-entity>
+    <a-link title="House 5" backgroundColor="green" rotation="0 90 0" position="60 1.7 -15"></a-link>
 
     <a-entity mixin="house-2" position="-60 0.7 25"></a-entity>
+    <a-link title="House 6" backgroundColor="green" rotation="0 90 0" position="-60 1.7 15"></a-link>
+
     <a-entity mixin="house-2" position="-30 0.7 25" rotation="0 -90 0"></a-entity>
+    <a-link title="House 7" backgroundColor="green" rotation="0 90 0" position="-30 1.7 15"></a-link>
+
     <a-entity mixin="house-2" position="0 0.7 25"></a-entity>
+    <a-link title="House 8" backgroundColor="green" rotation="0 90 0" position="0 1.7 15"></a-link>
+
     <a-entity mixin="house-2" position="30 0.7 25" rotation="0 180 0"></a-entity>
+    <a-link title="House 9" backgroundColor="green" rotation="0 90 0" position="30 1.7 15"></a-link>
+
     <a-entity mixin="house-2" position="60 0.7 25"></a-entity>
-    <a-link href="index.html" title=" " image="#homeThumbnail" rotate="0 90 0" position="10 1.5 0"></a-link>
+    <a-link scale="2 2 2" title="House 10" backgroundColor="green" rotation="0 90 0" position="60 1.7 15"></a-link>
+
+    <a-link href="index.html" backgroundColor="green" title="." image="#homeThumbnail" rotation="0 90 0" position="0 1.5 -25"></a-link>
 
 
     <!-- Street -->
@@ -242,3 +266,5 @@
   </a-entity><!-- /stage container -->
 
 </a-scene>
+</body>
+</html>

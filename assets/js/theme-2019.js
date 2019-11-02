@@ -109,6 +109,7 @@
       }
     };
     p.kTriangle = function (x, y, angle, scaleX, scaleY) {
+     
       this.x = x;
       this.y = y;
       this.angle = angle;
@@ -132,10 +133,16 @@
         var mx, my;
         mx = p.mouseX;
         my = p.mouseY;
-        if (p.mouseX === 0) {
-          mx = this.x;
-          my = this.y;
-        }
+        
+        
+      
+
+          if (p.mouseX === 0) {
+            mx = this.x;
+            my = this.y;
+          }
+
+
         this.speedX = (mx - this.x) / 20;
         this.speedY = (my - this.y) / 20;
         this.x += this.speedX;

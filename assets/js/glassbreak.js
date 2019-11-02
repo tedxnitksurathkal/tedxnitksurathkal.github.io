@@ -32,8 +32,8 @@ var images = [],
   imageIndex = 0;
 
 var image,
-  imageWidth = 768,
-  imageHeight = 485;
+  imageWidth = 360,
+  imageHeight = 640;
 
 var vertices = [],
   indices = [],
@@ -41,16 +41,39 @@ var vertices = [],
 
 var container = document.getElementById('container');
 
-var clickPosition = [imageWidth * 0.5, imageHeight * 0.5];
+var clickPosition = [imageWidth * 1, imageHeight * 1];
+
+
 
 
 window.onload = function () {
   $("#shtrtext").fadeOut();
-  TweenMax.set(container, { perspective: 500 });
+  TweenMax.set(container, { perspective: 1000 });
+
+  var v_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  var v_height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
+  imageWidth = v_width;
+  imageHeight = v_height;
+
+  var url = 'assets/img/diamonds/diamond_m_640p.png';
+  if (v_width > 1600 && v_height > 900) {
+    url = 'assets/img/diamonds/diamond_1080p.png';
+  }
+  else if (v_width > 1366 && v_height > 768) {
+    url = 'assets/img/diamonds/diamond_900p.png';
+  }
+  else if (v_width > 411 && v_height > 731) {
+    url = 'assets/img/diamonds/diamond_768p.png';
+  }
+  else if (v_width > 360 && v_height > 640) {
+    url = 'assets/img/diamonds/diamond_m_731p.png';
+  }
 
   // images from reddit/r/wallpapers
   var urls = [
-    'assets/img/2019_gem_still.png'
+    // 'assets/img/2019_gem_still_1080p.png'
+    url
   ],
     image,
     loaded = 0;

@@ -5,7 +5,7 @@
     p.j = -1;
     p.cacheTriangle = '';
     p.img_copy = '';
-    p.triangleSize = 350;
+    p.triangleSize = 275;
     p.triangleHeight = p.triangleSize * p.sqrt(3) / 2;
     p.triangles = [];
     p.cache = '';

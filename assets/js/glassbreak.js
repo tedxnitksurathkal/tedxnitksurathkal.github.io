@@ -12,8 +12,6 @@ window.onload= function()
 }
 function glassbreak(event) {
   console.log("CLICK!");
-  // alert(event.clientX + ',' + event.clientY)
-  // click_image(event.clientX, event.clientY);
   
   if(shatterse)
   {
@@ -31,7 +29,7 @@ function glassbreak(event) {
 const TWO_PI = Math.PI * 2;
 
 var images = [],
-  imageIndex = 0;
+  imageIndex = 0;   
 
 var image,
   imageWidth = 360,
@@ -43,12 +41,12 @@ var vertices = [],
 
 var container = document.getElementById('container');
 
-var clickPosition = [imageWidth * 1, imageHeight * 1];
+var clickPosition = [imageWidth * 0.5, imageHeight * 0.5];
 
 
 window.onload = function () {
   $("#shtrtext").fadeOut();
-  TweenMax.set(container, { perspective: 1000 });
+  TweenMax.set(container, { perspective: 500 });
 
   var v_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
   var v_height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
@@ -70,9 +68,7 @@ window.onload = function () {
     url = 'assets/img/diamonds/diamond_m_731p.png';
   }
 
-  // images from reddit/r/wallpapers
   var urls = [
-    // 'assets/img/2019_gem_still_1080p.png'
     url
   ],
     image,
@@ -93,17 +89,11 @@ window.onload = function () {
   image.src = urls[0];
 };
 
-// function imagesLoaded() {
-//   placeImage(false);
-
-// }
-
 function placeImage(transitionIn) {
   image = images[imageIndex];
 
   if (++imageIndex === images.length) imageIndex = 0;
 
-  // image.addEventListener('click', imageClickHandler);
   image.classList.add('sh');
   image.id='shatterimg';
   container.appendChild(image);
@@ -132,29 +122,14 @@ function click_image(click_x, click_y) {
 
 }
 
-// function imageClickHandler(event) {
-//   var box = image.getBoundingClientRect(),
-//     top = box.top,
-//     left = box.left;
-
-//   clickPosition[0] = event.clientX - left;
-//   clickPosition[1] = event.clientY - top;
-//   console.log("TRIANGULATE");
-//   triangulate();
-//   console.log("SHATTER");
-//   var shatmsg = document.getElementById('shattermesg');
-//   shatmsg.style.display = 'block';
-//   shatter();
-  
-// }
-
 function triangulate() {
   console.log("TRIANGLE!");
   var rings = [
     { r: 50, c: 12 },
     { r: 150, c: 12 },
-    { r: 300, c: 12 },
-    { r: 1200, c: 12 } // very large in case of corner clicks
+    { r: 700, c: 12 },
+    { r: 1200, c: 12 },
+    { r: 2000, c: 12 } // very large in case of corner clicks
   ],
     x,
     y,
@@ -184,6 +159,7 @@ function triangulate() {
 }
 
 function shatter() {
+  container.removeChild(image);
   var p0, p1, p2,
     fragment;
 
@@ -220,9 +196,6 @@ function shatter() {
     fragments.push(fragment);
     container.appendChild(fragment.canvas);
   }
-
-  container.removeChild(image);
-  // image.removeEventListener('click', imageClickHandler);
 }
 
 function shatterCompleteHandler() {
@@ -237,7 +210,6 @@ function shatterCompleteHandler() {
   var shtrtext = document.getElementById('shtrtext');
   setTimeout(function () {
     $("#shtrtext").fadeIn();
-    // shtrtext.style.animation = 'fadeIn ease 5s';
   },0);
 
 }

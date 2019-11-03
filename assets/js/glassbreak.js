@@ -153,8 +153,10 @@ function triangulate() {
   var rings = [
     { r: 50, c: 12 },
     { r: 150, c: 12 },
-    { r: 300, c: 12 },
-    { r: 1200, c: 12 } // very large in case of corner clicks
+    // { r: 300, c: 12 },
+    { r: 700, c: 12 },
+    { r: 1200, c: 12 },
+    { r: 2000, c: 12 } // very large in case of corner clicks
   ],
     x,
     y,
@@ -184,6 +186,7 @@ function triangulate() {
 }
 
 function shatter() {
+  container.removeChild(image);
   var p0, p1, p2,
     fragment;
 
@@ -221,7 +224,7 @@ function shatter() {
     container.appendChild(fragment.canvas);
   }
 
-  container.removeChild(image);
+  // 
   // image.removeEventListener('click', imageClickHandler);
 }
 

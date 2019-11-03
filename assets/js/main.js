@@ -35,14 +35,15 @@ $(document).ready(function() {
     /* ==============================================
         STICKY HEADER
         =============================================== */
-
+/*
+        Uncomment this if you want the header to turn black on hover.
     $(window).on('scroll', function () {
         if ($(window).scrollTop() < 100) {
             $('.header').removeClass('sticky_header');
         } else {
             $('.header').addClass('sticky_header');
         }
-    });
+    });*.
     /* --------------------------------------------------------
      COUNTER JS
      ----------------------------------------------------------- */

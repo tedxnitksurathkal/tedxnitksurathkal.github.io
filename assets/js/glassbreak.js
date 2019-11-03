@@ -12,8 +12,6 @@ window.onload= function()
 }
 function glassbreak(event) {
   console.log("CLICK!");
-  // alert(event.clientX + ',' + event.clientY)
-  // click_image(event.clientX, event.clientY);
   
   if(shatterse)
   {
@@ -70,9 +68,7 @@ window.onload = function () {
     url = 'assets/img/diamonds/diamond_m_731p.png';
   }
 
-  // images from reddit/r/wallpapers
   var urls = [
-    // 'assets/img/2019_gem_still_1080p.png'
     url
   ],
     image,
@@ -93,17 +89,11 @@ window.onload = function () {
   image.src = urls[0];
 };
 
-// function imagesLoaded() {
-//   placeImage(false);
-
-// }
-
 function placeImage(transitionIn) {
   image = images[imageIndex];
 
   if (++imageIndex === images.length) imageIndex = 0;
 
-  // image.addEventListener('click', imageClickHandler);
   image.classList.add('sh');
   image.id='shatterimg';
   container.appendChild(image);
@@ -132,28 +122,11 @@ function click_image(click_x, click_y) {
 
 }
 
-// function imageClickHandler(event) {
-//   var box = image.getBoundingClientRect(),
-//     top = box.top,
-//     left = box.left;
-
-//   clickPosition[0] = event.clientX - left;
-//   clickPosition[1] = event.clientY - top;
-//   console.log("TRIANGULATE");
-//   triangulate();
-//   console.log("SHATTER");
-//   var shatmsg = document.getElementById('shattermesg');
-//   shatmsg.style.display = 'block';
-//   shatter();
-  
-// }
-
 function triangulate() {
   console.log("TRIANGLE!");
   var rings = [
     { r: 50, c: 12 },
     { r: 150, c: 12 },
-    // { r: 300, c: 12 },
     { r: 700, c: 12 },
     { r: 1200, c: 12 },
     { r: 2000, c: 12 } // very large in case of corner clicks
@@ -223,9 +196,6 @@ function shatter() {
     fragments.push(fragment);
     container.appendChild(fragment.canvas);
   }
-
-  // 
-  // image.removeEventListener('click', imageClickHandler);
 }
 
 function shatterCompleteHandler() {
@@ -240,7 +210,6 @@ function shatterCompleteHandler() {
   var shtrtext = document.getElementById('shtrtext');
   setTimeout(function () {
     $("#shtrtext").fadeIn();
-    // shtrtext.style.animation = 'fadeIn ease 5s';
   },0);
 
 }

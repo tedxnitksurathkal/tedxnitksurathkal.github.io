@@ -31,7 +31,7 @@ function glassbreak(event) {
 const TWO_PI = Math.PI * 2;
 
 var images = [],
-  imageIndex = 0;
+  imageIndex = 0;   
 
 var image,
   imageWidth = 360,
@@ -43,12 +43,12 @@ var vertices = [],
 
 var container = document.getElementById('container');
 
-var clickPosition = [imageWidth * 1, imageHeight * 1];
+var clickPosition = [imageWidth * 0.5, imageHeight * 0.5];
 
 
 window.onload = function () {
   $("#shtrtext").fadeOut();
-  TweenMax.set(container, { perspective: 1000 });
+  TweenMax.set(container, { perspective: 500 });
 
   var v_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
   var v_height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);

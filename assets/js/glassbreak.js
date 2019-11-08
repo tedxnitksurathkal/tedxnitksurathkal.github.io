@@ -176,8 +176,7 @@ function triangulate() {
 }
   
 function shatter() {
-  alert(container.childNodes);
-  // container.removeChild(image);
+  container.removeChild(image);
   var p0, p1, p2,
     fragment;
 

@@ -128,7 +128,10 @@
 
   <!-- Assets -->
   <a-assets>
+    <!-- Actual theme reveal image -->
     <img id="homeThumbnail" src="assets/img/theme-reveal-img-2019.png">
+    <!-- Actual theme reveal image -->
+    <img id="x_footprint" src="assets/img/the_x.png">
     <!-- Audio: Not to be reused or distributed! -->
     <audio id="ambience" src="https://ucarecdn.com/1fd36f41-cbed-40ac-86c2-0c4a8b7faef2/"
       crossorigin="anonymous"></audio>
@@ -149,7 +152,7 @@
     <!--     <a-asset-item id="house-mtl" src="https://ucarecdn.com/c81a12d0-1b1a-4420-a274-df369ec04ac1/" crossorigin="anonymous"></a-asset-item> -->
     <a-asset-item id="house2-obj" src="https://ucarecdn.com/28d0c2b4-257c-4369-84d1-7c7b9ba3faa7/"
       crossorigin="anonymous"></a-asset-item>
-    <!--     <a-asset-item id="demogorgon" src="https://ucarecdn.com/4bdeee6d-79ff-4d9e-b74f-03f85a19c225/" response-type="arraybuffer" crossorigin="anonymous"></a-asset-item> -->
+        <!-- <a-asset-item id="demogorgon" src="https://ucarecdn.com/4bdeee6d-79ff-4d9e-b74f-03f85a19c225/" response-type="arraybuffer" crossorigin="anonymous"></a-asset-item> -->
 
     <!-- Mixins -->
     <!--     <a-mixin id="house" obj-model="obj: #house-obj;" material="color: #111; roughness: 1;"></a-mixin> -->
@@ -165,7 +168,7 @@
       material="src: #grunge; repeat: 5 0; color: #222; roughness: 1; metalness: 0;"></a-mixin>
 
   </a-assets>
-  <a-entity text="value: Welcome to this Strange World;" position="-0.49 1.3 6.1"></a-entity>
+  <a-entity text="value: Welcome to this Strange World!\n One of these houses has what you seek...\n Look around, don't be meek...\n Use WASD on PC or swipe on Mobile to move around...\n Don't be frightened by the scary sound...;" position="-0.49 1.3 6.1"></a-entity>
   <!-- Player / Camera -->
   <a-entity rotation="0 0 0" movement-controls position="0 0 8">
     <a-entity camera look-controls="pointerLockEnabled: true;" position="0 1.6 0"
@@ -197,7 +200,7 @@
       sound__3="src: #monster-3; on: monster-3; loop: false; positional: true; volume: 2; refDistance: 2; rolloffFactor: 1;"
       position="0 1.6 0">
 
-      <!--           <a-entity gltf-model="#demogorgon" position="0 -1.6 0" scale="0.015 0.015 0.015" animation__rotate="property: rotation.y; to: 75; dur: 4000; dir: alternate; loop: true;"></a-entity> -->
+                <!-- <a-entity gltf-model="#demogorgon" position="0 -1.6 0" scale="0.015 0.015 0.015" animation__rotate="property: rotation.y; to: 75; dur: 4000; dir: alternate; loop: true;"></a-entity> -->
 
     </a-entity>
 
@@ -249,6 +252,8 @@
 
     <a-link href="index.html" backgroundColor="green" title="." image="#homeThumbnail" rotation="0 90 0" position="0 1.5 -25"></a-link>
 
+    
+
 
     <!-- Street -->
     <a-entity mixin="street" position="0 0.1 0">
@@ -260,6 +265,8 @@
       <!-- Lines -->
       <a-entity mixin="street-line" position="0 0.03 -0.4"></a-entity>
       <a-entity mixin="street-line" position="0 0.03 0.4"></a-entity>
+
+      <a-image src="#x_footprint" rotation="90 90 0" position="-0.3 0.2 4.3"></a-link>
 
     </a-entity>
 

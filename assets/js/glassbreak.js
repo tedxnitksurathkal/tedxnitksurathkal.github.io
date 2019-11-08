@@ -55,19 +55,36 @@ window.onload = function () {
   imageHeight = v_height;
 
   var url = 'assets/img/diamonds/diamond_m_640p.png';
-  if (v_width > 1600 && v_height > 900) {
-    url = 'assets/img/diamonds/diamond_1080p.png';
-  }
-  else if (v_width > 1366 && v_height > 768) {
-    url = 'assets/img/diamonds/diamond_900p.png';
-  }
-  else if (v_width > 411 && v_height > 731) {
-    url = 'assets/img/diamonds/diamond_768p.png';
-  }
-  else if (v_width > 360 && v_height > 640) {
-    url = 'assets/img/diamonds/diamond_m_731p.png';
-  }
 
+  // Desktop displays
+  if (v_width > v_height){
+    if (v_width > 1600 && v_height > 900) {
+      url = 'assets/img/diamonds/diamond_1080p.png';
+    }
+    else if (v_width > 1366 && v_height > 768) {
+      url = 'assets/img/diamonds/diamond_900p.png';
+    }
+    else
+    {
+      url = 'assets/img/diamonds/diamond_768p.png';
+    }
+  }
+  // Nobile
+  else {
+    if (v_width > 480 && v_height > 853) {
+      url = 'assets/img/diamonds/diamond_ipad.png';
+    }
+    if (v_width > 411 && v_height > 731) {
+      url = 'assets/img/diamonds/diamond_m_853p.png';
+    }
+    else if (v_width > 360 && v_height > 640) {
+      url = 'assets/img/diamonds/diamond_m_731p.png';
+    }
+    else {
+      url = 'assets/img/diamonds/diamond_m_640p.png';
+    }
+  }
+    
   var urls = [
     url
   ],
@@ -157,9 +174,10 @@ function triangulate() {
 
   indices = Delaunay.triangulate(vertices);
 }
-
+  
 function shatter() {
-  container.removeChild(image);
+  alert(container.childNodes);
+  // container.removeChild(image);
   var p0, p1, p2,
     fragment;
 

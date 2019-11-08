@@ -53,12 +53,11 @@ $(document).ready(function() {
         time: 3000
     });
 
-    $(".countdown")
-        .countdown("2020/01/17", function(event) {
-            $(this).html(
-                event.strftime('<div>%D <span>Days</span></div>  <div>%H<span>Hours</span></div> <div>%M<span>Minutes</span></div> <div>%S<span>Seconds</span></div>')
-            );
-        });
+    $(".countdown").countdown("2020/01/17", function(event) {
+        $(this).html(
+            event.strftime('<div>%D <span>Days</span></div>  <div>%H<span>Hours</span></div> <div>%M<span>Minutes</span></div> <div>%S<span>Seconds</span></div>')
+        );
+    });
 
     /* ==============================================
      SLIDER

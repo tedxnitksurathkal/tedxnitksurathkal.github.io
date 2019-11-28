@@ -2,8 +2,8 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>A-Frame Daydream Forest Scene</title>
-  <script src="https://rawgit.com/aframevr/aframe/master/dist/aframe-master.js"></script><link rel="stylesheet" href="./style.css">
+  <title>Mirrors and Windows- TEDxNITKSurathkal</title>
+  <script src="https://rawgit.com/aframevr/aframe/master/dist/aframe-master.js"></script>
 
 </head>
 <body>
@@ -23,24 +23,21 @@
   });
   </script>
 <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.0/dist/aframe-extras.min.js"></script>
-
 <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
 
 <script src="https://unpkg.com/aframe-event-set-component@4.0.1/dist/aframe-event-set-component.min.js"></script>
-
+<script src="https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/db4f1030/index.js"></script>
+</head>
 <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
 
 <script src="https://unpkg.com/aframe-template-component@3.2.1/dist/aframe-template-component.min.js"></script>
 
-<a-scene cursor="rayOrigin: mouse" sound="src: #rainforest; on: click; loop: true; volume: 0.2; rolloffFactor: 0" environment="preset: forest; groundTexture: walkernoise; fog: 0.9">
+<a-scene cursor="rayOrigin: mouse" sound="src: #rainforest; on: click; loop: true; volume: 0.2; rolloffFactor: 0" environment="preset: egypt; ground: hills; dressing: none; groundTexture: walkernoise; fog: 0.9;groundColor: #c0c0c0; groundColor2: #757575;dressingColor: #c0c0c0; skyType: gradient; skyColor: #000;horizonColor: #171717">
 
   <a-assets>
     
-    <a-asset-item id="house2-obj" src="https://ucarecdn.com/28d0c2b4-257c-4369-84d1-7c7b9ba3faa7/" crossorigin="anonymous">
     </a-asset-item>
 
-    <a-mixin id="house-2" obj-model="obj: #house2-obj" material="src: #grunge; color: #323232; roughness: 1; repeat: 1 1;"
-      scale="0.04 0.04 0.04"></a-mixin>
 
 
     <img id="menu0" src="//cdn.rawgit.com/michaelnebeling/src/master/daydream.png" crossorigin="anonymous" />
@@ -51,10 +48,6 @@
     
     <audio id="rainforest" src="//cdn.rawgit.com/michaelnebeling/src/master/rainforest_ambience-GlorySunz-1938133500.mp3" crossorigin="anonymous"></audio>
     
-    <audio id="button1" src="//cdn.rawgit.com/michaelnebeling/src/master/button-1.mp3" crossorigin="anonymous"></audio>
-    <audio id="button2" src="//cdn.rawgit.com/michaelnebeling/src/master/button-2.mp3" crossorigin="anonymous"></audio>
-    <audio id="button3" src="//cdn.rawgit.com/michaelnebeling/src/master/button-3.mp3" crossorigin="anonymous"></audio>
-    <audio id="button4" src="//cdn.rawgit.com/michaelnebeling/src/master/button-4.mp3" crossorigin="anonymous"></audio>
 
     <!-- mixins -->
 
@@ -62,11 +55,7 @@
 
     <a-mixin id="tile" geometry="primitive: plane; height: 1.5; width: 2.5" material="color: white; side: double"></a-mixin>
     
-    <script id="menuItemTemplate" type="text/x-nunjucks-template">
-      {% for x in range(0, 6) %}
-        <a-entity mixin="collider tile" class="collider" sound="src: #button1; on: click; poolSize: 3" sound__mouseenter="src: #button3; on: mouseenter; poolSize: 2" material="src: #menu{{ x }}"></a-entity>
-      {% endfor %}
-    </script> 
+    
     
   </a-assets>
 
@@ -76,12 +65,11 @@
   <!-- menu -->
   <a-entity position="0 4.9 -9.9" rotation="-2 0 0" layout="type: box; columns: 3; marginRow: 3; marginColumn: 4; align: center; plane: xy" template="src: #menuItemTemplate"></a-entity>
 
-  <a-entity mixin="house-2" position="-60 0.7 -25"></a-entity>
-  <a-image src="#tedxx" rotation="90 0 0" position="-60 0.2 -15"></a-image>
+  <a-entity
+    star-system="texture: https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/master/assets/star.svg">
+  </a-entity>
 
-  
-  <!-- click to begin -->
-  <a-text value="Click to begin" position="0 2 -3" align="center"></a-text>
+
 
   <!-- camera & hand controls -->
   <a-entity id="camera-rig">

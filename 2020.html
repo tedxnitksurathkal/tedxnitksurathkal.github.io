@@ -33,6 +33,9 @@
   </script>
 <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.0/dist/aframe-extras.min.js"></script>
 <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
+<script
+  src="https://rawgit.com/andreasplesch/aframe-faceset-component/master/dist/aframe-faceset-component.min.js"></script>
+<script src="https://rawgit.com/andreasplesch/aframe-star-component/master/dist/aframe-star-component.min.js"></script>
 
 <script src="https://unpkg.com/aframe-event-set-component@4.0.1/dist/aframe-event-set-component.min.js"></script>
 <script src="https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/db4f1030/index.js"></script>
@@ -43,12 +46,15 @@
 
 <script src="https://unpkg.com/aframe-template-component@3.2.1/dist/aframe-template-component.min.js"></script>
 
+<script src="https://cdn.rawgit.com/archilogic-com/aframe-gblock/6498b71d/dist/gblock.js"></script>
 <a-scene cursor="rayOrigin: mouse" sound="src: #rainforest; on: click; loop: true; volume: 0.2; rolloffFactor: 0" environment="preset: egypt; ground: hills; dressing: none; groundTexture: walkernoise; fog: 0.9;groundColor: #c0c0c0; groundColor2: #757575;dressingColor: #c0c0c0; skyType: gradient; skyColor: #00008b;horizonColor: #171717">
-      <a-sphere mirror position="0 2 -10"></a-sphere>
+      <a-sphere mirror position="-3 3 -5"></a-sphere>
     
     </a-asset-item>
 
-
+    <a-entity star="points: 23"></a-entity>
+    
+    <img id="windows" src="assets/img/windows.png" crossorigin="anonymous"/>
 
     <img id="menu0" src="//cdn.rawgit.com/michaelnebeling/src/master/daydream.png" crossorigin="anonymous" />
     <img id="menu1" src="//cdn.rawgit.com/michaelnebeling/src/master/netflix.png" crossorigin="anonymous" />
@@ -69,24 +75,21 @@
     
   </a-assets>
 
-  <!-- water -->
-  <a-ocean position="0 0.1 -50" width="200" depth="25" density="10" speed="0.1" opacity="0.5"></a-ocean>
-
-  <!-- menu -->
-  <a-entity position="0 4.9 -9.9" rotation="-2 0 0" layout="type: box; columns: 3; marginRow: 3; marginColumn: 4; align: center; plane: xy" template="src: #menuItemTemplate"></a-entity>
-
+  
   <a-entity
     star-system="texture: https://cdn.rawgit.com/matthewbryancurtis/aframe-star-system-component/master/assets/star.svg">
   </a-entity>
+  <a-image src="#logo" width="3" height="1.5" rotation="0 0 0" position="0 3 -5"></a-image>
+  <a-image src="#windows" rotation="0 0 0" position="3 3 -5"></a-image>
 
-
-  <a-image src="#logo" width="3" height="1.5" rotation="0 0 0" position="0 4 -10"></a-image>
+  <a-box mirror="resolution: 64; distance: 1000; interval: 200; repeat: true;refraction:0.93" position="0 3 3" height="5" width="10" rotation="0 0 0" color="#4CC3D9" shadow></a-box>
   <!-- camera & hand controls -->
   <a-entity id="camera-rig">
     <a-entity camera id="head" position="0 1.6 0" wasd-controls look-controls>
     </a-entity>
     <a-entity laser-controls="hand: right" raycaster="objects: .collider;" teleport-controls="cameraRig: #camera-rig; teleportOrigin: #head; collisionEntities: .environmentGround .environmentDressing" sound="src: #button4; on: teleported"></a-entity>
   </a-entity>
+
 </a-scene>
 <!-- partial -->
   <script  src="./script.js"></script>

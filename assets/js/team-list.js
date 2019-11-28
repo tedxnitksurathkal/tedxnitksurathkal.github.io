@@ -99,14 +99,14 @@ var team = [
         "instagram": "amith_7798"
     },
     {
-        "name": "Ashutosh",
+        "name": "Ashutosh Agarwal",
         "position": "Treasurer",
-        "image": "404-2.png",
+        "image": "Ashutosh.jpg",
         "facebook": "",
         "instagram": "tedxnitksurathkal"
     },
     {
-        "name": "Sinchana Hedge",
+        "name": "Sinchana Hegde",
         "position": "Event Host",
         "image": "Sinchana.jpg",
         "facebook": "",

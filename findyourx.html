@@ -124,7 +124,7 @@
 </script>
 
 <!-- SCENE -->
-<a-scene renderer="gammaOutput: false;" stats="false" rotation="0 -45 0">
+<a-scene cursor="rayOrigin: mouse" camera-position renderer="gammaOutput: false;" stats="false" rotation="0 -45 0">
 
   <!-- Assets -->
   <a-assets>
@@ -170,11 +170,6 @@
 
   </a-assets>
   <a-entity text="value: Welcome to this Strange World!\n One of these houses has what you seek...\n Look around, don't be meek...\n Use WASD on PC or swipe on Mobile to move around...\n Don't be frightened by the scary sound...;" position="-0.49 1.3 6.1"></a-entity>
-  <!-- Player / Camera -->
-  <a-entity rotation="0 0 0" position="0 0 8">
-    <a-entity camera wasd-controls look-controls position="0 1.6 0"
-      ></a-entity>
-  </a-entity>
 
   <!-- Stage container (for rotation) -->
   <a-entity rotation="0 45 0">
@@ -250,8 +245,8 @@
 
     <a-entity mixin="house-2" position="60 0.7 25"></a-entity>
    <a-image src="#tedxx" rotation="90 0 0" position="60 0.2 15"></a-image>
-
-    <a-link href="index.html" backgroundColor="green" title="." image="#homeThumbnail" rotation="0 90 0" position="0 1.5 -25"></a-link>
+    
+    <a-link href="2020.html" backgroundColor="green" title="." image="#homeThumbnail" rotation="0 90 0" position="0 1.5 -25" highlightedColor="#ff0000"></a-link>
 
     
 

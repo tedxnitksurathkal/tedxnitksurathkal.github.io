@@ -106,7 +106,7 @@ var team = [
         "instagram": "tedxnitksurathkal"
     },
     {
-        "name": "Sinchana Hedge",
+        "name": "Sinchana Hegde",
         "position": "Event Host",
         "image": "Sinchana.jpg",
         "facebook": "",

@@ -150,10 +150,11 @@
     <a-asset-item id="house2-obj" src="https://ucarecdn.com/28d0c2b4-257c-4369-84d1-7c7b9ba3faa7/"
       crossorigin="anonymous"></a-asset-item>
     <!--     <a-asset-item id="demogorgon" src="https://ucarecdn.com/4bdeee6d-79ff-4d9e-b74f-03f85a19c225/" response-type="arraybuffer" crossorigin="anonymous"></a-asset-item> -->
-
+    <img id="tedxx" src="assets/img/the_x.png">
+    <img id="rlx" src="assets/img/the_fancy_x.png">
     <!-- Mixins -->
     <!--     <a-mixin id="house" obj-model="obj: #house-obj;" material="color: #111; roughness: 1;"></a-mixin> -->
-    <a-mixin id="house-2" obj-model="obj: #house2-obj" material="src: #grunge; color: #111; roughness: 1; repeat: 1 1;"
+    <a-mixin id="house-2" obj-model="obj: #house2-obj" material="src: #grunge; color: #323232; roughness: 1; repeat: 1 1;"
       scale="0.04 0.04 0.04"></a-mixin>
     <!--     <a-mixin id="street" geometry="primitive: box; height: 0.02; width: 200; depth: 15;" material="color: black; opacity: 0.5; roughness: 1;"></a-mixin> -->
     <a-mixin id="street" geometry="primitive: box; height: 0.02; width: 200; depth: 15;"
@@ -169,7 +170,7 @@
   <!-- Player / Camera -->
   <a-entity rotation="0 0 0" movement-controls position="0 0 8">
     <a-entity camera look-controls="pointerLockEnabled: true;" position="0 1.6 0"
-      light="type: spot; intensity: 2.5; penumbra: 1; angle: 30;"></a-entity>
+      light="type: spot; intensity: 1.5; penumbra: 1; angle: 30;"></a-entity>
   </a-entity>
 
   <!-- Stage container (for rotation) -->
@@ -181,7 +182,7 @@
     </a-entity>
 
     <!-- Lighting -->
-    <a-entity light="type: ambient; intensity: 0.3;"></a-entity>
+    <a-entity light="type: ambient; intensity: 3.3;"></a-entity>
 
     <!-- Audio: Non-positional -->
     <a-entity sound="src: #ambience; positional: false; autoplay: true; loop: true; volume: 10;"
@@ -218,34 +219,34 @@
 
     <!-- Houses 2 -->
     <a-entity mixin="house-2" position="-60 0.7 -25"></a-entity>
-    <a-link title="House 1" backgroundColor="#fffff" rotation="0 90 0" position="-60 1.7 -15"></a-link>
+    <a-image src="#tedxx" rotation="90 0 0" position="-60 0.2 -15"></a-image>
 
     <a-entity mixin="house-2" position="-30 0.7 -25" rotation="0 90 0"></a-entity>
-    <a-link title="House 2" backgroundColor="#fffff" rotation="0 00 0" position="-30 1.7 -15"></a-link>
-    
+     <a-image src="#tedxx" rotation="90 0 0" position="-30 0.2 -15"></a-image>
+
     <a-entity mixin="house-2" position="0 0.7 -25"></a-entity>
-    <a-link title="House 3" backgroundColor="green" rotation="0 90 0" position="0 1.7 -15"></a-link>
+    <a-image src="#rlx" rotation="90 0 0" position="0 0.2 -15"></a-image>
 
     <a-entity mixin="house-2" position="30 0.7 -25" rotation="0 180 0"></a-entity>
-    <a-link title="House 4" backgroundColor="green" rotation="0 90 0" position="20 1.7 -15"></a-link>
+    <a-image src="#tedxx" rotation="90 0 0" position="30 0.2 -15"></a-image>
 
     <a-entity mixin="house-2" position="60 0.7 -25"></a-entity>
-    <a-link title="House 5" backgroundColor="green" rotation="0 90 0" position="60 1.7 -15"></a-link>
+    <a-image src="#tedxx" rotation="90 0 0" position="60 0.2 -15"></a-image>
 
     <a-entity mixin="house-2" position="-60 0.7 25"></a-entity>
-    <a-link title="House 6" backgroundColor="green" rotation="0 90 0" position="-60 1.7 15"></a-link>
+    <a-image src="#tedxx" rotation="90 0 0" position="-60 0.2 15"></a-image>
 
     <a-entity mixin="house-2" position="-30 0.7 25" rotation="0 -90 0"></a-entity>
-    <a-link title="House 7" backgroundColor="green" rotation="0 90 0" position="-30 1.7 15"></a-link>
+    <a-image src="#tedxx" rotation="90 0 0" position="-30 0.2 15"></a-image>
 
     <a-entity mixin="house-2" position="0 0.7 25"></a-entity>
-    <a-link title="House 8" backgroundColor="green" rotation="0 90 0" position="0 1.7 15"></a-link>
+    <a-image src="#tedxx" rotation="90 0 0" position="0 0.2 15"></a-image>
 
     <a-entity mixin="house-2" position="30 0.7 25" rotation="0 180 0"></a-entity>
-    <a-link title="House 9" backgroundColor="green" rotation="0 90 0" position="30 1.7 15"></a-link>
+    <a-image src="#tedxx" rotation="90 0 0" position="30 0.2 25"></a-image>
 
     <a-entity mixin="house-2" position="60 0.7 25"></a-entity>
-    <a-link scale="2 2 2" title="House 10" backgroundColor="green" rotation="0 90 0" position="60 1.7 15"></a-link>
+   <a-image src="#tedxx" rotation="90 0 0" position="60 0.2 15"></a-image>
 
     <a-link href="index.html" backgroundColor="green" title="." image="#homeThumbnail" rotation="0 90 0" position="0 1.5 -25"></a-link>
 

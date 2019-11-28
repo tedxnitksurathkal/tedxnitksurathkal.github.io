@@ -16,15 +16,15 @@
 }
 
 .vid-list-container {
-	width: 92%;
-	overflow: hidden;
+	width: 85%;
+	overflow-x: scroll;
 	margin-top: 20px;
-	margin-left:4%;
+	margin:auto;
 	padding-bottom: 20px;
 }
 
 .vid-list-2019 {
-	width: 1036px;
+	width: 1204px;
 	position: relative;
 	top:0;
 	left: 0;
@@ -66,6 +66,11 @@
 	cursor: pointer;
 	margin: 0;
 	padding: 10px;
+}
+
+.vid-item-active {
+	border: 2px solid red;
+	background-color: rgb(231, 231, 231);
 }
 
 .vid-item:hover{
@@ -115,15 +120,19 @@
 }
 
 .tab {
-	overflow: hidden;
+	overflow: auto;
 }
 
-.tab button {
+.tablinks {
+	display: inline-block;
+	white-space: nowrap;
+}
+
+.tablinks {
   	background-color: inherit;
 	font: Helvetica;
 	font-weight: 300;
 	float: left;
-	border: 1px solid;
 	outline: none;
 	cursor: pointer;
 	padding: 14px 16px;
@@ -131,28 +140,37 @@
 	font-size: 17px;
 }
 
-.tab button:hover {
+@media only screen and (max-width: 768px) {
+	.tablinks {
+		padding: 10px 12px;
+		font-size: 15px;
+	}
+}
+
+.tablinks:hover {
   	background-color: #A6A6A6;
 }
 
-.tab button.active {
+.tablinks.active {
   	background-color: #E62B1E;
 	color: white;
 }
 
 @media (max-width: 624px) {
 	.arrows {
-		position:relative;
+		/* position:relative;
 		margin: 0 auto;
-		width:96px;
+		width:96px; */
 	}
 	.arrow-left {
-		left: 0;
-		top: -20px;
+		left: -22px;
+		top: -150px;
+		float: left;
 	}
 
 	.arrow-right {
-		right: 0;
-		top: -20px;
+		right: -22px;
+		top: -150px;
+		float: right;
 	}
 }

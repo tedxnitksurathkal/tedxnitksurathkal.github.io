@@ -8,14 +8,16 @@
     <meta name="keywords" content="TED, TEDx, TEDxNITKSurathkal, TEDx NITK, NITK, NITK Surathkal">
     <meta name="author" content="TEDx NITK Surathkal">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="TEDxNITKSurathkal | Prepare to Scintillate">
-    <meta property="og:title" content="TEDxNITKSurathkal | Prepare to Scintillate">
-    <meta property="og:description" content="TEDxNITKSurathkal is back again with it’s all new theme, Scintillate. Be prepared to get scintillate for the upcoming annual colloque to explore beyond the conventions and spark the people to rethink their notion of what is possible. See you on 18th January'19.">
+    <meta property="og:site_name" content="TEDxNITKSurathkal | Ideas Worth Spreading">
+    <meta property="og:title" content="TEDxNITKSurathkal | Ideas Worth Spreading">
+    <meta property="og:description" content="TEDxNITKSurathkal is coming back for Edition 2020! Stay tuned to find out the theme! See you on 17th January 2020.">
     <meta property="og:url" content="http://www.tedxnitksurathkal.in/">
     <meta property="og:image" content="http://www.tedxnitksurathkal.in/assets/img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
     <!-- ========== Title ========== -->
     <title> TEDxNITKSurathkal</title>
+
     <!-- ========== Favicon Ico ========== -->
     <link rel="icon" href="assets/img/favicon.png">
     <!-- ========== STYLESHEETS ========== -->
@@ -37,6 +39,11 @@
     <!--<link rel="stylesheet" href="assets/css/animate.min.css">-->
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
+
+    <!--Theme for 2019-->
+    <link href="assets/css/theme-2019.css" rel="stylesheet">
+    <link href="assets/css/glassbreak.css" rel="stylesheet">
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
@@ -45,8 +52,12 @@
         <div class="loader-outter"></div>
         <div class="loader-inner" style="background-image: url('assets/img/mini_theme2019.png');"></div>
     </div>
+    <!--
+        Use this if you want the header to turn black on scroll.
+    <header class="header navbar fixed-top navbar-expand-md ">
+    -->
     <!--header start here -->
-    <header class="header navbar fixed-top navbar-expand-md">
+    <header class="header navbar fixed-top navbar-expand-md sticky_header">
         <div class="container">
             <a class="navbar-brand logo" href="#">
                 <img src="assets/img/tedx-white.png" alt="TEDxNITK Surathkal" />
@@ -66,7 +77,7 @@
                         <a class="nav-link " href="/past-editions"><strong>Past Editions</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="/video-centre"><strong>Video Centre</strong></a>
+                        <a class="nav-link " href="/talk-archives"><strong>Talk Archives</strong></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="/findyourx"><strong>Theme</strong></a>
@@ -86,76 +97,20 @@
     </header>
     <!--header end here-->
     <!--cover section slider -->
-    <section id="home" class="home-cover">
-        <!-- <div class="cover_slider owl-carousel owl-theme"> -->
-        <div class="sparkle">
-            <ul data-time="750">
-                <li data-saturation="0" data-lightness="100">IDEAS</li>
-            </ul>
-            <ul data-time="750">
-                <li data-saturation="0" data-lightness="100">WORTH</li>
-            </ul>
-            <ul data-time="750">
-                <li data-saturation="0" data-lightness="100">SPREADING</li>
-            </ul>
-            <ul data-time="1000">
-                <li data-hue="197">18</li>
-                <li data-hue="0">x</li>
-                <li data-hue="197">J</li>
-                <li data-hue="197">A</li>
-                <li data-hue="197">N</li>
-            </ul>
+    <section style="z-index: 99999!important;">
+    <div id="kaliedo" class="ctnr container" style="cursor:pointer;max-width:100%;padding: 0px!important;background-color:white;">
+        <div class="grid">
         </div>
-        <canvas></canvas>
-        <!-- <div class="cover_item" style="background: url('assets/img/bg/trianglify.png');">
-            <div class="slider_content">
-                <div class="slider-content-inner">
-                    <div class="container">
-                        <div class="slider-content-center">
-                            <h2 class="cover-title">
-                                ideas can't
-                            </h2>
-                            <strong class="cover-xl-text">wait</strong>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- <div class="cover_item" style="background: url('assets/img/bg/background-1.jpg');">
-             <div class="slider_content">
-                <div class="slider-content-inner">
-                    <div class="container">
-                        <div class="slider-content-left">
-                            <h2 class="cover-title">
-                                ideas can't wait
-                            </h2>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+    </div>
+    </section>
+    <section id="shattersection" style="z-index: 100!important;display:none;">
+        <div id="container" class="shatterclass" style="z-index: 100!important;"></div>
+    </section>
+    <section id="shattermesg" style="color:white;background-color:black;display: none;width:100vw;height:100vh">
+        <div id="shtrtext" class="style fade-in" style="opacity: hidden">
+            <p>Exploring New Boundaries<br></p>
+            <p style="padding-top: 0.5em">TEDxNITKSurathkal 2019</p>
         </div>
-        <div class="cover_item" style="background: url('assets/img/bg/greybg.jpg');">
-            <div class="slider_content">
-                <div class="slider-content-inner">
-                    <div class="container">
-                        <div class="slider-content-center">
-                            <h2 class="cover-title">
-                                ideas can't wait
-                            </h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- </div> -->
-        <!-- <div class="cover_nav">
-        <ul class="cover_dots">
-            <li class="active" data="0"><span>1</span></li>
-            <li  data="1"><span>2</span></li>
-            <li  data="2"><span>3</span></li>
-        </ul>
-    </div> -->
     </section>
     <!--cover section slider end -->
     <section class="pt100 pb100">
@@ -167,7 +122,7 @@
                         <div class="content">
                             <h5 class="box_title">DATE</h5>
                             <p>
-                                18th January 2019
+                                17th January 2020
                             </p>
                         </div>
                     </div>
@@ -193,7 +148,7 @@
                                 speakers
                             </h5>
                             <p>
-                                8
+                                TBD
                             </p>
                         </div>
                     </div>
@@ -214,6 +169,7 @@
             </div>
         </div>
     </section>
+
     <section class="bg-img pt70 pb70" style="background-image: url('assets/img/bg/bg-img.png');">
         <div class="overlay_dark"></div>
         <div class="container">
@@ -237,7 +193,7 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-md-12">
                     <p>
-                        Fostered by the vision of serving the student community with the most innovative and inspiring ideas, TEDxNITKSurathkal is a university TEDx event that began at NITK in 2011. Having had four successful editions in 2011, 2012, 2016 and 2018, TEDxNITKSurathkal is striving for its upcoming annual colloque to explore beyond the conventions and allow people to rethink their notion of what is possible.
+                        Fostered by the vision of serving the student community with the most innovative and inspiring ideas, TEDxNITKSurathkal is a university TEDx event that began at NITK in 2011. Having had five successful editions in 2011, 2012, 2016, 2018 and 2019, TEDxNITKSurathkal is striving for its upcoming annual colloque to explore beyond the conventions and allow people to rethink their notion of what is possible.
                     </p>
                 </div>
             </div>
@@ -671,7 +627,7 @@
                             <a href="/past-editions">Past Editions</a>
                         </li>
                         <li>
-                            <a href="/video-centre">Video Centre</a>
+                            <a href="/talk-archives">Talk Archives</a>
                         </li>
                         <li>
                             <a href="/findyourx">Theme</a>
@@ -716,16 +672,27 @@
 <!--Counter down -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
 <!--<script src="assets/js/jquery.countdown.min.js"></script>-->
+
+<!--Landing Page graphics for 2019-->
+
 <!-- WOW JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <!--<script src="assets/js/wow.min.js"></script>-->
 <!-- Custom js -->
 <script src="assets/js/main.js"></script>
-<script src="assets/js/title.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
 <script type="text/javascript" src="assets/js/lazy_load.js"></script>
 <script src="assets/js/past-speakers.js"></script>
+
+    <!-- ========== THEME 2019=============-->
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/709927/p5.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/709927/p5.dom.js"></script>
+
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/delaunay.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/TweenMax.min.js"></script>
+    <script src="assets/js/theme-2019.js"></script>
+    <script src="assets/js/glassbreak.js"></script>
 <script>
   for(i = 0; i < past_speakers.length; i++){
     speaker = past_speakers[i];

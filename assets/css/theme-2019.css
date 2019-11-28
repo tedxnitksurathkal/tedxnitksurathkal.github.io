@@ -1,0 +1,117 @@
+
+
+.main {
+  margin-left: 5px;
+}
+
+.diamonds {
+  position: absolute;
+  display: block;
+  width: 430px;
+  height: 500px;
+  right: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.grid {
+  position: absolute;
+  
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
+
+.line {
+  width: 20%;
+  border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.line:last-child {
+  border-right: none;
+}
+
+@media only screen and (max-width: 1199.98px) {
+  #shtrtext p {
+    font-size: 200%;
+  }
+}
+
+@media only screen and (max-width: 991.98px) {
+  #shtrtext p {
+    font-size: 180%;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  #shtrtext p {
+    font-size: 150%;
+  }
+}
+
+@media only screen and (max-width: 575.98px) {
+  #shtrtext p {
+    font-size: 90%;
+  }
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+/* The style below is just for the appearance of the example div */
+
+.style {
+  width:90vw; height:90vh;
+  text-align:center;
+  padding-top:calc(50vh - 50px);
+  margin-left:5vw;
+  background-color:#000;
+}
+.style p {
+  color:#fff;
+  font-size:50px;
+}

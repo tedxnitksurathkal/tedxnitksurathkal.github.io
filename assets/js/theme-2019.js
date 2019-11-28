@@ -40,7 +40,15 @@
       p.pixelDensity(1);
       p.imgGlitch = p.createImage(p.img.width, p.img.height);
       p.cnv.parent('kaliedo');
+      localStorage.setItem('start_transition', false);
+      
     };
+    p.mouseClicked = function() {
+      var img_data_url = p.cnv.elt.toDataURL("image/jpeg", 1.0);
+      localStorage.setItem('img_data_url', img_data_url);
+      localStorage.setItem('start_transition', true);
+      // console.log();
+    }
     p.setDoGlitch = function () {
       p.doGlitch = true;
       p.imgGlitch.copy(p.img, 0, 0, p.img.width, p.img.height, 0, 0, p.imgGlitch.width, p.imgGlitch.height);

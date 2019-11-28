@@ -1,27 +1,31 @@
 // triangulation using https://github.com/ironwallaby/delaunay
 
+function sleep(time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+
 var kaliedo = document.getElementById("kaliedo")
 if(kaliedo)
 {
+  
   kaliedo.addEventListener("click", glassbreak);
 }
 var shatterse = document.getElementById("shattersection");
-window.onload= function()
-{
-  this.shatterse.style.display='none';
-}
+
 function glassbreak(event) {
-  console.log("CLICK!");
-  
-  if(shatterse)
-  {
-    console.log(shatterse);
-    kaliedo.remove();
-    shatterse.style.display='block';
-    click_image(event.clientX, event.clientY);
-    triangulate();
-    shatter();
-  }
+  sleep(0).then(() => {
+    console.log("CLICK!");
+    placeImage(false);
+    if (shatterse) {
+      console.log("Entered shatterse");
+      console.log(shatterse);
+      kaliedo.remove();
+      shatterse.style.display = 'block';
+      click_image(event.clientX, event.clientY);
+      // triangulate();
+      // shatter();
+    }
+  });
 }
 
 // triangulation using https://github.com/ironwallaby/delaunay
@@ -45,6 +49,7 @@ var clickPosition = [imageWidth * 0.5, imageHeight * 0.5];
 
 
 window.onload = function () {
+  this.shatterse.style.display = 'none';
   $("#shtrtext").fadeOut();
   TweenMax.set(container, { perspective: 500 });
 
@@ -90,30 +95,39 @@ window.onload = function () {
   ],
     image,
     loaded = 0;
-  // very quick and dirty hack to load and display the first image asap
   images[0] = image = new Image();
+
+  /* very quick and dirty hack to load and display the first image asap. Uncomment this block if things dont work
   image.onload = function () {
     if (++loaded === 1) {
-      // imagesLoaded();
+      imagesLoaded();
       placeImage(false);
-
       images[0] = image = new Image();
-
       image.src = urls[0];
-
     }
   };
   image.src = urls[0];
+  */
+  image.src = localStorage.getItem('img_data_url');
 };
 
 function placeImage(transitionIn) {
+    
   image = images[imageIndex];
+
 
   if (++imageIndex === images.length) imageIndex = 0;
 
   image.classList.add('sh');
   image.id='shatterimg';
+  
+  
+  // console.log(image);5
+  // alert(image.src);
+  // alert(localStorage.getItem('start_transition'));
   container.appendChild(image);
+
+  console.log(container.children[0]);
 
 
   if (transitionIn !== false) {
@@ -124,12 +138,14 @@ function placeImage(transitionIn) {
 }
 
 function click_image(click_x, click_y) {
+  console.log("clicked image");
   var box = image.getBoundingClientRect(),
     top = box.top,
     left = box.left;
 
   clickPosition[0] = click_x - left;
   clickPosition[1] = click_y - top;
+  // image.src = 
   console.log("TRIANGULATE");
   triangulate();
   console.log("SHATTER");
@@ -289,7 +305,6 @@ Fragment.prototype = {
     this.canvas.height = this.box.h;
     this.canvas.style.width = this.box.w + 'px';
     this.canvas.style.height = this.box.h + 'px';
-    console.log(this.canvas.style.width + "W" + this.canvas.style.height + "H");
 
     this.canvas.style.left = this.box.x + 'px';
     this.canvas.style.top = this.box.y + 'px';

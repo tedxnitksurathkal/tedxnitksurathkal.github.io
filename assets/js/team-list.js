@@ -99,7 +99,7 @@ var team = [
         "instagram": "amith_7798"
     },
     {
-        "name": "Ashutosh",
+        "name": "Ashutosh Agarwal",
         "position": "Treasurer",
         "image": "404-2.png",
         "facebook": "",

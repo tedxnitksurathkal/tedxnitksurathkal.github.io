@@ -2,9 +2,18 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Mirrors and Windows- TEDxNITKSurathkal</title>
+  <title>TEDxNITKSurathkal</title>
   <script src="https://rawgit.com/aframevr/aframe/master/dist/aframe-master.js"></script>
+<!--
 
+        _                            ___     __    __ _           _                   
+  /\/\ (_)_ __ _ __ ___  _ __ ___   ( _ )   / / /\ \ (_)_ __   __| | _____      _____ 
+/    \| | '__| '__/ _ \| '__/ __|  / _ \/\ \ \/  \/ / | '_ \ / _` |/ _ \ \ /\ / / __|
+/ /\/\ \ | |  | | | (_) | |  \__ \ | (_>  <  \  /\  /| | | | | (_| | (_) \ V  V /\__ \
+\/    \/_|_|  |_|  \___/|_|  |___/  \___/\/   \/  \/ |_|_| |_|\__,_|\___/ \_/\_/ |___/
+                                                                                      
+
+-->
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -30,11 +39,12 @@
 </head>
 <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
 
+<script src="https://unpkg.com/aframe-mirror-component/dist/aframe-mirror-component.min.js"></script>
+
 <script src="https://unpkg.com/aframe-template-component@3.2.1/dist/aframe-template-component.min.js"></script>
 
-<a-scene cursor="rayOrigin: mouse" sound="src: #rainforest; on: click; loop: true; volume: 0.2; rolloffFactor: 0" environment="preset: egypt; ground: hills; dressing: none; groundTexture: walkernoise; fog: 0.9;groundColor: #c0c0c0; groundColor2: #757575;dressingColor: #c0c0c0; skyType: gradient; skyColor: #000;horizonColor: #171717">
-
-  <a-assets>
+<a-scene cursor="rayOrigin: mouse" sound="src: #rainforest; on: click; loop: true; volume: 0.2; rolloffFactor: 0" environment="preset: egypt; ground: hills; dressing: none; groundTexture: walkernoise; fog: 0.9;groundColor: #c0c0c0; groundColor2: #757575;dressingColor: #c0c0c0; skyType: gradient; skyColor: #00008b;horizonColor: #171717">
+      <a-sphere mirror position="0 2 -10"></a-sphere>
     
     </a-asset-item>
 
@@ -43,7 +53,7 @@
     <img id="menu0" src="//cdn.rawgit.com/michaelnebeling/src/master/daydream.png" crossorigin="anonymous" />
     <img id="menu1" src="//cdn.rawgit.com/michaelnebeling/src/master/netflix.png" crossorigin="anonymous" />
     <img id="menu2" src="//cdn.rawgit.com/michaelnebeling/src/master/youtube.png" crossorigin="anonymous" />
-    
+    <img id="logo" src="assets/img/tedx-white.png" crossorigin="anonymous"/>
     <!-- sound -->
     
     <audio id="rainforest" src="//cdn.rawgit.com/michaelnebeling/src/master/rainforest_ambience-GlorySunz-1938133500.mp3" crossorigin="anonymous"></audio>
@@ -70,14 +80,13 @@
   </a-entity>
 
 
-
+  <a-image src="#logo" width="3" height="1.5" rotation="0 0 0" position="0 4 -10"></a-image>
   <!-- camera & hand controls -->
   <a-entity id="camera-rig">
     <a-entity camera id="head" position="0 1.6 0" wasd-controls look-controls>
     </a-entity>
-    <a-entity laser-controls="hand: right" raycaster="objects: .collider; showLine: true" line="color: white; opacity: 0.8" teleport-controls="cameraRig: #camera-rig; teleportOrigin: #head; collisionEntities: .environmentGround .environmentDressing" sound="src: #button4; on: teleported"></a-entity>
+    <a-entity laser-controls="hand: right" raycaster="objects: .collider;" teleport-controls="cameraRig: #camera-rig; teleportOrigin: #head; collisionEntities: .environmentGround .environmentDressing" sound="src: #button4; on: teleported"></a-entity>
   </a-entity>
-
 </a-scene>
 <!-- partial -->
   <script  src="./script.js"></script>

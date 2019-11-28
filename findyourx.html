@@ -128,7 +128,10 @@
 
   <!-- Assets -->
   <a-assets>
+    <!-- Actual theme reveal image -->
     <img id="homeThumbnail" src="assets/img/theme-reveal-img-2019.png">
+    <!-- Actual theme reveal image -->
+    <img id="x_footprint" src="assets/img/the_x.png">
     <!-- Audio: Not to be reused or distributed! -->
     <audio id="ambience" src="https://ucarecdn.com/1fd36f41-cbed-40ac-86c2-0c4a8b7faef2/"
       crossorigin="anonymous"></audio>
@@ -154,7 +157,7 @@
     <img id="rlx" src="assets/img/the_fancy_x.png">
     <!-- Mixins -->
     <!--     <a-mixin id="house" obj-model="obj: #house-obj;" material="color: #111; roughness: 1;"></a-mixin> -->
-    <a-mixin id="house-2" obj-model="obj: #house2-obj" material="src: #grunge; color: #323232; roughness: 1; repeat: 1 1;"
+    <a-mixin id="house-2" obj-model="obj: #house2-obj" material="src: #grunge; color: #654321; roughness: 1; repeat: 1 1;"
       scale="0.04 0.04 0.04"></a-mixin>
     <!--     <a-mixin id="street" geometry="primitive: box; height: 0.02; width: 200; depth: 15;" material="color: black; opacity: 0.5; roughness: 1;"></a-mixin> -->
     <a-mixin id="street" geometry="primitive: box; height: 0.02; width: 200; depth: 15;"
@@ -163,14 +166,14 @@
       material="color: yellow; opacity: 0.025;"></a-mixin>
     <!--     <a-mixin id="curb" geometry="primitive: box; height: 0.3; width: 200; depth: 0.4;" material="color: #111; roughness: 1; metalness: 0;"></a-mixin> -->
     <a-mixin id="curb" geometry="primitive: box; height: 0.5; width: 200; depth: 0.4;"
-      material="src: #grunge; repeat: 5 0; color: #222; roughness: 1; metalness: 0;"></a-mixin>
+      material="src: #grunge; repeat: 5 0; color: #7ec850; roughness: 1; metalness: 0;"></a-mixin>
 
   </a-assets>
-  <a-entity text="value: Welcome to this Strange World;" position="-0.49 1.3 6.1"></a-entity>
+  <a-entity text="value: Welcome to this Strange World!\n One of these houses has what you seek...\n Look around, don't be meek...\n Use WASD on PC or swipe on Mobile to move around...\n Don't be frightened by the scary sound...;" position="-0.49 1.3 6.1"></a-entity>
   <!-- Player / Camera -->
-  <a-entity rotation="0 0 0" movement-controls position="0 0 8">
-    <a-entity camera look-controls="pointerLockEnabled: true;" position="0 1.6 0"
-      light="type: spot; intensity: 1.5; penumbra: 1; angle: 30;"></a-entity>
+  <a-entity rotation="0 0 0" position="0 0 8">
+    <a-entity camera wasd-controls look-controls position="0 1.6 0"
+      ></a-entity>
   </a-entity>
 
   <!-- Stage container (for rotation) -->
@@ -178,11 +181,11 @@
 
     <!-- Environment -->
     <a-entity remove-lighting
-      environment="fog: 0; skyType: color; skyColor: #111; ground: flat; groundTexture: walkernoise; groundColor: #333; groundColor2: #222; dressing: arches; dressingAmount: 200; dressingVariance: 1 1 30; dressingUniformScale: false; playArea: 0; dressingColor: #030303; dressingOnPlayArea: 0.08; lighting: distant; lightPosition: 0 -1 0; seed: 10; shadow: true;">
+      environment="fog: 0; skyType: color; skyColor: #87ceeb; ground: flat; groundTexture: walkernoise; groundColor: #2b5329; groundColor2: #0e6b0e; playArea: 0; lighting: distant; lightPosition: 0 -1 0; seed: 10; shadow: true;">
     </a-entity>
 
     <!-- Lighting -->
-    <a-entity light="type: ambient; intensity: 3.3;"></a-entity>
+    <a-entity light="type: ambient; "></a-entity>
 
     <!-- Audio: Non-positional -->
     <a-entity sound="src: #ambience; positional: false; autoplay: true; loop: true; volume: 10;"
@@ -198,7 +201,7 @@
       sound__3="src: #monster-3; on: monster-3; loop: false; positional: true; volume: 2; refDistance: 2; rolloffFactor: 1;"
       position="0 1.6 0">
 
-      <!--           <a-entity gltf-model="#demogorgon" position="0 -1.6 0" scale="0.015 0.015 0.015" animation__rotate="property: rotation.y; to: 75; dur: 4000; dir: alternate; loop: true;"></a-entity> -->
+                <!-- <a-entity gltf-model="#demogorgon" position="0 -1.6 0" scale="0.015 0.015 0.015" animation__rotate="property: rotation.y; to: 75; dur: 4000; dir: alternate; loop: true;"></a-entity> -->
 
     </a-entity>
 
@@ -250,6 +253,8 @@
 
     <a-link href="index.html" backgroundColor="green" title="." image="#homeThumbnail" rotation="0 90 0" position="0 1.5 -25"></a-link>
 
+    
+
 
     <!-- Street -->
     <a-entity mixin="street" position="0 0.1 0">
@@ -261,6 +266,8 @@
       <!-- Lines -->
       <a-entity mixin="street-line" position="0 0.03 -0.4"></a-entity>
       <a-entity mixin="street-line" position="0 0.03 0.4"></a-entity>
+
+      <a-image src="#x_footprint" rotation="90 90 0" position="-0.3 0.2 4.3"></a-link>
 
     </a-entity>
 

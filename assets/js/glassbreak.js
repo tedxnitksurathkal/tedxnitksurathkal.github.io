@@ -10,7 +10,7 @@ window.onload= function()
 {
   this.shatterse.style.display='none';
 }
-function glassbreak() {
+function glassbreak(event) {
   console.log("CLICK!");
   
   if(shatterse)
@@ -18,7 +18,7 @@ function glassbreak() {
     console.log(shatterse);
     kaliedo.remove();
     shatterse.style.display='block';
-    console.log(imgshatter[0]);
+    click_image(event.clientX, event.clientY);
     triangulate();
     shatter();
   }
@@ -29,11 +29,11 @@ function glassbreak() {
 const TWO_PI = Math.PI * 2;
 
 var images = [],
-  imageIndex = 0;
+  imageIndex = 0;   
 
 var image,
-  imageWidth = 768,
-  imageHeight = 485;
+  imageWidth = 360,
+  imageHeight = 640;
 
 var vertices = [],
   indices = [],
@@ -48,9 +48,45 @@ window.onload = function () {
   $("#shtrtext").fadeOut();
   TweenMax.set(container, { perspective: 500 });
 
-  // images from reddit/r/wallpapers
+  var v_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  var v_height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
+  imageWidth = v_width;
+  imageHeight = v_height;
+
+  var url = 'assets/img/diamonds/diamond_m_640p.png';
+
+  // Desktop displays
+  if (v_width > v_height){
+    if (v_width > 1600 && v_height > 900) {
+      url = 'assets/img/diamonds/diamond_1080p.png';
+    }
+    else if (v_width > 1366 && v_height > 768) {
+      url = 'assets/img/diamonds/diamond_900p.png';
+    }
+    else
+    {
+      url = 'assets/img/diamonds/diamond_768p.png';
+    }
+  }
+  // Nobile
+  else {
+    if (v_width > 480 && v_height > 853) {
+      url = 'assets/img/diamonds/diamond_ipad.png';
+    }
+    if (v_width > 411 && v_height > 731) {
+      url = 'assets/img/diamonds/diamond_m_853p.png';
+    }
+    else if (v_width > 360 && v_height > 640) {
+      url = 'assets/img/diamonds/diamond_m_731p.png';
+    }
+    else {
+      url = 'assets/img/diamonds/diamond_m_640p.png';
+    }
+  }
+    
   var urls = [
-    'assets/img/2019_gem_still.png'
+    url
   ],
     image,
     loaded = 0;
@@ -58,7 +94,8 @@ window.onload = function () {
   images[0] = image = new Image();
   image.onload = function () {
     if (++loaded === 1) {
-      imagesLoaded();
+      // imagesLoaded();
+      placeImage(false);
 
       images[0] = image = new Image();
 
@@ -69,17 +106,11 @@ window.onload = function () {
   image.src = urls[0];
 };
 
-function imagesLoaded() {
-  placeImage(false);
-
-}
-
 function placeImage(transitionIn) {
   image = images[imageIndex];
 
   if (++imageIndex === images.length) imageIndex = 0;
 
-  image.addEventListener('click', imageClickHandler);
   image.classList.add('sh');
   image.id='shatterimg';
   container.appendChild(image);
@@ -88,22 +119,24 @@ function placeImage(transitionIn) {
   if (transitionIn !== false) {
     TweenMax.fromTo(image, 0.75, { y: -1000 }, { y: 0, ease: Back.easeOut });
   }
+
+  
 }
 
-function imageClickHandler(event) {
+function click_image(click_x, click_y) {
   var box = image.getBoundingClientRect(),
     top = box.top,
     left = box.left;
 
-  clickPosition[0] = event.clientX - left;
-  clickPosition[1] = event.clientY - top;
+  clickPosition[0] = click_x - left;
+  clickPosition[1] = click_y - top;
   console.log("TRIANGULATE");
   triangulate();
   console.log("SHATTER");
   var shatmsg = document.getElementById('shattermesg');
   shatmsg.style.display = 'block';
   shatter();
-  
+
 }
 
 function triangulate() {
@@ -111,8 +144,9 @@ function triangulate() {
   var rings = [
     { r: 50, c: 12 },
     { r: 150, c: 12 },
-    { r: 300, c: 12 },
-    { r: 1200, c: 12 } // very large in case of corner clicks
+    { r: 700, c: 12 },
+    { r: 1200, c: 12 },
+    { r: 2000, c: 12 } // very large in case of corner clicks
   ],
     x,
     y,
@@ -140,8 +174,9 @@ function triangulate() {
 
   indices = Delaunay.triangulate(vertices);
 }
-
+  
 function shatter() {
+  container.removeChild(image);
   var p0, p1, p2,
     fragment;
 
@@ -178,9 +213,6 @@ function shatter() {
     fragments.push(fragment);
     container.appendChild(fragment.canvas);
   }
-
-  container.removeChild(image);
-  image.removeEventListener('click', imageClickHandler);
 }
 
 function shatterCompleteHandler() {
@@ -195,7 +227,6 @@ function shatterCompleteHandler() {
   var shtrtext = document.getElementById('shtrtext');
   setTimeout(function () {
     $("#shtrtext").fadeIn();
-    // shtrtext.style.animation = 'fadeIn ease 5s';
   },0);
 
 }

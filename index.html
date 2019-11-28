@@ -8,19 +8,15 @@
     <meta name="keywords" content="TED, TEDx, TEDxNITKSurathkal, TEDx NITK, NITK, NITK Surathkal">
     <meta name="author" content="TEDx NITK Surathkal">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="TEDxNITKSurathkal | Prepare to Scintillate">
-    <meta property="og:title" content="TEDxNITKSurathkal | Prepare to Scintillate">
-    <meta property="og:description" content="TEDxNITKSurathkal is back again with it’s all new theme, Scintillate. Be prepared to get scintillate for the upcoming annual colloque to explore beyond the conventions and spark the people to rethink their notion of what is possible. See you on 18th January'19.">
+    <meta property="og:site_name" content="TEDxNITKSurathkal | Ideas Worth Spreading">
+    <meta property="og:title" content="TEDxNITKSurathkal | Ideas Worth Spreading">
+    <meta property="og:description" content="TEDxNITKSurathkal is coming back for Edition 2020! Stay tuned to find out the theme! See you on 17th January 2020.">
     <meta property="og:url" content="http://www.tedxnitksurathkal.in/">
     <meta property="og:image" content="http://www.tedxnitksurathkal.in/assets/img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- ========== Title ========== -->
     <title> TEDxNITKSurathkal</title>
-
-
-
-
 
     <!-- ========== Favicon Ico ========== -->
     <link rel="icon" href="assets/img/favicon.png">
@@ -81,6 +77,9 @@
                         <a class="nav-link " href="/past-editions"><strong>Past Editions</strong></a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link " href="/talk-archives"><strong>Talk Archives</strong></a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link " href="/findyourx"><strong>Theme</strong></a>
                     </li>
                     <li class="nav-item">
@@ -98,7 +97,7 @@
     </header>
     <!--header end here-->
     <!--cover section slider -->
-    <section style="z-index: 999999999!important;">
+    <section style="z-index: 99999!important;">
     <div id="kaliedo" class="ctnr container" style="cursor:pointer;max-width:100%;padding: 0px!important;background-color:white;">
         <div class="grid">
         </div>
@@ -149,7 +148,7 @@
                                 speakers
                             </h5>
                             <p>
-                                8
+                                TBD
                             </p>
                         </div>
                     </div>
@@ -194,7 +193,7 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-md-12">
                     <p>
-                        Fostered by the vision of serving the student community with the most innovative and inspiring ideas, TEDxNITKSurathkal is a university TEDx event that began at NITK in 2011. Having had four successful editions in 2011, 2012, 2016 and 2018, TEDxNITKSurathkal is striving for its upcoming annual colloque to explore beyond the conventions and allow people to rethink their notion of what is possible.
+                        Fostered by the vision of serving the student community with the most innovative and inspiring ideas, TEDxNITKSurathkal is a university TEDx event that began at NITK in 2011. Having had five successful editions in 2011, 2012, 2016, 2018 and 2019, TEDxNITKSurathkal is striving for its upcoming annual colloque to explore beyond the conventions and allow people to rethink their notion of what is possible.
                     </p>
                 </div>
             </div>
@@ -543,6 +542,9 @@
                         </h4>
                     </div>
                     <div class="footer_box_body">
+                        <p>
+                            We're on your favourite social media networks! Follow us on:
+                        </p>
                         <ul class="footer_social">
                             <li>
                                 <a href="https://www.facebook.com/tedxnitksurathkal2018/"><i
@@ -625,6 +627,9 @@
                             <a href="/past-editions">Past Editions</a>
                         </li>
                         <li>
+                            <a href="/talk-archives">Talk Archives</a>
+                        </li>
+                        <li>
                             <a href="/findyourx">Theme</a>
                         </li>
                         <li>
@@ -692,7 +697,9 @@
   for(i = 0; i < past_speakers.length; i++){
     speaker = past_speakers[i];
     src = 'assets/img/past_editions/' + speaker.image;
-    html = "<div class='brand_item text-center'><img class='lazy' data-src='" + src + "' alt='" + speaker.name + "' style='display: block;'><h4>" + speaker.name + "</h4></div>";
+    // html = "<div class='brand_item text-center'><img class='lazy' data-src='" + src + "' alt='" + speaker.name + "' style='display: block;'><h4>" + speaker.name + "</h4></div>";
+    html = "<div class='brand_item text-center'><div class='card mx-2 bg-dark' style='height: 100%;'><img class='card-img-top lazy' data-src='" + src + "' alt='" + speaker.name + "' style='display: block; padding-top: 20px; width: auto' height='110'><div class='card-body'><p class='card-text' style='color: #ffffff'>" + speaker.name + "</p></div></div>";
+
     $('.brand_carousel').append(html);
   }
 

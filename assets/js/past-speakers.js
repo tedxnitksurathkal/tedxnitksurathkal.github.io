@@ -12,10 +12,6 @@ var past_speakers = [
     'image': 'malver.webp'
   },
   {
-    'name': 'GS<br>Madhusudhanan',
-    'image': 'gsmadh.jpg'
-  },
-  {
     'name': 'Lakshmi<br>Selvakumaran',
     'image': 'laksel.jpeg'
   },
@@ -74,6 +70,9 @@ var past_speakers = [
   {
     'name': 'Tim <br>Poston',
     'image': 'tim.jpg'
+  },
+  {
+    'name': 'Neel<br/>Gala',
+    'image': 'neel.jpg'
   }
-
 ]

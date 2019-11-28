@@ -1,39 +1,9 @@
 // triangulation using https://github.com/ironwallaby/delaunay
 
-function sleep(time) {
-  return new Promise((resolve) => setTimeout(resolve, time));
-}
-
-var kaliedo = document.getElementById("kaliedo")
-if(kaliedo)
-{
-  
-  kaliedo.addEventListener("click", glassbreak);
-}
-var shatterse = document.getElementById("shattersection");
-
-function glassbreak(event) {
-  sleep(0).then(() => {
-    console.log("CLICK!");
-    placeImage(false);
-    if (shatterse) {
-      console.log("Entered shatterse");
-      console.log(shatterse);
-      kaliedo.remove();
-      shatterse.style.display = 'block';
-      click_image(event.clientX, event.clientY);
-      // triangulate();
-      // shatter();
-    }
-  });
-}
-
-// triangulation using https://github.com/ironwallaby/delaunay
-
 const TWO_PI = Math.PI * 2;
 
 var images = [],
-  imageIndex = 0;   
+  imageIndex = 0;
 
 var image,
   imageWidth = 360,
@@ -47,6 +17,41 @@ var container = document.getElementById('container');
 
 var clickPosition = [imageWidth * 0.5, imageHeight * 0.5];
 
+// triangulation using https://github.com/ironwallaby/delaunay
+
+function sleep(time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+
+var kaliedo = document.getElementById("kaliedo")
+var shatterse = document.getElementById("shattersection");
+
+function can_start_transition(){
+  return localStorage.getItem('start_transition') == 'true';
+}
+
+function glassbreak(event) {
+  if (can_start_transition()) {
+    console.log("success");
+
+    images[0].src = localStorage.getItem('img_data_url');
+
+    sleep(0).then(() => {
+
+      console.log("CLICK!");
+      placeImage(false);
+      if (shatterse) {
+        console.log("Entered shatterse");
+        kaliedo.remove();
+        shatterse.style.display = 'block';
+        click_image(event.clientX, event.clientY);
+      }
+    });
+  } else {
+    setTimeout(function () { glassbreak(event) }, 1);
+    return false;
+  }
+}
 
 window.onload = function () {
   this.shatterse.style.display = 'none';
@@ -59,82 +64,22 @@ window.onload = function () {
   imageWidth = v_width;
   imageHeight = v_height;
 
-  var url = 'assets/img/diamonds/diamond_m_640p.png';
-
-  // Desktop displays
-  if (v_width > v_height){
-    if (v_width > 1600 && v_height > 900) {
-      url = 'assets/img/diamonds/diamond_1080p.png';
-    }
-    else if (v_width > 1366 && v_height > 768) {
-      url = 'assets/img/diamonds/diamond_900p.png';
-    }
-    else
-    {
-      url = 'assets/img/diamonds/diamond_768p.png';
-    }
-  }
-  // Nobile
-  else {
-    if (v_width > 480 && v_height > 853) {
-      url = 'assets/img/diamonds/diamond_ipad.png';
-    }
-    if (v_width > 411 && v_height > 731) {
-      url = 'assets/img/diamonds/diamond_m_853p.png';
-    }
-    else if (v_width > 360 && v_height > 640) {
-      url = 'assets/img/diamonds/diamond_m_731p.png';
-    }
-    else {
-      url = 'assets/img/diamonds/diamond_m_640p.png';
-    }
-  }
-    
-  var urls = [
-    url
-  ],
-    image,
-    loaded = 0;
   images[0] = image = new Image();
 
-  /* very quick and dirty hack to load and display the first image asap. Uncomment this block if things dont work
-  image.onload = function () {
-    if (++loaded === 1) {
-      imagesLoaded();
-      placeImage(false);
-      images[0] = image = new Image();
-      image.src = urls[0];
-    }
-  };
-  image.src = urls[0];
-  */
-  image.src = localStorage.getItem('img_data_url');
+  if (kaliedo) {
+    kaliedo.addEventListener("click", glassbreak);
+  }
 };
 
 function placeImage(transitionIn) {
-    
   image = images[imageIndex];
-
-
   if (++imageIndex === images.length) imageIndex = 0;
-
   image.classList.add('sh');
   image.id='shatterimg';
-  
-  
-  // console.log(image);5
-  // alert(image.src);
-  // alert(localStorage.getItem('start_transition'));
   container.appendChild(image);
-
-  console.log(container.children[0]);
-
-
   if (transitionIn !== false) {
     TweenMax.fromTo(image, 0.75, { y: -1000 }, { y: 0, ease: Back.easeOut });
   }
-
-  
 }
 
 function click_image(click_x, click_y) {
@@ -145,7 +90,6 @@ function click_image(click_x, click_y) {
 
   clickPosition[0] = click_x - left;
   clickPosition[1] = click_y - top;
-  // image.src = 
   console.log("TRIANGULATE");
   triangulate();
   console.log("SHATTER");
@@ -240,10 +184,7 @@ function shatterCompleteHandler() {
   vertices.length = 0;
   indices.length = 0;
   console.log("SHATTER COMPLETE");
-  var shtrtext = document.getElementById('shtrtext');
-  setTimeout(function () {
-    $("#shtrtext").fadeIn();
-  },0);
+  $("#shtrtext").fadeIn();
 
 }
 

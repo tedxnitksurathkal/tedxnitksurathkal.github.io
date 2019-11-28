@@ -1,192 +1,115 @@
-    var team = [{
+var team = [
+    {
 
-        "name" : "Ali Asgar Khurshid",
+        "name": "Dr. Sheena",
+        "position": "Licensee",
+        "image": "Sheena.jpg",
+        "facebook": "",
+        "instagram": ""
+    },   
+    {
+
+        "name": "Govind Jeevan",
+        "position": "Lead Organizer",
+        "image": "Govind.jpg",
+        "facebook": "https://www.facebook.com/govind.jeevan",
+        "instagram": "govindjeevan"
+    },
+    {
+        "name": "Dr. KV Gangadharan",
+        "position": "Mentor",
+        "image": "KVG.jpg",
+        "facebook": "",
+        "instagram": "tedxnitksurathkal"
+    },
+    {
+
+        "name": "Nihal Shetty",
         "position": "Head of Operations",
-        "image" : "Ali.jpg",
-        "facebook" : "https://www.facebook.com/aliasgarkhurshid",
-        "instagram" : "aliasgarkhurshid"
+        "image": "Nihal.jpg",
+        "facebook": "https://www.facebook.com/shettynhl",
+        "instagram": "shettynhl"
     },
 
     {
-
-        "name" : "Amarnath Krishna",
-        "position": "Head of Media",
-        "image" : "Amarnath.jpg",
-        "facebook" : "https://www.facebook.com/amarnathkrishna",
-        "instagram" : "amarnathkrishna"
+        "name": "Vinay Radhakrishnan",
+        "position": "Head of Marketing",
+        "image": "Vinay.jpg",
+        "facebook": "https://www.facebook.com/vinay.radhakrishnan.75",
+        "instagram": "vinay_402_"
     },
-
     {
-
-        "name" : "Amit Patel",
-        "position": "Licencee",
-        "image" : "Amit.jpg",
-        "facebook" : "https://www.facebook.com/aimit.patel",
-        "instagram" : "ami_there"
-    },
-
-    {
-
-        "name" : "Azif Hidayat",
-        "position": "Head of Branding",
-        "image" : "Azif.jpg",
-        "facebook" : "https://www.facebook.com/azifph",
-        "instagram" : "azifph"
-    },
-
-    {
-
-        "name" : "Emmanuel Biju",
+        "name": "Tharfeed Ahmed Unus",
         "position": "Producer",
-        "image" : "Emmanuel.jpg",
-        "facebook" : "https://www.facebook.com/EmmyEBJ",
-        "instagram" : "e.m.m.y.b"
-    },
+        "image": "Tharfeed.jpg",
+        "facebook": "https://www.facebook.com/iamtau21",
+        "instagram": "i.am.tau"
+    }, 
 
     {
 
-        "name" : "Govind Jeevan",
-        "position": "Website Manager",
-        "image" : "Govind.jpg",
-        "facebook" : "https://www.facebook.com/govind.jeevan",
-        "instagram" : "govindjeevan"
-    },
+        "name": "Amarnath Krishna",
+        "position": "Producer",
+        "image": "Amarnath.jpg",
+        "facebook": "https://www.facebook.com/amarnathkrishna",
+        "instagram": "amarnathkrishna"
+    }, 
+    {
 
-        {
-
-        "name" : "Jessina Cherry",
+        "name": "Saraswathi Vinod",
         "position": "Curator",
-        "image" : "Jessina.jpg",
-        "facebook" : "https://www.facebook.com/jessina.cherry",
-        "instagram" : "jessinacherry"
+        "image": "Saraswathi.jpg",
+        "facebook": "",
+        "instagram": "tedxnitksurathkal"
     },
-
-        {
-
-        "name" : "Karthik Krishnakumar",
-        "position": "Head of Communications",
-        "image" : "Karthik.jpg",
-        "facebook" : "https://www.facebook.com/karthikk8497",
-        "instagram" : "karthik_4497"
-    },
-
-        {
+    {
 
         "name" : "Mishal Shah",
-        "position": "Website Manager",
+        "position": "Co-Curator",
         "image" : "Mishal.jpg",
         "facebook" : "https://www.facebook.com/mishal.shah.7731",
         "instagram" : "shahmishal1998"
     },
-
-        {
-
-        "name" : "Nihaal Ahmed",
+    {
+        "name": "Iteesha Ashwath",
         "position": "Co-Curator",
-        "image" : "Nihaal.jpg",
-        "facebook" : "https://www.facebook.com/nihaalas1998",
-        "instagram" : "nihaal_ahmed1"
+        "image": "Iteesha.jpg",
+        "facebook": "https://m.facebook.com/iteesha.ashwath",
+        "instagram": "Iteesha27"
     },
-
-        {
-
-        "name" : "Nihal Shetty",
-        "position": "Head of Marketing",
-        "image" : "Nihal.jpg",
-        "facebook" : "https://www.facebook.com/shettynhl",
-        "instagram" : "shettynhl"
-    },
-
-        {
-
-        "name" : "Nihala Karapoola",
-        "position": "Producer",
-        "image" : "Nihala.jpg",
-        "facebook" : "https://www.facebook.com/nihalakarapoola",
-        "instagram" : "nihalakarapoola"
-    },
-
-        {
-
-        "name" : "Shannon Gonsalves",
-        "position": "Co-curator",
-        "image" : "Shannon.jpg",
-        "facebook" : "https://www.facebook.com/gonsalves.shan",
-        "instagram" : "shan.gonsalves"
-    },
-
-        {
-
-        "name" : "Deepabhra Mondal",
-        "position": "Joint Head of Operations",
-        "image" : "Deepabhra.jpg",
-        "facebook" : "https://www.facebook.com/profile.php?id=100009532695994",
-        "instagram" : "deepabhramondal"
-    },
-        {
-
-        "name" : "Dr. KV Gangadharan",
-        "position": "Mentor",
-        "image" : "KVG.jpg",
-        "facebook" : "",
-        "instagram" : ""
-    },
-        {
-
-        "name" : "Dr. Sheena",
-        "position": "Faculty Advisor",
-        "image" : "Sheena.jpg",
-        "facebook" : "",
-        "instagram" : ""
-    },   
     {
-
-        "name" : "Akarsh Madhusudana",
+        "name": "Derek Joel",
+        "position": "Head of Creatives",
+        "image": "Derek.jpg",
+        "facebook": "",
+        "instagram": "tedxnitksurathkal"
+    },
+    {
+        "name": "Bharath Adikar",
+        "position": "Website Manager",
+        "image": "Bharath.jpg",
+        "facebook": "",
+        "instagram": "bharath_adikar"
+    },
+    {
+        "name": "Amith Vijayan",
         "position": "Video Coordinator",
-        "image" : "Akarsh.jpg",
-        "facebook" : "https://www.facebook.com/akarsh.sonni.73",
-        "instagram" : "akarsh_sonni"
+        "image": "Amith_Vijayan.jpg",
+        "facebook": "https://www.facebook.com/199877amithv",
+        "instagram": "amith_7798"
     },
     {
-        "name" : "Saraswathi Vinod",
-        "position": "Curation <Coordinator>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             </Coordinator>",
-        "image" : "Saraswathi.jpg",
-        "facebook" : "https://www.facebook.com/kamath18abhijith",
-        "instagram" : "tedxnitksurathkal"  
+        "name": "Ashutosh",
+        "position": "Treasurer",
+        "image": "404-2.png",
+        "facebook": "",
+        "instagram": "tedxnitksurathkal"
     },
     {
-        "name" : "Tharfeed Ahmed Unus",
-        "position": "Curation Coordinator",
-        "image" : "Tharfeed.jpg",
-        "facebook" : "https://www.facebook.com/iamtau21",
-        "instagram" : "tedxnitksurathkal"  
-    },
-    {
-        "name" : "Avanika Rathnakar",
-        "position": "Video Coordinator",
-        "image" : "Avanika.jpg",
-        "facebook" : "https://www.facebook.com/avanikab.rathnakar",
-        "instagram" : "tedxnitksurathkal"  
-    },
-    {
-        "name" : "Abhijith Kamath",
-        "position": "Video Coordinator",
-        "image" : "Abhijith.jpg",
-        "facebook" : "https://www.facebook.com/kamath18abhijith",
-        "instagram" : "abhijithkamath"
-    },
-    {
-        "name" : "Vinay Radhakrishnan",
-        "position": "Video Coordinator",
-        "image" : "Vinay.jpg",
-        "facebook" : "https://www.facebook.com/vinay.radhakrishnan.75",
-        "instagram" : "tedxnitksurathkal"  
-    },
-    {
-        "name" : "Fathima Shakir",
+        "name": "Sinchana Hedge",
         "position": "Event Host",
-        "image" : "Fathima.jpg",
-        "facebook" : "https://www.facebook.com/fathima.shakir",
-        "instagram" : "tedxnitksurathkal"  
+        "image": "Sinchana.jpg",
+        "facebook": "",
+        "instagram": "tedxnitksurathkal"
     },
 ]

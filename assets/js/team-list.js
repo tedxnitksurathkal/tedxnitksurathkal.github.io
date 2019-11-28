@@ -101,7 +101,7 @@ var team = [
     {
         "name": "Ashutosh Agarwal",
         "position": "Treasurer",
-        "image": "404-2.png",
+        "image": "Ashutosh.jpg",
         "facebook": "",
         "instagram": "tedxnitksurathkal"
     },

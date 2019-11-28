@@ -1,35 +1,9 @@
 // triangulation using https://github.com/ironwallaby/delaunay
 
-var kaliedo = document.getElementById("kaliedo")
-if(kaliedo)
-{
-  kaliedo.addEventListener("click", glassbreak);
-}
-var shatterse = document.getElementById("shattersection");
-window.onload= function()
-{
-  this.shatterse.style.display='none';
-}
-function glassbreak(event) {
-  console.log("CLICK!");
-  
-  if(shatterse)
-  {
-    console.log(shatterse);
-    kaliedo.remove();
-    shatterse.style.display='block';
-    click_image(event.clientX, event.clientY);
-    triangulate();
-    shatter();
-  }
-}
-
-// triangulation using https://github.com/ironwallaby/delaunay
-
 const TWO_PI = Math.PI * 2;
 
 var images = [],
-  imageIndex = 0;   
+  imageIndex = 0;
 
 var image,
   imageWidth = 360,
@@ -43,8 +17,44 @@ var container = document.getElementById('container');
 
 var clickPosition = [imageWidth * 0.5, imageHeight * 0.5];
 
+// triangulation using https://github.com/ironwallaby/delaunay
+
+function sleep(time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+
+var kaliedo = document.getElementById("kaliedo")
+var shatterse = document.getElementById("shattersection");
+
+function can_start_transition(){
+  return localStorage.getItem('start_transition') == 'true';
+}
+
+function glassbreak(event) {
+  if (can_start_transition()) {
+    console.log("success");
+
+    images[0].src = localStorage.getItem('img_data_url');
+
+    sleep(0).then(() => {
+
+      console.log("CLICK!");
+      placeImage(false);
+      if (shatterse) {
+        console.log("Entered shatterse");
+        kaliedo.remove();
+        shatterse.style.display = 'block';
+        click_image(event.clientX, event.clientY);
+      }
+    });
+  } else {
+    setTimeout(function () { glassbreak(event) }, 1);
+    return false;
+  }
+}
 
 window.onload = function () {
+  this.shatterse.style.display = 'none';
   $("#shtrtext").fadeOut();
   TweenMax.set(container, { perspective: 500 });
 
@@ -54,76 +64,26 @@ window.onload = function () {
   imageWidth = v_width;
   imageHeight = v_height;
 
-  var url = 'assets/img/diamonds/diamond_m_640p.png';
-
-  // Desktop displays
-  if (v_width > v_height){
-    if (v_width > 1600 && v_height > 900) {
-      url = 'assets/img/diamonds/diamond_1080p.png';
-    }
-    else if (v_width > 1366 && v_height > 768) {
-      url = 'assets/img/diamonds/diamond_900p.png';
-    }
-    else
-    {
-      url = 'assets/img/diamonds/diamond_768p.png';
-    }
-  }
-  // Nobile
-  else {
-    if (v_width > 480 && v_height > 853) {
-      url = 'assets/img/diamonds/diamond_ipad.png';
-    }
-    if (v_width > 411 && v_height > 731) {
-      url = 'assets/img/diamonds/diamond_m_853p.png';
-    }
-    else if (v_width > 360 && v_height > 640) {
-      url = 'assets/img/diamonds/diamond_m_731p.png';
-    }
-    else {
-      url = 'assets/img/diamonds/diamond_m_640p.png';
-    }
-  }
-    
-  var urls = [
-    url
-  ],
-    image,
-    loaded = 0;
-  // very quick and dirty hack to load and display the first image asap
   images[0] = image = new Image();
-  image.onload = function () {
-    if (++loaded === 1) {
-      // imagesLoaded();
-      placeImage(false);
 
-      images[0] = image = new Image();
-
-      image.src = urls[0];
-
-    }
-  };
-  image.src = urls[0];
+  if (kaliedo) {
+    kaliedo.addEventListener("click", glassbreak);
+  }
 };
 
 function placeImage(transitionIn) {
   image = images[imageIndex];
-
   if (++imageIndex === images.length) imageIndex = 0;
-
   image.classList.add('sh');
   image.id='shatterimg';
   container.appendChild(image);
-
-
   if (transitionIn !== false) {
     TweenMax.fromTo(image, 0.75, { y: -1000 }, { y: 0, ease: Back.easeOut });
   }
-
-  
 }
 
 function click_image(click_x, click_y) {
+  console.log("clicked image");
   var box = image.getBoundingClientRect(),
     top = box.top,
     left = box.left;
@@ -224,10 +184,7 @@ function shatterCompleteHandler() {
   vertices.length = 0;
   indices.length = 0;
   console.log("SHATTER COMPLETE");
-  var shtrtext = document.getElementById('shtrtext');
-  setTimeout(function () {
-    $("#shtrtext").fadeIn();
-  },0);
+  $("#shtrtext").fadeIn();
 
 }
 
@@ -289,7 +246,6 @@ Fragment.prototype = {
     this.canvas.height = this.box.h;
     this.canvas.style.width = this.box.w + 'px';
     this.canvas.style.height = this.box.h + 'px';
-    console.log(this.canvas.style.width + "W" + this.canvas.style.height + "H");
 
     this.canvas.style.left = this.box.x + 'px';
     this.canvas.style.top = this.box.y + 'px';

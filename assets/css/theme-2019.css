@@ -33,27 +33,79 @@
   border-right: none;
 }
 
+#shtrtext p {
+  font-size: 130%;
+}
+
+#shatterimg {
+    /* position: absolute; */
+    /* cursor: pointer; */
+    width:50%;
+    height:auto;
+}
+
 @media only screen and (max-width: 1199.98px) {
   #shtrtext p {
-    font-size: 200%;
+    font-size: 100%;
   }
+  #shatterimg {
+    width:60%;
+  }  
 }
 
 @media only screen and (max-width: 991.98px) {
   #shtrtext p {
-    font-size: 180%;
+    font-size: 90%;
   }
+  #shatterimg {
+    width:70%;
+  } 
 }
 
 @media only screen and (max-width: 767.98px) {
   #shtrtext p {
-    font-size: 150%;
+    font-size: 80%;
   }
+  #shatterimg {
+    width:80%;
+  } 
 }
 
 @media only screen and (max-width: 575.98px) {
   #shtrtext p {
-    font-size: 90%;
+    font-size: 65%;
+  }
+  #shatterimg {
+    width:100%;
+  } 
+}
+
+.home-btn {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  background-color: transparent;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  padding: 13px 25px;
+  font-size: 18px;
+  border-radius: 40px;
+  margin: 7px;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  color: rgba(255, 0, 36, 0.7);
+  background: #101010;
+  margin-bottom: 50px;
+}
+
+.home-btn:hover {
+  color: #fff;
+}
+
+@media only screen and (max-width: 480px) {
+  .home-btn {
+    font-size: 14px;
   }
 }
 

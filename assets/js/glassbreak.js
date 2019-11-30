@@ -36,9 +36,18 @@ function glassbreak(event) {
 
     images[0].src = localStorage.getItem('img_data_url');
 
-    sleep(0).then(() => {
+    var sleep_time = 0;
+    // if (window.DeviceOrientationEvent) {
+    //   if ($('#text_2').css('display') != 'none') {
+    //     $("#text_2").fadeOut();
+    //     sleep_time = 200;
+    //   }
+    // }
+
+    sleep(sleep_time).then(() => {
 
       console.log("CLICK!");
+      
       placeImage(false);
       if (shatterse) {
         console.log("Entered shatterse");
@@ -54,6 +63,23 @@ function glassbreak(event) {
 }
 
 window.onload = function () {
+
+  if (window.DeviceOrientationEvent) {
+    setTimeout(function () { 
+      $("#text_1").fadeIn();
+     }, 500);
+
+    setTimeout(function () {
+      $("#text_1").fadeOut();
+    }, 5000);
+
+    setTimeout(function () {
+      $("#text_2").fadeIn();
+    }, 10000);
+    
+  }
+
+
   this.shatterse.style.display = 'none';
   $("#shtrtext").fadeOut();
   TweenMax.set(container, { perspective: 500 });

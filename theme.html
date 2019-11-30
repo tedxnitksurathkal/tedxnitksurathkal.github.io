@@ -26,11 +26,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css"
         rel="stylesheet">
     <!-- Fonts Icon CSS -->
-    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">-->
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/css/et-line.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
-    <!--<link href="assets/css/ionicons.min.css" rel="stylesheet">-->
     <!-- Carousel CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
     <!--<link href="assets/css/owl.carousel.min.css" rel="stylesheet">-->
@@ -50,7 +46,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
-<body>
+<body style="background-color:black;">
     <div class="loader">
         <div class="loader-outter"></div>
         <div class="loader-inner" style="background-image: url('assets/img/mini_theme2019.png');"></div>
@@ -63,17 +59,27 @@
 
     <div id="kaliedo" class="ctnr container"
         style="cursor:pointer;max-width:100%;padding: 0px!important;background-color:white;">
+        
         <div class="grid">
+                <p style="text-align: justify;margin: auto; font-size: 100%; padding-left: 15%; padding-right: 15%; color: white; line-height: 1.2;">
+                    <span id="text_1" style="display: none;">Move your phone, tablet or cursor around to watch the gems move!</span>
+
+                    <span id="text_2" style="display: none;"><br>Click anywhere to see what happens...</span>
+                </p>
         </div>
     </div>
-    </section>
     <section id="shattersection" style="z-index: 100!important;display:none;">
         <div id="container" class="shatterclass" style="z-index: 100!important;"></div>
     </section>
-    <section id="shattermesg" style="color:white;background-color:black;display: none;width:100vw;height:100vh">
-        <div id="shtrtext" class="style fade-in" style="opacity: hidden">
-            <p>Exploring New Boundaries<br></p>
-            <p style="padding-top: 0.5em">TEDxNITKSurathkal 2019</p>
+    <section id="shattermesg" style="color:white;display: none;height:100vh">
+        <div id="shtrtext" class="style fade-in" style="padding-top: 0px;">
+            <image src="assets/img/theme/theme_reveal.jpg" id="shatterimg"></image>
+            <p style="padding-top: 0.5em;line-height: 1.2;padding-top:20px; padding-bottom: 50px;">
+                Our world is progressing towards an exciting future, surpassing challenges that were once thought to be impossible to
+            overcome. This drives us to the promise of coming up with new ideas and better solutions to the problems we continue to
+            face even today. To SCINTILLATE is to emit flashes of light; sparkles. Sometimes a spark is all it takes to set minds on
+            the path towards revolutionary ideas. Come witness the fireworks, as TEDxNITKSurathkal scintillates on..</p>
+            <a href="/" class="home-btn">Home Page</a>
         </div>
     </section>
 
@@ -111,11 +117,8 @@
     <!--<script src="assets/js/wow.min.js"></script>-->
     <!-- Custom js -->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/title.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
-    <script type="text/javascript" src="assets/js/lazy_load.js"></script>
-    <script src="assets/js/past-speakers.js"></script>
 
     <!-- ========== THEME 2019=============-->
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/709927/p5.js"></script>
@@ -125,38 +128,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/TweenMax.min.js"></script>
     <script src="assets/js/theme-2019.js"></script>
     <script src="assets/js/glassbreak.js"></script>
-    <script>
-        for (i = 0; i < past_speakers.length; i++) {
-            speaker = past_speakers[i];
-            src = 'assets/img/past_editions/' + speaker.image;
-            // html = "<div class='brand_item text-center'><img class='lazy' data-src='" + src + "' alt='" + speaker.name + "' style='display: block;'><h4>" + speaker.name + "</h4></div>";
-            html = "<div class='brand_item text-center'><div class='card mx-2 bg-dark' style='height: 100%;'><img class='card-img-top lazy' data-src='" + src + "' alt='" + speaker.name + "' style='display: block; padding-top: 20px; width: auto' height='110'><div class='card-body'><p class='card-text' style='color: #ffffff'>" + speaker.name + "</p></div></div>";
-
-            $('.brand_carousel').append(html);
-        }
-
-        $('.brand_carousel').owlCarousel({
-            loop: true,
-            autoplay: true,
-            smartSpeed: 450,
-            autoplayHoverPause: false,
-            dots: false,
-            nav: false,
-            responsiveClass: true,
-            responsive: {
-                0: {
-                    items: 2
-                },
-                600: {
-                    items: 3
-                },
-                1000: {
-                    items: 5
-                }
-            },
-            items: 5
-        });
-    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
     <script>

@@ -36,9 +36,18 @@ function glassbreak(event) {
 
     images[0].src = localStorage.getItem('img_data_url');
 
-    sleep(0).then(() => {
+    var sleep_time = 0;
+    // if (window.DeviceOrientationEvent) {
+    //   if ($('#text_2').css('display') != 'none') {
+    //     $("#text_2").fadeOut();
+    //     sleep_time = 200;
+    //   }
+    // }
+
+    sleep(sleep_time).then(() => {
 
       console.log("CLICK!");
+      
       placeImage(false);
       if (shatterse) {
         console.log("Entered shatterse");
@@ -54,6 +63,23 @@ function glassbreak(event) {
 }
 
 window.onload = function () {
+
+  if (window.DeviceOrientationEvent) {
+    setTimeout(function () { 
+      $("#text_1").fadeIn();
+     }, 500);
+
+    setTimeout(function () {
+      $("#text_1").fadeOut();
+    }, 5000);
+
+    setTimeout(function () {
+      $("#text_2").fadeIn();
+    }, 10000);
+    
+  }
+
+
   this.shatterse.style.display = 'none';
   $("#shtrtext").fadeOut();
   TweenMax.set(container, { perspective: 500 });
@@ -63,6 +89,10 @@ window.onload = function () {
 
   imageWidth = v_width;
   imageHeight = v_height;
+
+  if (v_height > v_width) {
+    $("#shtr_video_source").attr('src',"assets/img/theme/reveal_portrait.m4v");
+  }
 
   images[0] = image = new Image();
 
@@ -185,7 +215,15 @@ function shatterCompleteHandler() {
   indices.length = 0;
   console.log("SHATTER COMPLETE");
   $("#shtrtext").fadeIn();
-
+  var vid = document.getElementById("theme-reveal-video");
+  vid.autoplay = true;
+  vid.loop = true;
+  vid.load();
+  setTimeout(function () {
+    $("#overlay-text").fadeIn();
+    $("#description-text").fadeIn();
+  }, 8000);
+  
 }
 
 //////////////

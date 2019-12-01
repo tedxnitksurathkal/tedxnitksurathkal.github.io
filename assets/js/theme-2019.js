@@ -42,6 +42,15 @@
       p.cnv.parent('kaliedo');
       localStorage.setItem('start_transition', false);
       
+      // p.gyroscope = new Gyroscope({ frequency: 1 });
+
+      // p.gyroscope.addEventListener('reading', e => {
+      //   console.log("Angular velocity along the X-axis " + p.gyroscope.x);
+      //   console.log("Angular velocity along the Y-axis " + p.gyroscope.y);
+      //   console.log("Angular velocity along the Z-axis " + p.gyroscope.z);
+      // });
+      // p.gyroscope.start();
+      
     };
     p.mouseClicked = function() {
       var img_data_url = p.cnv.elt.toDataURL("image/jpeg", 1.0);
@@ -136,6 +145,16 @@
       this.y = (p.img.height - p.triangleHeight) / 2;
       this.speedX = 0;
       this.speedY = 0;
+      this.original_x = this.x;
+      this.original_y = this.y;
+      if (window.DeviceOrientationEvent) {
+        window.addEventListener('deviceorientation', function (event) {
+          if (!(p.cache.speedX > 0) && !(p.cache.speedY > 0)) {
+            p.cache.x = p.cache.original_x + (event.gamma * 2);
+            p.cache.y = p.cache.original_y + (event.beta * 5);
+          }
+        });
+      };
       this.move = function () {
         var mx, my;
         mx = p.mouseX;

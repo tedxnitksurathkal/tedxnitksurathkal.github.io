@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- ========== Title ========== -->
-    <title> TEDxNITKSurathkal</title>
+    <title>Theme | TEDxNITKSurathkal</title>
 
     <!-- ========== Favicon Ico ========== -->
     <link rel="icon" href="assets/img/favicon.png">
@@ -25,17 +25,6 @@
     <!-- Bootstrap 4 CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css"
         rel="stylesheet">
-    <!-- Fonts Icon CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
-    <!-- Carousel CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
-    <!--<link href="assets/css/owl.carousel.min.css" rel="stylesheet">-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-        rel="stylesheet">
-    <!--<link href="assets/css/owl.theme.default.min.css" rel="stylesheet">-->
-    <!-- Animate CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.0/animate.min.css" rel="stylesheet">
-    <!--<link rel="stylesheet" href="assets/css/animate.min.css">-->
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
 
@@ -46,7 +35,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
-<body style="background-color:black;">
+<body style="background-color:black;overscroll-behavior: none;">
     <div class="loader">
         <div class="loader-outter"></div>
         <div class="loader-inner" style="background-image: url('assets/img/mini_theme2019.png');"></div>
@@ -62,9 +51,9 @@
         
         <div class="grid">
                 <p style="text-align: justify;margin: auto; font-size: 100%; padding-left: 15%; padding-right: 15%; color: white; line-height: 1.2;">
-                    <span id="text_1" style="display: none;">Move your phone, tablet or cursor around to watch the gems move!</span>
+                    <span id="text_1" style="display: none;">Move your phone, tablet or cursor around, and watch your perspectives float around...</span>
 
-                    <span id="text_2" style="display: none;"><br>Click anywhere to see what happens...</span>
+                    <span id="text_2" style="display: none;"><br>Feeling Curious? Tap me...</span>
                 </p>
         </div>
     </div>
@@ -72,19 +61,41 @@
         <div id="container" class="shatterclass" style="z-index: 100!important;"></div>
     </section>
     <section id="shattermesg" style="color:white;display: none;height:100vh">
-        <div id="shtrtext" class="style fade-in" style="padding-top: 0px;">
-            <video controls poster="/assets/img/theme/theme_reveal.jpg">
-                <source src="/assets/img/theme/reveal_landscape.mov" media="all and (potrait: landscape)">
-                <source src="/assets/img/theme/reveal_landscape.m4v" media="all and (potrait: landscape)" type="video/mp4">
-                <source src="/assets/img/theme/reveal_potrait.mov">
-                <source src="/assets/img/theme/reveal_potrait.m4v" type="video/mp4">
+        <div id="shtrtext" class="style fade-in" style="width: 100%; margin: 0; padding: 0;">
+            <video id="theme-reveal-video" style="width:100%;height: auto;margin:0;padding:0;">
+                <!-- <source src="assets/img/theme/reveal_landscape.mov" media="all and (orientation: landscape)" style="z-index:101!important;"> -->
+                <source id="shtr_video_source" src="assets/img/theme/reveal_landscape.m4v" type="video/mp4">
+                <!-- <source src="assets/img/theme/reveal_portrait.mov" media="all and (orientation: portrait)"> -->
+                <!-- <source id="src_portrait" src="assets/img/theme/reveal_portrait.m4v" media="all and (orientation: portrait)" type="video/mp4"> -->
+                    
             </video>
-            <p style="padding-top: 0.5em;line-height: 1.2;padding-top:20px; padding-bottom: 50px;">
-                Our world is progressing towards an exciting future, surpassing challenges that were once thought to be impossible to
-            overcome. This drives us to the promise of coming up with new ideas and better solutions to the problems we continue to
-            face even today. To SCINTILLATE is to emit flashes of light; sparkles. Sometimes a spark is all it takes to set minds on
-            the path towards revolutionary ideas. Come witness the fireworks, as TEDxNITKSurathkal scintillates on..</p>
-            <a href="/" class="home-btn">Home Page</a>
+            
+            <div class="overlay" id="overlay-text" style="display: none;">
+                <p>Fascinated? Scroll down...</p>
+            </div>
+
+            <p id="description-text" style="line-height: 1.2;padding: 20px 30px 50px 30px;display:none;">
+            If life is seen to be an endless maze, every wall is either a mirror or a window. As individuals, we introspect and
+            mould the rays of thoughts in our minds into windows of opportunities.
+            <br><br>
+            The theme, <strong>Mirrors and Windows</strong> highlights the necessity to see one’s self as a reflection of another's experience and
+            to gain insight and perspective of an individuals choices.
+            <br><br>
+            In today's fast paced world, opportunities are at large and self-reflection is seen to be the key to unlocking one’s
+            potential. Sharing, listening or in other words ‘mirroring’ experiences will help us break free of our shells and find
+            solutions to the impending problems our world faces.
+            <br><br>
+            Once inspired, we learn to choose whether to be the mirror or the window. We learn to take ideas and structure them to
+            form an opportunity, windows that take us beyond. Ardent individuals fighting odds and defying norms will instill an
+            urge to move relentlessly. Windows of opportunities will come knocking. Will you be prepared to answer?
+            <br><br>
+            Look within bud, for the universe is within you. Look beyond bud, for the universe awaits you. TEDxNITKSurathkal will
+            urge you to do both. This January, coming to an SJA near you.
+            <br><br>
+            <image id="shatterimg" src="assets/img/tedx-white.png"></image>
+            <br><br>
+            <a href="/" class="home-btn">Home</a>
+        </p>
         </div>
     </section>
 
@@ -106,7 +117,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
     <!--<script src="assets/js/owl.carousel.min.js"></script>-->
     <!--parallax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.4.2/parallax.min.js"></script>
     <!--<script src="assets/js/parallax.min.js"></script>-->
     <!--Counter up -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>

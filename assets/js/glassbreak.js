@@ -90,6 +90,10 @@ window.onload = function () {
   imageWidth = v_width;
   imageHeight = v_height;
 
+  if (v_height > v_width) {
+    $("#shtr_video_source").attr('src',"assets/img/theme/reveal_portrait.m4v");
+  }
+
   images[0] = image = new Image();
 
   if (kaliedo) {
@@ -211,7 +215,15 @@ function shatterCompleteHandler() {
   indices.length = 0;
   console.log("SHATTER COMPLETE");
   $("#shtrtext").fadeIn();
-
+  var vid = document.getElementById("theme-reveal-video");
+  vid.autoplay = true;
+  vid.loop = true;
+  vid.load();
+  setTimeout(function () {
+    $("#overlay-text").fadeIn();
+    $("#description-text").fadeIn();
+  }, 8000);
+  
 }
 
 //////////////

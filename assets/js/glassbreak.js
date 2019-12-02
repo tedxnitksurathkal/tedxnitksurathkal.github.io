@@ -216,9 +216,21 @@ function shatterCompleteHandler() {
   console.log("SHATTER COMPLETE");
   $("#shtrtext").fadeIn();
   var vid = document.getElementById("theme-reveal-video");
-  vid.autoplay = true;
-  vid.loop = true;
-  vid.load();
+
+  var promise = vid.play();
+
+if (promise !== undefined) {
+    promise.catch(error => {
+      alert("not working")
+        // Auto-play was prevented
+        // Show a UI element to let the user manually start playback
+    }).then(() => {
+      alert("working")
+
+        // Auto-play started
+    });
+}
+
   setTimeout(function () {
     $("#overlay-text").fadeIn();
     $("#description-text").fadeIn();

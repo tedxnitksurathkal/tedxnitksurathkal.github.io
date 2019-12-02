@@ -64,7 +64,6 @@ function glassbreak(event) {
 
 window.onload = function () {
 
-  if (window.DeviceOrientationEvent) {
     setTimeout(function () { 
       $("#text_1").fadeIn();
      }, 500);
@@ -77,7 +76,6 @@ window.onload = function () {
       $("#text_2").fadeIn();
     }, 10000);
     
-  }
 
 
   this.shatterse.style.display = 'none';
@@ -216,16 +214,16 @@ function shatterCompleteHandler() {
   console.log("SHATTER COMPLETE");
   $("#shtrtext").fadeIn();
   var vid = document.getElementById("theme-reveal-video");
-
+  vid.autoplay = true;
+  vid.loop = true;
+  vid.load();
   var promise = vid.play();
 
 if (promise !== undefined) {
     promise.catch(error => {
-      alert("not working")
         // Auto-play was prevented
         // Show a UI element to let the user manually start playback
     }).then(() => {
-      alert("working")
 
         // Auto-play started
     });

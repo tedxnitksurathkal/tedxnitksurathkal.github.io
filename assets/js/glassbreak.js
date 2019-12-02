@@ -219,6 +219,20 @@ function shatterCompleteHandler() {
   vid.autoplay = true;
   vid.loop = true;
   vid.load();
+  var promise = document.querySelector('theme-reveal-video').play();
+
+if (promise !== undefined) {
+    promise.catch(error => {
+      alert("not working")
+        // Auto-play was prevented
+        // Show a UI element to let the user manually start playback
+    }).then(() => {
+      alert("working")
+
+        // Auto-play started
+    });
+}
+
   setTimeout(function () {
     $("#overlay-text").fadeIn();
     $("#description-text").fadeIn();

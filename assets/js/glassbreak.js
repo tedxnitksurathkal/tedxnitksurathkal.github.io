@@ -216,10 +216,8 @@ function shatterCompleteHandler() {
   console.log("SHATTER COMPLETE");
   $("#shtrtext").fadeIn();
   var vid = document.getElementById("theme-reveal-video");
-  vid.autoplay = true;
-  vid.loop = true;
-  vid.load();
-  var promise = document.querySelector('theme-reveal-video').play();
+
+  var promise = vid.play();
 
 if (promise !== undefined) {
     promise.catch(error => {

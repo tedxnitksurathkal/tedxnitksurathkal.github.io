@@ -93,27 +93,13 @@
     </header>
     <!--header end here-->
     <!--cover section slider -->
-    <section id="home" class="home-cover">
-    
-        <div class="sparkle">
-            <ul data-time="750">
-                <li data-saturation="0" data-lightness="100">IDEAS</li>
-            </ul>
-            <ul data-time="750">
-                <li data-saturation="0" data-lightness="100">WORTH</li>
-            </ul>
-            <ul data-time="750">
-                <li data-saturation="0" data-lightness="100">SPREADING</li>
-            </ul>
-            <ul data-time="1000">
-                <li data-hue="197">17</li>
-                <li data-hue="0">x</li>
-                <li data-hue="197">J</li>
-                <li data-hue="197">A</li>
-                <li data-hue="197">N</li>
-            </ul>
-        </div>
-        <canvas></canvas>
+    <section class="bg-img pt100 pb100" style="background-image: url('assets/img/dark-windows.jpg'); height: 100vh; width:auto">
+      <div class="container shining-text-container"> 
+        <h4 class="shining-text-animation">When you look at me</h4><br/>
+        <h4 class="shining-text-animation">You see perfection</h4><br/>
+        <h4 class="shining-text-animation">Because what you see</h4><br/>
+        <h4 class="shining-text-animation">Is your reflection</h4><br/>
+      </div>
     </section>
     <!--cover section slider end -->
     <section class="pt100 pb100">
@@ -730,7 +716,43 @@
 
   gtag('config', 'UA-110715968-3');
 </script>
-
 </body>
+<style>
+  .shining-text-animation {
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #fff, #000);jj
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 6s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
 
+  @media only screen and (min-width: 768px){
+    .shining-text-container {
+      position:absolute; 
+      top:40%;
+      left: 15%;
+    }
+  }
+
+  @media only screen and (max-width: 768px){
+    .shining-text-container {
+      position:absolute; 
+      top: 75%;
+      left: 28%;
+    }
+  }
+</style>
 </html>

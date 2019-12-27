@@ -93,14 +93,12 @@
     </header>
     <!--header end here-->
     <!--cover section slider -->
-    <section class="bg-img pt100 pb100" style="background-image: url('assets/img/dark-windows.jpg'); height: 100vh;width:auto">
-      <div class="container">
-         <div class="justify-content-left">
-            <p class="shining-text-animation">When you look at me</p><br/>
-            <p class="shining-text-animation">You see perfection</p><br/>
-            <p class="shining-text-animation">Because what you see</p><br/>
-            <p class="shining-text-animation">Is your reflection</p><br/>
-         </div>
+    <section class="bg-img pt100 pb100" style="background-image: url('assets/img/dark-windows.jpg'); height: 100vh; width:auto">
+      <div class="container shining-text-container"> 
+        <h4 class="shining-text-animation">When you look at me</h4><br/>
+        <h4 class="shining-text-animation">You see perfection</h4><br/>
+        <h4 class="shining-text-animation">Because what you see</h4><br/>
+        <h4 class="shining-text-animation">Is your reflection</h4><br/>
       </div>
     </section>
     <!--cover section slider end -->
@@ -720,14 +718,12 @@
 </script>
 </body>
 <style>
-  p.shining-text-animation {
+  .shining-text-animation {
     position: relative;
     font-family: sans-serif;
     text-transform: uppercase;
-    font-size: 1em;
-    letter-spacing: 4px;
     overflow: hidden;
-    background: linear-gradient(90deg, #000, #fff, #000);jj
+    background: linear-gradient(90deg, #000, #fff, #000);
     background-repeat: no-repeat;
     background-size: 80%;
     animation: animate 6s linear infinite;
@@ -740,6 +736,22 @@
     }
     100% {
       background-position: 500%;
+    }
+  }
+
+  @media only screen and (min-width: 768px){
+    .shining-text-container {
+      position:absolute; 
+      top:40%;
+      left: 15%;
+    }
+  }
+
+  @media only screen and (max-width: 768px){
+    .shining-text-container {
+      position:absolute; 
+      top: 75%;
+      left: 28%;
     }
   }
 </style>

@@ -21,6 +21,9 @@ function openSeries(evt, vidName) {
     var i, tabcontent, tablinks;
 
     switch (vidName) {
+      case '2020':
+        document.getElementById('vid_frame').src='https://www.youtube.com/embed/usDzA8UVDus?rel=0&showinfo=0&autohide=1';
+        break;
       case '2019':
         document.getElementById('vid_frame').src='https://www.youtube.com/embed/-7ENgIjLWps?rel=0&showinfo=0&autohide=1';
         break;
@@ -55,7 +58,6 @@ function openSeries(evt, vidName) {
 }
 
 
-// Set default to 2019
 document.getElementById("defaultOpen").click();
 
 $(".vid-item .desc").click(function () {

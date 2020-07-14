@@ -300,3 +300,66 @@ var speakers2019 = [
     "designation": "Crew, INSV Tarini"
   }
 ]
+
+var speakers2020 = [
+  {
+    "name": "Anupama Hoskere",
+    "image": "assets/img/Speaker Pictures/2020/ah.jpg",
+    "designation": "Master Puppeteer"
+  },
+  {
+    "name": "Alina Alam",
+    "image": "assets/img/Speaker Pictures/2020/aa.jpg",
+    "designation": "Social Entrepreneur"
+  },
+  {
+    "name": "Ananya Khatan",
+    "image": "assets/img/Speaker Pictures/2020/ak.jpg",
+    "designation": "Designer"
+  },
+  {
+    "name": "Bandeep Singh",
+    "image": "assets/img/Speaker Pictures/2020/bs.jpg",
+    "designation": "Photographer"
+  },
+  {
+    "name": "Gaurav Hore",
+    "image": "assets/img/Speaker Pictures/2020/gh.jpg",
+    "designation": "Lieutenant | Engineering Student"
+  },
+  {
+    "name": "Samyuktha Hegde",
+    "image": "assets/img/Speaker Pictures/2020/sh.jpg",
+    "designation": "Actress"
+  },
+  {
+    "name": "Rosie Paul",
+    "image": "assets/img/Speaker Pictures/2020/rp.jpg",
+    "designation": "Green Architect | Founder, Masons Ink Studio",
+  },
+  {
+    "name": "Padmavati Rao",
+    "image": "assets/img/Speaker Pictures/2020/pr.jpg",
+    "designation": "Theatre Artist | Actress"
+  },
+  {
+    "name": "Avishkar Hyperloop",
+    "image": "assets/img/Speaker Pictures/2020/ahy.jpg",
+    "designation": "SpaceX Finalists"
+  },
+  {
+    "name": "Gopi Shankar Madurai",
+    "image": "assets/img/Speaker Pictures/2020/gsm.jpg",
+    "designation": "Equal Rights Activist"
+  },
+  {
+    "name": "Sunil Rayana",
+    "image": "assets/img/Speaker Pictures/2020/sr.jpg",
+    "designation": "Co-Founder, SlumGods",
+  },
+  {
+    "name": "Rajesh Babu",
+    "image": "assets/img/Speaker Pictures/2020/rb.jpg",
+    "designation": "Co-Founder, Swachha"
+  }
+]

@@ -112,7 +112,8 @@
         </div>
         <canvas></canvas>
     </section>
-    <!--cover section slider end -->
+
+    <!-- cover section slider end
     <section class="pt100 pb100">
         <div class="container">
             <div class="row justify-content-center">
@@ -181,6 +182,8 @@
             </div>
         </div>
     </section>
+    -->
+
     <!--event info -->
     <!--about the event -->
     <section class="pt100 pb100">
@@ -888,6 +891,21 @@
 <script src="assets/js/past-speakers.js"></script>
 
 <script>
+  // Create countdown slider
+  $( function() {
+    $('.counter').counterUp({
+      delay: 5,
+      time: 3000
+    });
+
+    $('.countdown').countdown("2020/08/01", function(event) {
+      $(this).html(
+        event.strftime("<div>%D <span>Days</span></div><div>%H <span>Hours</span></div><div>%M <span>Minutes</span></div><div>%S <span>Seconds</span></div>")
+      );
+    });
+  });
+
+  // Generate past speakers carousel
   for(i = 0; i < past_speakers.length; i++){
     speaker = past_speakers[i];
     src = 'assets/img/past_editions/' + speaker.image;
@@ -923,6 +941,7 @@
     items: 5
   });
 </script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
 <script>

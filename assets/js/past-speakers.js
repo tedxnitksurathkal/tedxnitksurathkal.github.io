@@ -1,5 +1,53 @@
 var past_speakers = [
   {
+    'name': 'Anupama<br>Hoskere',
+    'image': 'anupama.jpg'
+  },
+  {
+    'name': 'Alina<br>Alam',
+    'image': 'alina.jpg'
+  },
+  {
+    'name': 'Ananya<br>Khatan',
+    'image': 'ananya.jpg'
+  },
+  {
+    'name': 'Bandeep<br>Singh',
+    'image': 'bandeep.jpg'
+  },
+  {
+    'name': 'Gaurav<br>Hore',
+    'image': 'gaurav.jpg'
+  },
+  {
+    'name': 'Samyuktha<br>Hegde',
+    'image': 'samyukhta.jpg'
+  },
+  {
+    'name': 'Rosie<br>Paul',
+    'image': 'rosie.jpg'
+  },
+  {
+    'name': 'Padmavati<br>Rao',
+    'image': 'padmavati.jpg'
+  },
+  {
+    'name': 'Avishkar<br>Hyperloop',
+    'image': 'avishkar.jpg',
+  },
+  {
+    'name': 'Gopi Shankar<br>Madurai',
+    'image': 'gopi.jpg'
+  },
+  {
+    'name': 'Sunil<br>Rayana',
+    'image': 'sunil.jpg'
+  },
+  {
+    'name': 'Rajesh<br>Babu',
+    'image': 'rajesh.jpg'
+  },
+  {
     'name': 'Harish<br>Sivaramakrishnan',
     'image': 'harsiv.jpg'
   },

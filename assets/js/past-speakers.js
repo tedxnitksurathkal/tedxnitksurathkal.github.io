@@ -1,126 +1,126 @@
 var past_speakers = [
   {
-    'name': 'Anupama<br>Hoskere',
+    'name': 'Anupama Hoskere',
     'image': 'anupama.jpg'
   },
   {
-    'name': 'Alina<br>Alam',
+    'name': 'Alina Alam',
     'image': 'alina.jpg'
   },
   {
-    'name': 'Ananya<br>Khatan',
+    'name': 'Ananya Khatan',
     'image': 'ananya.jpg'
   },
   {
-    'name': 'Bandeep<br>Singh',
+    'name': 'Bandeep Singh',
     'image': 'bandeep.jpg'
   },
   {
-    'name': 'Gaurav<br>Hore',
+    'name': 'Gaurav Hore',
     'image': 'gaurav.jpg'
   },
   {
-    'name': 'Samyuktha<br>Hegde',
+    'name': 'Samyuktha Hegde',
     'image': 'samyukhta.jpg'
   },
   {
-    'name': 'Rosie<br>Paul',
+    'name': 'Rosie Paul',
     'image': 'rosie.jpg'
   },
   {
-    'name': 'Padmavati<br>Rao',
+    'name': 'Padmavati Rao',
     'image': 'padmavati.jpg'
   },
   {
-    'name': 'Avishkar<br>Hyperloop',
+    'name': 'Avishkar Hyperloop',
     'image': 'avishkar.jpg',
   },
   {
-    'name': 'Gopi Shankar<br>Madurai',
+    'name': 'Gopi Shankar Madurai',
     'image': 'gopi.jpg'
   },
   {
-    'name': 'Sunil<br>Rayana',
+    'name': 'Sunil Rayana',
     'image': 'sunil.jpg'
   },
   {
-    'name': 'Rajesh<br>Babu',
+    'name': 'Rajesh Babu',
     'image': 'rajesh.jpg'
   },
   {
-    'name': 'Harish<br>Sivaramakrishnan',
+    'name': 'Harish Sivaramakrishnan',
     'image': 'harsiv.jpg'
   },
   {
-    'name': 'Anto<br>Philip',
+    'name': 'Anto Philip',
     'image': 'antphi.jpg'
   },
   {
-    'name': 'Malika<br>Verma',
+    'name': 'Malika Verma',
     'image': 'malver.webp'
   },
   {
-    'name': 'Lakshmi<br>Selvakumaran',
+    'name': 'Lakshmi Selvakumaran',
     'image': 'laksel.jpeg'
   },
   {
-    'name': 'Gaurav<br>Godhwani',
+    'name': 'Gaurav Godhwani',
     'image': 'gaugod.jpg'
   },
   {
-    'name': 'Manisha Gera<br>Baswani',
+    'name': 'Manisha Gera Baswani',
     'image': 'manbas.jpeg'
   },
   {
-    'name': 'LT CDR Pratibha<br>Jamwal',
+    'name': 'LT CDR Pratibha Jamwal',
     'image': 'prajam.jpeg'
   },
   {
-    'name': 'Poonam Bir <br>Kasturi',
+    'name': 'Poonam Bir Kasturi',
     'image': 'poonam.jpg'
   },
   {
-    'name': 'Ashok <br>Rao',
+    'name': 'Ashok Rao',
     'image': 'ashok.jpeg'
   },
   {
-    'name': 'Binoy <br>John',
+    'name': 'Binoy John',
     'image': 'binoy.jpg'
   },
   {
-    'name': 'Kumaresh <br>Rajagopalan',
+    'name': 'Kumaresh Rajagopalan',
     'image': 'kumaresh.jpg'
   },
   {
-    'name': 'Mohandas <br>Pai',
+    'name': 'Mohandas Pai',
     'image': 'mohandas.jpg'
   },
   {
-    'name': 'Prasanta <br>Karmakar',
+    'name': 'Prasanta Karmakar',
     'image': 'prasanta.jpg'
   },
   {
-    'name': 'Rajeswari <br>Vaidyanathan',
+    'name': 'Rajeswari Vaidyanathan',
     'image': 'raj.jpg'
   },
   {
-    'name': 'Robin <br>Chaurasiya',
+    'name': 'Robin Chaurasiya',
     'image': 'robin.jpg'
   },
   {
-    'name': 'Sammilan <br>Shetty',
+    'name': 'Sammilan Shetty',
     'image': 'sammilan.jpg'
   },
   {
-    'name': 'Sriram <br>Ramaswamy',
+    'name': 'Sriram Ramaswamy',
     'image': 'sriram.png'
   },
   {
-    'name': 'Tim <br>Poston',
+    'name': 'Tim Poston',
     'image': 'tim.jpg'
   },
   {
-    'name': 'Neel<br/>Gala',
+    'name': 'Neel Gala',
     'image': 'neel.jpg'
   }
 ]

@@ -57,13 +57,13 @@
                     <a class="nav-link " href="/about"><strong>About</strong></a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link " href="/salon"><strong>Salon</strong></a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link active" href="/past-editions"><strong>Past Editions</strong></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/talk-archives"><strong>Talk Archives</strong></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="/theme"><strong>Theme</strong></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link " href="/team"><strong>Team</strong></a>
@@ -120,7 +120,8 @@
                         </h4>
                         <div class="nav nav-pills flex-column" role="tablist">
                           <ul>
-                            <li><a class="nav-link active" data-toggle="pill" href="#2019" role="tab">2019</a></li>
+                            <li><a class="nav-link active" data-toggle="pill" href="#2020" role="tab">2020</a></li>
+                            <li><a class="nav-link" data-toggle="pill" href="#2019" role="tab">2019</a></li>
                             <li><a class="nav-link" data-toggle="pill" href="#2018" role="tab">2018</a></li>
                             <li><a class="nav-link" data-toggle="pill" href="#2016" role="tab">2016</a></li>
                             <li><a class="nav-link" data-toggle="pill" href="#2012" role="tab">2012</a></li>
@@ -134,7 +135,50 @@
 
             <div class="col-12 col-md-8">
                 <div class="tab-content">
-                    <div id="2019" class="tab-pane fade show active" role="tabpanel">
+                    <div id="2020" class="tab-pane fade show active" role="tabpanel">
+                        <div class="section_title">
+                            <h3 class="title">
+                                  Mirror and Windows | 2020 <a href="https://www.youtube.com/watch?v=MBWoEmsrYz8&list=PLsRNoUx8w3rN0tZEzcdnD_42kWclx2pYa" class="btn btn-primary btn-rounded" target="_blank">Watch videos</a>
+                            </h3>
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-12">
+                                <p>
+                                  If life is seen to be an endless maze, every wall is either a mirror or a window. As individuals, we introspect and
+                                  mould the rays of thoughts in our minds into windows of opportunities.
+                                </p>
+
+                                <p>
+                                  The theme, <strong>Mirrors and Windows</strong> highlights the necessity to see one’s self as a reflection of another's experience and
+                                  to gain insight and perspective of an individuals choices.
+                                </p>
+
+                                <p>
+                                  In today's fast paced world, opportunities are at large and self-reflection is seen to be the key to unlocking one’s
+                                  potential. Sharing, listening or in other words ‘mirroring’ experiences will help us break free of our shells and find
+                                  solutions to the impending problems our world faces.
+                                </p>
+
+                                <p>
+                                  Once inspired, we learn to choose whether to be the mirror or the window. We learn to take ideas and structure them to
+                                  form an opportunity, windows that take us beyond. Ardent individuals fighting odds and defying norms will instill an
+                                  urge to move relentlessly. Windows of opportunities will come knocking. Will you be prepared to answer?
+                                </p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="section_title">
+                            <h6 class="subtitle">
+                                Speakers
+                            </h6>
+                        </div>
+                        <section class="pb100">
+                            <div class="row justify-content-center no-gutters" id="s2020">
+                            </div>
+                        </section>
+                    </div>
+                    <div id="2019" class="tab-pane fade show" role="tabpanel">
                         <div class="section_title">
                             <h3 class="title">
                                   Scintillate | 2019 <a href="https://www.youtube.com/watch?v=oUj1Wc4t6X8&list=PLsRNoUx8w3rMieWOTC_cZrvPcQCJjehKE" class="btn btn-primary btn-rounded" target="_blank">Watch videos</a>
@@ -363,7 +407,12 @@
         <div class="row justify-content-center">
             <div class="col-md-6 col-12">
                 <p>
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by TEDxNITKSurathkal &amp; <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+                     | 
+                    Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by TEDxNITKSurathkal &amp; <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                     | 
+                    This independent TEDx event is operated under license from <a href="https://www.ted.com" target="_blank">TED</a>.
+                </p>
             </div>
             <div class="col-12 col-md-6 ">
                 <ul class="footer_menu">
@@ -374,13 +423,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                         <a href="/about">About</a>
                     </li>
                     <li>
+                        <a href="/salon">Salon</a>
+                    </li>
+                    <li>
                         <a href="/past-editions">Past Editions</a>
                     </li>
                     <li>
                         <a href="/talk-archives">Talk Archives</a>
-                    </li>
-                    <li>
-                        <a href="/theme">Theme</a>
                     </li>
                     <li>
                         <a href="/team">Team</a>
@@ -424,6 +473,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="assets/js/lazy_load.js"></script>
 
 <script>
+    for (var x = 0; x < speakers2020.length; x++) {
+        $("<div class=\"col-md-6 col-sm-10\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img class=\"lazy\" data-src=\""+speakers2020[x]["image"]+"\"><div class=\"info_box\"><h5 class=\"name\">"+speakers2020[x]["name"]+"</h5><p class=\"position\">"+speakers2020[x]["designation"]+"</p></div></div><div class=\"speaker_social\"><p></p></div></div></div>").appendTo("#s2020")
+
+    }
+
     for (var x = 0; x < speakers2019.length; x++) {
         $("<div class=\"col-md-6 col-sm-10\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img class=\"lazy\" data-src=\""+speakers2019[x]["image"]+"\"><div class=\"info_box\"><h5 class=\"name\">"+speakers2019[x]["name"]+"</h5><p class=\"position\">"+speakers2019[x]["designation"]+"</p></div></div><div class=\"speaker_social\"><p></p></div></div></div>").appendTo("#s2019")
 

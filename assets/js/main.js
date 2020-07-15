@@ -43,20 +43,6 @@ $(document).ready(function() {
             $('.header').addClass('sticky_header');
         }
     });
-    /* --------------------------------------------------------
-     COUNTER JS
-     ----------------------------------------------------------- */
-
-    $('.counter').counterUp({
-        delay: 5,
-        time: 3000
-    });
-
-    $(".countdown").countdown("2020/01/17", function(event) {
-        $(this).html(
-            event.strftime('<div>%D <span>Days</span></div>  <div>%H<span>Hours</span></div> <div>%M<span>Minutes</span></div> <div>%S<span>Seconds</span></div>')
-        );
-    });
 
     /* ==============================================
      SLIDER

@@ -1,0 +1,86 @@
+  .parent {
+    position: relative;
+    top: 200px;
+    left: 35%;
+  }
+  .spin {
+    position: relative;
+    top: 0;
+    left: 0;
+    filter:invert(100%);
+  }
+  .rotate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: invert(100%);
+    
+    /*animation: rotation 4s infinite linear;*/
+  }
+  .atmanirbhar {
+    display: none;
+    position: relative;
+    top: 250px;
+    left: 40%;
+  }
+  .makeinindia {
+    display: none;
+    position: absolute;
+    height: 40%;
+    padding-left: 4%;
+    padding-top: 1%;
+    left: 0;
+    top: 0;
+    filter: invert(100%);
+  }
+  .chain-break {
+    display: none;
+    position: absolute;
+    height: 30%;
+    padding-right: 4%;
+    right: 0;
+    padding-top: 5%;
+    top: 0;
+    filter: invert(100%);
+  }
+  .container {
+    bottom: 0;
+    margin-bottom: -10px;
+  }
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+  canvas{
+    position:absolute;
+    left:0;
+    top:0;
+  }
+
+  .home-btn {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: transparent;
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    padding: 13px 25px;
+    font-size: 18px;
+    border-radius: 40px;
+    margin: 7px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+    color: rgba(255, 0, 36, 0.7);
+    background: #101010;
+  }
+  
+  .home-btn:hover {
+    color: #fff;
+  }
+  

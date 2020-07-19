@@ -1,12 +1,17 @@
   .parent {
     position: relative;
     top: 200px;
-    left: 35%;
   }
+
+  #wheel {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
   .spin {
     position: relative;
     top: 0;
-    left: 0;
     filter:invert(100%);
   }
   .rotate {
@@ -17,6 +22,7 @@
     
     /*animation: rotation 4s infinite linear;*/
   }
+
   .atmanirbhar {
     display: none;
     position: relative;

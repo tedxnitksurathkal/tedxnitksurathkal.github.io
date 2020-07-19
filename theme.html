@@ -39,12 +39,9 @@
     <div class="loader-outter"></div>
     <div class="loader-inner" style="background-image: url('assets/img/mini_theme2019.png');"></div>
   </div>
-    <center>
-      <span>
-        <img src="assets/img/tedx_salon_black.png" height="100px;"/>
-      </span>
-    </center>
 
+  <section class="pt50">
+    <div class="container">
     <span>
       <img src="assets/img/theme/makeinindia.png" class="makeinindia" />
     </span>
@@ -54,8 +51,13 @@
     </span>
 
     <div class="parent" id="fade">
+
+      <center>
         <img src="assets/img/theme/spinning-wheel-half.png" class="spin" />
+      </center>
         <div id="turn"><img src="assets/img/theme/wheel.png" class="rotate" id="wheel" /></div>
+
+        <div id="spinme" style="text-align:center">Spin the chakhra by dragging across spokes!</div>
     </div>
     <!-- <div class="atmanirbhar" id="atmanirbhar"><img src="assets/img/theme/atmanirbhar.png" /></div> -->
         
@@ -94,13 +96,27 @@
             </div>
         </div>
     </section>
-    <div id="spinme" style="text-align:center;" class="pt100">Spin the chakhra by dragging across spokes!</div>
+    </div>
+  </section>
     <!-- wrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/utils/Draggable.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
     <script>
+        function align_wheel_on_frame() {
+          var div_width = $(".parent").width();
+          var img_width = $(".spin").width();
+          var wheel_width = $("#wheel").width();
+
+          var offset = (div_width - img_width)/2;
+
+          $("#wheel").css("left", offset);
+          $("#wheel").width(img_width * 0.52);
+
+          return offset;
+        }
+
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
@@ -172,6 +188,14 @@
                 $('#desc').fadeIn(2000);
             }, 4000);
         }
+
+        $(function () {
+          align_wheel_on_frame();
+        });
+
+        $(window).resize( function() {
+          align_wheel_on_frame();
+        });
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

@@ -19,8 +19,6 @@
     top: 0;
     left: 0;
     filter: invert(100%);
-    
-    /*animation: rotation 4s infinite linear;*/
   }
 
   .atmanirbhar {
@@ -33,9 +31,9 @@
     display: none;
     position: absolute;
     height: 40%;
-    padding-left: 4%;
-    padding-top: 1%;
+    padding-left: 2%;
     left: 0;
+    padding-top: 1%;
     top: 0;
     filter: invert(100%);
   }
@@ -43,11 +41,20 @@
     display: none;
     position: absolute;
     height: 30%;
-    padding-right: 4%;
-    right: 0;
-    padding-top: 5%;
-    top: 0;
+    padding-left: 2%;
+    left: 0;
+    padding-bottom: 1%;
+    bottom: 0;
     filter: invert(100%);
+  }
+  .india_map {
+    display: none;
+    position: absolute;
+    height: 40%;
+    padding-right: 2%;
+    right: 0;
+    padding-top: 2%;
+    top: 0;
   }
   .container {
     bottom: 0;
@@ -90,3 +97,9 @@
     color: #fff;
   }
   
+  body {
+    background-image: url('/assets/img/theme/background.png');
+    overscroll-behavior:none;
+    color: white;
+    background-color: black;
+  }

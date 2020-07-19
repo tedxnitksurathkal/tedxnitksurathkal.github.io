@@ -112,8 +112,16 @@ var utils = {
 canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
-W = canvas.width = 1800;
-H = canvas.height = window.innerHeight;
+var ww = window.innerWidth;
+var hh = window.innerHeight;
+if (hh < ww) {
+  W = canvas.width = ww;
+  H = canvas.height = hh;
+}
+else {
+  W = canvas.width = 1000;
+  H = canvas.height = 1000;
+}
 
 gridX = 5;
 gridY = 5;
@@ -145,6 +153,7 @@ shape.prototype.getValue = function() {
   }
   ctx.clearRect(0, 0, W, H);
 };
+
 colors = [
   "#ff0000"
 ];
@@ -247,7 +256,7 @@ gravity = parseFloat(element2);
 duration = parseFloat(element3);
 resolution = parseFloat(element4);
 speed = parseFloat(element5.value);
-radius = parseFloat(element5.value);
+radius = parseFloat(element6);
 
 var message = new shape(W / 2, H / 2 + 50, fieldvalue);
 

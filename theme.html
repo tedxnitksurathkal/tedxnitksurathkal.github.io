@@ -34,7 +34,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
-<body style="background-color:black;color:white;overscroll-behavior: none;">
+<body>
   <div class="loader">
     <div class="loader-outter"></div>
     <div class="loader-inner" style="background-image: url('assets/img/mini_theme2019.png');"></div>
@@ -42,13 +42,17 @@
 
   <section class="pt50">
     <div class="container">
-    <!-- <span>
+    <span>
       <img src="assets/img/theme/makeinindia.png" class="makeinindia" />
     </span>
 
     <span>
       <img src="assets/img/theme/chain-break.png" class="chain-break" />
-    </span> -->
+    </span>
+
+    <span>
+        <img src="assets/img/theme/india_map.png" class="india_map"/>
+    </span> 
 
     <div class="parent" id="fade">
       <center>
@@ -60,7 +64,7 @@
     </div>
     <!-- <div class="atmanirbhar" id="atmanirbhar"><img src="assets/img/theme/atmanirbhar.png" /></div> -->
         
-    <canvas id="canvas" style="display:none;"></canvas>
+   <canvas id="canvas" style="display:none;"></canvas>
 
     <input type="range" id="5" value="5" style="display:none;">
     <section class="pt200">
@@ -87,7 +91,9 @@
                                     finely honed skills to use as successful entrepreneurs, developers and designers 
                                     leading India into a new age of self-reliance.</p>
 
-                                <p>Find out more about Atmanirbhar Bharat and TEDxNITKSurathkal on <a href="/"><u>our website</u>.</a><br/>
+                                <p>Find out more about Atmanirbhar Bharat and TEDxNITKSurathkal at the TEDxNITKSurathkalSalon!<br/>
+                                <a href="/" class="home-btn">Home</a><br>
+                                <center><img src="/assets/img/tedx_salon_black.png" height="100px;"></center>
                             </div>
                         </div>
                     </div>
@@ -167,21 +173,51 @@
 
             // Spin wheel infinitely
             $('#wheel').css(
-                "animation", "rotation 5s infinite linear"
+                "animation", "rotation 3s infinite linear"
             );
 
             // Display theme
             $.getScript("assets/js/atmanirbhar.js");
-            $('#canvas').fadeIn(3000);
+            setTimeout(function() {
+                $('#canvas').fadeIn(2000);
+            }, 1000);
 
+            // For desktop
+            if(window.innerWidth >= window.innerHeight){
+
+                setTimeout(function() {
+                    $('.chain-break').fadeIn(1000);
+                    $('.chain-break').fadeOut(500);
+                }, 500);
+
+                setTimeout(function() {
+                    $('.makeinindia').fadeIn(1000);
+                    $('.makeinindia').fadeOut(500);
+                }, 1500);
+                
+                setTimeout(function() {
+                    $('.india_map').fadeIn(1000);
+                    $('.india_map').fadeOut(500);
+                }, 2500);
+
+                setTimeout(function() {
+                    $('.chain-break').fadeIn(1000);
+                    $('.makeinindia').fadeIn(1000);
+                    $('.india_map').fadeIn(1000);
+                }, 4000);
+            }
             
             setTimeout(function() {
                 $('#5').val('.1');
                 changeV();
-                // $('.chain-break').fadeIn(2000);
-                // $('.makeinindia').fadeIn(2000);
                 $('#desc').fadeIn(2000);
-            }, 5000);
+            }, 4000);
+
+        }
+
+        // Text display on phone
+        if(window.innerWidth < window.innerHeight){
+            $('#desc').css("margin-top","20%");
         }
 
         $(function () {

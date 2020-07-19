@@ -5,7 +5,7 @@ var faq_questions = [
   ],
   [
     'Who is this event for?', 
-    'This event will be open to the complete NITK Community, particularly those eager to stimulate their mind with a powerful and engaging discussion, as well as individuals who enjoy watching TEDx videos in their spare time.'
+    'This event will be open to the complete NITK Community, particularly those eager to stimulate their mind with a powerful and engaging discussion, as well as individuals who enjoy watching TEDx videos in their spare time. The event will be streamed live on Youtube as well.'
   ],
   [
     'When will the event be held?', 
@@ -25,11 +25,11 @@ var faq_questions = [
   ],
   [
     'What is the platform used for this event?', 
-    'Since this is a virtual event, we will be using Google Meet to conduct this event.'
+    'Since this is a virtual event, we will be using Google Meet to conduct this event. It will also be streamed on Youtube live.'
   ],
   [
     'What is the programme structure for this Salon?', 
-    'The structure will be as follows:<br/>- Talks conducted by the speaker(s) based on the theme.<br/>- Q&A session where the attendees are open to discuss and connect.<br/>- Discussion held by the students of NITK<br/>'
+    'The structure will be as follows:<br/>- Talks conducted by the speaker(s) based on the theme.<br/>- Q&A session where the attendees are open to discuss and connect.<br/>- Discussion between the speakers and attendees.'
   ],
   [
     'As an attendee, am I permitted to ask questions to the speaker?', 

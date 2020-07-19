@@ -244,7 +244,7 @@ element4 = 2;
 element5 = document.getElementById("5");
 element6 = 1;
 
-fieldvalue = "AATMANIRBHAR";
+fieldvalue = "ATMANIRBHAR"
 gravity = parseFloat(element2);
 duration = parseFloat(element3);
 resolution = parseFloat(element4);
@@ -254,8 +254,6 @@ radius = parseFloat(element5.value);
 var message = new shape(W / 2, H / 2 + 50, fieldvalue);
 
 message.getValue();
-
-update();
 
 function change() {
   ctx.clearRect(0, 0, W, H);

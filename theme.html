@@ -35,10 +35,20 @@
 </head>
 
 <body style="background-color:black;color:white;overscroll-behavior: none;">
-    
-    <center><span><img src="assets/img/tedx_salon_black.png" height="100px;"/></span></center>
-    <span><img src="assets/img/theme/makeinindia.png" class="makeinindia" /></span>
-    <span><img src="assets/img/theme/chain-break.png" class="chain-break" /></span>
+    <center>
+      <span>
+        <img src="assets/img/tedx_salon_black.png" height="100px;"/>
+      </span>
+    </center>
+
+    <span>
+      <img src="assets/img/theme/makeinindia.png" class="makeinindia" />
+    </span>
+
+    <span>
+      <img src="assets/img/theme/chain-break.png" class="chain-break" />
+    </span>
+
     <div class="parent" id="fade">
         <img src="assets/img/theme/spinning-wheel-half.png" class="spin" />
         <div id="turn"><img src="assets/img/theme/wheel.png" class="rotate" id="wheel" /></div>
@@ -55,16 +65,16 @@
                     <div class="col-md-12 col-12">
                         <div class="footer_box">
                             <div class="footer_box_body" style="color:white;">
-                                <p><strong>Aatmanirbhar</strong> or self-reliance is key to an individual's success. 
+                                <p><strong>Atmanirbhar</strong> or self-reliance is key to an individual's success.
                                     There is no one there for you like yourself. This concept came into being in the 
                                     form of the 'Atmanirbhar Bharat Abhiyan' or 'Self-Reliant India Mission' during 
                                     the announcement of the coronavirus pandemic related economic package on 12 May 2020. 
-                                    According to Prime Minister Narendra Modi, Aatmanirbhar Bharat's simplest meaning 
+                                    According to Prime Minister Narendra Modi, Atmanirbhar Bharat's simplest meaning
                                     is India should reduce its dependence on other nations to the lowest possible levels. 
                                     Self-reliant India is all about strong enterprises, generating employment and 
                                     empowering people to come out and find solutions.</p>
 
-                                <p>TEDxNITKSurathkal presents to you our very first salon. Our theme 'Aatmanirbhar 
+                                <p>TEDxNITKSurathkal presents to you our very first salon. Our theme 'Atmanirbhar
                                     Bharat' is committed to bringing to the spotlight individuals from a variety of 
                                     backgrounds such as top-notch journalists, budding entrepreneurs and economists, 
                                     thus bringing in a wide range of ideas and solutions. Through this salon, the students 
@@ -72,8 +82,7 @@
                                     finely honed skills to use as successful entrepreneurs, developers and designers 
                                     leading India into a new age of self-reliance.</p>
 
-                                <p>Find out more about Aatmanirbhar Bharat and its various aspects at the TEDxNITKSurathkalSalon!</p>
-                                <a href="/" class="home-btn">Home</a>
+                                <p>Find out more about Atmanirbhar Bharat and TEDxNITKSurathkal on <a href="/"><u>our website</u>.</a><br/>
                             </div>
                         </div>
                     </div>
@@ -81,7 +90,7 @@
             </div>
         </div>
     </section>
-    <div id="spinme" style="text-align:center;" class="pt100">Spin Me!</div>
+    <div id="spinme" style="text-align:center;" class="pt100">Spin the chakhra by dragging across spokes!</div>
     <!-- wrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/utils/Draggable.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
@@ -111,8 +120,8 @@
         myDraggable = Draggable.create(wheel, {
             type: "rotation",
             throwProps:true,
-            minDuration:50000,
-            maxDuration:50000,
+            minDuration: 50000,
+            maxDuration: 50000,
             throwResistance:100,
             overshootTolerance: 1,
             onDragEnd: function() {
@@ -137,28 +146,27 @@
                 top: 0
             }, 4000);
 
-            $('.makeinindia').fadeIn(1000);
-            $('.makeinindia').fadeOut(1000);
-
-            $('.chain-break').fadeIn(1000);
-            $('.chain-break').fadeOut(1000);
-
-            // Display theme
-            $.getScript("assets/js/atmanirbhar.js");
-            $('#canvas').fadeIn(3000);
-
             // Spin wheel infinitely
             $('#wheel').css(
                 "animation", "rotation 5s infinite linear"
             );
 
+            // Display theme
+            $.getScript("assets/js/atmanirbhar.js");
+
             setTimeout(function() {
+              update();
+              $('#canvas').fadeIn(2000);
+            }, 4000);
+
+            setTimeout(function() {
+
                 $('#5').val('.1');
                 changeV();
-                $('.chain-break').fadeIn(1000);
-                $('.makeinindia').fadeIn(1000);
+                $('.chain-break').fadeIn(2000);
+                $('.makeinindia').fadeIn(2000);
                 $('#desc').fadeIn(2000);
-            },4000);  
+            }, 4000);
         }
     </script>
 </body>

@@ -30,83 +30,83 @@
 
     <!--Theme for 2020-->
     <link href="assets/css/theme2020.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/utils/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="assets/js/atmanirbhar.js" defer></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
-  <div class="loader">
-    <div class="loader-outter"></div>
-    <div class="loader-inner" style="background-image: url('assets/img/mini_theme2019.png');"></div>
-  </div>
-
-  <section class="pt50">
-    <div class="container">
-    <span>
-      <img src="assets/img/theme/makeinindia.png" class="makeinindia" />
-    </span>
-
-    <span>
-      <img src="assets/img/theme/chain-break.png" class="chain-break" />
-    </span>
-
-    <span>
-        <img src="assets/img/theme/india_map.png" class="india_map"/>
-    </span> 
-
-    <div class="parent" id="fade">
-      <center>
-        <img src="assets/img/theme/spinning-wheel-half.png" class="spin" />
-      </center>
-        <div id="turn"><img src="assets/img/theme/wheel.png" class="rotate" id="wheel" /></div>
-
-        <div id="spinme" style="text-align:center">Spin the chakhra by dragging across spokes!</div>
+    <div class="loader">
+        <div class="loader-outter"></div>
+        <div class="loader-inner" style="background-image: url('assets/img/mini_theme2019.png');"></div>
     </div>
-    <!-- <div class="atmanirbhar" id="atmanirbhar"><img src="assets/img/theme/atmanirbhar.png" /></div> -->
-        
-   <canvas id="canvas" style="display:none;"></canvas>
 
-    <input type="range" id="5" value="5" style="display:none;">
-    <section class="pt200">
-        <div id="desc" style="line-height: 1.2;text-align:center;padding: 20px 30px 50px 30px;display:none;">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-12 col-12">
-                        <div class="footer_box">
-                            <div class="footer_box_body" style="color:white;">
-                                <p><strong>Atmanirbhar</strong> or self-reliance is key to an individual's success.
-                                    There is no one there for you like yourself. This concept came into being in the 
-                                    form of the 'Atmanirbhar Bharat Abhiyan' or 'Self-Reliant India Mission' during 
-                                    the announcement of the coronavirus pandemic related economic package on 12 May 2020. 
-                                    According to Prime Minister Narendra Modi, Atmanirbhar Bharat's simplest meaning
-                                    is India should reduce its dependence on other nations to the lowest possible levels. 
-                                    Self-reliant India is all about strong enterprises, generating employment and 
-                                    empowering people to come out and find solutions.</p>
+    <section class="pt50">
+    <div class="container">
+        <span>
+            <img src="assets/img/theme/makeinindia.png" class="makeinindia" />
+        </span>
 
-                                <p>TEDxNITKSurathkal presents to you our very first salon. Our theme 'Atmanirbhar
-                                    Bharat' is committed to bringing to the spotlight individuals from a variety of 
-                                    backgrounds such as top-notch journalists, budding entrepreneurs and economists, 
-                                    thus bringing in a wide range of ideas and solutions. Through this salon, the students 
-                                    of NITK armed with the values of self-reliance explore how they can put their 
-                                    finely honed skills to use as successful entrepreneurs, developers and designers 
-                                    leading India into a new age of self-reliance.</p>
+        <span>
+            <img src="assets/img/theme/chain-break.png" class="chain-break" />
+        </span>
 
-                                <p>Find out more about Atmanirbhar Bharat and TEDxNITKSurathkal at the TEDxNITKSurathkalSalon!<br/>
-                                <a href="/" class="home-btn">Home</a><br>
-                                <center><img src="/assets/img/tedx_salon_black.png" height="100px;"></center>
+        <span>
+            <img src="assets/img/theme/india_map.png" class="india_map"/>
+        </span> 
+
+        <div class="parent" id="fade">
+            <center>
+                <img src="assets/img/theme/spinning-wheel-half.png" class="spin" />
+            </center>
+            <div id="turn"><img src="assets/img/theme/wheel.png" class="rotate" id="wheel" /></div>
+            <div id="spinme" style="text-align:center">Spin the charkha by dragging across spokes!</div>
+        </div>
+            
+    <div id="display" style="display:none;"><canvas id="canvas" style="display:block;"></canvas></div>
+
+        <input type="range" id="5" value="5" style="display:none;">
+        <section>
+            <div id="desc" style="line-height: 1.2;text-align:center;padding: 20px 30px 50px 30px;display:none;">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-12">
+                            <div class="footer_box">
+                                <div class="footer_box_body" style="color:white;">
+                                    <p><strong>Atmanirbhar</strong> or self-reliance is key to an individual's success.
+                                        There is no one there for you like yourself. This concept came into being in the 
+                                        form of the 'Atmanirbhar Bharat Abhiyan' or 'Self-Reliant India Mission' during 
+                                        the announcement of the coronavirus pandemic related economic package on 12 May 2020. 
+                                        According to Prime Minister Narendra Modi, Atmanirbhar Bharat's simplest meaning
+                                        is India should reduce its dependence on other nations to the lowest possible levels. 
+                                        Self-reliant India is all about strong enterprises, generating employment and 
+                                        empowering people to come out and find solutions.</p>
+
+                                    <p>TEDxNITKSurathkal presents to you our very first salon. Our theme 'Atmanirbhar
+                                        Bharat' is committed to bringing to the spotlight individuals from a variety of 
+                                        backgrounds such as top-notch journalists, budding entrepreneurs and economists, 
+                                        thus bringing in a wide range of ideas and solutions. Through this salon, the students 
+                                        of NITK armed with the values of self-reliance explore how they can put their 
+                                        finely honed skills to use as successful entrepreneurs, developers and designers 
+                                        leading India into a new age of self-reliance.</p>
+
+                                    <p>Find out more about Atmanirbhar Bharat and TEDxNITKSurathkal at the TEDxNITKSurathkalSalon!<br/>
+                                    <a href="/" class="home-btn">Home</a><br>
+                                    <center><img src="/assets/img/tedx_salon_black.png" height="100px;"></center>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
     </div>
-  </section>
-    <!-- wrap -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/utils/Draggable.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    </section>
     
+    <!-- wrap -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
     <script>
         function align_wheel_on_frame() {
@@ -163,6 +163,11 @@
 
         init();
 
+        // Display theme description
+        var wheelh = document.getElementById("fade").offsetHeight;
+        var textoffset = (window.innerHeight/2) - wheelh + 25; // Manually moved canvas down by 50.
+        $('#desc').css("margin-top",textoffset*2);
+
         // Execute after DRAG
         function turn() {
             $('#spinme').fadeOut();
@@ -177,9 +182,8 @@
             );
 
             // Display theme
-            $.getScript("assets/js/atmanirbhar.js");
             setTimeout(function() {
-                $('#canvas').fadeIn(2000);
+                $('#display').fadeIn(2000);
             }, 1000);
 
             // For desktop
@@ -213,11 +217,6 @@
                 $('#desc').fadeIn(2000);
             }, 4000);
 
-        }
-
-        // Text display on phone
-        if(window.innerWidth < window.innerHeight){
-            $('#desc').css("margin-top","20%");
         }
 
         $(function () {

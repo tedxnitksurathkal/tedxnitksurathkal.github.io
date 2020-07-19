@@ -111,8 +111,9 @@ var utils = {
 
 canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-W = canvas.width = window.innerWidth + 5;
-H = canvas.height = window.innerHeight + 5;
+
+W = canvas.width = 1800;
+H = canvas.height = window.innerHeight;
 
 gridX = 5;
 gridY = 5;
@@ -145,9 +146,6 @@ shape.prototype.getValue = function() {
   ctx.clearRect(0, 0, W, H);
 };
 colors = [
-  "#ff0000",
-  "#ffffff",
-  "#ff0000",
   "#ff0000"
 ];
 
@@ -242,7 +240,7 @@ element2 = 0;
 element3 = .4;
 element4 = 2;
 element5 = document.getElementById("5");
-element6 = 1;
+element6 = 2;
 
 fieldvalue = "ATMANIRBHAR"
 gravity = parseFloat(element2);
@@ -254,6 +252,8 @@ radius = parseFloat(element5.value);
 var message = new shape(W / 2, H / 2 + 50, fieldvalue);
 
 message.getValue();
+
+update();
 
 function change() {
   ctx.clearRect(0, 0, W, H);

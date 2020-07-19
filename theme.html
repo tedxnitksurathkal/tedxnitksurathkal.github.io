@@ -42,16 +42,15 @@
 
   <section class="pt50">
     <div class="container">
-    <span>
+    <!-- <span>
       <img src="assets/img/theme/makeinindia.png" class="makeinindia" />
     </span>
 
     <span>
       <img src="assets/img/theme/chain-break.png" class="chain-break" />
-    </span>
+    </span> -->
 
     <div class="parent" id="fade">
-
       <center>
         <img src="assets/img/theme/spinning-wheel-half.png" class="spin" />
       </center>
@@ -64,7 +63,7 @@
     <canvas id="canvas" style="display:none;"></canvas>
 
     <input type="range" id="5" value="5" style="display:none;">
-    <section class="pt100">
+    <section class="pt200">
         <div id="desc" style="line-height: 1.2;text-align:center;padding: 20px 30px 50px 30px;display:none;">
             <div class="container">
                 <div class="row justify-content-center">
@@ -173,20 +172,16 @@
 
             // Display theme
             $.getScript("assets/js/atmanirbhar.js");
+            $('#canvas').fadeIn(3000);
 
+            
             setTimeout(function() {
-              update();
-              $('#canvas').fadeIn(2000);
-            }, 4000);
-
-            setTimeout(function() {
-
                 $('#5').val('.1');
                 changeV();
-                $('.chain-break').fadeIn(2000);
-                $('.makeinindia').fadeIn(2000);
+                // $('.chain-break').fadeIn(2000);
+                // $('.makeinindia').fadeIn(2000);
                 $('#desc').fadeIn(2000);
-            }, 4000);
+            }, 5000);
         }
 
         $(function () {

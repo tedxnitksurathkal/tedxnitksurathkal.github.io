@@ -109,6 +109,7 @@
     <!-- wrap -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
     <script>
+
         function align_wheel_on_frame() {
           var div_width = $(".parent").width();
           var img_width = $(".spin").width();
@@ -163,11 +164,6 @@
 
         init();
 
-        // Display theme description
-        var wheelh = document.getElementById("fade").offsetHeight;
-        var textoffset = (window.innerHeight/2) - wheelh + 25; // Manually moved canvas down by 50.
-        $('#desc').css("margin-top",textoffset*2);
-
         // Execute after DRAG
         function turn() {
             $('#spinme').fadeOut();
@@ -175,6 +171,11 @@
             $('#fade').animate({
                 top: 0
             }, 4000);
+
+            // Display theme description
+            var wheelh = document.getElementById("fade").offsetHeight;
+            var textoffset = (window.innerHeight/2) - wheelh + 25; // Manually moved canvas down by 50.
+            $('#desc').css("margin-top",textoffset*2);
 
             // Spin wheel infinitely
             $('#wheel').css(

@@ -140,7 +140,7 @@ shape.prototype.getValue = function() {
   // Draw the shape :^)
   ctx.textAlign = "center";
   ctx.font = "bold " + this.size + "px arial";
-  ctx.fillText(this.text, this.x, this.y + 75);
+  ctx.fillText(this.text, this.x, this.y + 90);
   var idata = ctx.getImageData(0, 0, W, H);
   var buffer32 = new Uint32Array(idata.data.buffer);
   // Check for black pixels

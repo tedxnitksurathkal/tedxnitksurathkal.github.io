@@ -9,11 +9,11 @@ var faq_questions = [
   ],
   [
     'What is the theme for TEDxNITKSurathkalSalon?',
-    'The theme for this event will be Atma Nirbhar Bharat which symbolizes a Self-Reliant India.'
+    'The theme for this event will be Atmanirbhar Bharat which symbolizes a Self-Reliant India.'
   ],
   [
     'Where can I obtain more information with regard to the theme?',
-    'Click on the link below for more information on the theme <a href="/theme" style="display:inline; font-size:14px;">Atma-Nirbhar</a>'
+    'Click on the link below for more information on the theme <a href="/theme" style="display:inline; font-size:14px;">Atmanirbhar</a>'
   ],
   [
     'When will the event be held?',

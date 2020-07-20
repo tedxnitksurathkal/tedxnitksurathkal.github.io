@@ -220,8 +220,8 @@
 
         }
 
-        $(function () {
-          align_wheel_on_frame();
+        $("#wheel").on('load', function() {
+            align_wheel_on_frame();
         });
 
         $(window).resize( function() {

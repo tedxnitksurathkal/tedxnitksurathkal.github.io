@@ -37,7 +37,7 @@ var faq_questions = [
   ],
   [
     'What is the programme structure for this Salon?',
-    'The structure will be as follows:<br/>- Talks conducted by the speaker(s) based on the theme.<br/>- Q&A session where the attendees are open to discuss and connect.<br/>- Discussion between the speakers and attendees.'
+    'The structure will be as follows:<br/>- Talks conducted by the speaker(s) based on the theme.<br/>- Q&A session where the attendees are open to discuss and connect.<br/>- An in-house discussion between members of NITK community in view of live talks witnessed.'
   ],
   [
     'As an attendee, am I permitted to ask questions to the speaker?',

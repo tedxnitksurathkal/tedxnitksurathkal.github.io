@@ -8,6 +8,14 @@ var faq_questions = [
     'This event will be open to the complete NITK Community, particularly those eager to stimulate their mind with a powerful and engaging discussion, as well as individuals who enjoy watching TEDx videos in their spare time. The event will be streamed live on Youtube as well.'
   ],
   [
+    'What is the theme for TEDxNITKSurathkalSalon?', 
+    'The theme for this event will be Atma Nirbhar Bharat which symbolizes a Self-Reliant India.'
+  ],
+  [
+    'Where can I obtain more information with regard to the theme?', 
+    'Click on the link below for more information on the theme <a href="/theme">Atma-Nirbhar</a>'
+  ],
+  [
     'When will the event be held?', 
     'The TEDxNITKSurathkalSalon will be held on August 1st at 5:00 pm IST.'
   ],

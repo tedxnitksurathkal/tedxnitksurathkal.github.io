@@ -30,9 +30,8 @@
 
     <!--Theme for 2020-->
     <link href="assets/css/theme2020.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/utils/Draggable.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-    <script src="assets/js/atmanirbhar.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/utils/Draggable.min.js" rel="preload" as="script">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" rel="preload" as="script">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
@@ -65,7 +64,7 @@
             <div id="spinme" style="text-align:center">Spin the charkha by dragging across spokes!</div>
         </div>
             
-    <div id="display" style="display:none;"><canvas id="canvas" style="display:block;"></canvas></div>
+    <canvas id="canvas" style="display:none;"></canvas>
 
         <input type="range" id="5" value="5" style="display:none;">
         <section>
@@ -105,6 +104,11 @@
 
     </div>
     </section>
+    
+    <!-- THEME -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/utils/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="assets/js/atmanirbhar.js" defer></script>
     
     <!-- wrap -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
@@ -174,7 +178,7 @@
 
             // Display theme description
             var wheelh = document.getElementById("fade").offsetHeight;
-            var textoffset = parseInt(Math.abs((window.innerHeight/2) - wheelh)) + 37; // Manually moved canvas down by 50.
+            var textoffset = parseInt(Math.abs((window.innerHeight/2) + 45 - wheelh)); // Manually moved canvas down by 50.
             $('#desc').css("margin-top",textoffset*2);
 
             // Spin wheel infinitely
@@ -184,7 +188,7 @@
 
             // Display theme
             setTimeout(function() {
-                $('#display').fadeIn(2000);
+                $('#canvas').fadeIn(2000);
             }, 1000);
 
             // For desktop

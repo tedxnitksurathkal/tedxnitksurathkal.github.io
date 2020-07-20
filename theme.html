@@ -76,7 +76,7 @@
                             <div class="footer_box">
                                 <div class="footer_box_body" style="color:white;">
                                     <p><strong>Atmanirbhar</strong> or self-reliance is key to an individual's success.
-                                        There is no one there for you like yourself. This concept came into being in the 
+                                        There is no one there for you like yourself. It came to the forefront in the 
                                         form of the 'Atmanirbhar Bharat Abhiyan' or 'Self-Reliant India Mission' during 
                                         the announcement of the coronavirus pandemic related economic package on 12 May 2020. 
                                         According to Prime Minister Narendra Modi, Atmanirbhar Bharat's simplest meaning
@@ -174,7 +174,7 @@
 
             // Display theme description
             var wheelh = document.getElementById("fade").offsetHeight;
-            var textoffset = (window.innerHeight/2) - wheelh + 25; // Manually moved canvas down by 50.
+            var textoffset = parseInt(Math.abs((window.innerHeight/2) - wheelh)) + 37; // Manually moved canvas down by 50.
             $('#desc').css("margin-top",textoffset*2);
 
             // Spin wheel infinitely
@@ -219,6 +219,8 @@
             }, 4000);
 
         }
+
+        align_wheel_on_frame();
 
         $("#wheel").on('load', function() {
             align_wheel_on_frame();

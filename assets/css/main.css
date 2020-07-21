@@ -3145,45 +3145,6 @@ textarea.form-control {
   resize: vertical;
 }
 
-/*  ----------------------------------------------------
-12 progressbar
--------------------------------------------------------- */
-.single_progressbar {
-  position: relative;
-  margin-top: 30px;
-}
-.single_progressbar .progress_text {
-  margin-bottom: 5px;
-  color: #333333;
-  font-weight: 500;
-  font-size: 15px;
-  text-transform: capitalize;
-}
-.single_progressbar .progress_text span.progress_bar {
-  color: #333333;
-}
-.single_progressbar .progress_text .progress_num {
-  position: absolute;
-  left: 90%;
-}
-.single_progressbar .progress {
-  margin-bottom: 5px;
-  overflow: hidden;
-  background: #f50136;
-  /* The Fallback */
-  background: rgba(245, 1, 54, 0.2);
-  border-radius: 1px;
-  -webkit-box-shadow: 0 0 0;
-          box-shadow: 0 0 0;
-}
-.single_progressbar .progress .progress-bar {
-  height: 4px;
-  font-size: 16px;
-  line-height: 16px;
-  text-align: center;
-  background-color: #f50136;
-}
-
 .accordion_card {
   border: solid 1px #f50136;
   border-radius: 0;

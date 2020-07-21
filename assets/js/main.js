@@ -47,17 +47,6 @@ $(document).ready(function() {
         animateIn: 'fadeIn',
         dotsContainer: '.cover_dots'
     });
-    /* ------------------------------------- */
-    /* Animated progress bars
-     /* ------------------------------------- */
-
-    var waypoints = $('.progress_container').waypoint(function() {
-        $('.progress .progress-bar').progressbar({
-            transition_delay: 1000
-        });
-    },{
-        offset: '50%'
-    });
 
 
         /* --------------------------------------------------------

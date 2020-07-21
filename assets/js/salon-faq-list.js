@@ -21,7 +21,7 @@ var faq_questions = [
   ],
   [
     'How do I register for this event?',
-    'The link for registering as an attendee to this salon will be shared soon!'
+    'To be a part of the discussion panel, fill the form <a href="https://forms.gle/ZRqKmGMFCgRNusY78" target="_blank"><u>https://forms.gle/ZRqKmGMFCgRNusY78</u></a>'
   ],
   [
     'Can I register for anyone else?',

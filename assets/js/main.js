@@ -2,7 +2,6 @@
 /*  TABLE OF CONTENTS
  /* ------------------------------------- */
 /*   PRE LOADING                          */
-/*   WOW                                 */
 /*   sliders                      */
 /*    MAPS                               */
 /*   COUNTER JS              */
@@ -21,17 +20,6 @@ $(window).load(function() {
 $(document).ready(function() {
 
     'use strict';
-    /* ==============================================
-     /*   wow
-      =============================================== */
-    var wow = new WOW(
-        {
-            animateClass: 'animated',
-            offset: 10,
-            mobile: true
-        }
-    );
-    wow.init();
     /* ==============================================
         STICKY HEADER
         =============================================== */

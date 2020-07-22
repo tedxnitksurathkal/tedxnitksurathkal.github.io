@@ -42,7 +42,6 @@
       rel="stylesheet"
     />
     <!-- Fonts Icon CSS -->
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
       rel="stylesheet"
@@ -74,7 +73,7 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="lnr lnr-text-align-right"></span>
+          <i class="ion-navicon"></i>
         </button>
         <div
           class="collapse navbar-collapse flex-sm-row-reverse"
@@ -185,6 +184,7 @@
               action. It is a chance for you to candidly introduce and discuss
               your thoughts, paving way for a fresh perspective. So, are you
               ready for a quality discussion?
+              <i class="ion-plus-circled"></i>
             </p>
           </div>
         </div>
@@ -311,7 +311,7 @@
                 document.write(new Date().getFullYear());
               </script>
               All rights reserved | Made with
-              <i class="fa fa-heart-o" aria-hidden="true"></i> by
+              <i class="ion-heart" aria-hidden="true"></i> by
               TEDxNITKSurathkal &amp;
               <a href="https://colorlib.com" target="_blank">Colorlib</a>
             </p>
@@ -367,13 +367,16 @@
     <script>
       // Generate FAQ accordion
       $(function () {
-        for (var i = 0; i < faq_questions.length; i++) {
+        "use strict"
+
+        var n_questions = faq_questions.length, html;
+        for (var i = 0; i < n_questions; i++) {
           html =
-            "<li><a data-toggle='collapse' class='collapsed' href='#faq" +
+            "<li><a data-toggle='collapse' class='collapse' data-target='#faq" +
             i +
             "'>" +
             faq_questions[i][0] +
-            "<i class='fa fa-minus-circle'></i></a><div id='faq" +
+            "<i class='ion-plus-circled'></i></a><div id='faq" +
             i +
             "' class='collapse' data-parent='#faq-list'><p>" +
             faq_questions[i][1] +
@@ -381,6 +384,23 @@
 
           $("#faq-list").append(html);
         }
+      });
+
+      $(document).ready( function() {
+        $("a.collapse").on('click', function () {
+          var icon = this.children[0], class_name;
+
+          if (icon.classList.contains("ion-plus-circled"))
+          {
+            icon.classList.remove("ion-plus-circled");
+            icon.classList.add("ion-minus-circled");
+          }
+          else
+          {
+            icon.classList.remove("ion-minus-circled");
+            icon.classList.add("ion-plus-circled");
+          }
+        });
       });
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->

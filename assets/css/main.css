@@ -3186,3 +3186,12 @@ textarea.form-control {
   color: #838383;
   background-color: #ffffff;
 }
+
+.parallax {
+  height: 100%;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

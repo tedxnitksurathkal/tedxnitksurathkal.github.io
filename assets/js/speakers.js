@@ -1,6 +1,6 @@
 var speakers=[
     {
-        name: "Udit Mishra",
+        name: "Udit Misra",
         title: "Deputy Associate Editor, Indian Express",
         description: [
           "Mr. Udit Misra is a Senior journalist, his experiences in top news firms across the country speak volumes about his intellect and proficiency. He has worked at India Today, CNN-IBN, Forbes India, HT MINT, Business Standard and is currently the Deputy Associate Editor for The Indian Express. His interest in economics and journalism from a young age has taken its course and helped shape his ideology that articulated writings revolving around Indian economic reforms, consequences of certain acts on the economy and more.",

@@ -1,14 +1,4 @@
-/* ------------------------------------- */
-/*  TABLE OF CONTENTS
- /* ------------------------------------- */
-/*   PRE LOADING                          */
-/*   sliders                      */
-
-
-
-    /* ==============================================
-/*  PRE LOADING
-  =============================================== */
+// Loader
 'use strict';
 $(window).on('load', function() {
     $('.loader').delay(100).fadeOut('slow');
@@ -16,17 +6,28 @@ $(window).on('load', function() {
 
 
 $(document).ready(function() {
-
     'use strict';
-    /* ==============================================
-        STICKY HEADER
-        =============================================== */
 
-    $(window).on('scroll', function () {
-        if ($(window).scrollTop() < 100) {
-            $('.header').removeClass('sticky_header');
-        } else {
-            $('.header').addClass('sticky_header');
+    // Sticky header
+    let header = document.querySelector('.header');
+    
+    window.addEventListener('scroll', function () {
+      if (window.scrollY < 100)
+        header.classList.remove('sticky_header');
+      else
+        header.classList.add('sticky_header');
+    });
+
+    // Lazy load images
+    $('.lazy').lazy({
+        scrollDirection: 'vertical',
+        effect: 'fadeIn',
+        visibleOnly: true,
+        afterLoad: function(element) {
+          element.css('background-image', 'none');
+        },
+        onError: function(element) {
+          console.log('Error loading ' + element.data('src'));
         }
     });
 });

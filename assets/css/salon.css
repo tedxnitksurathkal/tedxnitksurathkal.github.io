@@ -80,7 +80,3 @@
 #faq #faq-list a.collapsed:hover {
   color: #000;
 }
-
-#faq #faq-list a.collapsed i::before {
-  content: "\f055" !important;
-}

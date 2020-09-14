@@ -87,22 +87,16 @@
               <a class="nav-link" href="/about"><strong>About</strong></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="/salon"
-                ><strong>Salon</strong></a
-              >
+              <a class="nav-link active" href="/salon"><strong>Salon</strong></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/theme"><strong>Theme</strong></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/past-editions"
-                ><strong>Past Editions</strong></a
-              >
+              <a class="nav-link" href="/past-editions"><strong>Past Editions</strong></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/talk-archives"
-                ><strong>Talk Archives</strong></a
-              >
+              <a class="nav-link" href="/talk-archives"><strong>Talk Archives</strong></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/team"><strong>Team</strong></a>
@@ -315,33 +309,10 @@
               <a href="https://colorlib.com" target="_blank">Colorlib</a>
             </p>
           </div>
-          <div class="col-12 col-md-6">
-            <ul class="footer_menu">
-              <li>
-                <a href="/">Home</a>
-              </li>
-              <li>
-                <a href="/about">About</a>
-              </li>
-              <li>
-                <a href="/salon">Salon</a>
-              </li>
-              <li>
-                <a href="/past-editions">Past Editions</a>
-              </li>
-              <li>
-                <a href="/talk-archives">Talk Archives</a>
-              </li>
-              <li>
-                <a href="/team">Team</a>
-              </li>
-              <li>
-                <a href="/partners">Partners</a>
-              </li>
-              <li>
-                <a href="/contact">Contact</a>
-              </li>
-            </ul>
+          <div class="col-12 col-md-6 ">
+            <p style="text-align: right;">
+                <a href="#" onclick="backtotop()">Back to Top <i class="ion-arrow-up-c" aria-hidden="true"></i></a>
+            </p>
           </div>
         </div>
       </div>
@@ -412,6 +383,14 @@
       gtag("js", new Date());
 
       gtag("config", "UA-110715968-3");
+
+      function backtotop() {
+          event.preventDefault();
+          $('html, body').animate({
+              scrollTop: 0
+          }, "slow");
+          return false;
+      }
     </script>
   </body>
 </html>

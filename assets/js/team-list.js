@@ -7,18 +7,18 @@ var team = [
         "instagram": ""
     },
     {
-        "name": "Iteesha V A",
-        "position": "Team Lead",
-        "image": "Iteesha.jpg",
-        "facebook": "https://m.facebook.com/iteesha.ashwath",
-        "instagram": "Iteesha27"
-    },
-    {
         "name": "Dr. KV Gangadharan",
         "position": "Mentor",
         "image": "KVG.jpg",
         "facebook": "",
         "instagram": "tedxnitksurathkal"
+    },
+    {
+        "name": "Iteesha V A",
+        "position": "Team Lead",
+        "image": "Iteesha.jpg",
+        "facebook": "https://m.facebook.com/iteesha.ashwath",
+        "instagram": "Iteesha27"
     },
     {
         "name": "Bharath Adikar",

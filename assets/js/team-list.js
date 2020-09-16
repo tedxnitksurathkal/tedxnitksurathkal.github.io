@@ -21,30 +21,16 @@ var team = [
         "instagram": "Iteesha27"
     },
     {
-        "name": "Bharath Adikar",
-        "position": "Core Team",
-        "image": "Bharath.jpg",
-        "facebook": "",
-        "instagram": "bharath_adikar"
-    },
-    {
-        "name": "Avinash Herle",
-        "position": "Head of Operations",
-        "image": "Avinash.jpg",
-        "facebook": "",
-        "instagram": ""
-    },
-    {
-        "name": "Himanshu G Sarda",
-        "position": "Head of Operations",
-        "image": "Himanshu.jpg",
-        "facebook": "",
-        "instagram": ""
-    },
-    {
         "name": "Sanjo Sabu",
         "position": "Head of Marketing",
         "image": "Sanjo.jpg",
+        "facebook": "",
+        "instagram": ""
+    },
+    {
+        "name": "Sharon Tony",
+        "position": "Head of Production",
+        "image": "Sharon.jpg",
         "facebook": "",
         "instagram": ""
     },
@@ -56,9 +42,37 @@ var team = [
         "instagram": ""
     },
     {
-        "name": "Sharon Tony",
-        "position": "Head of Production",
-        "image": "Sharon.jpg",
+        "name": "Avinash Herle",
+        "position": "Head of Operations",
+        "image": "Avinash.jpg",
+        "facebook": "",
+        "instagram": ""
+    },
+    {
+        "name": "Amaan Siyad",
+        "position": "Head of Creative",
+        "image": "Amaan.jpg",
+        "facebook": "",
+        "instagram": ""
+    },
+    {
+        "name": "Vinay Radhakrishnan",
+        "position": "Head of Curation",
+        "image": "Vinay.jpg",
+        "facebook": "",
+        "instagram": ""
+    },
+    {
+        "name": "Himanshu G Sarda",
+        "position": "Head of Operations",
+        "image": "Himanshu.jpg",
+        "facebook": "",
+        "instagram": ""
+    },
+    {
+        "name": "Apoorva M K",
+        "position": "Co-Curator",
+        "image": "Apoorva.jpg",
         "facebook": "",
         "instagram": ""
     },
@@ -77,18 +91,11 @@ var team = [
         "instagram": ""
     },
     {
-        "name": "Apoorva M K",
-        "position": "Co-Curator",
-        "image": "Apoorva.jpg",
+        "name": "Bharath Adikar",
+        "position": "Technical Co-ordinator",
+        "image": "Bharath.jpg",
         "facebook": "",
-        "instagram": ""
-    },
-    {
-        "name": "Amaan Siyad",
-        "position": "Head of Creative",
-        "image": "Amaan.jpg",
-        "facebook": "",
-        "instagram": ""
+        "instagram": "bharath_adikar"
     },
     {
         "name": "Abhishek Kumar",

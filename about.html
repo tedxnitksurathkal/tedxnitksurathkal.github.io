@@ -256,32 +256,9 @@
                 </p>
             </div>
             <div class="col-12 col-md-6 ">
-                <ul class="footer_menu">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/about">About</a>
-                    </li>
-                    <li>
-                        <a href="/salon">Salon</a>
-                    </li>
-                    <li>
-                        <a href="/past-editions">Past Editions</a>
-                    </li>
-                    <li>
-                        <a href="/talk-archives">Talk Archives</a>
-                    </li>
-                    <li>
-                        <a href="/team">Team</a>
-                    </li>
-                    <li>
-                        <a href="/partners">Partners</a>
-                    </li>
-                    <li>
-                        <a href="/contact">Contact</a>
-                    </li>
-                </ul>
+                <p style="text-align: right;">
+                    <a href="#" onclick="backtotop()">Back to Top <i class="ion-arrow-up-c" aria-hidden="true"></i></a>
+                </p>
             </div>
         </div>
     </div>
@@ -306,6 +283,14 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-110715968-3');
+
+    function backtotop() {
+      event.preventDefault();
+      $('html, body').animate({
+          scrollTop: 0
+      }, "slow");
+      return false;
+    }
 </script>
 </body>
 </html>

@@ -33,7 +33,7 @@
 
 </head>
 
-<body>
+<body style="background-color: black;">
     <div class="container" id="page">
         <div id="Message-Container">
             <div id="message">
@@ -43,18 +43,9 @@
                 <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Cool!" />
             </div>
         </div>
-        <div id="menu">
-            <select class="custom-select" id="diffSelect">
-                <option value="10">Easy</option>
-                <option value="15">Medium</option>
-                <option value="25">Hard</option>
-                <option value="38">Extreme</option>
-            </select>
-            <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start" />
-        </div>
         <div id="view">
             <div id="mazeContainer">
-                <canvas id="mazeCanvas" height="750" width="750"></canvas>
+                <canvas id="mazeCanvas" height="750" width="750" style="background-color: red;"></canvas>
             </div>
         </div>
     </div>
@@ -66,5 +57,14 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-110715968-3');
+
+      makeMaze();
+    </script>
 </body>
 </html>

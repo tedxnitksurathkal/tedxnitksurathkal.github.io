@@ -537,7 +537,7 @@ window.onload = function () {
     };
 
     finishSprite = new Image();
-    finishSprite.src = "https://image.ibb.co/b9wqnJ/i_Q7m_U25_Imgur.png" +
+    finishSprite.src = "assets/img/maze/olympic-torch.png" +
         "?" +
         new Date().getTime();
     finishSprite.setAttribute("crossOrigin", " ");
@@ -573,8 +573,7 @@ function makeMaze() {
         player.unbindKeyDown();
         player = null;
     }
-    var e = document.getElementById("diffSelect");
-    difficulty = e.options[e.selectedIndex].value;
+    difficulty = 8;
     cellSize = mazeCanvas.width / difficulty;
     maze = new Maze(difficulty, difficulty);
     draw = new DrawMaze(maze, ctx, cellSize, finishSprite);

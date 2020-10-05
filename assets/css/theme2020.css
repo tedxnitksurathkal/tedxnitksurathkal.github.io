@@ -14,6 +14,7 @@ body {
 canvas {
     width: auto;
     height: auto;
+    touch-action: none;
 }
 
 #mazeContainer {

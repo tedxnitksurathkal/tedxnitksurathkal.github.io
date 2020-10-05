@@ -34,9 +34,36 @@
 </head>
 
 <body>
-    <div><h1>HELLO THERE</h1></div>
+    <div class="container" id="page">
+        <div id="Message-Container">
+            <div id="message">
+                <h1>Congratulations!</h1>
+                <p>You are done.</p>
+                <p id="moves"></p>
+                <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Cool!" />
+            </div>
+        </div>
+        <div id="menu">
+            <select class="custom-select" id="diffSelect">
+                <option value="10">Easy</option>
+                <option value="15">Medium</option>
+                <option value="25">Hard</option>
+                <option value="38">Extreme</option>
+            </select>
+            <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start" />
+        </div>
+        <div id="view">
+            <div id="mazeContainer">
+                <canvas id="mazeCanvas" height="750" width="750"></canvas>
+            </div>
+        </div>
+    </div>
+    <!-- Theme Script -->
+    <script src="assets/js/maze-2d.js"></script>
     <!-- SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
     <script src="assets/js/main.js"></script>
 </body>

@@ -29,8 +29,9 @@
     <link href="assets/css/main.css" rel="stylesheet">
 
     <!--Theme for 2020-->
-    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v5.1.0/dist/aframe-extras.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
     <script src="assets/js/theme/mazify.js"></script>
     <script src="assets/js/theme/player.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
@@ -44,7 +45,7 @@
     </div> -->
 
     <!-- AFRAME -->
-    <a-scene fog="type: linear; color: #111; far: 16; near: 7">
+    <a-scene fog="type: linear; color: #111; far: 16; near: 7" physics="debug: true">
         <!-- Assets -->
         <a-assets>
             <img id="pavement" src="assets/img/maze/pavement.jpg" />
@@ -60,7 +61,8 @@
         </a-plane>
 
         <!-- Player -->
-        <a-entity id="player" camera="user-height: 1.7" universal-controls kinematic-body listener player>
+        <a-entity id="rig" movement-controls>
+            <a-entity id="player" camera position="0 1.7 0" look-controls="hmdEnabled: false" listener player></a-entity>
         </a-entity>
 
         <!-- Maze -->

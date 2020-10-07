@@ -6,6 +6,36 @@ body {
 div {
     display: inline-block;
 }
+p {
+    font-weight: 500;
+}
+h2 {
+    margin: 10px;
+}
+.modal-header {
+    background-color: red;
+}
+.modal-body {
+    padding: 15px 30px;
+}
+.modal-body p {
+    color: black;
+}
+.close {
+    color: black;
+    opacity: 1;
+    text-shadow: none;
+}
+.close:hover {
+    color: white;
+    opacity: 1;
+}
+.start {
+    background-color: red !important;
+    color: black !important;
+    font-size: 20px !important;
+    font-weight: bold;
+}
 .a-loader-title {
     color: black;
   }
@@ -146,7 +176,7 @@ div {
         width: 0px;
    }
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1200px) {
     .bigger {
         font-size: 60px;
    }
@@ -157,4 +187,7 @@ div {
     .home-btn {
         font-size: 18px;
    }
+   .modal-content {
+    width: 40%;
+}
 }

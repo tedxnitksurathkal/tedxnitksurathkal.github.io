@@ -48,7 +48,7 @@
 
     <!-- AFRAME -->
     <a-scene id="maze-full" fog="type: exponential; color: #AAA; density: 0.20;">
-    <!-- Assets -->
+        <!-- Assets -->
         <a-assets>
             <img id="pavement" src="assets/img/maze/pavement.jpg" />
             <img id="brick-02" src="assets/img/maze/brick-02.jpg" />
@@ -59,32 +59,32 @@
         <!-- Environment -->
         <a-sky height="2048" color="#87ceeb" width="2048"></a-sky>
         <a-light type="ambient" color="#fff" intensity="0.8"></a-light>
-        <a-plane material="src: #pavement; repeat: 50 50; # color: #2C2A2A;" static-body rotation="-90 0 0" height="100" width="100">
+        <a-plane material="src: #pavement; repeat: 50 50; # color: #2C2A2A;" static-body rotation="-90 0 0" height="100"
+            width="100">
         </a-plane>
 
         <!-- Player -->
-        <a-entity id="player" kinematic-body camera position="0 1.7 0" universal-controls look-controls="reverseTouchDrag: true" listener player></a-entity>
+        <a-entity id="player" kinematic-body camera position="0 1.7 0" universal-controls
+            look-controls="reverseTouchDrag: true" listener player></a-entity>
 
         <!-- Maze -->
         <a-entity mazify> </a-entity>
     </a-scene>
 
     <!-- The Modal -->
-    <div id="finishDialog" class="modal mazify" style="display: none;">
+    <div id="startDialog" class="modal mazify" style="display: none;">
         <!-- Modal content -->
         <div class="modal-content">
             <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2>Finished</h2>
+                <span class="close" onclick="cont()">&times;</span>
+                <h2>INSTRUCTIONS</h2>
             </div>
-            <div class="modal-body">
-                <p>Congratulation</p>
-                <p>You have found the finish point</p>
+            <div id="instructions" class="modal-body">
+                <p>1. Try to find your way through the maze to the finish.</p>
             </div>
             <div class="modal-footer">
                 <h3></h3>
-                <button class="button" onclick="reset()">Play Again</button>
-                <button class="button">Continue</button>
+                <button class="button" onclick="cont()">Start</button>
             </div>
         </div>
     </div>
@@ -93,29 +93,29 @@
         <div class="has-animation animation-ltr" data-delay="10">
             <img class="bigger" src="assets/img/maze/trailblazer.png">
         </div>
-          
-          <br>
-          <br>
-          
-          <div class="has-animation animation-ltr" data-delay="1">
-            <p>We often find ourselves walking predefined trails with the 
-                promise of what is socially defined as success. 
-                Trails surrounded by walls of preconceived notions 
+
+        <br>
+        <br>
+
+        <div class="has-animation animation-ltr" data-delay="1">
+            <p>We often find ourselves walking predefined trails with the
+                promise of what is socially defined as success.
+                Trails surrounded by walls of preconceived notions
                 and expectations that limits our perspective and muffles other inspiration.
             </p>
             <p>Seldom do we find the courage to demolish these walls and blaze our own trail.
-                 To walk down roads few dare to follow, often dark and unexplored only to be 
-                 the ones who create the light at the end of the tunnel.
+                To walk down roads few dare to follow, often dark and unexplored only to be
+                the ones who create the light at the end of the tunnel.
             </p>
-            <p>TEDx Salon presents <strong>Trailblazer</strong>, where we shine the limelight on 
-                students like us, but those who heard a different calling and had 
-                the courage to listen. Join us as we light up and navigate these 
-                unconventional trails and be part of a whole new generation of 
+            <p>TEDx Salon presents <strong>Trailblazer</strong>, where we shine the limelight on
+                students like us, but those who heard a different calling and had
+                the courage to listen. Join us as we light up and navigate these
+                unconventional trails and be part of a whole new generation of
                 Trailblazers, the most daring one yet.
             </p>
             <a href="/" class="home-btn">Home</a>
-          </div>
-          <img src="assets/img/tedx_salon_black.png" height="80px;" style="margin-top: 20px;">
+        </div>
+        <img src="assets/img/tedx_salon_black.png" height="80px;" style="margin-top: 20px;">
     </div>
 
     <!-- GTAG Script -->

@@ -57,7 +57,7 @@
         <!-- Environment -->
         <a-sky height="2048" color="#87ceeb" width="2048"></a-sky>
         <a-light type="ambient" color="#fff" intensity="0.8"></a-light>
-        <a-plane material="src: #pavement; repeat: 50 50" static-body rotation="-90 0 0" height="100" width="100">
+        <a-plane material="src: #pavement; repeat: 50 50; # color: #2C2A2A;" static-body rotation="-90 0 0" height="100" width="100">
         </a-plane>
 
         <!-- Player -->
@@ -72,7 +72,7 @@
         <!-- Modal content -->
         <div class="modal-content">
             <div class="modal-header">
-                <span class="close" onclick="cont()">&times;</span>
+                <span class="close">&times;</span>
                 <h2>Finished</h2>
             </div>
             <div class="modal-body">
@@ -82,7 +82,7 @@
             <div class="modal-footer">
                 <h3></h3>
                 <button class="button" onclick="reset()">Play Again</button>
-                <button class="button" onclick="cont()">Continue</button>
+                <button class="button">Continue</button>
             </div>
         </div>
     </div>

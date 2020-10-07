@@ -38,14 +38,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body style="background: black;">
     <!-- <div class="loader">
         <div class="loader-outter"></div>
         <div class="loader-inner" style="background-image: url('assets/img/loader.png');"></div>
     </div> -->
 
     <!-- AFRAME -->
-    <a-scene>
+    <a-scene id="maze-full" fog="type: linear; color: #AAA;far: 7;">
         <!-- Assets -->
         <a-assets>
             <img id="pavement" src="assets/img/maze/pavement.jpg" />
@@ -85,6 +85,10 @@
                 <button class="button">Continue</button>
             </div>
         </div>
+    </div>
+
+    <div class="container">
+        <h1 style="text-align: center;color: blanchedalmond;">Trailblazers</h1>
     </div>
 
     <!-- GTAG Script -->

@@ -5,9 +5,8 @@ AFRAME.registerComponent("player", {
             if (evt.detail.body.el.id != undefined && evt.detail.body.el.id == "finish-tile") {
                 this.el.sceneEl.exitVR()
 
-                let finishDlgElm = document.querySelector("#finishDialog")
-                finishDlgElm.setAttribute("style", "display: block");
-                this.finished = true;
+                let finishDlgElm = document.querySelector("#maze-full")
+                finishDlgElm.setAttribute("style", "display: none");
             }
         });
     }

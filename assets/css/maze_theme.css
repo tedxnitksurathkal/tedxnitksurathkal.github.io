@@ -8,7 +8,7 @@ div {
 }
 .theme {
     height: 100vh;
-    overflow-y: scroll;
+    overflow-y: scroll !important;
     overflow-x: hidden;
 }
 .bigger {
@@ -37,10 +37,10 @@ div {
 .has-animation {
     position: relative;
 }
-.has-animation p, .has-animation a, .has-animation h1 {
+.has-animation p, .has-animation a, .has-animation img {
     opacity: 0;
 }
-.has-animation.animate-in p, .has-animation.animate-in a, .has-animation.animate-in h1 {
+.has-animation.animate-in p, .has-animation.animate-in a, .has-animation.animate-in img {
     animation: textHidden 0.1s 1.1s forwards;
 }
 .has-animation.animate-in:before, .has-animation.animate-in:after {

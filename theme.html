@@ -32,21 +32,23 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
     <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/js/theme/mazify.js"></script>
     <script src="assets/js/theme/player.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/maze.scss">
 </head>
 
-<body style="background: black;">
+<body style="background-color: black;">
     <!-- <div class="loader">
         <div class="loader-outter"></div>
         <div class="loader-inner" style="background-image: url('assets/img/loader.png');"></div>
     </div> -->
 
     <!-- AFRAME -->
-    <a-scene id="maze-full" fog="type: linear; color: #AAA;far: 7;">
-        <!-- Assets -->
+    <a-scene id="maze-full" fog="type: exponential; color: #AAA; density: 0.15;">
+    <!-- Assets -->
         <a-assets>
             <img id="pavement" src="assets/img/maze/pavement.jpg" />
             <img id="brick-02" src="assets/img/maze/brick-02.jpg" />
@@ -87,8 +89,35 @@
         </div>
     </div>
 
-    <div class="container">
-        <h1 style="text-align: center;color: blanchedalmond;">Trailblazers</h1>
+    <div class="container theme">
+        <div class="has-animation animation-ltr" data-delay="10">
+            <h1 class="bigger">
+              Trailblazers
+            </h1>
+        </div>
+          
+          <br>
+          <br>
+          
+          <div class="has-animation animation-ltr" data-delay="1">
+            <p>We often find ourselves walking predefined trails with the 
+                promise of what is socially defined as success. 
+                Trails surrounded by walls of preconceived notions 
+                and expectations that limits our perspective and muffles other inspiration.
+            </p>
+            <p>Seldom do we find the courage to demolish these walls and blaze our own trail.
+                 To walk down roads few dare to follow, often dark and unexplored only to be 
+                 the ones who create the light at the end of the tunnel.
+            </p>
+            <p>TEDx Salon presents <strong>Trailblazer</strong>, where we shine the limelight on 
+                students like us, but those who heard a different calling and had 
+                the courage to listen. Join us as we light up and navigate these 
+                unconventional trails and be part of a whole new generation of 
+                Trailblazers, the most daring one yet.
+            </p>
+            <a href="/" class="home-btn">Home</a>
+          </div>
+          <img src="assets/img/tedx_salon_black.png" height="100px;" style="margin-top: 20px;">
     </div>
 
     <!-- GTAG Script -->

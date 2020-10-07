@@ -1,0 +1,191 @@
+$color-main: #E3242B;
+$black: #2C2A2A;
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: white;
+}
+
+div {
+  display: inline-block;
+}
+
+.theme {
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.bigger {
+  margin: 0;
+  font-weight: 800;
+  padding: 50px;
+  text-transform: uppercase;
+  color: $color-main;
+  display: inline-block;
+  position: relative;
+}
+
+.text {
+  max-width: 600px;
+  width: 100%;
+  line-height: 24px;
+  text-align: center;
+  color: #404040;
+  padding: 20px;
+  
+  &.txt-center {
+    text-align: center;
+  }
+  
+  a {
+    color: $color-main;
+  }
+}
+
+.has-animation {
+  position: relative;
+  
+  p, a, h1 {
+      opacity: 0;
+  }
+  
+  &.animate-in {
+    p, a, h1 {
+      animation: textHidden 0.1s 1.1s forwards;
+    }
+    
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      z-index: 10;
+    }
+    
+    &:before {
+      background-color: black;
+    }
+    
+    &:after {
+      background-color: $black;
+      animation-delay: .5s;
+    }
+  }
+  
+  &.animation-ltr.animate-in {
+    &:before {
+      animation: revealLTR 1.8s ease;
+    }
+    
+    &:after {
+      animation: revealLTR 1s .6s ease;
+    }
+  }
+  
+  &.animation-rtl.animate-in {
+    &:before {
+      animation: revealRTL 1.8s ease;
+    }
+    
+    &:after {
+      animation: revealRTL 1s .6s ease;
+    }
+  }
+}
+
+@keyframes revealLTR {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes revealRTL {
+  0% {
+    width: 0;
+    right: 0;
+  }
+  65% {
+    width: 100%;
+    right: 0;
+  }
+  100% {
+    width: 0;
+    right: 100%;
+  }
+}
+
+@keyframes textHidden {
+  0%{
+    opacity: 0;
+  }
+  
+  50% {
+    opacity: 0.5;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+}
+
+.home-btn {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block !important;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: transparent;
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    padding: 13px 25px;
+    border-radius: 40px;
+    margin: 7px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+    color: rgba(255, 0, 36, 0.7);
+    background: #101010;
+}
+  
+.home-btn:hover {
+    color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+    .bigger {
+        font-size: 45px;
+    }
+    p {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .home-btn {
+        font-size: 15px;
+    }
+    .theme::-webkit-scrollbar {
+        width: 0px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .bigger {
+        font-size: 60px;
+    }
+    p {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .home-btn {
+        font-size: 18px;
+    }
+}

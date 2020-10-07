@@ -6,6 +6,9 @@ body {
 div {
     display: inline-block;
 }
+.a-loader-title {
+    color: black;
+  }
 .theme {
     height: 100vh;
     overflow-y: scroll !important;

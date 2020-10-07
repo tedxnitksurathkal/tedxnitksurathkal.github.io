@@ -12,6 +12,12 @@ p {
 h2 {
     margin: 10px;
 }
+.a-modal {
+    padding: 25% !important;
+}
+.a-dialog-text {
+    color: black;
+}
 .modal-header {
     background-color: red;
 }
@@ -165,6 +171,9 @@ h2 {
     .bigger {
         font-size: 45px;
    }
+    .a-modal {
+        padding: 35% !important;
+    }
     p {
         font-size: 24px;
         line-height: 32px;

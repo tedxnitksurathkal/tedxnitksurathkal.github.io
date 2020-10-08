@@ -21,8 +21,6 @@ AFRAME.registerComponent("player", {
                 }
                 startModal.style.display = "block"
                 instructions = 0
-                console.log(startModal)
-                console.log(instr)
             }
         });
     }

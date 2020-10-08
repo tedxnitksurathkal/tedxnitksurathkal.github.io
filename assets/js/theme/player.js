@@ -1,5 +1,6 @@
 let instructions = 1
 let seconds = 0
+var interval = null;
 
 AFRAME.registerComponent("player", {
     init: function () {
@@ -28,13 +29,23 @@ AFRAME.registerComponent("player", {
 })
 
 function endgame() {
-    $('#instructions-end').append("<p>Congrats!! You took " + seconds + " seconds to navigate through Maze " + maze_gen + ". Take a screenshot of this page and send it to our instagram account and stand a chance to win exciting goodies!!</p>")
+    var instructions = "<p>Congrats!! You took " + seconds + " seconds to navigate through Maze " + maze_gen + ". Take a screenshot of this page and send it to our instagram account and stand a chance to win exciting goodies!!</p>";
+    $('#instructions-end').append(instructions)
+    var el = document.getElementById("instructions-end");
+    var i = 0;
+
+    clearInterval()
+    interval = setInterval(function() {
+        el.innerHTML = instructions;
+    }, 100);
+
     $('#endDialog').delay(1000).fadeIn();
 }
 
 function animate_trailblazers() {
     let endModal = document.getElementById("endDialog");
     endModal.style.display = "none";
+    clearInterval(interval);
     $('.has-animation').each(function (index) {
         $(this).delay($(this).data('delay')).queue(function () {
             $(this).addClass('animate-in');

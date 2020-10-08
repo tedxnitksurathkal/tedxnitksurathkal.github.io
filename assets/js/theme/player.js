@@ -1,5 +1,6 @@
 let instructions = 1
-let seconds = 0
+let seconds = 0.00
+let minutes = 0
 var interval = null;
 
 AFRAME.registerComponent("player", {
@@ -29,13 +30,32 @@ AFRAME.registerComponent("player", {
 })
 
 function endgame() {
-    var instructions = "<p>Congrats!! You took " + seconds + " seconds to navigate through Maze " + maze_gen + ". Take a screenshot of this page and send it to our instagram account and stand a chance to win exciting goodies!!</p>";
+    let toc = null
+    if (minutes == 0) {
+        if (seconds.toFixed(2) < 10) {
+            toc = "00:" + "0" + seconds.toFixed(2)
+        } else {
+            toc = "00:" + seconds.toFixed(2)
+        }
+    } else {
+        if (minutes < 10) {
+            toc = "0" + minutes
+        } else {
+            toc = minutes
+        }
+        if (seconds.toFixed(2) < 10) {
+            toc += ":" + "0" + seconds.toFixed(2)
+        } else {
+            toc += ":" + seconds.toFixed(2)
+        }
+    }
+    var instructions = "<p>Congrats!! You took " + toc + " to navigate through Maze " + maze_gen + ". Take a screenshot of this page and send it to our instagram account and stand a chance to win exciting goodies!!</p>";
     $('#instructions-end').append(instructions)
     var el = document.getElementById("instructions-end");
     var i = 0;
 
     clearInterval()
-    interval = setInterval(function() {
+    interval = setInterval(function () {
         el.innerHTML = instructions;
     }, 100);
 
@@ -59,7 +79,29 @@ setInterval(() => {
     let vis = timer.getAttribute('visible')
     if (vis) {
         let attr_text = timer.getAttribute('text')
-        attr_text.value = seconds++
+        seconds += 0.01
+        if (seconds.toFixed(2) >= 60.00) {
+            seconds = seconds.toFixed(2) - 60.00
+            minutes++
+        }
+        if (minutes == 0) {
+            if (seconds.toFixed(2) < 10) {
+                attr_text.value = "00:" + "0" + seconds.toFixed(2)
+            } else {
+                attr_text.value = "00:" + seconds.toFixed(2)
+            }
+        } else {
+            if (minutes < 10) {
+                attr_text.value = "0" + minutes
+            } else {
+                attr_text.value = minutes
+            }
+            if (seconds.toFixed(2) < 10) {
+                attr_text.value += ":" + "0" + seconds.toFixed(2)
+            } else {
+                attr_text.value += ":" + seconds.toFixed(2)
+            }
+        }
         timer.setAttribute('text', attr_text)
     }
-}, 1000);
+}, 10);

@@ -68,8 +68,8 @@ AFRAME.registerComponent("mazify", {
                     tile.setAttribute('id', 'start-tile');
 
                     let player = document.querySelector("#player");
-                    let playerPos = player.getAttribute("position");
-                    player.setAttribute('position', { x: position.x, y: playerPos.y, z: position.z })
+                    // let playerPos = player.getAttribute("position");
+                    player.setAttribute('position', { x: position.x, y: 1.7, z: position.z })
                 } else if (mazeData.data[i] == 'f') {
                     let tile = document.createElement('a-box');
                     el.appendChild(tile);
@@ -97,4 +97,6 @@ function reset() {
 function cont() {
     let startModal = document.getElementById("startDialog")
     startModal.style.display = "none"
+    let timer = document.getElementById("timer")
+    timer.setAttribute('visible', true)
 }

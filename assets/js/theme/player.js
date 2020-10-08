@@ -1,4 +1,5 @@
 let instructions = 1
+let seconds = 0
 
 AFRAME.registerComponent("player", {
     init: function () {
@@ -27,7 +28,7 @@ AFRAME.registerComponent("player", {
 })
 
 function endgame() {
-    $('#instructions-end').append("<p>Congrats!! You took -- to navigate through Maze " + maze_gen +". Take a screenshot of this page and send it to our instagram account and stand a chance to win exciting goodies!!</p>")
+    $('#instructions-end').append("<p>Congrats!! You took " + seconds + " seconds to navigate through Maze " + maze_gen + ". Take a screenshot of this page and send it to our instagram account and stand a chance to win exciting goodies!!</p>")
     $('#endDialog').delay(1000).fadeIn();
 }
 
@@ -40,3 +41,14 @@ function animate_trailblazers() {
         });
     });
 }
+
+clearInterval()
+setInterval(() => {
+    let timer = document.getElementById("timer")
+    let vis = timer.getAttribute('visible')
+    if (vis) {
+        let attr_text = timer.getAttribute('text')
+        attr_text.value = seconds++
+        timer.setAttribute('text', attr_text)
+    }
+}, 1000);

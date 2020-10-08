@@ -49,7 +49,7 @@
     <!-- AFRAME -->
     <a-scene id="maze-full" fog="type: exponential; color: #AAA; density: 0.20;"
         loading-screen="dotsColor: red; backgroundColor: black" vr-mode-ui="enabled: false">
-    
+
         <!-- Assets -->
         <a-assets>
             <img id="pavement" src="assets/img/maze/pavement.jpg" />
@@ -66,11 +66,13 @@
         </a-plane>
 
         <!-- Player -->
-        <a-entity id="player" kinematic-body camera position="0 1.7 0" universal-controls
-            look-controls="reverseTouchDrag: true" listener player></a-entity>
+        <a-entity id="player" kinematic-body camera universal-controls look-controls="reverseTouchDrag: true" player>
+            <a-entity text="value: 0; color: black; align: center;" position="0 0.35 -0.5" id="timer" visible="false">
+            </a-entity>
+        </a-entity>
 
         <!-- Maze -->
-        <a-entity mazify> </a-entity>
+        <a-entity mazify></a-entity>
     </a-scene>
 
     <!-- The Modals -->

@@ -73,7 +73,7 @@
         <a-entity mazify> </a-entity>
     </a-scene>
 
-    <!-- The Modal -->
+    <!-- The Modals -->
     <div id="startDialog" class="modal mazify" style="display: none;">
         <!-- Modal content -->
         <div class="modal-content">
@@ -86,6 +86,24 @@
             </div>
             <div class="modal-footer">
                 <button class="start button" onclick="cont()">Start</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="endDialog" class="modal mazify" style="display: none;">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" onclick="animate_trailblazers()">&times;</button>
+                <h2>RESULT</h2>
+            </div>
+            <div id="instructions" class="modal-body">
+                <p>Congrats!! You took -- to navigate through the maze. Take a screenshot of this page and send it to our instagram account
+                    and stand a chance to win exciting goodies!!
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="start button" onclick="animate_trailblazers()">Proceed</button>
             </div>
         </div>
     </div>
@@ -115,6 +133,7 @@
                 Trailblazers, the most daring one yet.
             </p>
             <a href="/" class="home-btn">Home</a>
+            <a href="/theme" class="home-btn">Play Again</a>
         </div>
         <img src="assets/img/tedx_salon_black.png" height="80px;" style="margin-top: 20px;">
     </div>

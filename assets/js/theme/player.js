@@ -6,7 +6,7 @@ AFRAME.registerComponent("player", {
             if (evt.detail.body.el.id != undefined && evt.detail.body.el.id == "finish-tile") {
                 this.el.sceneEl.exitVR()
                 $('#maze-full').fadeOut(500);
-                animate_trailblazers();
+                endgame();
             }
 
             if (evt.detail.body.el.id != undefined && evt.detail.body.el.id == "start-tile" && instructions == 1) {
@@ -16,6 +16,7 @@ AFRAME.registerComponent("player", {
                 } else {
                     $("#instructions").append("<p>2. Use the arrow keys to move and your mouse to look around.</p>")
                 }
+                $('#instructions').append("<p> You are in maze number " + maze_gen);
                 startModal.style.display = "block"
                 instructions = 0
                 console.log(startModal)
@@ -25,7 +26,13 @@ AFRAME.registerComponent("player", {
     }
 })
 
+function endgame() {
+    $('#endDialog').delay(1000).fadeIn();
+}
+
 function animate_trailblazers() {
+    let endModal = document.getElementById("endDialog");
+    endModal.style.display = "none";
     $('.has-animation').each(function (index) {
         $(this).delay($(this).data('delay')).queue(function () {
             $(this).addClass('animate-in');

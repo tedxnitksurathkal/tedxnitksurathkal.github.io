@@ -1,49 +1,60 @@
 $(document).ready(function () {
   $(".arrow-right").bind("click", function (event) {
     event.preventDefault();
-    $(".vid-list-container").stop().animate({
-      scrollLeft: "+=336"
-    }, 750);
+    $(".vid-list-container").stop().animate(
+      {
+        scrollLeft: "+=336",
+      },
+      750
+    );
   });
   $(".arrow-left").bind("click", function (event) {
     event.preventDefault();
-    $(".vid-list-container").stop().animate({
-      scrollLeft: "-=336"
-    }, 750);
+    $(".vid-list-container").stop().animate(
+      {
+        scrollLeft: "-=336",
+      },
+      750
+    );
   });
-
-
 });
-
 
 //display the video player based on the tab clicked
 function openSeries(evt, vidName) {
   var i, tabcontent, tablinks;
 
   switch (vidName) {
-    case '2020salon':
-      document.getElementById('vid_frame').src = 'https://www.youtube.com/embed/NR4opvW0Lbg?&rel=0&showinfo=0&autohide=1';
+    case "2020salon":
+      document.getElementById("vid_frame").src =
+        "https://www.youtube.com/embed/NR4opvW0Lbg?&rel=0&showinfo=0&autohide=1";
       break;
-    case '2020':
-      document.getElementById('vid_frame').src = 'https://www.youtube.com/embed/usDzA8UVDus?rel=0&showinfo=0&autohide=1';
+    case "2020":
+      document.getElementById("vid_frame").src =
+        "https://www.youtube.com/embed/usDzA8UVDus?rel=0&showinfo=0&autohide=1";
       break;
-    case '2019':
-      document.getElementById('vid_frame').src = 'https://www.youtube.com/embed/-7ENgIjLWps?rel=0&showinfo=0&autohide=1';
+    case "2019":
+      document.getElementById("vid_frame").src =
+        "https://www.youtube.com/embed/-7ENgIjLWps?rel=0&showinfo=0&autohide=1";
       break;
-    case '2018':
-      document.getElementById('vid_frame').src = 'https://www.youtube.com/embed/RrSqxO8alR4?rel=0&showinfo=0&autohide=1';
+    case "2018":
+      document.getElementById("vid_frame").src =
+        "https://www.youtube.com/embed/RrSqxO8alR4?rel=0&showinfo=0&autohide=1";
       break;
-    case '2016':
-      document.getElementById('vid_frame').src = 'https://www.youtube.com/embed/J8uq8et5W1A?rel=0&showinfo=0&autohide=1';
+    case "2016":
+      document.getElementById("vid_frame").src =
+        "https://www.youtube.com/embed/J8uq8et5W1A?rel=0&showinfo=0&autohide=1";
       break;
-    case '2012':
-      document.getElementById('vid_frame').src = 'https://www.youtube.com/embed/u3i9tyZ8e4g?rel=0&showinfo=0&autohide=1';
+    case "2012":
+      document.getElementById("vid_frame").src =
+        "https://www.youtube.com/embed/u3i9tyZ8e4g?rel=0&showinfo=0&autohide=1";
       break;
-    case '2011':
-      document.getElementById('vid_frame').src = 'https://www.youtube.com/embed/RoMvP_Zyx5Q?rel=0&showinfo=0&autohide=1';
+    case "2011":
+      document.getElementById("vid_frame").src =
+        "https://www.youtube.com/embed/RoMvP_Zyx5Q?rel=0&showinfo=0&autohide=1";
       break;
     default:
-      document.getElementById('vid_frame').src = 'https://www.youtube.com/embed/-7ENgIjLWps?rel=0&showinfo=0&autohide=1';
+      document.getElementById("vid_frame").src =
+        "https://www.youtube.com/embed/-7ENgIjLWps?rel=0&showinfo=0&autohide=1";
       break;
   }
   tabcontent = $(".tabcontent");
@@ -57,9 +68,7 @@ function openSeries(evt, vidName) {
 
   document.getElementById(vidName).style.display = "block";
   evt.currentTarget.className += " active";
-
 }
-
 
 document.getElementById("defaultOpen").click();
 
@@ -71,4 +80,49 @@ $(".vid-item .desc").click(function () {
 $(".vid-item .thumb").click(function () {
   $(this).parent().siblings().removeClass("vid-item-active");
   $(this).parent().addClass("vid-item-active");
+});
+
+
+var widthOfList = function () {
+  var itemsWidth = 0;
+  $(".list li").each(function () {
+    var itemWidth = $(this).outerWidth();
+    itemsWidth += itemWidth;
+  });
+  return itemsWidth;
+};
+
+var widthOfHidden = function () {
+  return (
+    $(".wrapper").outerWidth() - widthOfList() - getLeftPosi()
+  );
+};
+
+var getLeftPosi = function () {
+  return $(".list").position().left;
+};
+
+$(".scroller-left").show();
+$(".scroller-right").show();
+$(".list").animate({ left: "0" }, "slow");
+
+
+$(window).on("resize", function (e) {
+  $(".list").animate({ left: "0" }, "slow");
+});
+
+$(".scroller-right").click(function () {
+  let hidden = widthOfHidden();
+  if (hidden < 0) {
+    let scroll = Math.min(Math.abs(hidden), 300);
+
+    $(".list").animate({ left: `-=${scroll}px` }, "slow", function () { });
+  }
+});
+
+$(".scroller-left").click(function () {
+  let left = getLeftPosi();
+  let scroll = 300;
+  if (left > -400) scroll = -left;
+  $(".list").animate({ left: `+=${scroll}px` }, "slow", function () { });
 });

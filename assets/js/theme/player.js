@@ -19,7 +19,6 @@ AFRAME.registerComponent("player", {
                 } else {
                     $("#instructions").append("<p>2. Use the arrow keys to move and your mouse to look around.</p>")
                 }
-                $('#instructions').append("<p> You are in maze number " + maze_gen);
                 startModal.style.display = "block"
                 instructions = 0
                 console.log(startModal)
@@ -49,7 +48,7 @@ function endgame() {
             toc += ":" + seconds.toFixed(2)
         }
     }
-    var instructions = "<p>Congrats!! You took " + toc + " to navigate through Maze " + maze_gen + ". Take a screenshot of this page and send it to our instagram account and stand a chance to win exciting goodies!!</p>";
+    var instructions = "<p>Congratulations!!</p><p>You took " + toc + " to navigate through Maze-" + maze_gen + ".</p><p>Take a screenshot of this page, put it as your story on Instagram, tag @tedxnitksurathkal and stand a chance to win exciting goodies!!</p>";
     $('#instructions-end').append(instructions)
     var el = document.getElementById("instructions-end");
     var i = 0;

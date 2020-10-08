@@ -27,6 +27,7 @@ AFRAME.registerComponent("player", {
 })
 
 function endgame() {
+    $('#instructions-end').append("<p>Congrats!! You took -- to navigate through Maze " + maze_gen +". Take a screenshot of this page and send it to our instagram account and stand a chance to win exciting goodies!!</p>")
     $('#endDialog').delay(1000).fadeIn();
 }
 

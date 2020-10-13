@@ -301,8 +301,8 @@ var speakers2019 = [
   }
 ]
 
-var speakers2020 = {
-  "tedx": [{
+var speakers2020 = [
+  {
     "name": "Anupama Hoskere",
     "image": "assets/img/Speaker Pictures/2020/ah.jpg",
     "designation": "Master Puppeteer"
@@ -362,22 +362,22 @@ var speakers2020 = {
     "image": "assets/img/Speaker Pictures/2020/rb.jpg",
     "designation": "Co-Founder, Swachha"
   }
-  ],
-  "salon": [
-    {
-      "name": "Udit Misra",
-      "image": "assets/img/Speaker Pictures/2020/udit.jpeg",
-      "designation": "Deputy Associate Editor, Indian Express"
-    },
-    {
-      "name": "Palak Shah",
-      "image": "assets/img/Speaker Pictures/2020/palak.jpeg",
-      "designation": "CEO, Ekaya",
-    },
-    {
-      "name": "Pulapre Balakrishnan",
-      "image": "assets/img/Speaker Pictures/2020/pulapre.jpeg",
-      "designation": "Professor & Economist, Ashoka University"
-    }
-  ],
-}
+];
+
+var speakers2020salon = [
+  {
+    "name": "Udit Misra",
+    "image": "assets/img/Speaker Pictures/2020/udit.jpeg",
+    "designation": "Deputy Associate Editor, Indian Express"
+  },
+  {
+    "name": "Palak Shah",
+    "image": "assets/img/Speaker Pictures/2020/palak.jpeg",
+    "designation": "CEO, Ekaya",
+  },
+  {
+    "name": "Pulapre Balakrishnan",
+    "image": "assets/img/Speaker Pictures/2020/pulapre.jpeg",
+    "designation": "Professor & Economist, Ashoka University"
+  }
+]

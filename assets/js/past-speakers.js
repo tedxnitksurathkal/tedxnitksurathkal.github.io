@@ -122,5 +122,17 @@ var past_speakers = [
   {
     'name': 'Neel Gala',
     'image': 'neel.jpg'
+  },
+  {
+    'name': 'Udit Misra',
+    'image': 'udit.jpeg'
+  },
+  {
+    'name': 'Palak Shah',
+    'image': 'palak.jpeg'
+  },
+  {
+    'name': 'Pulapre Balakrishnan',
+    'image': 'pulapre.jpeg'
   }
 ]

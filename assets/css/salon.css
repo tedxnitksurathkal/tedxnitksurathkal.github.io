@@ -21,7 +21,7 @@
 }
 
 #faq a:hover {
-  color: #000;
+  color: #838383;
   outline: none;
   text-decoration: none;
 }
@@ -74,9 +74,9 @@
 }
 
 #faq #faq-list a.collapsed {
-  color: #838383;
+  color: #000;
 }
 
 #faq #faq-list a.collapsed:hover {
-  color: #000;
+  color: #838383;
 }

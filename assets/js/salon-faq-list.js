@@ -13,7 +13,7 @@ var faq_questions = [
   ],
   [
     'Where can I obtain more information with regard to the theme?',
-    'Click on the link below for more information on the theme <a href="/theme" style="display:inline; font-size:14px;">Atmanirbhar</a>'
+    'Click on the link below for more information on the theme <a href="/theme" style="display:inline; font-size:14px;">Trailblazer</a>'
   ],
   [
     'When will the event be held?',
@@ -33,7 +33,7 @@ var faq_questions = [
   ],
   [
     'What is the platform used for this event?',
-    'Since this is a virtual event, we will be using Google Meet to conduct this event. It will also be streamed on Youtube live.'
+    'Since this is a virtual event, we will be using Airmeet to conduct this event. It will also be streamed on Youtube live.'
   ],
   [
     'What is the programme structure for this Salon?',

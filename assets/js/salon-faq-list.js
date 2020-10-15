@@ -9,7 +9,7 @@ var faq_questions = [
   ],
   [
     'What is the theme for TEDxNITKSurathkalSalon?',
-    'The theme for this event will be Atmanirbhar Bharat which symbolizes a Self-Reliant India.'
+    'The theme for this event will be Trailblazer.'
   ],
   [
     'Where can I obtain more information with regard to the theme?',
@@ -17,11 +17,11 @@ var faq_questions = [
   ],
   [
     'When will the event be held?',
-    'The TEDxNITKSurathkalSalon will be held on August 1st at 5:00 pm IST.'
+    'The TEDxNITKSurathkalSalon will be held on 17th October at 5:00pm.'
   ],
   [
     'How do I register for this event?',
-    'To be a part of the discussion panel, fill the form <a href="https://forms.gle/ZRqKmGMFCgRNusY78" target="_blank"><u>https://forms.gle/ZRqKmGMFCgRNusY78</u></a>'
+    'The link to the registration form will be out soon.'
   ],
   [
     'Can I register for anyone else?',

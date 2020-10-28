@@ -339,7 +339,7 @@
         var n_questions = faq_questions.length, html;
         for (var i = 0; i < n_questions; i++) {
           html =
-            "<li><a data-toggle='collapse' class='collapse' data-target='#faq" +
+            "<li><a data-toggle='collapse' class='collapsed' data-target='#faq" +
             i +
             "'>" +
             faq_questions[i][0] +
@@ -353,21 +353,12 @@
         }
       });
 
-      $(document).ready( function() {
-        $("a.collapse").on('click', function () {
-          var icon = this.children[0], class_name;
-
-          if (icon.classList.contains("ion-plus-circled"))
-          {
-            icon.classList.remove("ion-plus-circled");
-            icon.classList.add("ion-minus-circled");
-          }
-          else
-          {
-            icon.classList.remove("ion-minus-circled");
-            icon.classList.add("ion-plus-circled");
-          }
-        });
+      $(document).ready(function() {
+        $(".collapse").on("show.bs.collapse", function() {
+          $(this).prev("a").find("i").removeClass("ion-plus-circled").addClass("ion-minus-circled")
+        }).on("hide.bs.collapse", function() {
+          $(this).prev("a").find("i").removeClass("ion-minus-circled").addClass("ion-plus-circled")
+        })
       });
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->

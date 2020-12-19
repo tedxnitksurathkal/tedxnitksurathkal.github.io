@@ -3195,3 +3195,76 @@ textarea.form-control {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+#contact-form-success h4 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: black;
+}
+
+#contact-form h4 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: black;
+}
+
+#contact-form p {
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  margin-bottom: 2rem;
+}
+
+
+#contact-form input {
+  margin-bottom: 2rem;
+  font-size: 17px;
+  width: 100%;
+  height: 3rem;
+  padding: 0 1em;
+}
+
+#contact-form button {
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 500ms;
+  width: 100%;
+  height: 3rem;
+}
+
+#contact-form button:hover {
+  transform: scale(1.08);
+  transition: transform 500ms;
+}
+
+#contact-form .loading {
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  width: 22px;
+  height: 22px;
+  margin-top: -11px;
+  margin-left: -11px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,.7) !important;
+  border-top-color: rgba(255,255,255,0.15) !important;
+  border-left-color: rgba(255,255,255,0.15) !important;
+  border-right-color: rgba(255,255,255,0.15) !important;
+  animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(360deg)
+  }
+}

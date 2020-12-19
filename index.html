@@ -313,6 +313,49 @@
 </section>
 <!-- "What is TEDx" Section -->
 
+<!-- Mailchimp Signup Form -->
+<section class="pt50 pb50" style="background-color: red;">
+    <div class="container">
+        <div id="contact-form-success" style="display: none;">
+            <h4>THANK YOU</h4>
+        </div>
+        <div id="contact-form">
+            <form
+                action="https://gmail.us7.list-manage.com/subscribe/post-json?u=8b2cc0faea38709e307aceffe&amp;id=0b4bdf521a&amp;c=?"
+                method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                target="_blank" novalidate>
+                <h4>Upcoming Events? Theme Reveal? Speaker List?</h4>
+                <p>Sign up below to receive latest TEDx NITK news</p>
+                <div class="row">
+                    <div class="col-sm mc-field-group">
+                        <input type="text" placeholder="First Name" name="FNAME" class="" id="mce-FNAME">
+                    </div>
+                    <div class="col-sm mc-field-group">
+                        <input type="text" placeholder="Last Name" name="LNAME" class="" id="mce-LNAME">
+                    </div>
+                    <div class="col-sm mc-field-group">
+                        <input type="email" placeholder="Email" name="EMAIL" class="required email" id="mce-EMAIL" data-toggle="popover">
+                    </div>
+                    <div class="col-sm">
+                        <button type="submit" name="subscribe" id="mc-embedded-subscribe">
+                            <span class="label">SUBSCRIBE</span>
+                            <span class="loading"></span>
+                        </button>
+                    </div>
+                </div>
+                <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                        name="b_8b2cc0faea38709e307aceffe_0b4bdf521a" tabindex="-1" value=""></div>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- Mailchimp Signup Form -->
+
 <!--footer start -->
 <footer>
     <div class="container">
@@ -436,8 +479,7 @@
 <link href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" rel="stylesheet">
 
 <!-- bootstrap -->
-<script src="https://unpkg.com/@popperjs/core@2"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <!--slick carousel -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
 
@@ -557,6 +599,43 @@
     },
     items: 5
   });
+
+document.getElementById("mc-embedded-subscribe").addEventListener("click", (event) => {
+    event.preventDefault()
+    $('#mc-embedded-subscribe .label').css("display", "none")
+    $('#mc-embedded-subscribe .loading').css("display", "block")
+    $.ajax({
+        type: $('form').attr('methpd'),
+        url: $('form').attr('action'),
+        data: $('form').serialize(),
+        cache: false,
+        dataType: 'json',
+        contentType: 'application/json; charset=utf-8',
+        error: function(err) {
+            alert("Could not connect to the subscription server. Please try again later.");
+        },
+        success: function(data) {
+            if(data.result == 'success') {
+                document.activeElement.blur()
+                $('#contact-form').css("display", "none")
+                $('#contact-form-success').css("display", "block")
+            } else {
+                $('#mc-embedded-subscribe .loading').css("display", "none")
+                $('#mc-embedded-subscribe .label').css("display", "block")
+                $("#mce-EMAIL").popover({
+                    content: `${data.msg.split(" <a")[0]}`,
+                    placement: "bottom",
+                    trigger: "focus"
+                })
+                $("#mce-EMAIL").focus()
+            }
+        }
+    })
+})
+
+$("#mce-EMAIL").on("focusout input", (e) => {
+    $("#mce-EMAIL").popover("dispose")
+})
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->

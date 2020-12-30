@@ -23,114 +23,97 @@
     <link rel="icon" href="assets/img/favicon.png">
     <!-- ========== STYLESHEETS ========== -->
     <!-- Bootstrap 4 CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css"
-        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css"rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
 
-    <!--Theme for 2020-->
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
-    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="assets/js/theme/mazify.js"></script>
-    <script src="assets/js/theme/player.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
+
+    <!--Theme for 2021-->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/maze_theme.css">
+    <link rel="stylesheet" href="assets/css/theme2021.css">
 </head>
+<body>
+    <h1>Pause to Play</h1>
+    <svg class="record-player" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105.25 105.25">
+        <g transform="translate(310.848 60.185)">
+            <g class="frame">
+                <rect class="frame__shine" width="95.25" height="95.25" x="-305.848" y="-55.185" ry="4.276" fill-rule="evenodd"></rect>
+                <path class="frame__base" d="M-288.915-55.185v95.25h74.04a4.267 4.267 0 004.276-4.276v-86.697a4.267 4.267 0 00-4.276-4.277z" fill-rule="evenodd"></path>
+            </g>
+            <circle class="record-base" cx="-258.223" cy="-7.56" r="39.688" fill-rule="evenodd" fill="red"></circle>
+            <g class="knob" transform="matrix(-.10538 .05103 -.05305 -.10674 -308.635 40.311)">
+                <ellipse class="knob__base" ry="55.325" rx="56.661" cx="-151.007" cy="79.914"></ellipse>
+                <path class="knob__shine" d="M-94.346 79.914a56.661 55.325 0 01-8.12 28.538l-48.541-28.538z"></path>
+                <circle class="knob__top" r="41.961" cy="79.914" cx="-151.007"></circle>
+            </g>
+            <g class="record">
+                <circle class="record__body" cx="-258.223" cy="-7.56" r="37.688" fill-rule="evenodd"></circle>
+                <circle class="record__label-base" cx="-258.223" cy="-7.56" r="35.278" fill-rule="evenodd" transform="matrix(.45 0 0 .45 -142.022 -4.158)"></circle>
+                <circle class="record__label" r="35.278" cy="-7.56" cx="-258.223" fill-rule="evenodd" transform="matrix(.39107 0 0 .39107 -157.239 -4.603)"></circle>
+                <g class="face">
+                    <g class="eyes--open">
+                        <g transform="translate(86.028 -11.42)">
+                            <circle class="eye" r="2.74" cy="2.273" cx="-351.801"></circle>
+                            <circle class="pupil" r=".661" cy="1.423" cx="-352.841"></circle>
+                        </g>
+                        <g transform="translate(101.128 -11.42)">
+                            <circle class="eye" cx="-351.801" cy="2.273" r="2.74"></circle>
+                            <circle class="pupil" cx="-352.841" cy="1.423" r=".661"></circle>
+                        </g>
+                    </g>
+                    <g class="mouth">
+                        <path class="mouth__opening" d="M-262.187-8.31a3.969 3.969 0 00-.005.094 3.969 3.969 0 003.969 3.969 3.969 3.969 0 003.968-3.969 3.969 3.969 0 00-.003-.094z"></path>
+                        <path class="mouth__tongue" d="M-256.333-6.987a3.969 3.969 0 00-3.616 2.34 3.969 3.969 0 001.726.4 3.969 3.969 0 003.615-2.34 3.969 3.969 0 00-1.725-.4z"></path>
+                    </g>
+                </g>
+                <g class="face--nauseous">
+                    <path d="M-248.384-7.21l-4.584-1.937 4.584-1.938M-268.063-7.21l4.584-1.937-4.584-1.938" fill="none" stroke-width=".794" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <circle cx="-258.223" cy="-6.657" r="1.654"></circle>
+                </g>
+            </g>
 
-<body style="background-color: black;">
+            <g class="record__shine" fill="none" stroke="green" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M-222.921-7.56a35.302 35.302 0 00-10.356-24.946M-293.525-7.56a35.302 35.302 0 0010.355 24.947M-227.206-7.56a31.018 31.018 0 00-9.099-21.919M-289.241-7.56a31.018 31.018 0 009.099 21.92M-231.083-7.56a27.14 27.14 0 00-7.961-19.179M-285.364-7.56a27.14 27.14 0 007.962 19.18M-234.96-7.56A23.263 23.263 0 00-241.784-24M-281.487-7.56a23.263 23.263 0 006.825 16.44M-238.837-7.56a19.386 19.386 0 00-5.687-13.7M-277.61-7.56a19.386 19.386 0 005.687 13.7" stroke-width="1.7937399999999999"></path>
+            </g>
 
-    <!-- AFRAME -->
-    <a-scene id="maze-full" fog="type: exponential; color: #AAA; density: 0.20;"
-        loading-screen="dotsColor: red; backgroundColor: black" vr-mode-ui="enabled: false">
+            <g class="volume">
+                <rect class="volume__base" width="5.306" height="16.303" x="-220.864" y="19.441" ry="1.803" stroke-width=".794" stroke-linecap="round" stroke-linejoin="round"></rect>
+                <g class="volume__control">
+                    <rect class="volume__slider" width="3.742" height="3.274" x="-220.082" y="27.99" ry="0"></rect>
+                    <path class="volume__indicator" d="M-219.013 29.627h1.604"></path>
+                </g>
+                <path class="volume__levels" d="M-224.425 27.592h1.603M-224.425 31.826h1.603M-224.425 23.359h1.603" fill="none" stroke-width=".265"></path>
+            </g>
 
-        <!-- Assets -->
-        <a-assets>
-            <img id="pavement" src="assets/img/maze/pavement.jpg" />
-            <img id="brick-02" src="assets/img/maze/brick-02.jpg" />
-            <img id="start" src="assets/img/maze/start.jpg" />
-            <img id="finish" src="assets/img/maze/finish.jpg" />
-        </a-assets>
+            <circle class="knob__indicator" cx="-300.272" cy="24.212" r="1" stroke-linecap="round" stroke-linejoin="round"></circle>
 
-        <!-- Environment -->
-        <a-sky height="2048" color="#87ceeb" width="2048"></a-sky>
-        <a-light type="ambient" color="#fff" intensity="0.8"></a-light>
-        <a-plane material="src: #pavement; repeat: 50 50; # color: #2C2A2A;" static-body rotation="-90 0 0" height="100"
-            width="100">
-        </a-plane>
+            <g class="branding">
+                <rect width="12.851" height="5.895" x="-303.742" y="-49.377" ry="0"></rect>
+                <path d="M-301.821-48.388h9.01v1.8h-9.01zM-301.821-46.272h5.001v1.8h-5.001z"></path>
+            </g>
 
-        <!-- Player -->
-        <a-entity id="player" kinematic-body camera universal-controls look-controls="reverseTouchDrag: true" player>
-            <a-entity text="font: dejavu;value: 0.00; color: black; align: center;" position="0 0.35 -0.5" id="timer" visible="false">
-            </a-entity>
-        </a-entity>
+            <g class="player-arm" transform="translate(-65.673 -.472)">
+                <circle class="knob__base" r="7.938" cy="-43.412" cx="-156.583"></circle>
+                <circle class="knob__top" cx="-156.583" cy="-43.412" r="6.718"></circle>
+                <path class="arm" d="M-157.355-46.505s-.332 4.745 0 7.083c1.687 11.87 8.335 22.674 10.023 34.544.93 6.55 0 19.845 0 19.845" fill="none" stroke="#e6e6e6" stroke-width="1.587" stroke-linecap="round" stroke-linejoin="round"></path>
+                <rect class="player-arm__top" width="8.968" height="4.544" x="-163.226" y="-45.684" ry="1.57" stroke-width=".6"></rect>
+                <path class="player-arm__needle" d="M-148.885 11.77l3.47.175-.76 4.604-2.412-.174z"></path>
+                <rect class="player-arm__counter" ry=".78" y="-48.611" x="-160.573" height="2.362" width="5.953" stroke-width=".529" stroke-linecap="round" stroke-linejoin="round"></rect>
+            </g>
+        </g>
+    </svg>
 
-        <!-- Maze -->
-        <a-entity mazify></a-entity>
-    </a-scene>
-
-    <!-- The Modals -->
-    <div id="startDialog" class="modal mazify" style="display: none;">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button class="close" onclick="cont()">&times;</button>
-                <h2>INSTRUCTIONS</h2>
-            </div>
-            <div id="instructions" class="modal-body">
-                <p>1. Try to find your way through the maze to the finish. Be quick!!</p>
-            </div>
-            <div class="modal-footer">
-                <button class="start button" onclick="cont()">Start</button>
-            </div>
-        </div>
+    <div class="genre-switch">
+        <button id="pause-button"><i class="ion-pause"></i></button>
     </div>
 
-    <div id="endDialog" class="modal mazify" style="display: none;">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button class="close" onclick="animate_trailblazers()">&times;</button>
-                <h2>RESULT</h2>
-            </div>
-            <div id="instructions-end" class="modal-body"></div>
-            <div class="modal-footer">
-                <button class="start button" onclick="animate_trailblazers()">Proceed</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="container theme">
-        <div class="has-animation animation-ltr" data-delay="10">
-            <img class="bigger" src="assets/img/maze/trailblazer.png">
-        </div>
-
-        <br>
-        <br>
-
-        <div class="has-animation animation-ltr" data-delay="1">
-            <p>We often find ourselves walking predefined trails with the
-                promise of what is socially defined as success.
-                Trails surrounded by walls of preconceived notions
-                and expectations that limits our perspective and muffles other inspiration.
-            </p>
-            <p>Seldom do we find the courage to demolish these walls and blaze our own trail.
-                To walk down roads few dare to follow, often dark and unexplored only to be
-                the ones who create the light at the end of the tunnel.
-            </p>
-            <p>TEDxNITKSurathkalSalon presents <strong>Trailblazer</strong>, where we shine the limelight on
-                students like us, but those who heard a different calling and had
-                the courage to listen. Join us as we light up and navigate these
-                unconventional trails and be part of a whole new generation of
-                Trailblazers, the most daring one yet.
-            </p>
-            <a href="/" class="home-btn">Home</a>
-            <a href="/theme" class="home-btn">Play Again</a>
-        </div>
-        <img src="assets/img/tedx_salon_black.png" height="80px;" style="margin-top: 20px;">
-    </div>
+    <!-- Scripts for the DJ Mixer -->
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="assets/js/theme/music.js"></script>
 
     <!-- GTAG Script -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
@@ -140,49 +123,6 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-110715968-3');
-
-        $(document).bind("contextmenu",function(e) {
-            e.preventDefault();
-        });
-
-        $(document).keydown(function(e){
-            if(e.which === 123){
-            return false;
-            }
-        });
-
-        document.onkeydown = function(e) {
-        if(event.keyCode == 123) {
-        return false;
-        }
-        if(e.ctrlKey && e.keyCode == 'E'.charCodeAt(0)){
-        return false;
-        }
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
-        return false;
-        }
-        if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
-        return false;
-        }
-        if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
-        return false;
-        }
-        if(e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)){
-        return false;
-        }
-        if(e.ctrlKey && e.keyCode == 'H'.charCodeAt(0)){
-        return false;
-        }
-        if(e.ctrlKey && e.keyCode == 'A'.charCodeAt(0)){
-        return false;
-        }
-        if(e.ctrlKey && e.keyCode == 'F'.charCodeAt(0)){
-        return false;
-        }
-        if(e.ctrlKey && e.keyCode == 'E'.charCodeAt(0)){
-        return false;
-        }
-        }
     </script>
 </body>
 

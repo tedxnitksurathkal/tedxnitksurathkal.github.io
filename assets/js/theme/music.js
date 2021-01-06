@@ -67,7 +67,7 @@ const TRACKS = {
 };
 
 // TODO: Figure out autoplay  
-let currentTrack = TRACKS.INSTRUMENTAL.TRACK;
+let currentTrack = null;
 let timer;
 
 for (let genre of Object.keys(TRACKS)) {
@@ -137,8 +137,6 @@ const TL = timeline({ repeat: -1 }).
 set('.record__shine', { transformOrigin: '50% 50%', rotate: 55 });
 set(['.record-player', '.genre-switch'], { display: 'block' });
 
-// document.documentElement.scrollTop = 2;
-
 
 const blink = EYES => {
     gsap.set(EYES, { scaleY: 1 });
@@ -172,12 +170,114 @@ var num;
 
 const GENRE_SWITCH = document.getElementById('pause-button');
 GENRE_SWITCH.addEventListener('click', () => {
-    currentTrack.pause();
     num = Math.floor((Math.random() * 10) % 6);
     document.documentElement.style.setProperty(
         '--hue',
         TRACKS[TRACK_INDEX[num]].HUE);
-
-    currentTrack = TRACKS[TRACK_INDEX[num]].TRACK;
-    currentTrack.play();
 });
+
+const audio = document.querySelector("#gooey-audio");
+// const progressBar = document.querySelector("#progress-bar");
+let audioContext;
+const AudioContext = window.AudioContext || window.webkitAudioContext || false;
+if (AudioContext) {
+    audioContext = new AudioContext();
+    audioContext.createGain();
+} else {
+    alert("Sorry, Web Audio API is not supported in your browser");
+}
+const source = audioContext.createMediaElementSource(audio);
+const analyser = audioContext.createAnalyser();
+
+source.connect(analyser);
+analyser.connect(audioContext.destination);
+analyser.fftSize = 1024;
+
+const bufferLength = analyser.frequencyBinCount;
+const frequencyData = new Uint8Array(bufferLength);
+
+const bars = [];
+
+for (let i = 1; i <= 128; i++) {
+    bars.push(document.getElementById("bar-" + i));
+}
+
+const MusicVisuals = {
+    rafId: null,
+    start() {
+        analyser.getByteFrequencyData(frequencyData);
+
+        let barcc = -1;
+        const numberOfBars = 128;
+
+        for (let increment = -1; increment < numberOfBars * 2; increment += 2) {
+            const y = frequencyData[increment];
+
+            if (barcc > numberOfBars) {
+                barcc = 0;
+            }
+
+            const bar = bars[barcc];
+
+            if (bar) {
+                bar.style.transform = `translateZ(0) translateY(${575 - y}px)`;
+            }
+            barcc++;
+        }
+
+        MusicVisuals.rafId = requestAnimationFrame(MusicVisuals.start);
+    },
+    stop() {
+        cancelAnimationFrame(MusicVisuals.rafId);
+    }
+};
+
+
+document.querySelector("#pause-button").addEventListener("click", () => {
+    if (audioContext.state === "suspended") {
+        audioContext.resume();
+    }
+    audio.paused ? audio.play() : audio.pause();
+});
+
+document.querySelector("#gooey-audio").addEventListener("play", () => {
+    document.querySelector("#pause-button span").textContent = "pause";
+    MusicVisuals.start();
+});
+
+document.querySelector("#gooey-audio").addEventListener("pause", () => {
+    document.querySelector("#pause-button span").textContent = "play_arrow";
+    // Two songs 
+    // audio.src = audio.src === "https://api.soundcloud.com/tracks/75308415/stream?client_id=b8f06bbb8e4e9e201f9e6e46001c3acb" ? "https://katiebaca.com/tutorial/odd-look.mp3" : "https://api.soundcloud.com/tracks/75308415/stream?client_id=b8f06bbb8e4e9e201f9e6e46001c3acb";
+
+    for (let i = 0; i < bars.length; i++) {
+        if (bars[i]) {
+            bars[i].style.transform = null;
+        }
+    }
+
+    MusicVisuals.stop();
+});
+
+document.querySelector("#gooey-audio").addEventListener("ended", () => {
+    MusicVisuals.stop();
+    audio.src = audio.src === "https://api.soundcloud.com/tracks/75308415/stream?client_id=b8f06bbb8e4e9e201f9e6e46001c3acb" ? "https://katiebaca.com/tutorial/odd-look.mp3" : "https://api.soundcloud.com/tracks/75308415/stream?client_id=b8f06bbb8e4e9e201f9e6e46001c3acb";
+    MusicVisuals.start();
+});
+
+// const progressWidth = document.querySelector(".progress").offsetWidth;
+
+// document.querySelector("#gooey-audio").addEventListener("timeupdate", () => {
+//     const p = (audio.currentTime / audio.duration) * 100;
+
+//     // progressBar.style.width = p + "%";
+// });
+
+// document.querySelector(".progress").addEventListener("click", (e) => {
+//     const mouseX = e.pageX;
+//     const boundingRect = e.target.getBoundingClientRect();
+//     const barX = boundingRect.left;
+//     const percent = boundingRect.width / (e.pageX - barX);
+
+//     audio.currentTime = audio.duration / percent;
+// });

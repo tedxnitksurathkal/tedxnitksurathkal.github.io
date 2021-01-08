@@ -260,8 +260,8 @@ document.querySelector("#gooey-audio").addEventListener("pause", () => {
 
     for (let i = 0; i < bars.length; i++) {
         if (bars[i]) {
-            bars[i].style.transform = null;
-            // bars[i].style.visibility = "hidden"
+            // bars[i].style.transform = "translateY(30vh)";
+            bars[i].style.visibility = "hidden"
         }
     }
 

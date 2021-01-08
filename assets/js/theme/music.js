@@ -220,7 +220,8 @@ const MusicVisuals = {
             const bar = bars[barcc];
 
             if (bar) {
-                bar.style.transform = `translateZ(0) translateY(${575 - y}px)`;
+                bar.style.visibility = "visible";
+                bar.style.transform = `translateY(${30 / 255 * (255 - y)}vh)`;
             }
             barcc++;
         }
@@ -240,19 +241,27 @@ document.querySelector("#pause-button").addEventListener("click", () => {
     audio.paused ? audio.play() : audio.pause();
 });
 
+// if (audio.readyState >= audio.HAVE_FUTURE_DATE) {
+//     console.log("CANPLAY");
+//     document.querySelector("#pause-button").removeAttribute("disabled");
+//     document.querySelector("#pause-button").style.color = "hsl(var(--hue), 50%, 0%)";
+// };
+
 document.querySelector("#gooey-audio").addEventListener("play", () => {
+    if (audioContext.state === "suspended" || audioContext.state === "interrupted") {
+        audioContext.resume();
+    }
     document.querySelector("#pause-button span").textContent = "pause";
     MusicVisuals.start();
 });
 
 document.querySelector("#gooey-audio").addEventListener("pause", () => {
     document.querySelector("#pause-button span").textContent = "play_arrow";
-    // Two songs 
-    // audio.src = audio.src === "https://api.soundcloud.com/tracks/75308415/stream?client_id=b8f06bbb8e4e9e201f9e6e46001c3acb" ? "https://katiebaca.com/tutorial/odd-look.mp3" : "https://api.soundcloud.com/tracks/75308415/stream?client_id=b8f06bbb8e4e9e201f9e6e46001c3acb";
 
     for (let i = 0; i < bars.length; i++) {
         if (bars[i]) {
             bars[i].style.transform = null;
+            // bars[i].style.visibility = "hidden"
         }
     }
 
@@ -262,8 +271,28 @@ document.querySelector("#gooey-audio").addEventListener("pause", () => {
 document.querySelector("#gooey-audio").addEventListener("ended", () => {
     MusicVisuals.stop();
     audio.src = audio.src === "https://api.soundcloud.com/tracks/75308415/stream?client_id=b8f06bbb8e4e9e201f9e6e46001c3acb" ? "https://katiebaca.com/tutorial/odd-look.mp3" : "https://api.soundcloud.com/tracks/75308415/stream?client_id=b8f06bbb8e4e9e201f9e6e46001c3acb";
-    MusicVisuals.start();
+    // if (audioContext.state === "suspended") {
+    //     audioContext.resume();
+    // }
+    audio.play();
 });
+
+document.querySelector("#gooey-audio").addEventListener("timeupdate", () => {
+    // Maybe randomly choose a value between 30-45 sec
+    if (audio.currentTime >= 30) {
+        nextSong();
+    }
+});
+
+function nextSong() {
+    audio.pause();
+    // Change below line to set song directly instead of horrendous tertiary op
+    audio.src = audio.src === "https://api.soundcloud.com/tracks/75308415/stream?client_id=b8f06bbb8e4e9e201f9e6e46001c3acb" ? "https://katiebaca.com/tutorial/odd-look.mp3" : "https://api.soundcloud.com/tracks/75308415/stream?client_id=b8f06bbb8e4e9e201f9e6e46001c3acb";
+    if (audioContext.state === "suspended" || audioContext.state === "interrupted") {
+        audioContext.resume();
+    }
+    audio.play();
+}
 
 // const progressWidth = document.querySelector(".progress").offsetWidth;
 

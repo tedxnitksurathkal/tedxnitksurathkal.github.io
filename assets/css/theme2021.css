@@ -23,7 +23,7 @@
 }
 body {
     /* width: 100vw; */
-    /* height: 100vh; */
+    height: 100vh;
     background: var(--record-label);
     /* overflow-x: hidden; */
     overflow: hidden;
@@ -155,52 +155,49 @@ button {
     font-family: sans-serif;
     border-radius: 10px;
     border: 4px solid hsl(var(--hue), 50%, 50%);
+    background-color: hsl(var(--hue), 50%, 50%);
     -moz-appearance: none;
     appearance: none;
     -webkit-appearance: none;
-    background: none;
+    /* background: none; */
     font-weight: bold;
     outline: transparent;
-    color: hsl(var(--hue), 50%, 50%);
+    color: hsl(var(--hue), 50%, 0%);
     transition: border 0.25s ease, color 0.25s ease;
 }
 
 .site {
-    height: 70vh;
-    display: flex;
-    flex-flow: column nowrap;
+    height: 100vh;
+    overflow: hidden;
+    /* display: flex; */
+    /* flex-flow: column nowrap; */
     /* background-color: #abf; */
 }
 .site #record {
-    flex: 1;
-    position: relative;
+    /* flex: 1; */
+    /* position: relative; */
 }
 
 #gooey {
-    display: flex;
-    flex-direction: column;
-}
-
-#gooey-audio {
     display: none;
 }
 
 .spectrum {
-    flex: 1;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     /* filter: url("#goo"); */
     box-sizing: border-box;
-    transform: translateZ(0);
+    /* transform: translateZ(0); */
     position: relative;
-    height: 100px;
+    height: 0;
 }
 .spectrum .bar {
     background-color: #e91e63;
     flex: 1 1 auto;
-    height: 500px;
-    transform: translateZ(0) translateY(500px);
-    contain: strict;
+    height: 30vh;
+    /* transform: translateZ(0) translateY(40vh); */
+    /* contain: strict; */
     overflow: hidden;
+    /* visibility: visible; */
 }

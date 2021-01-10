@@ -41,8 +41,9 @@
 <body>
     <h1>Click play button</h1>
     <div id="record-base" class="site">
+        <canvas></canvas>
         <div id="record">
-            <svg class="record-player" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105.25 105.25">
+            <svg class="record-player" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105.25 105.25" style="z-index: 1;">
                 <g transform="translate(310.848 60.185)">
                     <g class="frame">
                         <rect class="frame__shine" width="95.25" height="95.25" x="-305.848" y="-55.185" ry="4.276"
@@ -138,10 +139,16 @@
         <button id="pause-button"><span class="material-icons">play_arrow</span></button>
     </div>
 
-    <div id="gooey">
-        <audio src="https://katiebaca.com/tutorial/odd-look.mp3" controls preload="auto" crossorigin
-            id="gooey-audio"></audio>
+    <div id="audios">
+        <audio src="/assets/songs/odd-look.mp3" controls preload="auto" crossorigin id="gooey-audio"></audio>
+        <audio src="/assets/songs/waww.mp3" controls preload="auto" crossorigin id="round-audio"></audio>
     </div>
+
+    <div class="player">
+        <!-- <canvas></canvas> -->
+        <div class="playarea"></div>
+    </div>
+
     <footer style="padding: 0; background-color: transparent; visibility: hidden;">
         <div class="spectrum">
             <div class="bar" id="bar-1"></div>

@@ -253,12 +253,14 @@ document.querySelector("#gooey-audio").addEventListener("play", () => {
     if (audioContext.state === "suspended" || audioContext.state === "interrupted") {
         audioContext.resume();
     }
-    document.querySelector("#pause-button span").textContent = "pause";
+    document.querySelector("#pause-button i").classList.add("ion-pause");
+    document.querySelector("#pause-button i").classList.remove("ion-play");
     MusicVisuals.start();
 });
 
 document.querySelector("#gooey-audio").addEventListener("pause", () => {
-    document.querySelector("#pause-button span").textContent = "play_arrow";
+    document.querySelector("#pause-button i").classList.add("ion-play");
+    document.querySelector("#pause-button i").classList.remove("ion-pause");
 
     for (let i = 0; i < bars.length; i++) {
         if (bars[i]) {

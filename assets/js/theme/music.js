@@ -176,9 +176,13 @@ GENRE_SWITCH.addEventListener('click', () => {
         TRACKS[TRACK_INDEX[num]].HUE);
 });
 
+const gooeyAudio = document.querySelector("#gooey-audio");
+const roundAudio = document.querySelector("#round-audio");
+const songs = [];
+let effectPlaying = 1;
+
 
 // GOOEY BAR JS - EFFECT 1
-const audio = document.querySelector("#gooey-audio");
 // const progressBar = document.querySelector("#progress-bar");
 let audioContext;
 const AudioContext = window.AudioContext || window.webkitAudioContext || false;
@@ -188,7 +192,7 @@ if (AudioContext) {
 } else {
     alert("Sorry, Web Audio API is not supported in your browser");
 }
-const source = audioContext.createMediaElementSource(audio);
+const source = audioContext.createMediaElementSource(gooeyAudio);
 const analyser = audioContext.createAnalyser();
 
 source.connect(analyser);
@@ -240,10 +244,14 @@ document.querySelector("#pause-button").addEventListener("click", () => {
     if (audioContext.state === "suspended") {
         audioContext.resume();
     }
-    audio.paused ? audio.play() : audio.pause();
+    if (effectPlaying === 1) {
+        gooeyAudio.paused ? gooeyAudio.play() : gooeyAudio.pause();
+    } else if (effectPlaying === 2) {
+        roundAudio.paused ? roundAudio.play() : roundAudio.pause();
+    }
 });
 
-// if (audio.readyState >= audio.HAVE_FUTURE_DATE) {
+// if (gooeyAudio.readyState >= gooeyAudio.HAVE_FUTURE_DATA) {
 //     console.log("CANPLAY");
 //     document.querySelector("#pause-button").removeAttribute("disabled");
 //     document.querySelector("#pause-button").style.color = "hsl(var(--hue), 50%, 0%)";
@@ -274,29 +282,44 @@ document.querySelector("#gooey-audio").addEventListener("pause", () => {
 
 document.querySelector("#gooey-audio").addEventListener("ended", () => {
     MusicVisuals.stop();
-    audio.src = audio.src === "https://api.soundcloud.com/tracks/75308415/stream?client_id=b8f06bbb8e4e9e201f9e6e46001c3acb" ? "https://katiebaca.com/tutorial/odd-look.mp3" : "https://api.soundcloud.com/tracks/75308415/stream?client_id=b8f06bbb8e4e9e201f9e6e46001c3acb";
+    gooeyAudio.src = gooeyAudio.src === "https://api.soundcloud.com/tracks/75308415/stream?client_id=b8f06bbb8e4e9e201f9e6e46001c3acb" ? "https://katiebaca.com/tutorial/odd-look.mp3" : "https://api.soundcloud.com/tracks/75308415/stream?client_id=b8f06bbb8e4e9e201f9e6e46001c3acb";
     // if (audioContext.state === "suspended") {
     //     audioContext.resume();
     // }
-    audio.play();
+    gooeyAudio.play();
 });
 
 document.querySelector("#gooey-audio").addEventListener("timeupdate", () => {
     // Maybe randomly choose a value between 30-45 sec
-    if (audio.currentTime >= 30) {
-        nextSong();
+    if (gooeyAudio.currentTime >= 45) {
+        gooeyAudio.pause();
+        nextSong(2);
+    }
+});
+
+document.querySelector("#round-audio").addEventListener("timeupdate", () => {
+    if (roundAudio.currentTime >= 45) {
+        // roundAudio.src = ""
+        // roundAudio.load();
+        roundAudio.pause();
+        nextSong(1);
     }
 });
 
 // TODO: Give function parameter of which song to play just like how its done in 2nd effect below
-function nextSong() {
-    audio.pause();
+function nextSong(eff) {
     // Change below line to set song directly instead of horrendous tertiary op
-    audio.src = audio.src.slice(window.location.origin.length) === "/assets/songs/waww.mp3" ? "/assets/songs/odd-look.mp3" : "/assets/songs/waww.mp3";
-    if (audioContext.state === "suspended" || audioContext.state === "interrupted") {
-        audioContext.resume();
+    if (eff === 1) {
+        document.querySelector("canvas").style.visibility = "hidden";
+        gooeyAudio.src = gooeyAudio.src.slice(window.location.origin.length) === "/assets/songs/waww.mp3" ? "/assets/songs/odd-look.mp3" : "/assets/songs/waww.mp3";
+        if (audioContext.state === "suspended" || audioContext.state === "interrupted") {
+            audioContext.resume();
+        }
+        gooeyAudio.play();
+    } else if (eff === 2) {
+        document.querySelector("canvas").style.visibility = "visible";
+        Player.nextSong();
     }
-    audio.play();
 }
 
 function vh(v) {
@@ -311,10 +334,9 @@ function vw(v) {
 
 function vmin(v) {
     return Math.min(vh(v), vw(v));
-}
-
-console.log(vmin(1))
-
+};
+// vmin value
+// console.log(vmin(1));
 
 // CIRCULAR ROUND BARS - EFFECT 2
 
@@ -431,7 +453,7 @@ var Framer = {
                 return pv + cv;
             }, 0) / allScales.length;
         // Change this to smaller or remove
-        this.canvas.style.transform = "scale(" + sum + ")";
+        // this.canvas.style.transform = "scale(" + sum + ")";
         return m;
     },
 
@@ -563,8 +585,8 @@ var Tracker = {
 
         this.r = this.scene.radius - (this.innerDelta + this.lineWidth / 2);
         this.context.arc(
-            this.scene.radius + this.scene.padding,
-            this.scene.radius + this.scene.padding,
+            this.scene.radius,
+            this.scene.radius,
             this.r,
             0,
             this.angle,
@@ -651,8 +673,8 @@ var Scene = {
 
     calculateSize: function () {
         this.scaleCoef = Math.max(0.5, 740 / this.optimiseHeight);
-
-        var size = Math.max(this.minSize, document.body.clientHeight);
+        // var size = Math.max(this.minSize, document.body.clientHeight);
+        var size = Math.max(this.minSize, 100 * vmin(1));
         this.canvas.setAttribute("width", size);
         this.canvas.setAttribute("height", size);
 
@@ -813,8 +835,8 @@ var Controls = {
             y = -y;
         }
         this.context.arc(
-            this.scene.radius + this.scene.padding + x,
-            this.scene.radius + this.scene.padding + y,
+            this.scene.radius + x,
+            this.scene.radius + y,
             10,
             0,
             Math.PI * 2,
@@ -928,31 +950,42 @@ var Player = {
 
     // Call this for playing audio
     play: function () {
-        this.context.resume && this.context.resume();
+        if (this.context.state === "suspended" || this.context.state === "interrupted") {
+            this.context.resume();
+        }
+        // this.context.resume && this.context.resume();
         if (this.firstLaunch) {
             // this.source.start();
             this.roundAudio.play();
             this.firstLaunch = false;
         }
+        document.querySelector("#pause-button i").classList.add("ion-pause");
+        document.querySelector("#pause-button i").classList.remove("ion-play");
     },
 
     stop: function () {
+        document.querySelector("#pause-button i").classList.add("ion-play");
+        document.querySelector("#pause-button i").classList.remove("ion-pause");
         this.roundAudio.currentTime = 0;
         this.context.suspend();
     },
 
     // This is the function I made for our use, only parameter required is the correct song URL
     nextSong: function (song) {
-        this.roundAudio.pause();
-        this.roundAudio.src = String(song);
+        if (!this.roundAudio.paused) { this.roundAudio.pause(); }
+        this.roundAudio.src = this.roundAudio.src.slice(window.location.origin.length) === "/assets/songs/waww.mp3" ? "/assets/songs/odd-look.mp3" : "/assets/songs/waww.mp3";
         if (this.context.state === "suspended" || this.context.state === "interrupted") {
             this.context.resume();
         }
+        document.querySelector("#pause-button i").classList.add("ion-pause");
+        document.querySelector("#pause-button i").classList.remove("ion-play");
         this.roundAudio.play();
     },
 
     // Call this function or the "stop" function so we can then change the effect
     pause: function () {
+        document.querySelector("#pause-button i").classList.add("ion-play");
+        document.querySelector("#pause-button i").classList.remove("ion-pause");
         this.context.suspend();
     },
 

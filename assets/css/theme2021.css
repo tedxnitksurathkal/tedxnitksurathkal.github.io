@@ -33,6 +33,7 @@ body {
     transition: background 0.25s ease;
 }
 h1 {
+    padding-bottom: 1rem;
     position: absolute;
     top: calc(50% - (var(--size) * 0.5vmin));
     left: 50%;
@@ -141,7 +142,7 @@ h1 {
     top: calc(50% + (var(--size) * 0.5vmin));
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top: 4rem;
+    margin-top: 7rem;
     z-index: 1;
 }
 .genre-switch:after {
@@ -207,14 +208,16 @@ button {
 
 canvas {
     display: block;
-    /* width: calc(var(--round-size) * 1vmin); */
-    /* height: calc(var(--round-size) * 1vmin); */
-    position: fixed;
-    /* top: 50%; */
-    /* left: 50%; */
-    /* padding: 0; */
-    /* margin: auto; */
+    width: calc(var(--round-size) * 1vmin);
+    height: calc(var(--round-size) * 1vmin);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }
+
 #pause-button {
 	box-sizing: border-box;
 	display:block;

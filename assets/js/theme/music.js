@@ -66,7 +66,6 @@ const TRACKS = {
     }
 };
 
-// TODO: Figure out autoplay  
 let currentTrack = null;
 let timer;
 
@@ -155,7 +154,7 @@ const blink = EYES => {
     });
 
 };
-blink(EYES);
+//blink(EYES);
 
 const TRACK_INDEX = {
     0: "CLASSICAL",
@@ -242,12 +241,24 @@ const MusicVisuals = {
 
 document.querySelector("#pause-button").addEventListener("click", () => {
     if (audioContext.state === "suspended") {
-        audioContext.resume();
+        audioContext.resume();   
     }
     if (effectPlaying === 1) {
         gooeyAudio.paused ? gooeyAudio.play() : gooeyAudio.pause();
     } else if (effectPlaying === 2) {
         roundAudio.paused ? roundAudio.play() : roundAudio.pause();
+    }
+});
+
+// Toggle between pause and play
+document.querySelector("#pause-button").addEventListener("click", () => {
+    if(document.querySelector("#pause-button i").classList.contains("ion-play")) {
+        document.querySelector("#pause-button i").classList.add("ion-pause");
+        document.querySelector("#pause-button i").classList.remove("ion-play");
+    }
+    else {
+        document.querySelector("#pause-button i").classList.add("ion-play");
+        document.querySelector("#pause-button i").classList.remove("ion-pause");
     }
 });
 
@@ -261,15 +272,10 @@ document.querySelector("#gooey-audio").addEventListener("play", () => {
     if (audioContext.state === "suspended" || audioContext.state === "interrupted") {
         audioContext.resume();
     }
-    document.querySelector("#pause-button i").classList.add("ion-pause");
-    document.querySelector("#pause-button i").classList.remove("ion-play");
     MusicVisuals.start();
 });
 
 document.querySelector("#gooey-audio").addEventListener("pause", () => {
-    document.querySelector("#pause-button i").classList.add("ion-play");
-    document.querySelector("#pause-button i").classList.remove("ion-pause");
-
     for (let i = 0; i < bars.length; i++) {
         if (bars[i]) {
             // bars[i].style.transform = "translateY(30vh)";
@@ -294,6 +300,7 @@ document.querySelector("#gooey-audio").addEventListener("timeupdate", () => {
     if (gooeyAudio.currentTime >= 45) {
         gooeyAudio.pause();
         nextSong(2);
+        effectPlaying = 2;
     }
 });
 
@@ -303,6 +310,7 @@ document.querySelector("#round-audio").addEventListener("timeupdate", () => {
         // roundAudio.load();
         roundAudio.pause();
         nextSong(1);
+        effectPlaying = 1;
     }
 });
 

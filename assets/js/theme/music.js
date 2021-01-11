@@ -239,7 +239,7 @@ const MusicVisuals = {
 };
 
 
-document.querySelector("#pause-button").addEventListener("click", () => {
+document.querySelector("#pause-button", "#play-button").addEventListener("click", () => {
     if (audioContext.state === "suspended") {
         audioContext.resume();   
     }
@@ -967,13 +967,9 @@ var Player = {
             this.roundAudio.play();
             this.firstLaunch = false;
         }
-        document.querySelector("#pause-button i").classList.add("ion-pause");
-        document.querySelector("#pause-button i").classList.remove("ion-play");
     },
 
     stop: function () {
-        document.querySelector("#pause-button i").classList.add("ion-play");
-        document.querySelector("#pause-button i").classList.remove("ion-pause");
         this.roundAudio.currentTime = 0;
         this.context.suspend();
     },
@@ -985,15 +981,11 @@ var Player = {
         if (this.context.state === "suspended" || this.context.state === "interrupted") {
             this.context.resume();
         }
-        document.querySelector("#pause-button i").classList.add("ion-pause");
-        document.querySelector("#pause-button i").classList.remove("ion-play");
         this.roundAudio.play();
     },
 
     // Call this function or the "stop" function so we can then change the effect
     pause: function () {
-        document.querySelector("#pause-button i").classList.add("ion-play");
-        document.querySelector("#pause-button i").classList.remove("ion-pause");
         this.context.suspend();
     },
 

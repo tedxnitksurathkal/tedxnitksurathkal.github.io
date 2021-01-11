@@ -39,7 +39,10 @@
 </head>
 
 <body>
-    <h1 id="title-start">Click play button</h1>
+    <h1 id="title-start">Play</h1>
+    <a id="play-button"><i class="icon ion-play"></i></a>
+
+    <div id="main-content">
     <div id="record-base" class="site">
         <canvas style="visibility: hidden;"></canvas>
         <div id="record">
@@ -280,6 +283,8 @@
             <div class="bar" id="bar-127"></div>
         </div>
     </footer>
+    </div>
+
     <!-- <div class="controls">
             <div class="progress">
                 <div class="progress-bar" id="progress-bar"></div>
@@ -308,6 +313,32 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-110715968-3');
+
+        function play_button_align() {
+          var div_width = $("#play-button").width();
+          var page_width = $(window).width();
+
+          var offset = (page_width - div_width)/2;
+
+          $("#play-button").css("left", offset);
+        }
+
+        $(document).ready(function() {
+            play_button_align();
+            $("#play-button").fadeIn("slow");
+        });
+
+        $(window).resize(function() {
+            play_button_align();
+        });
+
+        $('#play-button').on('click', function(){
+            $('#play-button').slideDown();
+            $('#title-start').slideUp();
+            setTimeout($('#main-content').fadeIn("slow"),1000);
+            $('#play-button').css("display","none");
+            document.getElementById("pause-button").click();
+        });
     </script>
 </body>
 

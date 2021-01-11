@@ -243,3 +243,38 @@ canvas {
 .play-btn {
     margin-left: 4px !important;
 }
+
+#main-content {
+    display: none;
+}
+
+#play-button {
+    display: none;
+    box-sizing: border-box;
+	width:200px;
+	height:200px;
+    padding-top: 50px;
+    text-align: center;
+	line-height: 20px;
+	border-radius: 50%;
+	color:#f5f5f5;
+	text-align:center;
+	text-decoration:none;
+	background-color: rgba(0,0,0,0.5);
+	font-size:100px;
+	font-weight:bold;
+    transition: all 0.3s ease;
+    top: 35vh;
+    left: 25vh;
+    position: absolute;
+}
+
+#play-button:hover {
+	background-color: rgba(0,0,0,0.8);
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+	text-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+#title-start {
+    font-size: 50px;
+}

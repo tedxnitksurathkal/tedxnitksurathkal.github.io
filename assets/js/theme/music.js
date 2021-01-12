@@ -68,6 +68,7 @@ const TRACKS = {
 
 let currentTrack = null;
 let timer;
+let timeElapsed = true;
 
 for (let genre of Object.keys(TRACKS)) {
     TRACKS[genre].TRACK.loop = true;
@@ -154,7 +155,7 @@ const blink = EYES => {
     });
 
 };
-//blink(EYES);
+blink(EYES);
 
 const TRACK_INDEX = {
     0: "CLASSICAL",
@@ -850,7 +851,7 @@ var Controls = {
             y = -y;
         }
         if (this.getQuadrant() == 4) {
-            y = -y;
+            y -->= -y;
         }
         this.context.arc(
             this.scene.radius + x,
@@ -1010,3 +1011,13 @@ var Player = {
 };
 
 Player.init();
+
+function revealTheme() {
+    if (effectPlaying === 1) {
+        gooeyAudio.pause();
+    } else if (effectPlaying === 2) {
+        roundAudio.pause();
+    }
+    $('#main-content').fadeOut("slow");
+    $('#theme-reveal').fadeIn("slow");
+}

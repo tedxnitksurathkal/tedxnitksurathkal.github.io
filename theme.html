@@ -72,7 +72,7 @@
                             transform="matrix(.45 0 0 .45 -142.022 -4.158)"></circle>
                         <circle class="record__label" r="35.278" cy="-7.56" cx="-258.223" fill-rule="evenodd"
                             transform="matrix(.39107 0 0 .39107 -157.239 -4.603)"></circle>
-                        <!--<g class="face">
+                        <g class="face">
                             <g class="eyes--open">
                                 <g transform="translate(86.028 -11.42)">
                                     <circle class="eye" r="2.74" cy="2.273" cx="-351.801"></circle>
@@ -91,7 +91,7 @@
                                     d="M-256.333-6.987a3.969 3.969 0 00-3.616 2.34 3.969 3.969 0 001.726.4 3.969 3.969 0 003.615-2.34 3.969 3.969 0 00-1.725-.4z">
                                 </path>
                             </g>
-                        </g>-->
+                        </g>
                     </g>
 
                     <g class="record__shine" fill="none" stroke="green" stroke-width="5" stroke-linecap="round"
@@ -287,6 +287,45 @@
         </div>
     </footer>
     </div>
+    <div id="theme-reveal" style="display: none;">
+        <div class="container">
+            <div class="row text-center">
+                <h1> Pause to Play </h1>
+            </div>
+        </div>
+        <div class="container desc">
+            <div class="row text-center">
+                <p>A "Pause" is a brief interruption that delivers two choices: To catch 
+                    some breath and continue along the same path or retrace steps and 
+                    carve out a new one.
+                </p>
+                <p>
+                    The theme revolves around the idea of pausing to reflect upon 
+                    one's actions and implementing changes in that timeframe in 
+                    order to continue playing the game called life. "Pauses" are 
+                    projected as preparatory phases that enable breaking the chain 
+                    of not-so-fortunate events in "play". Pauses can be due to obstacles 
+                    strewn in our paths that are meant to teach us lessons along 
+                    the way or can be self imposed; it is meant to strengthen our 
+                    skills, to adapt better and evolve.
+                </p>
+                <p>
+                    TEDxNITKSurathkal 2021 aims to provide a platform 
+                    for self introspection through influential talks filled 
+                    with narratives that fuels the opting of right combination of pauses and plays.
+                </p>
+                <p>
+                    "Pause to Play" signifies that the motive of each pause should be to 
+                    continue the play. The idea is to motivate the audience to 
+                    continue the hustle with added experience and knowledge 
+                    derived from the valuable inputs of our speakers.
+                </p>
+                <p>
+                    <a href="/" class="home-btn">Home</a>  
+                </p>
+            </div>
+        </div>
+    </div>
 
     <!-- <div class="controls">
             <div class="progress">
@@ -331,7 +370,7 @@
           var page_height = $(window).height();
 
           var offset = (page_height - div_height)/2;
-          offset += div_height/2;
+          offset /= 1.3;
 
           $(".genre-switch").css("top", offset);
         }
@@ -339,6 +378,9 @@
         $(document).ready(function() {
             play_button_align();
             pause_button_align();
+        });
+
+        $(window).on('load', function() {
             $("#play-button").fadeIn("slow");
         });
 
@@ -354,6 +396,7 @@
             $('#play-button').css("display","none");
             document.getElementById("pause-button").click();
             pause_button_align();
+            setTimeout(revealTheme,60000);
         });
     </script>
 </body>

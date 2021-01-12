@@ -314,8 +314,9 @@ canvas {
 	font-weight:bold;
     transition: all 0.3s ease;
     top: 35vh;
-    left: 25vh;
+    left: 50vw;
     position: absolute;
+    transform: translate(-50%, 0);
 }
 
 #play-button:hover {

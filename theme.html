@@ -356,15 +356,6 @@
 
         gtag('config', 'UA-110715968-3');
 
-        function play_button_align() {
-          var div_width = $("#play-button").width();
-          var page_width = $(window).width();
-
-          var offset = (page_width - div_width)/2;
-
-          $("#play-button").css("left", offset);
-        }
-
         function pause_button_align() {
           var div_height = $(".record-player").height();
           var page_height = $(window).height();
@@ -376,7 +367,6 @@
         }
 
         $(document).ready(function() {
-            play_button_align();
             pause_button_align();
         });
 
@@ -385,7 +375,6 @@
         });
 
         $(window).resize(function() {
-            play_button_align();
             pause_button_align();
         });
 

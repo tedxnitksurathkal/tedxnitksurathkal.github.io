@@ -229,6 +229,7 @@ canvas {
 	font-weight:bold;
     transition: all 0.3s ease;
     animation: focus 5s linear infinite;
+    /* border: red solid 5px; */
 }
 
 @keyframes focus {
@@ -247,8 +248,9 @@ canvas {
         text-shadow: 0px 0px 10px rgba(0,0,0,0.1);
         height: calc(var(--size) * 0.2vmin * 1.1);
         width: calc(var(--size) * 0.2vmin * 1.1);
-        padding-top: calc(var(--size) * 0.2vmin * 0.2 * 1.1);
+        padding-top: calc(var(--size) * 0.2vmin * 0.2 * 0.1);
         font-size:calc(var(--size) * 0.2vmin * 0.6 * 1.1);
+        border: red solid 5px;
     }
     85% {
         background-color: rgba(0,0,0,0.5);
@@ -265,8 +267,9 @@ canvas {
         text-shadow: 0px 0px 10px rgba(0,0,0,0.1);
         height: calc(var(--size) * 0.2vmin * 1.1);
         width: calc(var(--size) * 0.2vmin * 1.1);
-        padding-top: calc(var(--size) * 0.2vmin * 0.2 * 1.1);
+        padding-top: calc(var(--size) * 0.2vmin * 0.2 * 0.1);
         font-size:calc(var(--size) * 0.2vmin * 0.6 * 1.1);
+        border: red solid 5px;
     }
     95% {
         background-color: rgba(0,0,0,0.5);

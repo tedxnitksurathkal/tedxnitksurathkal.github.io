@@ -258,11 +258,15 @@ const MusicVisuals = {
 };
 
 document.querySelector("#play-button").addEventListener("click", () => {
-    $('#play-button').slideDown();
+    $('#play-button').css("animation", "exitBottom 1s");
+    setTimeout(function() {
+        $('#play-button').slideDown();
+        $('#play-button').css("display", "none");
+    }, 700);
     $('#title-start').slideUp();
-    $('#main-content').fadeIn("slow");
-    $('#play-button').css("display", "none");
-    // document.getElementById("pause-button").click();
+    setTimeout(function() {
+        $('#main-content').fadeIn("slow");
+    }, 1000);
     pause_button_align();
     setTimeout(revealTheme, 60000);
     if (audioContext.state === "suspended") {
@@ -1050,4 +1054,5 @@ function revealTheme() {
     $('#main-content').fadeOut("slow");
     document.querySelector("body").style.overflow = "auto";
     $('#theme-reveal').fadeIn("slow");
+    $('#audios').html('');
 }

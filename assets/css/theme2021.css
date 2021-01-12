@@ -359,9 +359,19 @@ p {
     border-radius: 40px;
     -webkit-transition: 0.2s all;
     transition: 0.2s all;
-    color: rgba(255, 0, 36, 0.7);
-    background: #101010;
+    color: #fff;
+    background: rgba(255, 0, 36, 0.8);
 }
 .home-btn:hover {
-    color: #fff;
+    color: #101010;
+}
+
+@keyframes exitBottom {
+    90% {
+        margin-top: 75vh;
+    }
+
+    99% {
+        display: none;
+    }
 }

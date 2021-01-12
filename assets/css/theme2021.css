@@ -139,18 +139,12 @@ h1 {
 .genre-switch {
     display: none;
     position: fixed;
-    top: calc(50% + (var(--size) * 0.5vmin));
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top: 7rem;
     z-index: 1;
 }
 .genre-switch:after {
     position: absolute;
-    top: 50%;
-    right: 5%;
-    height: 10px;
-    width: 10px;
     background: hsl(var(--hue), 50%, 50%);
     transform: translate(-50%, -50%);
 }
@@ -221,9 +215,9 @@ canvas {
 #pause-button {
 	box-sizing: border-box;
 	display:block;
-	width:80px;
-	height:80px;
-    padding-top: 18px;
+	height: calc(var(--size) * 0.2vmin);
+    width: calc(var(--size) * 0.2vmin);
+    padding-top: calc(var(--size) * 0.2vmin * 0.2);
     text-align: center;
 	line-height: 20px;
 	border-radius: 50%;
@@ -231,7 +225,7 @@ canvas {
 	text-align:center;
 	text-decoration:none;
 	background-color: rgba(0,0,0,0.5);
-	font-size:45px;
+	font-size:calc(var(--size) * 0.2vmin * 0.6);
 	font-weight:bold;
 	transition: all 0.3s ease;
 }

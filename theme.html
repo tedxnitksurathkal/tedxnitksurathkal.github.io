@@ -323,21 +323,34 @@
           $("#play-button").css("left", offset);
         }
 
+        function pause_button_align() {
+          var div_height = $(".record-player").height();
+          var page_height = $(window).height();
+
+          var offset = (page_height - div_height)/2;
+          offset += div_height/2;
+
+          $(".genre-switch").css("top", offset);
+        }
+
         $(document).ready(function() {
             play_button_align();
+            pause_button_align();
             $("#play-button").fadeIn("slow");
         });
 
         $(window).resize(function() {
             play_button_align();
+            pause_button_align();
         });
 
         $('#play-button').on('click', function(){
             $('#play-button').slideDown();
             $('#title-start').slideUp();
-            setTimeout($('#main-content').fadeIn("slow"),1000);
+            $('#main-content').fadeIn("slow");
             $('#play-button').css("display","none");
             document.getElementById("pause-button").click();
+            pause_button_align();
         });
     </script>
 </body>

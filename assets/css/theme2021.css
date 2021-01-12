@@ -298,7 +298,7 @@ canvas {
 }
 
 #play-button {
-    display: none;
+    display: block;
     box-sizing: border-box;
 	width:200px;
 	height:200px;
@@ -325,10 +325,6 @@ canvas {
 	text-shadow: 0px 0px 10px rgba(0,0,0,0.1);
 }
 
-#title-start {
-    font-size: 50px;
-}
-
 .desc {
     margin-top: 170px;
     padding: 50px;
@@ -337,6 +333,17 @@ p {
     font-weight: 700;
     font-size: 0.8em;
 }
+
+@media only screen and (max-width: 451px) {
+    p {
+        font-weight: 500;
+        font-size: 0.6em;
+    }
+    h1 {
+        font-size: clamp(1.7rem, 5vmin, 2.25rem);
+    }
+}
+
 .home-btn {
     font-family: 'Montserrat', sans-serif;
     display: block;

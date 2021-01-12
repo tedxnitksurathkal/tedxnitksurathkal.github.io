@@ -68,7 +68,6 @@ const TRACKS = {
 
 let currentTrack = null;
 let timer;
-let timeElapsed = true;
 
 for (let genre of Object.keys(TRACKS)) {
     TRACKS[genre].TRACK.loop = true;

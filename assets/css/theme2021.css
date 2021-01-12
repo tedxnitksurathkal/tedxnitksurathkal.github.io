@@ -242,6 +242,9 @@ canvas {
         padding-top: calc(var(--size) * 0.2vmin * 0.2);
         font-size:calc(var(--size) * 0.2vmin * 0.6);
     }
+    78% {
+        border: none;
+    }
     80% {
         background-color: rgb(0,0,0);
         box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
@@ -270,6 +273,9 @@ canvas {
         padding-top: calc(var(--size) * 0.2vmin * 0.2 * 0.1);
         font-size:calc(var(--size) * 0.2vmin * 0.6 * 1.1);
         border: red solid 5px;
+    }
+    92% {
+        border: none;
     }
     95% {
         background-color: rgba(0,0,0,0.5);
@@ -333,17 +339,17 @@ canvas {
     padding: 50px;
 }
 p {
-    font-weight: 700;
-    font-size: 0.8em;
+    font-weight: 500;
+    font-size: 0.7em;
 }
 
 @media only screen and (max-width: 451px) {
     p {
-        font-weight: 500;
+        font-weight: 400;
         font-size: 0.6em;
     }
     h1 {
-        font-size: clamp(1.7rem, 5vmin, 2.25rem);
+        font-size: clamp(1.5rem, 5vmin, 2rem);
     }
 }
 

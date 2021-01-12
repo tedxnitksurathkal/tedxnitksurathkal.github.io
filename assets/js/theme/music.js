@@ -268,7 +268,7 @@ document.querySelector("#play-button").addEventListener("click", () => {
         $('#main-content').fadeIn("slow");
     }, 1000);
     pause_button_align();
-    setTimeout(revealTheme, 60000);
+    setTimeout(revealTheme, 6000);
     if (audioContext.state === "suspended") {
         audioContext.resume();
     }
@@ -1053,6 +1053,10 @@ function revealTheme() {
     }
     $('#main-content').fadeOut("slow");
     document.querySelector("body").style.overflow = "auto";
-    $('#theme-reveal').fadeIn("slow");
     $('#audios').html('');
+    setTimeout(function() {
+        $('#theme-reveal').fadeIn("slow");
+        $("body").css("background-color", "#101010");
+        $('#logo').attr("src", "assets/img/tedx-white.png");
+    }, 500);
 }

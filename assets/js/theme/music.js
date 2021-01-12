@@ -238,19 +238,28 @@ const MusicVisuals = {
     }
 };
 
+document.querySelector("#play-button").addEventListener("click", () => {
+    if (audioContext.state === "suspended") {
+        audioContext.resume();   
+    }
+});
 
-document.querySelector("#pause-button", "#play-button").addEventListener("click", () => {
+document.querySelector("#pause-button").addEventListener("click", () => {
     if (audioContext.state === "suspended") {
         audioContext.resume();   
     }
     if (effectPlaying === 1) {
-        gooeyAudio.paused ? gooeyAudio.play() : gooeyAudio.pause();
+        gooeyAudio.pause();
+        nextSong(2);
+        effectPlaying = 2;
     } else if (effectPlaying === 2) {
-        roundAudio.paused ? roundAudio.play() : roundAudio.pause();
+        roundAudio.pause();
+        nextSong(1);
+        effectPlaying = 1;
     }
 });
 
-// Toggle between pause and play
+/* Toggle between pause and play
 document.querySelector("#pause-button").addEventListener("click", () => {
     if(document.querySelector("#pause-button i").classList.contains("ion-play")) {
         document.querySelector("#pause-button i").classList.add("ion-pause");
@@ -260,7 +269,7 @@ document.querySelector("#pause-button").addEventListener("click", () => {
         document.querySelector("#pause-button i").classList.add("ion-play");
         document.querySelector("#pause-button i").classList.remove("ion-pause");
     }
-});
+});*/
 
 // if (gooeyAudio.readyState >= gooeyAudio.HAVE_FUTURE_DATA) {
 //     console.log("CANPLAY");
@@ -282,7 +291,6 @@ document.querySelector("#gooey-audio").addEventListener("pause", () => {
             bars[i].style.visibility = "hidden";
         }
     }
-
     MusicVisuals.stop();
 });
 
@@ -297,7 +305,7 @@ document.querySelector("#gooey-audio").addEventListener("ended", () => {
 
 document.querySelector("#gooey-audio").addEventListener("timeupdate", () => {
     // Maybe randomly choose a value between 30-45 sec
-    if (gooeyAudio.currentTime >= 45) {
+    if (gooeyAudio.currentTime >= 30) {
         gooeyAudio.pause();
         nextSong(2);
         effectPlaying = 2;
@@ -305,9 +313,7 @@ document.querySelector("#gooey-audio").addEventListener("timeupdate", () => {
 });
 
 document.querySelector("#round-audio").addEventListener("timeupdate", () => {
-    if (roundAudio.currentTime >= 45) {
-        // roundAudio.src = ""
-        // roundAudio.load();
+    if (roundAudio.currentTime >= 30) {
         roundAudio.pause();
         nextSong(1);
         effectPlaying = 1;
@@ -319,6 +325,8 @@ function nextSong(eff) {
     // Change below line to set song directly instead of horrendous tertiary op
     if (eff === 1) {
         document.querySelector("canvas").style.visibility = "hidden";
+        document.querySelector("canvas").style.opacity = "0";
+        document.querySelector("canvas").style.transition = "opacity 3s, visibility 3s";
         gooeyAudio.src = gooeyAudio.src.slice(window.location.origin.length) === "/assets/songs/waww.mp3" ? "/assets/songs/odd-look.mp3" : "/assets/songs/waww.mp3";
         if (audioContext.state === "suspended" || audioContext.state === "interrupted") {
             audioContext.resume();
@@ -326,6 +334,8 @@ function nextSong(eff) {
         gooeyAudio.play();
     } else if (eff === 2) {
         document.querySelector("canvas").style.visibility = "visible";
+        document.querySelector("canvas").style.opacity = "1";
+        document.querySelector("canvas").style.transition = "opacity 2s";
         Player.nextSong();
     }
 }

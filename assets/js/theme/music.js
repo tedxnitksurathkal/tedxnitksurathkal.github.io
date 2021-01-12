@@ -1019,5 +1019,6 @@ function revealTheme() {
         roundAudio.pause();
     }
     $('#main-content').fadeOut("slow");
+    document.querySelector("body").style.overflow = "auto"
     $('#theme-reveal').fadeIn("slow");
 }

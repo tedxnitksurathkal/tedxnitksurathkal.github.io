@@ -177,8 +177,27 @@ GENRE_SWITCH.addEventListener('click', () => {
 
 const gooeyAudio = document.querySelector("#gooey-audio");
 const roundAudio = document.querySelector("#round-audio");
-const songs = [];
+const songs = [
+    'assets/songs/bad_guy.mp3',
+    'assets/songs/blank_space.mp3',
+    'assets/songs/caravan.mp3',
+    'assets/songs/comfortably_numb.mp3',
+    'assets/songs/fly_me_to_the_moon.mp3',
+    'assets/songs/guns_n_roses.mp3',
+    'assets/songs/levitating.mp3',
+    'assets/songs/love_yourself.mp3',
+    'assets/songs/shape_of_you.mp3',
+    'assets/songs/wonderful_world.mp3'
+];
 let effectPlaying = 1;
+
+function randSongIndex() {
+    return Math.floor(Math.random() * songs.length);
+}
+
+gooeyAudio.src = songs.splice(randSongIndex(), 1)[0];
+gooeyAudio.load();
+// roundAudio.src = songs.splice(randSongIndex(), 1)[0]
 
 
 // GOOEY BAR JS - EFFECT 1
@@ -239,22 +258,33 @@ const MusicVisuals = {
 };
 
 document.querySelector("#play-button").addEventListener("click", () => {
+    $('#play-button').slideDown();
+    $('#title-start').slideUp();
+    $('#main-content').fadeIn("slow");
+    $('#play-button').css("display", "none");
+    // document.getElementById("pause-button").click();
+    pause_button_align();
+    setTimeout(revealTheme, 60000);
     if (audioContext.state === "suspended") {
-        audioContext.resume();   
+        audioContext.resume();
     }
+    gooeyAudio.play();
 });
 
 document.querySelector("#pause-button").addEventListener("click", () => {
+    if (songs.length === 0) {
+        revealTheme();
+    }
     if (audioContext.state === "suspended") {
-        audioContext.resume();   
+        audioContext.resume();
     }
     if (effectPlaying === 1) {
         gooeyAudio.pause();
-        nextSong(2);
+        nextSong(2, songs.splice(randSongIndex(), 1)[0]);
         effectPlaying = 2;
     } else if (effectPlaying === 2) {
         roundAudio.pause();
-        nextSong(1);
+        nextSong(1, songs.splice(randSongIndex(), 1)[0]);
         effectPlaying = 1;
     }
 });
@@ -294,20 +324,20 @@ document.querySelector("#gooey-audio").addEventListener("pause", () => {
     MusicVisuals.stop();
 });
 
-document.querySelector("#gooey-audio").addEventListener("ended", () => {
-    MusicVisuals.stop();
-    gooeyAudio.src = gooeyAudio.src === "https://api.soundcloud.com/tracks/75308415/stream?client_id=b8f06bbb8e4e9e201f9e6e46001c3acb" ? "https://katiebaca.com/tutorial/odd-look.mp3" : "https://api.soundcloud.com/tracks/75308415/stream?client_id=b8f06bbb8e4e9e201f9e6e46001c3acb";
-    // if (audioContext.state === "suspended") {
-    //     audioContext.resume();
-    // }
-    gooeyAudio.play();
-});
+// document.querySelector("#gooey-audio").addEventListener("ended", () => {
+//     MusicVisuals.stop();
+//     gooeyAudio.src = gooeyAudio.src === "https://api.soundcloud.com/tracks/75308415/stream?client_id=b8f06bbb8e4e9e201f9e6e46001c3acb" ? "https://katiebaca.com/tutorial/odd-look.mp3" : "https://api.soundcloud.com/tracks/75308415/stream?client_id=b8f06bbb8e4e9e201f9e6e46001c3acb";
+//     // if (audioContext.state === "suspended") {
+//     //     audioContext.resume();
+//     // }
+//     gooeyAudio.play();
+// });
 
 document.querySelector("#gooey-audio").addEventListener("timeupdate", () => {
     // Maybe randomly choose a value between 30-45 sec
     if (gooeyAudio.currentTime >= 30) {
         gooeyAudio.pause();
-        nextSong(2);
+        nextSong(2, songs.splice(randSongIndex(), 1)[0]);
         effectPlaying = 2;
     }
 });
@@ -315,19 +345,19 @@ document.querySelector("#gooey-audio").addEventListener("timeupdate", () => {
 document.querySelector("#round-audio").addEventListener("timeupdate", () => {
     if (roundAudio.currentTime >= 30) {
         roundAudio.pause();
-        nextSong(1);
+        nextSong(1, songs.splice(randSongIndex(), 1)[0]);
         effectPlaying = 1;
     }
 });
 
 // TODO: Give function parameter of which song to play just like how its done in 2nd effect below
-function nextSong(eff) {
+function nextSong(eff, song) {
     // Change below line to set song directly instead of horrendous tertiary op
     if (eff === 1) {
         document.querySelector("canvas").style.visibility = "hidden";
         document.querySelector("canvas").style.opacity = "0";
         document.querySelector("canvas").style.transition = "opacity 3s, visibility 3s";
-        gooeyAudio.src = gooeyAudio.src.slice(window.location.origin.length) === "/assets/songs/waww.mp3" ? "/assets/songs/odd-look.mp3" : "/assets/songs/waww.mp3";
+        gooeyAudio.src = song;
         if (audioContext.state === "suspended" || audioContext.state === "interrupted") {
             audioContext.resume();
         }
@@ -336,7 +366,7 @@ function nextSong(eff) {
         document.querySelector("canvas").style.visibility = "visible";
         document.querySelector("canvas").style.opacity = "1";
         document.querySelector("canvas").style.transition = "opacity 2s";
-        Player.nextSong();
+        Player.nextSong(song);
     }
 }
 
@@ -850,7 +880,7 @@ var Controls = {
             y = -y;
         }
         if (this.getQuadrant() == 4) {
-            y -->= -y;
+            y-- >= -y;
         }
         this.context.arc(
             this.scene.radius + x,
@@ -987,7 +1017,7 @@ var Player = {
     // This is the function I made for our use, only parameter required is the correct song URL
     nextSong: function (song) {
         if (!this.roundAudio.paused) { this.roundAudio.pause(); }
-        this.roundAudio.src = this.roundAudio.src.slice(window.location.origin.length) === "/assets/songs/waww.mp3" ? "/assets/songs/odd-look.mp3" : "/assets/songs/waww.mp3";
+        this.roundAudio.src = song;
         if (this.context.state === "suspended" || this.context.state === "interrupted") {
             this.context.resume();
         }
@@ -1018,6 +1048,6 @@ function revealTheme() {
         roundAudio.pause();
     }
     $('#main-content').fadeOut("slow");
-    document.querySelector("body").style.overflow = "auto"
+    document.querySelector("body").style.overflow = "auto";
     $('#theme-reveal').fadeIn("slow");
 }

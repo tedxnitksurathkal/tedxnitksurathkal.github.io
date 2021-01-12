@@ -146,8 +146,8 @@
     </div>
 
     <div id="audios">
-        <audio src="/assets/songs/odd-look.mp3" controls preload="auto" crossorigin id="gooey-audio"></audio>
-        <audio src="/assets/songs/waww.mp3" controls preload="auto" crossorigin id="round-audio"></audio>
+        <audio controls preload="auto" crossorigin id="gooey-audio"></audio>
+        <audio controls preload="auto" crossorigin id="round-audio"></audio>
     </div>
 
     <div class="player">
@@ -374,21 +374,15 @@
             pause_button_align();
         });
 
-        let timeElapsed = true;
-
-        $('#play-button').on('click', function(){
-            $('#play-button').slideDown();
-            $('#title-start').slideUp();
-            $('#main-content').fadeIn("slow");
-            $('#play-button').css("display","none");
-            document.getElementById("pause-button").click();
-            pause_button_align();
-            setTimeout(function() {
-                if(timeElapsed) {
-                    revealTheme();
-                }
-            },60000);
-        });
+        // $('#play-button').on('click', function(){
+        //     $('#play-button').slideDown();
+        //     $('#title-start').slideUp();
+        //     $('#main-content').fadeIn("slow");
+        //     $('#play-button').css("display","none");
+        //     // document.getElementById("pause-button").click();
+        //     pause_button_align();
+        //     setTimeout(revealTheme,60000);
+        // });
     </script>
 </body>
 

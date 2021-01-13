@@ -1051,12 +1051,13 @@ function revealTheme() {
     } else if (effectPlaying === 2) {
         roundAudio.pause();
     }
-    $('#main-content').fadeOut("slow");
-    document.querySelector("body").style.overflow = "auto";
     $('#audios').html('');
+    document.querySelector("body").style.overflow = "auto";
     setTimeout(function() {
+        $("#starting").fadeOut("fast");
+        $('#main-content').fadeOut("fast");
         $('#theme-reveal').fadeIn("slow");
         $("body").css("background-color", "#101010");
-        $('#logo').attr("src", "assets/img/tedx-white.png");
+        // $('#logo').attr("src", "assets/img/tedx-white.png");
     }, 500);
 }

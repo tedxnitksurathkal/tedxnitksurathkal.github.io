@@ -178,16 +178,16 @@ GENRE_SWITCH.addEventListener('click', () => {
 const gooeyAudio = document.querySelector("#gooey-audio");
 const roundAudio = document.querySelector("#round-audio");
 const songs = [
-    'assets/songs/bad_guy.mp3',
-    'assets/songs/blank_space.mp3',
-    'assets/songs/caravan.mp3',
-    'assets/songs/comfortably_numb.mp3',
-    'assets/songs/fly_me_to_the_moon.mp3',
-    'assets/songs/guns_n_roses.mp3',
-    'assets/songs/levitating.mp3',
-    'assets/songs/love_yourself.mp3',
-    'assets/songs/shape_of_you.mp3',
-    'assets/songs/wonderful_world.mp3'
+    'assets/songs/away-you-three-inch-fool.mp3',
+    'assets/songs/i-am-sick-when-i-do-look-on-thee.mp3',
+    'assets/songs/i-scorn-you-scurvy-companion.mp3',
+    'assets/songs/out-of-my-sight-thou-dost-infect-mine-eyes.mp3',
+    'assets/songs/the-tartness-of-his-face-sours-ripe-grapes.mp3',
+    'assets/songs/thou-art-a-boil-a-plague-sore.mp3',
+    'assets/songs/thou-art-unfit-for-any-place-but-hell.mp3',
+    'assets/songs/thou-damned-and-luxurious-mountain-goat.mp3',
+    'assets/songs/thy-tongue-outvenoms-all-the-worms-of-nile.mp3',
+    'assets/songs/your-brain-is-as-dry-as-the-remainder-biscuit-after-voyage.mp3'
 ];
 let effectPlaying = 1;
 
@@ -259,7 +259,7 @@ const MusicVisuals = {
 
 document.querySelector("#play-button").addEventListener("click", () => {
     $('#play-button').css("animation", "exitBottom 1s");
-    setTimeout(function() {
+    setTimeout(function () {
         $('#play-button').slideDown();
         $('#play-button').css("display", "none");
     }, 700);
@@ -269,25 +269,25 @@ document.querySelector("#play-button").addEventListener("click", () => {
 
 function poemReveal() {
     document.querySelector("body").style.overflow = "auto";
-    setTimeout(function() {
+    setTimeout(function () {
         $('#line1').fadeIn("slow");
     }, 500);
-    setTimeout(function() {
+    setTimeout(function () {
         $('#line2').fadeIn("slow");
     }, 1500);
-    setTimeout(function() {
+    setTimeout(function () {
         $('#line3').fadeIn("slow");
     }, 2500);
-    setTimeout(function() {
+    setTimeout(function () {
         $('#line4').fadeIn("slow");
     }, 3500);
-    setTimeout(function() {
+    setTimeout(function () {
         $('#line5').fadeIn("slow");
     }, 4500);
-    setTimeout(function() {
+    setTimeout(function () {
         $('#line6').fadeIn("slow");
     }, 5500);
-    setTimeout(function() {
+    setTimeout(function () {
         $('#line7').fadeIn("slow");
     }, 6000);
 }
@@ -300,7 +300,7 @@ function bringInSong() {
     document.querySelector("body").style.overflow = "hidden";
     $('#poem-reveal').fadeOut("slow");
     pause_button_align();
-    setTimeout(function() {
+    setTimeout(function () {
         $('#main-content').fadeIn("slow");
         gooeyAudio.play();
         if (audioContext.state === "suspended") {
@@ -1088,7 +1088,7 @@ function revealTheme() {
     }
     $('#audios').html('');
     document.querySelector("body").style.overflow = "auto";
-    setTimeout(function() {
+    setTimeout(function () {
         $("#starting").fadeOut("fast");
         $('#main-content').fadeOut("fast");
         $('#theme-reveal').fadeIn("slow");

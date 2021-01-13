@@ -302,11 +302,11 @@ function bringInSong() {
     pause_button_align();
     setTimeout(function () {
         $('#main-content').fadeIn("slow");
-        gooeyAudio.play();
-        if (audioContext.state === "suspended") {
-            audioContext.resume();
-        }
     }, 1000);
+    if (audioContext.state === "suspended") {
+        audioContext.resume();
+    }
+    gooeyAudio.play();
     setTimeout(revealTheme, 60000);
 }
 

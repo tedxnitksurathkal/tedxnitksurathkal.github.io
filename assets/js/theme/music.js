@@ -308,7 +308,7 @@ function bringInSong() {
         audioContext.resume();
     }
     gooeyAudio.play();
-    setTimeout(revealTheme, 100000);
+    setTimeout(revealTheme, 90000);
 }
 
 document.querySelector("#pause-button").addEventListener("click", () => {

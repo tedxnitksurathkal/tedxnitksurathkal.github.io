@@ -42,6 +42,11 @@ h1 {
     color: hsl(var(--hue), 60%, 60%);
     transition: color 0.25s;
 }
+@media only screen and (max-height: 700px) {
+    h1 {
+        margin-top: 150px;
+    }
+}
 #title-desc {
     position: unset;
     transform: unset;
@@ -369,7 +374,7 @@ p {
 }
 
 .home-btn {
-    margin: 0 auto;
+    margin: 10px auto;
     width: fit-content;
     font-family: 'Montserrat', sans-serif;
     display: inline-block;
@@ -397,4 +402,53 @@ p {
     99% {
         display: none;
     }
+}
+
+#poem-reveal {
+    margin-top: 140px;
+}
+
+.poem-text {
+    display: none;
+    color: #444343 !important;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 700px) {
+    .poem-text {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .poem-text {
+        font-size: 1.4em;
+        line-height: 1.7em;
+    }
+}
+
+#theme-reveal-button {
+    display: block;
+    box-sizing: border-box;
+	width:90px;
+	height:90px;
+    padding-top: 15px;
+    text-align: center;
+	border-radius: 50%;
+	color:#f5f5f5;
+	text-decoration:none;
+	background-color: rgba(0,0,0,0.5);
+	font-size:50px;
+	font-weight:bold;
+    transition: all 0.3s ease;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#theme-reveal-button:hover {
+    background-color: rgba(0,0,0,0.8);
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+	text-shadow: 0px 0px 10px rgba(0,0,0,0.1);
 }

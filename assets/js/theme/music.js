@@ -264,16 +264,51 @@ document.querySelector("#play-button").addEventListener("click", () => {
         $('#play-button').css("display", "none");
     }, 700);
     $('#title-start').slideUp();
+    poemReveal();
+});
+
+function poemReveal() {
+    document.querySelector("body").style.overflow = "auto";
+    setTimeout(function() {
+        $('#line1').fadeIn("slow");
+    }, 500);
+    setTimeout(function() {
+        $('#line2').fadeIn("slow");
+    }, 1500);
+    setTimeout(function() {
+        $('#line3').fadeIn("slow");
+    }, 2500);
+    setTimeout(function() {
+        $('#line4').fadeIn("slow");
+    }, 3500);
+    setTimeout(function() {
+        $('#line5').fadeIn("slow");
+    }, 4500);
+    setTimeout(function() {
+        $('#line6').fadeIn("slow");
+    }, 5500);
+    setTimeout(function() {
+        $('#line7').fadeIn("slow");
+    }, 6000);
+}
+
+document.querySelector("#theme-reveal-button").addEventListener("click", () => {
+    bringInSong();
+});
+
+function bringInSong() {
+    document.querySelector("body").style.overflow = "hidden";
+    $('#poem-reveal').fadeOut("slow");
+    pause_button_align();
     setTimeout(function() {
         $('#main-content').fadeIn("slow");
+        gooeyAudio.play();
+        if (audioContext.state === "suspended") {
+            audioContext.resume();
+        }
     }, 1000);
-    pause_button_align();
     setTimeout(revealTheme, 60000);
-    if (audioContext.state === "suspended") {
-        audioContext.resume();
-    }
-    gooeyAudio.play();
-});
+}
 
 document.querySelector("#pause-button").addEventListener("click", () => {
     if (songs.length === 0) {

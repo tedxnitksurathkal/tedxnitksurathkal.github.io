@@ -43,7 +43,7 @@
         }
 
         #instructions {
-            color: rgba(255,0,36,0.8);
+            color: rgba(255, 0, 36, 0.8);
         }
 
         .instructions-desc {
@@ -57,21 +57,21 @@
         }
 
         #iframe-crossword {
-            margin:auto; 
-            display:flex; 
-            flex-direction:column; 
-            width:400px;
-            height:880px; 
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            height: 880px;
         }
     </style>
 </head>
 
 <body style="background-color: #101010;overflow: auto;">
-    
-<div class="loader">
-    <div class="loader-outter"></div>
-    <div class="loader-inner" style="background-image: url('assets/img/loader.png');"></div>
-</div>
+
+    <div class="loader">
+        <div class="loader-outter"></div>
+        <div class="loader-inner" style="background-image: url('assets/img/loader.png');"></div>
+    </div>
 
     <div class="container text-center">
         <img src="assets/img/tedx-white.png" height="70" id="theme-reveal-logo" style="margin-top: 10px;">
@@ -81,29 +81,46 @@
             <div class="text-center">
                 <h1 id="title-desc"> Pause to Play </h1>
             </div>
-            <div class="row instructions-desc">
-                <h2 id="instructions">INSTRUCTIONS</h2>
-                <p>
-                    <ul>
-                        <li>All the blanks in the crossword are titles of songs from the playlist. (Revisit the theme link until you catch all the 10 songs!)</li>
-                        <li>Along with audio snippets you heard in the playlist, decipher the clues given below to solve the puzzle.</li>
-                        <li>Take a screenshot of your solution, DM tedxnitksurathkal on Instagram as well as post it as your Instagram story tagging tedxnitksurathkal. (Failing to do either will disqualify you from the process)</li>  
-                        <li>The top three participants will be given cash prizes and top 100 participants will be given exciting gifts! </li>
-                    </ul>
-                </p>
-            </div>
-            <div class="text-center hurry-up">
-                Hurry up!! The clock is ticking ⏳
-            </div>
             <div class="row">
-                <div id="iframe-crossword">
-                    <iframe border="0" src="https://crosswordlabs.com/embed/xword-47?clue_height=34" style="flex:1; width:100%; padding:5px 0px 0 5px; border:3px solid #101010; "></iframe>
-                    <a target="_blank" style="align-self:center; font-size:12px; color:#fff; padding-top:10px; text-decoration:none;text-align:center" href="https://crosswordlabs.com">Crossword Puzzle Maker</a>
+                <div class="col-sm">
+                    <div class="row instructions-desc">
+                        <h2 id="instructions">INSTRUCTIONS</h2>
+                        <p>
+                        <ul>
+                            <li>All the blanks in the crossword are titles of songs from the playlist. (Revisit the
+                                theme
+                                link until you catch all the 10 songs!)</li>
+                            <li>Along with audio snippets you heard in the playlist, decipher the clues given below to
+                                solve
+                                the puzzle.</li>
+                            <li>Take a screenshot of your solution, DM tedxnitksurathkal on Instagram as well as post it
+                                as
+                                your Instagram story tagging tedxnitksurathkal. (Failing to do either will disqualify
+                                you
+                                from the process)</li>
+                            <li>The top three participants will be given cash prizes and top 100 participants will be
+                                given
+                                exciting gifts! </li>
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="text-center hurry-up">
+                        Hurry up!! The clock is ticking ⏳
+                    </div>
+                </div>
+                <div class="col-sm row" style="margin-top: 5rem;">
+                    <div id="iframe-crossword">
+                        <iframe border="0" src="https://crosswordlabs.com/embed/xword-47?clue_height=34"
+                            style="flex:1; width:100%; padding:5px 0px 0 5px; border:3px solid #101010; "></iframe>
+                        <a target="_blank"
+                            style="align-self:center; font-size:12px; color:#fff; padding-top:10px; text-decoration:none;text-align:center"
+                            href="https://crosswordlabs.com">Crossword Puzzle Maker</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- GTAG Script -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
     <script>
@@ -113,7 +130,7 @@
 
         gtag('config', 'UA-110715968-3');
 
-        $(window).on('load', function() {
+        $(window).on('load', function () {
             $('.loader').delay(100).fadeOut('slow');
         });
     </script>

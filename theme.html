@@ -156,7 +156,7 @@
         </div>
 
         <div class="genre-switch">
-            <a id="pause-button"><i class="icon ion-pause"></i></a>
+            <a id="pause-button"><img src="/assets/img/theme/p2p_logo.png" alt="P2P" class="logo-icon"></a>
         </div>
 
         <div id="audios">
@@ -165,7 +165,6 @@
         </div>
 
         <div class="player">
-            <!-- <canvas></canvas> -->
             <div class="playarea"></div>
         </div>
 
@@ -309,41 +308,50 @@
             <p id="line4" class="poem-text">As fools we sway.</p>
             <p id="line5" class="poem-text">Here's a chance,</p>
             <p id="line6" class="poem-text">Sin; Pause to Play.</p>
-            <p id="line7" class="poem-text"><a id="theme-reveal-button"><i class="icon ion-pause"></i></a></p>
+            <p id="line7" class="poem-text"><a id="theme-reveal-button"><img src="/assets/img/theme/p2p_logo.png" alt="P2P" class="logo-icon"></a></p>
         </div>
     </div>
     <div id="theme-reveal" class="container text-center" style="display: none;">
         <div>
-            <img src="assets/img/tedx-white.png" height="70" id="theme-reveal-logo" style="margin-top: 10px;">
+            <img src="assets/img/tedx-white.png" height="70" id="theme-reveal-logo">
         </div>
         <div>
-            <h1 id="title-desc"> Pause to Play </h1>
+            <h1 id="title-desc"> <img src="assets/img/theme/p2p_title.png" alt="Pause to Play" class="p2p_title"> </h1>
         </div>
         <div class="desc">
-            <p>A "Pause" is a brief interruption that delivers two choices: To catch
-                some breath and continue along the same path or retrace steps and
-                carve out a new one.
+            <p>A "Pause" delivers two choices: continue along the same path or carve
+                out a new one.
             </p>
             <p>
-                The theme revolves around the idea of pausing to reflect upon
-                one's actions and implementing changes in that timeframe in
-                order to continue playing the game called life. "Pauses" are
-                projected as preparatory phases that enable breaking the chain
-                of not-so-fortunate events in "play". Pauses can be due to obstacles
-                strewn in our paths that are meant to teach us lessons along
-                the way or can be self imposed; it is meant to strengthen our
-                skills, to adapt better and evolve.
+                Pause to reflect on your decisions. 
             </p>
             <p>
-                TEDxNITKSurathkal 2021 aims to provide a platform
-                for self introspection through influential talks filled
-                with narratives that fuels the opting of right combination of pauses and plays.
+                Pause to continue playing the game of Life.
             </p>
             <p>
-                "Pause to Play" signifies that the motive of each pause should be to
-                continue the play. The idea is to motivate the audience to
-                continue the hustle with added experience and knowledge
-                derived from the valuable inputs of our speakers.
+                Pauses can be self-imposed or obstacles, meant to 
+                teach us lessons along the way. 
+            </p>
+            <p>
+                In these Pauses, let's strengthen our skills to adapt and evolve.
+            </p>
+            <p>
+                "Pause to Play" promotes the idea of pausing to walk 
+                away stronger with a new outlook on Life.
+            </p>
+            <p>
+                <strong>TEDxNITKSurathkal 2021</strong> provides a platform for self-introspection, 
+                through narratives with the right combination of pause and play.
+            </p>
+            <p>
+                We hope to motivate you to continue the hustle with experience and 
+                knowledge derived from our speaker's journeys.
+            </p>
+            <p>
+                <strong>
+                    Take a shot at solving our crossword and win exciting prizes!<br>
+                    P.S. Cash Prizes in store for winners!!
+                </strong>
             </p>
             <p style="margin: auto; margin-bottom: 0;">
                 <a href="/" class="home-btn">Home</a>
@@ -351,21 +359,6 @@
             </p>
         </div>
     </div>
-
-    <!-- <div class="controls">
-            <div class="progress">
-                <div class="progress-bar" id="progress-bar"></div>
-            </div>
-        </div> -->
-    <!-- <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800">
-            <defs></defs>
-            <filter id="goo">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
-                    result="goo"></feColorMatrix>
-                <feComposite in="SourceGraphic" in2="goo" operator="atop"></feComposite>
-            </filter>
-        </svg> -->
 
     <!-- Scripts for the DJ Mixer -->
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
@@ -402,16 +395,6 @@
         $(window).on('load', function () {
             $('.loader').delay(100).fadeOut('slow');
         });
-
-        // $('#play-button').on('click', function(){
-        //     $('#play-button').slideDown();
-        //     $('#title-start').slideUp();
-        //     $('#main-content').fadeIn("slow");
-        //     $('#play-button').css("display","none");
-        //     // document.getElementById("pause-button").click();
-        //     pause_button_align();
-        //     setTimeout(revealTheme,60000);
-        // });
     </script>
 </body>
 

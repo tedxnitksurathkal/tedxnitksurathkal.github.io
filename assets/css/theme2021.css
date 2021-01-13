@@ -238,11 +238,15 @@ canvas {
 	text-align:center;
 	text-decoration:none;
 	background-color: rgba(0,0,0,0.5);
-	font-size:calc(var(--size) * 0.2vmin * 0.6);
+	
 	font-weight:bold;
     transition: all 0.3s ease;
     animation: focus 5s linear infinite;
     /* border: red solid 5px; */
+}
+
+.logo-icon {
+    height:calc(var(--size) * 0.2vmin * 0.6);
 }
 
 @keyframes focus {
@@ -253,7 +257,6 @@ canvas {
         height: calc(var(--size) * 0.2vmin);
         width: calc(var(--size) * 0.2vmin);
         padding-top: calc(var(--size) * 0.2vmin * 0.2);
-        font-size:calc(var(--size) * 0.2vmin * 0.6);
     }
     78% {
         border: none;
@@ -264,8 +267,7 @@ canvas {
         text-shadow: 0px 0px 10px rgba(0,0,0,0.1);
         height: calc(var(--size) * 0.2vmin * 1.1);
         width: calc(var(--size) * 0.2vmin * 1.1);
-        padding-top: calc(var(--size) * 0.2vmin * 0.2 * 0.1);
-        font-size:calc(var(--size) * 0.2vmin * 0.6 * 1.1);
+        padding-top: calc(var(--size) * 0.2vmin * 0.1);
         border: red solid 5px;
     }
     85% {
@@ -274,8 +276,7 @@ canvas {
         text-shadow: none;
         height: calc(var(--size) * 0.2vmin);
         width: calc(var(--size) * 0.2vmin);
-        padding-top: calc(var(--size) * 0.2vmin * 0.2);
-        font-size:calc(var(--size) * 0.2vmin * 0.6);
+        padding-top: calc(var(--size) * 0.2vmin * 0.3);
     }
     90% {
         background-color: rgb(0,0,0);
@@ -283,8 +284,7 @@ canvas {
         text-shadow: 0px 0px 10px rgba(0,0,0,0.1);
         height: calc(var(--size) * 0.2vmin * 1.1);
         width: calc(var(--size) * 0.2vmin * 1.1);
-        padding-top: calc(var(--size) * 0.2vmin * 0.2 * 0.1);
-        font-size:calc(var(--size) * 0.2vmin * 0.6 * 1.1);
+        padding-top: calc(var(--size) * 0.2vmin * 0.1);
         border: red solid 5px;
     }
     92% {
@@ -297,7 +297,6 @@ canvas {
         height: calc(var(--size) * 0.2vmin);
         width: calc(var(--size) * 0.2vmin);
         padding-top: calc(var(--size) * 0.2vmin * 0.2);
-        font-size:calc(var(--size) * 0.2vmin * 0.6);
     }
 }
 
@@ -451,4 +450,9 @@ p {
     background-color: rgba(0,0,0,0.8);
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
 	text-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.p2p_title {
+    height: 10rem;
+    margin-top: 10px;
 }

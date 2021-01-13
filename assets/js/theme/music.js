@@ -258,6 +258,7 @@ const MusicVisuals = {
 };
 
 document.querySelector("#play-button").addEventListener("click", () => {
+    $("#help-text").fadeOut("fast");
     $('#play-button').css("animation", "exitBottom 1s");
     setTimeout(function () {
         $('#play-button').slideDown();

@@ -49,6 +49,11 @@
         </div>
         <h1 id="title-start"><i class="icon ion-android-volume-up"></i> Sound on</h1>
         <a id="play-button"><i class="icon ion-play"></i></a>
+        <div class="container text-center" id="help-text" style="margin-top: 60vh;">
+            <p>Note :
+                After 10 songs are done or after 100s of play, whichever is sooner, the link willl direct to the theme
+                description. So play multiple times to catch all songs and complete the Puzzle!</p>
+        </div>
     </div>
 
     <div id="main-content">
@@ -394,7 +399,7 @@
             pause_button_align();
         });
 
-        $(window).on('load', function() {
+        $(window).on('load', function () {
             $('.loader').delay(100).fadeOut('slow');
         });
 

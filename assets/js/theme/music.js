@@ -268,7 +268,7 @@ document.querySelector("#play-button").addEventListener("click", () => {
         $('#main-content').fadeIn("slow");
     }, 1000);
     pause_button_align();
-    setTimeout(revealTheme, 60000);
+    setTimeout(revealTheme, 6000);
     if (audioContext.state === "suspended") {
         audioContext.resume();
     }

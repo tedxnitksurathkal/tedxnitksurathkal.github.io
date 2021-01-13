@@ -365,7 +365,7 @@ p {
     margin: 0 auto;
     width: fit-content;
     font-family: 'Montserrat', sans-serif;
-    display: block;
+    display: inline-block;
     font-weight: 700;
     text-decoration: none;
     background-color: transparent;

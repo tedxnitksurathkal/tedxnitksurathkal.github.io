@@ -244,11 +244,15 @@ canvas {
     /* border: red solid 5px; */
 }
 
-.logo-icon {
+#logo-icon-poem {
     height: 75%;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.logo-icon {
+    height: calc(var(--size) * 0.2vmin * 0.6);
 }
 
 @keyframes focus {

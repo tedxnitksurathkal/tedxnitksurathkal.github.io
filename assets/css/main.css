@@ -358,7 +358,7 @@ img {
   top: 0;
   bottom: 0;
   width: 100%;
-  background-color: #fff;
+  background-color: #101010;
   z-index: 999999;
 }
 .loader .loader-inner {

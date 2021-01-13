@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta name="description" content="TEDx NITKSurathkal">
+    <meta name="keywords" content="TED, TEDx, TEDxNITKSurathkal, TEDx NITK, NITK, NITK Surathkal">
+    <meta name="author" content="TEDx NITK Surathkal">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TEDxNITKSurathkal | Ideas Worth Spreading">
+    <meta property="og:title" content="TEDxNITKSurathkal | Ideas Worth Spreading">
+    <meta property="og:description"
+        content="TEDxNITKSurathkal is coming back for Edition 2020! Stay tuned to find out the theme! See you on 17th October 2020.">
+    <meta property="og:url" content="http://www.tedxnitksurathkal.in/">
+    <meta property="og:image" content="http://www.tedxnitksurathkal.in/assets/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ========== Title ========== -->
+    <title>Crossword | TEDxNITKSurathkal</title>
+
+    <!-- ========== Favicon Ico ========== -->
+    <link rel="icon" href="assets/img/favicon.png">
+    <!-- ========== STYLESHEETS ========== -->
+    <!-- Bootstrap 4 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Theme for 2021-->
+    <link rel="stylesheet" href="assets/css/theme2021.css">
+
+    <style>
+        li {
+            margin-bottom: 20px;
+            font-size: 0.8em;
+        }
+
+        #instructions {
+            color: rgba(255, 0, 36, 0.8);
+        }
+
+        .instructions-desc {
+            margin-top: 60px;
+            padding: 40px;
+        }
+
+        .hurry-up {
+            font-weight: bold;
+            margin-bottom: 60px;
+        }
+
+        #iframe-crossword {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            height: 880px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #101010;overflow: auto;">
+
+    <div class="loader">
+        <div class="loader-outter"></div>
+        <div class="loader-inner" style="background-image: url('assets/img/loader.png');"></div>
+    </div>
+
+    <div class="container text-center">
+        <img src="assets/img/tedx-white.png" height="70" id="theme-reveal-logo" style="margin-top: 10px;">
+    </div>
+        <div class="container">
+            <div class="text-center">
+                <h1 id="title-desc"> <img src="assets/img/theme/p2p_title.png" alt="Pause to Play" class="p2p_title"> </h1>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="row instructions-desc">
+                        <h2 id="instructions">INSTRUCTIONS</h2>
+                        <p>
+                        <ul>
+                            <li>All the blanks in the crossword are titles of songs from the playlist. (Revisit the
+                                theme link until you catch all the 10 songs!)
+                            </li>
+                            <li>Along with audio snippets you heard in the playlist, decipher the clues given below to
+                                solve the puzzle.
+                            </li>
+                            <li>Take a screenshot of your solution, DM tedxnitksurathkal on Instagram as well as post it
+                                as your Instagram story tagging tedxnitksurathkal. (Both are required to be done to be eligible for the contest)
+                            </li>
+                            <li>The top three participants will be given cash prizes and top 100 participants will be
+                                given exciting gifts! 
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="text-center hurry-up">
+                        Hurry up!! The clock is ticking ⏳
+                    </div>
+                </div>
+                <div class="col-sm row" style="margin-top: 5rem;">
+                    <div id="iframe-crossword">
+                        <iframe border="0" src="https://crosswordlabs.com/embed/xword-47?clue_height=34"
+                            style="flex:1; width:100%; padding:5px 0px 0 5px; border:3px solid #101010; "></iframe>
+                        <a target="_blank"
+                            style="align-self:center; font-size:12px; color:#fff; padding-top:10px; text-decoration:none;text-align:center"
+                            href="https://crosswordlabs.com"><u>Crossword Puzzle Maker</u></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- GTAG Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-110715968-3');
+
+        $(window).on('load', function () {
+            $('.loader').delay(100).fadeOut('slow');
+        });
+    </script>
+</body>
+
+</html>

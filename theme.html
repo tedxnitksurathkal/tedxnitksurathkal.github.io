@@ -38,6 +38,11 @@
 </head>
 
 <body>
+    <div class="loader">
+        <div class="loader-outter"></div>
+        <div class="loader-inner" style="background-image: url('assets/img/loader.png');"></div>
+    </div>
+    
     <div id="starting">
         <div class="container text-center">
             <img src="assets/img/tedx-black.png" height="70" id="logo" style="margin-top: 10px;">
@@ -296,7 +301,7 @@
             <img src="assets/img/tedx-white.png" height="70" id="theme-reveal-logo" style="margin-top: 10px;">
         </div>
         <div>
-            <h1 id="title-desc"> Pause to Play </h1>
+            <h1> Pause to Play </h1>
         </div>
         <div class="desc">
             <p>A "Pause" is a brief interruption that delivers two choices: To catch
@@ -376,6 +381,10 @@
 
         $(window).resize(function () {
             pause_button_align();
+        });
+
+        $(window).on('load', function() {
+            $('.loader').delay(100).fadeOut('slow');
         });
 
         // $('#play-button').on('click', function(){

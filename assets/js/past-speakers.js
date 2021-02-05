@@ -1,5 +1,21 @@
 var past_speakers = [
   {
+    'name': 'Vishak Nair',
+    'image': 'vishak.jpeg'
+  },
+  {
+    'name': 'Sonia Thiyam',
+    'image': 'sonia.jpeg'
+  },
+  {
+    'name': 'Adhitya Iyer',
+    'image': 'adhitya.jpeg'
+  },
+  {
+    'name': 'Bipin Dhane',
+    'image': 'bipin.jpeg'
+  },
+  {
     'name': 'Anupama Hoskere',
     'image': 'anupama.jpg'
   },

@@ -56,13 +56,6 @@ var team = [
         "instagram": ""
     },
     {
-        "name": "Vinay Radhakrishnan",
-        "position": "Head of Curation",
-        "image": "Vinay.jpg",
-        "facebook": "",
-        "instagram": ""
-    },
-    {
         "name": "Himanshu G Sarda",
         "position": "Head of Operations",
         "image": "Himanshu.jpg",
@@ -70,9 +63,23 @@ var team = [
         "instagram": ""
     },
     {
+        "name": "Vinay Radhakrishnan",
+        "position": "Head of Curation",
+        "image": "Vinay.jpg",
+        "facebook": "",
+        "instagram": ""
+    },
+    {
         "name": "Apoorva M K",
         "position": "Co-Curator",
         "image": "Apoorva.jpg",
+        "facebook": "",
+        "instagram": ""
+    },
+    {
+        "name": "Jiffina James Patrick",
+        "position": "Co-Curator",
+        "image": "Jiffna.jpg",
         "facebook": "",
         "instagram": ""
     },

@@ -72,5 +72,15 @@ var speakers = [
     ],
     show_after: "2021-02-04T09:30:00+000",
     img_link: "pragya.jpg"
+  },
+  {
+    name: "Abhishek Banerjee",
+    title: "Actor | Casting Director",
+    description: [
+      "A man of many talents, Abhishek Banerjee has consistently proven that he is destined for the spotlight. A multi-facted thespian who built his way up in the entertainment industry through years of determined undertakings in the Kirori Mal College theatre to this memorable Bollywood debut cameo appearance in Rang De Basanti, he contines to grow big in the entertainment industry as a self-made star. Most recognizable as Hathoda Tyagi in the Indian Hindi-language crime thriller web televesion series 'Paatal Lok', for whic he was nominated as the Best Supporting Actor for the 2020 Filmfare OTT Awards. Abhishek has featured in many films and web series such as 'Mirzapur', 'TVF Pitchers', 'Stree', 'Bala', 'Ajji', 'No One Killed Jessica' and other splendid projects.",
+      "Apart from acting, he casts, directs, writes scripts and even produces some of the projects he features in. 'With countless rejection, I feared going for audtions' - these are some of the heartfelt words uttered by a now ubiquitous household name Abhishek early in his career. A die-hard Amitabh Bachchan fan, he is an inspirational figure who has time after time come out on top through sheer hard work and power of will, as evidenced by his journey from casting his own replacements to nailing the role. His works are extremely relatable as he sticks to his roots and potrays his characters very convincingly."
+    ],
+    show_after: "2021-02-04T09:30:00+000",
+    img_link: "abhishek.jpg"
   }
 ]

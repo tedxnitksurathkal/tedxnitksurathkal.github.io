@@ -14,101 +14,80 @@ var team = [
         "instagram": "tedxnitksurathkal"
     },
     {
-        "name": "Iteesha V A",
-        "position": "Team Lead",
-        "image": "Iteesha.jpg",
-        "facebook": "https://m.facebook.com/iteesha.ashwath",
-        "instagram": "Iteesha27"
-    },
-    {
         "name": "Sanjo Sabu",
-        "position": "Head of Marketing",
+        "position": "Team Lead",
         "image": "Sanjo.jpg",
         "facebook": "",
         "instagram": ""
     },
     {
-        "name": "Sharon Tony",
-        "position": "Head of Production",
-        "image": "Sharon.jpg",
+        "name": "Shreya Namath",
+        "position": "Head Of Curation",
+        "image": "Shreya.jpg",
         "facebook": "",
         "instagram": ""
     },
     {
-        "name": "Joel Chacko Jacob",
-        "position": "Head of Production",
-        "image": "Joel.jpg",
-        "facebook": "",
-        "instagram": ""
-    },
-    {
-        "name": "Avinash Herle",
-        "position": "Head of Operations",
-        "image": "Avinash.jpg",
+        "name": "Adithya Jayan",
+        "position": "Techinal Co-ordinator",
+        "image": "Adithya.jpg",
         "facebook": "",
         "instagram": ""
     },
     {
         "name": "Amaan Siyad",
-        "position": "Head of Creative",
+        "position": "Head Of Production",
         "image": "Amaan.jpg",
         "facebook": "",
         "instagram": ""
     },
     {
-        "name": "Himanshu G Sarda",
-        "position": "Head of Operations",
-        "image": "Himanshu.jpg",
+        "name": "Sreehari M",
+        "position": "Head Of Production",
+        "image": "Sreehari.jpg",
         "facebook": "",
         "instagram": ""
     },
     {
-        "name": "Vinay Radhakrishnan",
-        "position": "Head of Curation",
-        "image": "Vinay.jpg",
+        "name": "Luv Nambiar",
+        "position": "Head Of Operations",
+        "image": "Luv.jpg",
         "facebook": "",
         "instagram": ""
     },
     {
-        "name": "Apoorva M K",
+        "name": "Sreenidhi Bhat",
+        "position": "Head Of Operations",
+        "image": "Sreenidhi.jpg",
+        "facebook": "",
+        "instagram": ""
+    },
+    {
+        "name": "Surya Kaushik",
+        "position": "Head Of Marketing",
+        "image": "Surya.jpg",
+        "facebook": "",
+        "instagram": ""
+    },
+    {
+        "name": "Niraj Nandish",
+        "position": "Web Manager",
+        "image": "Niraj.jpg",
+        "facebook": "",
+        "instagram": ""
+    },
+    {
+        "name": "Stafan Santosh",
         "position": "Co-Curator",
-        "image": "Apoorva.jpg",
+        "image": "Stafan.jpg",
         "facebook": "",
         "instagram": ""
     },
     {
-        "name": "Jiffina James Patrick",
-        "position": "Co-Curator",
-        "image": "Jiffna.jpg",
-        "facebook": "",
-        "instagram": ""
-    },
-    {
-        "name": "Amith Vijayan",
-        "position": "Co-Producer",
-        "image": "Amith.jpg",
+        "name": "Athul Shankar",
+        "position": "Social Media Co-ordinator",
+        "image": "Athul.jpg",
         "facebook": "https://www.facebook.com/199877amithv",
         "instagram": "amith_7798"
     },
-    {
-        "name": "Derek Joel",
-        "position": "Co-Producer",
-        "image": "Derek.jpg",
-        "facebook": "",
-        "instagram": ""
-    },
-    {
-        "name": "Bharath Adikar",
-        "position": "Technical Co-ordinator",
-        "image": "Bharath.jpg",
-        "facebook": "",
-        "instagram": "bharath_adikar"
-    },
-    {
-        "name": "Abhishek Kumar",
-        "position": "Web Manager",
-        "image": "Abhishek.jpg",
-        "facebook": "",
-        "instagram": ""
-    }
 ]

@@ -119,7 +119,11 @@
                             </h4>
                             <div class="nav nav-pills flex-column" role="tablist">
                                 <ul>
-                                    <li><a class="nav-link active" data-toggle="pill" href="#2020salon"
+                                    <li><a class="nav-link active" data-toggle="pill" href="#2021" role="tab">Pause to
+                                            Play | 2021</a></li>
+                                    <li><a class="nav-link" data-toggle="pill" href="#2020trailblazer"
+                                            role="tab">Trailblazer | 2020</a></li>
+                                    <li><a class="nav-link" data-toggle="pill" href="#2020aatmanirbhar"
                                             role="tab">Aatmanirbhar Bharat | 2020</a></li>
                                     <li><a class="nav-link" data-toggle="pill" href="#2020" role="tab">Mirrors and
                                             Windows | 2020</a></li>
@@ -142,7 +146,83 @@
 
                 <div class="col-12 col-md-8">
                     <div class="tab-content">
-                        <div id="2020salon" class="tab-pane fade show active" role="tabpanel">
+                        <div id="2021" class="tab-pane fade show active" role="tabpanel">
+                            <div class="section_title">
+                                <h3 class="title">
+                                    Pause to Play | 2021
+                                    <a href="https://www.youtube.com/playlist?list=PLsRNoUx8w3rNuzxRnUKQ92evp7lnEIvwk"
+                                        class="btn btn-primary btn-rounded" target="_blank">Watch videos</a>
+                                </h3>
+                            </div>
+
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-md-12">
+                                    <p>A "Pause" delivers two choices: continue along the same path or carve
+                                        out a new one. Pause to reflect on your decisions. Pause to continue playing the
+                                        game of Life. Pauses can be self-imposed or obstacles meant to teach us lessons
+                                        along the way. In these Pauses, let's strengthen our skills to adapt and evolve.
+                                        "Pause to Play" promotes the idea of pausing to walk away stronger with a new
+                                        outlook on Life.
+                                    </p>
+                                    <p>
+                                        TEDxNITKSurathkal 2021 provides a platform for
+                                        self-introspection, through narratives with the right combination of pause and
+                                        play. We hope to motivate you to continue the hustle with experience and
+                                        knowledge derived from our speakers' journeys.
+                                    </p>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="section_title">
+                                <h6 class="subtitle">
+                                    Speakers
+                                </h6>
+                            </div>
+                            <section class="pb100">
+                                <div class="row justify-content-center no-gutters" id="s2021">
+                                </div>
+                            </section>
+                        </div>
+                        <div id="2020trailblazer" class="tab-pane fade show" role="tabpanel">
+                            <div class="section_title">
+                                <h3 class="title">
+                                    Trailblazer | 2020
+                                    <a href="https://www.youtube.com/playlist?list=PLjAOyTFsPsp8IeJIOhJh9W6y7YSfLDl9_"
+                                        class="btn btn-primary btn-rounded" target="_blank">Watch videos</a>
+                                </h3>
+                            </div>
+
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-md-12">
+                                    <p>We often find ourselves walking predefined trails with the
+                                        promise of what is socially defined as success.
+                                        Trails surrounded by walls of preconceived notions
+                                        and expectations that limits our perspective and muffles other inspiration.
+                                    </p>
+                                    <p>Seldom do we find the courage to demolish these walls and blaze our own trail.
+                                        To walk down roads few dare to follow, often dark and unexplored only to be
+                                        the ones who create the light at the end of the tunnel.
+                                    </p>
+                                    <p>TEDx Salon presents Trailblazer, where we shine the limelight on
+                                        students like us, but those who heard a different calling and had
+                                        the courage to listen. Join us as we light up and navigate these
+                                        unconventional trails and be part of a whole new generation of
+                                        Trailblazers, the most daring one yet.
+                                    </p>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="section_title">
+                                <h6 class="subtitle">
+                                    Speakers
+                                </h6>
+                            </div>
+                            <section class="pb100">
+                                <div class="row justify-content-center no-gutters" id="s2020trailblazer">
+                                </div>
+                            </section>
+                        </div>
+                        <div id="2020aatmanirbhar" class="tab-pane fade show" role="tabpanel">
                             <div class="section_title">
                                 <h3 class="title">
                                     Aatmanirbhar Bharat | 2020
@@ -182,7 +262,7 @@
                                 </h6>
                             </div>
                             <section class="pb100">
-                                <div class="row justify-content-center no-gutters" id="s2020salon">
+                                <div class="row justify-content-center no-gutters" id="s2020aatmanirbhar">
                                 </div>
                             </section>
                         </div>
@@ -552,8 +632,18 @@
     <script src="assets/js/main.js"></script>
 
     <script>
-        for (var x = 0; x < speakers2020salon.length; x++) {
-            $("<div class=\"col-md-6 col-sm-10\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img class=\"lazy\" data-src=\"" + speakers2020salon[x]["image"] + "\"><div class=\"info_box\"><h5 class=\"name\">" + speakers2020salon[x]["name"] + "</h5><p class=\"position\">" + speakers2020salon[x]["designation"] + "</p></div></div><div class=\"speaker_social\"><p></p></div></div></div>").appendTo("#s2020salon")
+        for (var x = 0; x < speakers2021.length; x++) {
+            $("<div class=\"col-md-6 col-sm-10\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img class=\"lazy\" data-src=\"" + speakers2021[x]["image"] + "\"><div class=\"info_box\"><h5 class=\"name\">" + speakers2021[x]["name"] + "</h5><p class=\"position\">" + speakers2021[x]["designation"] + "</p></div></div><div class=\"speaker_social\"><p></p></div></div></div>").appendTo("#s2021")
+
+        }
+
+        for (var x = 0; x < speakers2020trailblazer.length; x++) {
+            $("<div class=\"col-md-6 col-sm-10\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img class=\"lazy\" data-src=\"" + speakers2020trailblazer[x]["image"] + "\"><div class=\"info_box\"><h5 class=\"name\">" + speakers2020trailblazer[x]["name"] + "</h5><p class=\"position\">" + speakers2020trailblazer[x]["designation"] + "</p></div></div><div class=\"speaker_social\"><p></p></div></div></div>").appendTo("#s2020trailblazer")
+
+        }
+
+        for (var x = 0; x < speakers2020aatmanirbhar.length; x++) {
+            $("<div class=\"col-md-6 col-sm-10\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img class=\"lazy\" data-src=\"" + speakers2020aatmanirbhar[x]["image"] + "\"><div class=\"info_box\"><h5 class=\"name\">" + speakers2020aatmanirbhar[x]["name"] + "</h5><p class=\"position\">" + speakers2020aatmanirbhar[x]["designation"] + "</p></div></div><div class=\"speaker_social\"><p></p></div></div></div>").appendTo("#s2020aatmanirbhar")
 
         }
 

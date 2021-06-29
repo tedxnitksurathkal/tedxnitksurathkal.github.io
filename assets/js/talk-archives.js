@@ -24,37 +24,45 @@ function openSeries(evt, vidName) {
   var i, tabcontent, tablinks;
 
   switch (vidName) {
-    case "2020salon":
-      document.getElementById("vid_frame").src =
-        "https://www.youtube.com/embed/NR4opvW0Lbg?&rel=0&showinfo=0&autohide=1";
+    case '2021':
+      document.getElementById('vid_frame').src =
+        'https://www.youtube.com/embed/ADBhj5oSM5c?&rel=0&showinfo=0&autohide=1';
       break;
-    case "2020":
-      document.getElementById("vid_frame").src =
-        "https://www.youtube.com/embed/usDzA8UVDus?rel=0&showinfo=0&autohide=1";
+    case '2020trailblazer':
+      document.getElementById('vid_frame').src =
+        'https://www.youtube.com/embed/RG2add2P0nU?&rel=0&showinfo=0&autohide=1';
       break;
-    case "2019":
-      document.getElementById("vid_frame").src =
-        "https://www.youtube.com/embed/-7ENgIjLWps?rel=0&showinfo=0&autohide=1";
+    case '2020aatmanirbhar':
+      document.getElementById('vid_frame').src =
+        'https://www.youtube.com/embed/NR4opvW0Lbg?&rel=0&showinfo=0&autohide=1';
       break;
-    case "2018":
-      document.getElementById("vid_frame").src =
-        "https://www.youtube.com/embed/RrSqxO8alR4?rel=0&showinfo=0&autohide=1";
+    case '2020':
+      document.getElementById('vid_frame').src =
+        'https://www.youtube.com/embed/usDzA8UVDus?rel=0&showinfo=0&autohide=1';
       break;
-    case "2016":
-      document.getElementById("vid_frame").src =
-        "https://www.youtube.com/embed/J8uq8et5W1A?rel=0&showinfo=0&autohide=1";
+    case '2019':
+      document.getElementById('vid_frame').src =
+        'https://www.youtube.com/embed/-7ENgIjLWps?rel=0&showinfo=0&autohide=1';
       break;
-    case "2012":
-      document.getElementById("vid_frame").src =
-        "https://www.youtube.com/embed/u3i9tyZ8e4g?rel=0&showinfo=0&autohide=1";
+    case '2018':
+      document.getElementById('vid_frame').src =
+        'https://www.youtube.com/embed/RrSqxO8alR4?rel=0&showinfo=0&autohide=1';
       break;
-    case "2011":
-      document.getElementById("vid_frame").src =
-        "https://www.youtube.com/embed/RoMvP_Zyx5Q?rel=0&showinfo=0&autohide=1";
+    case '2016':
+      document.getElementById('vid_frame').src =
+        'https://www.youtube.com/embed/J8uq8et5W1A?rel=0&showinfo=0&autohide=1';
+      break;
+    case '2012':
+      document.getElementById('vid_frame').src =
+        'https://www.youtube.com/embed/u3i9tyZ8e4g?rel=0&showinfo=0&autohide=1';
+      break;
+    case '2011':
+      document.getElementById('vid_frame').src =
+        'https://www.youtube.com/embed/RoMvP_Zyx5Q?rel=0&showinfo=0&autohide=1';
       break;
     default:
-      document.getElementById("vid_frame").src =
-        "https://www.youtube.com/embed/-7ENgIjLWps?rel=0&showinfo=0&autohide=1";
+      document.getElementById('vid_frame').src =
+        'https://www.youtube.com/embed/-7ENgIjLWps?rel=0&showinfo=0&autohide=1';
       break;
   }
   tabcontent = $(".tabcontent");

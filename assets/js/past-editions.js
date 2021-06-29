@@ -364,7 +364,7 @@ var speakers2020 = [
   }
 ];
 
-var speakers2020salon = [
+var speakers2020aatmanirbhar = [
   {
     "name": "Udit Misra",
     "image": "assets/img/Speaker Pictures/2020/udit.jpeg",
@@ -380,4 +380,70 @@ var speakers2020salon = [
     "image": "assets/img/Speaker Pictures/2020/pulapre.jpeg",
     "designation": "Professor & Economist, Ashoka University"
   }
+]
+
+var speakers2020trailblazer = [
+  {
+    "name": "Adithya Iyer",
+    "image": "assets/img/Speaker Pictures/2020-Trailblazer/adhitya.jpeg",
+    "designation": "Engineer turned Writer"
+  },
+  {
+    "name": "Soniya Thiyam",
+    "image": "assets/img/Speaker Pictures/2020-Trailblazer/sonia.jpeg",
+    "designation": "Doctor turned Fashion Blogger"
+  },
+  {
+    "name": "Vishak Nair",
+    "image": "assets/img/Speaker Pictures/2020-Trailblazer/vishak.jpeg",
+    "designation": "Engineer turned Actor"
+  },
+  {
+    "name": "Bipin Dhane",
+    "image": "assets/img/Speaker Pictures/2020-Trailblazer/bipin.jpeg",
+    "designation": "Social Worker"
+  }
+]
+
+var speakers2021 = [
+  {
+    "name": "Padmini Rout",
+    "image": "assets/img/speakers/padmini.jpg",
+    "designation": "Chess Grandmaster | IM & WGM"
+  },
+  {
+    "name": "Smt. Minal Prabhu",
+    "image": "assets/img/speakers/minal.jpg",
+    "designation": "Dancer | Mudrika Foundation"
+  },
+  {
+    "name": "Pallavi Khare & Meghna Chaudhury",
+    "image": "assets/img/speakers/pallavi_meghna.jpg",
+    "designation": "Founders of WeUnlearn"
+  },
+  {
+    "name": "Pranav Lal",
+    "image": "assets/img/speakers/pranav.jpg",
+    "designation": "Blind Photographer"
+  },
+  {
+    "name": "Raga D'Silva",
+    "image": "assets/img/speakers/raga.jpg",
+    "designation": "LGBTQ Activist"
+  },
+  {
+    "name": "Abhishek Banerjee",
+    "image": "assets/img/speakers/abhishek.jpg",
+    "designation": "Actor | Casting Director"
+  },
+  {
+    "name": "Pragya Prasun",
+    "image": "assets/img/speakers/pragya.jpg",
+    "designation": "Acid Attack Survivor | Activist"
+  },
+  {
+    "name": "Viral Shah",
+    "image": "assets/img/speakers/viral.jpg",
+    "designation": "CEO | Julia Computing"
+  },
 ]

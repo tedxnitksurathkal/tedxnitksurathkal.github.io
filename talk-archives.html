@@ -120,9 +120,18 @@
             <div class="scroller scroller-right"><i class="ion-chevron-right"></i></div>
             <div class="wrapper">
                 <ul class="nav nav-tabs list" id="myTab">
-                    <li class="active"><button class="tablinks" onclick="openSeries(event,'2020salon')"
-                            id="defaultOpen">Aatmanirbhar
-                            Bharat | 2020</button></li>
+                    <li class="ative">
+                        <button class="tablinks" onclick="openSeries(event,'2021')" id="defaultOpen">Pause to Play |
+                            2021</button>
+                    </li>
+                    <li>
+                        <button class="tablinks" onclick="openSeries(event,'2020trailblazer')">Trailblazer |
+                            2020</button>
+                    </li>
+                    <li>
+                        <button class="tablinks" onclick="openSeries(event,'2020aatmanirbhar')">Aatmanirbhar Bharat |
+                            2020</button>
+                    </li>
                     <li>
                         <button class="tablinks" onclick="openSeries(event,'2020')">Mirrors and Windows | 2020</button>
                     </li>
@@ -150,11 +159,85 @@
             <!-- PLAYER -->
             <div class="vid-container">
                 <iframe id="vid_frame"
-                    src="https://www.youtube.com/embed/NR4opvW0Lbg?enablejsapi=1&rel=0&showinfo=0&autohide=1"
+                    src="https://www.youtube.com/embed/ADBhj5oSM5c?enablejsapi=1&rel=0&showinfo=0&autohide=1"
                     frameborder="0" width="560" height="315"></iframe>
             </div>
 
-            <div id="2020salon" class="tabcontent">
+            <!-- 2021 Pause To Play -->
+            <div id="2021" class="tabcontent">
+                <!-- PLAYLIST -->
+                <div class="vid-list-container">
+                    <div class="vid-list-2021">
+                        <div class="vid-item vid-item-active"
+                            onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/ADBhj5oSM5c?&rel=0&showinfo=0&autohide=1'">
+                            <div class="thumb"><img src="https://img.youtube.com/vi/ADBhj5oSM5c/1.jpg"></div>
+                            <div class="desc">Pause to Play | Padmini Rout</div>
+                        </div>
+                        <div class="vid-item"
+                            onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/mIJb_wJsYrg?rel=0&showinfo=0&autohide=1'">
+                            <div class="thumb"><img src="https://img.youtube.com/vi/mIJb_wJsYrg/1.jpg"></div>
+                            <div class="desc">Pause to Play | Minal Prabhu</div>
+                        </div>
+                        <div class="vid-item"
+                            onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/BCemCHeBkWo?rel=0&showinfo=0&autohide=1'">
+                            <div class="thumb"><img src="https://img.youtube.com/vi/BCemCHeBkWo/1.jpg"></div>
+                            <div class="desc">Pause to Play | Pallavi Khare & Meghna Chaudhury</div>
+                        </div>
+                        <div class="vid-item"
+                            onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/eB7ftS690VY?rel=0&showinfo=0&autohide=1'">
+                            <div class="thumb"><img src="https://img.youtube.com/vi/eB7ftS690VY/1.jpg"></div>
+                            <div class="desc">Pause to Play | Pranav Lal</div>
+                        </div>
+                        <div class="vid-item"
+                            onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/Visx4Ps2J4A?rel=0&showinfo=0&autohide=1'">
+                            <div class="thumb"><img src="https://img.youtube.com/vi/Visx4Ps2J4A/1.jpg"></div>
+                            <div class="desc">Pause to Play | Raga D'Silva</div>
+                        </div>
+                        <div class="vid-item"
+                            onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/zewTUZQmFMU?rel=0&showinfo=0&autohide=1'">
+                            <div class="thumb"><img src="https://img.youtube.com/vi/zewTUZQmFMU/1.jpg"></div>
+                            <div class="desc">Pause to Play | Abhishek Banerjee</div>
+                        </div>
+                        <div class="vid-item"
+                            onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/i0557yRvLh4?rel=0&showinfo=0&autohide=1'">
+                            <div class="thumb"><img src="https://img.youtube.com/vi/i0557yRvLh4/1.jpg"></div>
+                            <div class="desc">Pause to Play | Pragya Prasun</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2020 Trailblazer -->
+            <div id="2020trailblazer" class="tabcontent">
+                <!-- PLAYLIST -->
+                <div class="vid-list-container">
+                    <div class="vid-list-2020">
+                        <div class="vid-item vid-item-active"
+                            onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/RG2add2P0nU?&rel=0&showinfo=0&autohide=1'">
+                            <div class="thumb"><img src="https://img.youtube.com/vi/RG2add2P0nU/1.jpg"></div>
+                            <div class="desc">Trailblazer | Adithya Iyer</div>
+                        </div>
+                        <div class="vid-item"
+                            onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/sbOL4UEVwNI?rel=0&showinfo=0&autohide=1'">
+                            <div class="thumb"><img src="https://img.youtube.com/vi/sbOL4UEVwNI/1.jpg"></div>
+                            <div class="desc">Trailblazer | Soniya Thiyam</div>
+                        </div>
+                        <div class="vid-item"
+                            onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/BzZdw2OF6Ts?rel=0&showinfo=0&autohide=1'">
+                            <div class="thumb"><img src="https://img.youtube.com/vi/BzZdw2OF6Ts/1.jpg"></div>
+                            <div class="desc">Trailblazer | Vishak Nair</div>
+                        </div>
+                        <div class="vid-item"
+                            onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/NIp9zDfnXDk?rel=0&showinfo=0&autohide=1'">
+                            <div class="thumb"><img src="https://img.youtube.com/vi/NIp9zDfnXDk/1.jpg"></div>
+                            <div class="desc">Trailblazer | Bipin Dhane</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2020 Aatmanirbhar -->
+            <div id="2020aatmanirbhar" class="tabcontent">
                 <!-- PLAYLIST -->
                 <div class="vid-list-container">
                     <div class="vid-list-2020">
@@ -182,6 +265,7 @@
                     </div>
                 </div>
             </div>
+
             <!-- 2020 -->
             <div id="2020" class="tabcontent">
                 <!-- PLAYLIST -->

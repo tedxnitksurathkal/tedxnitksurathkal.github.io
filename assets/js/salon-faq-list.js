@@ -9,35 +9,23 @@ var faq_questions = [
   ],
   [
     'What is the theme for TEDxNITKSurathkalSalon?',
-    'The theme for this event will be Trailblazer.'
+    'The theme for this event will be "Is data the new Oil?".'
   ],
   [
     'Where can I obtain more information with regard to the theme?',
-    'Click on the link below for more information on the theme <a href="/theme" style="display:inline; font-size:14px;">Trailblazer</a>'
+    'Click on the link below for more information on the theme <a href="/theme" style="display:inline; font-size:14px;">Is data the new Oil?</a>'
   ],
   [
     'When will the event be held?',
-    'The TEDxNITKSurathkalSalon will be held on 17th October at 5:00pm.'
-  ],
-  [
-    'How do I register for this event?',
-    'The link to the registration form will be out soon.'
-  ],
-  [
-    'Can I register for anyone else?',
-    'You can only register for yourself'
-  ],
-  [
-    'How many registrations are available?',
-    'A maximum of 100 attendees only are allowed in one TEDxNITKSurathkalSalon event.'
+    'The TEDxNITKSurathkalSalon will be held on 10th July at 5:30pm.'
   ],
   [
     'What is the platform used for this event?',
-    'Since this is a virtual event, we will be using Airmeet to conduct this event. It will also be streamed on Youtube live.'
+    'Since this is a virtual event, we will be streaming on Youtube live.'
   ],
   [
     'What is the programme structure for this Salon?',
-    'The structure will be as follows:<br/>- Talks conducted by the speaker(s) based on the theme.<br/>- Q&A session where the attendees are open to discuss and connect.<br/>- An in-house discussion between members of NITK community in view of live talks witnessed.'
+    'The structure will be as follows:<br/>- Talks conducted by the speaker(s) based on the theme.<br/>- Panel discussion between the speakers wherein the questions asked by the audience will be discussed.'
   ],
   [
     'As an attendee, am I permitted to ask questions to the speaker?',

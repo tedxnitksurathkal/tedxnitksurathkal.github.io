@@ -18,5 +18,15 @@ var speakers = [
     ],
     show_after: "2021-02-04T09:30:00+000",
     img_link: "subi.png"
+  },
+  {
+    name: "Raghunandan G",
+    title: "Founder | Zolve",
+    description: [
+      "<b>Raghunandan G</b> is a tech enthusiast and founder of Bengaluru and San Francisco - based global neobank Zolve. He has been behind startups such as TaxiForSure and Serendipity Infolabs, prior to which he worked in Texas Instruments and Feedback Ventures. His stint away from the helm of startup has seen him active as an angel investor in companies like Bounce, Ninjacart and Vedantu. A NITK Alumnus from the batch of 2003, he has done an MBA from IIM Ahmedabad as well. Constantly looking to involve himself in the startup ecosystem his newest venture Zolve works on making banking and financial systems border and boundary less.",
+      "His time as an angel investor helped him understand various business models, sectors like SaaS, hyperlocal, AI and ML. Working in a startup that plans to go high scale early on, he recognizes what it is to work with extremely large amounts of data and its relevance to its operations. His approach towards the largely underserved global citizen community, entrepreneurship mindset and understanding of how data plays towards that, makes him an excellent speaker to provide insight into opportunities untapped and the role of data in the future."
+    ],
+    show_after: "2021-02-04T09:30:00+000",
+    img_link: "raghu.png"
   }
 ]

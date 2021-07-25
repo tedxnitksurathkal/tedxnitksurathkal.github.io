@@ -408,42 +408,42 @@ var speakers2020trailblazer = [
 var speakers2021 = [
   {
     "name": "Padmini Rout",
-    "image": "assets/img/speakers/padmini.jpg",
+    "image": "assets/img/Speaker Pictures/2021/padmini.jpg",
     "designation": "Chess Grandmaster | IM & WGM"
   },
   {
     "name": "Smt. Minal Prabhu",
-    "image": "assets/img/speakers/minal.jpg",
+    "image": "assets/img/Speaker Pictures/2021/minal.jpg",
     "designation": "Dancer | Mudrika Foundation"
   },
   {
     "name": "Pallavi Khare & Meghna Chaudhury",
-    "image": "assets/img/speakers/pallavi_meghna.jpg",
+    "image": "assets/img/Speaker Pictures/2021/pallavi_meghna.jpg",
     "designation": "Founders of WeUnlearn"
   },
   {
     "name": "Pranav Lal",
-    "image": "assets/img/speakers/pranav.jpg",
+    "image": "assets/img/Speaker Pictures/2021/pranav.jpg",
     "designation": "Blind Photographer"
   },
   {
     "name": "Raga D'Silva",
-    "image": "assets/img/speakers/raga.jpg",
+    "image": "assets/img/Speaker Pictures/2021/raga.jpg",
     "designation": "LGBTQ Activist"
   },
   {
     "name": "Abhishek Banerjee",
-    "image": "assets/img/speakers/abhishek.jpg",
+    "image": "assets/img/Speaker Pictures/2021/abhishek.jpg",
     "designation": "Actor | Casting Director"
   },
   {
     "name": "Pragya Prasun",
-    "image": "assets/img/speakers/pragya.jpg",
+    "image": "assets/img/Speaker Pictures/2021/pragya.jpg",
     "designation": "Acid Attack Survivor | Activist"
   },
   {
     "name": "Viral Shah",
-    "image": "assets/img/speakers/viral.jpg",
+    "image": "assets/img/Speaker Pictures/2021/viral.jpg",
     "designation": "CEO | Julia Computing"
   },
 ]

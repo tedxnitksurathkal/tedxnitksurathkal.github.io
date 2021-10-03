@@ -70,7 +70,7 @@ if (window.innerWidth > 900) {
     scrollTrigger: {
       trigger: ".drop",
       scrub: 1,
-      start: "top top",
+      start: "top center",
       end: "bottom center",
     },
     opacity: 0,

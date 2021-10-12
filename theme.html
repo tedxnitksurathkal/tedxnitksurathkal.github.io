@@ -26,66 +26,143 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css"
         rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" />
-    <!-- Custom styles for this template -->
-    <link href="assets/css/main.css" rel="stylesheet" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/611b4f1255.js" crossorigin="anonymous"></script>
 
-    <!--Theme for 2021-->
-    <link rel="stylesheet" href="assets/css/theme2021.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Revalia&display=swap" rel="stylesheet">
+
+    <!-- JS CDN Links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+
+    <!--Salon Theme-->
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="assets/css/attention-trap-wide.css">
+    <link rel="stylesheet" media="screen and (max-width: 899px)" href="assets/css/attention-trap-small.css">
+
 </head>
 
-<body>
-    <div class="loader">
-        <div class="loader-outter"></div>
-        <div class="loader-inner" style="background-image: url('assets/img/loader.png')"></div>
-    </div>
+<body id="body">
 
-    <div id="theme-reveal" class="text-center">
-        <img src="/assets/img/theme/salon-attention-trap.png" id="theme-img" alt="Image of TEDx salon theme" />
+  <div class="header">
+    <h1>Social Media is <span>addictive</span>...</h1>
+  </div>
 
-        <div id="theme-desc" class="container text-center px-3 py-5">
-            <p>
-                Ever wanted a break so you decide to scroll through Instagram reels for “a minute or two”, only to look
-                up to find that hours have passed? How many times have you sat with intent, trying to concentrate on
-                finishing a task, but no, it simply refuses to maintain your attention?
-            </p>
+  <div class="drop">
+    <img src="assets/img/theme/falling_man.png" alt="Falling man" class="drop-image">
+  </div>
 
-            <p>
-                This is the 21st Century where attention spans have become yet another profitable commodity. Surprised?
-                The rise of social media and the 'attention economy' has left us with the concentration span of a
-                goldfish. How is the marketing and design field achieving this impressive feat of ensnaring our minds?
-                How do people in creative areas cope? Are they adapting to the new world or losing ground? Most
-                importantly, what does this mean for each individual and our mental well-being?
+  <div class="reddit-intro">
+    <h1>It brings us joy &#129315;... </h1>
+  </div>
 
-            <p>
-                TEDxNITKSurathkal brings you the latest edition of our Salon event, themed <b>Attention Trap</b>. Join us as
-                our speakers shed light on the various dimensions involved and answer the elusive question: Is the
-                decrease in attention span the new reality we must accept or fight against?
-            </p>
-            <a href="/" class="home-btn">Home</a>
+  <div class="reddit-section">
+    <div class="reddit-card">
+      <div class="reddit-votes">
+        <i class="fa-solid fa-arrow-up" id="redditUpvote"></i>
+        <span id="redditUpvote">438k</span>
+        <i class="fa-solid fa-arrow-down"></i>
+      </div>
+      <div class="reddit-post">
+        <span style="color: gray; font-size: 0.85em;">Posted by u/ReallyRickAstley &bull; 1 year ago</span>
+        <span style="font-weight:bold; margin-bottom: 1%;">I’ve found a few funny memories during lockdown. This is from my 1st tour in 89, backstage in Vegas.</span>
+        <img src="/assets/img/theme/salon-rick-astley.jpg" class="reddit-image">
+        <div class="reddit-stats">
+          <i class="fa-regular fa-message" style="margin-right: 1%;"></i>
+          <span>19.3k comments</span>
+          <i class="fa-solid fa-share" style="margin-left: 2%;margin-right: 1%;"></i>
+          <span>Share</span>
+          <i class="fa-regular fa-bookmark" style="margin-left:2%;margin-right: 1%;"></i>
+          <span>Save</span>
+          <i class="fa-regular fa-eye-slash" style="margin-left:2%;margin-right: 1%;"></i>
+          <span>Hide</span>
+          <i class="fa-regular fa-flag" style="margin-left:2%;margin-right: 1%;"></i>
+          <span>Report</span>
         </div>
-
-        <img src='/assets/img/tedx-black.png' id='tedx-logo' alt='TEDxNITK logo' />
+      </div>
     </div>
+  </div>
 
-    <!-- GTAG Script -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+  <div class="instagram-intro">
+    <h1>...and makes us do some crazy stuff...</h1>
+  </div>
 
-        gtag('config', 'UA-110715968-3');
+  <div class="instagram-section">
+    <div class="instagram-card">
+      <div class="instagram-header">
+        <img src="assets/img/theme/salon-instagram-account.jpg" id="instagram-account-image" alt="World record egg account picture">
+        <span id="instagram-account-handle">world_record_egg</span>
+      </div>
+      <div class="instagram-image">
+        <img src="assets/img/theme/salon-egg.jpg" alt="World record egg photo" id="instagram-post-image">
+      </div>
+      <div class="instagram-stats">
+        <div class="instagram-share-bar">
+          <i class="fa-solid fa-heart instagram-icons" id="instagramLike"></i>
+          <i class="fa-regular fa-comment instagram-icons"></i>
+          <i class="fa-regular fa-paper-plane instagram-icons"></i>
+        </div>
+        <div class="instagram-likes">
+          <span class="instagram-likes-number">55,467,695 likes</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        $(window).on('load', function () {
-            $('.loader').delay(100).fadeOut('slow');
-        });
-    </script>
+  <div class="twitter-intro">
+    <h1>...and sometimes, it brings us bad news.</h1>
+  </div>
+
+<div class="twitter-section">
+  <div class="twitter-card">
+    <div class="twitter-account">
+      <div class="twitter-account-image">
+        <img src="assets/img/theme/salon-twitter-profile.jpg" alt="Chadwick Boseman profile picture." style="border-radius: 50%;">
+      </div>
+      <div class="twitter-account-details">
+        <span id="twitter-handle-name">Chadwick Boseman</span>
+        <span id="twitter-handle-handle">@chadwickboseman</span>
+      </div>
+    </div>
+    <div class="twitter-tweet">
+      <span>It is with immense grief that we confirm the passing of Chadwick Boseman.</span>
+    </div>
+    <div class="twitter-account-stats">
+      <span>7:41 AM &#8226; Aug 29, 2020 &#8226; Twitter for iPhone</span>
+    </div>
+    <div class="twitter-stats">
+      <span class="twitter-stats-numbers">2M</span> Retweets &#9; &#9; <span class="twitter-stats-numbers">926.1K</span> Quote Tweets &#9; <span class="twitter-stats-numbers">7.3M</span> Likes
+    </div>
+    <div class="twitter-share">
+      <i class="fa-regular fa-comment twitter-icons"></i>
+      <i class="fa-solid fa-retweet twitter-icons" id="twitterRetweet"></i>
+      <i class="fa-regular fa-heart twitter-icons"></i>
+      <i class="fa-solid fa-arrow-up-from-bracket twitter-icons"></i>
+    </div>
+  </div>
+</div>
+
+<div class="theme-intro">
+  <p>Ever wanted a break so you decide to scroll through Instagram reels for “a minute or two”, only to look up to find that hours have passed? How many times have you sat with intent, trying to concentrate on finishing a task, but no, it simply refuses to maintain your attention?</p>
+  <p>This is the 21st Century where attention spans have become yet another profitable commodity. Surprised? The rise of social media and the 'attention economy' has left us with the concentration span of a goldfish. How is the marketing and design field achieving this impressive feat of ensnaring our minds? How do people in creative areas cope? Are they adapting to the new world or losing ground? Most importantly, what does this mean for each individual and our mental well-being? </p>
+  <p>TEDxNITKSurathkal brings you the latest edition of our Salon event, themed <span>'Attention Trap'</span>. Join us as our speakers shed light on the various dimensions involved and answer the elusive question: Is the decrease in attention span the new reality we must accept or fight against?</p>
+</div>
+<img src="assets/img/theme/poster.png" alt="Poster" class="theme-poster">
+
+<div class="back-to-home">
+  <a href="/">Back</a>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+
+  <script src="assets/js/theme/attention-trap.js" charset="utf-8"></script>
+
 </body>
 
 </html>

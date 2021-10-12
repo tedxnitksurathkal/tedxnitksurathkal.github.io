@@ -1,32 +1,33 @@
 var speakers = [
   {
-    name: "Srinidhi Shama Rao",
-    title: "Head of Innovation | TheMathCompany",
+    name: "Karan Shah",
+    title: "Founder and CEO of IIDE | Edu-preneur",
     description: [
-      "<b>Mr. Srinidhi Shama Rao</b> is an expert in Data Analytics and AI for Business. He is a NITK alumnus from the 2003 batch, he also pursued an MBA from the Kelley School of Business. Mr. Rao has worked in firms like TCS, Mu Sigma, and Otis Elevator, he now is an Angel Investor, Startup Advisor and is the Head of Innovation at TheMathCompany where they help enterprises build and upgrade in-house analytic centres. They have ongoing engagements with 45+ Fortune 500 or equivalent clients across 15+ industry verticals, spanning 15+ cities worldwide!",
-      "As a professional in Big Data Analytics, his projects speak volumes about his genius, some projects even resulting in multi-million dollar impact! The ever-changing realities in AI and the exchange of data on the technology front have definitely brought both dangers and benefits for users lke us. Mr. Rao has been helping companies create significant values through analytics/AI and digital adoption - which makes him the perfect individual to help us think deeper than what is exposed to us."
+      "<b>Karan Shah</b>, a tech visionary, educationist, public speaker, and the Founder of IIDE is indeed a multi-faceted personality. After specializing in E-commerce Strategies from Harvard University, Mr. Karan returned to India as he identified a digital skill gap and set up IIDE, India’s premier Ed-tech School for Digital Skills to harness the opportunities in education and work that came along in the digital age. His firm has trained leading corporations like Mahindra, Volkswagen, Asian Paints, Pfizer, Estee Lauder, and World Bank in Digital Skills. The World Education Congress awarded IIDE as the ‘Best Digital Marketing Institute of 2021.'",
+      "From teaching 8 students out of his grandfather's garage to a 20,000 sq feet campus and now, moving online and helping 2,35,000+ students and professionals, Mr. Karan has helped a lot of individuals become employable and entrepreneurial. He is also a visiting faculty at the IIMs and 14+ Mumbai University colleges. Mr. Karan has over a decade of experience in the field of digital marketing and is the perfect speaker to provide a deeper insight into social media and content creation."
     ],
     show_after: "2021-02-04T09:30:00+000",
-    img_link: "srinidhi.jpg"
+    img_link: "karan.jpg"
   },
   {
-    name: "Dr. Subi Chaturvedi",
-    title: "Chief Corporate and Public Affairs Officer | Zupee",
+    name: "Sarah Donawerth",
+    title: "Web Content Coordinator | Freelance Artist",
     description: [
-      "As a Public Policy Professional, Media Practitioner, Scholar and strong advocate for digital and media policy literacy, <b>Subi Chaturvedi's</b> expanse of knowledge and experience regarding these fields are commendable. So it comes as no surprise that she is a highly sought - after advisor and consultant to senior policymakers and large corporations across the world. She often shares her knowledge as a widely published columnist and media critic, writing regularly on various topics regarding the best practices for internet governance, cybersecurity, the digital economy, and the role of youth in public policy.",
-      "<b>Dr. Chaturvedi</b> has served as a member of the United Nations Internet Governance Forum (IGF) Multistakeholder Advisory Group (MAG), appointed by the UN Secretary-General. As a member, she has organised and the run the main session on Cybersecurity and Emerging issues at the United Nations IGF, throwing light on relvant trends and key issues in the sector. In the prestigious Women Achievers Summit & Awards 2021, Dr. Chaturvedi has been recognized as Innovative Leader of the year for leading the charge of shaping online gaming and the use of technology for good discourse in the public and policy space."
+      "<b>Sarah Donawerth</b> is a freelance artist whose passion for art is apparent in the various aspects she explores which include knitting, crochet, jewelry making and paper crafts. Her work has been featured in some of the top art and craft magazines including Bella Grace, Jewelry Affaire, Belle Armoire Jewelry, and more.",
+      "Apart from more traditional forms of fine art, Sarah has great experience in the field of digital media marketing and content writing as a freelance blogger. Her experience in several firms and start-ups in different job roles serves to diversify her experience and wealth of knowledge. Uniting her love for art with marketing skills, she has worked as a Social Media Manager & Designer at Stampington & Co, the largest publisher of niche magazines in the art & craft industry. Her previous roles as a Marketing Manager and Content Manager lend her insight into how effective marketing performs on social platforms.",
+      "As someone who understands both, the perspective of an artist seeking an audience on social media as well as the mindset of marketing companies, she is sure to have a well-rounded understanding of the two-sided coin that is the ‘Attention trap’."
     ],
     show_after: "2021-02-04T09:30:00+000",
-    img_link: "subi.jpg"
+    img_link: "sarah.jpg"
   },
   {
-    name: "Raghunandan G",
-    title: "Founder | Zolve",
+    name: "Ankur Grover",
+    title: "Co-Founder of Tinkerlabs | Design Thinker",
     description: [
-      "<b>Raghunandan G</b> is a tech enthusiast and founder of Bengaluru and San Francisco - based global neobank Zolve. He has been behind startups such as TaxiForSure and Serendipity Infolabs, prior to which he worked in Texas Instruments and Feedback Ventures. His stint away from the helm of startup has seen him active as an angel investor in companies like Bounce, Ninjacart and Vedantu. A NITK Alumnus from the batch of 2003, he has done an MBA from IIM Ahmedabad as well. Constantly looking to involve himself in the startup ecosystem his newest venture Zolve works on making banking and financial systems border and boundary less.",
-      "His time as an angel investor helped him understand various business models, sectors like SaaS, hyperlocal, AI and ML. Working in a startup that plans to go high scale early on, he recognizes what it is to work with extremely large amounts of data and its relevance to its operations. His approach towards the largely underserved global citizen community, entrepreneurship mindset and understanding of how data plays towards that, makes him an excellent speaker to provide insight into opportunities untapped and the role of data in the future."
+      "A man of remarkable talents and a mind of an intricate design thinker, <b>Ankur Grover</b> is definitely a name to reckon with. He is the co-founder of TinkerLabs, India’s only design thinking firm, that allows individuals and organizations to harness this domain to empathize, collaborate and experiment, thus producing agile and effective solutions for any available niche. Apart from being an accomplished entrepreneur, Ankur is a seasoned TEDx speaker who sheds further light on the intriguing aspects of design thinking.",
+      "Being an alumnus of BITS Pilani and INSEAD, he has a vast amount of experience in design engineering, management and anthropology. A skillful individual and a winner of the two most prestigious scholarships offered by INSEAD, Ankur has showcased his expertise in this field of study. He is also a specialist in areas of network engineering and business development, where he co-authored a Harvard Review Case Study titled ‘Innovation and Design Thinking’. Through Ankur’s unique storytelling expertise, he has ensured that every organization recognizes the crucial need to adopt design thinking."
     ],
     show_after: "2021-02-04T09:30:00+000",
-    img_link: "raghu.jpg"
+    img_link: "ankur.jpg"
   }
 ]

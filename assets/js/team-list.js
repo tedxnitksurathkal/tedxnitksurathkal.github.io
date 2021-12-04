@@ -1,15 +1,8 @@
 var team = [
     {
-        "name": "Dr. Sheena",
-        "position": "Licensee",
-        "image": "Sheena.jpg",
-        "linkedin": "",
-        "instagram": "tedxnitksurathkal"
-    },
-    {
-        "name": "Dr. KV Gangadharan",
-        "position": "Mentor",
-        "image": "KVG.jpg",
+        "name": "",
+        "position": "Faculty Advisor",
+        "image": "dummy-pic.png",
         "linkedin": "",
         "instagram": "tedxnitksurathkal"
     },

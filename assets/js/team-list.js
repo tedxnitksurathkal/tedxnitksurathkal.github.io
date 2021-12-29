@@ -1,8 +1,29 @@
 var team = [
     {
-        "name": "",
-        "position": "Faculty Advisor",
+        "name": "Prof. Karanam Umamaheshwar Rao",
+        "position": "Director",
+        "image": "Director.jpg",
+        "linkedin": "",
+        "instagram": "tedxnitksurathkal"
+    },
+    {
+        "name": "Prof. Narendranath S",
+        "position": "Dean - Student Welfare",
+        "image": "DSW.jpeg",
+        "linkedin": "",
+        "instagram": "tedxnitksurathkal"
+    },
+    {
+        "name": "Dr. Alwyn Roshan Pais",
+        "position": "Associate Dean - Student Welfare",
         "image": "dummy-pic.png",
+        "linkedin": "",
+        "instagram": "tedxnitksurathkal"
+    },
+    {
+        "name": "Dr. C. P. Devatha",
+        "position": "Associate Dean - Student Welfare",
+        "image": "ADSW2.jpeg",
         "linkedin": "",
         "instagram": "tedxnitksurathkal"
     },

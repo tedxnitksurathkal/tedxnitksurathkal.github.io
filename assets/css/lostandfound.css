@@ -1,0 +1,217 @@
+@font-face {
+    font-family: 'Circular';
+    src: url('https://cdn.jsdelivr.net/gh/anirudhprabhakaran3/chinai-resources/Circular-Black.ttf');
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Circular';
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.panel { 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    will-change: transform;
+}
+
+.panel h1 {
+    font-size: 5em;
+}
+
+.intro {
+	background: linear-gradient(-45deg, #f32d13,#000000, #27759c, #000000, #f32d13);
+    color: white;
+	background-size: 500% 500%;
+	animation: gradient 15s ease infinite;
+}
+
+.found {
+	background: linear-gradient(45deg, #ffffff, #9F9FED, #ffffff);
+    color: white;
+	background-size: 500% 500%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.hamzanama {
+    background-color: #f7f7f7;
+    background-image: url('../img/theme/hamzanama.jpg');
+    opacity: 0.6;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.veronese {
+    background-color: #f7f7f7;
+    background-image: url('../img/theme/Paolo_Veronese.jpg');
+    opacity: 0.6;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.rangoli {
+    background-color: #f7f7f7;
+    background-image: url('../img/theme/rangoli.jpg');
+    opacity: 0.6;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    color: white;
+}
+
+.st-petersburg {
+    background-color: #f7f7f7;
+    background-image: url('../img/theme/st_petersburg.jpg');
+    opacity: 0.6;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.ajanta {
+    background-color: #f7f7f7;
+    background-image: url('../img/theme/ajanta.jpg');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    color: white;
+}
+
+.found {
+    background-color: white;
+    color: black;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.info h1 {
+    font-size: 3em;
+    border-bottom: white 5px dotted;
+}
+
+.info p {
+    font-size: 1.1em;
+}
+
+/* Animated Background */
+.final-panel {
+    animation: theme 21s linear infinite;
+    color: white;
+}
+
+.final-panel:after, .final-panel:before {
+    content: '';
+    display: block;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    width: 100vmax;
+    height: 100vmax;
+    background: rgba(0, 0, 0, 0.05);
+    animation: background 90s linear infinite;
+}
+.final-panel:after {
+    left: 15vw;
+}
+.final-panel:before {
+    right: 15vw;
+    animation-delay: -30s;
+    animation-direction: reverse;
+}
+@keyframes theme {
+    0% {
+        background: #74c390;
+   }
+    16% {
+        background: #5dbdb6;
+   }
+    33% {
+        background: #59d4e1;
+   }
+    50% {
+        background: #51bce8;
+   }
+    66% {
+        background: #fa5374;
+   }
+    83% {
+        background: #e46653;
+   }
+    100% {
+        background: #74c390;
+   }
+}
+@keyframes background {
+    0% {
+        transform: rotate(0deg);
+   }
+    100% {
+        transform: rotate(360deg);
+   }
+}
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+
+    .final-panel {
+        display: block;
+        overflow-y: auto;
+    }
+
+    .info {
+        margin: auto;
+        padding-bottom: 25%;
+    }
+  }

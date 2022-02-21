@@ -9,17 +9,6 @@ html, body {
     font-family: 'Circular';
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar {
-    display: none;
-  }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-body {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
-
 .container {
     margin: 0;
     padding: 0;
@@ -75,7 +64,7 @@ body {
 
 .hamzanama {
     background-color: #f7f7f7;
-    background-image: url('../img/theme/hamzanama.jpg');
+    background-image: url('../img/theme/hamzanama.webp');
     opacity: 0.6;
     background-repeat: no-repeat;
     background-position: center;
@@ -85,7 +74,7 @@ body {
 
 .veronese {
     background-color: #f7f7f7;
-    background-image: url('../img/theme/Paolo_Veronese.jpg');
+    background-image: url('../img/theme/Paolo_Veronese.webp');
     opacity: 0.6;
     background-repeat: no-repeat;
     background-position: center;
@@ -95,7 +84,7 @@ body {
 
 .rangoli {
     background-color: #f7f7f7;
-    background-image: url('../img/theme/rangoli.jpg');
+    background-image: url('../img/theme/rangoli.webp');
     opacity: 0.6;
     background-repeat: no-repeat;
     background-position: bottom center;
@@ -105,7 +94,7 @@ body {
 
 .st-petersburg {
     background-color: #f7f7f7;
-    background-image: url('../img/theme/st_petersburg.jpg');
+    background-image: url('../img/theme/st_petersburg.webp');
     opacity: 0.6;
     background-repeat: no-repeat;
     background-position: center;
@@ -115,7 +104,7 @@ body {
 
 .ajanta {
     background-color: #f7f7f7;
-    background-image: url('../img/theme/ajanta.jpg');
+    background-image: url('../img/theme/ajanta.webp');
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;

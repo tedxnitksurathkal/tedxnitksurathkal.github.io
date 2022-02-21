@@ -121,6 +121,7 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 10%;
 }
 
 .final-panel:after, .final-panel:before {
@@ -191,7 +192,6 @@ html, body {
 }
 
 .tedx-logo {
-    height: 10vh;
     margin-top: 5%;
     margin-bottom: 5%;
 }
@@ -203,10 +203,5 @@ html, body {
     color: white;
     padding: 0.5% 2% 0.5% 2%;
     border-radius: 5px;
-    margin-top: 2%;
     margin-bottom: 10%;
-}
-
-@media only screen and (max-width: 768px) {
-    /* For mobile phones: */
 }

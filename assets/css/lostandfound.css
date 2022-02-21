@@ -135,6 +135,8 @@ html, body {
 .final-panel {
     animation: theme 21s linear infinite;
     color: white;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .final-panel:after, .final-panel:before {
@@ -190,6 +192,23 @@ html, body {
    }
 }
 
+.branding {
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.tedx-logo {
+    width: 50%;
+}
+
+.back-link {
+    font-size: 2em;
+    text-decoration: none;
+    background-color: #f32d13;
+    color: white;
+    padding: 2% 5% 2% 5%;
+    border-radius: 5px;
+}
 
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */

@@ -121,7 +121,7 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 10%;
+    padding-top: 100px;
 }
 
 .final-panel:after, .final-panel:before {
@@ -201,7 +201,7 @@ html, body {
     text-decoration: none;
     background-color: #f32d13;
     color: white;
-    padding: 0.5% 2% 0.5% 2%;
+    padding: 1% 4%;
     border-radius: 5px;
     margin-bottom: 10%;
 }

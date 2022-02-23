@@ -1,8 +1,8 @@
 var team = [
     {
-        "name": "Prof. Karanam Umamaheshwar Rao",
+        "name": "Prof. Udaykumar R. Yaragatti",
         "position": "Director",
-        "image": "Director.jpg",
+        "image": "Director.jpeg",
         "linkedin": "",
         "instagram": "tedxnitksurathkal"
     },

@@ -9,32 +9,32 @@ var faq_questions = [
   ],
   [
     'What is the theme for TEDxNITKSurathkalSalon?',
-    'The theme for this event will be "Attention Trap".'
+    'The theme for this event will be "Lost and Found".'
   ],
   [
     'Where can I obtain more information with regard to the theme?',
-    'Click on the link below for more information on the theme <a href="/theme" style="display:inline; font-size:14px;">Attention Trap</a>'
+    'Click on the link below for more information on the theme <a href="/theme" style="display:inline; font-size:14px;">Lost and Found</a>'
   ],
   [
     'When will the event be held?',
-    'The TEDxNITKSurathkalSalon will be held on 16th October at 5:30pm.'
+    'The TEDxNITKSurathkalSalon will be held on 26th February at 5:30pm.'
   ],
-  [
-    'How do I register for this event?',
-    'The link to the registration form is - <a href="https://forms.gle/A6HWQZkzZQiCodBE7" style="display:inline; font-size:14px;">https://forms.gle/A6HWQZkzZQiCodBE7</a>.'
-  ],
-  [
-    'Can I register for anyone else?',
-    'You can only register for yourself'
-  ],
-  [
-    'How many registrations are available?',
-    'A maximum of 100 attendees only are allowed in one TEDxNITKSurathkalSalon event.'
-  ],
-  [
-    'What is the platform used for this event?',
-    'Since this is a virtual event, we will be using Airmeet to conduct this event. It will also be streamed.'
-  ],
+  // [
+  //   'How do I register for this event?',
+  //   'The link to the registration form is - <a href="https://forms.gle/A6HWQZkzZQiCodBE7" style="display:inline; font-size:14px;">https://forms.gle/A6HWQZkzZQiCodBE7</a>.'
+  // ],
+  // [
+  //   'Can I register for anyone else?',
+  //   'You can only register for yourself'
+  // ],
+  // [
+  //   'How many registrations are available?',
+  //   'A maximum of 100 attendees only are allowed in one TEDxNITKSurathkalSalon event.'
+  // ],
+  // [
+  //   'What is the platform used for this event?',
+  //   'Since this is a virtual event, we will be using Airmeet to conduct this event. It will also be streamed.'
+  // ],
   [
     'What is the programme structure for this Salon?',
     'The structure will be as follows:<br/>- Talks conducted by the speaker(s) based on the theme.<br/>- Panel discussion between the speakers wherein the questions asked by the audience will be discussed.'

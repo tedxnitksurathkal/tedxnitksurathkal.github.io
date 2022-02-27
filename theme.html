@@ -32,8 +32,10 @@
 </head>
 
 <body>
-  <div class="container"></div>
-  <div class="app"></div>
+  <div class="container" id="instructions">
+    <button class="btn btn-primary" onclick="startGame()">CLICK TO START</button>
+  </div>
+  <div class="app" style="display: none;"></div>
 
   <!-- ========== SCRIPTS ========== -->
   <!-- Bootstrap and jQuery CDN -->
@@ -58,6 +60,11 @@
     $(window).on('load', function () {
       $('.loader').delay(100).fadeOut('slow');
     });
+
+    function startGame() {
+      document.getElementById('instructions').style.display = 'none';
+      document.querySelector('.app').style.display = 'block';
+    }
   </script>
 </body>
 

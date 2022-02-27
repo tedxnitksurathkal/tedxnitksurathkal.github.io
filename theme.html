@@ -1,46 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lost and Found</title>
-  <link rel="stylesheet" href="./assets/css/lostandfound.css">
-</head>
-<body>
 
+<head>
+  <!-- ========== Meta Tags ========== -->
+  <meta charset="UTF-8" />
+  <meta name="description" content="TEDx NITKSurathkal" />
+  <meta name="keywords" content="TED, TEDx, TEDxNITKSurathkal, TEDx NITK, NITK, NITK Surathkal" />
+  <meta name="author" content="TEDx NITK Surathkal" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="TEDxNITKSurathkal | Ideas Worth Spreading" />
+  <meta property="og:title" content="TEDxNITKSurathkal | Ideas Worth Spreading" />
+  <meta property="og:description"
+    content="TEDxNITKSurathkal is coming back for Edition 2021! See you on 20th February 2021." />
+  <meta property="og:url" content="http://www.tedxnitksurathkal.in/" />
+  <meta property="og:image" content="http://www.tedxnitksurathkal.in/assets/img/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <!-- ========== Title ========== -->
+  <title>Connect the Dots | TEDxNITKSurathkal</title>
+
+  <!-- ========== Favicon Ico ========== -->
+  <link rel="icon" href="assets/img/favicon.png" />
+
+  <!-- ========== STYLESHEETS ========== -->
+  <!-- 2022 Theme -->
+  <link rel="stylesheet" href="./assets/css/theme2022.css">
+</head>
+
+<body>
   <div class="container">
-    <div class="panel intro">
-      <h1>Lost.</h1>
-    </div>
-    <div class="panel hamzanama">
-    </div>
-    <div class="panel veronese">
-    </div>
-    <div class="panel rangoli">
-    </div>
-    <div class="panel st-petersburg">
-    </div>
-    <div class="panel ajanta">
-    </div>
-    <div class="panel found">
-      <h1>Found.</h1>
-    </div>
-    <div class="final-panel">
-      <div class="info">
-        <h1>Lost and Found</h1>
-        <p>Who are we? Not as an isolated individual, but in a larger context over time, with regard to a community, the past and future. With the dizzying rate at which our lives are progressing, traditions remain an anchor to our identity, a legacy providing us with a sense of belonging to something larger.</p>
-        <p>Our peoples' culture is inextricably intertwined with the astounding amount of art it has manifested. As priorities shift worldwide, commercialisation takes over, and people struggle to keep up. This art can struggle to remain relevant in the modern world of ever-shifting priorities. Regardless, there is always an effort to ensure that heritage stands resilient against the battering of time and changing society. It may simply change packaging and adapt to stay relevant or find its niche catering to its passionate audience.</p>  
-        <p>TEDxNITKSurathkal brings you the latest edition of our Salon event, themed 'Lost and Found'. Join us as our speakers widen our appreciation of our culture and discuss how our past continues to thrive in the world today.</p>
-        <img class="tedx-logo" src="./assets/img/tedx_salon_white.png" alt="TEDxNITKSurathkal">
-        <a href="https://www.tedxnitksurathkal.in/" class="back-link">Back</a>
-      </div>
-    </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-  <script src="./assets/js/theme/lostandfound.js"></script>
+  <!-- ========== SCRIPTS ========== -->
+  <!-- 2022 Theme -->
+  <script src="./assets/js/theme/theme2022.js"></script>
+  <!-- GTAG Script -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
+    gtag('config', 'UA-110715968-3');
+
+    $(window).on('load', function () {
+      $('.loader').delay(100).fadeOut('slow');
+    });
+  </script>
 </body>
+
 </html>

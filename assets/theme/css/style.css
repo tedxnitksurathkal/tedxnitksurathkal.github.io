@@ -10,13 +10,13 @@
 :root {
   --is-dark-mode: 1;
   /* --font-family-title: 'DM Serif Display', serif; */
-  --font-family-title: serif;
+  /* --font-family-title: serif;
   --font-family-content: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
   --action-button-size: 1.6em;
 }
 
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
   :root {
     --left-space: 100px;
   }
@@ -39,14 +39,14 @@
 
 body {
   margin: 0;
-  font-family: var(--font-family-content);
-  font-weight: 300;
-  filter: invert(var(--is-dark-mode));
+  /* font-family: var(--font-family-content);
+  font-weight: 300; */
   touch-action: none;
   -webkit-tap-highlight-color: #f6c40822;
   transition: .5s filter;
 }
 .app {
+  filter: invert(var(--is-dark-mode));
   background-color: white;
 }
 html,
@@ -56,7 +56,7 @@ body,
   height: 100%;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -67,7 +67,7 @@ h6,
   font-weight: normal;
   line-height: 1;
   text-shadow: 0.5px 0 currentColor, 1px 0 currentColor;
-}
+} */
 
 svg.feather {
   fill: none;
@@ -123,4 +123,4 @@ a {
   -khtml-user-select: none;
   -webkit-user-select: none;
   -o-user-select: none;
-} */
+}

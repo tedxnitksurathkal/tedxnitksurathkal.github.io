@@ -437,6 +437,7 @@ let SurfaceComponent = class SurfaceComponent extends BaseComponent {
         const ratio = scaleTo ? (scaleTo / Math.max(width, height)) : 1;
         const newDotId = generateDotId();
         const svg = this.el.cloneNode(true);
+        
         svg.setAttribute('width', `${Math.round(width * ratio)}`);
         svg.setAttribute('height', `${Math.round(height * ratio)}`);
         svg.setAttribute('viewBox', `${-offset},${-offset},${width},${height}`);
@@ -468,7 +469,7 @@ export function generateBaseSVG(data) {
         gap * data.height
     ];
     return `
-    <svg data-ref="svg" xmlns="http://www.w3.org/2000/svg" class="surface" viewBox="${viewBox.join(' ')}">
+    <svg id="svg-surface" data-ref="svg" xmlns="http://www.w3.org/2000/svg" class="surface" viewBox="${viewBox.join(' ')}">
       <defs>
         <pattern width="${100 / data.width}%" height="${100 / data.height}%" viewBox="0,0,${gap},${gap}" id="${id}">
           <circle cx="${0.5 * gap}" cy="${0.5 * gap}" r="1" fill="#000"></circle>

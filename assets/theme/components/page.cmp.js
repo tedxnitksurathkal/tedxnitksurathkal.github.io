@@ -2,7 +2,6 @@ import { BaseComponent } from './base.cmp.js';
 export class PageComponent extends BaseComponent {
     constructor() {
         super(...arguments);
-        this.title = 'minimator';
         this.currentTransition = Promise.resolve();
     }
     enter() {

@@ -40,6 +40,12 @@ let ProjectComponent = class ProjectComponent extends PageComponent {
             switch (eventName) {
                 case 'grid':
                     surface.toggleGrid();
+                    document.getElementById('hidden-svg').innerHTML = surface.extractSVG().outerHTML;
+                    surface.toggleGrid();
+                    let vSVG = new Vivus('svg-surface', {duration: 200, type: 'delayed', start: 'manual'}, () => {});
+                    document.querySelector('.app').style.display = 'none';
+                    document.querySelector('#hidden-svg').style.display = 'block';
+                    vSVG.play();
                     break;
                 case 'eraser':
                     const newMode = eventData

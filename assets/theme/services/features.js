@@ -13,13 +13,13 @@ export function buildPNG(svg) {
     canvas.width = parseInt(svg.getAttribute('width') || '0', 10);
     canvas.height = parseInt(svg.getAttribute('height') || '0', 10);
     const ctx = canvas.getContext("2d");
-    ctx.fillStyle = '#fff';
+    ctx.fillStyle = '#000';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     const blob = new Blob([svg.outerHTML], { type: 'image/svg+xml' });
     const url = window.URL.createObjectURL(blob);
     return new Promise((res, rej) => {
         const baseimage = new Image();
-        baseimage.style.background = '#fff';
+        baseimage.style.background = '#000';
         baseimage.onload = function () {
             ctx.drawImage(baseimage, 1, 1, canvas.width, canvas.height);
             canvas.toBlob((blob) => {

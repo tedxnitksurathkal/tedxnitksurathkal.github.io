@@ -37,7 +37,6 @@
 </head>
 
 <body>
-  <div class="container" id="instructions">
   </div>
   <div class="modal" tabindex="-1" id="start-modal">
     <div class="modal-dialog modal-dialog-centered">
@@ -81,15 +80,47 @@
 
     gtag('config', 'UA-110715968-3');
 
+    let startModal = new bootstrap.Modal(document.getElementById('start-modal'));
+
     $(window).on('load', function () {
       $('.loader').delay(100).fadeOut('slow');
-      let startModal = new bootstrap.Modal(document.getElementById('start-modal'));
-      // startModal.show();
+      startModal.show();
     });
+
+    document.getElementById('start-modal').addEventListener('hide.bs.modal', e => {
+      startTimer();
+    })
+
+    function startTimer() {
+      let timer = document.querySelector('project-page').shadowRoot.querySelector('toolbar-cmp').shadowRoot.querySelector('.timer')
+
+      function updateTimer() {
+        let time = timer.innerHTML.split(':')
+        let minutes = parseInt(time[0])
+        let seconds = parseInt(time[1])
+        if (minutes == 0 && seconds == 0) {
+          console.log('TIME UP!!!')
+          clearInterval(interval)
+          return
+        }
+        seconds -= 1
+        if (seconds == -1) {
+          minutes -= 1
+          seconds = 59
+        }
+        if (seconds < 10) {
+          seconds = '0' + seconds
+        }
+        timer.innerHTML = minutes + ':' + seconds
+      }
+
+      let interval = setInterval(updateTimer, 1000);
+    }
+
+    // document.querySelector('project-page').shadowRoot.querySelector('toolbar-cmp').shadowRoot.querySelector('.timer')
     // document.querySelector('project-page').shadowRoot.querySelector('surface-cmp').shadowRoot.querySelector('svg').outerHTML
 
     function startGame() {
-      document.getElementById('instructions').style.display = 'none';
       document.querySelector('.app').style.display = 'block';
     }
   </script>

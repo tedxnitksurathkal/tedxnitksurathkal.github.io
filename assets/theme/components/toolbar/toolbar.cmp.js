@@ -8,6 +8,9 @@ import { BaseComponent, Component } from '../base.cmp.js';
 import '../helper-tooltip/helper-tooltip.cmp.js';
 import { icon } from '../../services/feather.icons.js';
 const template = `
+  ${icon('clock', 'clockIcon', 'Clock')}
+  <span class="timer">3:00</span>
+  <span class="split"></span>
   <span data-ref="toggleEraser">
     ${icon('eraser', 'eraserIcon', 'Toggle eraser mode')}
     ${icon('pen', 'penIcon', 'Toggle eraser mode')}

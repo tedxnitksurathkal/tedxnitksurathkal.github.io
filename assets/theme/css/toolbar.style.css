@@ -12,10 +12,12 @@
   font-size: 22px;
   animation: movedown .4s 1;
 }
-.count {
+.timer {
+  font-family: 'montserrat', sans-serif;
   display: inline-block;
   min-width: 2.5ch;
   text-align: center;
+  padding-right: 0.3em;
 }
 .split {
   height: 100%;
@@ -35,7 +37,7 @@ svg.feather {
   height: 1em;
   padding: 0.3em;
 }
-svg:hover {
+svg.feather:not([alt=Clock]):hover {
   background-color: #fff2;
 }
 a {

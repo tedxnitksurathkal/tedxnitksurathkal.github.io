@@ -52,10 +52,11 @@ body {
   touch-action: none;
   -webkit-tap-highlight-color: #f6c40822;
   transition: 0.5s filter;
+  background-color: black;
 }
 .app {
-  filter: invert(var(--is-dark-mode));
-  background-color: white;
+  /* filter: invert(var(--is-dark-mode)); */
+  background-color: black;
 }
 html,
 body,
@@ -153,4 +154,60 @@ h2 {
   border-color: #f00;
   border-radius: 0;
   padding: 10px 22px;
+}
+
+#theme-reveal {
+  overflow-y: scroll !important;
+}
+
+#theme-reveal p {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 0 15px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #ddd;
+  text-align: center;
+}
+
+.bigger {
+  margin: 0;
+  font-weight: 800;
+  padding: 50px;
+  text-transform: uppercase;
+  color: #e3242b;
+  display: inline-block;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+}
+
+#hidden-svg {
+  margin: 0 auto 20px;
+}
+
+#hidden-svg svg {
+  display: block;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .bigger {
+    font-size: 45px;
+  }
+  #theme-reveal p {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .bigger {
+    font-size: 60px;
+  }
+  #theme-reveal p {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }

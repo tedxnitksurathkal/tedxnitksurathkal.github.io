@@ -14,7 +14,7 @@
     content="TEDxNITKSurathkal is coming back for Edition 2021! See you on 20th February 2021." />
   <meta property="og:url" content="http://www.tedxnitksurathkal.in/" />
   <meta property="og:image" content="http://www.tedxnitksurathkal.in/assets/img/favicon.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no/>
 
   <!-- ========== Title ========== -->
   <title>Connect the Dots | TEDxNITKSurathkal</title>
@@ -37,7 +37,6 @@
 </head>
 
 <body>
-  </div>
   <div class="modal" tabindex="-1" id="start-modal">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -46,7 +45,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p>1. Connect the dots in 1 minute</p>
+          <p>1. Connect the dots and draw anything in 1 minutes</p>
           <p>2. ENJOY</p>
         </div>
         <div class="modal-footer">
@@ -55,7 +54,26 @@
       </div>
     </div>
   </div>
-  <div id="hidden-svg" style="display: none;"></div>
+
+  <div class="container" id="theme-reveal" style="display: none;">
+    <img class="bigger" src="assets/img/maze/trailblazer.png">
+    <div id="hidden-svg"></div>
+    <div>
+      <p>We often find ourselves walking predefined trails with the
+        promise of what is socially defined as success.
+        Trails surrounded by walls of preconceived notions
+        and expectations that limits our perspective and muffles other inspiration.</p>
+      <p>Seldom do we find the courage to demolish these walls and blaze our own trail.
+        To walk down roads few dare to follow, often dark and unexplored only to be
+        the ones who create the light at the end of the tunnel.</p>
+      <p>TEDxNITKSurathkalSalon presents <strong>Trailblazer</strong>, where we shine the limelight on
+        students like us, but those who heard a different calling and had
+        the courage to listen. Join us as we light up and navigate these
+        unconventional trails and be part of a whole new generation of
+        Trailblazers, the most daring one yet.
+      </p>
+    </div>
+  </div>
 
   <div class="app"></div>
 
@@ -101,6 +119,7 @@
         if (minutes == 0 && seconds == 0) {
           console.log('TIME UP!!!')
           clearInterval(interval)
+          revealTheme();
           return
         }
         seconds -= 1
@@ -117,11 +136,30 @@
       let interval = setInterval(updateTimer, 1000);
     }
 
-    // document.querySelector('project-page').shadowRoot.querySelector('toolbar-cmp').shadowRoot.querySelector('.timer')
     // document.querySelector('project-page').shadowRoot.querySelector('surface-cmp').shadowRoot.querySelector('svg').outerHTML
 
-    function startGame() {
-      document.querySelector('.app').style.display = 'block';
+    function revealTheme() {
+      document.querySelector('.app').style.display = 'none';
+      document.querySelector('#theme-reveal').style.display = 'block'
+      document.getElementById('hidden-svg').innerHTML = extractSVG().outerHTML
+      new Vivus('svg-surface')
+    }
+
+    function extractSVG(margin = 2, scaleTo) {
+      function generateDotId() {
+        return 'dot-' + btoa(`${Math.random() * (Math.pow(2, 53))}`);
+      }
+
+      var _a, _b;
+      const newDotId = generateDotId();
+      const svg = document.querySelector('project-page').shadowRoot.querySelector('surface-cmp').shadowRoot.querySelector('svg').cloneNode(true);
+
+      svg.setAttribute('width', 300);
+      svg.setAttribute('height', 300);
+      svg.setAttribute('viewBox', '-2 -2 300 300');
+      (_a = svg.querySelector(`pattern`)) === null || _a === void 0 ? void 0 : _a.setAttribute('id', newDotId);
+      (_b = svg.querySelector(`[data-ref="dots"]`)) === null || _b === void 0 ? void 0 : _b.setAttribute('fill', `url('#${newDotId}')`);
+      return svg;
     }
   </script>
 </body>

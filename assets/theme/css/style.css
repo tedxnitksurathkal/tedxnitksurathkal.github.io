@@ -135,6 +135,7 @@ a {
   -o-user-select: none;
 }
 
+/* Custom CSS starts here */
 .modal-header {
   background-color: #f00c;
 }
@@ -191,6 +192,26 @@ img {
 #hidden-svg svg {
   display: block;
   margin: 0 auto;
+}
+
+.home-btn {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block !important;
+  font-weight: 700;
+  text-decoration: none;
+  background-color: transparent;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  padding: 13px 20px;
+  border-radius: 40px;
+  margin: 7px;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  color: rgba(255, 0, 36, 0.7);
+  background: #201010;
+}
+.home-btn:hover {
+  color: #fff;
 }
 
 @media only screen and (min-width: 768px) {

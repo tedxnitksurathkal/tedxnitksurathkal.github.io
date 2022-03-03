@@ -6,7 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { BaseComponent, Component } from '../base.cmp.js';
 const template = `
-  <h1>information</h1>
+  <h1>Information</h1>
   <span class="line">Tablet/Phone</span>
   <ul>
     <li>

@@ -9,7 +9,7 @@ import '../helper-tooltip/helper-tooltip.cmp.js';
 import { icon } from '../../services/feather.icons.js';
 const template = `
   ${icon('clock', 'clockIcon', 'Clock')}
-  <span class="timer">3:00</span>
+  <span class="timer">1:00</span>
   <span class="split"></span>
   <span data-ref="toggleEraser">
     ${icon('eraser', 'eraserIcon', 'Toggle eraser mode')}
@@ -17,8 +17,6 @@ const template = `
   </span>
   <span class="split"></span>
   ${icon('grid', 'gridEvent', 'Show/hide the canvas grid')}
-  <span class="split"></span>
-  ${icon('download', 'downloadEvent', 'Download artwork')}
   <span class="split"></span>
   ${icon('info', 'toggleInfoTooltip', 'Toggle info')}
   <helper-tooltip-cmp data-ref="infoTooltip"/>

@@ -14,7 +14,7 @@
     content="TEDxNITKSurathkal is coming back for Edition 2021! See you on 20th February 2021." />
   <meta property="og:url" content="http://www.tedxnitksurathkal.in/" />
   <meta property="og:image" content="http://www.tedxnitksurathkal.in/assets/img/favicon.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
   <!-- ========== Title ========== -->
   <title>Connect the Dots | TEDxNITKSurathkal</title>
@@ -45,7 +45,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p>1. Connect the dots and draw anything in 1 minutes</p>
+          <p>1. Connect the dots and draw anything in 1 minute</p>
           <p>2. ENJOY</p>
         </div>
         <div class="modal-footer">
@@ -55,10 +55,12 @@
     </div>
   </div>
 
-  <div class="container" id="theme-reveal" style="display: none;">
+  <div class="container text-center" id="theme-reveal" style="display: none;">
     <img class="bigger" src="assets/img/maze/trailblazer.png">
     <div id="hidden-svg"></div>
-    <div>
+    <button id="vivus-anim" class="home-btn">Replay Animation</button>
+    <button id="download-btn" class="home-btn">Download drawing</button>
+    <div class="pt-3">
       <p>We often find ourselves walking predefined trails with the
         promise of what is socially defined as success.
         Trails surrounded by walls of preconceived notions
@@ -72,7 +74,10 @@
         unconventional trails and be part of a whole new generation of
         Trailblazers, the most daring one yet.
       </p>
+      <a href="/" class="home-btn">Home</a>
+      <a href="/theme" class="home-btn">Play Again</a>
     </div>
+    <img src="assets/img/tedx_salon_black.png" height="80px;" style="margin-top: 20px;">
   </div>
 
   <div class="app"></div>
@@ -98,11 +103,15 @@
 
     gtag('config', 'UA-110715968-3');
 
+    let vivusAnim;
     let startModal = new bootstrap.Modal(document.getElementById('start-modal'));
+    let downloadAnchor = document.createElement('a');
+    downloadAnchor.style.display = 'none';
 
     $(window).on('load', function () {
       $('.loader').delay(100).fadeOut('slow');
       startModal.show();
+      document.body.appendChild(downloadAnchor);
     });
 
     document.getElementById('start-modal').addEventListener('hide.bs.modal', e => {
@@ -117,7 +126,6 @@
         let minutes = parseInt(time[0])
         let seconds = parseInt(time[1])
         if (minutes == 0 && seconds == 0) {
-          console.log('TIME UP!!!')
           clearInterval(interval)
           revealTheme();
           return
@@ -136,22 +144,58 @@
       let interval = setInterval(updateTimer, 1000);
     }
 
-    // document.querySelector('project-page').shadowRoot.querySelector('surface-cmp').shadowRoot.querySelector('svg').outerHTML
 
     function revealTheme() {
       document.querySelector('.app').style.display = 'none';
       document.querySelector('#theme-reveal').style.display = 'block'
       document.getElementById('hidden-svg').innerHTML = extractSVG().outerHTML
-      new Vivus('svg-surface')
+      vivusAnim = new Vivus('svg-surface')
+      document.getElementById('vivus-anim').addEventListener('click', () => {
+        vivusAnim.reset().play()
+      })
+      document.getElementById('download-btn').addEventListener('click', downloadSVG)
+    }
+
+    function buildPNG() {
+      vivusAnim?.finish();
+      const svg = document.querySelector('#hidden-svg svg').cloneNode(true);
+      svg.setAttribute('width', 3000)
+      svg.setAttribute('height', 3000)
+      const canvas = document.createElement('canvas');
+      canvas.width = parseInt(svg.getAttribute('width') || '0', 10);
+      canvas.height = parseInt(svg.getAttribute('height') || '0', 10);
+      const ctx = canvas.getContext("2d");
+      ctx.fillStyle = '#000';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      const blob = new Blob([svg.outerHTML], { type: 'image/svg+xml' });
+      const url = window.URL.createObjectURL(blob);
+      return new Promise((res, rej) => {
+        const baseimage = new Image();
+        baseimage.style.background = '#000';
+        baseimage.onload = function () {
+          ctx.drawImage(baseimage, 1, 1, canvas.width, canvas.height);
+          canvas.toBlob((blob) => {
+            const file = new File([blob], 'minimator.png', { type: 'image/png' });
+            res(file);
+          });
+        };
+        baseimage.onerror = rej;
+        baseimage.src = url;
+      });
+    }
+
+    function downloadSVG() {
+      buildPNG().then(file => {
+        downloadAnchor.href = URL.createObjectURL(file);
+        downloadAnchor.download = 'drawing.png';
+        downloadAnchor.click();
+      })
     }
 
     function extractSVG(margin = 2, scaleTo) {
-      function generateDotId() {
-        return 'dot-' + btoa(`${Math.random() * (Math.pow(2, 53))}`);
-      }
-
-      var _a, _b;
-      const newDotId = generateDotId();
+      let _a, _b;
+      const newDotId = 'dot-' + btoa(`${Math.random() * (Math.pow(2, 53))}`);
+      document.querySelector('project-page').shadowRoot.querySelector('surface-cmp').shadowRoot.querySelector('svg > rect').style.display = 'inherit'
       const svg = document.querySelector('project-page').shadowRoot.querySelector('surface-cmp').shadowRoot.querySelector('svg').cloneNode(true);
 
       svg.setAttribute('width', 300);

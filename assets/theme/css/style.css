@@ -1,11 +1,16 @@
-/* @font-face {
-  font-family: 'DM Serif Display';
-  font-weight: 400;
+@font-face {
+  font-family: 'Gilroy';
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  src: url('../assets/fonts/DMSerifDisplay-Regular.ttf') format('truetype');
-} */
+  src: url('../fonts/Gilroy-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../fonts/Gilroy-Bold.ttf') format('truetype');
+}
 
 :root {
   --is-dark-mode: 1;
@@ -92,6 +97,10 @@ a {
   color: inherit;
 }
 
+p {
+  font-family: 'Gilroy', 'Montserrat', sans-serif;
+}
+
 .breadcrumb {
   font-family: var(--font-family-title);
   color: inherit;
@@ -141,7 +150,7 @@ a {
 }
 
 h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Gilroy', 'Montserrat', sans-serif;
   color: black;
   font-weight: bold;
 }
@@ -151,7 +160,7 @@ h2 {
   color: black;
   font-size: 18px;
   font-weight: bold;
-  /* border: none; */
+  font-family: 'Gilroy', 'Montserrat', sans-serif;
   border-color: #f00;
   border-radius: 0;
   padding: 10px 22px;
@@ -162,8 +171,8 @@ h2 {
 }
 
 #theme-reveal p {
-  font-size: 14px;
-  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-family: 'Gilroy', 'Montserrat', sans-serif;
   margin: 0 0 15px;
   line-height: 24px;
   font-weight: 400;
@@ -195,7 +204,8 @@ img {
 }
 
 .home-btn {
-  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-family: 'Gilroy', 'Montserrat', sans-serif;
   display: inline-block !important;
   font-weight: 700;
   text-decoration: none;
@@ -222,6 +232,9 @@ img {
     font-size: 24px;
     line-height: 32px;
   }
+  img {
+    max-width: 75%;
+  }
 }
 @media only screen and (min-width: 1200px) {
   .bigger {
@@ -230,5 +243,8 @@ img {
   #theme-reveal p {
     font-size: 30px;
     line-height: 40px;
+  }
+  img {
+    max-width: 50%;
   }
 }

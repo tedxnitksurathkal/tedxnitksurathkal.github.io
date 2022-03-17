@@ -13,11 +13,12 @@
   animation: movedown .4s 1;
 }
 .timer {
-  font-family: 'montserrat', sans-serif;
+  font-family: 'Gilroy', 'montserrat', sans-serif;
   display: inline-block;
   min-width: 2.5ch;
   text-align: center;
   padding-right: 0.3em;
+  height: 1.4em;
 }
 .split {
   height: 100%;

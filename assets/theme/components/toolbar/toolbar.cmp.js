@@ -11,6 +11,8 @@ const template = `
   ${icon('clock', 'clockIcon', 'Clock')}
   <span class="timer">1:00</span>
   <span class="split"></span>
+  ${icon('check', 'finishEvent', 'Finish drawing')}
+  <span class="split"></span>
   <span data-ref="toggleEraser">
     ${icon('eraser', 'eraserIcon', 'Toggle eraser mode')}
     ${icon('pen', 'penIcon', 'Toggle eraser mode')}

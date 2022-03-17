@@ -38,6 +38,9 @@ let ProjectComponent = class ProjectComponent extends PageComponent {
         (_b = this.shadowRoot) === null || _b === void 0 ? void 0 : _b.appendChild(toolbar);
         toolbar.on((eventName, eventData) => {
             switch (eventName) {
+                case 'finish':
+                    document.querySelector('project-page').shadowRoot.querySelector('toolbar-cmp').shadowRoot.querySelector('.timer').innerHTML = "0:00";
+                    break
                 case 'grid':
                     surface.toggleGrid();
                     break;

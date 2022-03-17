@@ -36,7 +36,10 @@ const ICON_CATALOG = {
     <line x1="12" y1="8" x2="12" y2="8"></line>`,
     clock: `
     <circle cx="12" cy="12" r="10"></circle>
-    <polyline points="12 6 12 12 16 14"></polyline>`
+    <polyline points="12 6 12 12 16 14"></polyline>`,
+    check: `
+    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+    <polyline points="22 4 12 14.01 9 11.01"></polyline>`
 };
 export function icon(name, ref, alt) {
     const iconData = ICON_CATALOG[name];

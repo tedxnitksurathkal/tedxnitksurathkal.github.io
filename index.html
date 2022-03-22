@@ -10,7 +10,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="TEDxNITKSurathkal | Ideas Worth Spreading">
     <meta property="og:title" content="TEDxNITKSurathkal | Ideas Worth Spreading">
-    <meta property="og:description" content="TEDxNITKSurathkal is coming back for Edition 2021! See you on 20th February 2021.">
+    <meta property="og:description" content="TEDxNITKSurathkal is coming back for Edition 2022! See you on 24th March 2022.">
     <meta property="og:url" content="http://www.tedxnitksurathkal.in/">
     <meta property="og:image" content="http://www.tedxnitksurathkal.in/assets/img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -96,11 +96,11 @@
 
             <ul data-time="1500">
                 <li data-hue="197">2</li>
-                <li data-hue="197">6</li>
+                <li data-hue="197">4</li>
                 <li data-hue="0">x</li>
-                <li data-hue="197">F</li>
-                <li data-hue="197">E</li>
-                <li data-hue="197">B</li>
+                <li data-hue="197">M</li>
+                <li data-hue="197">A</li>
+                <li data-hue="197">R</li>
             </ul>
         </div>
         <canvas></canvas>
@@ -115,7 +115,7 @@
                         <div class="content">
                             <h5 class="box_title">DATE</h5>
                             <p>
-                                5:30 PM, 26th February, 2022
+                                24th March, 2022
                             </p>
                         </div>
                     </div>
@@ -128,7 +128,7 @@
                                 location
                             </h5>
                             <p>
-                                LHC-C Seminar Hall, NITK Surathkal
+                                Silver Jubilee Auditorium, NITK Surathkal
                             </p>
                         </div>
                     </div>
@@ -141,7 +141,7 @@
                                 speakers
                             </h5>
                             <p>
-                                2
+                                To be revealed!!!
                             </p>
                         </div>
                     </div>
@@ -276,7 +276,9 @@
                 our speakers
             </h3>
         </div>
-        <div class="row justify-content-center no-gutters" id="speakers"></div>
+        <div class="row justify-content-center no-gutters" id="speakers">
+            <h3 style='font-size: 28px; font-weight: 400;'>COMING SOON!!!</h3>
+        </div>
     </div>
 </section>
 
@@ -507,66 +509,66 @@
       time: 3000
     });
 
-    $('.countdown').countdown(new Date("2022-02-26T17:30:00.000+05:30"), function(event) {
+    $('.countdown').countdown(new Date("2022-03-24T00:00:00.000+05:30"), function(event) {
       $(this).html(
         event.strftime("<div>%D <span>Days</span></div><div>%H <span>Hours</span></div><div>%M <span>Minutes</span></div><div>%S <span>Seconds</span></div>")
       );
     });
   });
 
-  let n_speakers = speakers.length;
+//   let n_speakers = speakers.length;
 
-  for(let i = 0; i < n_speakers; i++){
-    let spk = speakers[i];
+//   for(let i = 0; i < n_speakers; i++){
+//     let spk = speakers[i];
 
-    let currentTime = new Date();
-    let show_time = new Date(spk.show_after);
+//     let currentTime = new Date();
+//     let show_time = new Date(spk.show_after);
 
-    if (currentTime.getTime() < show_time.getTime())
-        continue;
+//     if (currentTime.getTime() < show_time.getTime())
+//         continue;
 
-    let modal_id = `spk-${i}`;
+//     let modal_id = `spk-${i}`;
 
-    let html=`
-    <div class="col-md-4 col-sm-8">
-        <div class="speaker_box">
-            <div class="speaker_img" data-toggle="modal" data-target="#${modal_id}">
-                <img class="lazy" data-src="/assets/img/speakers/${spk.img_link}" alt=${spk.name}>
-                <!--
-                <div class="info_box">
-                    <h5 class="name">${spk.name}</h5>
-                    <p class="position">${spk.title}</p>
-                </div>
-                --->
-            </div>
+//     let html=`
+//     <div class="col-md-4 col-sm-8">
+//         <div class="speaker_box">
+//             <div class="speaker_img" data-toggle="modal" data-target="#${modal_id}">
+//                 <img class="lazy" data-src="/assets/img/speakers/${spk.img_link}" alt=${spk.name}>
+//                 <!--
+//                 <div class="info_box">
+//                     <h5 class="name">${spk.name}</h5>
+//                     <p class="position">${spk.title}</p>
+//                 </div>
+//                 --->
+//             </div>
 
-            <div class="speaker_social">
-                <ul></ul>
-            </div>
-        </div>
-    </div>`;
+//             <div class="speaker_social">
+//                 <ul></ul>
+//             </div>
+//         </div>
+//     </div>`;
 
-    let description = "<p>" + spk.description.join("</p><p>") + "</p>"
+//     let description = "<p>" + spk.description.join("</p><p>") + "</p>"
 
-    let modalHtml=`
-    <div class="modal" id=${modal_id} style="top: 15%;">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header text-center" style="background-color: #000;">
-                    <h3 class="modal-title text-center" style="color:#ff0000; width: 100%;">${spk.name}</h3>
-                    <button type="button" class="close" data-dismiss="modal" style="color: #fff;">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <h5 style="width:100%; font-weight: 700;" class="text-center">${spk.title}</h5>
-                    ${description}
-                </div>
-            </div>
-        </div>
-    </div>`;
+//     let modalHtml=`
+//     <div class="modal" id=${modal_id} style="top: 15%;">
+//         <div class="modal-dialog">
+//             <div class="modal-content">
+//                 <div class="modal-header text-center" style="background-color: #000;">
+//                     <h3 class="modal-title text-center" style="color:#ff0000; width: 100%;">${spk.name}</h3>
+//                     <button type="button" class="close" data-dismiss="modal" style="color: #fff;">&times;</button>
+//                 </div>
+//                 <div class="modal-body">
+//                     <h5 style="width:100%; font-weight: 700;" class="text-center">${spk.title}</h5>
+//                     ${description}
+//                 </div>
+//             </div>
+//         </div>
+//     </div>`;
 
-    $('#speakers').append(html);
-    $('#speaker-modals').append(modalHtml);
-  }
+//     $('#speakers').append(html);
+//     $('#speaker-modals').append(modalHtml);
+//   }
 
   // Generate past speakers carousel
   for(i = 0; i < past_speakers.length; i++){

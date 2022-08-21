@@ -2470,7 +2470,7 @@ Cover
 }
 .speaker_box .speaker_img .info_box {
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   background-color: #18181c;
   padding: 10px 30px;
   -webkit-transition: all ease-in-out 0.4s;

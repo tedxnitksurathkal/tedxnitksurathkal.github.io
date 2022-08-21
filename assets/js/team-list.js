@@ -16,7 +16,7 @@ var team = [
     {
         "name": "Dr. Alwyn Roshan Pais",
         "position": "Associate Dean - Student Welfare",
-        "image": "dummy-pic.png",
+        "image": "ADSW1.jpg",
         "linkedin": "",
         "instagram": "tedxnitksurathkal"
     },
@@ -28,59 +28,66 @@ var team = [
         "instagram": "tedxnitksurathkal"
     },
     {
-        "name": "Sanjo Sabu",
-        "position": "Team Lead",
-        "image": "Sanjo.jpg",
-        "linkedin": "https://www.linkedin.com/in/sanjo-sabu-555370184",
-        "instagram": "sanjo_bas"
+        "name": "Prof. Prabu K",
+        "position": "Faculty Advisor",
+        "image": "Prabu.jpg",
+        "linkedin": "",
+        "instagram": "tedxnitksurathkal"
     },
     {
         "name": "Shreya Namath",
-        "position": "Head Of Curation",
+        "position": "Team Lead",
         "image": "Shreya.jpg",
         "linkedin": "",
         "instagram": ""
     },
     {
-        "name": "Adithya Jayan",
-        "position": "Techinal Co-ordinator",
-        "image": "Adithya.jpg",
-        "linkedin": "https://www.linkedin.com/in/adithya-jayan/",
-        "instagram": "adithyaj8"
-    },
-    {
-        "name": "Amaan Siyad",
-        "position": "Head Of Production",
-        "image": "Amaan.jpg",
-        "linkedin": "https://www.linkedin.com/in/amaan-siyad-a695041b9/",
-        "instagram": ""
-    },
-    {
-        "name": "Sreehari M",
-        "position": "Head Of Production",
-        "image": "Sreehari.jpg",
+        "name": "Advaith Curpod",
+        "position": "Head Of Curation",
+        "image": "Advaith.jpg",
         "linkedin": "",
         "instagram": ""
     },
     {
-        "name": "Luv Nambiar",
-        "position": "Head Of Operations",
-        "image": "Luv.jpg",
-        "linkedin": "https://www.linkedin.com/in/luv-nambiar-2755a1189/",
-        "instagram": "luvnambiar"
+        "name": "Ranjana Kambhammettu",
+        "position": "Co-Curator",
+        "image": "Ranjana.jpg",
+        "linkedin": "https://www.linkedin.com/in/ranjanakambhammettu/",
+        "instagram": "ranjana_kambhammettu"
     },
     {
-        "name": "Sreenidhi Bhat",
-        "position": "Head Of Operations",
-        "image": "Sreenidhi.jpg",
+        "name": "Manav Shetty",
+        "position": "Head Of Production",
+        "image": "Manav.jpg",
         "linkedin": "",
         "instagram": ""
     },
     {
-        "name": "Surya Kaushik",
+        "name": "Manmith V Suvarna",
+        "position": "Head Of Production",
+        "image": "Manmith.jpg",
+        "linkedin": "",
+        "instagram": ""
+    },
+    {
+        "name": "Sannuta Mijar",
+        "position": "Head Of Operations",
+        "image": "Sannuta.jpg",
+        "linkedin": "",
+        "instagram": ""
+    },
+    {
+        "name": "Tarun Vishnoi",
+        "position": "Head Of Operations",
+        "image": "Tarun.jpg",
+        "linkedin": "",
+        "instagram": ""
+    },
+    {
+        "name": "Devvrat Ashtaputre",
         "position": "Head Of Marketing",
-        "image": "Surya.jpg",
-        "linkedin": "",
+        "image": "Devvrat.jpeg",
+        "linkedin": "https://www.linkedin.com/in/devvrat-ashtaputre-839a13201        ",
         "instagram": ""
     },
     {
@@ -91,17 +98,24 @@ var team = [
         "instagram": ""
     },
     {
-        "name": "Stafan Santosh",
-        "position": "Co-Curator",
-        "image": "Stafan.jpg",
+        "name": "Athul Shankar",
+        "position": "Social Media Co-ordinator",
+        "image": "Athul.jpg",
         "linkedin": "",
         "instagram": ""
     },
     {
-        "name": "Athul Shankar",
-        "position": "Social Media Co-ordinator",
-        "image": "Athul.jpg",
-        "linkedin": "https://www.linkedin.com/199877amithv",
-        "instagram": "amith_7798"
+        "name": "Abel Sam Thomas",
+        "position": "Head Of Publicity",
+        "image": "Abel.jpg",
+        "linkedin": "",
+        "instagram": ""
+    },
+    {
+        "name": "Kaveen Srikanthan",
+        "position": "Creative Head",
+        "image": "Kaveen.png",
+        "linkedin": "",
+        "instagram": ""
     },
 ]

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta name="description" content="TEDx NITKSurathkal">
+    <meta name="keywords" content="TED, TEDx, TEDxNITKSurathkal, TEDx NITK, NITK, NITK Surathkal">
+    <meta name="author" content="TEDx NITK Surathkal">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TEDxNITKSurathkal | Ideas Worth Spreading">
+    <meta property="og:title" content="TEDxNITKSurathkal | Ideas Worth Spreading">
+    <meta property="og:description"
+        content="TEDxNITKSurathkal is coming back for Edition 2021! See you on 20th February 2021.">
+    <meta property="og:url" content="http://www.tedxnitksurathkal.in/">
+    <meta property="og:image" content="http://www.tedxnitksurathkal.in/assets/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ========== Title ========== -->
+    <title>Theme | TEDxNITKSurathkal</title>
+
+    <!-- ========== Favicon Ico ========== -->
+    <link rel="icon" href="/assets/img/favicon.png">
+    <!-- ========== STYLESHEETS ========== -->
+    <!-- Bootstrap 4 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Theme for 2021-->
+    <link rel="stylesheet" href="assets/css/theme2021.css">
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loader-outter"></div>
+        <div class="loader-inner" style="background-image: url('/assets/img/loader.png');"></div>
+    </div>
+
+    <div id="starting">
+        <div class="container text-center">
+            <img src="/assets/img/tedx-black.png" height="70" id="logo" style="margin-top: 10px;">
+        </div>
+        <h1 id="title-start"><i class="icon ion-android-volume-up"></i> Sound on</h1>
+        <a id="play-button"><i class="icon ion-play"></i></a>
+        <div class="container text-center" id="help-text" style="margin-top: 60vh;">
+            <p>Note :
+                After 10 songs are done or after 90s of play, whichever is sooner, the link will direct to the theme
+                description. So play multiple times to catch all songs and complete the Puzzle!</p>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div id="record-base" class="site">
+            <canvas style="visibility: hidden;"></canvas>
+            <div id="record">
+                <svg class="record-player" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105.25 105.25"
+                    style="z-index: 1;">
+                    <g transform="translate(310.848 60.185)">
+                        <g class="frame">
+                            <rect class="frame__shine" width="95.25" height="95.25" x="-305.848" y="-55.185" ry="4.276"
+                                fill-rule="evenodd"></rect>
+                            <path class="frame__base"
+                                d="M-288.915-55.185v95.25h74.04a4.267 4.267 0 004.276-4.276v-86.697a4.267 4.267 0 00-4.276-4.277z"
+                                fill-rule="evenodd"></path>
+                        </g>
+                        <circle class="record-base" cx="-258.223" cy="-7.56" r="39.688" fill-rule="evenodd" fill="red">
+                        </circle>
+                        <g class="knob" transform="matrix(-.10538 .05103 -.05305 -.10674 -308.635 40.311)">
+                            <ellipse class="knob__base" ry="55.325" rx="56.661" cx="-151.007" cy="79.914"></ellipse>
+                            <path class="knob__shine"
+                                d="M-94.346 79.914a56.661 55.325 0 01-8.12 28.538l-48.541-28.538z">
+                            </path>
+                            <circle class="knob__top" r="41.961" cy="79.914" cx="-151.007"></circle>
+                        </g>
+                        <g class="record">
+                            <circle class="record__body" cx="-258.223" cy="-7.56" r="37.688" fill-rule="evenodd">
+                            </circle>
+                            <circle class="record__label-base" cx="-258.223" cy="-7.56" r="35.278" fill-rule="evenodd"
+                                transform="matrix(.45 0 0 .45 -142.022 -4.158)"></circle>
+                            <circle class="record__label" r="35.278" cy="-7.56" cx="-258.223" fill-rule="evenodd"
+                                transform="matrix(.39107 0 0 .39107 -157.239 -4.603)"></circle>
+                            <g class="face">
+                                <g class="eyes--open">
+                                    <g transform="translate(86.028 -11.42)">
+                                        <circle class="eye" r="2.74" cy="2.273" cx="-351.801"></circle>
+                                        <circle class="pupil" r=".661" cy="1.423" cx="-352.841"></circle>
+                                    </g>
+                                    <g transform="translate(101.128 -11.42)">
+                                        <circle class="eye" cx="-351.801" cy="2.273" r="2.74"></circle>
+                                        <circle class="pupil" cx="-352.841" cy="1.423" r=".661"></circle>
+                                    </g>
+                                </g>
+                                <g class="mouth">
+                                    <path class="mouth__opening"
+                                        d="M-262.187-8.31a3.969 3.969 0 00-.005.094 3.969 3.969 0 003.969 3.969 3.969 3.969 0 003.968-3.969 3.969 3.969 0 00-.003-.094z">
+                                    </path>
+                                    <path class="mouth__tongue"
+                                        d="M-256.333-6.987a3.969 3.969 0 00-3.616 2.34 3.969 3.969 0 001.726.4 3.969 3.969 0 003.615-2.34 3.969 3.969 0 00-1.725-.4z">
+                                    </path>
+                                </g>
+                            </g>
+                        </g>
+
+                        <g class="record__shine" fill="none" stroke="green" stroke-width="5" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path
+                                d="M-222.921-7.56a35.302 35.302 0 00-10.356-24.946M-293.525-7.56a35.302 35.302 0 0010.355 24.947M-227.206-7.56a31.018 31.018 0 00-9.099-21.919M-289.241-7.56a31.018 31.018 0 009.099 21.92M-231.083-7.56a27.14 27.14 0 00-7.961-19.179M-285.364-7.56a27.14 27.14 0 007.962 19.18M-234.96-7.56A23.263 23.263 0 00-241.784-24M-281.487-7.56a23.263 23.263 0 006.825 16.44M-238.837-7.56a19.386 19.386 0 00-5.687-13.7M-277.61-7.56a19.386 19.386 0 005.687 13.7"
+                                stroke-width="1.7937399999999999"></path>
+                        </g>
+
+                        <g class="volume">
+                            <rect class="volume__base" width="5.306" height="16.303" x="-220.864" y="19.441" ry="1.803"
+                                stroke-width=".794" stroke-linecap="round" stroke-linejoin="round"></rect>
+                            <g class="volume__control">
+                                <rect class="volume__slider" width="3.742" height="3.274" x="-220.082" y="27.99" ry="0">
+                                </rect>
+                                <path class="volume__indicator" d="M-219.013 29.627h1.604"></path>
+                            </g>
+                            <path class="volume__levels"
+                                d="M-224.425 27.592h1.603M-224.425 31.826h1.603M-224.425 23.359h1.603" fill="none"
+                                stroke-width=".265"></path>
+                        </g>
+
+                        <circle class="knob__indicator" cx="-300.272" cy="24.212" r="1" stroke-linecap="round"
+                            stroke-linejoin="round"></circle>
+
+                        <g class="branding">
+                            <rect width="12.851" height="5.895" x="-303.742" y="-49.377" ry="0"></rect>
+                            <path d="M-301.821-48.388h9.01v1.8h-9.01zM-301.821-46.272h5.001v1.8h-5.001z"></path>
+                        </g>
+
+                        <g class="player-arm" transform="translate(-65.673 -.472)">
+                            <circle class="knob__base" r="7.938" cy="-43.412" cx="-156.583"></circle>
+                            <circle class="knob__top" cx="-156.583" cy="-43.412" r="6.718"></circle>
+                            <path class="arm"
+                                d="M-157.355-46.505s-.332 4.745 0 7.083c1.687 11.87 8.335 22.674 10.023 34.544.93 6.55 0 19.845 0 19.845"
+                                fill="none" stroke="#e6e6e6" stroke-width="1.587" stroke-linecap="round"
+                                stroke-linejoin="round">
+                            </path>
+                            <rect class="player-arm__top" width="8.968" height="4.544" x="-163.226" y="-45.684"
+                                ry="1.57" stroke-width=".6"></rect>
+                            <path class="player-arm__needle" d="M-148.885 11.77l3.47.175-.76 4.604-2.412-.174z"></path>
+                            <rect class="player-arm__counter" ry=".78" y="-48.611" x="-160.573" height="2.362"
+                                width="5.953" stroke-width=".529" stroke-linecap="round" stroke-linejoin="round"></rect>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+
+        <div class="genre-switch">
+            <a id="pause-button"><img src="assets/img/theme/p2p_logo.png" alt="P2P" class="logo-icon"></a>
+        </div>
+
+        <div id="audios">
+            <audio controls preload="auto" crossorigin id="gooey-audio"></audio>
+            <audio controls preload="auto" crossorigin id="round-audio"></audio>
+        </div>
+
+        <div class="player">
+            <div class="playarea"></div>
+        </div>
+
+        <footer style="padding: 0; background-color: transparent; visibility: hidden;">
+            <div class="spectrum">
+                <div class="bar" id="bar-1"></div>
+                <div class="bar" id="bar-2"></div>
+                <div class="bar" id="bar-3"></div>
+                <div class="bar" id="bar-4"></div>
+                <div class="bar" id="bar-5"></div>
+                <div class="bar" id="bar-6"></div>
+                <div class="bar" id="bar-7"></div>
+                <div class="bar" id="bar-8"></div>
+                <div class="bar" id="bar-9"></div>
+                <div class="bar" id="bar-10"></div>
+                <div class="bar" id="bar-11"></div>
+                <div class="bar" id="bar-12"></div>
+                <div class="bar" id="bar-13"></div>
+                <div class="bar" id="bar-14"></div>
+                <div class="bar" id="bar-15"></div>
+                <div class="bar" id="bar-16"></div>
+                <div class="bar" id="bar-17"></div>
+                <div class="bar" id="bar-18"></div>
+                <div class="bar" id="bar-19"></div>
+                <div class="bar" id="bar-20"></div>
+                <div class="bar" id="bar-21"></div>
+                <div class="bar" id="bar-22"></div>
+                <div class="bar" id="bar-23"></div>
+                <div class="bar" id="bar-24"></div>
+                <div class="bar" id="bar-25"></div>
+                <div class="bar" id="bar-26"></div>
+                <div class="bar" id="bar-27"></div>
+                <div class="bar" id="bar-28"></div>
+                <div class="bar" id="bar-29"></div>
+                <div class="bar" id="bar-30"></div>
+                <div class="bar" id="bar-31"></div>
+                <div class="bar" id="bar-32"></div>
+                <div class="bar" id="bar-33"></div>
+                <div class="bar" id="bar-34"></div>
+                <div class="bar" id="bar-35"></div>
+                <div class="bar" id="bar-36"></div>
+                <div class="bar" id="bar-37"></div>
+                <div class="bar" id="bar-38"></div>
+                <div class="bar" id="bar-39"></div>
+                <div class="bar" id="bar-40"></div>
+                <div class="bar" id="bar-41"></div>
+                <div class="bar" id="bar-42"></div>
+                <div class="bar" id="bar-43"></div>
+                <div class="bar" id="bar-44"></div>
+                <div class="bar" id="bar-45"></div>
+                <div class="bar" id="bar-46"></div>
+                <div class="bar" id="bar-47"></div>
+                <div class="bar" id="bar-48"></div>
+                <div class="bar" id="bar-49"></div>
+                <div class="bar" id="bar-50"></div>
+                <div class="bar" id="bar-51"></div>
+                <div class="bar" id="bar-52"></div>
+                <div class="bar" id="bar-53"></div>
+                <div class="bar" id="bar-54"></div>
+                <div class="bar" id="bar-55"></div>
+                <div class="bar" id="bar-56"></div>
+                <div class="bar" id="bar-57"></div>
+                <div class="bar" id="bar-58"></div>
+                <div class="bar" id="bar-59"></div>
+                <div class="bar" id="bar-60"></div>
+                <div class="bar" id="bar-61"></div>
+                <div class="bar" id="bar-62"></div>
+                <div class="bar" id="bar-63"></div>
+                <div class="bar" id="bar-64"></div>
+                <div class="bar" id="bar-65"></div>
+                <div class="bar" id="bar-66"></div>
+                <div class="bar" id="bar-67"></div>
+                <div class="bar" id="bar-68"></div>
+                <div class="bar" id="bar-69"></div>
+                <div class="bar" id="bar-70"></div>
+                <div class="bar" id="bar-71"></div>
+                <div class="bar" id="bar-72"></div>
+                <div class="bar" id="bar-73"></div>
+                <div class="bar" id="bar-74"></div>
+                <div class="bar" id="bar-75"></div>
+                <div class="bar" id="bar-76"></div>
+                <div class="bar" id="bar-77"></div>
+                <div class="bar" id="bar-78"></div>
+                <div class="bar" id="bar-79"></div>
+                <div class="bar" id="bar-80"></div>
+                <div class="bar" id="bar-81"></div>
+                <div class="bar" id="bar-82"></div>
+                <div class="bar" id="bar-83"></div>
+                <div class="bar" id="bar-84"></div>
+                <div class="bar" id="bar-85"></div>
+                <div class="bar" id="bar-86"></div>
+                <div class="bar" id="bar-87"></div>
+                <div class="bar" id="bar-88"></div>
+                <div class="bar" id="bar-89"></div>
+                <div class="bar" id="bar-90"></div>
+                <div class="bar" id="bar-91"></div>
+                <div class="bar" id="bar-92"></div>
+                <div class="bar" id="bar-93"></div>
+                <div class="bar" id="bar-94"></div>
+                <div class="bar" id="bar-95"></div>
+                <div class="bar" id="bar-96"></div>
+                <div class="bar" id="bar-97"></div>
+                <div class="bar" id="bar-98"></div>
+                <div class="bar" id="bar-99"></div>
+                <div class="bar" id="bar-100"></div>
+                <div class="bar" id="bar-101"></div>
+                <div class="bar" id="bar-102"></div>
+                <div class="bar" id="bar-103"></div>
+                <div class="bar" id="bar-104"></div>
+                <div class="bar" id="bar-105"></div>
+                <div class="bar" id="bar-106"></div>
+                <div class="bar" id="bar-107"></div>
+                <div class="bar" id="bar-108"></div>
+                <div class="bar" id="bar-109"></div>
+                <div class="bar" id="bar-110"></div>
+                <div class="bar" id="bar-111"></div>
+                <div class="bar" id="bar-112"></div>
+                <div class="bar" id="bar-113"></div>
+                <div class="bar" id="bar-114"></div>
+                <div class="bar" id="bar-115"></div>
+                <div class="bar" id="bar-116"></div>
+                <div class="bar" id="bar-117"></div>
+                <div class="bar" id="bar-118"></div>
+                <div class="bar" id="bar-119"></div>
+                <div class="bar" id="bar-120"></div>
+                <div class="bar" id="bar-121"></div>
+                <div class="bar" id="bar-122"></div>
+                <div class="bar" id="bar-123"></div>
+                <div class="bar" id="bar-124"></div>
+                <div class="bar" id="bar-125"></div>
+                <div class="bar" id="bar-126"></div>
+                <div class="bar" id="bar-127"></div>
+            </div>
+        </footer>
+    </div>
+    <div id="poem-reveal">
+        <div class="container text-center">
+            <p id="line1" class="poem-text">Tunes pass; Silence</p>
+            <p id="line2" class="poem-text">Is here to stay. And</p>
+            <p id="line3" class="poem-text">If life's a game,</p>
+            <p id="line4" class="poem-text">As fools we sway.</p>
+            <p id="line5" class="poem-text">Here's a chance,</p>
+            <p id="line6" class="poem-text">Sin; Pause to Play.</p>
+            <div id="line7" class="poem-text"><a id="theme-reveal-button"><img src="assets/img/theme/p2p_logo.png" alt="P2P" id="logo-icon-poem"></a></div>
+        </div>
+    </div>
+    <div id="theme-reveal" class="container text-center" style="display: none;">
+        <div>
+            <img src="/assets/img/tedx-white.png" height="70" id="theme-reveal-logo"  style="margin-top: 10px;">
+        </div>
+        <div>
+            <h1 id="title-desc"> <img src="assets/img/theme/p2p_title.png" alt="Pause to Play" class="p2p_title"> </h1>
+        </div>
+        <div class="desc">
+            <p>A "Pause" delivers two choices: continue along the same path or carve
+                out a new one.
+            </p>
+            <p>
+                Pause to reflect on your decisions. 
+            </p>
+            <p>
+                Pause to continue playing the game of Life.
+            </p>
+            <p>
+                Pauses can be self-imposed or obstacles meant to 
+                teach us lessons along the way. 
+            </p>
+            <p>
+                In these Pauses, let's strengthen our skills to adapt and evolve.
+            </p>
+            <p>
+                "Pause to Play" promotes the idea of pausing to walk 
+                away stronger with a new outlook on Life.
+            </p>
+            <p>
+                <strong>TEDxNITKSurathkal 2021</strong> provides a platform for self-introspection, 
+                through narratives with the right combination of pause and play.
+            </p>
+            <p>
+                We hope to motivate you to continue the hustle with experience and 
+                knowledge derived from our speakers' journeys.
+            </p>
+            <p>
+                <strong>
+                    Take a shot at solving our crossword and win exciting prizes!<br>
+                    P.S. Cash Prizes in store for winners!!
+                </strong>
+            </p>
+            <p style="margin: auto; margin-bottom: 0;">
+                <a href="/" class="home-btn">Home</a>
+                <a href="./crossword" class="home-btn" target="_blank">Crossword</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Scripts for the DJ Mixer -->
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="assets/js/theme/music.js"></script>
+
+    <!-- GTAG Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-110715968-3');
+
+        function pause_button_align() {
+            var div_height = $(".record-player").height();
+            var page_height = $(window).height();
+
+            var offset = (page_height - div_height) / 2;
+            offset /= 1.3;
+
+            $(".genre-switch").css("top", offset);
+        }
+
+        $(document).ready(function () {
+            pause_button_align();
+        });
+
+        $(window).resize(function () {
+            pause_button_align();
+        });
+
+        $(window).on('load', function () {
+            $('.loader').delay(100).fadeOut('slow');
+        });
+    </script>
+</body>
+
+</html>

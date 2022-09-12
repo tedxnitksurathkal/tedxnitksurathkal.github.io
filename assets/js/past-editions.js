@@ -385,22 +385,22 @@ var speakers2020aatmanirbhar = [
 var speakers2020trailblazer = [
   {
     "name": "Adithya Iyer",
-    "image": "assets/img/Speaker Pictures/2020-Trailblazer/adhitya.jpeg",
+    "image": "assets/img/Speaker Pictures/2020-trailblazer/adhitya.jpeg",
     "designation": "Engineer turned Writer"
   },
   {
     "name": "Soniya Thiyam",
-    "image": "assets/img/Speaker Pictures/2020-Trailblazer/sonia.jpeg",
+    "image": "assets/img/Speaker Pictures/2020-trailblazer/sonia.jpeg",
     "designation": "Doctor turned Fashion Blogger"
   },
   {
     "name": "Vishak Nair",
-    "image": "assets/img/Speaker Pictures/2020-Trailblazer/vishak.jpeg",
+    "image": "assets/img/Speaker Pictures/2020-trailblazer/vishak.jpeg",
     "designation": "Engineer turned Actor"
   },
   {
     "name": "Bipin Dhane",
-    "image": "assets/img/Speaker Pictures/2020-Trailblazer/bipin.jpeg",
+    "image": "assets/img/Speaker Pictures/2020-trailblazer/bipin.jpeg",
     "designation": "Social Worker"
   }
 ]

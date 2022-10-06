@@ -64,10 +64,6 @@
   </div>
 
   <div class="container text-center" id="theme-reveal" style="display: none;">
-    <img src="assets/img/theme/connect-the-dots-title.png" style="padding: 50px 0;">
-    <div id="hidden-svg"></div>
-    <button id="vivus-anim" class="home-btn">Replay Animation</button>
-    <button id="download-btn" class="home-btn">Download drawing</button>
     <div class="pt-3">
       <p>Our lives are a collection of colourful, distinct moments. Pieces that may or may not hold significance on
         their own, but when put together to compose a beautiful tapestry, reveal more than just the sum of its parts.
@@ -86,7 +82,10 @@
     <img src="assets/img/tedx-white.png" height="80px;" style="margin-top: 20px;">
   </div>
 
-  <div class="app"></div>
+  <div class="app">
+    <div id="timer">0:10</div>
+    <canvas id="game-canvas" height="450" width="800"></canvas>
+  </div>
 
   <!-- ========== SCRIPTS ========== -->
   <!-- Bootstrap and jQuery CDN -->
@@ -95,9 +94,8 @@
     crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vivus@0.4.6/dist/vivus.min.js"></script>
   <!-- 2022 Theme -->
-  <script src="./assets/theme/main.js" type="module"></script>
+  <!-- <script src="./assets/theme/main.js" type="module"></script> -->
   <!-- GTAG Script -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
   <script>
@@ -109,15 +107,11 @@
 
     gtag('config', 'UA-110715968-3');
 
-    let vivusAnim;
     let startModal = new bootstrap.Modal(document.getElementById('start-modal'));
-    let downloadAnchor = document.createElement('a');
-    downloadAnchor.style.display = 'none';
 
     $(window).on('load', function () {
       $('.loader').delay(100).fadeOut('slow');
       startModal.show();
-      document.body.appendChild(downloadAnchor);
     });
 
     document.getElementById('start-modal').addEventListener('hide.bs.modal', e => {
@@ -125,7 +119,7 @@
     })
 
     function startTimer() {
-      let timer = document.querySelector('project-page').shadowRoot.querySelector('toolbar-cmp').shadowRoot.querySelector('.timer')
+      let timer = document.querySelector('#timer')
 
       function updateTimer() {
         let time = timer.innerHTML.split(':')
@@ -154,62 +148,6 @@
     function revealTheme() {
       document.querySelector('.app').style.display = 'none';
       document.querySelector('#theme-reveal').style.display = 'block'
-      document.getElementById('hidden-svg').innerHTML = extractSVG().outerHTML
-      vivusAnim = new Vivus('svg-surface')
-      document.getElementById('vivus-anim').addEventListener('click', () => {
-        vivusAnim.reset().play()
-      })
-      document.getElementById('download-btn').addEventListener('click', downloadSVG)
-    }
-
-    function buildPNG() {
-      vivusAnim?.finish();
-      const svg = document.querySelector('#hidden-svg svg').cloneNode(true);
-      svg.setAttribute('width', 3000)
-      svg.setAttribute('height', 3000)
-      const canvas = document.createElement('canvas');
-      canvas.width = parseInt(svg.getAttribute('width') || '0', 10);
-      canvas.height = parseInt(svg.getAttribute('height') || '0', 10);
-      const ctx = canvas.getContext("2d");
-      ctx.fillStyle = '#000';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      const blob = new Blob([svg.outerHTML], { type: 'image/svg+xml' });
-      const url = window.URL.createObjectURL(blob);
-      return new Promise((res, rej) => {
-        const baseimage = new Image();
-        baseimage.style.background = '#000';
-        baseimage.onload = function () {
-          ctx.drawImage(baseimage, 1, 1, canvas.width, canvas.height);
-          canvas.toBlob((blob) => {
-            const file = new File([blob], 'minimator.png', { type: 'image/png' });
-            res(file);
-          });
-        };
-        baseimage.onerror = rej;
-        baseimage.src = url;
-      });
-    }
-
-    function downloadSVG() {
-      buildPNG().then(file => {
-        downloadAnchor.href = URL.createObjectURL(file);
-        downloadAnchor.download = 'drawing.png';
-        downloadAnchor.click();
-      })
-    }
-
-    function extractSVG(margin = 2, scaleTo) {
-      let _a, _b;
-      const newDotId = 'dot-' + btoa(`${Math.random() * (Math.pow(2, 53))}`);
-      document.querySelector('project-page').shadowRoot.querySelector('surface-cmp').shadowRoot.querySelector('svg > rect').style.display = 'inherit'
-      const svg = document.querySelector('project-page').shadowRoot.querySelector('surface-cmp').shadowRoot.querySelector('svg').cloneNode(true);
-
-      svg.setAttribute('width', 300);
-      svg.setAttribute('height', 300);
-      svg.setAttribute('viewBox', '-2 -2 300 300');
-      (_a = svg.querySelector(`pattern`)) === null || _a === void 0 ? void 0 : _a.setAttribute('id', newDotId);
-      (_b = svg.querySelector(`[data-ref="dots"]`)) === null || _b === void 0 ? void 0 : _b.setAttribute('fill', `url('#${newDotId}')`);
-      return svg;
     }
   </script>
 </body>

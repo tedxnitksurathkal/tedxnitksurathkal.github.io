@@ -10,7 +10,7 @@
 .dot {
   width: 80px;
   height: 80px;
-  background-color: #00f;
+  /* background-color: #00f; */
   border-radius: 50%;
   display: block;
   position: relative;
@@ -41,4 +41,3 @@ svg {
 .wrong svg {
   fill: red;
 }
-

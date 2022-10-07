@@ -64,7 +64,7 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h2 class="modal-title">INSTRUCTIONS</h2>
+            <h2 class="modal-title fw-bold">INSTRUCTIONS</h2>
             <button
               type="button"
               class="btn-close"
@@ -74,7 +74,7 @@
           </div>
           <div class="modal-body">
             <p>1. Choose the the box with the different shade</p>
-            <p>2. In 30 seconds, get the highest score possible</p>
+            <p>2. In 10 seconds, get the highest score possible</p>
             <p>2. Do this as fast as possible 5 times</p>
             <p>3. ENJOY 🎉</p>
           </div>
@@ -92,7 +92,48 @@
       </div>
     </div>
 
+    <div id="end-modal" class="modal" style="display: none">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fw-bold">CONGRATULATIONS</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div id="results-end" class="modal-body">
+            <p>
+              You scored <span id="score-end" class="fw-bold"></span> points in
+              10 seconds.
+            </p>
+            <p>
+              Take a screenshot of this page, put it as your story on Instagram,
+              tag @tedxnitksurathkal and stand a chance to win exciting
+              goodies!!
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+              id="start-btn"
+            >
+              Proceed
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container text-center" id="theme-reveal" style="display: none">
+      <img
+        src="assets/img/theme/tedx50shadeslogowhitetext.png"
+        style="padding: 50px 0"
+      />
       <div class="pt-3">
         <p>
           Our lives are a collection of colourful, distinct moments. Pieces that
@@ -121,7 +162,7 @@
       <img
         src="assets/img/tedx-white.png"
         height="80px;"
-        style="margin-top: 20px"
+        style="margin: 20px 0px"
       />
     </div>
 
@@ -129,48 +170,30 @@
       class="container position-absolute top-50 start-50 translate-middle"
       id="reveal-game"
     >
-      <h4 id="timer" class="text-center">0:30</h4>
-      <h4 class="score text-center py-3">Score: <span id="score">0</span></h4>
+      <h2 class="score text-center">Score: <span id="score">0</span></h2>
+      <h5 class="text-center pb-3">Timer: <span id="timer">100</span></h5>
       <div id="game-region" class="mx-auto">
-        <div
-          class="box shadow border border-secondary border-1 rounded"
-          id="box-1"
-        >
+        <div class="box rounded" id="box-1">
           <span class="status-icon"></span>
           <span class="dot top-50 start-50 translate-middle"></span>
         </div>
-        <div
-          class="box shadow border border-secondary border-1 rounded"
-          id="box-2"
-        >
+        <div class="box rounded" id="box-2">
           <span class="status-icon"></span>
           <span class="dot top-50 start-50 translate-middle"></span>
         </div>
-        <div
-          class="box shadow border border-secondary border-1 rounded"
-          id="box-3"
-        >
+        <div class="box rounded" id="box-3">
           <span class="status-icon"></span>
           <span class="dot top-50 start-50 translate-middle"></span>
         </div>
-        <div
-          class="box shadow border border-secondary border-1 rounded"
-          id="box-4"
-        >
+        <div class="box rounded" id="box-4">
           <span class="status-icon"></span>
           <span class="dot top-50 start-50 translate-middle"></span>
         </div>
-        <div
-          class="box shadow border border-secondary border-1 rounded"
-          id="box-5"
-        >
+        <div class="box rounded" id="box-5">
           <span class="status-icon"></span>
           <span class="dot top-50 start-50 translate-middle"></span>
         </div>
-        <div
-          class="box shadow border border-secondary border-1 rounded"
-          id="box-6"
-        >
+        <div class="box rounded" id="box-6">
           <span class="status-icon"></span>
           <span class="dot top-50 start-50 translate-middle"></span>
         </div>
@@ -208,7 +231,10 @@
       import * as themeScript from './assets/theme/main.js';
 
       const startModal = new bootstrap.Modal(
-        document.getElementById('start-modal')
+        document.querySelector('#start-modal')
+      );
+      const endModal = new bootstrap.Modal(
+        document.querySelector('#end-modal')
       );
 
       $(window).on('load', function () {
@@ -217,11 +243,46 @@
       });
 
       document
-        .getElementById('start-modal')
+        .querySelector('#start-modal')
         .addEventListener('hide.bs.modal', e => {
-          themeScript.startTimer();
+          startTimer();
           themeScript.startGame();
         });
+
+      document
+        .querySelector('#end-modal')
+        .addEventListener('hide.bs.modal', e => {
+          document.querySelector('#reveal-game').style.display = 'none';
+          document.querySelector('#theme-reveal').style.display = 'block';
+        });
+
+      export function startTimer() {
+        let timer = document.querySelector('#timer');
+
+        function updateTimer() {
+          let time = timer.innerHTML;
+          let seconds = parseInt(time);
+          if (seconds == 0) {
+            clearInterval(interval);
+            setInterval(() => {
+              document.querySelector('#score-end').innerHTML =
+                themeScript.correctCount;
+              document.querySelector('#score').innerHTML =
+                themeScript.correctCount;
+            }, 100);
+            endModal.show();
+            return;
+          }
+          seconds -= 1;
+          timer.innerHTML = seconds;
+        }
+
+        let interval = setInterval(updateTimer, 1000);
+      }
+
+      function revealTheme() {
+        document.querySelector('#end-modal').style.display = 'block';
+      }
     </script>
   </body>
 </html>

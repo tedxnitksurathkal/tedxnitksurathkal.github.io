@@ -1,3 +1,23 @@
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Gilroy-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../fonts/Gilroy-Bold.ttf') format('truetype');
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Gilroy', 'Montserrat', sans-serif;
+}
+
 #game-region {
   width: 400px;
   height: 450px;
@@ -10,7 +30,6 @@
 .dot {
   width: 80px;
   height: 80px;
-  /* background-color: #00f; */
   border-radius: 50%;
   display: block;
   position: relative;
@@ -40,4 +59,89 @@ svg {
 
 .wrong svg {
   fill: red;
+}
+
+.modal {
+  color: black;
+}
+
+.modal-header {
+  background-color: #f00c;
+}
+
+#start-btn {
+  background-color: #f00c;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Gilroy', 'Montserrat', sans-serif;
+  border-color: #f00;
+  border-radius: 0;
+  padding: 10px 22px;
+}
+
+#theme-reveal {
+  overflow-y: scroll !important;
+}
+
+#theme-reveal p {
+  font-size: 16px;
+  font-family: 'Gilroy', 'Montserrat', sans-serif;
+  margin: 0 0 15px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #ddd;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+.home-btn {
+  font-size: 14px;
+  font-family: 'Gilroy', 'Montserrat', sans-serif;
+  display: inline-block !important;
+  font-weight: 700;
+  text-decoration: none;
+  background-color: transparent;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  padding: 13px 20px;
+  border-radius: 40px;
+  margin: 7px;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  color: rgba(255, 0, 36, 0.7);
+  background: #201010;
+}
+
+.home-btn:hover {
+  color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  .bigger {
+    font-size: 45px;
+  }
+  #theme-reveal p {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  img {
+    max-width: 75%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .bigger {
+    font-size: 60px;
+  }
+  #theme-reveal p {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  img {
+    max-width: 50%;
+  }
 }

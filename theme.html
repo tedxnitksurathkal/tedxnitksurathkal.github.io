@@ -45,16 +45,11 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p>1. Connect the dots and draw anything in 1 minute</p>
-          <p>2. If you are done before the timer is over, click the
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="feather feather-check-circle">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-              <polyline points="22 4 12 14.01 9 11.01"></polyline>
-            </svg> button
-          </p>
-          <p>3. ENJOY 🎉</p>
+          <p>1. You'll see 6 circles on your screen</p>
+          <p>2. Choose the the circle with the different shade</p>
+          <p>3. In 30 seconds, get the highest score possible</p>
+          <p>3. Do this as fast as possible 5 times</p>
+          <p>4. ENJOY 🎉</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="start-btn">Start</button>
@@ -82,9 +77,29 @@
     <img src="assets/img/tedx-white.png" height="80px;" style="margin-top: 20px;">
   </div>
 
-  <div class="app">
-    <div id="timer">0:10</div>
-    <canvas id="game-canvas" height="450" width="800"></canvas>
+  <div class="container" id="reveal-game">
+    <div id="timer" class="text-center">0:30</div>
+    <div class="score text-center">Score: <span id="score">0</span></div>
+    <div id="game-region" class="position-absolute top-50 start-50 translate-middle">
+      <div class="box" id="box-1">
+        <span class="dot top-50 start-50 translate-middle"></span>
+      </div>
+      <div class="box" id="box-2">
+        <span class="dot top-50 start-50 translate-middle"></span>
+      </div>
+      <div class="box" id="box-3">
+        <span class="dot top-50 start-50 translate-middle"></span>
+      </div>
+      <div class="box" id="box-4">
+        <span class="dot top-50 start-50 translate-middle"></span>
+      </div>
+      <div class="box" id="box-5">
+        <span class="dot top-50 start-50 translate-middle"></span>
+      </div>
+      <div class="box" id="box-6">
+        <span class="dot top-50 start-50 translate-middle"></span>
+      </div>
+    </div>
   </div>
 
   <!-- ========== SCRIPTS ========== -->
@@ -98,7 +113,7 @@
   <!-- <script src="./assets/theme/main.js" type="module"></script> -->
   <!-- GTAG Script -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
-  <script>
+  <script type="module">
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);
@@ -107,7 +122,17 @@
 
     gtag('config', 'UA-110715968-3');
 
-    let startModal = new bootstrap.Modal(document.getElementById('start-modal'));
+    import * as themeScript from './assets/theme/main.js';
+
+    const startModal = new bootstrap.Modal(document.getElementById('start-modal'));
+    const startBtn = document.getElementById('start-btn');
+    const themeReveal = document.getElementById('theme-reveal');
+    const circles = document.querySelectorAll('.circle');
+    const score = document.getElementById('score');
+    const timer = document.getElementById('timer');
+    const game = document.querySelector('.game');
+    const scoreBoard = document.querySelector('.score');
+    const gameContainer = document.querySelector('.app');
 
     $(window).on('load', function () {
       $('.loader').delay(100).fadeOut('slow');
@@ -115,40 +140,8 @@
     });
 
     document.getElementById('start-modal').addEventListener('hide.bs.modal', e => {
-      startTimer();
+      themeScript.startGame();
     })
-
-    function startTimer() {
-      let timer = document.querySelector('#timer')
-
-      function updateTimer() {
-        let time = timer.innerHTML.split(':')
-        let minutes = parseInt(time[0])
-        let seconds = parseInt(time[1])
-        if (minutes == 0 && seconds == 0) {
-          clearInterval(interval)
-          revealTheme();
-          return
-        }
-        seconds -= 1
-        if (seconds == -1) {
-          minutes -= 1
-          seconds = 59
-        }
-        if (seconds < 10) {
-          seconds = '0' + seconds
-        }
-        timer.innerHTML = minutes + ':' + seconds
-      }
-
-      let interval = setInterval(updateTimer, 1000);
-    }
-
-
-    function revealTheme() {
-      document.querySelector('.app').style.display = 'none';
-      document.querySelector('#theme-reveal').style.display = 'block'
-    }
   </script>
 </body>
 

@@ -1,0 +1,23 @@
+#game-region {
+  width: 400px;
+  height: 450px;
+  background-color: #f00;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 200px;
+  height: 150px;
+  background-color: #0f0;
+  border: #000 solid 1px;
+}
+
+.dot {
+  width: 100px;
+  height: 100px;
+  background-color: #00f;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+}

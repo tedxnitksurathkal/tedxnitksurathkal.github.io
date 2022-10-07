@@ -10,6 +10,7 @@ const boxes = document.querySelectorAll('.box');
 
 const timer = document.querySelector('#timer');
 const score = document.querySelector('#score');
+let correctCount = 0;
 let correctBox = Math.floor(Math.random() * 6);
 
 export function startGame() {
@@ -18,6 +19,10 @@ export function startGame() {
   for (let i = 0; i < boxes.length; i++) {
     if (i === correctBox) {
       boxes[i].style.backgroundColor = boxColor[0];
+      boxes[i].addEventListener('click', e => {
+        correctCount += 1;
+        score.innerHTML = correctCount;
+      });
     } else {
       boxes[i].style.backgroundColor = boxColor[1];
     }

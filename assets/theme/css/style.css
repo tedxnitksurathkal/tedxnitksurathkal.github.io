@@ -1,23 +1,44 @@
 #game-region {
   width: 400px;
   height: 450px;
-  background-color: #f00;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.box {
-  width: 200px;
-  height: 150px;
-  background-color: #0f0;
-  border: #000 solid 1px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 15px;
 }
 
 .dot {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   background-color: #00f;
   border-radius: 50%;
   display: block;
   position: relative;
 }
+
+.status-icon {
+  top: 5%;
+  left: 5%;
+  float: left;
+  position: relative;
+}
+
+svg {
+  width: 25px;
+  height: 25px;
+}
+
+.correct {
+}
+
+.correct svg {
+  fill: green;
+}
+
+.wrong {
+}
+
+.wrong svg {
+  fill: red;
+}
+

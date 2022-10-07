@@ -14,11 +14,13 @@ export function startGame() {
   let boxColor = generateRandomColorRgb();
   for (let i = 0; i < boxes.length; i++) {
     boxes[i].removeEventListener('click', correctBoxClick);
+    boxes[i].style.filter = '';
     if (i === correctBox) {
-      boxes[i].style.backgroundColor = boxColor[0];
+      boxes[i].style.backgroundColor = boxColor;
+      boxes[i].style.filter = `brightness(${Math.random() > 0.5 ? 1.25 : 0.75})`;
       boxes[i].addEventListener('click', correctBoxClick);
     } else {
-      boxes[i].style.backgroundColor = boxColor[1];
+      boxes[i].style.backgroundColor = boxColor;
       boxes[i].addEventListener('click', e => {});
     }
   }
@@ -31,16 +33,8 @@ function correctBoxClick() {
 }
 
 function generateRandomColorRgb() {
-  let red = Math.floor(Math.random() * 200);
-  let green = Math.floor(Math.random() * 200);
-  let blue = Math.floor(Math.random() * 200);
-  const commonBoxColor = 'rgb(' + red + ', ' + green + ', ' + blue + ')';
-
-  const shade = Math.floor(Math.random() * 3);
-  red += shade === 0 ? 40 : 0;
-  green += shade === 1 ? 40 : 0;
-  blue += shade === 2 ? 40 : 0;
-  const correctBoxColor = 'rgb(' + red + ', ' + green + ', ' + blue + ')';
-
-  return [correctBoxColor, commonBoxColor];
+  let red = 50 + Math.floor(Math.random() * 205);
+  let green = 50 + Math.floor(Math.random() * 205);
+  let blue = 50 + Math.floor(Math.random() * 205);
+  return 'rgb(' + red + ', ' + green + ', ' + blue + ')';
 }

@@ -18,47 +18,9 @@ body {
   font-family: 'Gilroy', 'Montserrat', sans-serif;
 }
 
-#game-region {
-  width: 100%;
-  height: 450px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 15px;
-}
-
-.dot {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: block;
-  position: relative;
-}
-
-.status-icon {
-  top: 5%;
-  left: 5%;
-  float: left;
-  position: relative;
-}
-
 svg {
   width: 25px;
   height: 25px;
-}
-
-.correct {
-}
-
-.correct svg {
-  fill: green;
-}
-
-.wrong {
-}
-
-.wrong svg {
-  fill: red;
 }
 
 .modal {
@@ -120,12 +82,6 @@ img {
   color: #fff;
 }
 
-@media only screen and (min-width: 576px) {
-  #game-region {
-    width: 400px;
-  }
-}
-
 @media only screen and (min-width: 768px) {
   #theme-reveal p {
     font-size: 24px;
@@ -145,3 +101,23 @@ img {
     max-width: 50%;
   }
 }
+
+.tile1, .tile2, .tile3, .tile4, .tile5, .tile6, .tile7, .tile8, .tile9 {
+  display: table-cell;
+  width: 120px;
+  height: 120px;
+  border: 1px solid white;
+  background: url("/assets/theme/puzzle.png"); 
+  background-size: 300%;
+  cursor: pointer;
+}
+
+.tile1 {background-position: left top;}
+.tile2 {background-position: center top;}
+.tile3 {background-position: right top;}
+.tile4 {background-position: left center;}
+.tile5 {background-position: center center;}
+.tile6 {background-position: right center;}
+.tile7 {background-position: left bottom;}
+.tile8 {background-position: center bottom;}
+.tile9 {background: gray; cursor: default;}

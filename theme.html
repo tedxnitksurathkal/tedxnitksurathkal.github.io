@@ -33,7 +33,7 @@
     />
 
     <!-- ========== Title ========== -->
-    <title>Connect the Dots | TEDxNITKSurathkal</title>
+    <title>Solve for Y | TEDxNITKSurathkal</title>
 
     <!-- ========== Favicon Ico ========== -->
     <link rel="icon" href="assets/img/favicon.png" />
@@ -73,8 +73,8 @@
             ></button>
           </div>
           <div class="modal-body">
-            <p>1. Choose the box with the different shade of color</p>
-            <p>2. In 10 seconds, get the highest score possible</p>
+            <p>1. Click on a tile to move</p>
+            <p>2. Try to complete the <b>Y</b> in the shortest time possible</p>
             <p>3. ENJOY 🎉</p>
           </div>
           <div class="modal-footer">
@@ -175,30 +175,23 @@
     >
       <h2 class="score text-center">Score: <span id="score">0</span></h2>
       <h5 class="text-center pb-3">Timer: <span id="timer">10</span></h5>
-      <div id="game-region" class="mx-auto">
-        <div class="box rounded" id="box-1">
-          <span class="status-icon"></span>
-          <span class="dot top-50 start-50 translate-middle"></span>
-        </div>
-        <div class="box rounded" id="box-2">
-          <span class="status-icon"></span>
-          <span class="dot top-50 start-50 translate-middle"></span>
-        </div>
-        <div class="box rounded" id="box-3">
-          <span class="status-icon"></span>
-          <span class="dot top-50 start-50 translate-middle"></span>
-        </div>
-        <div class="box rounded" id="box-4">
-          <span class="status-icon"></span>
-          <span class="dot top-50 start-50 translate-middle"></span>
-        </div>
-        <div class="box rounded" id="box-5">
-          <span class="status-icon"></span>
-          <span class="dot top-50 start-50 translate-middle"></span>
-        </div>
-        <div class="box rounded" id="box-6">
-          <span class="status-icon"></span>
-          <span class="dot top-50 start-50 translate-middle"></span>
+      <div>
+        <div id="table" style="display: table" class="mx-auto">
+          <div id="row1" style="display: table-row">
+            <div id="cell11" class="tile1" onClick="clickTile(1,1);"></div>
+            <div id="cell12" class="tile2" onClick="clickTile(1,2);"></div>
+            <div id="cell13" class="tile3" onClick="clickTile(1,3);"></div>
+          </div>
+          <div id="row2" style="display: table-row">
+            <div id="cell21" class="tile4" onClick="clickTile(2,1);"></div>
+            <div id="cell22" class="tile5" onClick="clickTile(2,2);"></div>
+            <div id="cell23" class="tile6" onClick="clickTile(2,3);"></div>
+          </div>
+          <div id="row3" style="display: table-row">
+            <div id="cell31" class="tile7" onClick="clickTile(3,1);"></div>
+            <div id="cell32" class="tile8" onClick="clickTile(3,2);"></div>
+            <div id="cell33" class="tile9" onClick="clickTile(3,3);"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -248,8 +241,9 @@
       document
         .querySelector('#start-modal')
         .addEventListener('hide.bs.modal', e => {
-          startTimer();
-          themeScript.startGame();
+          shuffle();
+          // startTimer();
+          // themeScript.startGame();
         });
 
       document
@@ -285,6 +279,114 @@
 
       function revealTheme() {
         document.querySelector('#end-modal').style.display = 'block';
+      }
+    </script>
+    <script>
+      function swapTiles(cell1, cell2) {
+        var temp = document.getElementById(cell1).className;
+        document.getElementById(cell1).className =
+          document.getElementById(cell2).className;
+        document.getElementById(cell2).className = temp;
+      }
+
+      function shuffle() {
+        //Use nested loops to access each cell of the 3x3 grid
+        for (var row = 1; row <= 3; row++) {
+          //For each row of the 3x3 grid
+          for (var column = 1; column <= 3; column++) {
+            //For each column in this row
+
+            var row2 = Math.floor(Math.random() * 3 + 1); //Pick a random row from 1 to 3
+            var column2 = Math.floor(Math.random() * 3 + 1); //Pick a random column from 1 to 3
+
+            swapTiles('cell' + row + column, 'cell' + row2 + column2); //Swap the look & feel of both cells
+          }
+        }
+      }
+
+      function clickTile(row, column) {
+        var cell = document.getElementById('cell' + row + column);
+        var tile = cell.className;
+        if (tile != 'tile9') {
+          //Checking if white tile on the right
+          if (column < 3) {
+            if (
+              document.getElementById('cell' + row + (column + 1)).className ==
+              'tile9'
+            ) {
+              swapTiles('cell' + row + column, 'cell' + row + (column + 1));
+              checkIfSolved();
+              return;
+            }
+          }
+          //Checking if white tile on the left
+          if (column > 1) {
+            if (
+              document.getElementById('cell' + row + (column - 1)).className ==
+              'tile9'
+            ) {
+              swapTiles('cell' + row + column, 'cell' + row + (column - 1));
+              checkIfSolved();
+              return;
+            }
+          }
+          //Checking if white tile is above
+          if (row > 1) {
+            if (
+              document.getElementById('cell' + (row - 1) + column).className ==
+              'tile9'
+            ) {
+              swapTiles('cell' + row + column, 'cell' + (row - 1) + column);
+              checkIfSolved();
+              return;
+            }
+          }
+          //Checking if white tile is below
+          if (row < 3) {
+            if (
+              document.getElementById('cell' + (row + 1) + column).className ==
+              'tile9'
+            ) {
+              swapTiles('cell' + row + column, 'cell' + (row + 1) + column);
+              checkIfSolved();
+              return;
+            }
+          }
+        }
+      }
+
+      function checkIfSolved() {
+        let isSolved = false;
+        for (var row = 1; row <= 3; row++) {
+          for (var column = 1; column <= 3; column++) {
+            var cell = document.getElementById('cell' + row + column);
+            if (cell.className != 'tile' + ((row - 1) * 3 + column)) {
+              if (
+                row == 3 &&
+                (column == 1 || column == 3) &&
+                (cell.className == 'tile7' || cell.className == 'tile9')
+              ) {
+                isSolved = true;
+                continue;
+              }
+              isSolved = false;
+              console.log('not solved', row, column);
+              return;
+            } else {
+              isSolved = true;
+            }
+          }
+        }
+        if (isSolved) {
+          console.log('solved');
+          // document.querySelector('#reveal-game').style.display = 'block';
+          // document.querySelector('#theme-reveal').style.display = 'none';
+          // document.querySelector('#score-end').innerHTML =
+          //   themeScript.correctCount;
+          // document.querySelector('#score').innerHTML =
+          //   themeScript.correctCount;
+          // endModal.show();
+        }
       }
     </script>
   </body>

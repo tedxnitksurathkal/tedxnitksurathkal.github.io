@@ -18,47 +18,9 @@ body {
   font-family: 'Gilroy', 'Montserrat', sans-serif;
 }
 
-#game-region {
-  width: 100%;
-  height: 450px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 15px;
-}
-
-.dot {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: block;
-  position: relative;
-}
-
-.status-icon {
-  top: 5%;
-  left: 5%;
-  float: left;
-  position: relative;
-}
-
 svg {
   width: 25px;
   height: 25px;
-}
-
-.correct {
-}
-
-.correct svg {
-  fill: green;
-}
-
-.wrong {
-}
-
-.wrong svg {
-  fill: red;
 }
 
 .modal {
@@ -67,6 +29,10 @@ svg {
 
 .modal-header {
   background-color: #f00c;
+}
+
+.modal-body {
+  background: linear-gradient(135deg, #fff 0%, #f003 100%);
 }
 
 #start-btn {
@@ -78,6 +44,63 @@ svg {
   border-color: #f00;
   border-radius: 0;
   padding: 10px 22px;
+}
+
+.game-region {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  max-width: 360px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+}
+
+.tile1,
+.tile2,
+.tile3,
+.tile4,
+.tile5,
+.tile6,
+.tile7,
+.tile8,
+.tile9 {
+  border: 1px solid lightgray;
+  background: url('/assets/theme/puzzle.png');
+  background-size: 300%;
+  cursor: pointer;
+  max-width: 120px;
+  width: 33vw;
+  aspect-ratio: 1 / 1;
+}
+
+.tile1 {
+  background-position: left top;
+}
+.tile2 {
+  background-position: center top;
+}
+.tile3 {
+  background-position: right top;
+}
+.tile4 {
+  background-position: left center;
+}
+.tile5 {
+  background-position: center center;
+}
+.tile6 {
+  background-position: right center;
+}
+.tile7 {
+  background-position: left bottom;
+}
+.tile8 {
+  background-position: center bottom;
+}
+.tile9 {
+  background: gray;
+  cursor: default;
 }
 
 #theme-reveal {
@@ -99,7 +122,7 @@ img {
 }
 
 .home-btn {
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'Gilroy', 'Montserrat', sans-serif;
   display: inline-block !important;
   font-weight: 700;
@@ -118,12 +141,6 @@ img {
 
 .home-btn:hover {
   color: #fff;
-}
-
-@media only screen and (min-width: 576px) {
-  #game-region {
-    width: 400px;
-  }
 }
 
 @media only screen and (min-width: 768px) {

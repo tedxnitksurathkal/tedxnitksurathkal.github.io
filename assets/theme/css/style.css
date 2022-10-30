@@ -46,6 +46,16 @@ svg {
   padding: 10px 22px;
 }
 
+.game-region {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  max-width: 360px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+}
+
 .tile1,
 .tile2,
 .tile3,
@@ -55,13 +65,13 @@ svg {
 .tile7,
 .tile8,
 .tile9 {
-  display: table-cell;
-  width: 120px;
-  height: 120px;
   border: 1px solid lightgray;
   background: url('/assets/theme/puzzle.png');
   background-size: 300%;
   cursor: pointer;
+  max-width: 120px;
+  width: 33vw;
+  aspect-ratio: 1 / 1;
 }
 
 .tile1 {

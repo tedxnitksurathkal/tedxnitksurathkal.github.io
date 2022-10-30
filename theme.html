@@ -127,35 +127,34 @@
     </div>
 
     <div class="container text-center" id="theme-reveal" style="display: none">
-      <img
-        src="assets/img/theme/tedx50shadeslogowhitetext.png"
-        style="padding: 50px 0"
-      />
+      <img src="assets/img/theme/solveforyasset.png" style="padding: 50px 0" />
       <div class="pt-3">
-        <p><em>"The Art of Seducing the Subconscious"</em></p>
+        <p><em>"Solve for y"</em></p>
         <p>
-          Have you been in a situation where you impulsively bought a product
-          because you were fascinated by its advertisement? Have you ever bought
-          a gem of a product you would have never heard of otherwise if not for
-          that trending advertisement?
+          A simple phrase takes us all back to math class at school. The
+          question has followed us all the way into engineering. Ever stopped to
+          think about what the point is? What's the point of this abstract
+          problem we're asked to solve? Maybe it's time we solved the more
+          primary problem for whY.
         </p>
+
         <p>
-          With increased consumerism in today's fast-moving digital world,
-          marketing and advertising have gained immense popularity and have been
-          a great opportunity for big firms and even young entrepreneurs and
-          small businesses to build their brand value. However, this rapid surge
-          in consumerism has also led to the use of marketing tactics that may
-          fall into a gray area. How far can ethics and profits go hand-in-hand
-          before they diverge? Moving on to the products sold themselves, should
-          companies focus on solving existing problems or is it okay to create
-          markets for needs that do not exist yet?
+          What is true learning? In today's competitive world, the rat race for
+          certain degrees and careers for the sake of status and better salary
+          prospects is taking a toll on students, inducing more stress and
+          insecurity. People's true passions take a backseat, and their creative
+          interests are suppressed. Is the education system partially to blame
+          for this? If so, what can be done to break out of this vicious cycle?
         </p>
+
         <p>
           TEDxNITKSurathkal brings you the latest edition of our Salon event,
-          titled <strong>50 Shades of Marketing</strong>. How far is too far in
-          the quest to sell? Well, to find out, join us on the 14th of October
-          as our speakers discuss the various aspects of marketing in today's
-          time and world.
+          titled <strong>Solve for y</strong>. Join us on the 4th of November as
+          our speakers delve deep into the nature of learning; What ideal
+          learning looks like which can impart knowledge and at the same time
+          prepare one for the real world, and whether the current Indian
+          education system, with all its recent add-ons like NEP, is aligned
+          with this.
         </p>
         <a href="/" class="home-btn">Home</a>
         <a href="/theme" class="home-btn">Play Again</a>
@@ -174,24 +173,16 @@
       <h2 class="text-center pb-3">
         Timer: <span id="timer" class="font-monospace">0.00 s</span>
       </h2>
-      <div>
-        <div id="table" style="display: table" class="mx-auto">
-          <div id="row1" style="display: table-row">
-            <div id="cell11" class="tile1"></div>
-            <div id="cell12" class="tile2"></div>
-            <div id="cell13" class="tile3"></div>
-          </div>
-          <div id="row2" style="display: table-row">
-            <div id="cell21" class="tile4"></div>
-            <div id="cell22" class="tile5"></div>
-            <div id="cell23" class="tile6"></div>
-          </div>
-          <div id="row3" style="display: table-row">
-            <div id="cell31" class="tile7"></div>
-            <div id="cell32" class="tile8"></div>
-            <div id="cell33" class="tile9"></div>
-          </div>
-        </div>
+      <div class="game-region">
+        <div id="cell11" class="tile1"></div>
+        <div id="cell12" class="tile2"></div>
+        <div id="cell13" class="tile3"></div>
+        <div id="cell21" class="tile4"></div>
+        <div id="cell22" class="tile5"></div>
+        <div id="cell23" class="tile6"></div>
+        <div id="cell31" class="tile7"></div>
+        <div id="cell32" class="tile8"></div>
+        <div id="cell33" class="tile9"></div>
       </div>
       <button id="give-up" class="home-btn mt-3">Give Up</button>
     </div>
@@ -280,7 +271,7 @@
             var row2 = Math.floor(Math.random() * 3 + 1); //Pick a random row from 1 to 3
             var column2 = Math.floor(Math.random() * 3 + 1); //Pick a random column from 1 to 3
 
-            // swapTiles('cell' + row + column, 'cell' + row2 + column2); //Swap the look & feel of both cells
+            swapTiles('cell' + row + column, 'cell' + row2 + column2); //Swap the look & feel of both cells
             document
               .getElementById('cell' + row + column)
               .addEventListener('click', () => clickTile(row, column));

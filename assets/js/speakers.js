@@ -1,33 +1,32 @@
 var speakers = [
   {
-    name: 'Amit Nigam',
-    title: 'Vice President of Products | RedBus',
+    name: 'Riddhi Doshi Patel',
+    title: 'Child Psychologist | Parenting Counselor',
     description: [
-      '<b>Amit Nigam</b> is an hands-on product leader, entrepreneur, and a passionate educator/speaker on a wide range of product management topics. He comes with over 2 decades of experience in the areas of B2C e-commerce and B2B Saas. In his last entrepreneurial stint, Amit founded an internet startup leveraging Al to create a CRM system for automotive aftermarket, before exiting the business through a successful acquisition by the TVS group. Amit holds 4 technology patents and is a visiting faculty of product management at multiple Indian institutes of eminence.',
+      "<b>Riddhi Doshi Patel</b> is a qualified Child Psychologist, Parenting Counsellor, Dance Movement Therapy Practitioner, TED Speaker and Advisor to TED-Ed Clubs across India. She is the recipient of multiple awards including the National Award and Young Entrepreneur Award. She is the Founder of LAJA, India's first forum for women that focuses on Women's Development, Growth and Self-Empowerment. She has established 6 LAJA Chapters across India working in tandem for the growth, development and empowerment of women from rural and urban settings.",
+      'Riddhi is also a qualified Trainer and has conducted Training Programs for Corporates, Individuals, Educational Institutes and NGOs. She is a well known advocate for Mental Health Awareness and also has the distinction of conducting the very first Online Roundtable Conference to discuss the recommendations of the NEP 2020 and submit a whitepaper on the churnings from the same to The Ministry of Education.',
     ],
     show_after: '2021-02-04T09:30:00+000',
-    img_link: 'amit.png',
+    img_link: 'riddhi.png',
   },
   {
-    name: 'Pratyush Prabhakar & Divya Singh',
-    title: 'Public Policy Professional | Communeeti',
+    name: 'Prof. Gururaj Karajagi',
+    title: 'Teacher | Philosopher | Author',
     description: [
-      '<b>Pratyush Prabhakar</b> is a public policy professional. A tech graduate who landed up in a B-school before foraying into public policy. Pratyush believes in bringing together the best of humanities, business and technology to achieve larger good in the society. He is an alumnus of IIM Calcutta and NIT Nagpur.',
-      'Pratyush, along with Divya Singh, wrote an article that was published in The Hindu on "The age of hyperlapse consumerism." The article analyzes the costs and benefits of fast deliveries, changing nature of consumerism, analyzing it from a social, philosophical and behavioral perspective and the need for consumers and businesses to be mindful of the consequences of their actions.',
-      '<b>Divya Singh Rathore</b> is a public policy professional. A history buff, a culture enthusiast and a trained classical dancer, Divya likes to analyze contemporary trends with a historical and cultural lens. She is a graduate from Lady Sri Ram College and Postgraduate from Hindu College, Delhi University. She is a travel enthusiast who loves interacting with people from different cultures to understand the grassroot issues which can be resolved through governance and public policy.',
-      'Divya, along with Pratyush Prabhakar, wrote an article that was published in The Hindu on "The age of hyperlapse consumerism." The article analyzes the costs and benefits of fast deliveries, changing nature of consumerism, analyzing it from a social, philosophical and behavioral perspective and the need for consumers and businesses to be mindful of the consequences of their actions.'
+      '<b>Prof. Gururaj Karajagi</b>, the Chairman and Founder of The Academy of Creative Teaching has authored a series of 15 books titled Karunaalu Baa Belake in Kannada which is highly inspirational and widely published. He has also edited a huge compendium of articles on almost every aspect of education and this is brought out as a book entitled, Shikshana Shilpa. His contribution to reformations of primary, secondary and higher education has made an impression in the field. This has been demonstrated by the institution he built, Academy for Creative Teaching, which truly is an expression of the philosophy of Dr.Karajagi, through which he has handheld over 90 Institutions and trained over 200,000 teachers. His finest contribution is the creation of the Creative Teaching Model, with a primary focus on relationships, the experience of gaining knowledge and special emphasis on Indian culture. It touches the lives of over one lakh students each day across the world. He had been invited to deliver talks at reputed universities like Harvard, ITs and IIMs.',
+      'As a philosopher, he makes an impact that goes far beyond the classroom and has inspired millions of people through online channels. His inspiring, patriotic and optimistic talks are rich in experience, and have a life changing impact on the common man.',
     ],
     show_after: '2021-02-04T09:30:00+000',
-    img_link: 'pratyush_divya.png',
+    img_link: 'gururaj.png',
   },
   {
-    name: 'Arjun DSouza',
-    title: "Director | Alter Marketing Solutions",
+    name: 'Vinay Menon',
+    title: 'Standup Comedian | English Lecturer | TEDx Speaker',
     description: [
-      '<b>Mr. Arjun John DSouza</b> is an entrepreneur and the Co-founder/Managing Director of Alter Marketing Solutions Pvt. Ltd., a creative digital marketing agency based in Mangalore, India. Alter offers complete marketing solutions to its clients which include but are not limited to multi-channel digital marketing, consulting, branding, graphic design, web development, photo, and video ad production.',,
-      'A former sailor in the merchant navy, Mr. Souza believes that his passion for marketing began while sailing across various countries and meeting people from all walks of life. He started Alter with a vision of creating a world where every good idea has a chance. He believes that marketing, especially digital marketing, can work for anyone and everyone if executed right. In the last 5 years, he has built Alter from the ground up, starting with a small team of 4 to now 50, by servicing multiple local and multi-national brands. Additionally, he has and continues to conduct technical workshops and seminars on marketing, digital marketing and its various possibilities.'
+      "<b>Mr. Vinay Menon</b> is a standup comedian, English lecturer, and a TED speaker who strives to use his deadliest weapon, humor, to enhance the standards of today's live entertainment. He identifies himself as a sarcastic attention seeker serving the snags of society blended with bittersweet humor. As an English professor by day, and a funny bone tickler by night, he currently teaches English and Life Skills to the future engineers at Rajagiri School of Engineering and Technology.",
+      "As a TED speaker, he uses his platform to raise critical questions about the present education system in our country. Being an educator himself, he has observed and analyzed our country's education system to its depths. His keen observation and talent as a humorous speaker allow him to answer questions about the Indian education system that we all have deep in our minds, but have not been able to acknowledge. He has delivered multiple amazing TEDx talks in the past regarding the same, a few of them being about the 3 myths of the Indian education system, why there is still gender segregation in the education system and how to spot fake news.",
     ],
     show_after: '2021-02-04T09:30:00+000',
-    img_link: 'arjun.png',
+    img_link: 'vinay.png',
   },
 ];

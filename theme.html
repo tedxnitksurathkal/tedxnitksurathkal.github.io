@@ -49,9 +49,9 @@
 
     <!--- Bootstrap CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
 
@@ -127,7 +127,10 @@
     </div>
 
     <div class="container text-center" id="theme-reveal" style="display: none">
-      <img src="assets/img/theme/solveforyassetwhite.png" style="padding: 50px 0" />
+      <img
+        src="assets/img/theme/solveforyassetwhite.png"
+        style="padding: 50px 0"
+      />
       <div class="pt-3">
         <p><em>"Solve for y"</em></p>
         <p>
@@ -149,12 +152,12 @@
 
         <p>
           TEDxNITKSurathkal brings you the latest edition of our Salon event,
-          titled <strong>Solve for y</strong>. Join us on the <strong>4th of November</strong> as
-          our speakers delve deep into the nature of learning; What ideal
-          learning looks like which can impart knowledge and at the same time
-          prepare one for the real world, and whether the current Indian
-          education system, with all its recent add-ons like NEP, is aligned
-          with this.
+          titled <strong>Solve for y</strong>. Join us on the
+          <strong>4th of November</strong> as our speakers delve deep into the
+          nature of learning; What ideal learning looks like which can impart
+          knowledge and at the same time prepare one for the real world, and
+          whether the current Indian education system, with all its recent
+          add-ons like NEP, is aligned with this.
         </p>
         <a href="/" class="home-btn">Home</a>
         <a href="/theme" class="home-btn">Play Again</a>
@@ -173,25 +176,20 @@
       <h2 class="text-center pb-3">
         Timer: <span id="timer" class="font-monospace">0.00 s</span>
       </h2>
-      <div class="game-region">
-        <div id="cell11" class="tile1"></div>
-        <div id="cell12" class="tile2"></div>
-        <div id="cell13" class="tile3"></div>
-        <div id="cell21" class="tile4"></div>
-        <div id="cell22" class="tile5"></div>
-        <div id="cell23" class="tile6"></div>
-        <div id="cell31" class="tile7"></div>
-        <div id="cell32" class="tile8"></div>
-        <div id="cell33" class="tile9"></div>
+      <div id="game-region"></div>
+      <div id="options" class="mt-3">
+        <div class="button rounded" id="button-1"></div>
+        <div class="button rounded" id="button-2"></div>
+        <div class="button rounded" id="button-3"></div>
+        <div class="button rounded" id="button-4"></div>
       </div>
-      <button id="give-up" class="home-btn mt-3">Give Up</button>
     </div>
 
     <!-- ========== SCRIPTS ========== -->
     <!-- Bootstrap and jQuery CDN -->
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
     <script
@@ -199,8 +197,9 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
-    <!-- 2022 Theme -->
-    <!-- <script src="./assets/theme/main.js" type="module"></script> -->
+    <!-- 2023 Theme -->
+    <script src="./assets/theme/main.js" type="module"></script>
+    <script src="https://unpkg.com/konva@8/konva.min.js"></script>
     <!-- GTAG Script -->
     <script
       async
@@ -215,6 +214,8 @@
 
       gtag('config', 'UA-110715968-3');
 
+      import * as themeScript from './assets/theme/main.js';
+
       const startModal = new bootstrap.Modal(
         document.querySelector('#start-modal')
       );
@@ -222,6 +223,10 @@
 
       let seconds = 0.0;
       let interval;
+      let imgInterval;
+      let round = 0;
+
+      let stage;
 
       $(window).on('load', function () {
         $('.loader').delay(100).fadeOut('slow');
@@ -231,8 +236,8 @@
       document
         .querySelector('#start-modal')
         .addEventListener('hide.bs.modal', e => {
-          shuffle();
           startTimer();
+          startGame();
         });
 
       document
@@ -242,135 +247,85 @@
           document.querySelector('#theme-reveal').style.display = 'block';
         });
 
-      document.getElementById('give-up').addEventListener('click', e => {
-        clearInterval(interval);
-        document.querySelector('#reveal-game').style.display = 'none';
-        document.querySelector('#theme-reveal').style.display = 'block';
-      });
-
       function startTimer() {
         interval = setInterval(() => {
           let timer = document.getElementById('timer');
           let vis = timer.getAttribute('visible');
-          seconds += 0.01;
-          timer.innerHTML = seconds.toFixed(2) + ' s';
-        }, 10);
+          seconds += 0.1;
+          timer.innerHTML = seconds.toFixed(1) + ' s';
+        }, 100);
       }
 
       function revealTheme() {
         document.querySelector('#end-modal').style.display = 'block';
       }
 
-      function shuffle() {
-        //Use nested loops to access each cell of the 3x3 grid
-        for (let row = 1; row <= 3; row++) {
-          //For each row of the 3x3 grid
-          for (let column = 1; column <= 3; column++) {
-            //For each column in this row
-
-            var row2 = Math.floor(Math.random() * 3 + 1); //Pick a random row from 1 to 3
-            var column2 = Math.floor(Math.random() * 3 + 1); //Pick a random column from 1 to 3
-
-            swapTiles('cell' + row + column, 'cell' + row2 + column2); //Swap the look & feel of both cells
-            document
-              .getElementById('cell' + row + column)
-              .addEventListener('click', () => clickTile(row, column));
-          }
-        }
+      function generateNumber() {
+        return 1 + Math.floor(Math.random() * 4);
       }
 
-      function swapTiles(cell1, cell2) {
-        var temp = document.getElementById(cell1).className;
-        document.getElementById(cell1).className =
-          document.getElementById(cell2).className;
-        document.getElementById(cell2).className = temp;
+      function startGame() {
+        let num = generateNumber();
+        console.log(num);
+        loadImage(round, num);
+        loadOptions(round, num);
       }
 
-      function clickTile(row, column) {
-        var cell = document.getElementById('cell' + row + column);
-        var tile = cell.className;
-        if (tile != 'tile9') {
-          //Checking if white tile on the right
-          if (column < 3) {
-            if (
-              document.getElementById('cell' + row + (column + 1)).className ==
-              'tile9'
-            ) {
-              swapTiles('cell' + row + column, 'cell' + row + (column + 1));
-              checkIfSolved();
-              return;
-            }
-          }
-          //Checking if white tile on the left
-          if (column > 1) {
-            if (
-              document.getElementById('cell' + row + (column - 1)).className ==
-              'tile9'
-            ) {
-              swapTiles('cell' + row + column, 'cell' + row + (column - 1));
-              checkIfSolved();
-              return;
-            }
-          }
-          //Checking if white tile is above
-          if (row > 1) {
-            if (
-              document.getElementById('cell' + (row - 1) + column).className ==
-              'tile9'
-            ) {
-              swapTiles('cell' + row + column, 'cell' + (row - 1) + column);
-              checkIfSolved();
-              return;
-            }
-          }
-          //Checking if white tile is below
-          if (row < 3) {
-            if (
-              document.getElementById('cell' + (row + 1) + column).className ==
-              'tile9'
-            ) {
-              swapTiles('cell' + row + column, 'cell' + (row + 1) + column);
-              checkIfSolved();
-              return;
-            }
-          }
-        }
+      function nextRound() {
+        round += 1;
+        stage.destroy();
+        startGame();
       }
 
-      function checkIfSolved() {
-        let isSolved = false;
-        for (var row = 1; row <= 3; row++) {
-          for (var column = 1; column <= 3; column++) {
-            var cell = document.getElementById('cell' + row + column);
-            if (cell.className != 'tile' + ((row - 1) * 3 + column)) {
-              if (
-                row == 3 &&
-                (column == 1 || column == 3) &&
-                (cell.className == 'tile7' || cell.className == 'tile9')
-              ) {
-                isSolved = true;
-                continue;
+      function loadImage(round, num) {
+        stage = new Konva.Stage({
+          container: 'game-region',
+          width: 300,
+          height: 300,
+        });
+        let layer = new Konva.Layer();
+        stage.add(layer);
+        Konva.Image.fromURL(
+          `./assets/theme/images/${themeScript.CODE[round]}/${num}.png`,
+          function (pic) {
+            let pixelSize = 51;
+            layer.destroyChildren();
+
+            pic.position({
+              x: 0,
+              y: 0,
+            });
+            pic.cache();
+            pic.filters([Konva.Filters.Pixelate]);
+            pic.pixelSize(pixelSize);
+            layer.add(pic);
+
+            setInterval(() => {
+              pic.pixelSize(pixelSize);
+              layer.batchDraw();
+              pixelSize -= 1;
+              if (pixelSize === 0) {
+                pixelSize = 1;
+                // endModal.show();
               }
-              isSolved = false;
-              return;
-            } else {
-              isSolved = true;
-            }
+            }, 100);
           }
+        );
+      }
+
+      function loadOptions(round, num) {
+        let options = document.querySelectorAll('.button');
+        let correct = document.querySelector(`#button-${num}`);
+
+        for (let i = 0; i < options.length; i++) {
+          options[i].removeEventListener('click', nextRound);
+          options[i].innerHTML =
+            '<p>' +
+            themeScript.IMAGEMAP[themeScript.CODE[round]][i + 1] +
+            '</p>';
         }
-        if (isSolved) {
-          console.log('solved');
-          clearInterval(interval);
-          setInterval(() => {
-            document.querySelector('#time-end').innerHTML =
-              seconds.toFixed(2) + ' s';
-            document.querySelector('#timer').innerHTML =
-              seconds.toFixed(2) + ' s';
-          }, 100);
-          setTimeout(() => {
-            endModal.show();
-          }, 100);
-        }
+
+        correct.addEventListener('click', nextRound);
       }
     </script>
   </body>

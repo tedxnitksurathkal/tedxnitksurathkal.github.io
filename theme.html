@@ -73,8 +73,8 @@
             ></button>
           </div>
           <div class="modal-body">
-            <p>1. Try to complete the <b>Y</b> in the shortest time possible</p>
-            <p>2. Click on a tile to move it to the adjacent gray tile</p>
+            <p>1. Try to identify the depixelating image in the shortest time possible</p>
+            <p>2. The faster you identify the object, the higher the points you get</p>
             <p>3. ENJOY 🎉</p>
           </div>
           <div class="modal-footer">
@@ -104,8 +104,8 @@
             ></button>
           </div>
           <div id="results-end" class="modal-body">
-            <p>You solved the puzzle in</p>
-            <p class="fs-1 text-center"><b id="time-end"></b></p>
+            <p>You solved the puzzle with a score of</p>
+            <p class="fs-1 text-center"><b id="points-end"></b></p>
             <p>
               Take a screenshot of this page, put it as your story on Instagram,
               tag <b>@tedxnitksurathkal</b> and stand a chance to win exciting
@@ -174,7 +174,7 @@
       id="reveal-game"
     >
       <h2 class="text-center pb-3">
-        Timer: <span id="timer" class="font-monospace">0.00 s</span>
+        Points: <span id="points" class="font-monospace">0</span>
       </h2>
       <div id="game-region"></div>
       <div id="options" class="mt-3">
@@ -221,10 +221,11 @@
       );
       let endModal = new bootstrap.Modal(document.querySelector('#end-modal'));
 
-      let seconds = 0.0;
       let interval;
       let imgInterval;
       let round = 0;
+      let pixelSize = 51;
+      let points = 0;
 
       let stage;
 
@@ -249,15 +250,9 @@
 
       function startTimer() {
         interval = setInterval(() => {
-          let timer = document.getElementById('timer');
-          let vis = timer.getAttribute('visible');
-          seconds += 0.1;
-          timer.innerHTML = seconds.toFixed(1) + ' s';
+          let pointsSpan = document.getElementById('points');
+          pointsSpan.innerHTML = points;
         }, 100);
-      }
-
-      function revealTheme() {
-        document.querySelector('#end-modal').style.display = 'block';
       }
 
       function generateNumber() {
@@ -266,18 +261,25 @@
 
       function startGame() {
         let num = generateNumber();
-        console.log(num);
         loadImage(round, num);
         loadOptions(round, num);
       }
 
       function nextRound() {
+        points += pixelSize;
+        clearInterval(imgInterval);
         round += 1;
-        stage.destroy();
-        startGame();
+        if (round === 6) {
+          document.querySelector('#points-end').innerHTML = points;
+          endModal.show();
+        } else {
+          stage.destroy();
+          startGame();
+        }
       }
 
       function loadImage(round, num) {
+        pixelSize = 51;
         stage = new Konva.Stage({
           container: 'game-region',
           width: 300,
@@ -288,7 +290,6 @@
         Konva.Image.fromURL(
           `./assets/theme/images/${themeScript.CODE[round]}/${num}.png`,
           function (pic) {
-            let pixelSize = 51;
             layer.destroyChildren();
 
             pic.position({
@@ -297,16 +298,16 @@
             });
             pic.cache();
             pic.filters([Konva.Filters.Pixelate]);
+
             pic.pixelSize(pixelSize);
             layer.add(pic);
 
-            setInterval(() => {
+            imgInterval = setInterval(() => {
               pic.pixelSize(pixelSize);
               layer.batchDraw();
               pixelSize -= 1;
               if (pixelSize === 0) {
                 pixelSize = 1;
-                // endModal.show();
               }
             }, 100);
           }

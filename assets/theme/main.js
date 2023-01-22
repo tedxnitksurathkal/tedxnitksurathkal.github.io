@@ -27,13 +27,13 @@ export const IMAGEMAP = {
   },
   I: {
     1: 'Ice-cream',
-    3: 'Ink',
-    2: 'Ice',
+    2: 'Ink',
+    3: 'Ice',
     4: 'Iron',
   },
   C: {
     1: 'Cherry',
-    2: 'Cat',
+    2: 'Cake',
     3: 'Carrot',
     4: 'Cheese',
   },

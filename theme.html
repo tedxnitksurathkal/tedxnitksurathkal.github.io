@@ -73,9 +73,16 @@
             ></button>
           </div>
           <div class="modal-body">
-            <p>1. Try to identify the depixelating image in the shortest time possible</p>
-            <p>2. The faster you identify the object, the higher the points you get</p>
-            <p>3. ENJOY 🎉</p>
+            <p>
+              1. Try to identify the depixelating image in the shortest time
+              possible
+            </p>
+            <p>
+              2. The faster you identify the object, the higher the points you
+              get
+            </p>
+            <p>3. You will lose 10 points for choosing the wrong answer</p>
+            <p>4. ENJOY 🎉</p>
           </div>
           <div class="modal-footer">
             <button
@@ -278,6 +285,10 @@
         }
       }
 
+      function wrongAnswer() {
+        points -= 10;
+      }
+
       function loadImage(round, num) {
         pixelSize = 51;
         stage = new Konva.Stage({
@@ -320,10 +331,14 @@
 
         for (let i = 0; i < options.length; i++) {
           options[i].removeEventListener('click', nextRound);
+          options[i].removeEventListener('click', wrongAnswer);
           options[i].innerHTML =
             '<p>' +
             themeScript.IMAGEMAP[themeScript.CODE[round]][i + 1] +
             '</p>';
+          if (options[i] !== correct) {
+            options[i].addEventListener('click', wrongAnswer);
+          }
         }
 
         correct.addEventListener('click', nextRound);

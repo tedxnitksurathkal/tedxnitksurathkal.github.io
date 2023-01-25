@@ -20,7 +20,7 @@
     />
     <meta
       property="og:description"
-      content="TEDxNITKSurathkal is coming back for Edition 2021! See you on 20th February 2021."
+      content="TEDxNITKSurathkal is coming back for Edition 2023! See you on 17th February 2023."
     />
     <meta property="og:url" content="http://www.tedxnitksurathkal.in/" />
     <meta
@@ -33,7 +33,7 @@
     />
 
     <!-- ========== Title ========== -->
-    <title>Solve for Y | TEDxNITKSurathkal</title>
+    <title>Mosaic | TEDxNITKSurathkal</title>
 
     <!-- ========== Favicon Ico ========== -->
     <link rel="icon" href="assets/img/favicon.png" />
@@ -49,9 +49,9 @@
 
     <!--- Bootstrap CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
 
@@ -73,9 +73,16 @@
             ></button>
           </div>
           <div class="modal-body">
-            <p>1. Try to complete the <b>Y</b> in the shortest time possible</p>
-            <p>2. Click on a tile to move it to the adjacent gray tile</p>
-            <p>3. ENJOY 🎉</p>
+            <p>
+              1. Try to identify the depixelating image in the shortest time
+              possible
+            </p>
+            <p>
+              2. The faster you identify the object, the higher the points you
+              get
+            </p>
+            <p>3. You will lose 10 points for choosing the wrong answer</p>
+            <p>4. ENJOY 🎉</p>
           </div>
           <div class="modal-footer">
             <button
@@ -104,8 +111,8 @@
             ></button>
           </div>
           <div id="results-end" class="modal-body">
-            <p>You solved the puzzle in</p>
-            <p class="fs-1 text-center"><b id="time-end"></b></p>
+            <p>You solved the puzzle with a score of</p>
+            <p class="fs-1 text-center"><b id="points-end"></b></p>
             <p>
               Take a screenshot of this page, put it as your story on Instagram,
               tag <b>@tedxnitksurathkal</b> and stand a chance to win exciting
@@ -127,34 +134,40 @@
     </div>
 
     <div class="container text-center" id="theme-reveal" style="display: none">
-      <img src="assets/img/theme/solveforyassetwhite.png" style="padding: 50px 0" />
+      <img
+        src="assets/img/theme/mosaicwhite.jpeg"
+        style="padding: 50px 0"
+      />
       <div class="pt-3">
-        <p><em>"Solve for y"</em></p>
         <p>
-          A simple phrase takes us all back to math class at school. The
-          question has followed us all the way into engineering. Ever stopped to
-          think about what the point is? What's the point of this abstract
-          problem we're asked to solve? Maybe it's time we solved the more
-          primary problem for whY.
+          <em
+            >“Does the truth lie in the pieces, or does it lie in the whole?
+            What is beauty, if not an amalgamation of shattered shards?”</em
+          >
         </p>
 
         <p>
-          What is true learning? In today's competitive world, the rat race for
-          certain degrees and careers for the sake of status and better salary
-          prospects is taking a toll on students, inducing more stress and
-          insecurity. People's true passions take a backseat, and their creative
-          interests are suppressed. Is the education system partially to blame
-          for this? If so, what can be done to break out of this vicious cycle?
+          Life seldom, if not never, is a smooth piece of glass. It is full of
+          setbacks, disappointments, hopeless moments and failures. They break
+          dreams and aspirations, shattering the metaphoric glass and sending
+          them strewn across the canvas; that is the life people observe. A
+          mosaic is a beautiful piece of design, bringing together different
+          pieces of coloured glass. We are artists with the inherent ability to
+          put together these seemingly irreconcilable pieces with the plaster of
+          learning and hope and design a mosaic, an art that shows our
+          achievements and purpose in life. This years theme seeks to celebrate
+          the imperfections and failures we incur in the odyssey of life and
+          aims to show how even though these shattered pieces seem like a stark
+          reminder of dark times, put together, they form a <em>mosaic</em>.
         </p>
 
         <p>
-          TEDxNITKSurathkal brings you the latest edition of our Salon event,
-          titled <strong>Solve for y</strong>. Join us on the <strong>4th of November</strong> as
-          our speakers delve deep into the nature of learning; What ideal
-          learning looks like which can impart knowledge and at the same time
-          prepare one for the real world, and whether the current Indian
-          education system, with all its recent add-ons like NEP, is aligned
-          with this.
+          TEDxNITKSurathkal brings you V9, <strong>Mosaic</strong>. Join us on
+          the <strong>17th of February</strong> as our speakers share their
+          valuable insights from various walks of life and help us figure out
+          how to bring together the tiles of hope, confusion, successes and
+          failures and design our own unique mosaic, a beautiful representation
+          of our true selves.
         </p>
         <a href="/" class="home-btn">Home</a>
         <a href="/theme" class="home-btn">Play Again</a>
@@ -171,27 +184,22 @@
       id="reveal-game"
     >
       <h2 class="text-center pb-3">
-        Timer: <span id="timer" class="font-monospace">0.00 s</span>
+        Points: <span id="points" class="font-monospace">0</span>
       </h2>
-      <div class="game-region">
-        <div id="cell11" class="tile1"></div>
-        <div id="cell12" class="tile2"></div>
-        <div id="cell13" class="tile3"></div>
-        <div id="cell21" class="tile4"></div>
-        <div id="cell22" class="tile5"></div>
-        <div id="cell23" class="tile6"></div>
-        <div id="cell31" class="tile7"></div>
-        <div id="cell32" class="tile8"></div>
-        <div id="cell33" class="tile9"></div>
+      <div id="game-region"></div>
+      <div id="options" class="mt-3">
+        <div class="button rounded" id="button-1"></div>
+        <div class="button rounded" id="button-2"></div>
+        <div class="button rounded" id="button-3"></div>
+        <div class="button rounded" id="button-4"></div>
       </div>
-      <button id="give-up" class="home-btn mt-3">Give Up</button>
     </div>
 
     <!-- ========== SCRIPTS ========== -->
     <!-- Bootstrap and jQuery CDN -->
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
     <script
@@ -199,8 +207,9 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
-    <!-- 2022 Theme -->
-    <!-- <script src="./assets/theme/main.js" type="module"></script> -->
+    <!-- 2023 Theme -->
+    <script src="./assets/theme/main.js" type="module"></script>
+    <script src="https://unpkg.com/konva@8/konva.min.js"></script>
     <!-- GTAG Script -->
     <script
       async
@@ -215,13 +224,20 @@
 
       gtag('config', 'UA-110715968-3');
 
+      import * as themeScript from './assets/theme/main.js';
+
       const startModal = new bootstrap.Modal(
         document.querySelector('#start-modal')
       );
       let endModal = new bootstrap.Modal(document.querySelector('#end-modal'));
 
-      let seconds = 0.0;
       let interval;
+      let imgInterval;
+      let round = 0;
+      let pixelSize = 51;
+      let points = 0;
+
+      let stage;
 
       $(window).on('load', function () {
         $('.loader').delay(100).fadeOut('slow');
@@ -231,8 +247,8 @@
       document
         .querySelector('#start-modal')
         .addEventListener('hide.bs.modal', e => {
-          shuffle();
           startTimer();
+          startGame();
         });
 
       document
@@ -242,135 +258,93 @@
           document.querySelector('#theme-reveal').style.display = 'block';
         });
 
-      document.getElementById('give-up').addEventListener('click', e => {
-        clearInterval(interval);
-        document.querySelector('#reveal-game').style.display = 'none';
-        document.querySelector('#theme-reveal').style.display = 'block';
-      });
-
       function startTimer() {
         interval = setInterval(() => {
-          let timer = document.getElementById('timer');
-          let vis = timer.getAttribute('visible');
-          seconds += 0.01;
-          timer.innerHTML = seconds.toFixed(2) + ' s';
-        }, 10);
+          let pointsSpan = document.getElementById('points');
+          pointsSpan.innerHTML = points;
+        }, 100);
       }
 
-      function revealTheme() {
-        document.querySelector('#end-modal').style.display = 'block';
+      function generateNumber() {
+        return 1 + Math.floor(Math.random() * 4);
       }
 
-      function shuffle() {
-        //Use nested loops to access each cell of the 3x3 grid
-        for (let row = 1; row <= 3; row++) {
-          //For each row of the 3x3 grid
-          for (let column = 1; column <= 3; column++) {
-            //For each column in this row
+      function startGame() {
+        let num = generateNumber();
+        loadImage(round, num);
+        loadOptions(round, num);
+      }
 
-            var row2 = Math.floor(Math.random() * 3 + 1); //Pick a random row from 1 to 3
-            var column2 = Math.floor(Math.random() * 3 + 1); //Pick a random column from 1 to 3
-
-            swapTiles('cell' + row + column, 'cell' + row2 + column2); //Swap the look & feel of both cells
-            document
-              .getElementById('cell' + row + column)
-              .addEventListener('click', () => clickTile(row, column));
-          }
+      function nextRound() {
+        points += pixelSize;
+        clearInterval(imgInterval);
+        round += 1;
+        if (round === 6) {
+          document.querySelector('#points-end').innerHTML = points;
+          endModal.show();
+        } else {
+          stage.destroy();
+          startGame();
         }
       }
 
-      function swapTiles(cell1, cell2) {
-        var temp = document.getElementById(cell1).className;
-        document.getElementById(cell1).className =
-          document.getElementById(cell2).className;
-        document.getElementById(cell2).className = temp;
+      function wrongAnswer() {
+        points -= 10;
       }
 
-      function clickTile(row, column) {
-        var cell = document.getElementById('cell' + row + column);
-        var tile = cell.className;
-        if (tile != 'tile9') {
-          //Checking if white tile on the right
-          if (column < 3) {
-            if (
-              document.getElementById('cell' + row + (column + 1)).className ==
-              'tile9'
-            ) {
-              swapTiles('cell' + row + column, 'cell' + row + (column + 1));
-              checkIfSolved();
-              return;
-            }
-          }
-          //Checking if white tile on the left
-          if (column > 1) {
-            if (
-              document.getElementById('cell' + row + (column - 1)).className ==
-              'tile9'
-            ) {
-              swapTiles('cell' + row + column, 'cell' + row + (column - 1));
-              checkIfSolved();
-              return;
-            }
-          }
-          //Checking if white tile is above
-          if (row > 1) {
-            if (
-              document.getElementById('cell' + (row - 1) + column).className ==
-              'tile9'
-            ) {
-              swapTiles('cell' + row + column, 'cell' + (row - 1) + column);
-              checkIfSolved();
-              return;
-            }
-          }
-          //Checking if white tile is below
-          if (row < 3) {
-            if (
-              document.getElementById('cell' + (row + 1) + column).className ==
-              'tile9'
-            ) {
-              swapTiles('cell' + row + column, 'cell' + (row + 1) + column);
-              checkIfSolved();
-              return;
-            }
-          }
-        }
-      }
+      function loadImage(round, num) {
+        pixelSize = 51;
+        stage = new Konva.Stage({
+          container: 'game-region',
+          width: 300,
+          height: 300,
+        });
+        let layer = new Konva.Layer();
+        stage.add(layer);
+        Konva.Image.fromURL(
+          `./assets/theme/images/${themeScript.CODE[round]}/${num}.png`,
+          function (pic) {
+            layer.destroyChildren();
 
-      function checkIfSolved() {
-        let isSolved = false;
-        for (var row = 1; row <= 3; row++) {
-          for (var column = 1; column <= 3; column++) {
-            var cell = document.getElementById('cell' + row + column);
-            if (cell.className != 'tile' + ((row - 1) * 3 + column)) {
-              if (
-                row == 3 &&
-                (column == 1 || column == 3) &&
-                (cell.className == 'tile7' || cell.className == 'tile9')
-              ) {
-                isSolved = true;
-                continue;
+            pic.position({
+              x: 0,
+              y: 0,
+            });
+            pic.cache();
+            pic.filters([Konva.Filters.Pixelate]);
+
+            pic.pixelSize(pixelSize);
+            layer.add(pic);
+
+            imgInterval = setInterval(() => {
+              pic.pixelSize(pixelSize);
+              layer.batchDraw();
+              pixelSize -= 1;
+              if (pixelSize === 0) {
+                pixelSize = 1;
               }
-              isSolved = false;
-              return;
-            } else {
-              isSolved = true;
-            }
+            }, 100);
+          }
+        );
+      }
+
+      function loadOptions(round, num) {
+        let options = document.querySelectorAll('.button');
+        let correct = document.querySelector(`#button-${num}`);
+
+        for (let i = 0; i < options.length; i++) {
+          options[i].removeEventListener('click', nextRound);
+          options[i].removeEventListener('click', wrongAnswer);
+          options[i].innerHTML =
+            '<p>' +
+            themeScript.IMAGEMAP[themeScript.CODE[round]][i + 1] +
+            '</p>';
+          if (options[i] !== correct) {
+            options[i].addEventListener('click', wrongAnswer);
           }
         }
-        if (isSolved) {
-          console.log('solved');
-          clearInterval(interval);
-          setInterval(() => {
-            document.querySelector('#time-end').innerHTML =
-              seconds.toFixed(2) + ' s';
-            document.querySelector('#timer').innerHTML =
-              seconds.toFixed(2) + ' s';
-          }, 100);
-          setTimeout(() => {
-            endModal.show();
-          }, 100);
-        }
+
+        correct.addEventListener('click', nextRound);
       }
     </script>
   </body>

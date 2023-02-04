@@ -1,7 +1,7 @@
 var team = [
     {
-        "name": "Prof. Udaykumar R. Yaragatti",
-        "position": "Director",
+        "name": "Prof. Prasad Krishna",
+        "position": "Director(Additonal-charge)",
         "image": "Director.jpeg",
         "linkedin": "",
         "instagram": "tedxnitksurathkal"

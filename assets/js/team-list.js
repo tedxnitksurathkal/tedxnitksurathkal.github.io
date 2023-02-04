@@ -1,7 +1,7 @@
 var team = [
     {
         "name": "Prof. Prasad Krishna",
-        "position": "Director(Additonal-charge)",
+        "position": "Director",
         "image": "Director.jpeg",
         "linkedin": "",
         "instagram": "tedxnitksurathkal"

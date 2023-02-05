@@ -22,3 +22,5 @@ github:
     addBadge: false
     # add a label once the prebuild is ready to pull requests (defaults to false)
     addLabel: false
+    # add a check to pull requests (defaults to true)
+    addCheck: true

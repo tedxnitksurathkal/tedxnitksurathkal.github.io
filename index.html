@@ -275,72 +275,7 @@
                 our speakers
             </h3>
         </div>
-        <div class="row justify-content-center no-gutters" id="speakers">
-
-        </div>
-        <div>
-          <style>
-      /* styles for the image grid */
-      .row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin: 0 -15px;
-      }
-      .col {
-        flex: 0 0 calc(25% - 30px);
-        margin: 0 15px;
-      }
-      .col img {
-        width: 100%;
-      }
-      .col p {
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-
-    <div class="row">
-      <div class="col">
-        <img src="2023 speakers\Archana Singh(Travel Content Creator).jpg" alt="Speaker 1">
-        <p>Archana Singh<br>(Travel Content Creator)</p>
-      </div>
-      <div class="col">
-        <img src="2023 speakers\Arshi Yasin (Sports Media Entrepreneur).jpg" alt="Speaker 2">
-        <p>Arshi Yasin<br>(Sports Media Entrepreneur)</p>
-      </div>
-      <div class="col">
-        <img src="2023 speakers\Asha Thadani(Photographic Artist).jpg" alt="Speaker 3">
-        <p>Asha Thadani<br>(Photographic Artist)</p>
-      </div>
-      <div class="col">
-        <img src="C:\Users\Violine\Desktop\tedx\tedxnitksurathkal.github.io\2023 speakers\Captain Naveen Nagappa(Kargil War Veteran).jpg" alt="Speaker 4">
-        <p>Captain Naveen Nagappa<br>(Kargil War Veteran)</p>
-      </div>
-    </div>
-    <br>
-    <br>
-    <div class="row">
-      <div class="col">
-        <img src="2023 speakers\Dr.C.K. Kantharaju(Social Worker).jpeg" alt="Speaker 5">
-        <p>Dr.C.K. Kantharaju<br>(Social Worker)</p>
-      </div>
-      <div class="col">
-        <img src="2023 speakers\Gangadhar Patil(Journalism Entrepreneur).jpg" alt="Speaker 6">
-        <p>Gangadhar Patil<br>(Journalism Entrepreneur)</p>
-      </div>
-      <div class="col">
-        <img src="2023 speakers\Nandini Shankar (Violinist).jpg" alt="Speaker 7">
-        <p>Nandini Shankar<br>(Violinist)</p>
-      </div>
-      <div class="col">
-        <img src="2023 speakers\Sapthami Gowda(Actress).jpg" alt="Speaker 8">
-        <p>Sapthami Gowda<br>(Actress)</p>
-      </div>
-    </div>
-        </div>
-    </div>
+        <div class="row justify-content-center no-gutters" id="speakers">  </div>
 </section>
 
 <section id="speaker-modals"></section>
@@ -605,59 +540,59 @@
     });
   });
 
-//   let n_speakers = speakers.length;
+  let n_speakers = speakers.length;
 
-//   for(let i = 0; i < n_speakers; i++){
-//     let spk = speakers[i];
+  for(let i = 0; i < n_speakers; i++){
+    let spk = speakers[i];
 
-//     let currentTime = new Date();
-//     let show_time = new Date(spk.show_after);
+    let currentTime = new Date();
+    let show_time = new Date(spk.show_after);
 
-//     if (currentTime.getTime() < show_time.getTime())
-//         continue;
+    if (currentTime.getTime() < show_time.getTime())
+        continue;
 
-//     let modal_id = `spk-${i}`;
+    let modal_id = `spk-${i}`;
 
-//     let html=`
-//     <div class="col-md-4 col-sm-8">
-//         <div class="speaker_box">
-//             <div class="speaker_img" data-toggle="modal" data-target="#${modal_id}">
-//                 <img class="lazy" data-src="/assets/img/speakers/${spk.img_link}" alt=${spk.name}>
-//                 <!--
-//                 <div class="info_box">
-//                     <h5 class="name">${spk.name}</h5>
-//                     <p class="position">${spk.title}</p>
-//                 </div>
-//                 --->
-//             </div>
+    let html=`
+    <div class="col-md-4 col-sm-8">
+        <div class="speaker_box">
+            <div class="speaker_img" data-toggle="modal" data-target="#${modal_id}">
+                <img class="lazy" data-src="/assets/img/speakers/${spk.img_link}" alt=${spk.name}>
+                <!--
+                <div class="info_box">
+                    <h5 class="name">${spk.name}</h5>
+                    <p class="position">${spk.title}</p>
+                </div>
+                --->
+            </div>
 
-//             <div class="speaker_social">
-//                 <ul></ul>
-//             </div>
-//         </div>
-//     </div>`;
+            <div class="speaker_social">
+                <ul></ul>
+            </div>
+        </div>
+    </div>`;
 
-//     let description = "<p>" + spk.description.join("</p><p>") + "</p>"
+    let description = "<p>" + spk.description.join("</p><p>") + "</p>"
 
-//     let modalHtml=`
-//     <div class="modal" id=${modal_id} style="top: 15%;">
-//         <div class="modal-dialog">
-//             <div class="modal-content">
-//                 <div class="modal-header text-center" style="background-color: #000;">
-//                     <h3 class="modal-title text-center" style="color:#ff0000; width: 100%;">${spk.name}</h3>
-//                     <button type="button" class="close" data-dismiss="modal" style="color: #fff;">&times;</button>
-//                 </div>
-//                 <div class="modal-body">
-//                     <h5 style="width:100%; font-weight: 700;" class="text-center">${spk.title}</h5>
-//                     ${description}
-//                 </div>
-//             </div>
-//         </div>
-//     </div>`;
+    let modalHtml=`
+    <div class="modal" id=${modal_id} style="top: 15%;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center" style="background-color: #000;">
+                    <h3 class="modal-title text-center" style="color:#ff0000; width: 100%;">${spk.name}</h3>
+                    <button type="button" class="close" data-dismiss="modal" style="color: #fff;">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h5 style="width:100%; font-weight: 700;" class="text-center">${spk.title}</h5>
+                    ${description}
+                </div>
+            </div>
+        </div>
+    </div>`;
 
-//     $('#speakers').append(html);
-//     $('#speaker-modals').append(modalHtml);
-//   }
+    $('#speakers').append(html);
+    $('#speaker-modals').append(modalHtml);
+  }
 
   // Generate past speakers carousel
   for(i = 0; i < past_speakers.length; i++){

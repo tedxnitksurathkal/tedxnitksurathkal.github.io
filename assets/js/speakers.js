@@ -1,32 +1,82 @@
 var speakers = [
   {
-    name: 'Riddhi Doshi Patel',
-    title: 'Child Psychologist | Parenting Counselor',
+    name: 'Captain Naveen Nagappa',
+    title: 'Kargil War Veteran',
     description: [
-      "<b>Riddhi Doshi Patel</b> is a qualified Child Psychologist, Parenting Counsellor, Dance Movement Therapy Practitioner, TED Speaker and Advisor to TED-Ed Clubs across India. She is the recipient of multiple awards including the National Award and Young Entrepreneur Award. She is the Founder of LAJA, India's first forum for women that focuses on Women's Development, Growth and Self-Empowerment. She has established 6 LAJA Chapters across India working in tandem for the growth, development and empowerment of women from rural and urban settings.",
-      'Riddhi is also a qualified Trainer and has conducted Training Programs for Corporates, Individuals, Educational Institutes and NGOs. She is a well known advocate for Mental Health Awareness and also has the distinction of conducting the very first Online Roundtable Conference to discuss the recommendations of the NEP 2020 and submit a whitepaper on the churnings from the same to The Ministry of Education.',
+      "<b>Captain Naveen Nagappa</b>, the Kargil war hero, had to overcome extreme odds while serving in one of the most crucial times of India's Post-Independence times.",
+      'Captain Naveen Nagappa’s tale is one of valor, triumph, and miraculous survival. He always had a special attraction to the army uniform during his college days. So, after earning his mechanical engineering degree, he enrolled in the Indian Military Academy. The year he got commissioned was the year of Kargil. The gruesome experiences he witnessed during his time is beyond comprehension and simply nerve-racking, but those are his stories to tell. He was awarded the Sena Medal for his gallant services.',
     ],
     show_after: '2021-02-04T09:30:00+000',
-    img_link: 'riddhi.png',
+    img_link: 'Capt.NaveenNagappa.png',
   },
   {
-    name: 'Prof. Gururaj Karajagi',
-    title: 'Teacher | Philosopher | Author',
+    name: 'Dr. Kantharaju CK',
+    title: 'Social Worker',
     description: [
-      '<b>Prof. Gururaj Karajagi</b>, the Chairman and Founder of The Academy of Creative Teaching has authored a series of 15 books titled Karunaalu Baa Belake in Kannada which is highly inspirational and widely published. He has also edited a huge compendium of articles on almost every aspect of education and this is brought out as a book entitled, Shikshana Shilpa. His contribution to reformations of primary, secondary and higher education has made an impression in the field. This has been demonstrated by the institution he built, Academy for Creative Teaching, which truly is an expression of the philosophy of Dr.Karajagi, through which he has handheld over 90 Institutions and trained over 200,000 teachers. His finest contribution is the creation of the Creative Teaching Model, with a primary focus on relationships, the experience of gaining knowledge and special emphasis on Indian culture. It touches the lives of over one lakh students each day across the world. He had been invited to deliver talks at reputed universities like Harvard, ITs and IIMs.',
-      'As a philosopher, he makes an impact that goes far beyond the classroom and has inspired millions of people through online channels. His inspiring, patriotic and optimistic talks are rich in experience, and have a life changing impact on the common man.',
+      '<b>Dr. Kantharaju CK</b>, the Founder and CEO of Green Dot Trust, was awarded with Ph.D. degree in Anthropology in the specialized area of Medical Anthropology in the year 2006. ',
+      ' Research thesis titled "Patterns of resort to eye care services in rural areas of Mysore District: An Anthropological Study". He has done both applied and action anthropological techniques of data collection extensively. Green Dot Trust provides Geriatric service for aged women and bedridden, work for home for homeless mentally disabled persons, underprivileged women and tribal communities.',
     ],
     show_after: '2021-02-04T09:30:00+000',
-    img_link: 'gururaj.png',
+    img_link: 'Dr.C.K. Kantharaju.png',
   },
   {
-    name: 'Vinay Menon',
-    title: 'Standup Comedian | English Lecturer | TEDx Speaker',
+    name: 'Sapthami Gowda',
+    title: 'Actress',
     description: [
-      "<b>Mr. Vinay Menon</b> is a standup comedian, English lecturer, and a TED speaker who strives to use his deadliest weapon, humor, to enhance the standards of today's live entertainment. He identifies himself as a sarcastic attention seeker serving the snags of society blended with bittersweet humor. As an English professor by day, and a funny bone tickler by night, he currently teaches English and Life Skills to the future engineers at Rajagiri School of Engineering and Technology.",
-      "As a TED speaker, he uses his platform to raise critical questions about the present education system in our country. Being an educator himself, he has observed and analyzed our country's education system to its depths. His keen observation and talent as a humorous speaker allow him to answer questions about the Indian education system that we all have deep in our minds, but have not been able to acknowledge. He has delivered multiple amazing TEDx talks in the past regarding the same, a few of them being about the 3 myths of the Indian education system, why there is still gender segregation in the education system and how to spot fake news.",
+      "A civil engineering graduate from Bangalore Institute of Technology, <b>Sapthami Gowda</b> is an actress by profession. She won the SIIMA award for best debut actress for her noteworthy work in the 2019 film Popcorn Monkey Tiger, which was directed by Suri. ",
+      "She also gained much limelight as a virtue of playing the lead role in the 400-crore-grossing film 'Kantara' as Leela alongside Risha Shetty. She is set to make her Bollywood debut with Vivek Agnihotri's 'The Vaccine War'. Sapthami Gowda is also a professional swimmer, and has won multiple state level and national level medals.",
     ],
     show_after: '2021-02-04T09:30:00+000',
-    img_link: 'vinay.png',
+    img_link: 'SapthamiGowda.png',
   },
+  {
+    name: 'Nandini Shankar',
+    title: 'Violinist',
+    description: [
+      "<b>Nandini Shankar</b>, one of the exceedingly talented daughters of Mr. Shankar Devraj and the violin maestro Dr. Sangeeta Shankar, began her training in music from the tender age of 3 under the tutelage of her mother and illustrious grandmother, Padmabhushan Dr. N. Rajam, the ace violinist of the country.",
+      'Having been born and brought up in an atmosphere surcharged with high caliber music round the clock, Nandini has taken to music as a duck takes to water. Her progress has been enormously astonishing and she has reached a high level of proficiency on the violin. Nandini has been highly applauded by music enthusiasts for being one of the most promising faces of Indian Classical music.','She has performed in many prominent music festivals and places in India and abroad. She is also a part of various collaborations. She currently teaches at Rajam School of Violin, and was faculty at Whistling Woods International for 5 years.','Academically, she has completed her Masters in Music from SNDT University and also is a qualified Chartered Account.',
+    ],
+    show_after: '2021-02-04T09:30:00+000',
+    img_link: 'NandiniShankar.png',
+  },
+  {
+    name: 'Archana Singh',
+    title: 'Travel Content Creator',
+    description: [
+      "A Brand Management Expert by profession and a Travel Content Creator by passion, <b>Archana Singh</b> loves to explore offbeat places in search of untold human stories. ",
+      'She is a multiple award-winning influencer who has traveled to 60+ countries whilst highlighting issues such as sustainability, women empowerment, responsible tourism and social inclusion of the underprivileged through her articles. She is considered as one of the top Travel Influencers of India and is a regular speaker at prestigious global conferences like WTM, ATM, HTM, PATA, TBC-ASIA, ATWS, TBEX, Photo tourism Conference & Awards, and IAMAI among others. Her articles have been published in national as well as global publications such as BBC, Nat Geo, TOI, LP, T&L among others.',
+    ],
+    show_after: '2021-02-04T09:30:00+000',
+    img_link: 'ArchanaSingh.png',
+  },
+  {
+    name: 'Gangadhar Patil',
+    title: 'Journalism Entrepreneur',
+    description: [
+      "<b>Gangadhar Patil</b> is a trailblazer in the world of journalism, known for his groundbreaking work in connecting grassroots journalists with prominent media companies. As the founder of 101Reporters, he has built a thriving network of over 3000 reporters and established partnerships with 50 leading media organizations. This platform provides a unique opportunity for rural journalists to share their stories and hone their reporting and writing skills while also allowing publishers to access high-quality, original content from remote parts of the country.",
+      "Patil's extensive experience in journalism includes tenure at The Economic Times, The New Indian Express and as part of the Investigations Bureau at the Mumbai edition of DNA. He was honoured as an Ashoka fellow in 2017. With his vast experience and deep understanding of the field, Gangadhar Patil is dedicated to promoting independent journalism and giving a voice to the untold stories of rural communities. Through his work, he is helping to shape the future of journalism and make a lasting impact in the industry.",
+    ],
+    show_after: '2021-02-04T09:30:00+000',
+    img_link: 'GangadharPatil.png',
+  },
+  {
+    name: 'Asha Thadani',
+    title: 'Photographic Artist',
+    description: [
+      "<b>Asha Thadani</b> is a photographic artist based in Bangalore. Her visual stories, rooted in India mostly explore socio cultural/political themes that examine complex power structures. Her subjects are about strong people in vulnerable places.",
+      "Largely self taught, Thadani began her professional journey in 1996. Her work has been published in commercial projects extensively and been exhibited at the Albert Kahn Museum, Paris, auctioned at the Christie's Auction House and Gallery, Paris and at the NCPA, Mumbai.",
+    ],
+    show_after: '2021-02-04T09:30:00+000',
+    img_link: 'AshaThadani.png',
+  },
+  {
+    name: 'Arshi Yasin',
+    title: 'Photographic Artist',
+    description: [
+      "<b>Arshi Yasin</b> is the Co-Founder & CEO of The Bridge. A computer engineer, who has always been enamored by social media's ability to create stories and connect with others. She ultimately decided to develop a career in media & marketing before leaping into entrepreneurship. She has long held the view that sports can be a powerful force for social change, and this belief helped her found The Bridge, a thriving sports media outlet. They are vocal about lesser-covered sports in India, targeting the Olympics. The Bridge covers every non-mainstream sport, from Archery to Skiing to Athletics to Shooting to Boxing to Ice Hockey. The Bridge was set up to change the sports ecosystem and, most importantly, bring about a change in us and how we view Indian sports. She loves exploring new places and traveling and is also into fitness, as she is an avid runner and cyclist.",
+    ],
+    show_after: '2021-02-04T09:30:00+000',
+    img_link: 'ArshiYasin.png',
+  },
+
 ];

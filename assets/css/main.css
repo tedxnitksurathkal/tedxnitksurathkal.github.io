@@ -373,10 +373,10 @@ img {
     height: 80px;
     z-index: 9999;
     vertical-align: middle;
- 
+
   -webkit-animation: loader-inner 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
   animation: loader-inner 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
-  
+
 }
 
 @-webkit-keyframes loader-outter {

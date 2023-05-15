@@ -98,9 +98,9 @@ var team = [
         "instagram": ""
     },
     {
-        "name": "Hemant Somanna",
+        "name": "Hemanth Somanna",
         "position": "Head Of Marketing",
-        "image": "Hemant .jpg",
+        "image": "Hemanth .jpg",
         "linkedin": "https://www.linkedin.com/in/hemanth-somanna-b53310208/",
         "instagram": ""
     },

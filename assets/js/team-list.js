@@ -86,7 +86,7 @@ var team = [
     {
         "name": "Abhishek P",
         "position": "Head Of Operations",
-        "image": "Abhishek.jpg",
+        "image": "Abhishek.jpeg",
         "linkedin": "https://www.linkedin.com/in/abhishek-p-285b05218/",
         "instagram": ""
     },

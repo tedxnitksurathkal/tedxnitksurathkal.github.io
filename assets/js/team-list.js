@@ -42,6 +42,20 @@ var team = [
         "instagram": ""
     },
     {
+        "name": "Advaith Curpod",
+        "position": "Advisor",
+        "image": "Advaith.jpg",
+        "linkedin": "",
+        "instagram": ""
+    },
+    {
+        "name": "Devvrat Ashtaputre",
+        "position": "Advisor",
+        "image": "Devvrat.jpeg",
+        "linkedin": "",
+        "instagram": ""
+    },
+    {
         "name": "Vibhu Varshney",
         "position": "Head Of Curation",
         "image": "Vibhu.HEIC",
@@ -95,20 +109,6 @@ var team = [
         "position": "Web Manager",
         "image": "Violina.jpg",
         "linkedin": "https://www.linkedin.com/in/niraj-n-656761191/",
-        "instagram": ""
-    },
-    {
-        "name": "Advaith Curpod",
-        "position": "Advisor",
-        "image": "Advaith.jpg",
-        "linkedin": "",
-        "instagram": ""
-    },
-    {
-        "name": "Devvrat Ashtaputre",
-        "position": "Advisor",
-        "image": "Devvrat.jpg",
-        "linkedin": "",
         "instagram": ""
     },
     {

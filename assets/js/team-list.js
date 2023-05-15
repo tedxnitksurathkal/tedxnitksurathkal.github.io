@@ -37,84 +37,84 @@ var team = [
     {
         "name": "Ranjana Kambhammettu",
         "position": "Team Lead",
-        "image": "Shreya.jpg",
+        "image": "Ranjana.jpg",
         "linkedin": "",
         "instagram": ""
     },
     {
         "name": "Vibhu Varshney",
         "position": "Head Of Curation",
-        "image": "Advaith.jpg",
+        "image": "Vibhu.HEIC",
         "linkedin": "",
         "instagram": ""
     },
     {
         "name": "Vartika Rao",
         "position": "Head Of Curation",
-        "image": "Ranjana.jpg",
+        "image": "Vartika.jpg",
         "linkedin": "https://www.linkedin.com/in/ranjanakambhammettu/",
         "instagram": "ranjana_kambhammettu"
     },
     {
         "name": "Punith Raj",
         "position": "Head Of Production",
-        "image": "Manav.jpg",
+        "image": "Punith.jpg",
         "linkedin": "",
         "instagram": ""
     },
     {
         "name": "Rohit Chabbi",
         "position": "Head Of Production",
-        "image": "Manmith.jpg",
+        "image": "Rohit.jpg",
         "linkedin": "",
         "instagram": ""
     },
     {
         "name": "Abhishek P",
         "position": "Head Of Operations",
-        "image": "Sannuta.jpg",
+        "image": "Abhishek.jpg",
         "linkedin": "",
         "instagram": ""
     },
     {
         "name": "Pulkit Jain",
         "position": "Head Of Operations",
-        "image": "Tarun.jpg",
+        "image": "Pulkit.jpg",
         "linkedin": "",
         "instagram": ""
     },
     {
         "name": "Hemant Somanna",
         "position": "Head Of Marketing",
-        "image": "Devvrat.jpeg",
+        "image": "Hemant .HEIC",
         "linkedin": "https://www.linkedin.com/in/devvrat-ashtaputre-839a13201        ",
         "instagram": ""
     },
     {
         "name": "Violina Doley",
         "position": "Web Manager",
-        "image": "Niraj.jpg",
+        "image": "Violina.jpg",
         "linkedin": "https://www.linkedin.com/in/niraj-n-656761191/",
         "instagram": ""
     },
     {
         "name": "Advaith Curpod",
         "position": "Advisor",
-        "image": "Athul.jpg",
+        "image": "Advaith.jpg",
         "linkedin": "",
         "instagram": ""
     },
     {
         "name": "Devvrat Ashtaputre",
         "position": "Advisor",
-        "image": "Abel.jpg",
+        "image": "Devvrat.jpg",
         "linkedin": "",
         "instagram": ""
     },
     {
         "name": "Poorvi Joshi",
         "position": "Creative Head",
-        "image": "Kaveen.png",
+        "image": "Poorvi.jpg",
         "linkedin": "",
         "instagram": ""
     },

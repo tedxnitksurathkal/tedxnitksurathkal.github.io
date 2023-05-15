@@ -35,7 +35,7 @@ var team = [
         "instagram": "tedxnitksurathkal"
     },
     {
-        "name": "Shreya Namath",
+        "name": "ShreyaNamath",
         "position": "Team Lead",
         "image": "Shreya.jpg",
         "linkedin": "",

@@ -35,84 +35,84 @@ var team = [
         "instagram": "tedxnitksurathkal"
     },
     {
-        "name": "Shreya",
+        "name": "Ranjana Kambhammettu",
         "position": "Team Lead",
         "image": "Shreya.jpg",
         "linkedin": "",
         "instagram": ""
     },
     {
-        "name": "Advaith Curpod",
+        "name": "Vibhu Varshney",
         "position": "Head Of Curation",
         "image": "Advaith.jpg",
         "linkedin": "",
         "instagram": ""
     },
     {
-        "name": "Ranjana Kambhammettu",
-        "position": "Co-Curator",
+        "name": "Vartika Rao",
+        "position": "Head Of Curation",
         "image": "Ranjana.jpg",
         "linkedin": "https://www.linkedin.com/in/ranjanakambhammettu/",
         "instagram": "ranjana_kambhammettu"
     },
     {
-        "name": "Manav Shetty",
+        "name": "Punith Raj",
         "position": "Head Of Production",
         "image": "Manav.jpg",
         "linkedin": "",
         "instagram": ""
     },
     {
-        "name": "Manmith V Suvarna",
+        "name": "Rohit Chabbi",
         "position": "Head Of Production",
         "image": "Manmith.jpg",
         "linkedin": "",
         "instagram": ""
     },
     {
-        "name": "Sannuta Mijar",
+        "name": "Abhishek P",
         "position": "Head Of Operations",
         "image": "Sannuta.jpg",
         "linkedin": "",
         "instagram": ""
     },
     {
-        "name": "Tarun Vishnoi",
+        "name": "Pulkit Jain",
         "position": "Head Of Operations",
         "image": "Tarun.jpg",
         "linkedin": "",
         "instagram": ""
     },
     {
-        "name": "Devvrat Ashtaputre",
+        "name": "Hemant Somanna",
         "position": "Head Of Marketing",
         "image": "Devvrat.jpeg",
         "linkedin": "https://www.linkedin.com/in/devvrat-ashtaputre-839a13201        ",
         "instagram": ""
     },
     {
-        "name": "Niraj Nandish",
+        "name": "Violina Doley",
         "position": "Web Manager",
         "image": "Niraj.jpg",
         "linkedin": "https://www.linkedin.com/in/niraj-n-656761191/",
         "instagram": ""
     },
     {
-        "name": "Athul Shankar",
-        "position": "Social Media Co-ordinator",
+        "name": "Advaith Curpod",
+        "position": "Advisor",
         "image": "Athul.jpg",
         "linkedin": "",
         "instagram": ""
     },
     {
-        "name": "Abel Sam Thomas",
-        "position": "Head Of Publicity",
+        "name": "Devvrat Ashtaputre",
+        "position": "Advisor",
         "image": "Abel.jpg",
         "linkedin": "",
         "instagram": ""
     },
     {
-        "name": "Kaveen Srikanthan",
+        "name": "Poorvi Joshi",
         "position": "Creative Head",
         "image": "Kaveen.png",
         "linkedin": "",

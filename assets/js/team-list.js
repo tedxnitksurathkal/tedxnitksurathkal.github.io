@@ -58,7 +58,7 @@ var team = [
     {
         "name": "Vibhu Varshney",
         "position": "Head Of Curation",
-        "image": "Vibhu.HEIC",
+        "image": "Vibhu.jpg",
         "linkedin": "",
         "instagram": ""
     },
@@ -100,7 +100,7 @@ var team = [
     {
         "name": "Hemant Somanna",
         "position": "Head Of Marketing",
-        "image": "Hemant .HEIC",
+        "image": "Hemant .jpg",
         "linkedin": "https://www.linkedin.com/in/devvrat-ashtaputre-839a13201        ",
         "instagram": ""
     },

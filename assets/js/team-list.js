@@ -1,8 +1,8 @@
 var team = [
     {
-        "name": "Prof. Prasad Krishna",
+        "name": "Prof. Bhallamudi Ravi",
         "position": "Director",
-        "image": "Director.jpeg",
+        "image": "NewDirector.jpeg",
         "linkedin": "",
         "instagram": "tedxnitksurathkal"
     },

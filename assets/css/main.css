@@ -30,11 +30,25 @@ body {
   overflow-x: hidden;
 }
 .sparkle {
+
   display:none;
+  /* background-image: url(img2.webp); */
 }
+/* .mani{
+  width:100vw;
+  height:100vh;
+  background-color: black; */
+
+  /* background-image: url(img2.webp); */
+/* } */
+/* .hritik{
+  width:100vw;
+  height:100vh;
+} */
 canvas {
   width:100vw;
   height:100vh;
+  /* background-image: url(img2.webp) !important; */
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
@@ -3266,5 +3280,48 @@ textarea.form-control {
   }
   100% {
     transform: rotate(360deg)
+  }
+}
+
+/* Theam  */
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+.hh {
+
+  background-image: url(img2.webp);
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: end;
+  min-height: 100vh;
+  width: 100vw;
+  background-size: 100% 100%;
+}
+.mani{
+  display: flex;
+  height: 20px;
+}
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+  font-size: 60px;
+}
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  height: 100px;
+  color: #fff;
+  text-transform: uppercase;
+  animation: waviy 1s infinite;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
   }
 }

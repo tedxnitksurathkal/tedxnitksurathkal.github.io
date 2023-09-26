@@ -9,15 +9,15 @@ var faq_questions = [
   ],
   [
     'What is the theme for TEDxNITKSurathkalSalon?',
-    'The theme for this event will be "Lost and Found".'
+    'The theme for this event will be "Mind Matters".'
   ],
   [
     'Where can I obtain more information with regard to the theme?',
-    'Click on the link below for more information on the theme <a href="/theme" style="display:inline; font-size:14px;">Lost and Found</a>'
+    'Click on the link below for more information on the theme <a href="/theme" style="display:inline; font-size:14px;">Mind Matters</a>'
   ],
   [
     'When will the event be held?',
-    'The TEDxNITKSurathkalSalon will be held on 26th February at 5:30pm.'
+    'The TEDxNITKSurathkalSalon will be held on 6th October at 5:00pm.'
   ],
   // [
   //   'How do I register for this event?',

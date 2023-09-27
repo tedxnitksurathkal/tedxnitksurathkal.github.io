@@ -32,13 +32,6 @@ html {
   left: calc(50% - 64px);
 }
 
-#reveal-game {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 #game-region {
         display: flex;
         justify-content: center;

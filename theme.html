@@ -295,19 +295,19 @@
               y: 0,
             });
             pic.cache();
-            pic.filters([Konva.Filters.Pixelate]);
+            // pic.filters([Konva.Filters.Pixelate]);
 
-            pic.pixelSize(pixelSize);
+            // pic.pixelSize(pixelSize);
             layer.add(pic);
 
-            imgInterval = setInterval(() => {
-              pic.pixelSize(pixelSize);
-              layer.batchDraw();
-              pixelSize -= 1;
-              if (pixelSize === 0) {
-                pixelSize = 1;
-              }
-            }, 100);
+            // imgInterval = setInterval(() => {
+            //   pic.pixelSize(pixelSize);
+            //   layer.batchDraw();
+            //   pixelSize -= 1;
+            //   if (pixelSize === 0) {
+            //     pixelSize = 1;
+            //   }
+            // }, 100);
           }
         );
       }

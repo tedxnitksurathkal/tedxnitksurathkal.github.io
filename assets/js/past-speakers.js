@@ -150,5 +150,37 @@ var past_speakers = [
   {
     'name': 'Pulapre Balakrishnan',
     'image': 'pulapre.jpeg'
+  },
+  {
+    'name': 'Capt. Naveen Nagappa',
+    'image': 'Capt.NaveenNagappa.png'
+  },
+  {
+    'name': 'Dr. Kantharaju CK',
+    'image': 'Dr.C.K. Kantharaju.png'
+  },
+  {
+    'name': 'Sapthami Gowda',
+    'image': 'SapthamiGowda.png'
+  },
+  {
+    'name': 'Nandini Shankar',
+    'image': 'NandiniShankar.png'
+  },
+  {
+    'name': 'Archana Singh',
+    'image': 'ArchanaSingh.png'
+  },
+  {
+    'name': 'Gangadhar Patil',
+    'image': 'GangadharPatil.png'
+  },
+  {
+    'name': 'Asha Thadani',
+    'image': 'AshaThadani.png'
+  },
+  {
+    'name': 'Arshi Yasin',
+    'image': 'ArshiYasin.png'
   }
 ]

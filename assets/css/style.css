@@ -32,13 +32,6 @@ html {
   left: calc(50% - 64px);
 }
 
-#game-region {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 50vh;
-      }
 /* Buttons */
 
 .mazify .button {

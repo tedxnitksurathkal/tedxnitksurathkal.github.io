@@ -285,32 +285,37 @@
         });
         let layer = new Konva.Layer();
         stage.add(layer);
-        Konva.Image.fromURL(
+                Konva.Image.fromURL(
           `./assets/theme/images/${themeScript.CODE[round]}/${num}.png`,
           function (pic) {
             layer.destroyChildren();
-
+        
             pic.position({
               x: 0,
               y: 0,
             });
             pic.cache();
-            pic.filters([Konva.Filters.Pixelate]);
-
-            pic.pixelSize(pixelSize);
+        
+            // Removed the pixelation effect
+            // pic.filters([Konva.Filters.Pixelate]);
+        
+            // Removed pixelSize modification and interval
+            // pic.pixelSize(pixelSize);
+        
             layer.add(pic);
-
-            imgInterval = setInterval(() => {
-              pic.pixelSize(pixelSize);
-              layer.batchDraw();
-              pixelSize -= 1;
-              if (pixelSize === 0) {
-                pixelSize = 1;
-              }
-            }, 100);
+        
+            // Removed the interval
+            // imgInterval = setInterval(() => {
+            //   pic.pixelSize(pixelSize);
+            //   layer.batchDraw();
+            //   pixelSize -= 1;
+            //   if (pixelSize === 0) {
+            //     pixelSize = 1;
+            //   }
+            // }, 100);
           }
         );
-      }
+
 
       function loadOptions(round, num) {
         let options = document.querySelectorAll('.button');

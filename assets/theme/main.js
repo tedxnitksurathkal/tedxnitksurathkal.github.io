@@ -1,37 +1,25 @@
-export const CODE = 'MOSAIC';
+export const CODE = 'ABCD';
 
 export const IMAGEMAP = {
-  M: {
+  A: {
     1: 'A',
     2: 'C',
     3: 'A',
     4: 'B',
   },
-  O: {
+  B: {
     1: 'B',
     2: 'C',
     3: 'A',
     4: 'B',
   },
-  S: {
-    1: 'C',
-    2: 'C',
-    3: 'C',
-    4: 'C',
-  },
-  A: {
-    1: 'B',
-    2: 'B',
-    3: 'B',
-    4: 'C',
-  },
-  I: {
-    1: 'C',
-    2: 'C',
-    3: 'C',
-    4: 'B',
-  },
   C: {
+    1: 'C',
+    2: 'C',
+    3: 'C',
+    4: 'C',
+  },
+  D: {
     1: 'B',
     2: 'B',
     3: 'B',

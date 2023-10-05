@@ -7,9 +7,9 @@ var team = [
         "instagram": "tedxnitksurathkal"
     },
     {
-        "name": "Prof. Narendranath S",
+        "name": "Prof Ampar Chitharanjan Hegde",
         "position": "Dean - Student Welfare",
-        "image": "DSW.jpeg",
+        "image": "DSW.jpg",
         "linkedin": "",
         "instagram": "tedxnitksurathkal"
     },

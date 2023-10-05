@@ -9,7 +9,7 @@ var speakers = [
       'His eloquence as an orator is evident through numerous guest speaking engagements at prestigious institutions and events, making him a prominent figure in the field of psychology and human behavior.',
     ],
     show_after: '2021-02-04T09:30:00+000',
-    img_link: 'dhar.jpeg',
+    img_link: 'dhar.jpg',
   },
   {
     name: 'Mrs. Swetha KT',
@@ -20,7 +20,7 @@ var speakers = [
       'In a world where mental health is of utmost importance, Mrs. Swetha KT stands as a beacon of hope and support for those seeking guidance and healing. Her dedication to her craft and her commitment to improving the lives of others make her an invaluable asset to the field of psychology. Through her work, she helps individuals navigate the complexities of their minds and find the path to mental and emotional well-being. Swetha KT is a true advocate for mental health, and her contributions are a testament to her passion for making a positive difference in the lives of those she serves.',
     ],
     show_after: '2021-02-04T09:30:00+000',
-    img_link: 'swe.jpeg',
+    img_link: 'swe.jpg',
   },
   {
     name: 'Mrs. Vinatha K',
@@ -31,7 +31,7 @@ var speakers = [
       'She has the charisma of a storyteller and the wisdom of a sage, and is bound to whisk us away on a journey through the fascinating realms of psychology and leadership through her captivating talk.',
     ],
     show_after: '2021-02-04T09:30:00+000',
-    img_link: 'Vina.jpeg',
+    img_link: 'vina.jpg',
   },
   
 ];

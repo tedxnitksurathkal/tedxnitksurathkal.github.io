@@ -9,7 +9,7 @@ body {
   place-items: center;
   flex-direction: column;
   align-items: center;
-  width: 85vh;
+  width: 85vw;
   /* overflow: hidden; */
   
 }

@@ -16,7 +16,7 @@ body {
 
 
 .cont {
-  background-image: url(game.jpg);
+  background-image: url(assets/thememetamorphosis/game.jpg);
   background-size: cover;
   display: grid;
   width: 600px;

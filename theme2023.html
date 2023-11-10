@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="game.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  
+
+
+  <body style="background-color: burlywood; color: white; width: 83vh;">
+    <h1 style="margin-top:30px;">Career Evolution Quiz Quest</h1>
+    <h2 id="score" style="margin-bottom: 15px;">Your score is: </h2>
+
+    <div class="alert alert-success" role="alert" id="sucess_alert" style=" background-color: black; color: white; opacity: 0%;">
+        A simple success alert—check it out!
+      </div>
+
+    <!-- <div id="diceCont">
+      <p id="tog" style="margin-top: 30px;">Start your career journey:</p>
+      <p id="dice">0</p>
+      <button id="diceBtn">ROLL</button>
+    </div> -->
+
+    <div class="cont" >
+      <div class="box" id="b100"></div>
+      <div class="box" id="b99"></div>
+      <div class="box" id="b98"></div>
+      <div class="box" id="b97"></div>
+      <div class="box" id="b96"></div>
+      <div class="box" id="b95"></div>
+      <div class="box" id="b94"></div>
+      <div class="box" id="b93"></div>
+      <div class="box" id="b92"></div>
+      <div class="box" id="b91"></div>
+      <div class="box" id="b81"></div>
+      <div class="box" id="b82"></div>
+      <div class="box" id="b83"></div>
+      <div class="box" id="b84"></div>
+      <div class="box" id="b85"></div>
+      <div class="box" id="b86"></div>
+      <div class="box" id="b87"></div>
+      <div class="box" id="b88"></div>
+      <div class="box" id="b89"></div>
+      <div class="box" id="b90"></div>
+      <div class="box" id="b80"></div>
+      <div class="box" id="b79"></div>
+      <div class="box" id="b78"></div>
+      <div class="box" id="b77"></div>
+      <div class="box" id="b76"></div>
+      <div class="box" id="b75"></div>
+      <div class="box" id="b74"></div>
+      <div class="box" id="b73"></div>
+      <div class="box" id="b72"></div>
+      <div class="box" id="b71"></div>
+      <div class="box" id="b61"></div>
+      <div class="box" id="b62"></div>
+      <div class="box" id="b63"></div>
+      <div class="box" id="b64"></div>
+      <div class="box" id="b65"></div>
+      <div class="box" id="b66"></div>
+      <div class="box" id="b67"></div>
+      <div class="box" id="b68"></div>
+      <div class="box" id="b69"></div>
+      <div class="box" id="b70"></div>
+      <div class="box" id="b60"></div>
+      <div class="box" id="b59"></div>
+      <div class="box" id="b58"></div>
+      <div class="box" id="b57"></div>
+      <div class="box" id="b56"></div>
+      <div class="box" id="b55"></div>
+      <div class="box" id="b54"></div>
+      <div class="box" id="b53"></div>
+      <div class="box" id="b52"></div>
+      <div class="box" id="b51"></div>
+      <div class="box" id="b41"></div>
+      <div class="box" id="b42"></div>
+      <div class="box" id="b43"></div>
+      <div class="box" id="b44"></div>
+      <div class="box" id="b45"></div>
+      <div class="box" id="b46"></div>
+      <div class="box" id="b47"></div>
+      <div class="box" id="b48"></div>
+      <div class="box" id="b49"></div>
+      <div class="box" id="b50"></div>
+      <div class="box" id="b40"></div>
+      <div class="box" id="b39"></div>
+      <div class="box" id="b38"></div>
+      <div class="box" id="b37"></div>
+      <div class="box" id="b36"></div>
+      <div class="box" id="b35"></div>
+      <div class="box" id="b34"></div>
+      <div class="box" id="b33"></div>
+      <div class="box" id="b32"></div>
+      <div class="box" id="b31"></div>
+      <div class="box" id="b21"></div>
+      <div class="box" id="b22"></div>
+      <div class="box" id="b23"></div>
+      <div class="box" id="b24"></div>
+      <div class="box" id="b25"></div>
+      <div class="box" id="b26"></div>
+      <div class="box" id="b27"></div>
+      <div class="box" id="b28"></div>
+      <div class="box" id="b29"></div>
+      <div class="box" id="b30"></div>
+      <div class="box" id="b20"></div>
+      <div class="box" id="b19"></div>
+      <div class="box" id="b18"></div>
+      <div class="box" id="b17"></div>
+      <div class="box" id="b16"></div>
+      <div class="box" id="b15"></div>
+      <div class="box" id="b14"></div>
+      <div class="box" id="b13"></div>
+      <div class="box" id="b12"></div>
+      <div class="box" id="b11"></div>
+      <div class="box" id="b01">
+        <p id="p1"></p>
+        <!-- <p id="p2"></p> -->
+      </div>
+      <div class="box" id="b02"></div>
+      <div class="box" id="b03"></div>
+      <div class="box" id="b04"></div>
+      <div class="box" id="b05"></div>
+      <div class="box" id="b06"></div>
+      <div class="box" id="b07"></div>
+      <div class="box" id="b08"></div>
+      <div class="box" id="b09"></div>
+      <div class="box" id="b10"></div>
+    </div>
+
+    <!-- <img src="game.jpg" alt="" /> -->
+
+    <div id="diceCont">
+        <p id="tog" style="margin-top: 30px;">Start your career journey:</p>
+        <p id="dice">0</p>
+        <button id="diceBtn" style="padding-top: 15px;">ROLL</button>
+      </div>
+
+
+
+    <!-- <div style="display: flex;align-items: center;justify-content: center;"> -->
+    <div id="quizModal" class="modal" style="align-items: center;justify-content: center; margin-top: auto;">
+      <div class="modal-content" style="background-color: black; color: white; width: 80%; ">
+        <h2>Quiz Question</h2>
+        <p id="question">What is the capital of France?</p>
+        <div class="options">
+          <div class="option" onclick="selectOption('button1')">
+            <label id="option1" for="option1">
+              <input type="radio" id="button1" name="answer" value="paris" />
+              <span id="option1Text">Berlin</span>
+              </label>
+          </div>
+
+          <div class="option" onclick="selectOption('button2')">
+            <label id="option2" for="option2">
+              <input type="radio" id="button2" name="answer" value="london" />
+              <span id="option2Text">Berlin</span>
+            </label
+            >
+          </div>
+
+          <div class="option" onclick="selectOption('button3')">
+            <label id="option3" for="option3">
+              <input type="radio" id="button3" name="answer" value="berlin" />
+              <span id="option3Text">Berlin</span>
+              </label>
+          </div>
+
+          <div class="option" onclick="selectOption('button4')">
+            <label id="option4" for="option4">
+              <input type="radio" id="button4" name="answer" value="madrid" />
+              <span id="option4Text">Berlin</span>
+              </label>
+          </div>
+        </div>
+        <button id="submitAnswer">Submit</button>
+      </div>
+    </div>
+
+
+<!-- for snakes -->
+<div id="quizModalsnake" class="modal" style="align-items: center;justify-content: center; margin-top: auto;">
+    <div class="modal-content" style="background-color: black; color: white; width: 80%; ">
+      <h2>Quiz Question</h2>
+      <p id="questions">What is the capital of France?</p>
+      <div class="options">
+        <div class="option" onclick="selectOption('button1s')">
+          <label id="option1s" for="option1">
+            <input type="radio" id="button1s" name="answer" value="paris" />
+            <span id="option1Texts">Berlin</span>
+            </label>
+        </div>
+
+        <div class="option" onclick="selectOption('button2s')">
+          <label id="option2s" for="option2">
+            <input type="radio" id="button2s" name="answer" value="london" />
+            <span id="option2Texts">Berlin</span>
+          </label
+          >
+        </div>
+
+        <div class="option" onclick="selectOption('button3s')">
+          <label id="option3s" for="option3">
+            <input type="radio" id="button3s" name="answer" value="berlin" />
+            <span id="option3Texts">Berlin</span>
+            </label>
+        </div>
+
+        <div class="option" onclick="selectOption('button4s')">
+          <label id="option4s" for="option4s">
+            <input type="radio" id="button4s" name="answer" value="madrid" />
+            <span id="option4Texts">hritik</span>
+            </label>
+        </div>
+      </div>
+      <button id="submitAnswers" onclick="snakeOnClick()">Submit</button>
+    </div>
+  </div>
+
+
+
+
+
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+  <script src="game.js"></script>
+</html>

@@ -1,3 +1,14 @@
+function dbox (msg) {
+  if (msg != undefined) {
+    document.getElementById("boxTxt").innerHTML = msg;
+    document.getElementById("boxBack").classList.add("show");
+  } else { document.getElementById("boxBack").classList.remove("show"); }
+}
+
+
+
+
+
 let tog = 1;
 let rollingSound = new Audio("assets/thememetamorphosis/rpg-dice-rolling-95182.mp3");
 let winSound = new Audio("assets/thememetamorphosis/winharpsichord-39642.mp3");
@@ -559,8 +570,16 @@ function play(player, psum, correction, num) {
     }px`;
   } else if (sum == 100) {
     winSound.play();
+    
+    
+    
     alert("Congratulations! Your score is: " + score);
-    location.reload();
+
+    // dbox("Congratulations! Your Score is " + score);
+
+    window.location.href = "assets/thememetamorphosis/theme-page.html";
+    
+    // location.reload();
   } else {
     numarr = Array.from(String(sum));
     n1 = eval(numarr.shift());

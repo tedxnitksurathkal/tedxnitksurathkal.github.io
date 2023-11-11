@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> -->
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" /> -->
+
+
+
     <title>Theme | TEDxNITKSurathkal</title>
     <link rel="stylesheet" href="./assets/thememetamorphosis/game.css" />
     <link
@@ -19,10 +25,34 @@
       crossorigin="anonymous"
     />
   </head>
-  
+
 
 
   <body style="background-color: burlywood; color: white; width: 83vh;">
+
+
+    <!-- HTML DIALOG BOX -->
+    <div id="boxBack">
+      <div id="boxWrap">
+        <div id="boxTxt"></div>
+          <p id="instructions-text">
+            1. Click the "Roll" button to roll the dice. Note: You lose 10 points every time you roll the dice. <br/>
+            2. Advance your game piece by the number shown on the dice.<br />
+            3. If you land on a ladder: Answer a question right to climb up, or stay where you are if you get it wrong. <br />
+            4. If you hit a zigzag: Answer correctly to stay in place, or slip down if your answer is incorrect. <br />
+            5. Aim for a high score !
+          </p>
+        <input type="button" id="ok-button" value="OK" onclick="dbox()">
+      </div>
+    </div>
+ 
+    <!-- TEST BUTTON -->
+    <input type="button" id="instructions-button" value="Instructions" onclick="dbox('')">
+
+
+
+
+
     <h1 style="margin-top:30px;">Career Evolution Quiz Quest</h1>
     <h2 id="score" style="margin-bottom: 15px;">Your score is: </h2>
 
@@ -35,6 +65,11 @@
       <p id="dice">0</p>
       <button id="diceBtn">ROLL</button>
     </div> -->
+
+
+    <!-- <div class="wrapper"> -->
+
+
 
     <div class="cont" >
       <div class="box" id="b100"></div>
@@ -142,10 +177,20 @@
       <div class="box" id="b10"></div>
     </div>
 
+    <!-- <div class="instructions-text">
+      <p>
+        In the intricate dance of life, our careers are ever-evolving choreographies of growth, adaptation, and transformation. 'Metamorphosis in Motion' is an exploration of the dynamic and graceful movements that shape our professional journeys.
+This theme invites you to step onto the stage of your career with a fresh perspective. Just as a caterpillar transforms into a butterfly, we too undergo profound changes in our professional lives. This theme celebrates the beauty and complexity of these metamorphoses, emphasizing the importance of embracing the journey with grace and agility.
+Through enlightening discussions and captivating narratives, our speakers will guide you through the stages of career evolution. They'll share their own stories of radical transformation, from the initial caterpillar-like existence to the chrysalis of self-discovery and finally, the breathtaking emergence of their true potential. They'll illuminate the significance of resilience, adaptability, and embracing the unknown in the ever-changing realm of careers.
+      </p>
+  </div> -->
+
+    <!-- </div> -->
+
     <!-- <img src="game.jpg" alt="" /> -->
 
     <div id="diceCont">
-        <p id="tog" style="margin-top: 30px;">Start your career journey:</p>
+        <p id="tog" style="margin-top: 120px;">Start your career journey:</p>
         <p id="dice">0</p>
         <button id="diceBtn" style="padding-top: 15px;">ROLL</button>
       </div>

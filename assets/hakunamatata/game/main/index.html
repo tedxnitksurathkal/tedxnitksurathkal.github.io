@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Endless Runner</title>
+  <link rel="stylesheet" href="kandi.css" type="text/css" media="screen">
+  <script type="text/javascript" src="jquery.2.1.1.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="sound sound-off"></div>
+    <div id="menu">
+      <div id="progress">
+        <div id="percent">Downloading: <span id="p"></span></div>
+        <progress id="progress-bar" value="0"></progress>
+      </div>
+      <div id="main">
+        <ul>
+          <li><a href="javascript:void(0)" class="button play">Start Game</a></li>
+        </ul>
+      </div>
+    </div>
+    <canvas id="canvas" width="600" height="480">
+      <p>You're browser does not support the required functionality to play this game.</p>
+      <p>Please update to a modern browser such as <a href="www.google.com/chrome/‎">Google Chrome</a> to play.</p>
+    </canvas>
+    <div id="game-over">
+      <h2>You ran <span id="score"></span> meters!</h2>
+      <a href="javascript:void(0)" class="button restart">Try again?</a>
+    </div>
+  </div>
+  <script type="text/javascript" src="kandi.js"></script>
+</body>
+</html>

@@ -1,31 +1,86 @@
 var speakers = [
   
   {
-    name: 'Sairaj Dhond',
-    title: 'Founder & CEO - Wakao Foods',
+    name: 'Gita Balakrishnan',
+    title: 'Architect',
     description: [
-      '<b>Mr. Wakao</b>, as he is famously known, Sairaj Dhond is the founder and CEO of Wakao Foods, a jackfruit-based, vegan Food Company. A lawyer by education and an entrepreneur by passion, Sairaj began his career as a criminal lawyer but soon defied his academic-led profession in pursuit of his true calling, sustainable entrepreneurship. Hailing from a lineage of business experts, Sairaj had a natural inclination towards entrepreneurship from a young age. A serial entrepreneur at heart, Sairaj is deeply committed to creating brands that create a global footprint and help the environment. His company, Wakao Foods has been recognised as India first and Most Loved Plant-Based Product Company. 2022 came in as a major turning point in the life of Brand Wakao, as it became India first start-up to be backed by all three female sharks on Shark Tank India. The brand received funding from SUGAR Cosmetics, Mama Earth, and Emcure Pharmaceuticals in the 1st edition of Shark Tank India that aired on Sony Entertainment Television. Sairaj is also a successful serial entrepreneur, and his other business ventures include a lighting and solar solutions business, and a real estate restoration business called Luxo Heritage Homes. Sairaj is also associated with social organizations like the Indian Red Cross Society, Goa Branch, The CII Young Indians, The Rotary Movement, and The Jaycees. Sairaj has been awarded the Business World Young Entrepreneur Award in 2021. When not working, Sairaj can be found playing cricket, and he is a state-level cricket champion, who thoroughly enjoys playing and following the game to this day.',
+      'An extraordinary architect, Gita Balakrishnan, approaches her craft uniquely by going beyond traditional structures to build stories, minds, and ideas. Since laying the foundation of Ethos in 2002, she has been dedicated to raising awareness about the built environment, supporting aspiring professionals, and creating a network of future leaders in design and engineering. While her works have earned her widespread recognition, many do not know of some of the darkest moments in her life that she overcame to be where she is today. She has chosen to open up to the audience today on her personal life, priorities, setbacks and rising back. Her impactful contributions from her early career days extend to various community-driven initiatives, including various slum redevelopment programs as a part of her role at AVAS. This multifaceted engagement underscores her passion for positive change in community development and urban living, reflecting a dedicated effort to contribute meaningfully to various projects. From her vivid portfolio in the two decades since, her most recent highlight is the "Walk for a Cause" initiative wherein she has been undertaking long distance walks between cities, states and even across borders to spotlight the importance of responsible design and the contributions of the Architecture and Design community to society. Every step in this journey contributes to building a better, more consciously designed future.',
     ],
     show_after: '2023-10-04T09:30:00+000',
-    img_link: 'Sairaj.jpg',
+    img_link: '1.png',
   },
   {
-    name: 'Puneeth Suraana',
-    title: 'Audio Producer',
+    name: 'Rhythm',
+    title: 'Guitarist',
     description: [
-      '<b>, Puneeth Suraana</b> is a dynamic and accomplished individual whose impact resonates through various avenues, notably as the producer and host of The Galata Podcast. Through his influential talks on The Galata Podcast, Puneeth has emerged as a motivational prodigy, inspiring young minds to embark on their journeys early and make a significant mark in the world. The podcast, aptly named after the Kannada word "Galata," meaning the noise caused by a ruckus, features insightful interviews that delve into the intricacies of entrepreneurship, team building, and the pursuit of creating value for others. With 65+ episodes, Puneeth has interviewed notable figures such as Nikhil Kamath, Ankur Warikoo and Rohith Bhat. His entrepreneurial prowess is evident in his previous venture, Swaggers, a reliable and affordable clothing startup that gained prominence on college campuses and even secured a presence in the IPL ecosystem. Puneeth achievements include winning a national award for being one of the youngest entrepreneurs in India and being appointed as the brand ambassador of Fair and Handsome alongside Hrithik Roshan. His diverse interests extend to classical Carnatic music and Argentine Tango, and he is a veteran Toastmaster. Puneeth journey is marked by accolades, entrepreneurial accomplishments, and a commitment to inspiring others to make some Galata.',
+      'A 28-year-old Mumbai-based guitarist, Rhythm has been hailed a prodigy from a very young age, often getting coverage and accolades from his peers at school and college. Rhythm is also a classically trained tabla player. Using the guitar as an extension and having technical proficiency makes him a successful musician ranging across multiple genres. Rhythm has toured Germany and South America and collaborated with names like A.R Rahman, Gino banks, and Zakir Hussian.',
     ],
     show_after: '2023-10-04T09:30:00+000',
-    img_link: 'Puneeth.jpg',
+    img_link: '2.png',
   },
   {
-    name: 'Bijoy Venugopal',
-    title: 'Storyteller & Educator',
+    name: 'Meera Valenkar',
+    title: 'Cyclist',
     description: [
-      '<b>Bijoy Venugopal</b>, an independent communications consultant with over two decades experience in media and corporate communications, Bijoy Venugopal has diverse expertise in storytelling, content strategy and leading editorial teams. BEEJ WORD STUDIO, his independent consultancy, is dedicated to telling inclusive, pluralistic, and empowering human stories. He works with nonprofits, educational institutions, and startups, crafting compelling narratives across various media platforms. Bijoy has left his mark on leading internet companies such as Flipkart and Yahoo!, as well as startups, indie rock bands, NGOs, and infotech giants. He has worn many hats, including those of a cartoonist, journalist, travel writer and editor, communications leader and educator. Bijoy Venugopal's work in corporate communications, travel writing and long-form storytelling have earned him accolades, establishing him as a distinguished professional in the field. His passion extends to other areas of interest, as he strives to find purpose in building communities around responsible and sustainable travel, nature education, citizen science for awareness and conservation of urban wildlife, and birding.',
+      'Meera Velankar is a resilient and accomplished individual with a Ph.D. in Life Sciences. Over the past decade and more , she accidentally transitioned into an endurance cyclist, defying conventional expectations and carving a unique path in the world of cycling. Her accidental entry into cycling in 2011 became a transformative journey, encompassing racing, triathlons, and self-supported long-distance events. Her cycling journey, averaging an impressive 8,000 km annually, symbolizes not just a sport but a transformative means of overcoming identity crises and embracing unforeseen passions. The years from 2015 to 2023 witnessed. Her notable cycling expeditions, including a Guinness World Record, and the completion of challenging routes in India amid the complexities of three corona waves. Of particular significance is her tandem cycling expedition to Umlingla in 2023, an exploration of high-altitude riding that embodies the essence of living life fruitfully and embracing challenges. Her story resonates with the belief that life challenges are opportunities for growth. Her experiences underscore the importance of continuous self-challenge and a commitment to embrace daily challenges as stepping stones to a fulfilling life.',
     ],
     show_after: '2023-10-04T09:30:00+000',
-    img_link: 'Bijoy.jpg',
+    img_link: '3.png',
   },
+  {
+    name: 'Sonali Swali',
+    title: 'Cyclist',
+    description: [
+      'As an International Award Winning Fitness Athlete and Asians Championship BRONZE Medalist, Sonali Swami has achieved significant milestones in her athletic journey. Beyond her prowess in fitness, Sonali is a certified Zumba and Bokwa Instructor, a TRX suspension Trainer, and a Les Mills Body Pump expert, showcasing her multifaceted expertise in the fitness domain. In addition to her athletic achievements, Sonali is also a trained Kathak dancer, demonstrating her commitment to the performing arts. As an independent business owner and entrepreneur, she exemplifies versatility and resilience in balancing her diverse roles. Her commitment to excellence and her ability to excel in various fields underscore her dedication to continuous personal and professional growth.',
+    ],
+    show_after: '2023-10-04T09:30:00+000',
+    img_link: '4.png',
+  },
+  {
+    name: '',
+    title: '',
+    description: [
+      '<b>Bijoy Venugopal</b>, an independent communications consultant with over two decades experience in media and corporate communications, Bijoy Venugopal has diverse expertise in storytelling, content strategy and leading editorial teams. BEEJ WORD STUDIO, his independent consultancy, is dedicated to telling inclusive, pluralistic, and empowering human stories. He works with nonprofits, educational institutions, and startups, crafting compelling narratives across various media platforms. Bijoy has left his mark on leading internet companies such as Flipkart and Yahoo!, as well as startups, indie rock bands, NGOs, and infotech giants. He has worn many hats, including those of a cartoonist, journalist, travel writer and editor, communications leader and educator. His work in corporate communications, travel writing and long-form storytelling have earned him accolades, establishing him as a distinguished professional in the field. His passion extends to other areas of interest, as he strives to find purpose in building communities around responsible and sustainable travel, nature education, citizen science for awareness and conservation of urban wildlife, and birding.',
+    ],
+    show_after: '2023-10-04T09:30:00+000',
+    img_link: '5.png',
+  },
+  {
+    name: 'Dhyvik G J',
+    title: 'CEO of Changepay',
+    description: [
+      'Dhyvik G J, Founder, and CEO of Changepay,  emerges as a dynamic force in the entrepreneurial landscape. His journey is marked by remarkable achievements, beginning with securing Angel investment even before completing his graduation. Under his leadership, Changepay has carved a niche by digitizing college commerce activities, providing students with a seamless platform to access their needs conveniently delivered to their doorstep. His strategic vision and hands-on approach have propelled Changepay to the forefront of the industry, making a significant impact on the way college communities engage in commerce. His entrepreneurial journey reflects a relentless pursuit of goals and a willingness to embrace challenges. As a visionary leader, Dhyvik continues to inspire by turning dreams into reality and shaping the future of commerce for the next generation.',
+    ],
+    show_after: '2023-10-04T09:30:00+000',
+    img_link: '6.png',
+  },
+  {
+    name: ' ',
+    title: ' ',
+    description: [
+      '',
+    ],
+    show_after: '2023-10-04T09:30:00+000',
+    img_link: '7.png',
+  },
+  {
+    name: ' ',
+    title: ' ',
+    description: [
+      ' ',
+    ],
+    show_after: '2023-10-04T09:30:00+000',
+    img_link: '8.png',
+  },
+  {
+    name: ' ',
+    title: ' ',
+    description: [
+      ' ',
+    ],
+    show_after: '2023-10-04T09:30:00+000',
+    img_link: '9.png',
+  },
+  
   
 ];

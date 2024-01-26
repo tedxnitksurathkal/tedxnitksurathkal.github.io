@@ -70,7 +70,7 @@ var speakers = [
       ' ',
     ],
     show_after: '2023-10-04T09:30:00+000',
-    img_link: '8.png',
+    img_link: '7.png',
   },
   {
     name: ' ',
@@ -79,7 +79,7 @@ var speakers = [
       ' ',
     ],
     show_after: '2023-10-04T09:30:00+000',
-    img_link: '9.png',
+    img_link: '7.png',
   },
   
   

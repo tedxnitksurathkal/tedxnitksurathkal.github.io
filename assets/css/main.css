@@ -3341,7 +3341,7 @@ textarea.form-control {
 .play-game-button {
     background-color: #e74c3c; /* Red color */
     color: #fff; /* White text */
-    padding: 15px 30px;
+    padding: 3px 3px;
     font-size: 18px;
     border: none;
     border-radius: 5px;

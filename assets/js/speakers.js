@@ -54,33 +54,33 @@ var speakers = [
     show_after: '2023-10-04T09:30:00+000',
     img_link: '6.png',
   },
-  {
-    name: ' ',
-    title: ' ',
-    description: [
-      '',
-    ],
-    show_after: '2023-10-04T09:30:00+000',
-    img_link: '7.png',
-  },
-  {
-    name: ' ',
-    title: ' ',
-    description: [
-      ' ',
-    ],
-    show_after: '2023-10-04T09:30:00+000',
-    img_link: '7.png',
-  },
-  {
-    name: ' ',
-    title: ' ',
-    description: [
-      ' ',
-    ],
-    show_after: '2023-10-04T09:30:00+000',
-    img_link: '7.png',
-  },
+  // {
+  //   name: ' ',
+  //   title: ' ',
+  //   description: [
+  //     '',
+  //   ],
+  //   show_after: '2023-10-04T09:30:00+000',
+  //   img_link: '7.png',
+  // },
+  // {
+  //   name: ' ',
+  //   title: ' ',
+  //   description: [
+  //     ' ',
+  //   ],
+  //   show_after: '2023-10-04T09:30:00+000',
+  //   img_link: '7.png',
+  // },
+  // {
+  //   name: ' ',
+  //   title: ' ',
+  //   description: [
+  //     ' ',
+  //   ],
+  //   show_after: '2023-10-04T09:30:00+000',
+  //   img_link: '7.png',
+  // },
   
   
 ];

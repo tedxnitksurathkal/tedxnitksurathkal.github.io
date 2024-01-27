@@ -3333,7 +3333,7 @@ textarea.form-control {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 20vh;
     margin: 0;
     background-color: #f0f0f0; /* Set your background color */
 }
@@ -3341,7 +3341,7 @@ textarea.form-control {
 .play-game-button {
     background-color: #e74c3c; /* Red color */
     color: #fff; /* White text */
-    padding: 3px 3px;
+    padding: 15px 30px;
     font-size: 18px;
     border: none;
     border-radius: 5px;

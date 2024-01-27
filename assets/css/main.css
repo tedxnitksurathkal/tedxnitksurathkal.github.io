@@ -3329,16 +3329,11 @@ textarea.form-control {
   padding: 0;
 }
 
-.gamecontainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20vh;
-    margin: 0;
-    background-color: #f0f0f0; /* Set your background color */
-}
-
 .play-game-button {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #e74c3c; /* Red color */
     color: #fff; /* White text */
     padding: 15px 30px;
@@ -3352,5 +3347,6 @@ textarea.form-control {
 .play-game-button:hover {
     background-color: #c0392b; /* Darker red on hover */
 }
+
 
 

@@ -3328,3 +3328,22 @@ textarea.form-control {
   text-wrap: normal;
   padding: 0;
 }
+
+.game-button {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.game-button:hover {
+    background-color: #2980b9;
+}
+
+.button-text {
+    font-weight: bold;
+}

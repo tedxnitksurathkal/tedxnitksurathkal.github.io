@@ -128,7 +128,7 @@ body {
 }
 
 .containerr {
-  color: red;
+  color: #e5e5e5;
   font-size: 4.0rem;
   text-transform: uppercase;
   height: 100vh;
@@ -175,15 +175,15 @@ body {
   /* background-color:#20a7d8; */
   /* margin-top: 50px; */
   /* padding-top: 20px; */
-  color: aqua;
+  color: red;
 }
 .second div {
   /* background-color:#CD921E; */
-  color: aqua;
+  color: red;
 }
 .third div {
   /* background-color:#c10528; */
-  color: aqua;
+  color: red;
 }
 
 @keyframes text-animation {

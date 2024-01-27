@@ -3331,7 +3331,7 @@ textarea.form-control {
 
 .play-game-button {
     position: absolute;
-    top: 22px;
+    top: 100px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #e74c3c; /* Red color */

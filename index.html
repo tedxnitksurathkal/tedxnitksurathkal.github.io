@@ -59,7 +59,7 @@
                         <a class="nav-link " href="salon"><strong>Salon</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="/assets/hakunamatata/theme-page.html"><strong>Theme</strong></a>
+                        <a class="nav-link " href="/theme2023"><strong>Theme</strong></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="/past-editions"><strong>Past Editions</strong></a>
@@ -82,7 +82,7 @@
     </header>
     <!--header end here-->
     <!--cover section slider -->
-    <section id="home" class="home-cover">
+    <!-- <section id="home" class="home-cover">
 
         <div class="sparkle">
             <ul data-time="750">
@@ -105,10 +105,32 @@
             </ul>
         </div>
         <canvas></canvas>
-    </section>
-    <div class="gamecontainer">
-        <button class="play-game-button" onclick="window.location.href='assets/hakunamatata/game/main/index.html'">Play Game</button>
+    </section> -->
+
+    <!-- my code starts here -->
+    <div class="herobody">
+        <section class="simba">
+            <div class="waves">
+                <img src="stars.jpg"  alt="" class="stars">
+                <img src="island.png" alt="" class="island">
+                <img src="simba.png" alt="" class="simbapic">
+                <div class="containerr">
+                <section class="animation">
+                    <div class="first"><div>Ideas</div></div>
+                    <div class="second"><div>Worth</div></div>
+                    <div class="third"><div>spreading</div></div>
+                  </section>
+                </div>
+                <div class="wave" id="wave1"></div>
+                <div class="wave" id="wave2"></div>
+                <div class="wave" id="wave3"></div>
+                <div class="wave" id="wave4"></div>
+                
+            </div>
+        </section>
     </div>
+    <!-- ends here -->
+
     <section class="pt100 pb100">
         <div class="container">
             <div class="row justify-content-center">
@@ -118,7 +140,7 @@
                         <div class="content">
                             <h5 class="box_title">DATE</h5>
                             <p>
-                                5:00 PM, 2nd February, 2024
+                                5:00 PM, 17th November, 2023
                             </p>
                         </div>
                     </div>
@@ -144,7 +166,7 @@
                                 speakers
                             </h5>
                             <p>
-                                7
+                                3
                             </p>
                         </div>
                     </div>
@@ -539,7 +561,7 @@
       time: 3000
     });
 
-    $('.countdown').countdown(new Date("2024-02-02T17:00:00.000+05:30"), function(event) {
+    $('.countdown').countdown(new Date("2023-11-17T17:00:00.000+05:30"), function(event) {
       $(this).html(
         event.strftime("<div>%D <span>Days</span></div><div>%H <span>Hours</span></div><div>%M <span>Minutes</span></div><div>%S <span>Seconds</span></div>")
       );

@@ -175,15 +175,15 @@ body {
   /* background-color:#20a7d8; */
   /* margin-top: 50px; */
   /* padding-top: 20px; */
-  color: red;
+  color: aqua;
 }
 .second div {
   /* background-color:#CD921E; */
-  color: red;
+  color: aqua;
 }
 .third div {
   /* background-color:#c10528; */
-  color: red;
+  color: aqua;
 }
 
 @keyframes text-animation {

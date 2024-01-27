@@ -108,6 +108,11 @@ a {
   border-radius: 20px;
 }
 
+
+#instruction-text {
+  font-size: 20px;
+}
+
 #credits {
   display: none;
   line-height: 30px;
@@ -143,4 +148,8 @@ a {
   z-index: 1;
   position: relative;
   margin: 10%;
+}
+
+.btn-game-over {
+  display: flex;
 }

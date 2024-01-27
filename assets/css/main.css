@@ -3329,21 +3329,28 @@ textarea.form-control {
   padding: 0;
 }
 
-.game-button {
-    display: inline-block;
-    margin-top: 20px;
-    text-decoration: none;
-    background-color: #3498db;
-    color: #fff;
-    padding: 10px 20px;
+.gamecontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; /* Set your background color */
+}
+
+.play-game-button {
+    background-color: #e74c3c; /* Red color */
+    color: #fff; /* White text */
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.game-button:hover {
-    background-color: #2980b9;
+.play-game-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
 }
 
-.button-text {
-    font-weight: bold;
-}
+

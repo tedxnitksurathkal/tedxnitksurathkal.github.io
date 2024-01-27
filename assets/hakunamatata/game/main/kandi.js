@@ -804,40 +804,74 @@
   /**
    * Keep track of the spacebar events
    */
-  var KEY_CODES = {
+   var KEY_CODES = {
     32: "space",
   };
   var KEY_STATUS = {
     space: false,
   };
 
-  // Listen for keydown and keyup events
-  document.onkeydown = function (e) {
-    var keyCode = e.keyCode ? e.keyCode : e.charCode;
-    if (KEY_CODES[keyCode]) {
-      e.preventDefault();
-      KEY_STATUS[KEY_CODES[keyCode]] = true;
-    }
-  };
+  // Define key codes and status objects
+var KEY_CODES = {
+  // Add your key codes here if needed
+};
 
-  document.onkeyup = function (e) {
-    var keyCode = e.keyCode ? e.keyCode : e.charCode;
-    if (KEY_CODES[keyCode]) {
-      e.preventDefault();
-      KEY_STATUS[KEY_CODES[keyCode]] = false;
-    }
-  };
+var KEY_STATUS = {
+  // Add your key statuses here if needed
+};
 
-  // Listen for mousedown event anywhere on the screen
-  document.addEventListener("mousedown", function () {
-    // Simulate a spacebar press when the user clicks
-    KEY_STATUS["space"] = true;
+// Function to handle keydown and keyup events
+function handleKeyEvent(e, isKeyDown) {
+  var keyCode = e.keyCode ? e.keyCode : e.charCode;
 
-    // Simulate a keyup event after a short delay (you may adjust the delay as needed)
-    setTimeout(function () {
-      KEY_STATUS["space"] = false;
-    }, 80);
-  });
+  if (KEY_CODES[keyCode]) {
+    e.preventDefault();
+    KEY_STATUS[KEY_CODES[keyCode]] = isKeyDown;
+  }
+}
+
+// Listen for keydown and keyup events
+document.addEventListener("keydown", function (e) {
+  handleKeyEvent(e, true);
+});
+
+document.addEventListener("keyup", function (e) {
+  handleKeyEvent(e, false);
+});
+
+// Listen for mousedown and touchstart events
+document.addEventListener("mousedown", handleMouseDown);
+document.addEventListener("touchstart", handleTouchStart);
+
+// Function to handle mousedown event
+function handleMouseDown() {
+  simulateSpacebarPress();
+}
+
+// Function to handle touchstart event
+function handleTouchStart(e) {
+  // Prevent default behavior to avoid double-tap zooming
+  e.preventDefault();
+  
+  // Simulate a spacebar press when the user taps
+  simulateSpacebarPress();
+
+  // Simulate a keyup event after a short delay
+  setTimeout(function () {
+    KEY_STATUS["space"] = false;
+  }, 80);
+}
+
+// Function to simulate a spacebar press
+function simulateSpacebarPress() {
+  KEY_STATUS["space"] = true;
+
+  // Simulate a keyup event after a short delay
+  setTimeout(function () {
+    KEY_STATUS["space"] = false;
+  }, 100);
+}
+
   /**
    * Request Animation Polyfill
    */

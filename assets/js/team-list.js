@@ -14,9 +14,9 @@ var team = [
         "instagram": "tedxnitksurathkal"
     },
     {
-        "name": "Dr. Alwyn Roshan Pais",
+        "name": "Dr. S. Pavan Kumar",
         "position": "Associate Dean - Student Welfare",
-        "image": "ADSW1.jpg",
+        "image": "Pavan.jpg",
         "linkedin": "",
         "instagram": "tedxnitksurathkal"
     },
@@ -91,11 +91,11 @@ var team = [
         "instagram": ""
     },
     {
-        "name": "Pulkit Jain",
+        "name": "Prabhu R",
         "position": "Head Of Operations",
-        "image": "Pulkit.jpg",
-        "linkedin": "https://www.linkedin.com/in/pulkitjain0151/",
-        "instagram": ""
+        "image": "Prabhu.jpg",
+        "linkedin": "https://www.linkedin.com/in/prabhu-ram-pachar-639380217/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        "instagram": "https://www.instagram.com/prabhu._.r?igsh=MTZ0N2dzZWtzanVueg=="
     },
     {
         "name": "Hemanth Somanna",

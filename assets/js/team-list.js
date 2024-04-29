@@ -13,20 +13,20 @@ var team = [
         "linkedin": "",
         "instagram": "tedxnitksurathkal"
     },
-    {
-        "name": "Dr. S. Pavan Kumar",
-        "position": "Associate Dean - Student Welfare",
-        "image": "Pavan.jpg",
-        "linkedin": "",
-        "instagram": "tedxnitksurathkal"
-    },
-    {
-        "name": "Dr. C. P. Devatha",
-        "position": "Associate Dean - Student Welfare",
-        "image": "ADSW2.jpeg",
-        "linkedin": "",
-        "instagram": "tedxnitksurathkal"
-    },
+    // {
+    //     "name": "Dr. S. Pavan Kumar",
+    //     "position": "Associate Dean - Student Welfare",
+    //     "image": "Pavan.jpg",
+    //     "linkedin": "",
+    //     "instagram": "tedxnitksurathkal"
+    // },
+    // {
+    //     "name": "Dr. C. P. Devatha",
+    //     "position": "Associate Dean - Student Welfare",
+    //     "image": "ADSW2.jpeg",
+    //     "linkedin": "",
+    //     "instagram": "tedxnitksurathkal"
+    // },
     {
         "name": "Prof. Prabu K",
         "position": "Faculty Advisor",

@@ -65,7 +65,7 @@ var team = [
     {
         "name": "Hritik sarraf",
         "position": "Head of web",
-        "image": "Hritik.jpeg",
+        "image": "hritik.jpeg",
         "linkedin": "https://www.linkedin.com/in/hritik-sarraf-333099250/",
         "instagram": "hritiksharraf/"
     },

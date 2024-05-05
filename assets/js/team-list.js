@@ -44,7 +44,7 @@ var team = [
     {
         "name": "Violina Doley",
         "position": "Advisor",
-        "image": "Violina.jpg",
+        "image": "violina.jpeg",
         "linkedin": "https://www.linkedin.com/in/violinadoley/",
         "instagram": "violina_doley/"
     },

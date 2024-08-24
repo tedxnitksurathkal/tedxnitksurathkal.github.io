@@ -119,8 +119,9 @@
                             </h4>
                             <div class="nav nav-pills flex-column" role="tablist">
                                 <ul>
-                                    <li><a class="nav-link active" data-toggle="pill" href="#2022lost" role="tab">Lost
-                                            and Found | 2022</a></li>
+                                    <li><a class="nav-link active" data-toggle="pill" href="#2022lost" role="tab">Hakuna Matata | 2024</a></li>
+                                            <!-- <li><a class="nav-link active" data-toggle="pill" href="#2022lost" role="tab">Lost
+                                                and Found | 2022</a></li> -->
                                     <li><a class="nav-link" data-toggle="pill" href="#2021attention"
                                             role="tab">Attention Trap | 2021</a></li>
                                     <li><a class="nav-link" data-toggle="pill" href="#2021data" role="tab">Is Data the
@@ -152,7 +153,7 @@
 
                 <div class="col-12 col-md-8">
                     <div class="tab-content">
-                        <div id="2022lost" class="tab-pane fade show active" role="tabpanel">
+                        <!-- <div id="2022lost" class="tab-pane fade show active" role="tabpanel">
                             <div class="section_title">
                                 <h3 class="title">
                                     <div>Lost and Found | 2022</div>
@@ -204,7 +205,50 @@
                                         class="btn btn-primary btn-rounded" target="_blank">Theme
                                         Reveal</a>
                                 </h3>
+                            </div> -->
+                            <div id="2022lost" class="tab-pane fade show active" role="tabpanel">
+                                <div class="section_title">
+                                    <h3 class="title">
+                                        <div>Hakuna Matata | 2024</div>
+                                        <a href="assets/hakunamatata/game/main/index.html"
+                                            class="btn btn-primary btn-rounded" target="_blank">Theme
+                                            Reveal</a>
+                                    </h3>
+                                </div>
+    
+                                <div class="row justify-content-center">
+                                    <div class="col-12 col-md-12">
+                                        <p>In life's dance, let joy compose the rhythm, impulsiveness conduct the beat, and carefree moments choreograph a graceful masterpiece. Embrace the happiness of the unrehearsed, crafting a symphony of spontaneity on the canvas of existence.
+                                        </p>
+                                        <p>Embark on a captivating odyssey into the enchanting realm of "Hakuna Matata," where each syllable orchestrates a symphony of carefree living. Journey through linguistic origins and unravel the profound philosophical underpinnings, discovering how this timeless mantra has evolved into a universal symbol of positivity. Delight in the psychological dimensions of embracing a worry-free mindset, skillfully navigating life's ebbs and flows. This celebration of the symphony of existence invites you to weave "Hakuna Matata" into daily life, transforming each moment into a harmonious note. Immerse in the vibrant spirit, where joy and wisdom converge, illuminating a path adorned with carefree serenity.
+                                        </p>
+                                        <p>TEDxNITKSurathkal brings you the latest edition of our Ted event, themed
+                                            <b>Hakuna Matata</b>. Join us as our speakers widen our appreciation of our culture
+                                            and
+                                            discuss how our past continues to thrive in the world today.
+                                        </p>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="section_title">
+                                    <h6 class="subtitle">
+                                        Speakers
+                                    </h6>
+                                </div>
+                                <section class="pb100">
+                                    <div class="row justify-content-center no-gutters" id="speakers">  </div>
+                                    
+                                </section>
                             </div>
+                            <div id="2021attention" class="tab-pane fade show" role="tabpanel">
+                                <div class="section_title">
+                                    <h3 class="title">
+                                        <div>Attention Trap | 2021</div>
+                                        <a href="/past-editions-archive/2021-attention/theme.html"
+                                            class="btn btn-primary btn-rounded" target="_blank">Theme
+                                            Reveal</a>
+                                    </h3>
+                                </div>
 
                             <div class="row justify-content-center">
                                 <div class="col-12 col-md-12">
@@ -241,6 +285,7 @@
                             </div>
                             <section class="pb100">
                                 <div class="row justify-content-center no-gutters" id="s2021attention">
+                                    <img src="" alt="">
                                 </div>
                             </section>
                         </div>
@@ -784,6 +829,10 @@
     <script src="assets/js/main.js"></script>
 
     <script>
+        for (var x = 0; x < speakers2020aatmanirbhar.length; x++) {
+            $("<div class=\"col-md-6 col-sm-10\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img class=\"lazy\" data-src=\"" + speakers2020aatmanirbhar[x]["image"] + "\"><div class=\"info_box\"><h5 class=\"name\">" + speakers2020aatmanirbhar[x]["name"] + "</h5><p class=\"position\">" + speakers2020aatmanirbhar[x]["designation"] + "</p></div></div><div class=\"speaker_social\"><p></p></div></div></div>").appendTo("#s2020aatmanirbhar")
+
+        }
         for (var x = 0; x < speakers2021.length; x++) {
             $("<div class=\"col-md-6 col-sm-10\"><div class=\"speaker_box\"><div class=\"speaker_img\"><img class=\"lazy\" data-src=\"" + speakers2021[x]["image"] + "\"><div class=\"info_box\"><h5 class=\"name\">" + speakers2021[x]["name"] + "</h5><p class=\"position\">" + speakers2021[x]["designation"] + "</p></div></div><div class=\"speaker_social\"><p></p></div></div></div>").appendTo("#s2021")
 
@@ -834,6 +883,7 @@
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
+    <script src="assets/js/speakers.js"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -848,6 +898,60 @@
             }, "slow");
             return false;
         }
+
+        let n_speakers = speakers.length;
+
+  for(let i = 0; i < n_speakers; i++){
+    let spk = speakers[i];
+
+    let currentTime = new Date();
+    let show_time = new Date(spk.show_after);
+
+    if (currentTime.getTime() < show_time.getTime())
+        continue;
+
+    let modal_id = `spk-${i}`;
+
+    let html=`
+    <div class="col-md-4 col-sm-8">
+        <div class="speaker_box">
+            <div class="speaker_img" data-toggle="modal" data-target="#${modal_id}">
+                <img class="lazy" data-src="./assets/img/speakers/${spk.img_link}" alt=${spk.name}>
+                <!--
+                <div class="info_box">
+                    <h5 class="name">${spk.name}</h5>
+                    <p class="position">${spk.title}</p>
+                </div>
+                --->
+            </div>
+
+            <div class="speaker_social">
+                <ul></ul>
+            </div>
+        </div>
+    </div>`;
+
+    let description = "<p>" + spk.description.join("</p><p>") + "</p>"
+
+    let modalHtml=`
+    <div class="modal" id=${modal_id} style="top: 15%;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center" style="background-color: #000;">
+                    <h3 class="modal-title text-center" style="color:#ff0000; width: 100%;">${spk.name}</h3>
+                    <button type="button" class="close" data-dismiss="modal" style="color: #fff;">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h5 style="width:100%; font-weight: 700;" class="text-center">${spk.title}</h5>
+                    ${description}
+                </div>
+            </div>
+        </div>
+    </div>`;
+
+    $('#speakers').append(html);
+    $('#speaker-modals').append(modalHtml);
+  }
     </script>
 
 </body>

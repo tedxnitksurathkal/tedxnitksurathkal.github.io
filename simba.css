@@ -3,7 +3,7 @@
     justify-content: flex-end;
     align-items: center;
     min-height: 100vh;
-    background: #1f2028;
+    /* background: #1f2028; */
     flex-direction: column;
 }
 .simba{

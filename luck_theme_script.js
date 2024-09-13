@@ -10,6 +10,9 @@ playerImage.src = "luck_theme_assets/luck_cat_large.png";
 const rayImage = new Image();
 rayImage.src = "luck_theme_assets/Rays.png";
 
+const coinImage = new Image();
+coinImage.src = "luck_theme_assets/coin.png"; // Add the coin image
+
 let score = 0;
 
 const spriteWidth = 756;
@@ -21,10 +24,57 @@ const staggerFrames = 10;
 
 let angle = 0; // Initialize rotation angle
 
+let clickCount = 0; // Track the number of clicks
+let showCoins = false; // Control when to show the coin shower
+let coins = []; // Array to store the falling coins
+
+// Coin object constructor
+function Coin(x, y) {
+  this.x = x;
+  this.y = y;
+  this.speed = Math.random() * 3 + 2; // Random fall speed
+}
+
 canvas.onclick = () => {
   score++;
+  clickCount++; // Increment click count
   console.log("Your score is " + score);
+
+  // Trigger coin shower after 15 clicks
+  if (clickCount >= 11) {
+    showCoins = true;
+    clickCount = 0; // Reset click count after showing the coins
+
+    // Create a bunch of coins with random starting positions
+    for (let i = 0; i < 20; i++) {
+      coins.push(
+        new Coin(Math.random() * CANVAS_WIDTH, Math.random() * -CANVAS_HEIGHT)
+      );
+    }
+  }
 };
+
+function animateCoins() {
+  if (showCoins) {
+    // Loop through all coins and update their position
+    for (let i = 0; i < coins.length; i++) {
+      let coin = coins[i];
+      ctx.drawImage(coinImage, coin.x, coin.y, 50, 50); // Draw each coin
+      coin.y += coin.speed; // Move coin down
+
+      // Remove coins that fall off the canvas
+      if (coin.y > CANVAS_HEIGHT) {
+        coins.splice(i, 1);
+        i--;
+      }
+    }
+
+    // If all coins are gone, stop showing coins
+    if (coins.length === 0) {
+      showCoins = false;
+    }
+  }
+}
 
 function animate() {
   ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
@@ -66,6 +116,9 @@ function animate() {
     currFrame = 0;
   }
   currFrame++;
+
+  // Animate coins if needed
+  animateCoins();
 
   // Increment the rotation angle for anticlockwise rotation
   angle -= 1;

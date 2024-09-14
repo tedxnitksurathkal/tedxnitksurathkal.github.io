@@ -127,3 +127,18 @@ function animate() {
 }
 
 animate();
+
+window.addEventListener("scroll", function () {
+  var petMeText = document.querySelector(".pet-me-text");
+  var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+  // Get the height of the div to know when it's out of view
+  var divPosition = petMeText.offsetTop + petMeText.offsetHeight;
+
+  // Hide div when scrolled past
+  if (scrollPosition > divPosition) {
+    petMeText.style.opacity = "0";
+  } else {
+    petMeText.style.opacity = "1";
+  }
+});

@@ -16,6 +16,7 @@
   font-size: 14px; /* Adjust the size as per your preference */
   padding: 10px; /* Optional padding for better spacing */
   font-style: oblique;
+  transition: opacity 0.3s ease;
 }
 
 #canvas1 {

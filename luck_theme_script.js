@@ -42,6 +42,8 @@ canvas.onclick = () => {
 
   // Trigger coin shower after 15 clicks
   if (clickCount >= 11) {
+    //increment fortune by 10
+    incrementFortune(10);
     showCoins = true;
     clickCount = 0; // Reset click count after showing the coins
 
@@ -56,6 +58,7 @@ canvas.onclick = () => {
 
 function animateCoins() {
   if (showCoins) {
+
     // Loop through all coins and update their position
     for (let i = 0; i < coins.length; i++) {
       let coin = coins[i];
@@ -72,6 +75,7 @@ function animateCoins() {
     // If all coins are gone, stop showing coins
     if (coins.length === 0) {
       showCoins = false;
+
     }
   }
 }
@@ -144,10 +148,10 @@ window.addEventListener("scroll", function () {
 });
 
 //fortune counter
-function incrementFortune() {
+function incrementFortune(x=100) {
   console.log('called');
   let scoreText = document.getElementById('luck-bar').textContent;
   let currentScore = parseInt(scoreText.replace('Fortune Count: ', ''));
-  currentScore += 100;
+  currentScore += x;
   document.getElementById('luck-bar').textContent = 'Fortune Count: ' + currentScore;
 }

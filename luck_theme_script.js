@@ -43,7 +43,7 @@ canvas.onclick = () => {
   // Trigger coin shower after 15 clicks
   if (clickCount >= 11) {
     //increment fortune by 10
-    incrementFortune(10);
+    incrementFortune(11);
     showCoins = true;
     clickCount = 0; // Reset click count after showing the coins
 
@@ -148,7 +148,7 @@ window.addEventListener("scroll", function () {
 });
 
 //fortune counter
-function incrementFortune(x=100) {
+function incrementFortune(x=111) {
   console.log('called');
   let scoreText = document.getElementById('luck-bar').textContent;
   let currentScore = parseInt(scoreText.replace('Fortune Count: ', ''));

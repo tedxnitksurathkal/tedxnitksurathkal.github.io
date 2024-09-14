@@ -34,9 +34,37 @@
 }
 
 .tiny_clover {
-  /* top: 0px;  */
+
   left: 6%;
-  width: 30px; /* Set width and height as needed */
+  width: 30px;
   height: 30px;
-  z-index: 2; /* Ensure the image is on top of the box */
+  z-index: 2; 
+}
+
+.tiny_clover:hover {
+  cursor: pointer;
+}
+
+.containerr {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.luck-bar {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  position: fixed;
+  bottom: 0; 
+  margin-bottom: 10px;
+  background-color: #f50136; 
+  border-radius: 5%;
+  color: white; 
+  text-align: center; 
+  padding-top: 10px; 
+  padding-left: 10px;
+  padding-right: 10px;
+  z-index: 1000; 
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.5); 
 }

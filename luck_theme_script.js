@@ -38,7 +38,7 @@ function Coin(x, y) {
 canvas.onclick = () => {
   score++;
   clickCount++; // Increment click count
-  console.log("Your score is " + score);
+  // console.log("Your score is " + score);
 
   // Trigger coin shower after 15 clicks
   if (clickCount >= 11) {
@@ -142,3 +142,12 @@ window.addEventListener("scroll", function () {
     petMeText.style.opacity = "1";
   }
 });
+
+//fortune counter
+function incrementFortune() {
+  console.log('called');
+  let scoreText = document.getElementById('luck-bar').textContent;
+  let currentScore = parseInt(scoreText.replace('Fortune Count: ', ''));
+  currentScore += 100;
+  document.getElementById('luck-bar').textContent = 'Fortune Count: ' + currentScore;
+}

@@ -1,0 +1,321 @@
+/* Footer styles for mobile devices */
+@media (max-width: 767px) {
+  .footer_box {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer_box_body {
+    padding: 10px;
+  }
+
+  .footer_social,
+  .instagram_list {
+    justify-content: center;
+  }
+
+  .footer_social li,
+  .instagram_list li {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  .instagram_list li img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .copyright_footer {
+    text-align: center;
+  }
+
+  .copyright_footer p {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .backtotop i {
+    display: none;
+  }
+}
+
+/* Footer styles for tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer_box {
+    margin-bottom: 30px;
+  }
+
+  .footer_social li,
+  .instagram_list li {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .instagram_list li img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .copyright_footer p {
+    font-size: 16px;
+  }
+
+  .copyright_footer p {
+    text-align: center;
+  }
+}
+
+/* Footer styles for desktop */
+@media (min-width: 1024px) {
+  .footer_box {
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  .footer_social li,
+  .instagram_list li {
+    display: inline-block;
+    margin: 15px;
+  }
+
+  .instagram_list li img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .copyright_footer {
+    padding: 20px 0;
+  }
+
+  .copyright_footer p {
+    font-size: 16px;
+  }
+
+  .copyright_footer p {
+    text-align: left;
+  }
+
+  .backtotop i {
+    display: inline;
+  }
+}
+
+/* For mobile devices (portrait orientation) */
+@media (max-width: 767px) {
+  header.navbar {
+    padding: 10px 15px;
+    background-color: black;
+  }
+
+  .navbar-brand img {
+    width: 120px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .herobody {
+    padding: 20px;
+  }
+
+  .animation {
+    font-size: 2.5rem;
+    line-height: 30px;
+  }
+
+  .pet-me-text {
+    font-size: 16px;
+  }
+
+  .icon_box_two {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .icon_box_two i {
+    font-size: 30px;
+  }
+
+  .content {
+    font-size: 14px;
+  }
+
+  .luck-bar {
+    font-size: 14px;
+  }
+
+  .tiny_clover {
+    width: 20px;
+  }
+
+  .section_title h3.title {
+    font-size: 24px;
+  }
+}
+
+/* For tablets (landscape orientation) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  header.navbar {
+    padding: 15px 20px;
+    background-color: black;
+  }
+
+  .navbar-brand img {
+    width: 150px;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .herobody {
+    padding: 30px;
+  }
+
+  .animation {
+    font-size: 4rem;
+    line-height: 40px;
+  }
+
+  .pet-me-text {
+    font-size: 18px;
+  }
+
+  .icon_box_two {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .icon_box_two i {
+    font-size: 40px;
+  }
+
+  .content {
+    font-size: 16px;
+  }
+
+  .luck-bar {
+    font-size: 16px;
+  }
+
+  .tiny_clover {
+    width: 25px;
+  }
+
+  .section_title h3.title {
+    font-size: 30px;
+  }
+}
+
+/* For desktops */
+@media (min-width: 1024px) {
+  header.navbar {
+    padding: 20px 30px;
+    background-color: black;
+  }
+
+  .navbar-brand img {
+    width: 180px;
+  }
+
+  .nav-link {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .herobody {
+    padding: 40px;
+  }
+
+  .animation {
+    font-size: 5rem;
+    line-height: 50px;
+  }
+
+  .pet-me-text {
+    font-size: 20px;
+  }
+
+  .icon_box_two {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .icon_box_two i {
+    font-size: 50px;
+  }
+
+  .content {
+    font-size: 18px;
+  }
+
+  .luck-bar {
+    font-size: 18px;
+  }
+
+  .tiny_clover {
+    width: 30px;
+  }
+
+  .section_title h3.title {
+    font-size: 36px;
+  }
+}
+
+/* For 375px width (iPhone X, iPhone 11 Pro, etc.) */
+@media (max-width: 375px) {
+  header.navbar {
+    padding: 8px 10px;
+    background-color: black;
+  }
+
+  .navbar-brand img {
+    width: 110px;
+  }
+
+  .nav-link {
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  .herobody {
+    padding: 15px;
+  }
+
+  .animation {
+    font-size: 2rem;
+    line-height: 28px;
+  }
+
+  .pet-me-text {
+    font-size: 14px;
+  }
+
+  .icon_box_two {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .icon_box_two i {
+    font-size: 28px;
+  }
+
+  .content {
+    font-size: 12px;
+  }
+
+  .luck-bar {
+    font-size: 12px;
+  }
+
+  .tiny_clover {
+    width: 18px;
+  }
+
+  .section_title h3.title {
+    font-size: 22px;
+  }
+}

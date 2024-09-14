@@ -11,12 +11,13 @@
 .pet-me-text {
   position: fixed;
   bottom: 0;
-  right: 0;
+  left: 50%; /* Position it in the center */
+  transform: translateX(-50%); /* Adjust to perfectly center */
   color: white;
-  font-size: 14px; /* Adjust the size as per your preference */
-  padding: 10px; /* Optional padding for better spacing */
+  font-size: 14px; /* Adjust as needed */
+  padding: 10px; /* Optional padding */
   font-style: oblique;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.01s ease;
 }
 
 #canvas1 {
@@ -34,11 +35,10 @@
 }
 
 .tiny_clover {
-
   left: 6%;
   width: 30px;
   height: 30px;
-  z-index: 2; 
+  z-index: 2;
 }
 
 .tiny_clover:hover {
@@ -56,15 +56,16 @@
   font-weight: 400;
   font-style: normal;
   position: fixed;
-  bottom: 0; 
+  bottom: 0;
+  right: 0;
   margin-bottom: 10px;
-  background-color: #f50136; 
+  background-color: #f50136;
   border-radius: 5%;
-  color: white; 
-  text-align: center; 
-  padding-top: 10px; 
+  color: white;
+  text-align: center;
+  padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
-  z-index: 1000; 
-  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.5); 
+  z-index: 1000;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.5);
 }

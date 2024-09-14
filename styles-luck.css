@@ -1,0 +1,202 @@
+/* Body styling */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: black;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Info section styling */
+.info {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    color: aqua;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Grid styling */
+#grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Button styling */
+button {
+    background-color: black;
+    border: none;
+    padding: 5px;
+    aspect-ratio: 1 / 1;  /* Ensure buttons remain square */
+    transition: background-color 1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button img {
+    max-width: 70%;  /* Reduced to provide padding around images */
+    max-height: 70%;
+    object-fit: contain;
+}
+
+button.clicked img {
+    transform: scale(1.5);
+    transition: transform 0.3s ease;
+}
+
+/* Centering the game-over container */
+#game-over {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, black, darkred); /* Gradient from black to dark red */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    max-width: 90vw;  /* Use viewport width to ensure it doesn’t overflow */
+    max-height: 90vh; /* Limit height to viewport height */
+    box-sizing: border-box; /* Include padding in width/height calculation */
+    overflow: hidden; /* Prevent any overflow */
+    position: absolute; /* Position relative to viewport */
+    top: 50%; /* Center vertically */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Adjust for true center */
+}
+
+/* Styling for the final score heading */
+#game-over h2 {
+    color: #ff6666; /* Light shade of red */
+    font-size: 2rem;
+    margin: 0;
+    text-align: center; /* Center text */
+}
+
+/* Styling for the final score paragraph */
+#game-over p {
+    color: #ff9999; /* Lighter shade of red */
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center; /* Center text */
+    animation: pulse 1s infinite; /* Optional animation */
+}
+
+/* Styling for the restart and theme buttons */
+#game-over .restart-btn {
+    display: inline-block;
+    background-color: #b30000; /* Dark red button background */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the restart and theme buttons */
+#game-over .restart-btn:hover {
+    background-color: #ff3333; /* Lighter red on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Active effect for the restart and theme buttons */
+#game-over .restart-btn:active {
+    background-color: #990000; /* Slightly darker red on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Restart button styling */
+.restart-btn {
+    background-color: yellow;
+    color: black;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.restart-btn:hover {
+    background-color: orange;
+}
+
+/* Pulsing animation for the final score */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+    .info {
+        font-size: 1.2rem;
+    }
+
+    #grid {
+        grid-gap: 8px;
+    }
+
+    button {
+        padding: 3px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .info {
+        font-size: 1rem;
+    }
+
+    #grid {
+        grid-gap: 6px;
+    }
+
+    button {
+        height: auto;
+        width: auto;
+    }
+
+    button img {
+        max-width: 60%;
+        max-height: 60%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .info {
+        font-size: 0.9rem;
+    }
+
+    #grid {
+        grid-gap: 4px;
+    }
+
+    button img {
+        max-width: 55%;
+        max-height: 55%;
+    }
+}

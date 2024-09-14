@@ -12,6 +12,17 @@
     
 
 }
+
+
+/*
+  LUCK THEME START
+*/
+
+/*
+
+  LUCK THEME END
+*/
+
 .simba .waves{
     position: relative;
     
@@ -128,18 +139,15 @@ body {
 }
 
 .containerr {
+  position: absolute;  /* Use absolute positioning */
+  top: 50%;            /* Vertically center */
+  left: 2%;            /* Move it to the left side */
+  transform: translateY(-50%); /* Vertically center the container */
   color: #e5e5e5;
   font-size: 4.0rem;
   text-transform: uppercase;
-  height: 100vh;
-  display: flex;
-  /* align-items: center; */
-  padding-top: 11%;
-  justify-content: center;
   z-index: 10000;
-
 }
-
 
 .animation {
   height:100px;
@@ -147,6 +155,8 @@ body {
   /* margin-left: 1rem; */
   padding-top: 0.8rem;
   margin-top: 60px;
+
+  
 }
 @media only screen and (min-width: 1200px) {
   .animation {

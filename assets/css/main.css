@@ -134,6 +134,9 @@ ul.nosyely_list {
   margin-bottom: 25px;
 }
 .section_title .title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   text-transform: uppercase;
   padding: 10px 0;
   font-size: 36px;
@@ -174,8 +177,10 @@ ul.nosyely_list {
   display: inline-block;
   padding: 25px;
   min-width: 120px;
-  background-color: #f44336;
-  color: #ffffff;
+  /* background-color: #f44336; */
+  background-color: #151515;
+  /* color: #ffffff; */
+  color: #fbc403;
   font-size: 48px;
   font-weight: 600;
   text-align: center;
@@ -1695,7 +1700,8 @@ header {
   min-height: 50px;
   padding: 0;
   margin: 0;
-  margin-top: 20px;
+  /* margin-top: 20px; */
+
   -webkit-transition: all ease-in-out 0.4s;
   transition: all ease-in-out 0.4s;
 }
@@ -2383,7 +2389,7 @@ Cover
 }
 
 .icon_box_one {
-  background-color: #f0f2f6;
+  /* background-color: #f0f2f6; */
   padding: 0;
   margin: 25px 0;
   position: relative;

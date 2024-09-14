@@ -1,6 +1,6 @@
 .herobody {
   /* background-color: #ca4444;  */
-  background-color: black;
+  background-color: #ff2c5a;
   height: 100vh; /* Ensures the background covers the entire viewport */
   margin: 0;
   padding: 0;
@@ -16,9 +16,10 @@
   transform: translateX(-50%); /* Adjust to perfectly center */
   color: white;
   font-size: 14px; /* Adjust as needed */
-  padding: 10px; /* Optional padding */
+  padding: 5px; /* Optional padding */
   font-style: oblique;
   transition: opacity 0.01s ease;
+  margin-bottom: 50px;
 }
 
 #canvas1 {
@@ -74,11 +75,13 @@
 .luck-play {
   font-family: "Luckiest Guy", cursive;
   font-weight: 400;
+  font-size: 25px;
   font-style: normal;
   position: fixed;
   bottom: 0;
   left: 0;
-  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-bottom: 15px;
   background-color: #f50136;
   border-radius: 5%;
   color: white;

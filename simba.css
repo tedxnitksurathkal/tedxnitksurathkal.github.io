@@ -122,9 +122,9 @@ body {
   text-transform: uppercase;
   height: 100vh;
   display: flex;
-  /* align-items: center; */
+  padding-left: 10%;
   padding-top: 11%;
-  justify-content: center;
+  font-style: oblique;
   z-index: 10000;
 }
 

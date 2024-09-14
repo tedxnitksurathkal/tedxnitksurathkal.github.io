@@ -7,6 +7,17 @@
   justify-content: center;
   align-items: center;
 }
+
+.pet-me-text {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: white;
+  font-size: 14px; /* Adjust the size as per your preference */
+  padding: 10px; /* Optional padding for better spacing */
+  font-style: oblique;
+}
+
 #canvas1 {
   /* border: 5px solid black; */
   position: absolute;

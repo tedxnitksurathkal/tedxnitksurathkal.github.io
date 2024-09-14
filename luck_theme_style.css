@@ -1,5 +1,6 @@
 .herobody {
-  background-color: #ca4444; /* A warm shade of red */
+  /* background-color: #ca4444;  */
+  background-color: black;
   height: 100vh; /* Ensures the background covers the entire viewport */
   margin: 0;
   padding: 0;
@@ -68,4 +69,38 @@
   padding-right: 10px;
   z-index: 1000;
   box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.luck-play {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 10px;
+  background-color: #f50136;
+  border-radius: 5%;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  z-index: 1000;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 600px) {
+  .luck-bar {
+    font-size: 2.5vw; /* Smaller font size on small screens */
+  }
+
+  .pet-me-text {
+    font-size: 4vw; /* Adjust font size */
+  }
+
+  #canvas1 {
+    width: 95vw; /* Further adjust canvas size */
+    height: 70vh;
+  }
 }

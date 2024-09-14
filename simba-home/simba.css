@@ -1,18 +1,11 @@
-.herobody{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    min-height: 100vh;
-    background: #1f2028;
-    flex-direction: column;
+.herobody {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 100vh;
+  background: #1f2028;
+  flex-direction: column;
 }
-.simba{
-    position: relative;
-    width: 100%;
-    
-
-}
-
 
 /*
   LUCK THEME START
@@ -23,188 +16,118 @@
   LUCK THEME END
 */
 
-.simba .waves{
-    position: relative;
-    
-    
-}
-.simba .waves .wave{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    background: url(wave.png);
-    background-size: 1000px 60px;
-
-}
-@media only screen and (min-width: 1200px) {
-  .simba .waves .wave {
-    height: 100px;
-    background-size: 1000px 100px;
- /* Adjust the width for large screens */
-  }
-}
-.simba .waves .wave#wave1{
-    opacity: 1;
-    bottom: 0;
-    z-index: 1000;
-    animation: animate 4s linear infinite;
-}
-.simba .waves .wave#wave2{
-    opacity: 0.5;
-    bottom: 10px;
-    z-index: 999;
-    animation: animate2 4s linear infinite;
-}
-.simba .waves .wave#wave3{
-    opacity: 0.2;
-    bottom: 15px;
-    z-index: 998;
-    animation: animate 2s linear infinite;
-}
-.simba .waves .wave#wave4{
-    opacity: 0.2;
-    bottom: 20px;
-    z-index: 999;
-    animation: animate2 2s linear infinite;
-}
-@keyframes animate {
-    0%{
-        background-position-x: 1000px;
-    }
-    100%{
-        background-position-x: 0px;
-    }
-    
-}
-@keyframes animate2 {
-    0%{
-        background-position-x: 0px;
-    }
-    100%{
-        background-position-x: 1000px;
-    }
-    
-}
-
-.stars{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    mix-blend-mode: screen;
-}
-.island{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%) ;
-    width: 90vw;
-    height: 70vh;
-    bottom: 0;
-    pointer-events: none;
-    
-}
-@media only screen and (min-width: 1200px) {
-  .island {
-      width: 50vw; /* Adjust the width for large screens */
-  }
-}
-.simbapic{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%) translateY(-10%);
-    /* transform: translateY(-10%); */
-    /* width: 60vw; */
-    height: 50vh;
-    bottom: 0;
-    pointer-events: none;
-    @media only screen and (max-width: 600px) {
-      height: 35vh; /* Adjust the height for small devices */
-  }
-}
-
-
-
-
 /* for the text */
-
-@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+/* 
+@import url("https://fonts.googleapis.com/css?family=Roboto:700");
 
 body {
-  font-family:'Roboto';
+  font-family: "Roboto";
   /* background-color: #131417;   */
-}
-
 .containerr {
-  position: absolute;  /* Use absolute positioning */
-  top: 50%;            /* Vertically center */
-  left: 2%;            /* Move it to the left side */
-  transform: translateY(-50%); /* Vertically center the container */
+  position: absolute;
+  top: 50%; /* Vertically center */
+  left: 0; /* Align it to the leftmost edge of the screen */
+  margin-left: 0; /* Ensure no margin is affecting the position */
+  transform: translateY(-50%); /* Keep this to center vertically */
   color: #e5e5e5;
-  font-size: 4.0rem;
+  font-size: 4rem;
   text-transform: uppercase;
   z-index: 10000;
 }
 
 .animation {
-  height:100px;
-  overflow:hidden;
+  height: 100px;
+  overflow: hidden;
   /* margin-left: 1rem; */
   padding-top: 0.8rem;
   margin-top: 60px;
-
-  
 }
 @media only screen and (min-width: 1200px) {
   .animation {
     margin-top: 0px; /* Adjust the width for large screens */
   }
-  .containerr{
+  .containerr {
     font-size: 5.21rem;
   }
 }
-.first div{
-    margin-top: 20px;
+.first div {
+  margin-top: 20px;
 }
 
 .animation > div > div {
   padding: 0.25rem 0.75rem;
-  height:4.81rem;
+  height: 4.81rem;
   margin-bottom: 1.81rem;
-  display:inline-block;
+  display: inline-block;
 }
 
 .animation div:first-child {
   animation: text-animation 8s infinite;
 }
+.handjet-ideas div {
+  font-family: "Handjet", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700; /* Use a specific weight */
+  font-style: normal;
+  font-variation-settings: "ELGR" 1, "ELSH" 2;
+}
 
+.handjet-worth div {
+  font-family: "Handjet", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600; /* Use a specific weight */
+  font-style: normal;
+  font-variation-settings: "ELGR" 1, "ELSH" 2;
+}
+
+.handjet-spreading div {
+  font-family: "Handjet", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500; /* Use a specific weight */
+  font-style: normal;
+  font-variation-settings: "ELGR" 1, "ELSH" 2;
+}
+
+/* Color styling for the text */
 .first div {
-  /* background-color:#20a7d8; */
-  /* margin-top: 50px; */
-  /* padding-top: 20px; */
-  color: aqua;
+  color: rgb(255, 255, 255);
 }
 .second div {
-  /* background-color:#CD921E; */
-  color: aqua;
+  color: rgb(255, 255, 255);
 }
 .third div {
-  /* background-color:#c10528; */
-  color: aqua;
+  color: rgb(255, 255, 255);
 }
 
 @keyframes text-animation {
-  0% {margin-top: 0;}
-  10% {margin-top: 0;}
-  20% {margin-top: -5.62rem;}
-  30% {margin-top: -5.62rem;}
-  40% {margin-top: -11.24rem;}
-  60% {margin-top: -11.24rem;}
-  70% {margin-top: -5.62rem;}
-  80% {margin-top: -5.62rem;}
-  90% {margin-top: 0;}
-  100% {margin-top: 0;}
+  0% {
+    margin-top: 0;
+  }
+  10% {
+    margin-top: 0;
+  }
+  20% {
+    margin-top: -5.62rem;
+  }
+  30% {
+    margin-top: -5.62rem;
+  }
+  40% {
+    margin-top: -11.24rem;
+  }
+  60% {
+    margin-top: -11.24rem;
+  }
+  70% {
+    margin-top: -5.62rem;
+  }
+  80% {
+    margin-top: -5.62rem;
+  }
+  90% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 0;
+  }
 }

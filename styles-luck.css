@@ -21,15 +21,20 @@ body {
     font-size: 1.5rem;
     text-align: center;
 }
+.firstGrid{
+    background-color: rgb(90, 0, 0);
+}
 
 /* Grid styling */
 #grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: 10px;
+    grid-gap: 5px;
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
+    padding: 3px;
+    padding-left: 3px;
 }
 
 /* Button styling */

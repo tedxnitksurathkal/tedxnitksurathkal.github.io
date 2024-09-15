@@ -52,7 +52,7 @@ function playSoundEffect(type) {
                 const points = calculateScore(timeTaken, blockCount);  // Calculate score based on time and blocks chosen
                 score += points;
                 scoreElement.textContent = Math.round(score);  // Round off the score to the nearest integer
-                img.src = 'diamond.png';  // Change image to 'diamond.jpeg'
+                img.src = 'diamonds.png';  // Change image to 'diamond.jpeg'
             } else if (block === 'bomb') {
                 img.src = 'bomb.png';  // Change image to 'bomb.jpeg'
                 playSoundEffect('bomb')

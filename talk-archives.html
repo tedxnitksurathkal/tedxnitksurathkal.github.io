@@ -51,7 +51,7 @@
             <div class="collapse navbar-collapse flex-sm-row-reverse" id="headernav">
                 <ul class=" nav navbar-nav menu">
                     <li class="nav-item">
-                        <a class="nav-link" href="simba-home/index.html"><strong>Home</strong></a>
+                        <a class="nav-link" href="/"><strong>Home</strong></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/about"><strong>About</strong></a>
@@ -60,7 +60,7 @@
                         <a class="nav-link" href="/salon"><strong>Salon</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./intro-luck.html"><strong>Theme</strong></a>
+                        <a class="nav-link" href="/theme2023"><strong>Theme</strong></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/past-editions"><strong>Past Editions</strong></a>
@@ -120,6 +120,10 @@
             <div class="scroller scroller-right"><i class="ion-chevron-right"></i></div>
             <div class="wrapper">
                 <ul class="nav nav-tabs list" id="myTab">
+                    <li class="ative"></li>
+                        <button class="tablinks" onclick="openSeries(event,'2024')" id="defaultOpen">Hakuna Matata |
+                            2024</button>
+                    </li>
                     <li class="ative">
                         <button class="tablinks" onclick="openSeries(event,'2023')" id="defaultOpen">Mosaic |
                             2023</button>
@@ -166,7 +170,46 @@
                     src="https://www.youtube.com/embed/S1MbfjFSmlE?enablejsapi=1&rel=0&showinfo=0&autohide=1"
                     frameborder="0" width="560" height="315"></iframe>
             </div>
-
+            
+            <!-- 2024 Hakuna Matata -->
+            <div id="2024" class="tabcontent">
+                <!-- PLAYLIST -->
+                <div class="vid-list-container">
+                    <div class="vid-list-2024">
+                        <div class="vid-item vid-item-active"
+                            onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/yFVHLCYGcS8?rel=0&showinfo=0&autohide=1'">
+                            <div class="thumb"><img src="https://img.youtube.com/vi/yFVHLCYGcS8/1.jpg"></div>
+                            <div class="desc">Hakuna Matata | Meera Valenkar</div>
+                        </div>
+                        <div class="vid-item"
+                            onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/1zThuuN8cSM?rel=0&showinfo=0&autohide=1'">
+                            <div class="thumb"><img src="https://img.youtube.com/vi/1zThuuN8cSM/1.jpg"></div>
+                            <div class="desc">Hakuna Matata | Gita Balakrishnan</div>
+                        </div>
+                        <div class="vid-item"
+                            onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/vf0HDwpztlU?rel=0&showinfo=0&autohide=1'">
+                            <div class="thumb"><img src="https://img.youtube.com/vi/vf0HDwpztlU/1.jpg"></div>
+                            <div class="desc">Hakuna Matata | Dr. P. Gowri Shankar</div>
+                        </div>
+                        <div class="vid-item"
+                            onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/SKzD6L6DlEU?rel=0&showinfo=0&autohide=1'">
+                            <div class="thumb"><img src="https://img.youtube.com/vi/SKzD6L6DlEU/1.jpg"></div>
+                            <div class="desc">Hakuna Matata | Gaurang Sanghvi</div>
+                        </div>
+                        <div class="vid-item"
+                            onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/ZPfUntQ5cZE?rel=0&showinfo=0&autohide=1'">
+                            <div class="thumb"><img src="https://img.youtube.com/vi/ZPfUntQ5cZE/1.jpg"></div>
+                            <div class="desc">Hakuna Matata | Flexcia D'souza</div>
+                        </div>
+                        <div class="vid-item"
+                            onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/qplIHdl3zM4?rel=0&showinfo=0&autohide=1'">
+                            <div class="thumb"><img src="https://img.youtube.com/vi/qplIHdl3zM4/1.jpg"></div>
+                            <div class="desc">Hakuna Matata | Dhyvik G J</div>
+                        </div>
+                    </div>
+                </div>
+            </div>                           
+ 
             <!-- 2023 Mosaic -->
             <div id="2023" class="tabcontent">
                 <!-- PLAYLIST -->
@@ -200,7 +243,7 @@
                         <div class="vid-item"
                             onClick="document.getElementById('vid_frame').src='https://www.youtube.com/embed/tXOd3uhvLCE?rel=0&showinfo=0&autohide=1'">
                             <div class="thumb"><img src="https://img.youtube.com/vi/tXOd3uhvLCE/1.jpg"></div>
-                            <div class="desc">Mosaic |Asha Thadani</div>
+                            <div class="desc">Mosaic | Asha Thadani</div>
                         </div>
                     </div>
                 </div>

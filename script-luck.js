@@ -1,3 +1,4 @@
+
 let blocks = [];
 let score = 0;
 let blockCount = 0;  // Track the number of blocks selected
@@ -156,5 +157,3 @@ function resetGame() {
     // Restart the game
     document.dispatchEvent(new Event('DOMContentLoaded'));
 }
-
-

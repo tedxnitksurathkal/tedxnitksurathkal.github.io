@@ -6,6 +6,29 @@
     <title>Mine Game - Introduction</title>
     <link rel="stylesheet" href="intro-styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        .nav-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px 30px; 
+            background-color: black; 
+            color: white; 
+            border: none; 
+            border-radius: 8px; 
+            cursor: pointer;
+            font-size: 18px; 
+            font-weight: bold; 
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s, color 0.3s; 
+        }
+
+        .nav-button:hover {
+            background-color: red; 
+            color: white; 
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -37,6 +60,8 @@
         <footer>
             <a href="./index-luck.html" class="play-btn">Play the Game</a>
         </footer>
+       
     </div>
+    <a href="/" class="nav-button">Home</a>
 </body>
 </html>

@@ -6,6 +6,37 @@
 
     <title>Mine Game</title>
     <link rel="stylesheet" href="styles-luck.css">
+    <style>
+        .nav-button {
+            position: fixed;
+            bottom: 5%; 
+            right: 5%; 
+            padding: 1em 2em;
+            background-color: black; 
+            color: white;
+            border: none;
+            border-radius: 8px; 
+            cursor: pointer;
+            font-size: 1.2em;
+            font-weight: bold; 
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s, color 0.3s; 
+        }
+
+        .nav-button:hover {
+            background-color: red; 
+            color: white; 
+
+        @media (max-width: 600px) {
+            .nav-button {
+                font-size: 1em; 
+                padding: 0.8em 1.5em; 
+                bottom: 3%; 
+                right: 3%; 
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="info">
@@ -27,7 +58,7 @@
         <a class="info restart-btn" href="./index-luck.html">Restart Game</a>
         <a class="info restart-btn" href="./theme-luck.html">Theme</a>
     </div>
-    
+    <a href="/" class="nav-button">Home</a>
 
     <script src="script-luck.js"></script>
 </body>

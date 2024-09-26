@@ -1,0 +1,100 @@
+/* intro-styles.css */
+
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Press+Start+2P&display=swap');
+
+/* Overall background gradient */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #000000, #FF0000);
+    color: #FFFFFF;
+}
+
+/* Container styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+}
+
+/* Header styling */
+header h1 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Section headings */
+h2 {
+    color: #FF0000;
+    border-bottom: 2px solid #FF0000;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    animation: slideIn 1s ease-out;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Paragraph and list styling */
+p, ul {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Prize section styling */
+.prize p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #C8F702;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Footer button styling */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.play-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #FFFFFF;
+    background: #690000;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+}
+
+.play-btn:hover {
+    background: #DD0000;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}

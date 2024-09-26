@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Mine Game</title>
+    <link rel="stylesheet" href="styles-luck.css">
+    <style>
+        .button-container {
+            display: flex;
+            justify-content: flex-end; 
+            width: 100%;
+            margin-top: 50px; 
+        }
+        .nav-button {
+            display: block;
+            margin: 50px auto; 
+            padding: 15px 30px; 
+            background-color: black;
+            color: white; 
+            border: none; 
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2em; 
+            font-weight: bold; 
+            text-align: center;
+            text-decoration: none;
+            width: fit-content; 
+            transition: background-color 0.3s, color 0.3s; 
+            margin-right: 20px;
+        }
+
+        .nav-button:hover {
+            background-color: red; 
+            color: white; 
+        }
+
+        @media (max-width: 600px) {
+            .nav-button {
+                padding: 12px 25px; 
+                font-size: 1em;
+                border-radius: 6px; 
+                margin-right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="info">
+        Let's put your Luck on play 
+    </div>
+    <div class="info">
+        <div>Score: <span id="score">0</span></div>
+        <div>Time: <span id="time">0</span> seconds</div>
+    </div>
+    <div class="firstGrid">
+        <div id="grid"></div>
+    </div>
+    
+    
+    <!-- Container for final score and restart button -->
+    <div id="game-over" class="info" style="display: none;">
+        <h2>Game Over!</h2>
+        <p>Your final score is <span id="final-score">0</span></p>
+        <a class="info restart-btn" href="./index-luck.html">Restart Game</a>
+        <a class="info restart-btn" href="./theme-luck.html">Theme</a>
+    </div>
+    <div class = "button-container">
+        <a href="/" class ="nav-button">Home</a>
+    </div>
+    <script src="script-luck.js"></script>
+</body>
+</html>

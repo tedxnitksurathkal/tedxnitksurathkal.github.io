@@ -71,7 +71,7 @@
                         <a class="nav-link " href="salon"><strong>Salon</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="/assets/hakunamatata/theme-page"><strong>Theme</strong></a>
+                        <a class="nav-link " href="./intro-luck.html"><strong>Theme</strong></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="/past-editions"><strong>Past Editions</strong></a>
@@ -144,14 +144,18 @@
         <!-- LUCK THEME STARTS HERE -->
         <canvas id="canvas1"></canvas>
         <!-- LUCK THEME ENDS HERE -->
+        <a href="./intro-luck.html" class="luck-play" id="luck-play-bar">Play game</a>
+        <section>
+            <div class="pet-me-text">
+                <!-- <div>Welcome to TEDxNITKSurathkal V11!</div> -->
+                <div>Pet me 7 times for some fortune!</div>
+            </div>
+        </section>
 
-        <div class="pet-me-text">
-            Welcome to TEDxNITKSurathkal V11!</br>
-            Pet me 11 times for some fortune!
-        </div>
 
 
         <div class="luck-bar" id="luck-bar">
+            <a href="./intro-luck.html"></a>
             Fortune Count: 0
         </div>
 
@@ -169,7 +173,7 @@
                         <div class="content">
                             <h5 class="box_title">DATE</h5>
                             <p>
-                                6:00 PM, 2nd February, 2024
+                                5:30 PM, 27th September, 2024
                             </p>
                         </div>
                     </div>
@@ -182,7 +186,7 @@
                                 location
                             </h5>
                             <p>
-                                SAC, NITK Surathkal
+                                LHC-C Seminar Hall, NITK Surathkal
                             </p>
                         </div>
                     </div>
@@ -195,7 +199,7 @@
                                 speakers
                             </h5>
                             <p>
-                                8
+                                3
                             </p>
                         </div>
                     </div>
@@ -342,10 +346,11 @@
                 <h3 class="title">
                     <span style="color: white; margin-right: 10px;">our</span>
                     <span style="color: #fbc403; margin-right: 10px; ">speakers</span>
-                    <img src="luck_theme_assets/clover3.png" class="tiny_clover" onclick="incrementFortune()" />
+                    <!-- <img src="luck_theme_assets/clover3.png" class="tiny_clover" onclick="incrementFortune()" /> -->
                 </h3>
             </div>
-            <div class="row justify-content-center no-gutters" id="speakers"> </div>
+            <div>Stay Tuned to know our speaker</div>
+            <!-- <div class="row justify-content-center no-gutters" id="speakers"> </div> -->
             <h5 class="title">
 
             </h5>
@@ -641,7 +646,7 @@
                 time: 3000
             });
 
-            $('.countdown').countdown(new Date("2024-02-02T17:00:00.000+05:30"), function (event) {
+            $('.countdown').countdown(new Date("2024-09-27T17:30:00.000+05:30"), function (event) {
                 $(this).html(
                     event.strftime("<div>%D <span>Days</span></div><div>%H <span>Hours</span></div><div>%M <span>Minutes</span></div><div>%S <span>Seconds</span></div>")
                 );

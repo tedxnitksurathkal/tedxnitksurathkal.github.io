@@ -41,7 +41,7 @@ canvas.onclick = () => {
   // console.log("Your score is " + score);
 
   // Trigger coin shower after 15 clicks
-  if (clickCount >= 11) {
+  if (clickCount >= 7) {
     //increment fortune by 10
     incrementFortune(11);
     showCoins = true;

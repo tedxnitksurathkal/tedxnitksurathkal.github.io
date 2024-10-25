@@ -28,10 +28,11 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/main.css" rel="stylesheet">
     <link rel="stylesheet" href="simba.css">
+    <link rel="stylesheet" href="style-age.css">
 
     
         <!-- LUCK THEME -->
-    <link rel="stylesheet" href="luck_theme_style.css">
+    <!-- <link rel="stylesheet" href="luck_theme_style.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
@@ -93,7 +94,42 @@
         </div>
     </header>
     <!--header end here-->
-    <!--cover section slider -->
+
+    <!-- AGE AS A LENS THEME STARTS HERE -->
+    <div class="wrapper">
+    <div class="content">
+            <section id="home" class="home-cover">
+                <div class="sparkle">
+                    <ul data-time="750">
+                        <li data-saturation="0" data-lightness="100">IDEAS</li>
+                    </ul>
+                    <ul data-time="750">
+                        <li data-saturation="0" data-lightness="100">WORTH</li>
+                    </ul>
+                    <ul data-time="750">
+                        <li data-saturation="0" data-lightness="100">SPREADING</li>
+                    </ul>
+        
+                    <ul data-time="1500">
+                        <li data-hue="197">1</li>
+                        <li data-hue="197">7</li>
+                        <li data-hue="0">x</li>
+                        <li data-hue="197">N</li>
+                        <li data-hue="197">O</li>
+                        <li data-hue="197">V</li>
+                    </ul>
+                </div>
+                <canvas></canvas>
+            </section>
+        </div>
+        <div class="image-container">
+            <img src="assets/img/camera.jpg" alt="image">
+
+        </div>
+    </div>
+    <!-- AGE AS A LENS THEME ENDS HERE -->
+
+    <!-- SPARKLE THEME -->
     <!-- <section id="home" class="home-cover">
 
         <div class="sparkle">
@@ -118,50 +154,6 @@
         </div>
         <canvas></canvas>
     </section> -->
-
-    <!-- my code starts here -->
-    <div class="herobody">
-        <section class="simba">
-            <div class="waves">
-                <div class="containerr">
-                    <section class="animation" style="line-height: 50px;">
-                        <div class="first">
-                            <div>Ideas</div>
-                        </div>
-                        <div class="second">
-                            <div>Worth</div>
-                        </div>
-                        <div class="third">
-                            <div>spreading</div>
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- LUCK THEME STARTS HERE -->
-        <canvas id="canvas1"></canvas>
-        <!-- LUCK THEME ENDS HERE -->
-        <a href="./intro-luck.html" class="luck-play" id="luck-play-bar" >Play game</a>
-        <section>
-            <div class="pet-me-text">
-                <!-- <div>Welcome to TEDxNITKSurathkal V11!</div> -->
-                <div>Pet me 7 times for some fortune!</div>
-            </div>
-        </section>
-        
-        
-        
-        <div class="luck-bar" id="luck-bar">
-            <a href="./intro-luck.html"></a>
-            Fortune Count: 0
-        </div>
-
-    </div>
-    <!-- <button class="play-game-button" onclick="window.location.href='assets/hakunamatata/game/main/index.html'">Play
-        Game</button> -->
-    <!-- ends here -->
 
     <section class="pt100 pb100">
         <div class="container">
@@ -264,7 +256,6 @@
                 <h3 class="title">
                     <span style="color: white; margin-right: 10px;">The</span> <span
                         style="color: #fbc403; margin-right: 10px;">Experience</span>
-                    <img src="luck_theme_assets/clover3.png" class="tiny_clover" onclick="incrementFortune()" />
                 </h3>
 
             </div>
@@ -345,7 +336,6 @@
                 <h3 class="title">
                     <span style="color: white; margin-right: 10px;">our</span>
                     <span style="color: #fbc403; margin-right: 10px; ">speakers</span>
-                    <!-- <img src="luck_theme_assets/clover3.png" class="tiny_clover" onclick="incrementFortune()" /> -->
                 </h3>
             </div>
             <div>Stay Tuned to know our speaker</div>
@@ -364,7 +354,6 @@
                 <h3 class="title" style="color: #ffffff;">
                     <span style="margin-right: 10px;">Past</span> <span
                         style="color: #fbc403; margin-right: 10px;">Speakers</span>
-                    <img src="luck_theme_assets/clover3.png" class="tiny_clover" onclick="incrementFortune()" />
                 </h3>
             </div>
             <div class="brand_carousel owl-carousel">
@@ -798,7 +787,10 @@
             return false;
         }
     </script>
-
+    <!-- animation scripts for age as a lens theme -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="style-age.js"></script>
     <script src="luck_theme_script.js"></script>
 
 </body>

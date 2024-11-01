@@ -20,6 +20,7 @@
     <title> TEDxNITKSurathkal</title>
     <!-- stylesheet for responsiveness -->
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="age-as-a-lesn.css">
     <!-- ========== Favicon Ico ========== -->
     <link rel="icon" href="assets/img/favicon.png">
     <!-- Bootstrap 4 CSS -->
@@ -120,46 +121,26 @@
     </section> -->
 
     <!-- my code starts here -->
-    <div class="herobody">
-        <section class="simba">
-            <div class="waves">
-                <div class="containerr">
-                    <section class="animation" style="font-size: 5rem; line-height: 50px;">
-                        <div class="first">
-                            <div>Ideas</div>
-                        </div>
-                        <div class="second">
-                            <div>Worth</div>
-                        </div>
-                        <div class="third">
-                            <div>spreading</div>
-                        </div>
-                    </section>
-                </div>
+    <section class="video-section">
+        <!-- Background Video -->
 
-            </div>
-        </section>
+        <video autoplay muted loop id="bg-video">
+            <source src="agevid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
-
-        <!-- LUCK THEME STARTS HERE -->
-        <canvas id="canvas1"></canvas>
-        <!-- LUCK THEME ENDS HERE -->
-        <a href="./intro-luck.html" class="luck-play" id="luck-play-bar" >Play game</a>
-        <section>
-            <div class="pet-me-text">
-                <!-- <div>Welcome to TEDxNITKSurathkal V11!</div> -->
-                <div>Pet me 7 times for some fortune!</div>
-            </div>
-        </section>
-        
-        
-        
-        <div class="luck-bar" id="luck-bar">
-            <a href="./intro-luck.html"></a>
-            Fortune Count: 0
+        <!-- Foreground Content -->
+     
+            <div class="overlay-content">
+                
+                <button class="play-game-button" onclick="window.location.href='assets/hakunamatata/game/main/index.html'" >
+                    Play Game
+                </button>
         </div>
-
-    </div>
+                 
+       
+        
+    </section>
     <!-- <button class="play-game-button" onclick="window.location.href='assets/hakunamatata/game/main/index.html'">Play
         Game</button> -->
     <!-- ends here -->
@@ -173,7 +154,7 @@
                         <div class="content">
                             <h5 class="box_title">DATE</h5>
                             <p>
-                                5:30 PM, 27th September, 2024
+                                5:30 PM, 8th Nov, 2024
                             </p>
                         </div>
                     </div>
@@ -186,7 +167,7 @@
                                 location
                             </h5>
                             <p>
-                                LHC-C Seminar Hall, NITK Surathkal
+                                SJA, NITK Surathkal
                             </p>
                         </div>
                     </div>
@@ -646,7 +627,7 @@
                 time: 3000
             });
 
-            $('.countdown').countdown(new Date("2024-09-27T17:30:00.000+05:30"), function (event) {
+            $('.countdown').countdown(new Date("2024-11-08T17:30:00.000+05:30"), function (event) {
                 $(this).html(
                     event.strftime("<div>%D <span>Days</span></div><div>%H <span>Hours</span></div><div>%M <span>Minutes</span></div><div>%S <span>Seconds</span></div>")
                 );

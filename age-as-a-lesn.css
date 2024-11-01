@@ -1,0 +1,144 @@
+/* Video section base styling */
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+/* Video element styling - improved scaling */
+#bg-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Changed from cover to contain */
+  object-position: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: #000;
+}
+
+/* Overlay content styling */
+.overlay-content {
+  position: relative;
+  color: white;
+  text-align: center;
+  z-index: 1;
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+}
+
+/* Play Game Button styling */
+.play-game-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.play-game-button:hover {
+  background-color: purple;
+  transform: scale(1.05);
+}
+
+/* Aspect ratio handling */
+@media (orientation: landscape) {
+  #bg-video {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+}
+
+@media (orientation: portrait) {
+  #bg-video {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Large tablets and small laptops */
+@media (max-width: 1024px) {
+  .video-section {
+    height: 90vh;
+  }
+
+  .overlay-content {
+    width: 85%;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .video-section {
+    height: 80vh;
+  }
+
+  .overlay-content {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .play-game-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* Large phones */
+@media (max-width: 576px) {
+  .video-section {
+    height: 70vh;
+  }
+
+  .overlay-content {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .play-game-button {
+    font-size: 15px;
+    padding: 8px 18px;
+    margin-top: 15px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 375px) {
+  .video-section {
+    height: 60vh;
+  }
+
+  .overlay-content {
+    width: 100%;
+    padding: 8px;
+  }
+
+  .play-game-button {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-top: 12px;
+  }
+}
+
+/* Handle tall phones */
+@media (max-height: 700px) and (orientation: portrait) {
+  .video-section {
+    height: 50vh;
+  }
+}

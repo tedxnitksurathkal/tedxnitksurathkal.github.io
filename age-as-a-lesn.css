@@ -67,7 +67,7 @@
 @media (orientation: portrait) {
   #bg-video {
     width: auto;
-    height: 100%;
+    height: 100vh;
     max-width: 100%;
   }
 }
@@ -86,7 +86,7 @@
 /* Tablets */
 @media (max-width: 768px) {
   .video-section {
-    height: 80vh;
+    height: 100vh;
   }
 
   .overlay-content {
@@ -103,7 +103,7 @@
 /* Large phones */
 @media (max-width: 576px) {
   .video-section {
-    height: 70vh;
+    height: 90vh;
   }
 
   .overlay-content {
@@ -121,7 +121,7 @@
 /* Small phones */
 @media (max-width: 375px) {
   .video-section {
-    height: 60vh;
+    height: 80vh;
   }
 
   .overlay-content {

@@ -3354,5 +3354,28 @@ textarea.form-control {
     background-color: #c0392b; /* Darker red on hover */
 }
 
+#current-speakers-box1:hover, #current-speakers-box2:hover, #current-speakers-box3:hover {
+  background-color: #343a40;
+  color: #ffffff !important;
+}
+
+@media only screen and (max-width: 768px) {
+  #current-speakers-container {
+      justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #current-speakers-box1, #current-speakers-box2, #current-speakers-box3 {
+      width: 100%;
+      
+  }
+
+  #current-speakers-img1, #current-speakers-img2, #current-speakers-img3 {
+      width: 100px;
+      height: 100px;
+  }
+}
+
 
 

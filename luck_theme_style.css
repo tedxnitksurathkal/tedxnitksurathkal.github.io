@@ -30,6 +30,8 @@
   transform: translate(-50%, -50%);
   width: 800px;
   height: 700px;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 #canvas1:hover {
@@ -61,6 +63,7 @@
   bottom: 0;
   right: 0;
   margin-bottom: 10px;
+  margin-right: 10px;
   background-color: #f50136;
   border-radius: 5%;
   color: white;

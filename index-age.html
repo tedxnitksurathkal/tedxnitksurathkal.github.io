@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEDxV11 Theme Reveal</title>
+    <link rel="stylesheet" href="cards-age.css">
+    <script src="cards-age.js"></script>
+</head>
+<body>
+    <div class="heading">
+        <h1 style="color: white;">TEDx Game</h1>
+        <h2 style="color: white;">
+            <span id="errors"></span> Score: <span id="score">0</span> | <span id="timer">Time: 0s</span>
+        </h2>
+    </div>
+    
+    <div class="board-body">
+        <div id="board"></div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="endModal" class="modal">
+        <div class="modal-content">
+            <h2>Game Over!</h2>
+            <p>Your score is <span id="finalScore">0</span></p>
+            <div class="modal-buttons">
+                <button onclick="restartGame()">Restart Game</button>
+                <a href="./theme-age.html">Theme</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -168,7 +168,7 @@
             const data = { name: userName };
             console.log("Sending score:", data);
 
-            fetch("http://localhost:3000/api/user/get", {
+            fetch("https://tedx-al.vercel.app/api/user/get", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data)

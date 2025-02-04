@@ -234,7 +234,7 @@ async function sendScore() {
     };
 
     try {
-        const response = await fetch("http://localhost:3000/api/user/score", {
+        const response = await fetch("https://tedx-al.vercel.app/api/user/score", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

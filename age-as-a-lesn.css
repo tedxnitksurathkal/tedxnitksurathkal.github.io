@@ -52,7 +52,6 @@
 
 .play-game-button:hover {
   background-color: purple;
-  transform: scale(1.05);
 }
 
 /* Aspect ratio handling */

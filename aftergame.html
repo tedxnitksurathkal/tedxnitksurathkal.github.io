@@ -154,7 +154,7 @@
 
                 const user = JSON.parse(jsonPayload);
                 userName = user.name;
-                console.log("Player Name:", userName);
+                // console.log("Player Name:", userName);
                 sendScore()
             } catch (error) {
                 console.error("Error decoding token:", error);
@@ -166,7 +166,7 @@
             if (!userName) return;
 
             const data = { name: userName };
-            console.log("Sending score:", data);
+            // console.log("Sending score:", data);
 
             fetch("https://tedx-al.vercel.app/api/user/get", {
                 method: "POST",
@@ -175,7 +175,7 @@
             })
             .then(response => response.json())
             .then(result => {
-                console.log("Score submitted:", result);
+                // console.log("Score submitted:", result);
 
                 highestScore = result.user.score;
                 lastScore = result.user.lastScore;

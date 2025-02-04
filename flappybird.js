@@ -242,7 +242,7 @@ function getUserNameFromToken() {
 
         const user = JSON.parse(jsonPayload);
         userName = user.name;
-        console.log("Player Name:", userName);
+        // console.log("Player Name:", userName);
     } catch (error) {
         console.error("Error decoding token:", error);
         window.location.href = "entry.html"; // Redirect on token error

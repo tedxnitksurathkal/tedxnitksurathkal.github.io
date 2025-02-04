@@ -66,13 +66,38 @@ window.onload = function () {
     // Retrieve username from JWT token
     getUserNameFromToken();
 
-    requestAnimationFrame(update);
-    setInterval(placePipes, 1500);
-    setInterval(animateBird, 100);
-    document.addEventListener("keydown", moveBird);
-    document.addEventListener("mousedown", moveBird);
-    document.addEventListener("touchstart", moveBird);
+    // Display initial screen
+    context.fillStyle = "white";
+    context.font = "45px sans-serif";
+    context.fillText("Tap to Start", boardWidth / 3, boardHeight / 2);
+
+    // Wait for first input to start the game
+    document.addEventListener("keydown", startGame);
+    document.addEventListener("mousedown", startGame);
+    document.addEventListener("touchstart", startGame);
 };
+
+let gameStarted = false;
+
+function startGame() {
+    if (!gameStarted) {
+        gameStarted = true;
+        requestAnimationFrame(update);
+        placePipesInterval = setInterval(placePipes, 1500);
+        animateBirdInterval = setInterval(animateBird, 100);
+
+        // Remove event listeners after starting
+        document.removeEventListener("keydown", startGame);
+        document.removeEventListener("mousedown", startGame);
+        document.removeEventListener("touchstart", startGame);
+
+        // Add event listeners for bird movement
+        document.addEventListener("keydown", moveBird);
+        document.addEventListener("mousedown", moveBird);
+        document.addEventListener("touchstart", moveBird);
+    }
+}
+
 
 function update() {
     requestAnimationFrame(update);
@@ -263,19 +288,31 @@ function endGame() {
     gameOver = true;
     sendScore();
 
-    // Show the modal with the final score
-    // const modal = document.getElementById("gameOverModal");
-    // const finalScoreSpan = document.getElementById("finalScore");
-    // finalScoreSpan.textContent = score;
-    // modal.style.display = "block";
-
-    // setTimeout(() => {window.location.href = "aftergame.html";},2000)
-     // Redirect to entry page
-    
     // Stop background music
     bgm.pause();
     bgm.currentTime = 0;
+
+    // Hide the game canvas
+    document.getElementById("board").style.display = "none";
+
+    // Create a game over screen
+    let gameOverScreen = document.createElement("div");
+    gameOverScreen.id = "gameOverScreen";
+    gameOverScreen.style.position = "absolute";
+    gameOverScreen.style.top = "50%";
+    gameOverScreen.style.left = "50%";
+    gameOverScreen.style.transform = "translate(-50%, -50%)";
+    gameOverScreen.style.textAlign = "center";
+    gameOverScreen.style.fontSize = "50px";
+    gameOverScreen.style.color = "white";
+    gameOverScreen.style.fontFamily = "sans-serif";
+
+    // Display game over text and score
+    gameOverScreen.innerHTML = `<p>Game Over</p><p>Score: ${score}</p>`;
+    
+    document.body.appendChild(gameOverScreen);
 }
+
 
 // Event listeners for modal buttons
 let placePipesInterval, animateBirdInterval;
@@ -319,77 +356,6 @@ document.getElementById("playAgainBtn").addEventListener("click", function () {
     }
 });
 
-// Quit Button - Stops Everything Immediately
-document.getElementById("quitBtn").addEventListener("click", function (event) {
-    event.stopPropagation();
-    event.preventDefault();
-
-    // Stop background music immediately
-    bgm.pause();
-    bgm.currentTime = 0;
-
-    // Clear all game-related intervals
-    clearInterval(placePipesInterval);
-    clearInterval(animateBirdInterval);
-
-    // Stop game loop
-    gameOver = true;
-
-    // Redirect to another page
-    window.location.href = "entry.html";
-}, { capture: true });
 
 // Play Again Button - Fully Resets the Game
-document.getElementById("playAgainBtn").addEventListener("click", function () {
-    // Hide the modal
-    const modal = document.getElementById("gameOverModal");
-    modal.style.display = "none";
-
-    // Show the board again
-    const board = document.getElementById("board");
-    board.style.display = "block";
-
-    // Reset game state
-    gameOver = false;
-    bird.y = birdY;
-    velocityY = 0;
-    pipeArray = [];
-    score = 0;
-
-    // Remove old intervals (ensure no duplicates)
-    if (placePipesInterval) clearInterval(placePipesInterval);
-    if (animateBirdInterval) clearInterval(animateBirdInterval);
-
-    // Restart intervals
-    placePipesInterval = setInterval(placePipes, 1500);
-    animateBirdInterval = setInterval(animateBird, 100);
-
-    // Remove previous event listeners to avoid duplicates
-    document.removeEventListener("keydown", moveBird);
-    document.removeEventListener("mousedown", moveBird);
-    document.removeEventListener("touchstart", moveBird);
-
-    // Re-add event listeners
-    document.addEventListener("keydown", moveBird);
-    document.addEventListener("mousedown", moveBird);
-    document.addEventListener("touchstart", moveBird);
-
-    // Restart the game loop
-    requestAnimationFrame(update);
-
-    // Play background music
-    if (bgm.paused) {
-        bgm.play();
-    }
-});
-
-
-
-// Close modal when user clicks anywhere outside the modal
-window.onclick = function(event) {
-    const modal = document.getElementById("gameOverModal");
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-};
 

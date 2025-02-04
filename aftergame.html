@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over</title>
+    <style>
+        /* Fullscreen Black & Red Theme */
+        body {
+            background: linear-gradient(135deg, #000000, #8B0000);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Modal Styling */
+        #gameOverModal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: '95vw';
+            max-width: 400px;
+            background: black;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+            border: 3px solid red;
+        }
+
+        h2 {
+            color: #ff0000;
+            font-size: 24px;
+        }
+
+        #gameOverModal p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        /* Button Container */
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        /* Button Styling */
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        
+
+        /* Individual Button Colors */
+        #playAgainBtn {
+            background: #28a745; /* Green */
+        }
+
+        #playAgainBtn:hover {
+            background: #218838;
+        }
+
+        #dashboardBtn {
+            background: #007BFF; /* Blue */
+        }
+
+        #dashboardBtn:hover {
+            background: #0056b3;
+        }
+
+        #speakerBtn {
+            background: #ff0000; /* Red */
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        #speakerBtn:hover {
+            background: #cc0000;
+        }
+
+        /* Responsive Modal */
+        @media (max-width: 500px) {
+            #gameOverModal {
+                width: 85%;
+                padding: 15px;
+                border: 4px solid red;
+                box-shadow: 0 0 20px rgba(255, 0, 0, 1);
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            #gameOverModal p {
+                font-size: 16px;
+            }
+
+            .btn {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="gameOverModal">
+        <h2>Game Over!</h2>
+        <p><strong>Player Name:</strong> <span id="playerName"></span></p>
+        <p><strong>Highest Score:</strong> <span id="highestScore"></span></p>
+        <p class=""><strong>Score:</strong> <span id="lastScore"></span></p>
+        
+        <div class="button-container">
+            <button id="playAgainBtn" class="btn">Play Again</button>
+            <button id="dashboardBtn" class="btn">Dashboard</button>
+        </div>
+        <button id="speakerBtn" class="btn">Speaker</button>
+    </div>
+
+    <script>
+        let userName = "";
+        let highestScore = 0;
+        let lastScore = 0;
+
+        function getUserNameFromToken() {
+            const token = localStorage.getItem("token");
+            if (!token) return;
+
+            try {
+                const base64Url = token.split(".")[1];
+                const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+                const jsonPayload = decodeURIComponent(
+                    atob(base64)
+                        .split("")
+                        .map((c) => "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2))
+                        .join("")
+                );
+
+                const user = JSON.parse(jsonPayload);
+                userName = user.name;
+                console.log("Player Name:", userName);
+                sendScore()
+            } catch (error) {
+                console.error("Error decoding token:", error);
+                window.location.href = "entry.html";
+            }
+        }
+
+        function sendScore() {
+            if (!userName) return;
+
+            const data = { name: userName };
+            console.log("Sending score:", data);
+
+            fetch("http://localhost:3000/api/user/get", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(result => {
+                console.log("Score submitted:", result);
+
+                highestScore = result.user.score;
+                lastScore = result.user.lastScore;
+
+                document.getElementById("playerName").textContent = userName;
+                document.getElementById("highestScore").textContent = highestScore;
+                document.getElementById("lastScore").textContent = lastScore;
+                document.getElementById("gameOverModal").style.display = "block";
+            })
+            .catch(error => console.error("Error submitting score:", error));
+        }
+
+        document.getElementById("dashboardBtn").addEventListener("click", function () {
+            window.location.href = "https://tedx-al/dashboard";
+        });
+
+        document.getElementById("speakerBtn").addEventListener("click", function () {
+            window.location.href = "https://tedx-al/speaker";
+        });
+
+        document.getElementById("playAgainBtn").addEventListener("click", function () {
+            document.getElementById("gameOverModal").style.display = "none";
+            window.location.href = 'index-age.html';
+        });
+
+        getUserNameFromToken();
+    </script>
+</body>
+</html>

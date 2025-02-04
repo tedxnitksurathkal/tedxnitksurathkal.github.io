@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Red & Black Themed Background */
+        body {
+            background: linear-gradient(135deg, #000000, #8B0000);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Login Box */
+        .login-container {
+            background: black;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+            border: 3px solid red;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        /* Label Styling */
+        label {
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            color: #ff4444;
+        }
+
+        /* Input Styling */
+        input {
+            width: 90%;
+            padding: 12px;
+            font-size: 16px;
+            border: 2px solid red;
+            border-radius: 5px;
+            background: black;
+            color: white;
+            outline: none;
+            text-align: center;
+            margin: 5px;
+        }
+
+        input::placeholder {
+            color: #aaaaaa;
+        }
+
+        /* Button Styling */
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: #ff0000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #cc0000;
+        }
+
+        /* Responsive */
+        @media (max-width: 500px) {
+            .login-container {
+                padding: 20px;
+                border: 4px solid red;
+                box-shadow: 0 0 20px rgba(255, 0, 0, 1);
+            }
+
+            label {
+                font-size: 16px;
+            }
+
+            input {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            button {
+                font-size: 16px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <label for="username">Enter Your User-Name</label>
+        <input type="text" id="username" placeholder="Enter your name">
+        <button onclick="handleLogin()">Start game</button>
+    </div>
+
+    <script>
+        async function handleLogin() {
+            const username = document.getElementById("username").value;
+            if (!username) {
+                alert("Please enter a username");
+                return;
+            }
+
+            try {
+                const response = await fetch("http://localhost:3000/api/user/setUser", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ name: username }),
+                });
+
+                const data = await response.json();
+
+                if (data.token) {
+                    localStorage.setItem("token", data.token);
+                    window.location.href = "index-age.html";
+                } else {
+                    alert(data.error);
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("Something went wrong");
+            }
+        }
+
+        // Check if token already exists
+        window.onload = function () {
+            if (localStorage.getItem("token")) {
+                window.location.href = "index-age.html";
+            }
+        };
+    </script>
+
+</body>
+</html>

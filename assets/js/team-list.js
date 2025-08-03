@@ -86,7 +86,7 @@ var team = [
     },
     
     {
-        "name": "Neha Chandrashekar",
+        "name": "Neha",
         "position": "Head Of Curation",
         "image": "Neha_Chandrashekar.jpeg",
         "linkedin": "https://www.linkedin.com/in/neha-chandrashekar-b8b370291/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -116,7 +116,7 @@ var team = [
     },
     {
         "name": "Naineet Pujar",
-        "position": "Head Of Marketing and PR",
+        "position": "Head Of Marketing & PR",
         "image": "Naineet_Pujar.jpeg",
         "linkedin": "https://www.linkedin.com/in/naineet-pujar-7bab06212/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
         "instagram": "naineetpujar/"

@@ -23,6 +23,46 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
     <style>
+        /* Custom CSS for uniform team member images */
+        .speaker_box .speaker_img {
+            position: relative;
+            overflow: hidden;
+            height: 300px; /* Fixed height for all images */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .speaker_box .speaker_img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* This ensures images cover the entire container */
+            object-position: center; /* Centers the image */
+        }
+        
+        /* Ensure consistent card heights */
+        .speaker_box {
+            height: 400px; /* Fixed height for the entire card */
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .speaker_box .speaker_social {
+            margin-top: auto; /* Push social links to bottom */
+        }
+         /* Position name plates to touch left edge of image */
+         .speaker_box .speaker_img .info_box {
+            left: 0 !important;
+            right: auto !important;
+            transform: none !important;
+            text-align: left !important;
+            width: auto !important;
+            max-width: 80% !important;
+            position: absolute !important;
+            bottom: 10px !important;
+        }
+    </style>
+    <style>
         .speaker_social{
             padding:20px!important;
         }

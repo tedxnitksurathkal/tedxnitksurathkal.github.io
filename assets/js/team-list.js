@@ -130,7 +130,7 @@ var team = [
     },
     {
         "name": "Hritik Sarraf",
-        "position": "Head Of Marketing and PR",
+        "position": "Web Advisor",
         "image": "hritik.jpeg",
         "linkedin": "https://www.linkedin.com/in/hritik-sarraf-333099250/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         "instagram": "hritiksharraf/"

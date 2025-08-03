@@ -35,101 +35,111 @@ var team = [
     //     "instagram": "tedxnitksurathkal"
     // },
     {
-        "name": "Vibhu Varshney",
+        "name": "Sudeep",
         "position": "Team Lead",
-        "image": "Vibhu.jpg",
-        "linkedin": "https://www.linkedin.com/in/vibhuvarshney081103/",
-        "instagram": "vibhuvarshney_/"
-    },
-    {
-        "name": "Violina Doley",
-        "position": "Advisor",
-        "image": "violina.jpeg",
-        "linkedin": "https://www.linkedin.com/in/violinadoley/",
-        "instagram": "violina_doley/"
-    },
-    {
-        "name": "Vartika Rao",
-        "position": "Advisor",
-        "image": "Vartika.jpg",
-        "linkedin": "https://www.linkedin.com/in/vartika-t-rao/",
-        "instagram": "tedxnitksurathkal/"
-    },
-    {
-        "name": "Anushka das",
-        "position": "Creative Head",
-        "image": "Anushka.jpeg",
-        "linkedin": "https://in.linkedin.com/in/anushkadas09",
-        "instagram": "____nush____?igsh=dTk4YXdyMDlnb3c4&utm_source=qr"
-    },
-    {
-        "name": "Hritik sarraf",
-        "position": "Head of web",
-        "image": "hritik.jpeg",
-        "linkedin": "https://www.linkedin.com/in/hritik-sarraf-333099250/",
-        "instagram": "hritiksharraf/"
-    },
-    {
-        "name": "Hemanth Somanna",
-        "position": "Head Of Production",
-        "image": "Hemanth .jpg",
-        "linkedin": "https://www.linkedin.com/in/hemanth-somanna-b53310208/",
-        "instagram": "hemantsomanna/"
-    },
-    {
-        "name": "Nancy",
-        "position": "Head Of Production",
-        "image": "Nancy.jpeg",
-        "linkedin": "https://www.linkedin.com/in/nancy-kumari-34927028a/",
-        "instagram": "gupta_nancy26/"
-    },
-    {
-        "name": "Deepak C Nayak",
-        "position": "Head Of Curation",
-        "image": "Deepak.jpeg",
-        "linkedin": "https://www.linkedin.com/in/deepakcnayak/",
-        "instagram": "deepakachu5114/"
-    },
-    {
-        "name": "Sarthak",
-        "position": "Head Of Curation",
-        "image": "Sarthak.jpeg",
-        "linkedin": "https://www.linkedin.com/in/usarthak",
-        "instagram": "usarthak_12?igsh=MXFzdXFvNDlkcXJzMQ=="
-    },
-    {
-        "name": "Rakesh Choudhary ",
-        "position": "Head Of Operations",
-        "image": "Rakesh.jpeg",
-        "linkedin": "https://www.linkedin.com/in/rakesh-choudhary-51320b227?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        "instagram": "the1.jxxt?utm_source=qr&igsh=MXZyMTAyZTh6NnU5MA=="
-    },
-    {
-        "name": "Nihar Damera",
-        "position": "Head Of Operations",
-        "image": "Nihar.jpeg",
-        "linkedin": "https://in.linkedin.com/in/nihar-damera",
-        "instagram": "nihar._.damera/"
-    },
-    {
-        "name": "Sudeep V",
-        "position": "Head Of Marketing",
         "image": "Sudeep.jpeg",
         "linkedin": "https://www.linkedin.com/in/sudeep-v-1352b6268",
         "instagram": "sudeep_v_/"
     },
     {
-        "name": "Kunaal Joshi",
-        "position": "Head Of Marketing",
-        "image": "Kunal.jpeg",
-        "linkedin": "https://www.linkedin.com/in/kunaal-joshi/",
-        "instagram": "tedxnitksurathkal/"
+        "name": "Sarthak",
+        "position": "Advisor",
+        "image": "Sarthak.jpeg",
+        "linkedin": "https://www.linkedin.com/in/usarthak",
+        "instagram": "usarthak_12?igsh=MXFzdXFvNDlkcXJzMQ=="
     },
     {
-        "name": "Akarsh Gupta",
-        "position": "Treasurer",
-        "image": "Akarsh.jpeg",
-        "linkedin": "https://www.linkedin.com/in/akarsh-gupta-889425213/",
-        "instagram": "_akarshgupta_/"
+        "name": "Deepak C Nayak",
+        "position": "Advisor",
+        "image": "Deepak.jpeg",
+        "linkedin": "https://www.linkedin.com/in/deepakcnayak/",
+        "instagram": "deepakachu5114/"
+    },
+    
+    {
+        "name": "Kunal Katkar",
+        "position": "Head of web",
+        "image": "Kunal.jpeg",
+        "linkedin": "https://www.linkedin.com/in/kunal-katkar33/",
+        "instagram": "03_itskunal/"
+    },
+    {
+        "name": "Laasica",
+        "position": "Head Of Production",
+        "image": "Lassica.jpeg",
+        "linkedin": "https://www.linkedin.com/in/laasica-ram-481937261/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        "instagram": "aasica_ram/?igsh=MTRlYm0zcHFxYXppOA%3D%3D"
+    },
+    // {
+    //     "name": "Sawanth Rathore",
+    //     "position": "Head Of Production",
+    //     "image": "Sawanth.jpeg",
+    //     "linkedin": "https://www.linkedin.com/in/sawanth-rathore-b8b370291/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    //     "instagram": "sawanth_rathore?igsh=MTR3Y29wZ3AwZmF3Yw%3D%3D"
+    // },// nothing sent
+    {
+        "name": "Aayush Dubey",
+        "position": "Head Of Curation",
+        "image": "Aayush.jpeg",
+        "linkedin": "https://www.linkedin.com/in/aayush-dubey-43b82327b/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        "instagram": "aayush786bhardwaj2/"
+    },
+    
+    {
+        "name": "Neha Chandrashekar",
+        "position": "Head Of Curation",
+        "image": "Neha_Chandrashekar.jpeg",
+        "linkedin": "https://www.linkedin.com/in/neha-chandrashekar-b8b370291/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        "instagram": "nehachandrashekar._?igsh=MWRrdng4MDh5cmkxbQ%3D%3D"
+    },
+    {
+        "name": "Alok Kumar Sahoo",
+        "position": "Head Of Curation",
+        "image": "Alok_Kumar_Sahoo.jpeg",
+        "linkedin": "https://www.linkedin.com/in/alok-kumar-sahoo-80472a24a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        "instagram": "akshhhh__._?igsh=cWV6MmpsaTVwM3Vj"
+    },
+    {
+        "name": "Manvith M",
+        "position": "Head Of Operations",   
+        "image": "Manvith.jpeg",
+        "linkedin": "https://www.linkedin.com/in/manvithm",
+        "instagram": "prabhasmanvith?igsh=Y2w2OW9sb3ZuMG1k"
+    },
+    {
+        "name": "Aditi Pagariya",
+        "position": "Head Of Operations",
+        "image": "Aditi_Pagariya.jpeg",
+        "linkedin": "https://www.linkedin.com/in/aditipagariya31/",
+        "instagram": "pagariya_aditi?igsh=MTR3Y29wZ3AwZmF3Yw%3D%3D"
+       
+    },
+    {
+        "name": "Naineet Pujar",
+        "position": "Head Of Marketing and PR",
+        "image": "Naineet_Pujar.jpeg",
+        "linkedin": "https://www.linkedin.com/in/naineet-pujar-7bab06212/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        "instagram": "naineetpujar/"
+    },
+    {
+        "name": "Gowtham Naik",
+        "position": "Head of web",
+        "image": "Gowtham Naik.jpg",
+        "linkedin": "https://www.linkedin.com/in/gowtham-naik-0dhe123/",
+        "instagram": "gowthamn.007/"
+    },
+    {
+        "name": "Hritik Sarraf",
+        "position": "Head Of Marketing and PR",
+        "image": "hritik.jpeg",
+        "linkedin": "https://www.linkedin.com/in/hritik-sarraf-333099250/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        "instagram": "hritiksharraf/"
+    },
+    {
+        "name": "Harshith CV",
+        "position": "Joint Convener and Treasurer",
+        "image": "Harshith.jpeg",
+        "linkedin": "https://www.linkedin.com/in/harshith-c-v-5862022ab/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        "instagram": "harshith_cv?igsh=NjA0b2tscDFqYWNo"
     },
 ]

@@ -94,7 +94,7 @@ var team = [
     },
     {
         "name": "Alok Kumar Sahoo",
-        "position": "Head Of Curation",
+        "position": "Head Of Media",
         "image": "Alok_Kumar_Sahoo.jpeg",
         "linkedin": "https://www.linkedin.com/in/alok-kumar-sahoo-80472a24a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         "instagram": "akshhhh__._?igsh=cWV6MmpsaTVwM3Vj"
@@ -130,7 +130,7 @@ var team = [
     },
     {
         "name": "Hritik Sarraf",
-        "position": "Head Of Marketing and PR",
+        "position": "Web Advisor",
         "image": "hritik.jpeg",
         "linkedin": "https://www.linkedin.com/in/hritik-sarraf-333099250/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         "instagram": "hritiksharraf/"

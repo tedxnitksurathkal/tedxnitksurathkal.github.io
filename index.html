@@ -477,47 +477,90 @@
     </section>
 
     <!-- Mailchimp Signup Form -->
-    <section class="pt50 pb50" style="background-color: red;">
-        <div class="container">
-            <div id="contact-form-success" style="display: none;">
-                <h4>THANK YOU</h4>
-            </div>
-            <div id="contact-form">
-                <form
-                    action="https://gmail.us7.list-manage.com/subscribe/post-json?u=8b2cc0faea38709e307aceffe&amp;id=0b4bdf521a&amp;c=?"
-                    method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-                    target="_blank" novalidate>
-                    <h4>Upcoming Events? Theme Reveal? Speaker List?</h4>
-                    <p>Sign up below to receive latest TEDx NITK news</p>
-                    <div class="row">
-                        <div class="col-sm mc-field-group">
-                            <input type="text" placeholder="First Name" name="FNAME" class="" id="mce-FNAME">
-                        </div>
-                        <div class="col-sm mc-field-group">
-                            <input type="text" placeholder="Last Name" name="LNAME" class="" id="mce-LNAME">
-                        </div>
-                        <div class="col-sm mc-field-group">
-                            <input type="email" placeholder="Email" name="EMAIL" class="required email" id="mce-EMAIL"
-                                data-toggle="popover">
-                        </div>
-                        <div class="col-sm">
-                            <button type="submit" name="subscribe" id="mc-embedded-subscribe">
-                                <span class="label">SUBSCRIBE</span>
-                                <span class="loading"></span>
-                            </button>
-                        </div>
-                    </div>
-                    <div id="mce-responses" class="clear">
-                        <div class="response" id="mce-error-response" style="display:none"></div>
-                        <div class="response" id="mce-success-response" style="display:none"></div>
-                    </div>
-                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                            name="b_8b2cc0faea38709e307aceffe_0b4bdf521a" tabindex="-1" value=""></div>
-                </form>
-            </div>
+    <section class="subscribe-section">
+  <div class="container">
+    <div id="contact-form-success" style="display: none;">
+      <h4>THANK YOU</h4>
+    </div>
+
+    <div id="contact-form">
+      <form
+        action="https://gmail.us7.list-manage.com/subscribe/post-json?u=8b2cc0faea38709e307aceffe&amp;id=0b4bdf521a&amp;c=?"
+        method="get"
+        id="mc-embedded-subscribe-form"
+        name="mc-embedded-subscribe-form"
+        target="_blank"
+        novalidate
+      >
+        <div class="subscribe-card">
+          <h3 class="subscribe-title">Subscribe Now !! 🎉</h3>
+
+          <!-- First Name -->
+          <div class="form-group">
+            <label for="mce-FNAME">Enter First Name</label>
+            <input
+              type="text"
+              placeholder="Ex: Adithya"
+              name="FNAME"
+              id="mce-FNAME"
+            />
+          </div>
+
+          <!-- Last Name -->
+          <div class="form-group">
+            <label for="mce-LNAME">Enter Last Name</label>
+            <input
+              type="text"
+              placeholder="Ex: MahaThakur"
+              name="LNAME"
+              id="mce-LNAME"
+            />
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="mce-EMAIL">Enter Email Address</label>
+            <input
+              type="email"
+              placeholder="Ex: xyz@mail.com"
+              name="EMAIL"
+              class="required email"
+              id="mce-EMAIL"
+            />
+          </div>
+
+          <!-- Button -->
+          <div class="form-submit">
+            <button type="submit" name="subscribe" id="mc-embedded-subscribe">
+              <span>Submit</span>
+              <span class="arrow">➜</span>
+            </button>
+          </div>
+
+          <!-- Mailchimp hidden trap -->
+          <div
+            style="position: absolute; left: -5000px;"
+            aria-hidden="true"
+          >
+            <input
+              type="text"
+              name="b_8b2cc0faea38709e307aceffe_0b4bdf521a"
+              tabindex="-1"
+              value=""
+            />
+          </div>
+
+          <!-- Responses -->
+          <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+          </div>
         </div>
-    </section>
+      </form>
+    </div>
+  </div>
+</section>
+
     <!-- Mailchimp Signup Form -->
 
     <!--footer start -->

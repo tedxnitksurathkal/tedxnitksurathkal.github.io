@@ -3268,66 +3268,106 @@ textarea.form-control {
   background-size: cover;
 }
 
-#contact-form-success h4 {
-  font-size: 25px;
-  margin-bottom: 10px;
-  text-align: center;
-  color: black;
+/* Section background */
+.subscribe-section {
+  background: #000;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#contact-form h4 {
-  font-size: 25px;
-  margin-bottom: 10px;
-  text-align: center;
-  color: black;
-}
-
-#contact-form p {
-  text-align: center;
-  color: black;
-  font-size: 20px;
-  margin-bottom: 1rem;
-}
-
-#contact-form input {
-  margin-bottom: 2rem;
-  font-size: 17px;
+/* Card wrapper */
+.subscribe-card {
+  background: #111;
+  border: 1px solid rgba(255, 0, 0, 0.4);
+  border-radius: 24px;
+  padding: 40px 30px;
+  max-width: 500px;
   width: 100%;
-  height: 3rem;
-  padding: 0 1em;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.15);
+  margin: 0 auto;
 }
 
-#contact-form button {
-  background-color: black;
-  color: white;
+/* Title */
+.subscribe-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+/* Input groups */
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 6px;
+}
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  background: #1c1c1c;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+}
+.form-group input::placeholder {
+  color: rgba(255, 77, 77, 0.6);
+}
+.form-group input:focus {
+  border-color: #ff4d4d;
+  box-shadow: 0 0 0 2px rgba(255, 77, 77, 0.3);
+}
+
+/* Submit button */
+.form-submit button {
+  width: 100%;
+  background: #ff4d4d;
+  color: #fff;
   border: none;
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
   cursor: pointer;
-  transform: scale(1);
-  transition: transform 500ms;
-  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
-
-#contact-form button:hover {
-  transform: scale(1.08);
-  transition: transform 500ms;
+.form-submit button:hover {
+  background: #ff2b06;
+  transform: translateY(-2px);
 }
-
-#contact-form .loading {
-  position: absolute;
-  display: none;
-
-  left: 50%;
-  width: 22px;
-  height: 22px;
-  margin-top: -11px;
-  margin-left: -11px;
+.form-submit .arrow {
+  background: rgba(255,255,255,0.3);
+  padding: 6px 8px;
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.7) !important;
-  border-top-color: rgba(255, 255, 255, 0.15) !important;
-  border-left-color: rgba(255, 255, 255, 0.15) !important;
-  border-right-color: rgba(255, 255, 255, 0.15) !important;
-  animation: loading 1s infinite linear;
+  font-size: 16px;
 }
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .subscribe-card {
+    padding: 30px 20px;
+  }
+  .subscribe-title {
+    font-size: 20px;
+  }
+  .form-submit button {
+    font-size: 16px;
+    padding: 14px;
+  }
+}
+
 
 @keyframes loading {
   0% {

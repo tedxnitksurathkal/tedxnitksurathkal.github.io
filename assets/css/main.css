@@ -1817,109 +1817,137 @@ header.sticky_header {
     width: 100%;
   }
 }
-/*  ----------------------------------------------------
-3 Footer
--------------------------------------------------------- */
-footer {
-  padding: 50px 0 100px;
-  background-color: #080808; /*#0b031b*/
-}
-footer .footer_box {
+/* New Footer Styles */
+.new-footer {
+  background-color: #121212;
+  color: #ccc;
+  padding: 80px 0 30px;
   position: relative;
-  margin-top: 50px;
+  font-family: Arial, sans-serif;
 }
-footer .footer_box h4.footer_title {
-  text-transform: uppercase;
-  padding: 10px 0;
-  font-size: 18px;
-  color: #ffffff;
-}
-footer .footer_box h4.footer_title:before {
-  width: 30px;
-  content: " ";
+
+/* Back to Top Button */
+.new-footer .back-to-top {
   position: absolute;
-  border-top: solid 3px #f50136;
-  left: 0;
-  top: 0;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-footer .footer_header {
-  margin-bottom: 30px;
-}
-footer .footer_social {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-footer .footer_social li {
-  display: inline-block;
-  margin: 5px;
-}
-footer .footer_social li a {
-  border: solid 1px #f50136;
-  display: block;
-  border-radius: 50px;
-  padding: 7px 0;
-  font-size: 24px;
-  color: #f50136;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-}
-footer .footer_social li a:hover {
+.new-footer .back-to-top button {
   background-color: #f50136;
-  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
 }
-footer ul.instagram_list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-footer ul.instagram_list li {
-  display: inline-block;
-  width: 30%;
-  margin: 0 0 2% 2%;
-  float: left;
-}
-footer .newsletter_form .form-control {
-  background-color: #1b1a1a;
-  border: solid 1px #1b1a1a;
-  font-weight: 500;
-  color: #ffffff;
+.new-footer .back-to-top button:hover {
+  background-color: #d9042b;
 }
 
-.copyright_footer {
-  background-color: #000; /*#080113*/
-  padding: 15px;
+/* Grid Layout */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
 }
-.copyright_footer p {
-  font-size: 13px;
-  padding: 10px;
-  text-transform: capitalize;
-  color: #ffffff;
+.footer-col h3 {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
 }
-.copyright_footer ul.footer_menu {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  direction: rtl;
+.footer-col p {
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.6;
 }
-.copyright_footer ul.footer_menu li {
-  display: inline-block;
-}
-.copyright_footer ul.footer_menu li a {
-  padding: 10px;
-  text-transform: capitalize;
-  color: #838383;
-}
-.copyright_footer ul.footer_menu li a:hover {
-  color: #ffffff;
+.footer-logo {
+  width: 160px;
+  margin-bottom: 15px;
 }
 
-@media (max-width: 767px) {
-  .copyright_footer {
-    text-align: center;
+/* Contact */
+.footer-contact a {
+  color: #f50136;
+  text-decoration: none;
+}
+.footer-contact a:hover {
+  color: #fff;
+}
+
+/* Gallery */
+.footer-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+.footer-gallery img {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.3s;
+}
+.footer-gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* Socials */
+.footer-socials a {
+  background: #1b1b1b;
+  color: #fff;
+  margin-right: 10px;
+  font-size: 18px;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  border-radius: 50%;
+  text-align: center;
+  transition: 0.3s;
+}
+.footer-socials a:hover {
+  background: #f50136;
+  color: #fff;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+}
+.footer-bottom a {
+  color: #f50136;
+  text-decoration: underline;
+}
+.footer-bottom a:hover {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
+@media (max-width: 576px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .new-footer {
+    padding: 60px 20px 20px;
+  }
+}
+
 /*  ----------------------------------------------------
 4 buttons
 -------------------------------------------------------- */

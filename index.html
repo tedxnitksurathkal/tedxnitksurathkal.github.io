@@ -41,37 +41,8 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 </head>
 <style>
-    /* Custom Cursor */
-/* Custom Cursor */
-/* Custom Cursor */
-@media (min-width: 768px) {
-  body {
-    cursor: url('./cursor/Orange Snake--cursor--SweezyCursors.cur') 16 16, auto; /* Set hotspot and size */
-  }
-
-  a,
-  button,
-  .play-game-button {
-    cursor: url('./cursor/Orange Snake--pointer--SweezyCursors.cur') 14 14, auto; /* Set hotspot and size */
-  }
-}
-
-@media (max-width: 767px) {
-  body {
-    cursor: url('./cursor/Orange Snake--pointer--SweezyCursors.cur') 14 14, auto; /* Set hotspot and size */
-  }
-
-  a,
-  button,
-  .play-game-button {
-    cursor: url('./cursor/Orange Snake--cursor--SweezyCursors.cur') 16 16, auto; /* Set hotspot and size */
-  }
-}
 
     /* Play Button Effects */
-
-
-    
 
     /* Particle Background */
     .image-section {
@@ -550,120 +521,73 @@
     <!-- Mailchimp Signup Form -->
 
     <!--footer start -->
-    <footer>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-4 col-12">
-                    <div class="footer_box">
-                        <div class="footer_header">
-                            <div class="footer_logo">
-                                <img src="assets/img/tedx-white.png" alt="evento">
-                            </div>
-                        </div>
-                        <div class="footer_box_body">
-                            <p>
-                                Fostered by the vision of serving the student community with the most innovative and
-                                inspiring ideas.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4">
-                    <div class="footer_box">
-                        <div class="footer_header">
-                            <h4 class="footer_title">
-                                Spread the LOVE
-                            </h4>
-                        </div>
-                        <div class="footer_box_body">
-                            <p>
-                                We're on your favourite social media networks! Follow us on:
-                            </p>
-                            <ul class="footer_social">
-                                <li>
-                                    <a href="https://www.facebook.com/tedxnitksurathkal2018/"><i
-                                            class="ion-social-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/tedxnitksurathkal/?hl=en"><i
-                                            class="ion-social-instagram"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4">
-                    <div class="footer_box">
-                        <div class="footer_header">
-                            <h4 class="footer_title">
-                                gallery
-                            </h4>
-                        </div>
-                        <div class="footer_box_body">
-                            <ul class="instagram_list">
-                                <li>
-                                    <a href="assets/img/footer/1.jpg">
-                                        <img src="assets/img/footer/1.jpg" alt="TedXNITK">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="assets/img/footer/2.jpg">
-                                        <img src="assets/img/footer/2.jpg" alt="TedXNITK">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="assets/img/footer/3.jpg">
-                                        <img src="assets/img/footer/3.jpg" alt="TedXNITK">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="assets/img/footer/4.jpg">
-                                        <img src="assets/img/footer/4.jpg" alt="TedXNITK">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="assets/img/footer/5.jpg">
-                                        <img src="assets/img/footer/5.jpg" alt="TedXNITK">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="assets/img/footer/6.jpg">
-                                        <img src="assets/img/footer/6.jpg" alt="TedXNITK">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <div class="copyright_footer">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-6 col-12">
-                    <p>
-                        Copyright &copy;
-                        <script>
-                            document.write(new Date().getFullYear());
-                        </script> All rights reserved
-                        |
-                        Made with <i class="ion-heart" aria-hidden="true"></i> by TEDxNITKSurathkal &amp; <a
-                            href="https://colorlib.com" target="_blank">Colorlib</a>
-                        |
-                        This independent TEDx event is operated under license from <a href="https://www.ted.com"
-                            target="_blank">TED</a>.
-                    </p>
-                </div>
-                <div class="col-12 col-md-6 ">
-                    <p style="text-align: right;">
-                        <a href="#" onclick="backtotop()">Back to Top <i class="ion-arrow-up-c"
-                                aria-hidden="true"></i></a>
-                    </p>
-                </div>
-            </div>
-        </div>
+    <footer class="new-footer">
+  <div class="container">
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+      <button onclick="window.scrollTo({top:0, behavior:'smooth'});" aria-label="Back to top">
+        <i class="ion-arrow-up-c"></i>
+      </button>
     </div>
+
+    <div class="footer-grid">
+
+      <!-- Column 1: Logo + Description -->
+      <div class="footer-col">
+        <img src="assets/img/tedx-white.png" alt="TEDxNITKSurathkal Logo" class="footer-logo">
+        <p>
+          Fostered by the vision of serving the community with innovative and inspiring ideas worth spreading.
+        </p>
+      </div>
+
+      <!-- Column 2: Contact -->
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <div class="footer-contact">
+          <p>NITK Surathkal,<br/> Karnataka, India</p>
+          <a href="mailto:tedx@nitk.edu.in">tedx@nitk.edu.in</a>
+          <p>+91 824 247 3000</p>
+        </div>
+      </div>
+
+      <!-- Column 3: Gallery -->
+      <div class="footer-col">
+        <h3>Gallery</h3>
+        <div class="footer-gallery">
+          <a href="assets/img/footer/1.jpg"><img src="assets/img/footer/1.jpg" alt="TedXNITK"></a>
+          <a href="assets/img/footer/2.jpg"><img src="assets/img/footer/2.jpg" alt="TedXNITK"></a>
+          <a href="assets/img/footer/3.jpg"><img src="assets/img/footer/3.jpg" alt="TedXNITK"></a>
+          <a href="assets/img/footer/4.jpg"><img src="assets/img/footer/4.jpg" alt="TedXNITK"></a>
+          <a href="assets/img/footer/5.jpg"><img src="assets/img/footer/5.jpg" alt="TedXNITK"></a>
+          <a href="assets/img/footer/6.jpg"><img src="assets/img/footer/6.jpg" alt="TedXNITK"></a>
+        </div>
+      </div>
+
+      <!-- Column 4: Social Media -->
+      <div class="footer-col">
+        <h3>Follow Us</h3>
+        <p>Join the conversation on our social networks.</p>
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/tedxnitksurathkal2018/" aria-label="Facebook"><i class="ion-social-facebook"></i></a>
+          <a href="https://www.instagram.com/tedxnitksurathkal/?hl=en" aria-label="Instagram"><i class="ion-social-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p>
+        Copyright © <script>document.write(new Date().getFullYear());</script> TEDxNITKSurathkal. All rights reserved.
+      </p>
+      <p>
+        This independent TEDx event is operated under license from 
+        <a href="https://www.ted.com" target="_blank">TED</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
     <!--footer end -->
 
     <!-- ========== SCRIPTS ========== -->

@@ -392,29 +392,27 @@ img {
     text-align: right;
   }
 }
+
 .loader {
   position: fixed;
   top: 0;
+  left: 0;
   bottom: 0;
-  width: 100%;
+  right: 0; /* Changed width to left/right for full coverage */
   background-color: #101010;
   z-index: 999999;
+  display: flex; /* Use Flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
+
 .loader .loader-inner {
+  /* Remove all position, top, and margin properties */
   background-repeat: no-repeat;
   background-size: cover;
-  display: block;
-  margin-left: auto;
-  position: relative;
-  top: 40%;
-  margin-right: auto;
   width: 80px;
   height: 80px;
   z-index: 9999;
-  vertical-align: middle;
-
-  -webkit-animation: loader-inner 1s cubic-bezier(0.42, 0.61, 0.58, 0.41)
-    infinite;
   animation: loader-inner 1s cubic-bezier(0.42, 0.61, 0.58, 0.41) infinite;
 }
 
@@ -2429,6 +2427,13 @@ body {
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
     background-color: #000000; /* FIXED: Set background to black */
     color: #ffffff;
+    overflow-x: hidden;
+}
+
+.container, .section, main, footer {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box; /* This is very important */
 }
 
 /* Container to center content */
@@ -2641,15 +2646,14 @@ body {
 
 .event-card {
     background-color: #1C1C1C;
-    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    padding: 32px;
+    padding: 24px; /* Reduced padding for mobile */
     border-radius: 8px;
-    display: grid;
-    grid-template-columns: 1fr; /* Single column on mobile */
-    gap: 40px;
-    align-items: center;
+    display: flex; /* Changed from grid to flex */
+    flex-direction: column; /* Stack items vertically */
+    gap: 32px;
+    align-items: center; /* Center items in the column */
 }
 
 /* --- Left Column: Event Image --- */
@@ -2699,19 +2703,51 @@ body {
     flex-direction: column;
     gap: 16px;
     margin-top: 16px;
+    width: 100%; /* Ensure it takes full width */
 }
 
 .info-pill-row {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stack pills vertically on mobile */
     gap: 16px;
+    align-items: center; /* Center the pills */
 }
+
 
 .info-pill-row.justify-center {
     justify-content: center;
 }
 
+.qr-code-container {
+    display: none; /* This should already be hiding it on mobile, but let's ensure it */
+}
+
+@media (min-width: 1024px) {
+    .event-card {
+        display: grid;
+        grid-template-columns: 3fr 6fr 3fr;
+        gap: 32px;
+        padding: 32px;
+    }
+
+    .info-pill-row {
+        flex-direction: row; /* Return to horizontal rows */
+        justify-content: space-between;
+    }
+
+    .info-pill-row.justify-center {
+        justify-content: center;
+    }
+
+    .qr-code-container {
+        display: flex; /* Show QR code section on desktop */
+    }
+}
+
 .info-pill {
+      width: 100%; /* Make pills take full width */
+    max-width: 280px; /* But not too wide */
+    height: 68px;
     background-color: #000000;
     border-radius: 9999px;
     width: 250px;

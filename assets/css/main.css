@@ -15,6 +15,8 @@
 	.SINGLE POST (COMMENTS SIDEBAR TAGS LIST)
 	------------------------------------- */
 /*  ----------------------------------------------------
+
+
 1. GENERAL
 -------------------------------------------------------- */
 /* ----------------IMPORT GOOGLE FONTS ------------------- */
@@ -31,6 +33,26 @@
     --color-surface-darker: #1E1E1E;
     --color-border: #333333;
     --border-radius-sm: 8px;
+}
+
+/* =================================================================== */
+/* GLOBAL RESET & SCROLL FIX                                         */
+/* (Place at the very top of your main CSS file)                     */
+/* =================================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* Ensures padding and border are inside the element's width */
+    margin: 0;              /* Removes default browser margins */
+    padding: 0;             /* Removes default browser padding */
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* This is the final failsafe to hide any tiny overflow */
 }
 
 body {
@@ -3475,82 +3497,72 @@ body {
     }
 }
 
-/* ======================================================== */
-/* NEW & CORRECTED CSS FOR HALF-ORBITAL PAST SPEAKERS */
-/* ======================================================== */
+/* =================================================================== */
+/* FINAL CSS FOR THE "PAST SPEAKERS" SECTION               */
+/* =================================================================== */
 
+/* --- Section Container --- */
 .past-speakers-section {
     background-color: #000000;
     color: #ffffff;
-    padding: 100px 0;
+    padding: 80px 20px; /* Generous vertical padding for breathing room */
     font-family: 'Roboto', Helvetica, sans-serif;
     position: relative;
-    overflow: hidden;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+    overflow-x: hidden; /* Absolutely prevent horizontal scroll */
 }
 
-.background-glow {
-    position: absolute;
-    inset: 0;
-    transition: background 1s ease-in-out;
-    z-index: 0;
-}
-
-.past-speakers-section .container {
-    position: relative;
-    z-index: 1;
-}
-
+/* --- Section Title --- */
 .past-speakers-section .section-title {
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 60px; /* Increased space between title and orbital display */
 }
 
 .past-speakers-section .section-title h2 {
-    font-size: 48px;
+    font-size: 2rem; /* 32px - A strong but not overwhelming title size */
     font-weight: bold;
     color: #ffffff;
 }
 
 .past-speakers-section .title-underline {
-    width: 96px;
+    width: 80px;
     height: 4px;
     background-color: #e62b1e;
-    margin: 16px auto 0;
-    border-radius: 2px;
+    margin: 12px auto 0;
 }
 
+/* --- Main Content Grid (Mobile-First) --- */
 .speakers-content-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 80px;
+    grid-template-columns: 1fr; /* Single column layout */
+    /* The gap will be controlled by margins now for more precision */
+    gap: 0;
     align-items: center;
 }
 
-/* --- Orbital Image Display --- */
+/* --- Orbital Image Display (Primary Visual) --- */
 .orbital-display {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 450px;
+    min-height: 360px;
+    margin-bottom: 60px; /* KEY: Creates significant space before the text details */
 }
 
 .orbital-container {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 320px;
+    height: 320px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    padding-left: 10%;
 }
 
 #active-speaker-image-wrapper {
-    width: 280px;
-    height: 280px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
-    box-shadow: 0 0 30px 5px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 25px 3px rgba(255, 255, 255, 0.1);
     position: relative;
     z-index: 2;
     overflow: hidden;
@@ -3564,63 +3576,84 @@ body {
     animation: zoomIn 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
 }
 
-@keyframes zoomIn {
-    from { transform: scale(1.2); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-
-/* --- THIS IS THE KEY CHANGE FOR THE HALF-ORBIT --- */
 .orbiting-speaker {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 80px;
-    height: 80px;
-    margin: -40px;
+    width: 70px;
+    height: 70px;
+    margin: -35px;
     border-radius: 50%;
     border: 2px solid transparent;
-    background-color: #333;
+    background-color: #222;
     cursor: pointer;
-    transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55), border-color 0.5s ease, box-shadow 0.5s ease;
+    transition: all 0.5s ease;
     z-index: 3;
     overflow: hidden;
     padding: 0;
-    
-    /* JS will set --angle for positioning */
-    --radius: 200px; /* The distance from the center */
+    --radius: 145px;
     transform: rotate(var(--angle)) translateX(var(--radius)) rotate(calc(-1 * var(--angle)));
 }
 
-.orbiting-speaker:hover {
-    border-color: #e62b1e;
-}
-
-.orbiting-speaker.active {
-    border-color: white;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-}
-
-.orbiting-speaker img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    transition: transform 0.5s ease;
-}
-
-.orbiting-speaker:hover img {
-    transform: scale(1.1);
-}
-
-/* --- Speaker Details --- */
+/* --- Speaker Details (Secondary Visual, Resized for Harmony) --- */
 .speaker-details-wrapper {
-    position: relative;
+    position: relative; /* This is CRITICAL. It becomes the anchor for the arrows. */
     text-align: center;
-    min-height: 400px;
+    min-height: auto;
+    padding-bottom: 70px; /* Space for nav buttons on mobile */
 }
 
-.speaker-details {
-    animation: fadeInRight 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+/* --- Navigation Controls (The Arrows) --- */
+.navigation-controls {
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the wrapper */
+    left: 50%; /* Center horizontally on mobile */
+    transform: translateX(-50%);
+    z-index: 10; /* Ensure they are clickable */
+}
+
+.speaker-details h3 {
+    font-size: 2.5rem; /* 40px - KEY: Reduced size to make it less dominant */
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #e62b1e;
+    margin: 0 0 12px 0; /* Added bottom margin */
+}
+
+.speaker-details .title {
+    font-size: 1.125rem; /* 18px */
+    color: #d1d5db;
+    margin-bottom: 24px;
+    text-transform: uppercase; /* Adds a touch of class */
+    letter-spacing: 1px;
+}
+
+.speaker-details .quote-wrapper {
+    border: none; /* Removing the border for a cleaner look */
+    padding: 0;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.speaker-details .quote {
+    font-size: 1.25rem; /* 20px */
+    font-style: italic;
+    font-weight: 300;
+    color: #e5e7eb;
+    margin: 0;
+    line-height: 1.5; /* Improved line spacing */
+}
+
+/* Hide redundant or less critical elements on mobile for clarity */
+.speaker-details .event,
+.speaker-details .philosophy {
+    display: none;
+}
+
+/* --- Keyframe Animations (Unchanged) --- */
+@keyframes zoomIn {
+    from { transform: scale(1.2); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
 @keyframes fadeInRight {
@@ -3628,46 +3661,68 @@ body {
     to { opacity: 1; transform: translateX(0); }
 }
 
-.speaker-details h3 {
-    font-size: 52px;
-    font-weight: 800;
-    letter-spacing: -2px;
-    color: #e62b1e;
-    margin: 0 0 8px 0;
+/* =================================================================== */
+/* DESKTOP STYLES (Restores the original two-column layout)          */
+/* =================================================================== */
+@media (min-width: 1024px) {
+    .past-speakers-section .section-title {
+        margin-bottom: 80px;
+    }
+    .past-speakers-section .section-title h2 {
+        font-size: 48px;
+    }
+    .speakers-content-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+    }
+    .orbital-display {
+        margin-bottom: 0; /* Remove the large bottom margin on desktop */
+    }
+    .orbital-container {
+        width: 400px;
+        height: 400px;
+    }
+    #active-speaker-image-wrapper {
+        width: 280px;
+        height: 280px;
+    }
+    .orbiting-speaker {
+        --radius: 200px;
+        width: 80px;
+        height: 80px;
+        margin: -40px;
+    }
+    .speaker-details-wrapper {
+        text-align: left;
+    }
+    .speaker-details h3 {
+        font-size: 52px;
+    }
+    .speaker-details .title {
+        font-size: 20px;
+    }
+    .speaker-details .quote-wrapper {
+        border-left: 2px solid rgba(230, 43, 30, 0.5); /* Restore border on desktop */
+        padding-left: 24px;
+        margin: 0;
+    }
+    .speaker-details .quote {
+        font-size: 24px;
+    }
+    /* Restore hidden elements on desktop */
+    .speaker-details .event,
+    .speaker-details .philosophy {
+        display: block;
+    }
+    .navigation-controls {
+        /* KEY FIX: Reposition for desktop */
+        left: auto; /* Unset the left property */
+        right: 0;  /* Align to the right of the wrapper */
+        bottom: 0; /* Align to the bottom of the wrapper */
+        transform: none; /* Remove the horizontal centering transform */
+    }
 }
 
-.speaker-details .title {
-    font-size: 20px;
-    color: #d1d5db;
-    margin-bottom: 24px;
-}
-
-.speaker-details .quote-wrapper {
-    border-left: 2px solid rgba(230, 43, 30, 0.5);
-    padding-left: 24px;
-    margin: 0 auto;
-    max-width: 500px;
-}
-
-.speaker-details .quote {
-    font-size: 24px;
-    font-style: italic;
-    font-weight: 300;
-    color: #e5e7eb;
-    margin: 0 0 16px 0;
-}
-
-.speaker-details .event {
-    font-size: 18px;
-    color: #9ca3af;
-}
-
-.speaker-details .philosophy {
-    font-size: 20px;
-    color: #e5e7eb;
-    margin-top: 24px;
-    padding-left: 24px;
-}
 
 /* --- Navigation Controls with SVG Icons --- */
 .navigation-controls {
@@ -4731,3 +4786,36 @@ textarea.form-control {
         font-size: 0.8rem;
     }
 }
+
+/* ======================================================== */
+/* RESPONSIVE TYPOGRAPHY FIXES                              */
+/* ======================================================== */
+
+@media (max-width: 768px) {
+    h1, .h1 {
+        font-size: 2rem; /* 32px */
+    }
+
+    h2, .h2, .section-header h2 {
+        font-size: 1.75rem; /* 28px */
+        line-height: 1.2;
+    }
+
+    h3, .h3 {
+        font-size: 1.5rem; /* 24px */
+    }
+
+    .description, .tribute-text p {
+        font-size: 1rem; /* 16px */
+    }
+
+    /* Specifically for the "What is TEDx?" section header */
+    .section-header h2 {
+        font-size: 2.25rem; /* 36px, slightly larger for emphasis */
+    }
+
+    p {
+        font-size: 1rem; /* 16px */
+    }
+}
+

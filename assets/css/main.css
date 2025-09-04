@@ -79,6 +79,7 @@ h3,
 .h3 {
   font-size: 36px;
   margin-bottom: 25px;
+  color: #ffffff;
 }
 
 h4,
@@ -166,6 +167,7 @@ ul.nosyely_list {
   text-transform: uppercase;
   padding: 10px 0;
   font-size: 20px;
+  color: #ffffff;
 }
 .section_title .subtitle:before {
   width: 30px;
@@ -4047,7 +4049,7 @@ body {
   margin-bottom: 25px;
   font-size: 16px;
   font-weight: bold;
-  color: #18181c;
+  color: #f9f9fa;
   text-transform: capitalize;
 }
 .widget ul {
@@ -4071,7 +4073,7 @@ body {
   margin-left: 115px;
 }
 .widget_recent_posts .content a {
-  color: #18181c;
+  color: #e0e0e3;
   text-transform: capitalize;
   font-weight: 500;
   font-size: 15px;

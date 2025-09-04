@@ -35,25 +35,6 @@
     --border-radius-sm: 8px;
 }
 
-/* =================================================================== */
-/* GLOBAL RESET & SCROLL FIX                                         */
-/* (Place at the very top of your main CSS file)                     */
-/* =================================================================== */
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box; /* Ensures padding and border are inside the element's width */
-    margin: 0;              /* Removes default browser margins */
-    padding: 0;             /* Removes default browser padding */
-}
-
-html,
-body {
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden; /* This is the final failsafe to hide any tiny overflow */
-}
 
 body {
     margin: 0;

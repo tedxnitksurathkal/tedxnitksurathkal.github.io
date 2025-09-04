@@ -83,12 +83,11 @@
 }
 
 .vid-item-active {
-  border: 2px solid red;
-  background-color: rgb(231, 231, 231);
+  background-color: rgb(68, 68, 68);
 }
 
 .vid-item:hover {
-  background-color: #a6a6a6;
+  background-color:  rgb(68, 68, 68);
 }
 
 .thumb {
@@ -103,7 +102,7 @@
 }
 
 .vid-item .desc {
-  color: #000000;
+  color: #ece9e9;
   font-size: 15px;
   margin-top: 5px;
 }
@@ -111,6 +110,7 @@
 .arrows {
   position: relative;
   width: 100%;
+  color: #000;
 }
 
 .arrow-left {
@@ -136,6 +136,7 @@
 .tablinks {
   display: inline-block;
   white-space: nowrap;
+  color: white;
 }
 
 .tablinks {
@@ -158,7 +159,7 @@
 }
 
 .tablinks:hover {
-  background-color: #a6a6a6;
+  background-color: #ff7b7b;
 }
 
 .tablinks.active {
@@ -219,7 +220,7 @@
   padding-top: 11px;
   white-space: no-wrap;
   vertical-align: middle;
-  background-color: #fff;
+  background-color: #000000;
 }
 
 .scroller-right {

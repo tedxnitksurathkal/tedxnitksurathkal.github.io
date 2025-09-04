@@ -524,7 +524,7 @@
 
     <!-- Mailchimp Signup Form -->
     <section class="subscribe-section">
-        <h2 style="color: #ffffff;">
+        <h2 style="color: #ffffff; justify-content: center; text-align: center; align-items: center;">
             Upcoming Events? Theme Reveal? Speaker List?
         </h2>
 
@@ -782,59 +782,49 @@
         // FINAL SCRIPT FOR CONTINUOUS WATERFALL CAROUSEL
         // ========================================================
         document.addEventListener('DOMContentLoaded', () => {
-            if (typeof past_speakers === 'undefined' || past_speakers.length === 0) {
-                console.error("Past speakers data is not available.");
-                const section = document.querySelector('.past-speakers-section');
-                if (section) section.style.display = 'none';
-                return;
-            }
+    // Check if the necessary data and elements exist
+    if (typeof past_speakers === 'undefined' || past_speakers.length === 0) {
+        console.error("Past speakers data is not available.");
+        const section = document.querySelector('.past-speakers-section');
+        if (section) section.style.display = 'none';
+        return;
+    }
 
-            const speakersData = past_speakers.map((speaker, index) => ({
-                id: index + 1,
-                name: speaker.name || 'Unnamed Speaker',
-                title: speaker.title || 'TEDx Speaker',
-                quote: speaker.quote || '"Ideas Worth Spreading"',
-                event: speaker.event || 'TEDxNITKSurathkal',
-                philosophy: speaker.philosophy || '',
-                image: 'assets/img/past_editions/' + speaker.image,
-                color: ['#E62B1E', '#285AEB', '#009E60', '#D6249F', '#6A0DAD'][index % 5]
-            }));
+    // --- 1. DATA AND ELEMENT SETUP ---
+    const speakersData = past_speakers.map((speaker, index) => ({
+        id: index, // Use the index as the ID for easier lookup
+        name: speaker.name || 'Unnamed Speaker',
+        title: speaker.title || 'TEDx Speaker',
+        quote: speaker.quote || '"Ideas Worth Spreading"',
+        event: speaker.event || 'TEDxNITKSurathkal',
+        philosophy: speaker.philosophy || '',
+        image: 'assets/img/past_editions/' + speaker.image,
+        color: ['#E62B1E', '#285AEB', '#009E60', '#D6249F', '#6A0DAD'][index % 5]
+    }));
 
-            let activeIndex = 0; // Tracks the speaker in the center
-            const displayCount = 5; // Number of speakers in the orbit
+    let activeIndex = 0;
+    const displayCount = 5; // Number of speakers in the orbit
 
-            const backgroundGlow = document.querySelector('.background-glow');
-            const activeSpeakerWrapper = document.getElementById('active-speaker-image-wrapper');
-            const orbitingSpeakersContainer = document.getElementById('orbiting-speakers-container');
-            const detailsContainer = document.getElementById('speaker-details-container');
-            const prevBtn = document.getElementById('prev-speaker-btn');
-            const nextBtn = document.getElementById('next-speaker-btn');
+    const backgroundGlow = document.querySelector('.background-glow');
+    const activeSpeakerWrapper = document.getElementById('active-speaker-image-wrapper');
+    const orbitingSpeakersContainer = document.getElementById('orbiting-speakers-container');
+    const detailsContainer = document.getElementById('speaker-details-container');
+    const prevBtn = document.getElementById('prev-speaker-btn');
+    const nextBtn = document.getElementById('next-speaker-btn');
 
-            const prevArrowSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>`;
-            const nextArrowSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>`;
+    const prevArrowSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>`;
+    const nextArrowSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>`;
 
-            function updateDisplay(isNext = true) {
-                // --- 1. Animate Out Old Content ---
-                const oldImage = activeSpeakerWrapper.querySelector('img');
-                if (oldImage) oldImage.className = 'image-exit';
+    // --- 2. THE MAIN UPDATE FUNCTION ---
+    function updateDisplay( ) {
+        const activeSpeaker = speakersData[activeIndex];
 
-                // --- 2. Determine New Speaker Indices ---
-                // The active speaker is the one at activeIndex
-                const activeSpeaker = speakersData[activeIndex];
-
-                // The orbiting speakers are the NEXT 5 speakers in the list
-                const orbitingSpeakers = [];
-                for (let i = 1; i <= displayCount; i++) {
-                    const speakerIndex = (activeIndex + i) % speakersData.length;
-                    orbitingSpeakers.push(speakersData[speakerIndex]);
-                }
-
-                // --- 3. Update Text and Glow Immediately ---
-                if (backgroundGlow) {
-                    backgroundGlow.style.background = `radial-gradient(circle at 30% 50%, ${activeSpeaker.color}20 0%, transparent 50%)`;
-                }
-                if (detailsContainer) {
-                    detailsContainer.innerHTML = `
+        // Update background and text details
+        if (backgroundGlow) {
+            backgroundGlow.style.background = `radial-gradient(circle at 30% 50%, ${activeSpeaker.color}20 0%, transparent 50%)`;
+        }
+        if (detailsContainer) {
+            detailsContainer.innerHTML = `
                 <div class="speaker-details">
                     <h3>${activeSpeaker.name}</h3>
                     <p class="title">${activeSpeaker.title}</p>
@@ -843,53 +833,72 @@
                         <p class="event">${activeSpeaker.event}</p>
                     </div>
                     <p class="philosophy">${activeSpeaker.philosophy}</p>
-                </div>
-            `;
-                }
+                </div>`;
+        }
 
-                // --- 4. Update Images After a Short Delay (for exit animation) ---
-                setTimeout(() => {
-                    // New central image
-                    activeSpeakerWrapper.innerHTML = `<img src="${activeSpeaker.image}" alt="${activeSpeaker.name}" class="image-enter">`;
+        // Update the central image
+        activeSpeakerWrapper.innerHTML = `<img src="${activeSpeaker.image}" alt="${activeSpeaker.name}" class="image-enter">`;
 
-                    // New orbiting images
-                    orbitingSpeakersContainer.innerHTML = '';
-                    const angleStep = 180 / (displayCount - 1);
-                    const startAngle = -90;
+        // --- Rebuild the orbiting speakers ---
+        orbitingSpeakersContainer.innerHTML = '';
+        const angleStep = 180 / (displayCount - 1);
+        const startAngle = -90;
 
-                    orbitingSpeakers.forEach((s, displayIndex) => {
-                        const btn = document.createElement('button');
-                        btn.className = 'orbiting-speaker';
+        for (let i = 1; i <= displayCount; i++) {
+            const speakerIndex = (activeIndex + i) % speakersData.length;
+            const speaker = speakersData[speakerIndex];
+            
+            const btn = document.createElement('button');
+            btn.className = 'orbiting-speaker';
+            // Store the index of the speaker this button represents
+            btn.dataset.index = speakerIndex; 
 
-                        const angle = startAngle + (displayIndex * angleStep);
-                        const radius = 200;
-                        btn.style.transform = `rotate(${angle}deg) translateX(${radius}px) rotate(${-angle}deg)`;
+            const angle = startAngle + ((i - 1) * angleStep);
+            // Use CSS variables for radius for responsiveness
+            // The value is set in the CSS file
+            btn.style.transform = `rotate(${angle}deg) translateX(var(--radius, 200px)) rotate(${-angle}deg)`;
+            
+            btn.innerHTML = `<img src="${speaker.image}" alt="${speaker.name}">`;
+            orbitingSpeakersContainer.appendChild(btn);
+        }
+    }
 
-                        btn.innerHTML = `<img src="${s.image}" alt="${s.name}">`;
-                        orbitingSpeakersContainer.appendChild(btn);
-                    });
-                }, 150); // This delay should be less than the exit animation time
-            }
+    // --- 3. EVENT LISTENERS ---
+    if (prevBtn && nextBtn) {
+        prevBtn.innerHTML = prevArrowSVG;
+        nextBtn.innerHTML = nextArrowSVG;
 
-            if (prevBtn && nextBtn) {
-                prevBtn.innerHTML = prevArrowSVG;
-                nextBtn.innerHTML = nextArrowSVG;
-
-                prevBtn.onclick = () => {
-                    activeIndex = (activeIndex - 1 + speakersData.length) % speakersData.length;
-                    updateDisplay(false);
-                };
-                nextBtn.onclick = () => {
-                    activeIndex = (activeIndex + 1) % speakersData.length;
-                    updateDisplay(true);
-                };
-            }
-
-            // Initial load
+        prevBtn.onclick = () => {
+            activeIndex = (activeIndex - 1 + speakersData.length) % speakersData.length;
             updateDisplay();
+        };
+
+        nextBtn.onclick = () => {
+            activeIndex = (activeIndex + 1) % speakersData.length;
+            updateDisplay();
+        };
+    }
+
+    // *** THIS IS THE NEW, CORRECTED PART ***
+    if (orbitingSpeakersContainer) {
+        orbitingSpeakersContainer.addEventListener('click', (event) => {
+            // Find the button that was clicked, even if the click was on the image inside it
+            const clickedButton = event.target.closest('.orbiting-speaker');
+            
+            if (clickedButton && clickedButton.dataset.index) {
+                // Get the index we stored on the button
+                const newIndex = parseInt(clickedButton.dataset.index, 10);
+                
+                // Set the new active index and update the display
+                activeIndex = newIndex;
+                updateDisplay();
+            }
         });
+    }
 
-
+    // --- 4. INITIAL LOAD ---
+    updateDisplay();
+});
 
         document.getElementById("mc-embedded-subscribe").addEventListener("click", (event) => {
             event.preventDefault()

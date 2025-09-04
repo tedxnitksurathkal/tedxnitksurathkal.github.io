@@ -1,7 +1,7 @@
 /* Heading styles */
 .event-subheading {
   display: block;
-  color: #3e3e3f;
+  color: #d5d5d7;
   font-size: 0.7em;
 }
 
@@ -15,7 +15,7 @@
 
 /* FAQ section css */
 #faq a {
-  color: #000;
+  color: #fcfafa;
   transition: 0.5s;
   text-decoration: none;
 }
@@ -70,13 +70,13 @@
 }
 
 #faq #faq-list a.collapse {
-  color: #000;
+  color: #838383;
 }
 
 #faq #faq-list a.collapsed {
-  color: #000;
+  color: #838383;
 }
 
 #faq #faq-list a.collapsed:hover {
-  color: #838383;
+  color: #ffffff;
 }

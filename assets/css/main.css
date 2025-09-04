@@ -2666,7 +2666,7 @@ body {
 }
 
 .image-bg {
-    background-color: #ffffff;
+    background-color: #2a2929;
     padding: 8px;
     width: 250px;
     height: 275px;
@@ -3368,11 +3368,13 @@ body {
 }
 
 /* Main Grid Layout */
+
 .speakers-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Single column on mobile */
-    gap: 80px;
-    align-items: center;
+  display: flex;
+  justify-content: center;   /* Centers horizontally */
+  align-items: center;       /* Centers vertically */
+  flex-direction: column;    /* Stacks text and future image vertically */
+  text-align: center;        /* Centers text inside */
 }
 
 /* Left Column: Text Content */

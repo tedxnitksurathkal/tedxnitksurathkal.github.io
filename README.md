@@ -83,9 +83,9 @@ serve
 
 We welcome contributions to improve the website. Follow these steps:
 
--Fork the repository
+- Fork the repository
 
--Create a branch:
+- Create a branch:
 ```bash
 git checkout -b feature/<your-feature-name>
 ```

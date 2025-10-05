@@ -86,6 +86,46 @@
             opacity: 0;
         }
     }
+
+    /* 1. Make the hero-section a positioning context */
+    .hero-section {
+        position: relative; /* This is crucial for positioning children inside it */
+        /* Keep your other styles like height, width, etc. */
+        height: 60vh; /* Example height */
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* 2. Position the button */
+    .tedx-button {
+        position: absolute; /* Positions the button relative to .hero-section */
+        bottom: 60px;       /* 20px from the bottom */
+        right: 40px;        /* 20px from the right */
+        z-index: 10;        /* Ensures the button is on top of the video */
+        color: #ffffff !important;
+        font: "Roboto";
+    }
+
+    .toast-message {
+        position: fixed; /* Stays on screen even if you scroll */
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%); /* Center it horizontally */
+        background-color: #333;
+        color: #fff;
+        padding: 12px 25px;
+        border-radius: 50px;
+        z-index: 1000;
+        opacity: 0; /* Hidden by default */
+        visibility: hidden;
+        transition: opacity 0.5s, visibility 0.5s;
+    }
+
+    .toast-message.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
 </style>
 
 <body>
@@ -93,10 +133,6 @@
         <div class="loader-outter"></div>
         <div class="loader-inner" style="background-image: url('assets/img/loader.png');"></div>
     </div>
-    <!--
-        Use this if you want the header to turn black on scroll.
-    <header class="header navbar fixed-top navbar-expand-md ">
-    -->
     <!--header start here -->
     <header class="header navbar fixed-top navbar-expand-md" style="background-color: black;">
         <div class="container">
@@ -143,21 +179,23 @@
             </div>
         </div>
     </header>
+
     <!--header end here-->
     <!--cover section slider -->
+    <!--
     <main class="hero-section">
         <div class="hero-container">
-            <!-- IMPORTANT: Make sure this path to your image is correct -->
+            
             <img src="assets/img/Home.png" alt="A large red X made of horizontal glitchy lines" class="hero-x-graphic">
             
             <div class="text-overlay">
-                <!-- Top Line: WORTH SPREADING -->
+                
                 <div class="headline-group top-group">
                     <span class="word-worth">IGNITE</span>
                     <span class="word-spreading">MINDS</span>
                 </div>
 
-                <!-- Bottom Line: LOCALLY AMPLIFIED -->
+                
                 <div class="headline-group bottom-group">
                     <span class="word-locally">LOCALLY&nbsp;&nbsp;&nbsp;&nbsp;</span>
                     <span class="word-amplified">AMPLIFIED</span>
@@ -165,6 +203,23 @@
             </div>
         </div>
     </main>
+    -->
+
+    <main class="hero-section">
+        <div class="hero-container">
+            <video autoplay loop muted playsinline class="hero-x-graphic" style="width: 70vw;" src="assets/theme/hero.mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <a href="#" class="tedx-button" id="register-button">
+            <span>REGISTER NOW</span>
+            <div class="arrow-circle">
+                <i class="fa-solid fa-arrow-up"></i>
+            </div>
+        </a>
+    </main>
+
 
     <!-- my code starts here -->
     <!-- <section class="image-section" style="position: relative; text-align: center; margin-top: 80px;">
@@ -173,10 +228,7 @@
        
         <div class="particle-container"></div>
     
-        
-
-    
-</section> -->
+    </section> -->
 
 
     <!-- ends here -->
@@ -667,6 +719,9 @@
 
     <!--footer end -->
 
+    <div id="coming-soon-toast" class="toast-message">Coming Soon</div>
+
+
     <!-- ========== SCRIPTS ========== -->
 
     <!-- Carousel CSS -->
@@ -696,6 +751,24 @@
     <script src="assets/js/title.js"></script>
     <script src="assets/js/past-speakers.js"></script>
     <script src="assets/js/speakers.js"></script>
+    <script>
+    // Get the button and the toast message element
+    const registerButton = document.getElementById('register-button');
+    const toastMessage = document.getElementById('coming-soon-toast');
+
+    // Listen for a click on the button
+    registerButton.addEventListener('click', function(event) {
+        event.preventDefault(); // Stop the link from navigating
+
+        // Show the toast message
+        toastMessage.classList.add('show');
+
+        // Hide the message after 3 seconds
+        setTimeout(function() {
+            toastMessage.classList.remove('show');
+        }, 3000); // 3000 milliseconds = 3 seconds
+    });
+</script>
 
     <script>
         // Create countdown slider

@@ -212,12 +212,13 @@
             </video>
         </div>
 
-        <a href="#" class="tedx-button1 tedx-button" id="register-button">
-            <span>REGISTER NOW</span>
+        <a href="./intro-luck.html" class="tedx-button1 tedx-button" id="register-button">
+            <span>BEGIN GAME</span>
             <div class="arrow-circle">
                 <i class="fa-solid fa-arrow-up"></i>
             </div>
         </a>
+
     </main>
 
 
@@ -719,8 +720,6 @@
 
     <!--footer end -->
 
-    <div id="coming-soon-toast" class="toast-message">Coming Soon</div>
-
 
     <!-- ========== SCRIPTS ========== -->
 
@@ -751,24 +750,6 @@
     <script src="assets/js/title.js"></script>
     <script src="assets/js/past-speakers.js"></script>
     <script src="assets/js/speakers.js"></script>
-    <script>
-    // Get the button and the toast message element
-    const registerButton = document.getElementById('register-button');
-    const toastMessage = document.getElementById('coming-soon-toast');
-
-    // Listen for a click on the button
-    registerButton.addEventListener('click', function(event) {
-        event.preventDefault(); // Stop the link from navigating
-
-        // Show the toast message
-        toastMessage.classList.add('show');
-
-        // Hide the message after 3 seconds
-        setTimeout(function() {
-            toastMessage.classList.remove('show');
-        }, 3000); // 3000 milliseconds = 3 seconds
-    });
-</script>
 
     <script>
         // Create countdown slider

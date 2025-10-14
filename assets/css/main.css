@@ -4351,102 +4351,174 @@ textarea.form-control {
 
 /* Section background */
 .subscribe-section {
-  background: #000;
-  padding: 80px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+            background: #000;
+            padding: 80px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
 
-/* Card wrapper */
-.subscribe-card {
-  background: #111;
-  border: 1px solid rgba(255, 0, 0, 0.4);
-  border-radius: 24px;
-  padding: 40px 30px;
-  max-width: 500px;
-  width: 100%;
-  box-shadow: 0 0 30px rgba(255, 0, 0, 0.15);
-  margin: 0 auto;
-}
+        .subscribe-card {
+            background: #111;
+            border: 1px solid rgba(255, 0, 0, 0.4);
+            border-radius: 24px;
+            padding: 40px 30px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.15);
+            margin: 0 auto;
+        }
 
-/* Title */
-.subscribe-title {
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 2px;
-}
+        .subscribe-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 2rem; /* Increased margin */
+        }
 
-/* Input groups */
-.form-group {
-    margin-bottom: 20px;
-}
+        .form-group {
+            margin-bottom: 20px;
+        }
 
-.form-group label {
-    display: block;
-    font-family: var(--font-secondary); /* Use consistent font */
-    font-size: 0.875rem;                 /* 14px, fits our scale */
-    color: var(--color-text-muted);      /* Use consistent muted color */
-    margin-bottom: 8px;
-}
+        .form-group label {
+            display: block;
+            font-family: var(--font-secondary);
+            font-size: 0.875rem;
+            color: var(--color-text-muted);
+            margin-bottom: 8px;
+        }
 
-.form-group input {
-    width: 100%;
-    padding: 12px 15px;
-    border-radius: var(--border-radius-sm); /* Use consistent border radius */
-    border: 1px solid var(--color-border);  /* Use consistent border color */
-    background: var(--color-surface-darker);/* Use consistent surface color */
-    color: var(--color-text-primary);       /* Use consistent text color */
-    font-family: var(--font-secondary);     /* Use consistent font */
-    font-size: 1rem;                        /* Use base font size (16px) */
-    outline: none;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border-radius: var(--border-radius-sm);
+            border: 1px solid var(--color-border);
+            background: var(--color-surface-darker);
+            color: var(--color-text-primary);
+            font-family: var(--font-secondary);
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            box-sizing: border-box; /* Important for consistency */
+        }
 
-.form-group input::placeholder {
-    color: var(--color-text-muted);
-    opacity: 0.7;
-}
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: var(--color-text-muted);
+            opacity: 0.7;
+        }
 
-.form-group input:focus {
-    border-color: var(--color-primary); /* Use consistent primary color */
-    box-shadow: 0 0 0 3px rgba(230, 43, 30, 0.3); /* Glow effect using primary color */
-}
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(230, 43, 30, 0.3);
+        }
 
-/* --- Submit Button (Refactored) --- */
-.form-submit button {
-    width: 100%;
-    background: var(--color-primary); /* Use consistent primary color */
-    color: var(--color-text-primary); /* Use consistent text color */
-    border: none;
-    border-radius: var(--border-radius-sm); /* Use consistent border radius */
-    padding: 16px;
-    font-family: var(--font-primary); /* Use primary font for bold action button */
-    font-size: 1rem;                  /* Use base font size */
-    font-weight: 700;                 /* Use consistent bold weight */
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
+        .form-submit button {
+            width: 100%;
+            background: var(--color-primary);
+            color: var(--color-text-primary);
+            border: none;
+            border-radius: var(--border-radius-sm);
+            padding: 16px;
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
 
-.form-submit button:hover {
-    background: var(--color-primary-darker); /* Use consistent darker hover color */
-    transform: translateY(-2px);
-}
-.form-submit .arrow {
-  background: rgba(255,255,255,0.3);
-  padding: 6px 8px;
-  border-radius: 50%;
-  font-size: 16px;
-}
+        .form-submit button:hover:not(:disabled) {
+            background: var(--color-primary-darker);
+            transform: translateY(-2px);
+        }
+
+        .form-submit button:disabled {
+            background-color: #555;
+            cursor: not-allowed;
+        }
+
+        .form-submit .arrow {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 6px 8px;
+            border-radius: 50%;
+            font-size: 16px;
+        }
+
+        .divider-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            margin-top: 0rem;
+            margin-bottom: 2rem;
+        }
+
+        .line {
+            width: 8rem;
+            height: 1px;
+            background-color: #4b5563;
+        }
+
+        .divider-text {
+            font-weight: 400;
+            font-size: 1.125rem;
+            color: #d1d5db;
+            text-align: center;
+        }
+
+        .highlight {
+            color: #ff2b06;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #form-response {
+            text-align: center;
+            margin-top: 1.5rem;
+            padding: 1rem;
+            border-radius: 6px;
+            font-weight: 500;
+            color: white;
+        }
+
+        #form-response.success {
+            background-color: #28a745;
+        }
+
+        #form-response.error {
+            background-color: #dc3545;
+        }
+
+        @media (max-width: 600px) {
+            .subscribe-card {
+                padding: 30px 20px;
+            }
+            .subscribe-title {
+                font-size: 20px;
+            }
+            .form-submit button {
+                font-size: 16px;
+                padding: 14px;
+            }
+            .divider-text {
+                font-size: 1rem;
+            }
+        }
 
 /* Responsiveness */
 @media (max-width: 600px) {

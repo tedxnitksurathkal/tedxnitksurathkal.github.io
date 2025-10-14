@@ -173,7 +173,15 @@
                         <a class="nav-link " href="/contact"><strong>Contact</strong></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="./intro-luck.html"><strong>Game</strong></a>
+                        <a class="nav-link" 
+                        href="./intro-luck.html" 
+                        style="background-color: #E62B1E; color: white; border-radius: 20px; padding: 10px 40px !important; margin: 10px 0; display: inline-block; position: relative; overflow: hidden; text-align: center; line-height: 1.5; transition: all 0.3s ease;"
+                        onmouseover="this.querySelector('.default-text').style.transform='translateY(-150%)'; this.querySelector('.hover-text').style.transform='translateY(0)';"
+                        onmouseout="this.querySelector('.default-text').style.transform='translateY(0)'; this.querySelector('.hover-text').style.transform='translateY(150%)';">
+
+                            <strong class="default-text" style="display: block; transition: transform 0.3s ease;">Play Game</strong>
+                            <span class="hover-text" style="display: block; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; height: fit-content; font-weight: normal; font-size: 8.8px; transform: translateY(150%); transition: transform 0.3s ease;">Play game to reveal speakers</span>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -211,9 +219,9 @@
                 Your browser does not support the video tag.
             </video>
         </div>
-
-        <a href="./intro-luck.html" class="tedx-button1 tedx-button" id="register-button">
-            <span>BEGIN GAME</span>
+        
+        <a href="#" class="tedx-button1 tedx-button" id="register-button">
+            <span id="button-text">REGISTER NOW</span>
             <div class="arrow-circle">
                 <i class="fa-solid fa-arrow-up"></i>
             </div>
@@ -232,7 +240,7 @@
     </section> -->
 
 
-    <!-- ends here -->
+    <!-- ends here --> 
 
     <section class="event-details-section">
         <div class="container">
@@ -578,70 +586,89 @@
     <!-- Mailchimp Signup Form -->
     <section class="subscribe-section">
         <h2 style="color: #ffffff; justify-content: center; text-align: center; align-items: center;">
-            Upcoming Events? Theme Reveal? Speaker List?
+            Register for our Next Event
         </h2>
 
         <div class="divider-section">
             <div class="line"></div>
             <p class="divider-text">
-                Sign up below to receive latest
-                <span class="highlight">TEDx NITK</span> news
+                Fill the form below to secure
+                <span class="highlight">your spot</span>
             </p>
             <div class="line"></div>
         </div>
 
         <div class="container">
-            <div id="contact-form-success" style="display: none;">
-                <h4>THANK YOU</h4>
-            </div>
+            <div class="subscribe-card">
+                <h3 class="subscribe-title">Event Registration Form 📝</h3>
+                
+                <!-- This is our new form that will talk to the backend -->
+                <form id="registration-form">
+                    
+                    <!-- Name (Combined First and Last) -->
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Ex: Adithya MahaThakur" required />
+                    </div>
 
-            <div id="contact-form">
-                <form
-                    action="https://gmail.us7.list-manage.com/subscribe/post-json?u=8b2cc0faea38709e307aceffe&amp;id=0b4bdf521a&amp;c=?"
-                    method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank"
-                    novalidate>
-                    <div class="subscribe-card">
-                        <h3 class="subscribe-title">Subscribe Now !! 🎉</h3>
+                    <!-- College Selection Dropdown -->
+                    <div class="form-group">
+                        <label for="college-type">Are you an NITK Surathkal student?</label>
+                        <select id="college-type" name="college-type" required>
+                            <option value="" disabled selected>-- Please select --</option>
+                            <option value="nitk">Yes</option>
+                            <option value="non-nitk">No</option>
+                        </select>
+                    </div>
 
-                        <!-- First Name -->
+                    <!-- Fields for NITK Students (Initially Hidden) -->
+                    <div id="nitk-fields" class="hidden">
                         <div class="form-group">
-                            <label for="mce-FNAME">Enter First Name</label>
-                            <input type="text" placeholder="Ex: Adithya" name="FNAME" id="mce-FNAME" />
+                            <label for="nitk-email">NITK Email Address</label>
+                            <input type="email" id="nitk-email" name="nitk-email" placeholder="Ex: adithya.221ec@nitk.edu.in" />
                         </div>
-
-                        <!-- Last Name -->
                         <div class="form-group">
-                            <label for="mce-LNAME">Enter Last Name</label>
-                            <input type="text" placeholder="Ex: MahaThakur" name="LNAME" id="mce-LNAME" />
-                        </div>
-
-                        <!-- Email -->
-                        <div class="form-group">
-                            <label for="mce-EMAIL">Enter Email Address</label>
-                            <input type="email" placeholder="Ex: xyz@mail.com" name="EMAIL" class="required email"
-                                id="mce-EMAIL" />
-                        </div>
-
-                        <!-- Button -->
-                        <div class="form-submit">
-                            <button type="submit" name="subscribe" id="mc-embedded-subscribe">
-                                <span>Submit</span>
-                                <span class="arrow">➜</span>
-                            </button>
-                        </div>
-
-                        <!-- Mailchimp hidden trap -->
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                            <input type="text" name="b_8b2cc0faea38709e307aceffe_0b4bdf521a" tabindex="-1" value="" />
-                        </div>
-
-                        <!-- Responses -->
-                        <div id="mce-responses" class="clear">
-                            <div class="response" id="mce-error-response" style="display:none"></div>
-                            <div class="response" id="mce-success-response" style="display:none"></div>
+                            <label for="roll-number">Roll Number</label>
+                            <input type="text" id="roll-number" name="roll-number" placeholder="Ex: 221EC100" />
                         </div>
                     </div>
+
+                    <!-- Fields for Non-NITK Students (Initially Hidden) -->
+                    <div id="non-nitk-fields" class="hidden">
+                        <div class="form-group">
+                            <label for="college-name">Your College/Institution Name</label>
+                            <input type="text" id="college-name" name="college-name" placeholder="Ex: Manipal Institute of Technology" />
+                        </div>
+                        <div class="form-group">
+                            <label for="general-email">Email Address</label>
+                            <input type="email" id="general-email" name="general-email" placeholder="Ex: adithya@example.com" />
+                        </div>
+                    </div>
+
+                    <!-- Reason for Attending -->
+                    <div class="form-group">
+                        <label for="reason">Why do you want to attend this event?</label>
+                        <textarea id="reason" name="reason" rows="4" placeholder="Tell us what excites you about TEDx!" required></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-submit">
+                        <button type="submit" id="submit-button">
+                            <span>Register</span>
+                            <span class="arrow">➜</span>
+                        </button>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a href="https://tedx-nitk-pacman-game.vercel.app/all-speakers" class="tedx-button">
+                            <span>Speaker Reveal</span>
+                        </a>
+                    </div>
+
                 </form>
+
+                <!-- This div will show success or error messages from the backend -->
+                <div id="form-response" class="hidden"></div>
             </div>
         </div>
     </section>
@@ -750,7 +777,93 @@
     <script src="assets/js/title.js"></script>
     <script src="assets/js/past-speakers.js"></script>
     <script src="assets/js/speakers.js"></script>
+    <script>
+        // --- CONFIGURATION ---
+        // This URL points to your backend. If you deploy your backend, change this URL.
+        const API_URL = 'https://tedx-backend-lyart.vercel.app/api/register';
 
+        // --- ELEMENT REFERENCES ---
+        const form = document.getElementById('registration-form' );
+        const collegeTypeSelect = document.getElementById('college-type');
+        const nitkFields = document.getElementById('nitk-fields');
+        const nonNitkFields = document.getElementById('non-nitk-fields');
+        const formResponse = document.getElementById('form-response');
+        const submitButton = document.getElementById('submit-button');
+
+        // --- INPUTS ---
+        const nitkEmailInput = document.getElementById('nitk-email');
+        const rollNumberInput = document.getElementById('roll-number');
+        const collegeNameInput = document.getElementById('college-name');
+        const generalEmailInput = document.getElementById('general-email');
+
+        // --- EVENT LISTENER FOR DROPDOWN ---
+        collegeTypeSelect.addEventListener('change', () => {
+            const isNitk = collegeTypeSelect.value === 'nitk';
+            
+            nitkFields.classList.toggle('hidden', !isNitk);
+            nonNitkFields.classList.toggle('hidden', isNitk);
+
+            // Update 'required' status for browser validation
+            nitkEmailInput.required = isNitk;
+            rollNumberInput.required = isNitk;
+            collegeNameInput.required = !isNitk;
+            generalEmailInput.required = !isNitk;
+        });
+
+        // --- EVENT LISTENER FOR FORM SUBMISSION ---
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault(); // Stop the form from refreshing the page
+
+            // Disable button and show loading state
+            submitButton.disabled = true;
+            submitButton.querySelector('span').textContent = 'Submitting...';
+            formResponse.className = 'hidden'; // Hide any previous messages
+
+            const isNitk = collegeTypeSelect.value === 'nitk';
+            
+            // Collect data into a structured object for the backend
+            const registrationData = {
+                name: document.getElementById('name').value,
+                reason: document.getElementById('reason').value,
+                college: isNitk ? 'NITK Surathkal' : collegeNameInput.value,
+                email: isNitk ? nitkEmailInput.value : generalEmailInput.value,
+                rollNumber: isNitk ? rollNumberInput.value : null,
+            };
+
+            try {
+                // Send the data to our backend API
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(registrationData),
+                });
+
+                const result = await response.json();
+
+                if (!response.ok) {
+                    // If the server sent an error, display it
+                    throw new Error(result.error || 'An unknown server error occurred.');
+                }
+
+                // Handle success
+                formResponse.textContent = 'Thank you! Your registration was successful.';
+                formResponse.className = 'success';
+                form.reset(); // Clear the form fields
+                // Hide conditional fields again
+                nitkFields.classList.add('hidden');
+                nonNitkFields.classList.add('hidden');
+
+            } catch (error) {
+                // Handle failure (network error or error from server)
+                formResponse.textContent = `Error: ${error.message}`;
+                formResponse.className = 'error';
+            } finally {
+                // Re-enable the button whether it succeeded or failed
+                submitButton.disabled = false;
+                submitButton.querySelector('span').textContent = 'Register';
+            }
+        });
+    </script>
     <script>
         // Create countdown slider
         $(function () {
@@ -1021,6 +1134,14 @@
             }
         }
         createParticles();
+    </script>
+
+    <script>
+        // Text click → scroll to subscribe section
+        document.getElementById("button-text").addEventListener("click", (e) => {
+            e.preventDefault();
+            document.querySelector(".subscribe-section").scrollIntoView({ behavior: "smooth" });
+        });
     </script>
 
 </body>

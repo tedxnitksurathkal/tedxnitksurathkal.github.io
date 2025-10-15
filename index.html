@@ -106,6 +106,47 @@
         font: "Roboto";
     }
 
+    /* Highlight the Register button a bit more */
+    #register-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #E62B1E;
+        color: #ffffff !important;
+        padding: 12px 22px;
+        border-radius: 28px;
+        border: 2px solid rgba(255, 255, 255, 0.85);
+        box-shadow: 0 8px 22px rgba(230, 43, 30, 0.35);
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        font-weight: 700;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        animation: softPulse 2.5s ease-in-out infinite;
+    }
+
+    #register-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 28px rgba(230, 43, 30, 0.45);
+        background: #ff3b2e;
+        border-color: #ffffff;
+    }
+
+    #register-button:focus {
+        outline: 2px solid #ffffff;
+        outline-offset: 3px;
+    }
+
+    #button-text {
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        font-weight: 800;
+    }
+
+    @keyframes softPulse {
+        0%, 100% { box-shadow: 0 8px 22px rgba(230, 43, 30, 0.30); }
+        50% { box-shadow: 0 10px 28px rgba(230, 43, 30, 0.50); }
+    }
+
     .toast-message {
         position: fixed; /* Stays on screen even if you scroll */
         bottom: 20px;
@@ -410,26 +451,23 @@
         <div class="container">
 
             <!-- Section Title -->
-            <div class="section-title" style="align-items: center;justify-content:center;text-align: center;">
+            <div class="section-title" style="align-items: center;justify-content:center;text-align: center; margin-bottom: 10px;">
                 <h2>OUR <span class="text-red">SPEAKERS</span></h2>
                 <div class="title-underline"></div>
                 <p class="subtitle">
                     Prepare to be inspired by a curated lineup of brilliant thinkers, innovators, and storytellers.
                 </p>
+                <div style="text-align: center; margin-top: 16px; margin-bottom: 0;">
+                    <a href="https://tedx-nitk-pacman-game.vercel.app/all-speakers" class="tedx-button">
+                        <span>Speaker Reveal</span>
+                    </a>
+                </div>
             </div>
 
             <!-- Main Content Grid -->
             <div class="speakers-grid">
                 <!-- Left Column: Text Content -->
                 <div class="text-content">
-                    <h3>Meet The Minds Shaping Our Future</h3>
-                    <p>
-                        The full speaker lineup is coming soon. Get ready to explore groundbreaking ideas and fresh
-                        perspectives.
-                    </p>
-                    <button class="coming-soon-btn" disabled>
-                        Full Lineup Coming Soon
-                    </button>
                 </div>
 
                 <!-- Right Column: Image Placeholder -->

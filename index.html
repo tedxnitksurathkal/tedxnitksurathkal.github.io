@@ -261,7 +261,7 @@
             </video>
         </div>
         
-        <a href="#" class="tedx-button1 tedx-button" id="register-button">
+        <a href="#subscribe" class="tedx-button1 tedx-button" id="register-button">
             <span id="button-text">REGISTER NOW</span>
             <div class="arrow-circle">
                 <i class="fa-solid fa-arrow-up"></i>
@@ -622,7 +622,7 @@
 
 
     <!-- Mailchimp Signup Form -->
-    <section class="subscribe-section">
+    <section class="subscribe-section" id="subscribe">
         <h2 style="color: #ffffff; justify-content: center; text-align: center; align-items: center;">
             Register for our Next Event
         </h2>
@@ -1175,11 +1175,17 @@
     </script>
 
     <script>
-        // Text click → scroll to subscribe section
-        document.getElementById("button-text").addEventListener("click", (e) => {
-            e.preventDefault();
-            document.querySelector(".subscribe-section").scrollIntoView({ behavior: "smooth" });
-        });
+        // Click on the whole button → smooth scroll to subscribe section (single tap/click)
+        const registerBtn = document.getElementById("register-button");
+        if (registerBtn) {
+            registerBtn.addEventListener("click", (e) => {
+                const target = document.getElementById("subscribe") || document.querySelector(".subscribe-section");
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: "smooth" });
+                }
+            });
+        }
     </script>
 
 </body>

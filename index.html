@@ -681,6 +681,10 @@
                             <label for="general-email">Email Address</label>
                             <input type="email" id="general-email" name="general-email" placeholder="Ex: adithya@example.com" />
                         </div>
+                        <div class="form-group" id="phone-field">
+                            <label for="phone-number">Phone Number</label>
+                            <input type="text" id="phone-number" name="phone-number" placeholder="Ex: 9876543210" />
+                        </div>
                     </div>
 
                     <!-- Reason for Attending -->
@@ -815,93 +819,136 @@
     <script src="assets/js/title.js"></script>
     <script src="assets/js/past-speakers.js"></script>
     <script src="assets/js/speakers.js"></script>
+    
     <script>
-        // --- CONFIGURATION ---
-        // This URL points to your backend. If you deploy your backend, change this URL.
-        const API_URL = 'https://tedx-backend-lyart.vercel.app/api/register';
+    // --- CONFIGURATION ---
+    const API_URL = 'https://tedx-backend-lyart.vercel.app/api/register';
 
-        // --- ELEMENT REFERENCES ---
-        const form = document.getElementById('registration-form' );
-        const collegeTypeSelect = document.getElementById('college-type');
-        const nitkFields = document.getElementById('nitk-fields');
-        const nonNitkFields = document.getElementById('non-nitk-fields');
-        const formResponse = document.getElementById('form-response');
-        const submitButton = document.getElementById('submit-button');
+    // --- ELEMENT REFERENCES ---
+    const form = document.getElementById('registration-form');
+    const collegeTypeSelect = document.getElementById('college-type');
+    const nitkFields = document.getElementById('nitk-fields');
+    const nonNitkFields = document.getElementById('non-nitk-fields');
+    const formResponse = document.getElementById('form-response');
+    const submitButton = document.getElementById('submit-button');
 
-        // --- INPUTS ---
-        const nitkEmailInput = document.getElementById('nitk-email');
-        const rollNumberInput = document.getElementById('roll-number');
-        const collegeNameInput = document.getElementById('college-name');
-        const generalEmailInput = document.getElementById('general-email');
+    // --- INPUTS ---
+    const nitkEmailInput = document.getElementById('nitk-email');
+    const rollNumberInput = document.getElementById('roll-number');
+    const collegeNameInput = document.getElementById('college-name');
+    const generalEmailInput = document.getElementById('general-email');
+    const phoneInput = document.getElementById('phone-number'); // Add this in your HTML
 
-        // --- EVENT LISTENER FOR DROPDOWN ---
-        collegeTypeSelect.addEventListener('change', () => {
-            const isNitk = collegeTypeSelect.value === 'nitk';
-            
-            nitkFields.classList.toggle('hidden', !isNitk);
-            nonNitkFields.classList.toggle('hidden', isNitk);
+    // --- EVENT LISTENER FOR DROPDOWN ---
+    collegeTypeSelect.addEventListener('change', () => {
+        const isNitk = collegeTypeSelect.value === 'nitk';
+        
+        nitkFields.classList.toggle('hidden', !isNitk);
+        nonNitkFields.classList.toggle('hidden', isNitk);
 
-            // Update 'required' status for browser validation
-            nitkEmailInput.required = isNitk;
-            rollNumberInput.required = isNitk;
-            collegeNameInput.required = !isNitk;
-            generalEmailInput.required = !isNitk;
-        });
+        // Update 'required' status for browser validation
+        nitkEmailInput.required = isNitk;
+        rollNumberInput.required = isNitk;
+        collegeNameInput.required = !isNitk;
+        generalEmailInput.required = !isNitk;
+    });
 
-        // --- EVENT LISTENER FOR FORM SUBMISSION ---
-        form.addEventListener('submit', async (event) => {
-            event.preventDefault(); // Stop the form from refreshing the page
+    // --- EVENT LISTENER FOR FORM SUBMISSION ---
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
 
-            // Disable button and show loading state
-            submitButton.disabled = true;
-            submitButton.querySelector('span').textContent = 'Submitting...';
-            formResponse.className = 'hidden'; // Hide any previous messages
+        submitButton.disabled = true;
+        submitButton.querySelector('span').textContent = 'Submitting...';
+        formResponse.className = 'hidden';
 
-            const isNitk = collegeTypeSelect.value === 'nitk';
-            
-            // Collect data into a structured object for the backend
-            const registrationData = {
-                name: document.getElementById('name').value,
-                reason: document.getElementById('reason').value,
-                college: isNitk ? 'NITK Surathkal' : collegeNameInput.value,
-                email: isNitk ? nitkEmailInput.value : generalEmailInput.value,
-                rollNumber: isNitk ? rollNumberInput.value : null,
-            };
+        const isNitk = collegeTypeSelect.value === 'nitk';
+        let valid = true;
+        let errorMsg = '';
 
-            try {
-                // Send the data to our backend API
-                const response = await fetch(API_URL, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(registrationData),
-                });
+        // --- VALIDATIONS ---
 
-                const result = await response.json();
-
-                if (!response.ok) {
-                    // If the server sent an error, display it
-                    throw new Error(result.error || 'An unknown server error occurred.');
-                }
-
-                // Handle success
-                formResponse.textContent = 'Thank you! Your registration was successful.';
-                formResponse.className = 'success';
-                form.reset(); // Clear the form fields
-                // Hide conditional fields again
-                nitkFields.classList.add('hidden');
-                nonNitkFields.classList.add('hidden');
-
-            } catch (error) {
-                // Handle failure (network error or error from server)
-                formResponse.textContent = `Error: ${error.message}`;
-                formResponse.className = 'error';
-            } finally {
-                // Re-enable the button whether it succeeded or failed
-                submitButton.disabled = false;
-                submitButton.querySelector('span').textContent = 'Register';
+        // NITK Email
+        if (isNitk) {
+            const nitkRegex = /^[a-zA-Z0-9._%+-]+@nitk\.edu\.in$/;
+            if (!nitkRegex.test(nitkEmailInput.value)) {
+                valid = false;
+                errorMsg += 'Enter a valid NITK email (ending with @nitk.edu.in).\n';
             }
-        });
-    </script>
+        }
+
+        // General Email
+        if (!isNitk) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(generalEmailInput.value)) {
+                valid = false;
+                errorMsg += 'Enter a valid email address.\n';
+            }
+        }
+
+        // Roll Number (NITK only)
+        if (isNitk) {
+            const rollRegex = /^[0-9]{3}[A-Z]{2}[0-9]{3}$/;
+            if (!rollRegex.test(rollNumberInput.value)) {
+                valid = false;
+                errorMsg += 'Roll number must be 8 characters: 3 digits, 2 letters, 3 digits (Ex: 241CS110).\n';
+            }
+        }
+
+        // Phone Number (non-NITK only)
+        if (!isNitk) {
+            if (!/^\d{10}$/.test(phoneInput.value)) {
+                valid = false;
+                errorMsg += 'Phone number must be 10 digits.\n';
+            }
+        }
+
+        if (!valid) {
+            alert(errorMsg);
+            submitButton.disabled = false;
+            submitButton.querySelector('span').textContent = 'Register';
+            return;
+        }
+
+        // --- PREPARE DATA ---
+        const registrationData = {
+            name: document.getElementById('name').value,
+            reason: document.getElementById('reason').value,
+            college: isNitk ? 'NITK Surathkal' : collegeNameInput.value,
+            email: isNitk ? nitkEmailInput.value : generalEmailInput.value,
+            rollNumber: isNitk ? rollNumberInput.value : null,
+            phoneNumber: !isNitk ? phoneInput.value : null
+        };
+
+        // --- SEND TO BACKEND ---
+        try {
+            const response = await fetch(API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(registrationData),
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.error || 'An unknown server error occurred.');
+            }
+
+            formResponse.textContent = 'Thank you! Your registration was successful.';
+            formResponse.className = 'success';
+            form.reset();
+            nitkFields.classList.add('hidden');
+            nonNitkFields.classList.add('hidden');
+
+        } catch (error) {
+            formResponse.textContent = `Error: ${error.message}`;
+            formResponse.className = 'error';
+        } finally {
+            submitButton.disabled = false;
+            submitButton.querySelector('span').textContent = 'Register';
+        }
+    });
+</script>
+
     <script>
         // Create countdown slider
         $(function () {

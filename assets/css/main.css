@@ -4874,3 +4874,12 @@ textarea.form-control {
     }
 }
 
+/* Custom animated cursor (Windows .ani; falls back to default elsewhere) */
+*, *::before, *::after {
+    cursor: url('/cursor/Alternate_32-48-64.ani'), auto !important;
+}
+
+[disabled],
+.disabled {
+    cursor: not-allowed !important;
+}

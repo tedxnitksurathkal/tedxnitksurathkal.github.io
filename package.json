@@ -12,7 +12,7 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-concat": "^2.6.1",
-    "gulp-livereload": "^3.8.1",
+    "gulp-livereload": "^4.0.2",
     "gulp-ruby-sass": "^3.0.0",
     "gulp-uglify": "^3.0.0"
   }

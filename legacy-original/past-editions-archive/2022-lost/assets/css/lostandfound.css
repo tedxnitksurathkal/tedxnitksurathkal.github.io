@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'Circular';
+    src: url('https://cdn.jsdelivr.net/gh/anirudhprabhakaran3/chinai-resources/Circular-Black.ttf');
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Circular';
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    will-change: transform;
+    height: 100vh;
+    width: 100%;
+}
+
+.panel h1 {
+    font-size: 5em;
+}
+
+.intro {
+	background: linear-gradient(-45deg, #f32d13,#000000, #27759c, #000000, #f32d13);
+    color: white;
+	background-size: 500% 500%;
+	animation: gradient 15s ease infinite;
+    height: 100vh;
+    width: 100%;
+}
+
+.found {
+	background: linear-gradient(45deg, #ffffff, #9F9FED, #ffffff);
+    color: white;
+	background-size: 500% 500%;
+	animation: gradient 15s ease infinite;
+    height: 100vh;
+    width: 100%;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.hamzanama {
+    background-color: #f7f7f7;
+    background-image: url('../img/theme/hamzanama.webp');
+    opacity: 0.6;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.veronese {
+    background-color: #f7f7f7;
+    background-image: url('../img/theme/Paolo_Veronese.webp');
+    opacity: 0.6;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.rangoli {
+    background-color: #f7f7f7;
+    background-image: url('../img/theme/rangoli.webp');
+    opacity: 0.6;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+    color: white;
+}
+
+.st-petersburg {
+    background-color: #f7f7f7;
+    background-image: url('../img/theme/st_petersburg.webp');
+    opacity: 0.6;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.ajanta {
+    background-color: #f7f7f7;
+    background-image: url('../img/theme/ajanta.webp');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    color: white;
+}
+
+/* Animated Background */
+.final-panel {
+    animation: theme 21s linear infinite;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.final-panel:after, .final-panel:before {
+    content: '';
+    display: block;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    background: rgba(0, 0, 0, 0.05);
+    animation: background 90s linear infinite;
+}
+.final-panel:after {
+    left: 15vw;
+}
+.final-panel:before {
+    right: 15vw;
+    animation-delay: -30s;
+    animation-direction: reverse;
+}
+@keyframes theme {
+    0% {
+        background: #74c390;
+   }
+    16% {
+        background: #5dbdb6;
+   }
+    33% {
+        background: #59d4e1;
+   }
+    50% {
+        background: #51bce8;
+   }
+    66% {
+        background: #fa5374;
+   }
+    83% {
+        background: #e46653;
+   }
+    100% {
+        background: #74c390;
+   }
+}
+@keyframes background {
+    0% {
+        transform: rotate(0deg);
+   }
+    100% {
+        transform: rotate(360deg);
+   }
+}
+
+.info {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.info h1 {
+    font-size: 3em;
+    border-bottom: white 5px dotted;
+}
+
+.info p {
+    font-size: 1.1em;
+}
+
+.tedx-logo {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.back-link {
+    font-size: 1.5em;
+    text-decoration: none;
+    background-color: #f32d13;
+    color: white;
+    padding: 1% 4%;
+    border-radius: 5px;
+    margin-bottom: 10%;
+}

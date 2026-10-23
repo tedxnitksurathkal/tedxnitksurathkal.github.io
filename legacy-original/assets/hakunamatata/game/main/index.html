@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Endless Runner</title>
+  <link rel="stylesheet" href="kandi.css" type="text/css" media="screen">
+  <script type="text/javascript" src="jquery.2.1.1.min.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="sound sound-off"></div>
+    <div id="menu">
+      <div id="progress">
+        <div id="percent">Downloading: <span id="p"></span></div>
+        <progress id="progress-bar" value="0"></progress>
+      </div>
+      <div id="main">
+        <ul>
+          <li><a href="javascript:void(0)" class="button play">Start Game</a></li>
+        </ul>
+        <p id="instruction-text">Guide Simba through an endless journey, mastering the art of jumping over obstacles.<br />
+          Tap to make Simba jump over obstacles. <br />
+          Enjoy Simba's Jump Adventure and aim for the highest score!<br /> <br />
+          <i>Note: This game can be exclusively played on Mobile Devices!</i>
+        </p>
+      </div>
+    </div>
+    <canvas id="canvas" width="600" height="480">
+      <p>You're browser does not support the required functionality to play this game.</p>
+      <p>Please update to a modern browser such as <a href="www.google.com/chrome/‎">Google Chrome</a> to play.</p>
+    </canvas>
+    <div id="game-over">
+      <h2>You ran <span id="score"></span> meters!</h2>
+      <p>Share your high scores on Instagram. Challenge your friends to join the adventure.<br />
+        Tap the "Try Again" button to start a new round and improve your skills.
+        </p>
+      <div class="btn-game-over">
+        <a href="javascript:void(0)" class="button restart">Try again?</a>
+        <a href="../../theme-page.html" class="button restart">Theme Reveal</a>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="kandi.js"></script>
+</body>
+</html>

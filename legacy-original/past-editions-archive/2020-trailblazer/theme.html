@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta name="description" content="TEDx NITKSurathkal">
+    <meta name="keywords" content="TED, TEDx, TEDxNITKSurathkal, TEDx NITK, NITK, NITK Surathkal">
+    <meta name="author" content="TEDx NITK Surathkal">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TEDxNITKSurathkal | Ideas Worth Spreading">
+    <meta property="og:title" content="TEDxNITKSurathkal | Ideas Worth Spreading">
+    <meta property="og:description"
+        content="TEDxNITKSurathkal is coming back for Edition 2020! Stay tuned to find out the theme! See you on 17th October 2020.">
+    <meta property="og:url" content="http://www.tedxnitksurathkal.in/">
+    <meta property="og:image" content="http://www.tedxnitksurathkal.in/assets/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ========== Title ========== -->
+    <title>Theme | TEDxNITKSurathkal</title>
+
+    <!-- ========== Favicon Ico ========== -->
+    <link rel="icon" href="/assets/img/favicon.png">
+    <!-- ========== STYLESHEETS ========== -->
+    <!-- Bootstrap 4 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <!--Theme for 2020-->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/theme/mazify.js"></script>
+    <script src="assets/js/theme/player.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/maze_theme.css">
+</head>
+
+<body style="background-color: black;">
+
+    <!-- AFRAME -->
+    <a-scene id="maze-full" fog="type: exponential; color: #AAA; density: 0.20;"
+        loading-screen="dotsColor: red; backgroundColor: black" vr-mode-ui="enabled: false">
+
+        <!-- Assets -->
+        <a-assets>
+            <img id="pavement" src="assets/img/maze/pavement.jpg" />
+            <img id="brick-02" src="assets/img/maze/brick-02.jpg" />
+            <img id="start" src="assets/img/maze/start.jpg" />
+            <img id="finish" src="assets/img/maze/finish.jpg" />
+        </a-assets>
+
+        <!-- Environment -->
+        <a-sky height="2048" color="#87ceeb" width="2048"></a-sky>
+        <a-light type="ambient" color="#fff" intensity="0.8"></a-light>
+        <a-plane material="src: #pavement; repeat: 50 50; # color: #2C2A2A;" static-body rotation="-90 0 0" height="100"
+            width="100">
+        </a-plane>
+
+        <!-- Player -->
+        <a-entity id="player" kinematic-body camera universal-controls look-controls="reverseTouchDrag: true" player>
+            <a-entity text="font: dejavu;value: 0.00; color: black; align: center;" position="0 0.35 -0.5" id="timer" visible="false">
+            </a-entity>
+        </a-entity>
+
+        <!-- Maze -->
+        <a-entity mazify></a-entity>
+    </a-scene>
+
+    <!-- The Modals -->
+    <div id="startDialog" class="modal mazify" style="display: none;">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" onclick="cont()">&times;</button>
+                <h2>INSTRUCTIONS</h2>
+            </div>
+            <div id="instructions" class="modal-body">
+                <p>1. Try to find your way through the maze to the finish. Be quick!!</p>
+            </div>
+            <div class="modal-footer">
+                <button class="start button" onclick="cont()">Start</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="endDialog" class="modal mazify" style="display: none;">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" onclick="animate_trailblazers()">&times;</button>
+                <h2>RESULT</h2>
+            </div>
+            <div id="instructions-end" class="modal-body"></div>
+            <div class="modal-footer">
+                <button class="start button" onclick="animate_trailblazers()">Proceed</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container theme">
+        <div class="has-animation animation-ltr" data-delay="10">
+            <img class="bigger" src="assets/img/maze/trailblazer.png">
+        </div>
+
+        <br>
+        <br>
+
+        <div class="has-animation animation-ltr" data-delay="1">
+            <p>We often find ourselves walking predefined trails with the
+                promise of what is socially defined as success.
+                Trails surrounded by walls of preconceived notions
+                and expectations that limits our perspective and muffles other inspiration.
+            </p>
+            <p>Seldom do we find the courage to demolish these walls and blaze our own trail.
+                To walk down roads few dare to follow, often dark and unexplored only to be
+                the ones who create the light at the end of the tunnel.
+            </p>
+            <p>TEDxNITKSurathkalSalon presents <strong>Trailblazer</strong>, where we shine the limelight on
+                students like us, but those who heard a different calling and had
+                the courage to listen. Join us as we light up and navigate these
+                unconventional trails and be part of a whole new generation of
+                Trailblazers, the most daring one yet.
+            </p>
+            <a href="/" class="home-btn">Home</a>
+            <a href="" class="home-btn">Play Again</a>
+        </div>
+        <img src="/assets/img/tedx_salon_black.png" height="80px;" style="margin-top: 20px;">
+    </div>
+
+    <!-- GTAG Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-110715968-3');
+
+        $(document).bind("contextmenu",function(e) {
+            e.preventDefault();
+        });
+
+        $(document).keydown(function(e){
+            if(e.which === 123){
+            return false;
+            }
+        });
+
+        document.onkeydown = function(e) {
+        if(event.keyCode == 123) {
+        return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'E'.charCodeAt(0)){
+        return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
+        return false;
+        }
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
+        return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
+        return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)){
+        return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'H'.charCodeAt(0)){
+        return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'A'.charCodeAt(0)){
+        return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'F'.charCodeAt(0)){
+        return false;
+        }
+        if(e.ctrlKey && e.keyCode == 'E'.charCodeAt(0)){
+        return false;
+        }
+        }
+    </script>
+</body>
+
+</html>

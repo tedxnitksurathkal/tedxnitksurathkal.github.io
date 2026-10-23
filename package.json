@@ -1,0 +1,23 @@
+{
+  "name": "evento",
+  "version": "1.0.0",
+  "description": "event html template",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dev": "node site/serve.mjs",
+    "start": "node site/serve.mjs",
+    "build": "node site/build.mjs",
+    "check": "node site/check.mjs",
+    "test": "node site/check.mjs"
+  },
+  "author": "colorlib",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-ruby-sass": "^3.0.0",
+    "gulp-uglify": "^3.0.0"
+  }
+}

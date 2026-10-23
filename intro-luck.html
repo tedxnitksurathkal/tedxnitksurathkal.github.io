@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEDx 3D Pac-Man Challenge</title>
+    <link rel="stylesheet" href="intro-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Your existing styles are kept the same */
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: white/75;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #646464;
+        }
+
+        header h1,
+        section h2 {
+            font-family: 'Press Start 2P', cursive;
+            text-align: center;
+            color: white;
+        }
+
+        .rules ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .rules li {
+            background: #f4f4f4;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-left: 5px solid red;
+        }
+
+        .play-btn {
+            display: block;
+            width: fit-content;
+            margin: 40px auto 0;
+            padding: 15px 30px;
+            background-color: red;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            text-align: center;
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        .play-btn:hover {
+            background-color: #cc0000;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .nav-button {
+            display: block;
+            margin: 50px auto;
+            padding: 15px 30px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            width: fit-content;
+            transition: background-color 0.3s, color 0.3s;
+            margin-right: 20px;
+        }
+
+        .nav-button:hover {
+            background-color: red;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .nav-button {
+                padding: 12px 25px;
+                font-size: 1em;
+                border-radius: 6px;
+                margin-right: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to the TEDx 3D Pac-Man Challenge</h1>
+        </header>
+        <section class="intro">
+            <h2>Game Introduction</h2>
+            <p>
+                Experience a classic reborn in 3D! This unique version of Pac-Man challenges you to navigate a maze from
+                a first-person perspective. Your goal is to clear the maze of all dots while skillfully avoiding the
+                relentless ghosts. It's a test of navigation and quick decision-making in a fully 3D world.
+            </p>
+        </section>
+        <section class="rules">
+            <h2>Game Rules & Controls</h2>
+            <ul>
+                <li><strong>Controls:</strong> Use the <strong>W, A, S, D</strong> keys to control Pac-Man.</li>
+                <li><strong>W:</strong> Move Forward</li>
+                <li><strong>S:</strong> Move Backward</li>
+                <li><strong>A:</strong> Turn Left</li>
+                <li><strong>D:</strong> Turn Right</li>
+                <li><strong>Objective:</strong> Eat all the small dots in the maze to complete the level.</li>
+                <li><strong>Power Up:</strong> Eat one of the four large, flashing "Power Pellets". This will
+                    temporarily turn the ghosts white, allowing you to hunt them for bonus points!</li>
+                <li><strong>Game Over:</strong> The game ends if a ghost catches you. You only have one life, so be
+                    careful! Your score will reset for the next attempt.</li>
+            </ul>
+        </section>
+        <section class="prize">
+            <h2>Show Off Your Score!</h2>
+            <p>
+                Think you've mastered the 3D maze? Get the highest score you can and challenge your friends!
+            </p>
+        </section>
+        <footer>
+            <a href="https://tedx-nitk-pacman-game.vercel.app/" class="play-btn">Play the Game</a>
+        </footer>
+    </div>
+    <div class="button-container">
+        <a href="/" class="nav-button">Home</a>
+    </div>
+</body>
+
+</html>

@@ -713,6 +713,7 @@
     setupAnimations();
     syncParticles();
     updateScroll();
+    window.dispatchEvent(new Event("quiet-signal-motion"));
   }
   toggle?.addEventListener("click", () => {
     paused = !paused;
@@ -745,7 +746,7 @@
     const minsEl = section.querySelector('[data-countdown="minutes"]');
     const secsEl = section.querySelector('[data-countdown="seconds"]');
 
-    const targetDate = new Date("2026-10-30T09:00:00").getTime();
+    const targetDate = new Date("2026-10-31T09:00:00").getTime();
 
     function updateCountdown() {
       const now = Date.now();
@@ -774,7 +775,7 @@
       let isScrambling = false;
 
       function triggerScramble() {
-        if (isScrambling) return;
+        if (isScrambling || !enabled()) return;
         isScrambling = true;
         let iteration = 0;
         const maxIterations = 14;
@@ -935,7 +936,7 @@
       let timer = null;
 
       function runScramble() {
-        if (isScrambling) return;
+        if (isScrambling || !enabled()) return;
         isScrambling = true;
         let iter = 0;
         const maxIter = 14;
@@ -1016,13 +1017,20 @@
       }
     });
 
-    // 3. Scroll-triggered entrance for mind-beats & parallax using GSAP / ScrollTrigger
+    // 3. Scroll-triggered entrance for mind-beats & parallax using GSAP / ScrollTrigger.
+    // Runs only while motion is on; reverting leaves the cards fully visible.
+    let mindContext;
+    function setupMindMotion() {
+      mindContext?.revert();
+      mindContext = null;
+      if (!enabled() || !window.gsap || !window.ScrollTrigger) return;
+      mindContext = window.gsap.context(() => {
     const beats = document.querySelectorAll(".mind-beat");
     beats.forEach((beat) => {
       const card = beat.querySelector(".mind-card");
       const visual = beat.querySelector(".mind-visual");
 
-      if (window.gsap && window.ScrollTrigger && !reduced.matches) {
+      {
         // Entrance: card fades in with 20px upward movement
         window.gsap.fromTo(
           card,
@@ -1070,7 +1078,154 @@
         });
       }
     });
+      });
+    }
+    setupMindMotion();
+    window.addEventListener("quiet-signal-motion", setupMindMotion);
   }
+
+  // Past speakers carousel: swipe/scroll, arrows and gentle auto-advance.
+  function initVoicesCarousel() {
+    const wrap = document.querySelector("[data-carousel]");
+    const track = wrap?.querySelector("[data-carousel-track]");
+    if (!track) return;
+    const step = () => {
+      const card = track.querySelector(".voice-card");
+      return card ? card.getBoundingClientRect().width + 20 : track.clientWidth;
+    };
+    const atEnd = () => track.scrollLeft + track.clientWidth >= track.scrollWidth - 8;
+    const go = (dir) => {
+      if (dir > 0 && atEnd()) track.scrollTo({ left: 0 });
+      else if (dir < 0 && track.scrollLeft <= 4)
+        track.scrollTo({ left: track.scrollWidth });
+      else track.scrollBy({ left: dir * step() });
+    };
+    wrap.querySelector(".carousel-prev")?.addEventListener("click", () => go(-1));
+    wrap.querySelector(".carousel-next")?.addEventListener("click", () => go(1));
+    track.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") go(1);
+      if (e.key === "ArrowLeft") go(-1);
+    });
+    let hold = false;
+    let visible = false;
+    ["pointerenter", "focusin", "pointerdown", "touchstart"].forEach((t) =>
+      wrap.addEventListener(t, () => (hold = true), { passive: true }),
+    );
+    ["pointerleave", "focusout", "touchend"].forEach((t) =>
+      wrap.addEventListener(t, () => (hold = false), { passive: true }),
+    );
+    if ("IntersectionObserver" in window)
+      new IntersectionObserver((e) => (visible = e[0].isIntersecting), {
+        threshold: 0.3,
+      }).observe(wrap);
+    setInterval(() => {
+      if (hold || !visible || document.hidden || !enabled()) return;
+      go(1);
+    }, 3500);
+  }
+  initVoicesCarousel();
+
+  // Home page ambient dots: slow drift, gently pushed away by the cursor.
+  function initAmbientDots() {
+    if (!document.querySelector(".hero")) return;
+    const canvas = document.createElement("canvas");
+    canvas.className = "ambient-dots";
+    canvas.setAttribute("aria-hidden", "true");
+    document.body.prepend(canvas);
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+    let w = 0,
+      h = 0,
+      dpr = 1,
+      dots = [],
+      raf = 0;
+    const mouse = { x: -9999, y: -9999 };
+    const R = 150;
+
+    function resize() {
+      dpr = Math.min(devicePixelRatio || 1, 1.5);
+      w = innerWidth;
+      h = innerHeight;
+      canvas.width = w * dpr;
+      canvas.height = h * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const count = Math.min(w < 700 ? 28 : 64, Math.round((w * h) / 24000));
+      dots = Array.from({ length: count }, () => ({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        vx: (Math.random() - 0.5) * 0.18,
+        vy: (Math.random() - 0.5) * 0.18,
+        r: 0.8 + Math.random() * 1.4,
+        red: Math.random() < 0.18,
+      }));
+    }
+    function draw(move) {
+      ctx.clearRect(0, 0, w, h);
+      for (const d of dots) {
+        if (move) {
+          const dx = d.x - mouse.x;
+          const dy = d.y - mouse.y;
+          const dist = Math.hypot(dx, dy);
+          if (dist < R && dist > 0.1) {
+            const f = ((R - dist) / R) * 0.6;
+            d.vx += (dx / dist) * f * 0.12;
+            d.vy += (dy / dist) * f * 0.12;
+          }
+          d.vx *= 0.985;
+          d.vy *= 0.985;
+          d.x += d.vx + Math.sin((d.y + d.x) * 0.002) * 0.04;
+          d.y += d.vy;
+          if (d.x < -10) d.x = w + 10;
+          if (d.x > w + 10) d.x = -10;
+          if (d.y < -10) d.y = h + 10;
+          if (d.y > h + 10) d.y = -10;
+        }
+        const near = Math.hypot(d.x - mouse.x, d.y - mouse.y) < R;
+        ctx.globalAlpha = near ? 0.55 : 0.26;
+        ctx.fillStyle = d.red ? "#ff6558" : "#f3f1ee";
+        ctx.beginPath();
+        ctx.arc(d.x, d.y, d.r, 0, 6.283);
+        ctx.fill();
+        if (near) {
+          ctx.globalAlpha = 0.12;
+          ctx.strokeStyle = d.red ? "#ff6558" : "#f3f1ee";
+          ctx.beginPath();
+          ctx.moveTo(d.x, d.y);
+          ctx.lineTo(mouse.x, mouse.y);
+          ctx.stroke();
+        }
+      }
+      ctx.globalAlpha = 1;
+    }
+    function frame() {
+      draw(true);
+      raf = requestAnimationFrame(frame);
+    }
+    function sync() {
+      cancelAnimationFrame(raf);
+      raf = 0;
+      if (enabled() && !document.hidden) frame();
+      else draw(false);
+    }
+    resize();
+    sync();
+    addEventListener("resize", () => {
+      resize();
+      sync();
+    });
+    addEventListener(
+      "pointermove",
+      (e) => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+      },
+      { passive: true },
+    );
+    document.addEventListener("pointerleave", () => (mouse.x = mouse.y = -9999));
+    document.addEventListener("visibilitychange", sync);
+    addEventListener("quiet-signal-motion", sync);
+  }
+  initAmbientDots();
 
   initNoiseParadoxClimax();
   initMindStory();

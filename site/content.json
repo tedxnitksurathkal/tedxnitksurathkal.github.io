@@ -2,10 +2,13 @@
   "theme": "The Noise Paradox",
   "direction": "The Quiet Signal",
   "description": "In a world that never stops, what truly matters often whispers. Explore The Noise Paradox with TEDxNITKSurathkal — ideas, people and perspectives that bring clarity to the noise.",
+  "game": {
+    "url": "https://tedx-nitk-memory-challenge.onrender.com/"
+  },
   "event": {
-    "date": null,
-    "dateLabel": "Date to be announced",
-    "location": "NITK Surathkal",
+    "date": "2026-10-31",
+    "dateLabel": "31 October 2026",
+    "location": "SJA, NITK Surathkal",
     "address": "Surathkal, Mangaluru, Karnataka",
     "venueLabel": "Venue details coming soon",
     "schedule": []

@@ -1,0 +1,519 @@
+/* UI polish layer: same components and copy, refined look. Brand palette: TED red, black, white. */
+:root {
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --glass: #ffffff08;
+  --glass-line: #ffffff1f;
+  --red-glow: #e62b1e40;
+}
+::selection {
+  background: var(--red);
+  color: #fff;
+}
+html {
+  scrollbar-color: #3a3a3d var(--ink);
+  scrollbar-width: thin;
+}
+body {
+  background:
+    radial-gradient(1200px 600px at 85% -10%, #e62b1e14, transparent 60%),
+    radial-gradient(900px 500px at -10% 40%, #ffffff08, transparent 60%),
+    var(--ink);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+:focus-visible {
+  outline: 2px solid var(--red-text);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Header */
+.site-header {
+  background: #08090bcc;
+  backdrop-filter: blur(20px) saturate(140%);
+  border-bottom: 1px solid var(--glass-line);
+  box-shadow: 0 10px 40px #00000066;
+}
+.site-nav a:not(.nav-cta) {
+  position: relative;
+  transition: color 0.25s;
+}
+.site-nav a:not(.nav-cta)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 2px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s var(--ease);
+}
+.site-nav a:not(.nav-cta):hover::after,
+.site-nav a[aria-current="page"]::after {
+  transform: scaleX(1);
+}
+.nav-cta {
+  border-radius: 999px;
+  box-shadow: 0 6px 24px var(--red-glow);
+  transition:
+    transform 0.25s var(--ease),
+    box-shadow 0.25s;
+}
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px #e62b1e73;
+}
+
+/* Buttons */
+.button {
+  border-radius: 999px;
+  padding-inline: 28px;
+  box-shadow: 0 8px 28px var(--red-glow);
+}
+.button:hover {
+  box-shadow: 0 14px 38px #e62b1e66;
+}
+.button-outline {
+  box-shadow: none;
+  background: var(--glass);
+}
+.button-outline:hover {
+  background: #ffffff14;
+  border-color: #ffffff80;
+  box-shadow: none;
+}
+.round-button {
+  transition:
+    transform 0.3s var(--ease),
+    background 0.3s,
+    border-color 0.3s;
+}
+.round-button:hover {
+  transform: rotate(45deg) scale(1.08);
+}
+.text-link {
+  background-image: linear-gradient(var(--red), var(--red));
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  background-position: 0 100%;
+  transition: background-size 0.4s var(--ease);
+}
+.text-link:hover {
+  background-size: 100% 1px;
+}
+
+/* Typography */
+h1,
+h2 {
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+.eyebrow {
+  letter-spacing: 0.22em;
+}
+.lead {
+  text-wrap: pretty;
+}
+
+/* Section rhythm */
+.section {
+  position: relative;
+}
+.section + .section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(100% - var(--gutter) * 2, 1400px);
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, var(--glass-line), transparent);
+  pointer-events: none;
+}
+.signal-strip {
+  background: linear-gradient(90deg, #e62b1e14, transparent 40%, #e62b1e14);
+}
+
+/* Cards */
+.spotlight-card,
+.mind-card,
+.registration-panel,
+.partner-banner,
+.contact-people article,
+.event-details-card,
+.climax-hud-card {
+  border-radius: 20px;
+  border-color: var(--glass-line);
+  box-shadow:
+    0 1px 0 #ffffff14 inset,
+    0 24px 60px -24px #000000cc;
+}
+.event-details-card {
+  background:
+    radial-gradient(600px 240px at 90% 0%, #e62b1e26, transparent 70%),
+    linear-gradient(135deg, #1a0e0c, #0e0f11 65%);
+}
+.contact-people article {
+  padding: 26px 28px;
+  background: var(--glass);
+  border: 1px solid var(--glass-line);
+  transition:
+    transform 0.35s var(--ease),
+    border-color 0.35s;
+}
+.contact-people article:hover {
+  transform: translateY(-4px);
+  border-color: #e62b1e80;
+}
+.info-pill {
+  background: linear-gradient(180deg, #ffffff12, #ffffff05);
+  border-color: var(--glass-line);
+  backdrop-filter: blur(6px);
+  transition:
+    transform 0.3s var(--ease),
+    border-color 0.3s;
+}
+.info-pill:hover {
+  transform: translateY(-3px);
+  border-color: #e62b1e80;
+}
+.climax-hud-card {
+  background: linear-gradient(180deg, #ffffff10, #ffffff04);
+  backdrop-filter: blur(14px);
+}
+.climax-hud-val {
+  text-shadow: 0 0 30px #e62b1e66;
+}
+
+/* Imagery */
+.voice-card,
+.team-card > img,
+.talk-card img,
+.community-photo,
+.about-photo,
+.sponsor-grid figure,
+.archive-person img,
+.legacy-archive .speaker_img img {
+  border-radius: 16px;
+}
+.voice-card {
+  box-shadow: 0 24px 60px -28px #000;
+  transition:
+    transform 0.5s var(--ease),
+    border-color 0.4s,
+    box-shadow 0.5s;
+}
+.voice-card:hover {
+  transform: translateY(-6px);
+  border-color: #e62b1e99;
+  box-shadow: 0 34px 70px -26px #e62b1e55;
+}
+.team-card > img,
+.archive-person img,
+.legacy-archive .speaker_img img,
+.talk-card img {
+  transition:
+    opacity 0.4s,
+    transform 0.6s var(--ease),
+    box-shadow 0.5s;
+}
+.team-card:hover > img,
+.archive-person:hover img,
+.talk-card:hover img {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 50px -22px #e62b1e55;
+}
+.team-card h2 {
+  transition: color 0.3s;
+}
+.team-card:hover h2 {
+  color: var(--red-text);
+}
+.about-photo {
+  box-shadow: 0 30px 70px -30px #000;
+}
+.sponsor-grid figure {
+  transition: transform 0.35s var(--ease);
+}
+.sponsor-grid figure:hover {
+  transform: translateY(-4px);
+}
+
+/* Editions rail, FAQ, forms, dialogs */
+.edition-card {
+  border-radius: 16px;
+  transition:
+    transform 0.4s var(--ease),
+    border-color 0.3s,
+    background 0.3s;
+}
+.edition-card:hover {
+  transform: translateY(-5px);
+  border-color: #e62b1e99;
+  background: #e62b1e12;
+}
+.faq details {
+  border-radius: 14px;
+  transition: background 0.3s;
+}
+.faq details[open],
+.faq details:hover {
+  background: var(--glass);
+}
+input,
+select,
+textarea {
+  border-radius: 12px;
+  transition:
+    border-color 0.25s,
+    box-shadow 0.25s;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px #e62b1e33;
+  outline: none;
+}
+dialog {
+  border-radius: 20px;
+  box-shadow: 0 40px 100px #000;
+}
+dialog::backdrop {
+  background: #000000b3;
+  backdrop-filter: blur(6px);
+}
+
+/* Hero and closing */
+.hero-art img {
+  filter: saturate(1.08) contrast(1.04);
+}
+.final-signal h2 {
+  text-shadow: 0 0 80px #e62b1e40;
+}
+
+/* Footer */
+.site-footer {
+  background: linear-gradient(180deg, transparent, #0c0d0f 30%);
+  border-top: 1px solid var(--glass-line);
+}
+.site-footer a {
+  transition:
+    color 0.25s,
+    transform 0.25s;
+}
+.site-footer nav a:hover {
+  color: var(--red-text);
+  transform: translateX(4px);
+}
+
+/* Mind story visuals */
+.mind-visual {
+  border-radius: 24px;
+  box-shadow: 0 40px 90px -40px #e62b1e66;
+  border: 1px solid var(--glass-line);
+}
+
+/* Past speakers carousel */
+.voices-carousel {
+  position: relative;
+}
+.home-speakers .voices-grid {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+  padding: 14px 4px 22px;
+  margin: -14px -4px 0;
+}
+.home-speakers .voices-grid::-webkit-scrollbar {
+  display: none;
+}
+.home-speakers .voice-card {
+  flex: 0 0 calc((100% - 40px) / 3);
+  scroll-snap-align: start;
+}
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 1px solid var(--glass-line);
+  background: #08090bd9;
+  backdrop-filter: blur(10px);
+  color: var(--paper);
+  font-size: 20px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition:
+    background 0.25s,
+    border-color 0.25s,
+    transform 0.25s var(--ease);
+}
+.carousel-arrow:hover {
+  background: var(--red);
+  border-color: var(--red);
+  transform: translateY(-50%) scale(1.08);
+}
+.carousel-prev {
+  left: -14px;
+}
+.carousel-next {
+  right: -14px;
+}
+@media (max-width: 900px) {
+  .home-speakers .voice-card {
+    flex-basis: min(43vw, 310px);
+  }
+  .carousel-prev {
+    left: 4px;
+  }
+  .carousel-next {
+    right: 4px;
+  }
+}
+@media (max-width: 600px) {
+  .home-speakers .voice-card {
+    flex-basis: min(78vw, 310px);
+  }
+  .carousel-arrow {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* Myth of Busyness and Lighthouse: let the artwork fill the card instead of floating in black */
+.mind-visual-myth .mind-video,
+.mind-visual-paradox .mind-video {
+  object-fit: cover;
+  object-position: 50% 50%;
+  transform: scale(1.1);
+  transform-origin: 50% 50%;
+}
+
+/* Inner-page headings: smaller than the home hero */
+body:not(:has(.hero)) h1 {
+  font-size: clamp(38px, 4.4vw, 68px);
+}
+.mind-visual-paradox .mind-video {
+  object-position: 12% 50%;
+  transform-origin: 22% 50%;
+  transform: scale(1.25);
+}
+
+/* Home ambient dots: sit behind all content */
+.ambient-dots {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Salon logo: transparent artwork sits cleanly on the dark page */
+.salon-logo {
+  width: 100%;
+  height: auto;
+}
+
+/* What is TEDx: the joined hands breathe, with ripples spreading from the connection */
+.tedx-intro-art {
+  position: relative;
+  isolation: isolate;
+}
+.tedx-intro-art::before,
+.tedx-intro-art::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(80%, 270px);
+  aspect-ratio: 1;
+  border: 1px solid #ff655866;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  opacity: 0;
+  z-index: -1;
+  animation: hands-ripple 5s ease-out infinite;
+}
+.tedx-intro-art::after {
+  animation-delay: 2.5s;
+}
+.tedx-intro-art img {
+  animation:
+    hands-float 6s ease-in-out infinite,
+    hands-glow 3s ease-in-out infinite;
+  transition: transform 0.5s var(--ease);
+}
+.tedx-intro-art:hover img {
+  animation-play-state: paused;
+  transform: scale(1.06) rotate(-2deg);
+}
+@keyframes hands-float {
+  0%,
+  100% {
+    translate: 0 0;
+    rotate: -1.5deg;
+  }
+  50% {
+    translate: 0 -12px;
+    rotate: 1.5deg;
+  }
+}
+@keyframes hands-glow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 6px #e62b1e33);
+  }
+  50% {
+    filter: drop-shadow(0 0 26px #e62b1e99);
+  }
+}
+@keyframes hands-ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.7);
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tedx-intro-art::before,
+  .tedx-intro-art::after,
+  .tedx-intro-art img {
+    animation: none;
+  }
+}
+
+/* Small screens: never let long words or decorative layers cause sideways scroll */
+html,
+body {
+  overflow-x: clip;
+}
+h1,
+h2,
+h3 {
+  overflow-wrap: break-word;
+}
+.event-details-copy h2 {
+  font-size: clamp(26px, 8vw, 52px);
+}
+@media (max-width: 480px) {
+  body:not(:has(.hero)) h1 {
+    font-size: clamp(30px, 9vw, 38px);
+  }
+  .info-pill dd {
+    font-size: 17px;
+  }
+}

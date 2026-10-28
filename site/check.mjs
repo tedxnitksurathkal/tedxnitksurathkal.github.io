@@ -8,8 +8,6 @@ const pages = [
   "index",
   "about",
   "speakers",
-  "event",
-  "venue",
   "registration",
   "team",
   "partners",

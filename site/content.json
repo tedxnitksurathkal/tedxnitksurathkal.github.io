@@ -14,9 +14,9 @@
     "schedule": []
   },
   "registration": {
-    "open": false,
+    "open": true,
     "endpoint": "https://tedx-backend-lyart.vercel.app/api/register",
-    "message": "Something worth pausing for is on its way. Registration details for The Noise Paradox will be announced here."
+    "message": "Registration for The Noise Paradox is open."
   },
   "contact": {
     "email": "tedx@nitk.edu.in",

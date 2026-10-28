@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="UTF-8">
+    <meta name="description" content="TEDx NITKSurathkal">
+    <meta name="keywords" content="TED, TEDx, TEDxNITKSurathkal, TEDx NITK, NITK, NITK Surathkal">
+    <meta name="author" content="TEDx NITK Surathkal">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TEDxNITKSurathkal | Ideas Worth Spreading">
+    <meta property="og:title" content="TEDxNITKSurathkal | Ideas Worth Spreading">
+    <meta property="og:description"
+        content="TEDxNITKSurathkal is coming back for Edition 2025! See you soon.">
+    <meta property="og:url" content="http://www.tedxnitksurathkal.in/">
+    <meta property="og:image" content="http://www.tedxnitksurathkal.in/assets/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ========== Title ========== -->
+    <title> TEDxNITKSurathkal</title>
+    <!-- stylesheet for responsiveness -->
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="age-as-a-lesn.css">
+    <!-- ========== Favicon Ico ========== -->
+    <link rel="icon" href="assets/img/favicon.png">
+    <!-- Bootstrap 4 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="simba.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-RXf+QSDCUQs...etc" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- LUCK THEME -->
+    <link rel="stylesheet" href="luck_theme_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+</head>
+<style>
+    /* Play Button Effects */
+
+    /* Particle Background */
+    .image-section {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .particle-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .particle {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background: rgba(255, 255, 0, 0.8);
+        border-radius: 50%;
+        opacity: 0.7;
+        animation: floatParticles 5s infinite ease-in-out;
+    }
+
+    @keyframes floatParticles {
+        0% {
+            transform: translateY(0px) scale(1);
+            opacity: 1;
+        }
+
+        50% {
+            transform: translateY(-50px) scale(1.2);
+            opacity: 0.5;
+        }
+
+        100% {
+            transform: translateY(-100px) scale(0.8);
+            opacity: 0;
+        }
+    }
+
+    /* 1. Make the hero-section a positioning context */
+    .hero-section {
+        position: relative; /* This is crucial for positioning children inside it */
+        /* Keep your other styles like height, width, etc. */
+        height: 60vh; /* Example height */
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* 2. Position the button */
+    .tedx-button1 {
+        position: absolute; /* Positions the button relative to .hero-section */
+        bottom: 60px;       /* 20px from the bottom */
+        right: 40px;        /* 20px from the right */
+        z-index: 10;        /* Ensures the button is on top of the video */
+        color: #ffffff !important;
+        font: "Roboto";
+    }
+
+    /* Highlight the Register button a bit more */
+    #register-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #E62B1E;
+        color: #ffffff !important;
+        padding: 12px 22px;
+        border-radius: 28px;
+        border: 2px solid rgba(255, 255, 255, 0.85);
+        box-shadow: 0 8px 22px rgba(230, 43, 30, 0.35);
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+        font-weight: 700;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        animation: softPulse 2.5s ease-in-out infinite;
+    }
+
+    #register-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 28px rgba(230, 43, 30, 0.45);
+        background: #ff3b2e;
+        border-color: #ffffff;
+    }
+
+    #register-button:focus {
+        outline: 2px solid #ffffff;
+        outline-offset: 3px;
+    }
+
+    #button-text {
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        font-weight: 800;
+    }
+
+    @keyframes softPulse {
+        0%, 100% { box-shadow: 0 8px 22px rgba(230, 43, 30, 0.30); }
+        50% { box-shadow: 0 10px 28px rgba(230, 43, 30, 0.50); }
+    }
+
+    .toast-message {
+        position: fixed; /* Stays on screen even if you scroll */
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%); /* Center it horizontally */
+        background-color: #333;
+        color: #fff;
+        padding: 12px 25px;
+        border-radius: 50px;
+        z-index: 1000;
+        opacity: 0; /* Hidden by default */
+        visibility: hidden;
+        transition: opacity 0.5s, visibility 0.5s;
+    }
+
+    .toast-message.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+</style>
+
+<body>
+    <div class="loader">
+        <div class="loader-outter"></div>
+        <div class="loader-inner" style="background-image: url('assets/img/loader.png');"></div>
+    </div>
+    <!--header start here -->
+    <header class="header navbar fixed-top navbar-expand-md" style="background-color: black;">
+        <div class="container">
+            <a class="navbar-brand logo" href="#">
+                <img src="assets/img/tedx-white.png" alt="TEDxNITK Surathkal" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headernav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <i class="ion-navicon"></i>
+            </button>
+            <div class="collapse navbar-collapse flex-sm-row-reverse" id="headernav">
+                <ul class=" nav navbar-nav menu">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/"><strong>Home</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="./about"><strong>About</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="salon"><strong>Salon</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="./intro-luck.html"><strong>Theme</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/past-editions"><strong>Past Editions</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/talk-archives"><strong>Talk Archives</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/team"><strong>Team</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/partners"><strong>Partners</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/contact"><strong>Contact</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                        href="./intro-luck.html" 
+                        style="background-color: #E62B1E; color: white; border-radius: 20px; padding: 10px 40px !important; margin: 10px 0; display: inline-block; position: relative; overflow: hidden; text-align: center; line-height: 1.5; transition: all 0.3s ease;"
+                        onmouseover="this.querySelector('.default-text').style.transform='translateY(-150%)'; this.querySelector('.hover-text').style.transform='translateY(0)';"
+                        onmouseout="this.querySelector('.default-text').style.transform='translateY(0)'; this.querySelector('.hover-text').style.transform='translateY(150%)';">
+
+                            <strong class="default-text" style="display: block; transition: transform 0.3s ease;">Play Game</strong>
+                            <span class="hover-text" style="display: block; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; height: fit-content; font-weight: normal; font-size: 8.8px; transform: translateY(150%); transition: transform 0.3s ease;">Play game to reveal speakers</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!--header end here-->
+    <!--cover section slider -->
+    <!--
+    <main class="hero-section">
+        <div class="hero-container">
+            
+            <img src="assets/img/Home.png" alt="A large red X made of horizontal glitchy lines" class="hero-x-graphic">
+            
+            <div class="text-overlay">
+                
+                <div class="headline-group top-group">
+                    <span class="word-worth">IGNITE</span>
+                    <span class="word-spreading">MINDS</span>
+                </div>
+
+                
+                <div class="headline-group bottom-group">
+                    <span class="word-locally">LOCALLY&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span class="word-amplified">AMPLIFIED</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    -->
+
+    <main class="hero-section">
+        <div class="hero-container">
+            <video autoplay loop muted playsinline class="hero-x-graphic" style="width: 70vw;" src="assets/theme/hero.mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+        <a href="#subscribe" class="tedx-button1 tedx-button" id="register-button">
+            <span id="button-text">REGISTER NOW</span>
+            <div class="arrow-circle">
+                <i class="fa-solid fa-arrow-up"></i>
+            </div>
+        </a>
+
+    </main>
+
+
+    <!-- my code starts here -->
+    <!-- <section class="image-section" style="position: relative; text-align: center; margin-top: 80px;">
+        <img src="alchemy.jpg" alt="Game Background" style="width: 100%; height: auto; display: block;">
+        
+       
+        <div class="particle-container"></div>
+    
+    </section> -->
+
+
+    <!-- ends here --> 
+
+    <section class="event-details-section">
+        <div class="container">
+            <div class="event-card">
+                <!-- Left Column: Event Image -->
+                <div class="event-image-container">
+                    <div class="image-bg">
+                        <img src="/assets/img/loader.png" alt="Event Logo" class="event-image">
+                    </div>
+                </div>
+
+                <!-- Middle Column: Event Info -->
+                <div class="event-info-container">
+                    <img src="/assets/img/tedx-white.png" alt="TEDxNITKSurathkal Logo" class="tedx-logo">
+                    <p class="event-description">
+                        TEDxNITKSurathkal brings TED Talks and live speakers together to inspire ideas and
+                        conversations. Our event creates a space for meaningful discussions and connections.
+                    </p>
+                    <div class="info-pills-wrapper">
+                        <div class="info-pill-row">
+                            <div class="info-pill">
+                                <span class="pill-label">DATE</span>
+                                <span class="pill-value">5:30 PM, 18th Oct, 2025</span>
+                            </div>
+                            <div class="info-pill">
+                                <span class="pill-label">SPEAKERS</span>
+                                <span class="pill-value">6</span>
+                            </div>
+                        </div>
+                        <div class="info-pill-row justify-center">
+                            <div class="info-pill">
+                                <span class="pill-label">LOCATION</span>
+                                <span class="pill-value">SJA, NITK Surathkal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: QR Code & Branding -->
+                <div class="qr-code-container">
+                    <div class="dashed-divider"></div>
+                    <div class="qr-content">
+                        <div class="branding-title">
+                            <h3 style="color: white;">ALCHEMY NITK</h3>
+                            <span>2025</span>
+                        </div>
+                        <p class="follow-us">Follow Us</p>
+                        <img src="assets/img/qr-code.png" alt="QR Code for social media" class="qr-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="countdown-section">
+        <div class="countdown-container">
+            <h4 class="countdown-title">
+                Counter until the big event
+                <span class="countdown-underline"></span>
+            </h4>
+            <div class="countdown"></div>
+        </div>
+    </section>
+
+    <!--
+
+    <section class="pt100">
+        <div class="container">
+            <div class="section_title">
+                <h3 class="title">
+                  Introducing
+                  <img src="/assets/img/tedx_salon_white.png" style="display: inline; height: 100px;">
+                </h3>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-12">
+                    <p>
+                    For the first time ever, we are hosting a TEDx Salon! TEDx Salons engage the community between main TEDx events, promoting intimate discussion with both speakers as well as your peers. We will be hosting a virtual salon with speakers who will delve deep into their ideas, insights and journey. You can also interact with speakers through a moderated Q&A session. Interested in participating or want to learn more? <a href="/salon.html"><u>Read more on our Salon Page.</u></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    -->
+
+    <!--event info -->
+    <!--about the event -->
+    <section class="experience-section">
+        <div class="container">
+
+            <!-- Section Title -->
+            <div class="section-title">
+                <h2>THE EXPERIENCE</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <!-- Main Experience Card -->
+            <div class="card main-card">
+                <div class="main-card-content">
+                    <p class="description">
+                        Fostered by the vision of bringing innovative and inspiring ideas to the student community,
+                        TEDxNITKSurathkal began at NITK in 2011. With successful editions in 2011, 2012, 2016, 2018,
+                        2019, 2020, 2021, 2022, and 2023, the event continues to grow each year. Our upcoming annual
+                        edition aims to push boundaries, spark curiosity, and encourage people to rethink what's
+                        possible.
+                    </p>
+                    <p class="tagline">
+                        A tale that leaves a mark and ignites inspiration.
+                    </p>
+                    <a href="#" class="tedx-button" style="margin-left: 0%;">
+                        <span>TEDx NITK</span>
+                        <div class="arrow-circle">
+                            <i class="fa-solid fa-arrow-up"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="main-card-image">
+                    <img src="assets/img/experience/grow.png" alt="Grow">
+                </div>
+            </div>
+
+            <!-- Complex Grid for Feature Cards -->
+            <div class="features-grid">
+                <!-- Left Column -->
+                <div class="grid-col">
+                    <!-- Location Card -->
+                    <div class="card feature-card" id="location-card">
+                        <h3>LOCATION</h3>
+                        <p>Hugging the Arabian sea along its length, our venue is a welcoming retreat for sparking up
+                            conversations about things that matter.</p>
+                        <img src="assets/img/experience/globe.png" alt="Globe" class="bg-image">
+                    </div>
+                    <!-- Community Strength Card -->
+                    <div class="card feature-card" id="community-card">
+                        <h3>COMMUNITY STRENGTH</h3>
+                        <p>Standing 6000+ strong, our community comprises of curious individuals with an ever-increasing
+                            appetite for learning.</p>
+                        <img src="assets/img/experience/community.png" alt="Community" class="bg-image">
+                    </div>
+                </div>
+                <!-- Right Column -->
+                <div class="grid-col">
+                    <!-- Legacy Card -->
+                    <div class="card feature-card" id="legacy-card">
+                        <h3>LEGACY</h3>
+                        <p>Ranking amongst the top educational institutes in India, our university adds a key ingredient
+                            in realising our vision.</p>
+                        <img src="assets/img/experience/bulb.png" alt="Legacy" class="bg-image">
+                    </div>
+                    <!-- Impactful Ideas Card -->
+                    <div class="card feature-card" id="impact-card">
+                        <h3>IMPACTFUL IDEAS</h3>
+                        <p>We strive to bring forward powerful ideas that challenge the norms and carry the potential to
+                            transform lives.</p>
+                        <img src="assets/img/experience/brain.png" alt="Impactful Ideas" class="bg-image">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--about the event end -->
+
+    <!--- Our Speakers -->
+    <section class="speakers-section">
+        <div class="container">
+
+            <!-- Section Title -->
+            <div class="section-title" style="align-items: center;justify-content:center;text-align: center; margin-bottom: 10px;">
+                <h2>OUR <span class="text-red">SPEAKERS</span></h2>
+                <div class="title-underline"></div>
+                <p class="subtitle">
+                    Prepare to be inspired by a curated lineup of brilliant thinkers, innovators, and storytellers.
+                </p>
+                <div style="text-align: center; margin-top: 16px; margin-bottom: 0;">
+                    <a href="https://tedx-nitk-pacman-game.vercel.app/all-speakers" class="tedx-button">
+                        <span>Speaker Reveal</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="speakers-grid">
+                <!-- Left Column: Text Content -->
+                <div class="text-content">
+                </div>
+
+                <!-- Right Column: Image Placeholder -->
+                <!-- <div class="image-placeholder">
+                    <div class="blur-bg-glow"></div>
+                    <img src="assets/img/think.png" alt="A silhouette representing an upcoming speaker"
+                        class="speaker-image">
+                    <div class="decorative-blur-1"></div>
+                    <div class="decorative-blur-2"></div>
+                </div> -->
+            </div>
+
+        </div>
+    </section>
+
+    <section id="speaker-modals"></section>
+
+    <!-- Past Speakers section -->
+    <section class="past-speakers-section">
+        <div class="background-glow"></div>
+        <div class="container">
+            <!-- Section Title -->
+            <div class="section-title">
+                <h2>PAST SPEAKERS</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="speakers-content-grid">
+                <!-- Left Column: Orbital Image Display -->
+                <div class="orbital-display">
+                    <div class="orbital-container">
+                        <!-- The large, active speaker image will be injected here by JS -->
+                        <div id="active-speaker-image-wrapper"></div>
+
+                        <!-- The small, orbiting speaker images will be injected here by JS -->
+                        <div id="orbiting-speakers-container"></div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Speaker Details -->
+                <div class="speaker-details-wrapper">
+                    <!-- Speaker details will be injected here by JS -->
+                    <div id="speaker-details-container"></div>
+
+                    <!-- Navigation Controls -->
+                    <div class="navigation-controls">
+                        <div class="nav-buttons-bg">
+                            <button id="prev-speaker-btn" aria-label="Previous speaker">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button id="next-speaker-btn" aria-label="Next speaker">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Past Speakers section end-->
+
+    <!-- "What is TEDx" Section -->
+    <section class="what-is-tedx-section">
+        <div class="container">
+            <div class="tedx-grid">
+                <!-- Left Column: Image -->
+                <div class="image-container">
+                    <img src="assets/img/hand.png" alt="Hand reaching for a spark of an idea" class="hand-image">
+                    <div class="image-glow"></div>
+                </div>
+
+                <!-- Right Column: Text Content -->
+                <div class="text-container">
+                    <div class="section-header">
+                        <div class="header-line"></div>
+                        <h2 style="color: #ffffff;">What is <span class="text-red">TEDx</span>?</h2>
+                    </div>
+                    <p class="description">
+                        A TEDx event is a local gathering where live TED-like talks and performances are shared with the
+                        community. These events are independently organized by volunteers, but they operate under a free
+                        license from TED, following the same spirit of <strong>"ideas worth spreading."</strong>
+                    </p>
+                    <p class="description">
+                        Our event, <span class="highlight">TEDxNITKSurathkal</span>, brings together brilliant speakers
+                        and thought-provoking video content to spark deep discussion and create lasting connections
+                        right here in our community.
+                    </p>
+                    <a href="https://www.ted.com/about/programs-initiatives/tedx-program" target="_blank"
+                        class="learn-more-btn">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- "What is TEDx" Section -->
+
+    <!-- <hr> -->
+    <!-- ======================================================== -->
+    <!-- FINAL TRIBUTE SECTION (WITH FULL ORIGINAL TEXT) -->
+    <!-- ======================================================== -->
+    <section class="tribute-section" style="display: none;">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="section-title">
+                <h2>A TRIBUTE</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="tribute-grid">
+                <!-- Left Column: Text Content -->
+                <div class="tribute-text">
+                    <div class="tribute-glow"></div>
+                    <p>The TEDxNITKSurathkal team takes this moment to grieve the demise of Govind Jeevan, a bright
+                        student of NITK and one of its long-time proponents. Our deepest condolences go to his family
+                        and friends for the loss of a dear one.</p>
+                    <p>Govind was an active member of the TEDxNITKSurathkal core team and community, with his impact
+                        spanning several editions of the event. He led the way in discovering and propagating ideas
+                        worth spreading.</p>
+                    <p>Our team fondly remembers him for his ability to spot the challenges faced by the NITK community
+                        and his drive to explore and highlight feasible solutions for them. We will greatly miss his
+                        presence and the unique perspectives he brought to the table.</p>
+                    <p>As has been seen with numerous events and initiatives on campus, Govind had an inspiring effect
+                        on the people he worked with, through his work and interactions with fellow students. At
+                        TEDxNITKSurathkal, his contributions ranged from Speaker Curation, Event Website Management,
+                        Merchandise, and Creative Design in the 2019 edition to leading an entire team for organising
+                        the 2020 edition themed ‘Mirrors and Windows’.</p>
+                    <p>He saw worth in reflecting upon the events’ impact on the NITK community and kept brainstorming
+                        ways in which we could derive more value for the community. In one such instance, he facilitated
+                        interactions of students with TEDx speakers beyond the ideas that were shared on-stage. This
+                        quality of going above and beyond to create better outcomes will continue to inspire our
+                        efforts. We greatly valued his guidance even during COVID times as he helped the 2021 team
+                        figure things out.</p>
+                    <p>We would like to express our sincerest thanks to Govind for all of his contributions to
+                        TEDxNITKSurathkal and the rest of NITK, and are mindful of the legacy he leaves behind.</p>
+                    <p>May he rest in peace.</p>
+                    <p class="tribute-signature"><strong>Team TEDxNITKSurathkal</strong></p>
+                </div>
+
+                <!-- Right Column: Image -->
+                <div class="tribute-image-wrapper">
+                    <img src="assets/img/Govind_jeevan.png" alt="In memory of Govind Jeevan" class="tribute-image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======================================================== -->
+    <!-- END OF FINAL TRIBUTE SECTION -->
+    <!-- ======================================================== -->
+
+
+    <!-- Mailchimp Signup Form -->
+    <section class="subscribe-section" id="subscribe">
+        <h2 style="color: #ffffff; justify-content: center; text-align: center; align-items: center;">
+            Register for our Next Event
+        </h2>
+
+        <div class="divider-section">
+            <div class="line"></div>
+            <p class="divider-text">
+                Fill the form below to secure
+                <span class="highlight">your spot</span>
+            </p>
+            <div class="line"></div>
+        </div>
+
+        <div class="container">
+            <div class="subscribe-card">
+                <h3 class="subscribe-title">Event Registration Form 📝</h3>
+                
+                <!-- This is our new form that will talk to the backend -->
+                <form id="registration-form">
+                    
+                    <!-- Name (Combined First and Last) -->
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Ex: Adithya MahaThakur" required />
+                    </div>
+
+                    <!-- College Selection Dropdown -->
+                    <div class="form-group">
+                        <label for="college-type">Are you an NITK Surathkal student?</label>
+                        <select id="college-type" name="college-type" required>
+                            <option value="" disabled selected>-- Please select --</option>
+                            <option value="nitk">Yes</option>
+                            <option value="non-nitk">No</option>
+                        </select>
+                    </div>
+
+                    <!-- Fields for NITK Students (Initially Hidden) -->
+                    <div id="nitk-fields" class="hidden">
+                        <div class="form-group">
+                            <label for="nitk-email">NITK Email Address</label>
+                            <input type="email" id="nitk-email" name="nitk-email" placeholder="Ex: adithya.221ec@nitk.edu.in" />
+                        </div>
+                        <div class="form-group">
+                            <label for="roll-number">Roll Number</label>
+                            <input type="text" id="roll-number" name="roll-number" placeholder="Ex: 221EC100" />
+                        </div>
+                    </div>
+
+                    <!-- Fields for Non-NITK Students (Initially Hidden) -->
+                    <div id="non-nitk-fields" class="hidden">
+                        <div class="form-group">
+                            <label for="college-name">Your College/Institution Name</label>
+                            <input type="text" id="college-name" name="college-name" placeholder="Ex: Manipal Institute of Technology" />
+                        </div>
+                        <div class="form-group">
+                            <label for="general-email">Email Address</label>
+                            <input type="email" id="general-email" name="general-email" placeholder="Ex: adithya@example.com" />
+                        </div>
+                        <div class="form-group" id="phone-field">
+                            <label for="phone-number">Phone Number</label>
+                            <input type="text" id="phone-number" name="phone-number" placeholder="Ex: 9876543210" />
+                        </div>
+                    </div>
+
+                    <!-- Reason for Attending -->
+                    <div class="form-group">
+                        <label for="reason">Why do you want to attend this event?</label>
+                        <textarea id="reason" name="reason" rows="4" placeholder="Tell us what excites you about TEDx!" required></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-submit">
+                        <button type="submit" id="submit-button">
+                            <span>Register</span>
+                            <span class="arrow">➜</span>
+                        </button>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a href="https://tedx-nitk-pacman-game.vercel.app/all-speakers" class="tedx-button">
+                            <span>Speaker Reveal</span>
+                        </a>
+                    </div>
+
+                </form>
+
+                <!-- This div will show success or error messages from the backend -->
+                <div id="form-response" class="hidden"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mailchimp Signup Form -->
+
+    <!--footer start -->
+    <footer class="new-footer">
+        <div class="container">
+
+            <!-- Back to Top Button -->
+            <div class="back-to-top">
+                <button onclick="window.scrollTo({top:0, behavior:'smooth'});" aria-label="Back to top">
+                    <i class="ion-arrow-up-c"></i>
+                </button>
+            </div>
+
+            <div class="footer-grid">
+
+                <!-- Column 1: Logo + Description -->
+                <div class="footer-col">
+                    <img src="assets/img/tedx-white.png" alt="TEDxNITKSurathkal Logo" class="footer-logo">
+                    <p>
+                        Fostered by the vision of serving the community with innovative and inspiring ideas worth
+                        spreading.
+                    </p>
+                </div>
+
+                <!-- Column 2: Contact -->
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <div class="footer-contact">
+                        <p>NITK Surathkal,<br /> Karnataka, India</p>
+                    </div>
+                </div>
+
+                <!-- Column 3: Gallery -->
+                <div class="footer-col">
+                    <h3>Gallery</h3>
+                    <div class="footer-gallery">
+                        <a href="assets/img/footer/1.jpg"><img src="assets/img/footer/1.jpg" alt="TedXNITK"></a>
+                        <a href="assets/img/footer/2.jpg"><img src="assets/img/footer/2.jpg" alt="TedXNITK"></a>
+                        <a href="assets/img/footer/3.jpg"><img src="assets/img/footer/3.jpg" alt="TedXNITK"></a>
+                        <a href="assets/img/footer/4.jpg"><img src="assets/img/footer/4.jpg" alt="TedXNITK"></a>
+                        <a href="assets/img/footer/5.jpg"><img src="assets/img/footer/5.jpg" alt="TedXNITK"></a>
+                        <a href="assets/img/footer/6.jpg"><img src="assets/img/footer/6.jpg" alt="TedXNITK"></a>
+                    </div>
+                </div>
+
+                <!-- Column 4: Social Media -->
+                <div class="footer-col">
+                    <h3>Follow Us</h3>
+                    <p>Join the conversation on our social networks.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/tedxnitksurathkal2018/" aria-label="Facebook"><i
+                                class="ion-social-facebook"></i></a>
+                        <a href="https://www.instagram.com/tedxnitksurathkal/?hl=en" aria-label="Instagram"><i
+                                class="ion-social-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <p>
+                    Copyright ©
+                    <script>document.write(new Date().getFullYear());</script> TEDxNITKSurathkal. All rights reserved.
+                    This independent TEDx event is operated under license from
+                    <a href="https://www.ted.com" target="_blank">TED</a>.
+                </p>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <!--footer end -->
+
+
+    <!-- ========== SCRIPTS ========== -->
+
+    <!-- Carousel CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" rel="stylesheet">
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <!--slick carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js"></script>
+
+    <!--Counter up -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <!--Counter down -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
+
+    <!-- Custom js -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/title.js"></script>
+    <script src="assets/js/past-speakers.js"></script>
+    <script src="assets/js/speakers.js"></script>
+    
+    <script>
+    // --- CONFIGURATION ---
+    const API_URL = 'https://tedx-backend-lyart.vercel.app/api/register';
+
+    // --- ELEMENT REFERENCES ---
+    const form = document.getElementById('registration-form');
+    const collegeTypeSelect = document.getElementById('college-type');
+    const nitkFields = document.getElementById('nitk-fields');
+    const nonNitkFields = document.getElementById('non-nitk-fields');
+    const formResponse = document.getElementById('form-response');
+    const submitButton = document.getElementById('submit-button');
+
+    // --- INPUTS ---
+    const nitkEmailInput = document.getElementById('nitk-email');
+    const rollNumberInput = document.getElementById('roll-number');
+    const collegeNameInput = document.getElementById('college-name');
+    const generalEmailInput = document.getElementById('general-email');
+    const phoneInput = document.getElementById('phone-number'); // Add this in your HTML
+
+    // --- EVENT LISTENER FOR DROPDOWN ---
+    collegeTypeSelect.addEventListener('change', () => {
+        const isNitk = collegeTypeSelect.value === 'nitk';
+        
+        nitkFields.classList.toggle('hidden', !isNitk);
+        nonNitkFields.classList.toggle('hidden', isNitk);
+
+        // Update 'required' status for browser validation
+        nitkEmailInput.required = isNitk;
+        rollNumberInput.required = isNitk;
+        collegeNameInput.required = !isNitk;
+        generalEmailInput.required = !isNitk;
+    });
+
+    // --- EVENT LISTENER FOR FORM SUBMISSION ---
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        submitButton.disabled = true;
+        submitButton.querySelector('span').textContent = 'Submitting...';
+        formResponse.className = 'hidden';
+
+        const isNitk = collegeTypeSelect.value === 'nitk';
+        let valid = true;
+        let errorMsg = '';
+
+        // --- VALIDATIONS ---
+
+        // NITK Email
+        if (isNitk) {
+            const nitkRegex = /^[a-zA-Z0-9._%+-]+@nitk\.edu\.in$/;
+            if (!nitkRegex.test(nitkEmailInput.value)) {
+                valid = false;
+                errorMsg += 'Enter a valid NITK email (ending with @nitk.edu.in).\n';
+            }
+        }
+
+        // General Email
+        if (!isNitk) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(generalEmailInput.value)) {
+                valid = false;
+                errorMsg += 'Enter a valid email address.\n';
+            }
+        }
+
+        // Roll Number (NITK only)
+        if (isNitk) {
+            const rollRegex = /^[0-9]{3}[A-Z]{2}[0-9]{3}$/;
+            if (!rollRegex.test(rollNumberInput.value)) {
+                valid = false;
+                errorMsg += 'Roll number must be 8 characters: 3 digits, 2 letters, 3 digits (Ex: 241CS110).\n';
+            }
+        }
+
+        // Phone Number (non-NITK only)
+        if (!isNitk) {
+            if (!/^\d{10}$/.test(phoneInput.value)) {
+                valid = false;
+                errorMsg += 'Phone number must be 10 digits.\n';
+            }
+        }
+
+        if (!valid) {
+            alert(errorMsg);
+            submitButton.disabled = false;
+            submitButton.querySelector('span').textContent = 'Register';
+            return;
+        }
+
+        // --- PREPARE DATA ---
+        const registrationData = {
+            name: document.getElementById('name').value,
+            reason: document.getElementById('reason').value,
+            college: isNitk ? 'NITK Surathkal' : collegeNameInput.value,
+            email: isNitk ? nitkEmailInput.value : generalEmailInput.value,
+            rollNumber: isNitk ? rollNumberInput.value : null,
+            phoneNumber: !isNitk ? phoneInput.value : null
+        };
+
+        // --- SEND TO BACKEND ---
+        try {
+            const response = await fetch(API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(registrationData),
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.error || 'An unknown server error occurred.');
+            }
+
+            formResponse.textContent = 'Thank you! Your registration was successful.';
+            formResponse.className = 'success';
+            form.reset();
+            nitkFields.classList.add('hidden');
+            nonNitkFields.classList.add('hidden');
+
+        } catch (error) {
+            formResponse.textContent = `Error: ${error.message}`;
+            formResponse.className = 'error';
+        } finally {
+            submitButton.disabled = false;
+            submitButton.querySelector('span').textContent = 'Register';
+        }
+    });
+</script>
+
+    <script>
+        // Create countdown slider
+        $(function () {
+            $('.counter').counterUp({
+                delay: 5,
+                time: 3000
+            });
+
+            $('.countdown').countdown(new Date("2025-10-18T17:30:00.000+05:30"), function (event) {
+                $(this).html(
+                    event.strftime(
+                        '<div class="time-box">%D<span>Days</span></div>' +
+                        '<div class="time-box">%H<span>Hours</span></div>' +
+                        '<div class="time-box">%M<span>Minutes</span></div>' +
+                        '<div class="time-box">%S<span>Seconds</span></div>'
+                    )
+                );
+            });
+
+        });
+
+        let n_speakers = speakers.length;
+
+        for (let i = 0; i < n_speakers; i++) {
+            let spk = speakers[i];
+
+            let currentTime = new Date();
+            let show_time = new Date(spk.show_after);
+
+            if (currentTime.getTime() < show_time.getTime())
+                continue;
+
+            let modal_id = `spk-${i}`;
+
+            let html = `
+    <div class="col-md-4 col-sm-8">
+        <div class="speaker_box">
+            <div class="speaker_img" data-toggle="modal" data-target="#${modal_id}">
+                <img class="lazy" data-src="./assets/img/speakers/${spk.img_link}" alt=${spk.name}>
+                <!--
+                <div class="info_box">
+                    <h5 class="name">${spk.name}</h5>
+                    <p class="position">${spk.title}</p>
+                </div>
+                --->
+            </div>
+
+            <div class="speaker_social">
+                <ul></ul>
+            </div>
+        </div>
+    </div>`;
+
+            let description = "<p>" + spk.description.join("</p><p>") + "</p>"
+
+            let modalHtml = `
+    <div class="modal" id=${modal_id} style="top: 15%;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center" style="background-color: #000;">
+                    <h3 class="modal-title text-center" style="color:#ff0000; width: 100%;">${spk.name}</h3>
+                    <button type="button" class="close" data-dismiss="modal" style="color: #fff;">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h5 style="width:100%; font-weight: 700;" class="text-center">${spk.title}</h5>
+                    ${description}
+                </div>
+            </div>
+        </div>
+    </div>`;
+
+            $('#speakers').append(html);
+            $('#speaker-modals').append(modalHtml);
+        }
+
+        // Generate past speakers carousel
+        // ========================================================
+        // FINAL SCRIPT FOR CONTINUOUS WATERFALL CAROUSEL
+        // ========================================================
+        document.addEventListener('DOMContentLoaded', () => {
+    // Check if the necessary data and elements exist
+    if (typeof past_speakers === 'undefined' || past_speakers.length === 0) {
+        console.error("Past speakers data is not available.");
+        const section = document.querySelector('.past-speakers-section');
+        if (section) section.style.display = 'none';
+        return;
+    }
+
+    // --- 1. DATA AND ELEMENT SETUP ---
+    const speakersData = past_speakers.map((speaker, index) => ({
+        id: index, // Use the index as the ID for easier lookup
+        name: speaker.name || 'Unnamed Speaker',
+        title: speaker.title || 'TEDx Speaker',
+        quote: speaker.quote || '"Ideas Worth Spreading"',
+        event: speaker.event || 'TEDxNITKSurathkal',
+        philosophy: speaker.philosophy || '',
+        image: 'assets/img/past_editions/' + speaker.image,
+        color: ['#E62B1E', '#285AEB', '#009E60', '#D6249F', '#6A0DAD'][index % 5]
+    }));
+
+    let activeIndex = 0;
+    const displayCount = 5; // Number of speakers in the orbit
+
+    const backgroundGlow = document.querySelector('.background-glow');
+    const activeSpeakerWrapper = document.getElementById('active-speaker-image-wrapper');
+    const orbitingSpeakersContainer = document.getElementById('orbiting-speakers-container');
+    const detailsContainer = document.getElementById('speaker-details-container');
+    const prevBtn = document.getElementById('prev-speaker-btn');
+    const nextBtn = document.getElementById('next-speaker-btn');
+
+    const prevArrowSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>`;
+    const nextArrowSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>`;
+
+    // --- 2. THE MAIN UPDATE FUNCTION ---
+    function updateDisplay( ) {
+        const activeSpeaker = speakersData[activeIndex];
+
+        // Update background and text details
+        if (backgroundGlow) {
+            backgroundGlow.style.background = `radial-gradient(circle at 30% 50%, ${activeSpeaker.color}20 0%, transparent 50%)`;
+        }
+        if (detailsContainer) {
+            detailsContainer.innerHTML = `
+                <div class="speaker-details">
+                    <h3>${activeSpeaker.name}</h3>
+                    <p class="title">${activeSpeaker.title}</p>
+                    <div class="quote-wrapper">
+                        <p class="quote">${activeSpeaker.quote}</p>
+                        <p class="event">${activeSpeaker.event}</p>
+                    </div>
+                    <p class="philosophy">${activeSpeaker.philosophy}</p>
+                </div>`;
+        }
+
+        // Update the central image
+        activeSpeakerWrapper.innerHTML = `<img src="${activeSpeaker.image}" alt="${activeSpeaker.name}" class="image-enter">`;
+
+        // --- Rebuild the orbiting speakers ---
+        orbitingSpeakersContainer.innerHTML = '';
+        const angleStep = 180 / (displayCount - 1);
+        const startAngle = -90;
+
+        for (let i = 1; i <= displayCount; i++) {
+            const speakerIndex = (activeIndex + i) % speakersData.length;
+            const speaker = speakersData[speakerIndex];
+            
+            const btn = document.createElement('button');
+            btn.className = 'orbiting-speaker';
+            // Store the index of the speaker this button represents
+            btn.dataset.index = speakerIndex; 
+
+            const angle = startAngle + ((i - 1) * angleStep);
+            // Use CSS variables for radius for responsiveness
+            // The value is set in the CSS file
+            btn.style.transform = `rotate(${angle}deg) translateX(var(--radius, 200px)) rotate(${-angle}deg)`;
+            
+            btn.innerHTML = `<img src="${speaker.image}" alt="${speaker.name}">`;
+            orbitingSpeakersContainer.appendChild(btn);
+        }
+    }
+
+    // --- 3. EVENT LISTENERS ---
+    if (prevBtn && nextBtn) {
+        prevBtn.innerHTML = prevArrowSVG;
+        nextBtn.innerHTML = nextArrowSVG;
+
+        prevBtn.onclick = () => {
+            activeIndex = (activeIndex - 1 + speakersData.length) % speakersData.length;
+            updateDisplay();
+        };
+
+        nextBtn.onclick = () => {
+            activeIndex = (activeIndex + 1) % speakersData.length;
+            updateDisplay();
+        };
+    }
+
+    // *** THIS IS THE NEW, CORRECTED PART ***
+    if (orbitingSpeakersContainer) {
+        orbitingSpeakersContainer.addEventListener('click', (event) => {
+            // Find the button that was clicked, even if the click was on the image inside it
+            const clickedButton = event.target.closest('.orbiting-speaker');
+            
+            if (clickedButton && clickedButton.dataset.index) {
+                // Get the index we stored on the button
+                const newIndex = parseInt(clickedButton.dataset.index, 10);
+                
+                // Set the new active index and update the display
+                activeIndex = newIndex;
+                updateDisplay();
+            }
+        });
+    }
+
+    // --- 4. INITIAL LOAD ---
+    updateDisplay();
+});
+
+        document.getElementById("mc-embedded-subscribe").addEventListener("click", (event) => {
+            event.preventDefault()
+            $('#mc-embedded-subscribe .label').css("display", "none")
+            $('#mc-embedded-subscribe .loading').css("display", "block")
+            $.ajax({
+                type: $('form').attr('methpd'),
+                url: $('form').attr('action'),
+                data: $('form').serialize(),
+                cache: false,
+                dataType: 'json',
+                contentType: 'application/json; charset=utf-8',
+                error: function (err) {
+                    alert("Could not connect to the subscription server. Please try again later.");
+                },
+                success: function (data) {
+                    if (data.result == 'success') {
+                        document.activeElement.blur()
+                        $('#contact-form').css("display", "none")
+                        $('#contact-form-success').css("display", "block")
+                    } else {
+                        $('#mc-embedded-subscribe .loading').css("display", "none")
+                        $('#mc-embedded-subscribe .label').css("display", "block")
+                        $("#mce-EMAIL").popover({
+                            content: `${data.msg.split(" <a")[0]}`,
+                            placement: "bottom",
+                            trigger: "focus"
+                        })
+                        $("#mce-EMAIL").focus()
+                    }
+                }
+            })
+        })
+
+        $("#mce-EMAIL").on("focusout input", (e) => {
+            $("#mce-EMAIL").popover("dispose")
+        })
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=UA-110715968-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-110715968-3');
+
+        function backtotop() {
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: 0
+            }, "slow");
+            return false;
+        }
+    </script>
+
+
+    <script>
+        // Generate Particle Effect
+        function createParticles() {
+            const container = document.querySelector('.particle-container');
+            for (let i = 0; i < 20; i++) {
+                let particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.style.left = Math.random() * 100 + 'vw';
+                particle.style.top = Math.random() * 100 + 'vh';
+                particle.style.animationDelay = Math.random() * 5 + 's';
+                container.appendChild(particle);
+            }
+        }
+        createParticles();
+    </script>
+
+    <script>
+        // Click on the whole button → smooth scroll to subscribe section (single tap/click)
+        const registerBtn = document.getElementById("register-button");
+        if (registerBtn) {
+            registerBtn.addEventListener("click", (e) => {
+                const target = document.getElementById("subscribe") || document.querySelector(".subscribe-section");
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: "smooth" });
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

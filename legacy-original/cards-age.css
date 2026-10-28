@@ -1,0 +1,115 @@
+body {
+    background: url("bg.png") no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    margin: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll caused by any overflow */
+}
+
+#board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Ensures cards fill space evenly */
+    width: 100%; /* Full width without exceeding viewport */
+    max-width: 600px; /* Maximum size to limit expansion */
+    margin: 20px auto;
+    padding: 10px;
+    background-color: whitesmoke;
+    border: 10px solid lightgrey;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    gap: 10px;
+}
+
+.card {
+    flex: 1 1 22%; /* Adjusted to fit 4 per row with gap */
+    max-width: 22%; /* Limits card width to 22% */
+    aspect-ratio: 4/5; /* Ensures square cards */
+    /* margin: 2px; */
+}
+
+@media (max-width: 768px) {
+    #board {
+        max-width: 95vw; /* Slightly narrower on smaller screens */
+    }
+}
+
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: rgb(64, 8, 8);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    max-width: 300px;
+    width: 80%;
+}
+
+.modal-content h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.modal-content p {
+    font-size: 18px;
+}
+
+.modal-buttons {
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 2px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.modal-buttons button:hover {
+    background-color: #2d1010;
+}
+
+.modal-buttons button:nth-child(1) {
+    background-color: black;
+    color: white;
+}
+
+.modal-buttons a {
+    background-color: red;
+    color: white;
+}
+
+.modal-buttons a {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 2px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background: #000;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.modal-buttons a:hover {
+    background-color: #2d1010;
+}
+

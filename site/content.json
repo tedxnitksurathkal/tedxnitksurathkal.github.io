@@ -1,0 +1,78 @@
+{
+  "theme": "The Noise Paradox",
+  "direction": "The Quiet Signal",
+  "description": "In a world that never stops, what truly matters often whispers. Explore The Noise Paradox with TEDxNITKSurathkal — ideas, people and perspectives that bring clarity to the noise.",
+  "game": {
+    "url": "https://tedx-nitk-memory-challenge.onrender.com/"
+  },
+  "event": {
+    "date": "2026-10-31",
+    "dateLabel": "31 October 2026",
+    "location": "SJA, NITK Surathkal",
+    "address": "Surathkal, Mangaluru, Karnataka",
+    "venueLabel": "Venue details coming soon",
+    "schedule": []
+  },
+  "registration": {
+    "open": false,
+    "endpoint": "https://tedx-backend-lyart.vercel.app/api/register",
+    "message": "Something worth pausing for is on its way. Registration details for The Noise Paradox will be announced here."
+  },
+  "contact": {
+    "email": "tedx@nitk.edu.in",
+    "instagram": "https://www.instagram.com/tedxnitksurathkal/",
+    "facebook": "https://www.facebook.com/tedxnitksurathkal2018/",
+    "licensee": "Dr. Suprabha K. R.",
+    "organizer": "Neha Chandrasheka",
+    "phones": ["+91 94837 81750", "+91 96066 78780"]
+  },
+  "speakers": [],
+  "stages": [
+    {
+      "name": "Distraction",
+      "description": "An endless stream of information. A thousand things asking for our attention."
+    },
+    {
+      "name": "Overload",
+      "description": "More voices. More choices. Somewhere in the rush, meaning becomes harder to find."
+    },
+    {
+      "name": "Reflection",
+      "description": "We pause. We question. We listen closely enough to notice a different perspective."
+    },
+    {
+      "name": "Clarity",
+      "description": "The noise settles. An idea resonates. A quieter, stronger signal begins to emerge."
+    }
+  ],
+  "faq": [
+    {
+      "question": "When and where is the next event?",
+      "answer": "The Noise Paradox is the next chapter of TEDxNITKSurathkal. The date and specific venue will be announced here once confirmed."
+    },
+    {
+      "question": "How can I register?",
+      "answer": "Registration details are coming soon. Check this website or our official Instagram for announcements. No ticket prices or booking deadlines have been announced on this site."
+    },
+    {
+      "question": "Who can attend?",
+      "answer": "TEDxNITKSurathkal brings together curious minds from the NITK community and beyond. Eligibility and admission details for the next edition will be shared when registration opens."
+    },
+    {
+      "question": "Where can I watch talks from past editions?",
+      "answer": "Visit our Talk Archives to explore talks from previous TEDxNITKSurathkal editions, or browse Past Editions to discover their themes and speakers."
+    },
+    {
+      "question": "How can I partner with the event?",
+      "answer": "Write to tedx@nitk.edu.in for sponsorship, collaboration and other enquiries. Our organizing team will help you find the right way to get involved."
+    },
+    {
+      "question": "Who should I contact about accessibility?",
+      "answer": "Please email tedx@nitk.edu.in with your access requirements before making travel plans. The team can confirm the arrangements available for the announced venue."
+    }
+  ],
+  "pastPartners": [
+    { "name": "Domino’s", "image": "assets/img/sponsors/dominos.png" },
+    { "name": "McDonald’s", "image": "assets/img/sponsors/mcd.png" }
+  ]
+}

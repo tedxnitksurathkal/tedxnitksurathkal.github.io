@@ -1,4 +1,13 @@
 # TEDxNITK Surathkal Official Website
+
+The complete original website is preserved in [`legacy-original/`](legacy-original/PRESERVATION.md), copied from Git commit `b0845ff` before the UI redesign. All 666 original files were verified against Git. The redesigned website remains at the repository root; preview the original folder as a separate site root using its preservation guide.
+
+## The Quiet Signal / The Noise Paradox
+
+The current site is generated from `site/build.mjs` and `site/content.json`. With Node.js 18 or newer, run `npm run build`, `npm test`, and `npm run dev`, then open http://127.0.0.1:3000. These commands require no dependency installation.
+
+See the [editing and launch guide](site/README.md), [asset credits](site/ASSETS.md), and [implementation audit](QUIET_SIGNAL_AUDIT.md). Event details and registration availability are controlled in `site/content.json`. The older repository notes below also cover retained historical microsites.
+
 <p align="center"> <img src="assets/img/tedx-white.png" alt="TEDxNITKSurathkal Logo" width="500"/> </p> <p align="center"> <a href="https://github.com/tedxnitksurathkal/tedxnitksurathkal.github.io/stargazers"> <img src="https://img.shields.io/github/stars/tedxnitksurathkal/tedxnitksurathkal.github.io?style=for-the-badge" /> <img src="https://img.shields.io/github/contributors/tedxnitksurathkal/tedxnitksurathkal.github.io?style=for-the-badge" alt="Contributors"/></a> <a href="https://github.com/tedxnitksurathkal/tedxnitksurathkal.github.io/issues"> <img src="https://img.shields.io/github/issues/tedxnitksurathkal/tedxnitksurathkal.github.io?style=for-the-badge" /> </a> <a href="https://github.com/tedxnitksurathkal/tedxnitksurathkal.github.io/network/members"> <img src="https://img.shields.io/github/forks/tedxnitksurathkal/tedxnitksurathkal.github.io?style=for-the-badge" /> </a> </p>
 <p align="center"> <!-- Tech stack --> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" /> </p>
 

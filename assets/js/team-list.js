@@ -142,4 +142,67 @@ var team = [
         "linkedin": "https://www.linkedin.com/in/harshith-c-v-5862022ab/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         "instagram": "harshith_cv?igsh=NjA0b2tscDFqYWNo"
     },
+    {
+        "name": "Akarsh",
+        "position": "Core Team",
+        "image": "Akarsh.jpeg",
+        "linkedin": "",
+        "instagram": ""
+    },
+    {
+        "name": "Anushka",
+        "position": "Core Team",
+        "image": "Anushka.jpeg",
+        "linkedin": "",
+        "instagram": ""
+    },
+    {
+        "name": "Hemanth",
+        "position": "Core Team",
+        "image": "Hemanth.jpg",
+        "linkedin": "",
+        "instagram": ""
+    },
+    {
+        "name": "Nancy",
+        "position": "Core Team",
+        "image": "Nancy.jpeg",
+        "linkedin": "",
+        "instagram": ""
+    },
+    {
+        "name": "Nihar",
+        "position": "Core Team",
+        "image": "Nihar.jpeg",
+        "linkedin": "",
+        "instagram": ""
+    },
+    {
+        "name": "Rakesh",
+        "position": "Core Team",
+        "image": "Rakesh.jpeg",
+        "linkedin": "",
+        "instagram": ""
+    },
+    {
+        "name": "Vartika",
+        "position": "Core Team",
+        "image": "Vartika.jpg",
+        "linkedin": "",
+        "instagram": ""
+    },
+    {
+        "name": "Vibhu",
+        "position": "Core Team",
+        "image": "Vibhu.jpg",
+        "linkedin": "",
+        "instagram": ""
+    },
+    {
+        "name": "Violina",
+        "position": "Core Team",
+        "image": "violina.jpeg",
+        "linkedin": "",
+        "instagram": ""
+    },
 ]

@@ -746,7 +746,7 @@
     const minsEl = section.querySelector('[data-countdown="minutes"]');
     const secsEl = section.querySelector('[data-countdown="seconds"]');
 
-    const targetDate = new Date("2026-10-30T18:00:00+05:30").getTime();
+    const targetDate = new Date("2026-10-30T17:00:00+05:30").getTime();
 
     function updateCountdown() {
       const now = Date.now();

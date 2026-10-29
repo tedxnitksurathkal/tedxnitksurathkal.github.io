@@ -23,7 +23,7 @@ Open `http://127.0.0.1:3000`. The preview server supports both `/about` and `/ab
 | `site/content.json` | Theme, description, event status, contact details, FAQ, new speakers and past partners |
 | `site/build.mjs` | Shared page templates and static HTML generation |
 | `site/archive-content.html` | Preserved historical edition content and deep links |
-| `site/talks.json` | All 84 existing talks, grouped by original edition IDs |
+| `site/talks.json` | All 85 talks, grouped by original edition IDs |
 | `assets/css/quiet-signal.css` | Design tokens, layouts, responsiveness and reduced motion |
 | `assets/js/quiet-signal.js` | Menu, speaker dialogs, archive player/filter and registration |
 | `assets/css/signal-motion.css` | Compact header, phone menu, signal tuner and motion presentation |

@@ -95,8 +95,8 @@ const talks = JSON.parse(
 );
 assert.equal(
   talks.reduce((n, g) => n + g.talks.length, 0),
-  84,
-  "Existing 84 talks must remain available",
+  85,
+  "Existing 85 talks must remain available",
 );
 for (const group of talks)
   for (const talk of group.talks)
@@ -109,5 +109,5 @@ if (failures.length) {
   process.exitCode = 1;
 } else
   console.log(
-    `PASS: ${pages.length} pages; ${references} local references; unique IDs, landmarks, image alternatives, deep links, registration endpoint and all 84 talks.`,
+    `PASS: ${pages.length} pages; ${references} local references; unique IDs, landmarks, image alternatives, deep links, registration endpoint and all 85 talks.`,
   );

@@ -24,6 +24,10 @@ function openSeries(evt, vidName) {
   var i, tabcontent, tablinks;
 
   switch (vidName) {
+    case '2025':
+      document.getElementById('vid_frame').src =
+        'https://www.youtube.com/embed/Th2xBXxFaYo?&rel=0&showinfo=0&autohide=1';
+      break;
     case '2024':
       document.getElementById('vid_frame').src =
         'https://www.youtube.com/embed/yFVHLCYGcS8?enablejsapi=1&rel=0&showinfo=0&autohide=1';

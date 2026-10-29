@@ -329,7 +329,7 @@ function noiseParadoxClimax() {
 </section>`;
 }
 function eventDetails() {
-  return `<section class="section event-details-section" id="event-details" aria-labelledby="event-details-heading"><div class="container"><div class="event-details-card spotlight-card"><div class="event-details-copy">${label("The event")}<h2 id="event-details-heading">TEDxNITK<em>Surathkal</em></h2><p>TEDxNITKSurathkal brings TED Talks and live speakers together to inspire ideas and conversations. Our event creates a space for meaningful discussions and connections.</p></div><dl class="info-pills"><div class="info-pill"><dt>Date</dt><dd>30/10/2026, 6:00 PM</dd></div><div class="info-pill"><dt>Speakers</dt><dd>6</dd></div><div class="info-pill info-pill-wide"><dt>Location</dt><dd>SJA, NITK Surathkal</dd></div></dl></div></div></section>`;
+  return `<section class="section event-details-section" id="event-details" aria-labelledby="event-details-heading"><div class="container"><div class="event-details-card spotlight-card"><div class="event-details-copy">${label("The event")}<h2 id="event-details-heading">TEDxNITK<em>Surathkal</em></h2><p>TEDxNITKSurathkal brings TED Talks and live speakers together to inspire ideas and conversations. Our event creates a space for meaningful discussions and connections.</p></div><dl class="info-pills"><div class="info-pill"><dt>Date</dt><dd>30/10/2026, 5:00 PM</dd></div><div class="info-pill"><dt>Speakers</dt><dd>6</dd></div><div class="info-pill info-pill-wide"><dt>Location</dt><dd>SJA, NITK Surathkal</dd></div></dl></div></div></section>`;
 }
 function home() {
   return `<section class="hero"><canvas class="signal-particles" aria-hidden="true"></canvas><div class="hero-orbit" aria-hidden="true"><span></span><span></span><span></span></div><picture class="hero-art"><source srcset="/assets/img/quiet-signal/threshold-800.webp 800w, /assets/img/quiet-signal/threshold-1600.webp 1600w" sizes="100vw"><img src="/assets/img/quiet-signal/threshold-1600.webp" alt="" width="1600" height="800" fetchpriority="high"></picture><div class="container hero-inner"><div class="hero-copy">${label("Ideas / People / Perspectives")}<h1><span class="hero-the">The</span><span class="noise-word">Noise</span><span class="paradox-word">Parad<span>o</span>x</span></h1><p class="hero-subtitle"><span></span>The Quiet Signal</p><p class="hero-description">In a world that never stops,<br>what truly matters often whispers.</p><div class="button-row">${action()}${link("#theme", "Explore the theme", "button button-outline")}</div>${gameAction("hero-game-link", "Play the game to reveal the speakers")}<span class="hero-game-status">${content.game?.url ? "Ready to play" : "Game coming soon"}</span></div><aside class="hero-aside"><p>${esc(content.event.location)}</p><span>${esc(content.event.dateLabel)}</span><div class="hero-words">Clarity<br>Ideas<br>People<br>Possibilities</div></aside><a class="scroll-cue" href="#theme"><span aria-hidden="true">↓</span>Scroll to find your signal</a><div class="hero-coordinate" aria-hidden="true">01 <span></span> NOISE → CLARITY</div></div></section><div class="signal-strip"><div class="container"><span>The Noise Paradox</span><span class="strip-line"></span><span>An invitation to listen differently</span><span class="signal-dot" aria-hidden="true"></span></div></div>${voiceField()}${themeSection()}${noiseParadoxClimax()}${eventDetails()}${mindSection()}${speakersSection()}${tedxIntro()}${getInTouch()}${registrationSection()}${finalSignal()}`;
@@ -389,7 +389,7 @@ function archivesPage() {
   html = html.replace(
     /(<div[^>]*id="speakers"[^>]*>)/,
     "$1" +
-      talks[0].talks
+      talks.find((g) => g.id === "2024").talks
         .map(
           (t) =>
             `<a class="text-link" href="/talk-archives.html#2024">${esc(t.title)} &#8599;</a>`,
@@ -404,6 +404,7 @@ function archivesPage() {
   return `${pageIntro("The archive", "Every edition.<br>A new <em>perspective.</em>", "Revisit the people, themes and conversations that brought us here.")}<div class="legacy-archive">${html}</div><section class="section"><div class="container"><h2>More ways to <em>explore.</em></h2><div class="archive-extra">${link("/past-editions-archive/2022-lost/theme.html", "Lost and Found · 2022", "button button-outline")}${link("/theme.html", "Mosaic theme game", "button button-outline")}${link("/theme2023.html", "Metamorphosis in Motion", "button button-outline")}${link("/theme-age.html", "Age as a lens", "button button-outline")}${link("/intro-luck.html", "Pac-Man challenge", "button button-outline")}</div></div></section>`;
 }
 const editionNames = {
+  2025: "Order in Chaos",
   2024: "Hakuna Matata",
   2023: "Mosaic",
   2021: "Pause to Play",

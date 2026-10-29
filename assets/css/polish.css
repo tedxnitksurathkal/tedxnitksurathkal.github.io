@@ -517,3 +517,8 @@ h3 {
     font-size: 17px;
   }
 }
+
+/* Team page: photos stay fully opaque (hover animations unchanged) */
+.team-card > img {
+  opacity: 1;
+}

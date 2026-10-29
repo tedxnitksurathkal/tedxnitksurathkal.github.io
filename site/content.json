@@ -26,7 +26,50 @@
     "organizer": "Neha Chandrasheka",
     "phones": ["+91 94837 81750", "+91 96066 78780"]
   },
-  "speakers": [],
+  "speakers": [
+      {
+          "id": "np-smitha-murthy",
+          "name": "Smitha Murthy",
+          "title": "Co-Founder, MyndStories",
+          "description": "Smitha, co-founder of MyndStories, is a writer and speaker passionate about mental health, storytelling, and creating meaningful human connections.",
+          "image": "assets/img/speakers/noise-paradox/smitha-murthy.jpg"
+      },
+      {
+          "id": "np-ramya-ranganathan",
+          "name": "Ramya Ranganathan",
+          "title": "Corporate Trainer & Adjunct Faculty, IIMB",
+          "description": "Top 15 Innovators in Higher Education recognized by the Ministry of Education. She helps individuals unlock their potential through personal growth and happiness-focused programs.",
+          "image": "assets/img/speakers/noise-paradox/ramya-ranganathan.jpg"
+      },
+      {
+          "id": "np-rohit-agrawal",
+          "name": "Rohit Agrawal",
+          "title": "Senior Faculty at Physics Wallah (PW)",
+          "description": "A renowned Organic Chemistry educator, he taught at Allen, co-founded Nucleus Education, and led Organic Chemistry at Physics Wallah.",
+          "image": "assets/img/speakers/noise-paradox/rohit-agrawal.jpg"
+      },
+      {
+          "id": "np-anuj-agrawal",
+          "name": "Anuj Agrawal",
+          "title": "Founder & CEO of Zyoin Group & Workplace",
+          "description": "He helps businesses scale through talent solutions, GCC development, strategic partnerships, and startup investments.",
+          "image": "assets/img/speakers/noise-paradox/anuj-agrawal.jpg"
+      },
+      {
+          "id": "np-saptarshi-prakash",
+          "name": "Saptarshi Prakash",
+          "title": "VP of Design at Swiggy, Content Creator",
+          "description": "He leads design at Swiggy and is a speaker, author, and product design expert exploring the intersection of design, technology, and AI, with 700k followers as a content creator.",
+          "image": "assets/img/speakers/noise-paradox/saptarshi-prakash.jpg"
+      },
+      {
+          "id": "np-akash-raj",
+          "name": "Akash Raj",
+          "title": "AI Product Manager and Content Creator",
+          "description": "AI Product Manager at Tiramai AI, founder of Military Mantra and Super Dream Foundation, building impactful products, communities, and social change.",
+          "image": "assets/img/speakers/noise-paradox/akash-raj.jpg"
+      }
+  ],
   "stages": [
     {
       "name": "Distraction",
